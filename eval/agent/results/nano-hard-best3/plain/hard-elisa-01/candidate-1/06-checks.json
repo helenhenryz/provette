@@ -1,0 +1,2427 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: VERIFIED against plate map hard-elisa-01. 80 of 80 wells hold what the plate\n  map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 1). Reading of the request: 16\n    standard wells and 64 sample wells; first point is 1:2.\n\nLabware for the technique (ELISA): 1 finding.\n1. WARNING LABWARE-FOR-TECHNIQUE: The wrong kind of plate: NEST 96 Well Plate 100 \u00b5L PCR\n  Full Skirt is a PCR plate or PCR strips, and ELISA needs a flat plate or a deep-well plate\n   line 68:  p300.dispense(std_vol, plate[dest_well_names[i]])\n   The plate map says the technique is ELISA, which needs a flat plate or a deep-well plate\n     as its destination. The protocol delivers into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt\n     (slot 1, load name nest_96_wellplate_100ul_pcr_full_skirt), which is a PCR plate or PCR\n     strips. A plate reader reads a flat, clear-bottomed plate, and an ELISA plate is coated\n     before the samples arrive; a PCR plate is neither coated nor readable, and its thin-\n     walled conical wells hold little and are meant for a thermocycler. Every well still\n     holds what the plate map asks for, so the map verifies; the plate is the problem.\n   Affected: wells A1, A10, A11, A12, A2, A3, A4, A5 and 72 more in slot 1.\n   Fix: Load a flat plate (corning_96_wellplate_360ul_flat or nest_96_wellplate_200ul_flat)\n     as the destination: it is what a plate reader reads and what an assay or a culture is\n     done in.\n   Source: Opentrons, module setup: no error for an unusual labware and module combination\n           https://docs.opentrons.com/v2/modules/setup.html\n   Source: Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate\n           https://docs.opentrons.com/v2/modules/thermocycler.html\n   Source: ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error\n           https://arxiv.org/html/2606.11150v1\n   [e08a0ce8cdb3]\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  standard                              500.0     198.4     301.6       0.0     0.0\n  diluent                              1700.0    1401.6     298.4       0.0     0.0\n  serum 1                               300.0     200.0     100.0       0.0     0.0\n  serum 2                               300.0     200.0     100.0       0.0     0.0\n  serum 3                               300.0     200.0     100.0       0.0     0.0\n  serum 4                               300.0     200.0     100.0       0.0     0.0\n  serum 5                               300.0     200.0     100.0       0.0     0.0\n  serum 6                               300.0     200.0     100.0       0.0     0.0\n  serum 7                               300.0     200.0     100.0       0.0     0.0\n  serum 8                               300.0     200.0     100.0       0.0     0.0\n  serum 9                               300.0     200.0     100.0       0.0     0.0\n  serum 10                              300.0     200.0     100.0       0.0     0.0\n  serum 11                              300.0     200.0     100.0       0.0     0.0\n  serum 12                              300.0     200.0     100.0       0.0     0.0\n  serum 13                              300.0     200.0     100.0       0.0     0.0\n  serum 14                              300.0     200.0     100.0       0.0     0.0\n  serum 15                              300.0     200.0     100.0       0.0     0.0\n  serum 16                              300.0     200.0     100.0       0.0     0.0\n  serum 17                              300.0     200.0     100.0       0.0     0.0\n  serum 18                              300.0     200.0     100.0       0.0     0.0\n  serum 19                              300.0     200.0     100.0       0.0     0.0\n  serum 20                              300.0     200.0     100.0       0.0     0.0\n  serum 21                              300.0     200.0     100.0       0.0     0.0\n  serum 22                              300.0     200.0     100.0       0.0     0.0\n  serum 23                              300.0     200.0     100.0       0.0     0.0\n  serum 24                              300.0     200.0     100.0       0.0     0.0\n  serum 25                              300.0     200.0     100.0       0.0     0.0\n  serum 26                              300.0     200.0     100.0       0.0     0.0\n  serum 27                              300.0     200.0     100.0       0.0     0.0\n  serum 28                              300.0     200.0     100.0       0.0     0.0\n  serum 29                              300.0     200.0     100.0       0.0     0.0\n  serum 30                              300.0     200.0     100.0       0.0     0.0\n  serum 31                              300.0     200.0     100.0       0.0     0.0\n  serum 32                              300.0     200.0     100.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    standard                             198.4     500.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    diluent                             1401.6    1700.0\n  4    NEST 96 Deep Well Plate 2mL           A1    serum 1                              200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B1    serum 13                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           C1    serum 25                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A2    serum 2                              200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B2    serum 14                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           C2    serum 26                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A3    serum 3                              200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B3    serum 15                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           C3    serum 27                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A4    serum 4                              200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B4    serum 16                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           C4    serum 28                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A5    serum 5                              200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B5    serum 17                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           C5    serum 29                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A6    serum 6                              200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B6    serum 18                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           C6    serum 30                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A7    serum 7                              200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B7    serum 19                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           C7    serum 31                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A8    serum 8                              200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B8    serum 20                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           C8    serum 32                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A9    serum 9                              200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B9    serum 21                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A10   serum 10                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B10   serum 22                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A11   serum 11                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B11   serum 23                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           A12   serum 12                             200.0     300.0\n  4    NEST 96 Deep Well Plate 2mL           B12   serum 24                             200.0     300.0\n  Tips: 62 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 3.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-elisa-01",
+  "technique": "ELISA",
+  "exit_code": 1,
+  "labware": [
+   {
+    "rule_id": "LABWARE-FOR-TECHNIQUE",
+    "family": 10,
+    "tier": "structural",
+    "severity": "warning",
+    "certain": true,
+    "roles_basis": "none",
+    "title": "The wrong kind of plate: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt is a PCR plate or PCR strips, and ELISA needs a flat plate or a deep-well plate",
+    "explanation": "The plate map says the technique is ELISA, which needs a flat plate or a deep-well plate as its destination. The protocol delivers into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 1, load name nest_96_wellplate_100ul_pcr_full_skirt), which is a PCR plate or PCR strips. A plate reader reads a flat, clear-bottomed plate, and an ELISA plate is coated before the samples arrive; a PCR plate is neither coated nor readable, and its thin-walled conical wells hold little and are meant for a thermocycler. Every well still holds what the plate map asks for, so the map verifies; the plate is the problem.",
+    "fix": "Load a flat plate (corning_96_wellplate_360ul_flat or nest_96_wellplate_200ul_flat) as the destination: it is what a plate reader reads and what an assay or a culture is done in.",
+    "line": 68,
+    "stack": [
+     "run:68"
+    ],
+    "occurrences": [
+     {
+      "event_index": 2,
+      "line": 68
+     }
+    ],
+    "wells": [
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A1",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A10",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A11",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A12",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A2",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A3",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A4",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A5",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A6",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A7",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A8",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "A9",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B1",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B10",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B11",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B12",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B2",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B3",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B4",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B5",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B6",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B7",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B8",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "B9",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C1",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C10",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C11",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C12",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C2",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C3",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C4",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C5",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C6",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C7",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C8",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "C9",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D1",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D10",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D11",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D12",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D2",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D3",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D4",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D5",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D6",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D7",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D8",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "D9",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E1",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E10",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E11",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E12",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E2",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E3",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E4",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E5",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E6",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E7",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E8",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "E9",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F1",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F10",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F11",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F12",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F2",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F3",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F4",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F5",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F6",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F7",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F8",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "F9",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "G1",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "G2",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "G3",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "G4",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "G5",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "G6",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "G7",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     },
+     {
+      "labware_id": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+      "well": "G8",
+      "slot": "1",
+      "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+      "liquid": null
+     }
+    ],
+    "downstream": {
+     "count": 0,
+     "wells": []
+    },
+    "sources": [
+     {
+      "name": "Opentrons, module setup: no error for an unusual labware and module combination",
+      "url": "https://docs.opentrons.com/v2/modules/setup.html"
+     },
+     {
+      "name": "Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate",
+      "url": "https://docs.opentrons.com/v2/modules/thermocycler.html"
+     },
+     {
+      "name": "ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error",
+      "url": "https://arxiv.org/html/2606.11150v1"
+     }
+    ],
+    "fingerprint": "e08a0ce8cdb3"
+   }
+  ],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "16 standard wells and 64 sample wells; first point is 1:2",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 80,
+   "wells_total": 80,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "standards",
+     "expected": {
+      "standard": 50.0,
+      "diluent": 50.0
+     },
+     "found": {
+      "standard": 50.0,
+      "diluent": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "standards",
+     "expected": {
+      "standard": 50.0,
+      "diluent": 50.0
+     },
+     "found": {
+      "standard": 50.0,
+      "diluent": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "standards",
+     "expected": {
+      "standard": 25.0,
+      "diluent": 75.0
+     },
+     "found": {
+      "standard": 25.0,
+      "diluent": 75.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "standards",
+     "expected": {
+      "standard": 25.0,
+      "diluent": 75.0
+     },
+     "found": {
+      "standard": 25.0,
+      "diluent": 75.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "standards",
+     "expected": {
+      "standard": 12.5,
+      "diluent": 87.5
+     },
+     "found": {
+      "standard": 12.5,
+      "diluent": 87.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "standards",
+     "expected": {
+      "standard": 12.5,
+      "diluent": 87.5
+     },
+     "found": {
+      "standard": 12.5,
+      "diluent": 87.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "standards",
+     "expected": {
+      "standard": 6.25,
+      "diluent": 93.75
+     },
+     "found": {
+      "standard": 6.25,
+      "diluent": 93.75
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "standards",
+     "expected": {
+      "standard": 6.25,
+      "diluent": 93.75
+     },
+     "found": {
+      "standard": 6.25,
+      "diluent": 93.75
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "standards",
+     "expected": {
+      "standard": 3.125,
+      "diluent": 96.875
+     },
+     "found": {
+      "standard": 3.12,
+      "diluent": 96.88
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "standards",
+     "expected": {
+      "standard": 3.125,
+      "diluent": 96.875
+     },
+     "found": {
+      "standard": 3.1200000000000006,
+      "diluent": 96.88
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "standards",
+     "expected": {
+      "standard": 1.5625,
+      "diluent": 98.4375
+     },
+     "found": {
+      "standard": 1.56,
+      "diluent": 98.44
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "standards",
+     "expected": {
+      "standard": 1.5625,
+      "diluent": 98.4375
+     },
+     "found": {
+      "standard": 1.56,
+      "diluent": 98.44
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "standards",
+     "expected": {
+      "standard": 0.7812,
+      "diluent": 99.2188
+     },
+     "found": {
+      "standard": 0.78,
+      "diluent": 99.22000000000001
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "standards",
+     "expected": {
+      "standard": 0.7812,
+      "diluent": 99.2188
+     },
+     "found": {
+      "standard": 0.78,
+      "diluent": 99.22
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "standards",
+     "expected": {
+      "diluent": 100.0
+     },
+     "found": {
+      "diluent": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": "standards",
+     "expected": {
+      "diluent": 100.0
+     },
+     "found": {
+      "diluent": 99.99999999999999
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": "samples",
+     "expected": {
+      "serum_1": 100.0
+     },
+     "found": {
+      "serum_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": "samples",
+     "expected": {
+      "serum_1": 100.0
+     },
+     "found": {
+      "serum_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B7",
+     "group": "samples",
+     "expected": {
+      "serum_2": 100.0
+     },
+     "found": {
+      "serum_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B8",
+     "group": "samples",
+     "expected": {
+      "serum_2": 100.0
+     },
+     "found": {
+      "serum_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B9",
+     "group": "samples",
+     "expected": {
+      "serum_3": 100.0
+     },
+     "found": {
+      "serum_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B10",
+     "group": "samples",
+     "expected": {
+      "serum_3": 100.0
+     },
+     "found": {
+      "serum_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B11",
+     "group": "samples",
+     "expected": {
+      "serum_4": 100.0
+     },
+     "found": {
+      "serum_4": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B12",
+     "group": "samples",
+     "expected": {
+      "serum_4": 100.0
+     },
+     "found": {
+      "serum_4": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "samples",
+     "expected": {
+      "serum_5": 100.0
+     },
+     "found": {
+      "serum_5": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "samples",
+     "expected": {
+      "serum_5": 100.0
+     },
+     "found": {
+      "serum_5": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": "samples",
+     "expected": {
+      "serum_6": 100.0
+     },
+     "found": {
+      "serum_6": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C4",
+     "group": "samples",
+     "expected": {
+      "serum_6": 100.0
+     },
+     "found": {
+      "serum_6": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C5",
+     "group": "samples",
+     "expected": {
+      "serum_7": 100.0
+     },
+     "found": {
+      "serum_7": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C6",
+     "group": "samples",
+     "expected": {
+      "serum_7": 100.0
+     },
+     "found": {
+      "serum_7": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C7",
+     "group": "samples",
+     "expected": {
+      "serum_8": 100.0
+     },
+     "found": {
+      "serum_8": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C8",
+     "group": "samples",
+     "expected": {
+      "serum_8": 100.0
+     },
+     "found": {
+      "serum_8": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C9",
+     "group": "samples",
+     "expected": {
+      "serum_9": 100.0
+     },
+     "found": {
+      "serum_9": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C10",
+     "group": "samples",
+     "expected": {
+      "serum_9": 100.0
+     },
+     "found": {
+      "serum_9": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C11",
+     "group": "samples",
+     "expected": {
+      "serum_10": 100.0
+     },
+     "found": {
+      "serum_10": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C12",
+     "group": "samples",
+     "expected": {
+      "serum_10": 100.0
+     },
+     "found": {
+      "serum_10": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "samples",
+     "expected": {
+      "serum_11": 100.0
+     },
+     "found": {
+      "serum_11": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "samples",
+     "expected": {
+      "serum_11": 100.0
+     },
+     "found": {
+      "serum_11": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": "samples",
+     "expected": {
+      "serum_12": 100.0
+     },
+     "found": {
+      "serum_12": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D4",
+     "group": "samples",
+     "expected": {
+      "serum_12": 100.0
+     },
+     "found": {
+      "serum_12": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D5",
+     "group": "samples",
+     "expected": {
+      "serum_13": 100.0
+     },
+     "found": {
+      "serum_13": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D6",
+     "group": "samples",
+     "expected": {
+      "serum_13": 100.0
+     },
+     "found": {
+      "serum_13": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D7",
+     "group": "samples",
+     "expected": {
+      "serum_14": 100.0
+     },
+     "found": {
+      "serum_14": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D8",
+     "group": "samples",
+     "expected": {
+      "serum_14": 100.0
+     },
+     "found": {
+      "serum_14": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D9",
+     "group": "samples",
+     "expected": {
+      "serum_15": 100.0
+     },
+     "found": {
+      "serum_15": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D10",
+     "group": "samples",
+     "expected": {
+      "serum_15": 100.0
+     },
+     "found": {
+      "serum_15": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D11",
+     "group": "samples",
+     "expected": {
+      "serum_16": 100.0
+     },
+     "found": {
+      "serum_16": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D12",
+     "group": "samples",
+     "expected": {
+      "serum_16": 100.0
+     },
+     "found": {
+      "serum_16": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "samples",
+     "expected": {
+      "serum_17": 100.0
+     },
+     "found": {
+      "serum_17": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": "samples",
+     "expected": {
+      "serum_17": 100.0
+     },
+     "found": {
+      "serum_17": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": "samples",
+     "expected": {
+      "serum_18": 100.0
+     },
+     "found": {
+      "serum_18": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E4",
+     "group": "samples",
+     "expected": {
+      "serum_18": 100.0
+     },
+     "found": {
+      "serum_18": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E5",
+     "group": "samples",
+     "expected": {
+      "serum_19": 100.0
+     },
+     "found": {
+      "serum_19": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E6",
+     "group": "samples",
+     "expected": {
+      "serum_19": 100.0
+     },
+     "found": {
+      "serum_19": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E7",
+     "group": "samples",
+     "expected": {
+      "serum_20": 100.0
+     },
+     "found": {
+      "serum_20": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E8",
+     "group": "samples",
+     "expected": {
+      "serum_20": 100.0
+     },
+     "found": {
+      "serum_20": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E9",
+     "group": "samples",
+     "expected": {
+      "serum_21": 100.0
+     },
+     "found": {
+      "serum_21": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E10",
+     "group": "samples",
+     "expected": {
+      "serum_21": 100.0
+     },
+     "found": {
+      "serum_21": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E11",
+     "group": "samples",
+     "expected": {
+      "serum_22": 100.0
+     },
+     "found": {
+      "serum_22": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E12",
+     "group": "samples",
+     "expected": {
+      "serum_22": 100.0
+     },
+     "found": {
+      "serum_22": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "samples",
+     "expected": {
+      "serum_23": 100.0
+     },
+     "found": {
+      "serum_23": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": "samples",
+     "expected": {
+      "serum_23": 100.0
+     },
+     "found": {
+      "serum_23": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F3",
+     "group": "samples",
+     "expected": {
+      "serum_24": 100.0
+     },
+     "found": {
+      "serum_24": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F4",
+     "group": "samples",
+     "expected": {
+      "serum_24": 100.0
+     },
+     "found": {
+      "serum_24": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F5",
+     "group": "samples",
+     "expected": {
+      "serum_25": 100.0
+     },
+     "found": {
+      "serum_25": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F6",
+     "group": "samples",
+     "expected": {
+      "serum_25": 100.0
+     },
+     "found": {
+      "serum_25": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F7",
+     "group": "samples",
+     "expected": {
+      "serum_26": 100.0
+     },
+     "found": {
+      "serum_26": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F8",
+     "group": "samples",
+     "expected": {
+      "serum_26": 100.0
+     },
+     "found": {
+      "serum_26": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F9",
+     "group": "samples",
+     "expected": {
+      "serum_27": 100.0
+     },
+     "found": {
+      "serum_27": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F10",
+     "group": "samples",
+     "expected": {
+      "serum_27": 100.0
+     },
+     "found": {
+      "serum_27": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F11",
+     "group": "samples",
+     "expected": {
+      "serum_28": 100.0
+     },
+     "found": {
+      "serum_28": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F12",
+     "group": "samples",
+     "expected": {
+      "serum_28": 100.0
+     },
+     "found": {
+      "serum_28": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "samples",
+     "expected": {
+      "serum_29": 100.0
+     },
+     "found": {
+      "serum_29": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": "samples",
+     "expected": {
+      "serum_29": 100.0
+     },
+     "found": {
+      "serum_29": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G3",
+     "group": "samples",
+     "expected": {
+      "serum_30": 100.0
+     },
+     "found": {
+      "serum_30": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G4",
+     "group": "samples",
+     "expected": {
+      "serum_30": 100.0
+     },
+     "found": {
+      "serum_30": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G5",
+     "group": "samples",
+     "expected": {
+      "serum_31": 100.0
+     },
+     "found": {
+      "serum_31": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G6",
+     "group": "samples",
+     "expected": {
+      "serum_31": 100.0
+     },
+     "found": {
+      "serum_31": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G7",
+     "group": "samples",
+     "expected": {
+      "serum_32": 100.0
+     },
+     "found": {
+      "serum_32": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G8",
+     "group": "samples",
+     "expected": {
+      "serum_32": 100.0
+     },
+     "found": {
+      "serum_32": 100.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "standard",
+    "logical": "standard",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 198.42,
+    "left_in_source_ul": 301.58,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "diluent",
+    "logical": "diluent",
+    "role": "reagent",
+    "declared_ul": 1700.0,
+    "delivered_ul": 1401.58,
+    "left_in_source_ul": 298.42,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 1",
+    "logical": "serum_1",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 2",
+    "logical": "serum_2",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 3",
+    "logical": "serum_3",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 4",
+    "logical": "serum_4",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 5",
+    "logical": "serum_5",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 6",
+    "logical": "serum_6",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 7",
+    "logical": "serum_7",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 8",
+    "logical": "serum_8",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 9",
+    "logical": "serum_9",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 10",
+    "logical": "serum_10",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 11",
+    "logical": "serum_11",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 12",
+    "logical": "serum_12",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 13",
+    "logical": "serum_13",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 14",
+    "logical": "serum_14",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 15",
+    "logical": "serum_15",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 16",
+    "logical": "serum_16",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 17",
+    "logical": "serum_17",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 18",
+    "logical": "serum_18",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 19",
+    "logical": "serum_19",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 20",
+    "logical": "serum_20",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 21",
+    "logical": "serum_21",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 22",
+    "logical": "serum_22",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 23",
+    "logical": "serum_23",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 24",
+    "logical": "serum_24",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 25",
+    "logical": "serum_25",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 26",
+    "logical": "serum_26",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 27",
+    "logical": "serum_27",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 28",
+    "logical": "serum_28",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 29",
+    "logical": "serum_29",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 30",
+    "logical": "serum_30",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 31",
+    "logical": "serum_31",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 32",
+    "logical": "serum_32",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 200.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "standard",
+     "declared_ul": 500.0,
+     "needed_ul": 198.42,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "diluent",
+     "declared_ul": 1700.0,
+     "needed_ul": 1401.58,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A1",
+     "liquid": "serum 1",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B1",
+     "liquid": "serum 13",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C1",
+     "liquid": "serum 25",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A2",
+     "liquid": "serum 2",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B2",
+     "liquid": "serum 14",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C2",
+     "liquid": "serum 26",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A3",
+     "liquid": "serum 3",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B3",
+     "liquid": "serum 15",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C3",
+     "liquid": "serum 27",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A4",
+     "liquid": "serum 4",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B4",
+     "liquid": "serum 16",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C4",
+     "liquid": "serum 28",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A5",
+     "liquid": "serum 5",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B5",
+     "liquid": "serum 17",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C5",
+     "liquid": "serum 29",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A6",
+     "liquid": "serum 6",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B6",
+     "liquid": "serum 18",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C6",
+     "liquid": "serum 30",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A7",
+     "liquid": "serum 7",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B7",
+     "liquid": "serum 19",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C7",
+     "liquid": "serum 31",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A8",
+     "liquid": "serum 8",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B8",
+     "liquid": "serum 20",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C8",
+     "liquid": "serum 32",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A9",
+     "liquid": "serum 9",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B9",
+     "liquid": "serum 21",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A10",
+     "liquid": "serum 10",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B10",
+     "liquid": "serum 22",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A11",
+     "liquid": "serum 11",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B11",
+     "liquid": "serum 23",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A12",
+     "liquid": "serum 12",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B12",
+     "liquid": "serum 24",
+     "declared_ul": 300.0,
+     "needed_ul": 200.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "3",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 62
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 1 biology problem (1 error).\n\n1. ERROR PIPETTE-RANGE: 0.78 ul, 1.56 ul, 3.12 ul, 6.25 ul and 1 more are below what the\np300_single_gen2 can measure (20 ul at least)\n   line 67:  p300.aspirate(std_vol, tuberack[\"A1\"])\n   At line 67 the p300_single_gen2 is asked to draw 0.78 ul, 1.56 ul, 3.12 ul, 6.25 ul and 1\n   more, below its minimum of 20 ul (this line did it 10 times). A pipette cannot measure\n   less than its minimum: it draws the wrong amount, or nothing, and the volumes in this\n   protocol only add up on paper. The simulator passes the move. Wells: tube A1 in slot 2.\n   Affected: tube A1 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [bc6ce33a7f02]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 67,
+   "title": "0.78 ul, 1.56 ul, 3.12 ul, 6.25 ul and 1 more are below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 67 the p300_single_gen2 is asked to draw 0.78 ul, 1.56 ul, 3.12 ul, 6.25 ul and 1 more, below its minimum of 20 ul (this line did it 10 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A1 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  }
+ ],
+ "seconds": 6.1,
+ "draft": 6
+}

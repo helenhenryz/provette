@@ -1,0 +1,171 @@
+{
+ "id": "pcr-02",
+ "request": "I have 24 genomic DNA samples in a tube rack and one tube of 2x PCR master mix with primers already added. Make 25 ul reactions in a PCR plate: 12.5 ul master mix, 10.5 ul water, 2 ul DNA.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "master_mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)master\\s*mix|mastermix"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  },
+  {
+   "name": "sample_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:sample|dna|template)\\D{0,12}?(\\d+)",
+   "count": 24,
+   "index": "number"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "24 reactions free",
+   "why": "the request does not specify well positions",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_1": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_2": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_3": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_4": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_5": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_6": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_7": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_8": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_9": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_10": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_11": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_12": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_13": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_14": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_15": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_16": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_17": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_18": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_19": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_20": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_21": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_22": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_23": 2
+      },
+      {
+       "master_mix": 12.5,
+       "water": 10.5,
+       "sample_24": 2
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "the request does not say which wells; column-major from A1 chosen"
+ ]
+}

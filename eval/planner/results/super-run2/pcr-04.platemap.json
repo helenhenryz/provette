@@ -1,0 +1,117 @@
+{
+ "id": "pcr-04",
+ "request": "Set up a qPCR plate for 6 cDNA samples, each in triplicate, 10 ul reactions: 8 ul of SYBR master mix with primers and 2 ul of cDNA. Samples are in PCR strip tubes on an aluminium block, master mix is in a 2 ml tube.",
+ "technique": "qPCR setup",
+ "liquids": [
+  {
+   "name": "sample_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:sample|cndna|template)\\D{0,12}?(\\d+)",
+   "count": 6,
+   "index": "number"
+  },
+  {
+   "name": "master_mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)sybr.*master\\s*mix|master\\s*mix"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "18 reactions triplicate",
+   "why": "request does not specify well positions",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "sample_1": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_1": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_1": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_2": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_2": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_2": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_3": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_3": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_3": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_4": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_4": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_4": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_5": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_5": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_5": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_6": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_6": 2,
+       "master_mix": 8
+      },
+      {
+       "sample_6": 2,
+       "master_mix": 8
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The request does not say which wells; free placement chosen."
+ ]
+}

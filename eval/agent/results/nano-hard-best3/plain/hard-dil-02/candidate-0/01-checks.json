@@ -1,0 +1,1800 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: VERIFIED against plate map hard-dil-02. 24 of 24 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 2). Reading of the request: 4 rows x 6\n    points on the assay plate.\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  compound 1                           1000.0      15.0     910.0      74.9     0.1  <-- FLAG\n  compound 2                           1000.0      15.0     910.0      74.9     0.1  <-- FLAG\n  compound 3                           1000.0      15.0     910.0      74.9     0.1  <-- FLAG\n  compound 4                           1000.0      15.0     910.0      74.9     0.1  <-- FLAG\n  dmso                                 5000.0     180.1    3800.0     900.4   119.5\n  medium                               8640.0       0.0    8640.0       0.0     0.0\n  FLAG: 0.1 ul of compound 1 is lost: it left the deck inside a tip that was thrown away.\n  FLAG: compound 1 ends in wells the plate map does not list for it: A1 in slot 1 (50.0 ul),\n    A2 in slot 1 (16.7 ul), A3 in slot 1 (5.6 ul), A4 in slot 1 (1.9 ul), A5 in slot 1 (0.6\n    ul), A6 in slot 1 (0.2 ul).\n  FLAG: 0.1 ul of compound 2 is lost: it left the deck inside a tip that was thrown away.\n  FLAG: compound 2 ends in wells the plate map does not list for it: B1 in slot 1 (50.0 ul),\n    B2 in slot 1 (16.7 ul), B3 in slot 1 (5.6 ul), B4 in slot 1 (1.9 ul), B5 in slot 1 (0.6\n    ul), B6 in slot 1 (0.2 ul).\n  FLAG: 0.1 ul of compound 3 is lost: it left the deck inside a tip that was thrown away.\n  FLAG: compound 3 ends in wells the plate map does not list for it: C1 in slot 1 (50.0 ul),\n    C2 in slot 1 (16.7 ul), C3 in slot 1 (5.6 ul), C4 in slot 1 (1.9 ul), C5 in slot 1 (0.6\n    ul), C6 in slot 1 (0.2 ul).\n  FLAG: 0.1 ul of compound 4 is lost: it left the deck inside a tip that was thrown away.\n  FLAG: compound 4 ends in wells the plate map does not list for it: D1 in slot 1 (50.0 ul),\n    D2 in slot 1 (16.7 ul), D3 in slot 1 (5.6 ul), D4 in slot 1 (1.9 ul), D5 in slot 1 (0.6\n    ul), D6 in slot 1 (0.2 ul).\n  Note: 119.5 ul of dmso is lost: it left the deck inside a tip that was thrown away.\n  Note: dmso ends in wells the plate map does not list for it: A2 in slot 1 (33.3 ul), A3 in\n    slot 1 (44.4 ul), A4 in slot 1 (48.1 ul), A5 in slot 1 (49.4 ul), A6 in slot 1 (49.8\n    ul), B2 in slot 1 (33.3 ul) and 14 more.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    compound 1                            90.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A2    compound 2                            90.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A3    compound 3                            90.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A4    compound 4                            90.0    1000.0\n  4    NEST 12 Well Reservoir 15 mL          A1    dmso                                1200.0    5000.0\n  Tips: 24 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 5.\n  Tips: 4 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 6.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-dil-02",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "2:nest_96_wellplate_200ul_flat",
+   "variant": "4 rows x 6 points on the assay plate",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 24,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.666666666666666,
+      "compound_1": 3.333333333333333
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 8.88888888888889,
+      "compound_1": 1.1111111111111112
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.629629629629628,
+      "compound_1": 0.37037037037037035
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.876543209876543,
+      "compound_1": 0.12345679012345678
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.958847736625513,
+      "compound_1": 0.04115226337448559
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.666666666666666,
+      "compound_2": 3.333333333333333
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 8.88888888888889,
+      "compound_2": 1.1111111111111112
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.629629629629628,
+      "compound_2": 0.37037037037037035
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.876543209876543,
+      "compound_2": 0.12345679012345678
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.958847736625513,
+      "compound_2": 0.04115226337448559
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.666666666666666,
+      "compound_3": 3.333333333333333
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 8.88888888888889,
+      "compound_3": 1.1111111111111112
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.629629629629628,
+      "compound_3": 0.37037037037037035
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.876543209876543,
+      "compound_3": 0.12345679012345678
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.958847736625513,
+      "compound_3": 0.04115226337448559
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.666666666666666,
+      "compound_4": 3.333333333333333
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 8.88888888888889,
+      "compound_4": 1.1111111111111112
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.629629629629628,
+      "compound_4": 0.37037037037037035
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.876543209876543,
+      "compound_4": 0.12345679012345678
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.958847736625513,
+      "compound_4": 0.04115226337448559
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "compound 1",
+    "logical": "compound_1",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 14.9794,
+    "left_in_source_ul": 910.0,
+    "elsewhere": [
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A1]",
+      "ul": 50.0
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A2]",
+      "ul": 16.6667
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A3]",
+      "ul": 5.5556
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A4]",
+      "ul": 1.8519
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A5]",
+      "ul": 0.6173
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A6]",
+      "ul": 0.2058
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.1235,
+    "flags": [
+     "0.1 ul of compound 1 is lost: it left the deck inside a tip that was thrown away.",
+     "compound 1 ends in wells the plate map does not list for it: A1 in slot 1 (50.0 ul), A2 in slot 1 (16.7 ul), A3 in slot 1 (5.6 ul), A4 in slot 1 (1.9 ul), A5 in slot 1 (0.6 ul), A6 in slot 1 (0.2 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "compound 2",
+    "logical": "compound_2",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 14.9794,
+    "left_in_source_ul": 910.0,
+    "elsewhere": [
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 50.0
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B2]",
+      "ul": 16.6667
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B3]",
+      "ul": 5.5556
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B4]",
+      "ul": 1.8519
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B5]",
+      "ul": 0.6173
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B6]",
+      "ul": 0.2058
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.1235,
+    "flags": [
+     "0.1 ul of compound 2 is lost: it left the deck inside a tip that was thrown away.",
+     "compound 2 ends in wells the plate map does not list for it: B1 in slot 1 (50.0 ul), B2 in slot 1 (16.7 ul), B3 in slot 1 (5.6 ul), B4 in slot 1 (1.9 ul), B5 in slot 1 (0.6 ul), B6 in slot 1 (0.2 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "compound 3",
+    "logical": "compound_3",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 14.9794,
+    "left_in_source_ul": 910.0,
+    "elsewhere": [
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 50.0
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 16.6667
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 5.5556
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 1.8519
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 0.6173
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C6]",
+      "ul": 0.2058
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.1235,
+    "flags": [
+     "0.1 ul of compound 3 is lost: it left the deck inside a tip that was thrown away.",
+     "compound 3 ends in wells the plate map does not list for it: C1 in slot 1 (50.0 ul), C2 in slot 1 (16.7 ul), C3 in slot 1 (5.6 ul), C4 in slot 1 (1.9 ul), C5 in slot 1 (0.6 ul), C6 in slot 1 (0.2 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "compound 4",
+    "logical": "compound_4",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 14.9794,
+    "left_in_source_ul": 910.0,
+    "elsewhere": [
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 50.0
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D2]",
+      "ul": 16.6667
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D3]",
+      "ul": 5.5556
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D4]",
+      "ul": 1.8519
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D5]",
+      "ul": 0.6173
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D6]",
+      "ul": 0.2058
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.1235,
+    "flags": [
+     "0.1 ul of compound 4 is lost: it left the deck inside a tip that was thrown away.",
+     "compound 4 ends in wells the plate map does not list for it: D1 in slot 1 (50.0 ul), D2 in slot 1 (16.7 ul), D3 in slot 1 (5.6 ul), D4 in slot 1 (1.9 ul), D5 in slot 1 (0.6 ul), D6 in slot 1 (0.2 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "dmso",
+    "logical": "dmso",
+    "role": "reagent",
+    "declared_ul": 5000.0,
+    "delivered_ul": 180.0823,
+    "left_in_source_ul": 3800.0,
+    "elsewhere": [
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A2]",
+      "ul": 33.3333
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A3]",
+      "ul": 44.4444
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A4]",
+      "ul": 48.1481
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A5]",
+      "ul": 49.3827
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A6]",
+      "ul": 49.7942
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B2]",
+      "ul": 33.3333
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B3]",
+      "ul": 44.4444
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B4]",
+      "ul": 48.1481
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B5]",
+      "ul": 49.3827
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[B6]",
+      "ul": 49.7942
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 33.3333
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 44.4444
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 48.1481
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 49.3827
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[C6]",
+      "ul": 49.7942
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D2]",
+      "ul": 33.3333
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D3]",
+      "ul": 44.4444
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D4]",
+      "ul": 48.1481
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D5]",
+      "ul": 49.3827
+     },
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[D6]",
+      "ul": 49.7942
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 119.5062,
+    "flags": [],
+    "notes": [
+     "119.5 ul of dmso is lost: it left the deck inside a tip that was thrown away.",
+     "dmso ends in wells the plate map does not list for it: A2 in slot 1 (33.3 ul), A3 in slot 1 (44.4 ul), A4 in slot 1 (48.1 ul), A5 in slot 1 (49.4 ul), A6 in slot 1 (49.8 ul), B2 in slot 1 (33.3 ul) and 14 more."
+    ]
+   },
+   {
+    "liquid": "medium",
+    "logical": "medium",
+    "role": "reagent",
+    "declared_ul": 8640.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 8640.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "compound 1",
+     "declared_ul": 1000.0,
+     "needed_ul": 90.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "compound 2",
+     "declared_ul": 1000.0,
+     "needed_ul": 90.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "compound 3",
+     "declared_ul": 1000.0,
+     "needed_ul": 90.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "compound 4",
+     "declared_ul": 1000.0,
+     "needed_ul": 90.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "dmso",
+     "declared_ul": 5000.0,
+     "needed_ul": 1200.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "5",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 24
+    },
+    {
+     "slot": "6",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 4
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 10 biology problems (3 errors, 2 warnings, 5 notes).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: dmso (well A1 in slot 4)\n   line 43:  p300.aspirate(60, reservoir[\"A1\"])\n   At line 43 the tip went into dmso (well A1 in slot 4) while it still carried compound 1\n   (tube A1 in slot 3) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. Liquid drawn from it then took the unwanted material along into 36\n   other wells: wells B1, B2, B3, B4, B5, B6, C1, C2 and 10 more in slot 1; wells B1, B2,\n   B3, B4, B5, B6, C1, C2 and 10 more in slot 2.\n   Affected: well A1 in slot 4.\n   Also reached 36 other wells: wells B1, B2, B3, B4, B5, B6, C1, C2 and 10 more in slot 1;\n   wells B1, B2, B3, B4, B5, B6, C1, C2 and 10 more in slot 2.\n   Fix: Pick up a fresh tip before line 43 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [91d3d9fe87fd]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: dmso (well A1 in slot 4)\n   line 83:  p300.aspirate(60, reservoir[\"A1\"])\n   At line 83 the tip went into dmso (well A1 in slot 4) while it still carried compound 2\n   (tube A2 in slot 3) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. Liquid drawn from it then took the unwanted material along into 24\n   other wells: wells C1, C2, C3, C4, C5, C6, D1, D2 and 4 more in slot 1; wells C1, C2, C3,\n   C4, C5, C6, D1, D2 and 4 more in slot 2.\n   Affected: well A1 in slot 4.\n   Also reached 24 other wells: wells C1, C2, C3, C4, C5, C6, D1, D2 and 4 more in slot 1;\n   wells C1, C2, C3, C4, C5, C6, D1, D2 and 4 more in slot 2.\n   Fix: Pick up a fresh tip before line 83 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [7943e71415e5]\n\n3. ERROR CONTAM-STOCK: A used tip went into a stock: dmso (well A1 in slot 4)\n   line 123:  p300.aspirate(60, reservoir[\"A1\"])\n   At line 123 the tip went into dmso (well A1 in slot 4) while it still carried compound 3\n   (tube A3 in slot 3) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. Liquid drawn from it then took the unwanted material along into 12\n   other wells: wells D1, D2, D3, D4, D5 and D6 in slot 1; wells D1, D2, D3, D4, D5 and D6\n   in slot 2.\n   Affected: well A1 in slot 4.\n   Also reached 12 other wells: wells D1, D2, D3, D4, D5 and D6 in slot 1; wells D1, D2, D3,\n   D4, D5 and D6 in slot 2.\n   Fix: Pick up a fresh tip before line 123 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [428252e267bf]\n\n4. WARNING CONTAM-STOCK: A used tip went into a stock: dmso (well A1 in slot 4)\n   line 163:  p300.aspirate(60, reservoir[\"A1\"])\n   At line 163 the tip went into dmso (well A1 in slot 4) while it still carried compound 4\n   (tube A4 in slot 3) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. The protocol drew from it again afterwards, but only into wells that\n   were given that material on purpose anyway, so this run is not harmed. What is left in\n   the stock is no longer clean for the next run.\n   Affected: well A1 in slot 4.\n   Fix: Pick up a fresh tip before line 163 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [102bd564604e]\n\n5. WARNING UNMIXED-AT-END: 24 wells never mixed after compound 1, dmso, compound 2, compound\n3 and 1 more went in (10% of the well)\n   line 206:  p20.dispense(10, plate_assay[src])\n   At line 206 the robot added compound 1, dmso, compound 2, compound 3 and 1 more to wells\n   A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 2, which already held medium (this\n   line did it 24 times). The addition was 10% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   The liquid added last is a sample, so nothing else in the workflow will mix it: a\n   normalisation or a pool left like this is not what it says it is.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 2.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 2 after line 206:\n   `mix_after=(5, 80)` on the transfer, or `pipette.mix(5, 80, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [d9da6ce843ca]\n\n6. NOTE NO-NEGATIVE-CONTROL: No blank on a dilution series: 6 wells of compound 1\n   line 40:  p300.dispense(90, plate_dilution[\"A1\"])\n   At line 40 the robot starts a dilution series of compound 1 in NEST 96 Well Plate 200 \u00b5L\n   Flat (slot 1): 6 wells at 6 concentrations, each level about 3 times weaker than the one\n   before. No well on this plate holds dmso with no sample, so there is no blank: the curve\n   has no zero to read against, and a signal from the diluent or the plastic cannot be told\n   from the lowest point. Wells: wells A1, A2, A3, A4, A5 and A6 in slot 1.\n   Affected: wells A1, A2, A3, A4, A5 and A6 in slot 1.\n   Fix: Add a well of dmso alone, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [3be7d243979b]\n\n7. NOTE CONTAM-WELL: A used tip carried dmso (well A1 in slot 4) into well A1 in slot 1 it\nwas never meant for\n   line 45:  p300.aspirate(30, plate_dilution[\"A1\"])\n   At line 45 the tip touched the liquid in well A1 in slot 1 while it still carried dmso\n   (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   this well on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 4 other wells: wells A1, B1, C1 and D1\n   in slot 2.\n   Affected: well A1 in slot 1.\n   Also reached 4 other wells: wells A1, B1, C1 and D1 in slot 2.\n   Fix: Use a fresh tip for each well at line 45. If one tip must serve many wells, dispense\n   from above the liquid (for example `well.top()`) so that the tip never touches what is\n   already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [bbcdc865aae4]\n\n8. NOTE CONTAM-WELL: A used tip carried dmso (well A1 in slot 4) into well B1 in slot 1 it\nwas never meant for\n   line 85:  p300.aspirate(30, plate_dilution[\"B1\"])\n   At line 85 the tip touched the liquid in well B1 in slot 1 while it still carried dmso\n   (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   this well on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 3 other wells: wells B1, C1 and D1 in\n   slot 2.\n   Affected: well B1 in slot 1.\n   Also reached 3 other wells: wells B1, C1 and D1 in slot 2.\n   Fix: Use a fresh tip for each well at line 85. If one tip must serve many wells, dispense\n   from above the liquid (for example `well.top()`) so that the tip never touches what is\n   already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [99eba9d7c2e9]\n\n9. NOTE CONTAM-WELL: A used tip carried dmso (well A1 in slot 4) into well C1 in slot 1 it\nwas never meant for\n   line 125:  p300.aspirate(30, plate_dilution[\"C1\"])\n   At line 125 the tip touched the liquid in well C1 in slot 1 while it still carried dmso\n   (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   this well on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 2 other wells: wells C1 and D1 in slot\n   2.\n   Affected: well C1 in slot 1.\n   Also reached 2 other wells: wells C1 and D1 in slot 2.\n   Fix: Use a fresh tip for each well at line 125. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [d81e67ab886b]\n\n10. NOTE CONTAM-WELL: A used tip carried dmso (well A1 in slot 4) into well D1 in slot 1 it\nwas never meant for\n   line 165:  p300.aspirate(30, plate_dilution[\"D1\"])\n   At line 165 the tip touched the liquid in well D1 in slot 1 while it still carried dmso\n   (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   this well on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 1 other well: well D1 in slot 2.\n   Affected: well D1 in slot 1.\n   Also reached 1 other well: well D1 in slot 2.\n   Fix: Use a fresh tip for each well at line 165. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [2252b6be91bd]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 43,
+   "title": "A used tip went into a stock: dmso (well A1 in slot 4)",
+   "explanation": "At line 43 the tip went into dmso (well A1 in slot 4) while it still carried compound 1 (tube A1 in slot 3) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 36 other wells: wells B1, B2, B3, B4, B5, B6, C1, C2 and 10 more in slot 1; wells B1, B2, B3, B4, B5, B6, C1, C2 and 10 more in slot 2.",
+   "fix": "Pick up a fresh tip before line 43 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 83,
+   "title": "A used tip went into a stock: dmso (well A1 in slot 4)",
+   "explanation": "At line 83 the tip went into dmso (well A1 in slot 4) while it still carried compound 2 (tube A2 in slot 3) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 24 other wells: wells C1, C2, C3, C4, C5, C6, D1, D2 and 4 more in slot 1; wells C1, C2, C3, C4, C5, C6, D1, D2 and 4 more in slot 2.",
+   "fix": "Pick up a fresh tip before line 83 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 123,
+   "title": "A used tip went into a stock: dmso (well A1 in slot 4)",
+   "explanation": "At line 123 the tip went into dmso (well A1 in slot 4) while it still carried compound 3 (tube A3 in slot 3) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 12 other wells: wells D1, D2, D3, D4, D5 and D6 in slot 1; wells D1, D2, D3, D4, D5 and D6 in slot 2.",
+   "fix": "Pick up a fresh tip before line 123 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 163,
+   "title": "A used tip went into a stock: dmso (well A1 in slot 4)",
+   "explanation": "At line 163 the tip went into dmso (well A1 in slot 4) while it still carried compound 4 (tube A4 in slot 3) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 163 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "warning",
+   "certain": true,
+   "line": 206,
+   "title": "24 wells never mixed after compound 1, dmso, compound 2, compound 3 and 1 more went in (10% of the well)",
+   "explanation": "At line 206 the robot added compound 1, dmso, compound 2, compound 3 and 1 more to wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 2, which already held medium (this line did it 24 times). The addition was 10% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. The liquid added last is a sample, so nothing else in the workflow will mix it: a normalisation or a pool left like this is not what it says it is.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 2 after line 206: `mix_after=(5, 80)` on the transfer, or `pipette.mix(5, 80, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 40,
+   "title": "No blank on a dilution series: 6 wells of compound 1",
+   "explanation": "At line 40 the robot starts a dilution series of compound 1 in NEST 96 Well Plate 200 \u00b5L Flat (slot 1): 6 wells at 6 concentrations, each level about 3 times weaker than the one before. No well on this plate holds dmso with no sample, so there is no blank: the curve has no zero to read against, and a signal from the diluent or the plastic cannot be told from the lowest point. Wells: wells A1, A2, A3, A4, A5 and A6 in slot 1.",
+   "fix": "Add a well of dmso alone, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 45,
+   "title": "A used tip carried dmso (well A1 in slot 4) into well A1 in slot 1 it was never meant for",
+   "explanation": "At line 45 the tip touched the liquid in well A1 in slot 1 while it still carried dmso (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another. Liquid was later taken out of the affected wells, and the unwanted material went along into 4 other wells: wells A1, B1, C1 and D1 in slot 2.",
+   "fix": "Use a fresh tip for each well at line 45. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 85,
+   "title": "A used tip carried dmso (well A1 in slot 4) into well B1 in slot 1 it was never meant for",
+   "explanation": "At line 85 the tip touched the liquid in well B1 in slot 1 while it still carried dmso (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another. Liquid was later taken out of the affected wells, and the unwanted material went along into 3 other wells: wells B1, C1 and D1 in slot 2.",
+   "fix": "Use a fresh tip for each well at line 85. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 125,
+   "title": "A used tip carried dmso (well A1 in slot 4) into well C1 in slot 1 it was never meant for",
+   "explanation": "At line 125 the tip touched the liquid in well C1 in slot 1 while it still carried dmso (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another. Liquid was later taken out of the affected wells, and the unwanted material went along into 2 other wells: wells C1 and D1 in slot 2.",
+   "fix": "Use a fresh tip for each well at line 125. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 165,
+   "title": "A used tip carried dmso (well A1 in slot 4) into well D1 in slot 1 it was never meant for",
+   "explanation": "At line 165 the tip touched the liquid in well D1 in slot 1 while it still carried dmso (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another. Liquid was later taken out of the affected wells, and the unwanted material went along into 1 other well: well D1 in slot 2.",
+   "fix": "Use a fresh tip for each well at line 165. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  }
+ ],
+ "seconds": 6.7,
+ "draft": 1
+}

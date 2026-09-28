@@ -1,0 +1,587 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-pcr-02. 5 of 8 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3). Reading of the request: 8\n    reactions of 100 ul.\n  well A6 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_6; found 50 ul mix, 8\n    ul template_6\n      - water is missing: the plate map says 42 ul, none arrives\n  well A7 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_7; found 50 ul mix, 8\n    ul template_7\n      - water is missing: the plate map says 42 ul, none arrives\n  well A8 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_8; found 8 ul\n    template_8\n      - mix is missing: the plate map says 50 ul, none arrives\n      - water is missing: the plate map says 42 ul, none arrives\n\nLabware for the technique (PCR setup): 1 finding.\n1. NOTE LABWARE-FOR-TECHNIQUE: mix is declared in a reservoir channel, not a tube\n   line 41:  reservoir[\"A1\"].load_liquid(liquid=mix_liquid, volume=500)\n   Line 41 declares 500 ul of mix in channel A1 of NEST 12 Well Reservoir 15 mL (slot 4,\n     load name nest_12_reservoir_15ml). The request (PCR setup) puts its reagents in tubes,\n     or at a temperature, and a reservoir channel is neither: 500 ul spread over the channel\n     is 1.7 mm deep, open to the air and at room temperature, so it warms and evaporates\n     while the run goes on, and the tip may not reach it.\n   Affected: well A1 in slot 4.\n   Fix: Put mix in a tube on the block (a tube rack, or a temperature module with a tube\n     block), not in a reservoir channel.\n   Source: Opentrons, module setup: no error for an unusual labware and module combination\n           https://docs.opentrons.com/v2/modules/setup.html\n   Source: Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate\n           https://docs.opentrons.com/v2/modules/thermocycler.html\n   Source: ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error\n           https://arxiv.org/html/2606.11150v1\n   [b829d0d1dd2a]\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  mix                                   500.0     350.0     150.0       0.0     0.0\n  water                                 400.0     210.0     190.0       0.0     0.0\n  template 1                             20.0       8.0      12.0       0.0     0.0\n  template 2                             20.0       8.0      12.0       0.0     0.0\n  template 3                             20.0       8.0      12.0       0.0     0.0\n  template 4                             20.0       8.0      12.0       0.0     0.0\n  template 5                             20.0       8.0      12.0       0.0     0.0\n  template 6                             20.0       8.0      12.0       0.0     0.0\n  template 7                             20.0       8.0      12.0       0.0     0.0\n  template 8                             20.0       8.0      12.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  4    NEST 12 Well Reservoir 15 mL          A1    mix                                  400.0     500.0\n  4    NEST 12 Well Reservoir 15 mL          A2    water                                336.0     400.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A1    template 1                             8.0      20.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  B1    template 7                             8.0      20.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A2    template 2                             8.0      20.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  B2    template 8                             8.0      20.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A3    template 3                             8.0      20.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A4    template 4                             8.0      20.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A5    template 5                             8.0      20.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A6    template 6                             8.0      20.0\n  Tips: 8 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  Tips: 16 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-pcr-02",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [
+   {
+    "rule_id": "LABWARE-FOR-TECHNIQUE",
+    "family": 10,
+    "tier": "role",
+    "severity": "note",
+    "certain": true,
+    "roles_basis": "declared",
+    "title": "mix is declared in a reservoir channel, not a tube",
+    "explanation": "Line 41 declares 500 ul of mix in channel A1 of NEST 12 Well Reservoir 15 mL (slot 4, load name nest_12_reservoir_15ml). The request (PCR setup) puts its reagents in tubes, or at a temperature, and a reservoir channel is neither: 500 ul spread over the channel is 1.7 mm deep, open to the air and at room temperature, so it warms and evaporates while the run goes on, and the tip may not reach it.",
+    "fix": "Put mix in a tube on the block (a tube rack, or a temperature module with a tube block), not in a reservoir channel.",
+    "line": 41,
+    "stack": [],
+    "occurrences": [],
+    "wells": [
+     {
+      "labware_id": "4:nest_12_reservoir_15ml",
+      "well": "A1",
+      "slot": "4",
+      "labware": "NEST 12 Well Reservoir 15 mL",
+      "liquid": "mix"
+     }
+    ],
+    "downstream": {
+     "count": 0,
+     "wells": []
+    },
+    "sources": [
+     {
+      "name": "Opentrons, module setup: no error for an unusual labware and module combination",
+      "url": "https://docs.opentrons.com/v2/modules/setup.html"
+     },
+     {
+      "name": "Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate",
+      "url": "https://docs.opentrons.com/v2/modules/thermocycler.html"
+     },
+     {
+      "name": "ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error",
+      "url": "https://arxiv.org/html/2606.11150v1"
+     }
+    ],
+    "fingerprint": "b829d0d1dd2a"
+   }
+  ],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "8 reactions of 100 ul",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 5,
+   "wells_total": 8,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_1": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_1": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_2": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_2": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_3": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "water": 41.99999999999999,
+      "template_3": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_4": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_4": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_5": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_5": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_6": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "template_6": 8.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_7": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "template_7": 8.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_8": 8.0
+     },
+     "found": {
+      "template_8": 8.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "mix",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_6": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "template_6": 8.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_7": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "template_7": 8.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_8": 8.0
+     },
+     "found": {
+      "template_8": 8.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "mix",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "mix",
+    "logical": "mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 350.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 400.0,
+    "delivered_ul": 210.0,
+    "left_in_source_ul": 190.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 1",
+    "logical": "template_1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 2",
+    "logical": "template_2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 3",
+    "logical": "template_3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 4",
+    "logical": "template_4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 5",
+    "logical": "template_5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 6",
+    "logical": "template_6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 7",
+    "logical": "template_7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 8",
+    "logical": "template_8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "mix",
+     "declared_ul": 500.0,
+     "needed_ul": 400.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A2",
+     "liquid": "water",
+     "declared_ul": 400.0,
+     "needed_ul": 336.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "template 1",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "template 7",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "template 2",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "template 8",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "template 3",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "template 4",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "template 5",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "template 6",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 8
+    },
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 16
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 4 biology problems (2 errors, 2 notes).\n\n1. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well A1 in slot 4: the liquid is\nbelow the tip\n   line 57:  p300.aspirate(50, reservoir[\"A1\"])\n   At line 57 the p300_single_gen2 draws 50 ul from mix (well A1 in slot 4) with its tip 1\n   mm above the bottom of the well. By then the well holds 150 ul, which in this NEST 12\n   Well Reservoir 15 mL reaches only 0.75 mm up: the tip is above the liquid and draws air\n   (this line did it once, after 7 times in the liquid; 50 ul of air in all). The simulator\n   does not notice: it does not follow the liquid. The 1 well filled from these draws got\n   air instead of liquid.\n   Affected: well A1 in slot 4.\n   Also reached 1 other well: well A8 in slot 3.\n   Fix: Keep the liquid above the tip. This well needs about 258 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [033bd0835316]\n\n2. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well A2 in slot 4: the liquid is\nbelow the tip\n   line 63:  p300.aspirate(42, reservoir[\"A2\"])\n   At line 63 the p300_single_gen2 draws 42 ul from water (well A2 in slot 4) with its tip 1\n   mm above the bottom of the well. By then the well holds 190 ul, which in this NEST 12\n   Well Reservoir 15 mL reaches only 0.89 mm up: the tip is above the liquid and draws air\n   (this line did it 3 times, after 5 times in the liquid; 126 ul of air in all). The\n   simulator does not notice: it does not follow the liquid. The 3 wells filled from these\n   draws got air instead of liquid.\n   Affected: well A2 in slot 4.\n   Also reached 3 other wells: wells A6, A7 and A8 in slot 3.\n   Fix: Keep the liquid above the tip. This well needs about 258 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [e7d42aadd300]\n\n3. NOTE NO-NEGATIVE-CONTROL: No no-template control: 7 wells of mix with a sample\n   line 58:  p300.dispense(50, plate[dest_name])\n   At line 58 the robot starts putting mix into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt\n   (slot 3), and 7 wells end holding it together with a sample. No well on this plate holds\n   the mix without a sample, so there is no no-template control. If a reagent is\n   contaminated, or the primers pair with each other, every well gives a signal and nothing\n   on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6 and A7 in\n   slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6 and A7 in slot 3.\n   Fix: Add one well (three for qPCR) with 50 ul of mix and 8 ul of water in place of the\n   template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [e61443207c28]\n\n4. NOTE UNMIXED-AT-END: 7 wells never mixed after template 1, template 2, template 3,\ntemplate 4 and 3 more went in (8 to 14% of the well)\n   line 71:  p20.dispense(8, plate[dest_name])\n   At line 71 the robot added template 1, template 2, template 3, template 4 and 3 more to\n   wells A1, A2, A3, A4, A5, A6 and A7 in slot 3, which already held mix and water (this\n   line did it 7 times). The addition was 8 to 14% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   A PCR plate is usually vortexed and spun down before cycling; if this one will not be,\n   mix it.\n   Affected: wells A1, A2, A3, A4, A5, A6 and A7 in slot 3.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6 and A7 in slot 3 after line 71: `mix_after=(5, 46\n   to 80)` on the transfer, or `pipette.mix(5, 46 to 80, well)`, with the volume about 80%\n   of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [37f2fec64749]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 57,
+   "title": "The pipette draws air from well A1 in slot 4: the liquid is below the tip",
+   "explanation": "At line 57 the p300_single_gen2 draws 50 ul from mix (well A1 in slot 4) with its tip 1 mm above the bottom of the well. By then the well holds 150 ul, which in this NEST 12 Well Reservoir 15 mL reaches only 0.75 mm up: the tip is above the liquid and draws air (this line did it once, after 7 times in the liquid; 50 ul of air in all). The simulator does not notice: it does not follow the liquid. The 1 well filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 258 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 63,
+   "title": "The pipette draws air from well A2 in slot 4: the liquid is below the tip",
+   "explanation": "At line 63 the p300_single_gen2 draws 42 ul from water (well A2 in slot 4) with its tip 1 mm above the bottom of the well. By then the well holds 190 ul, which in this NEST 12 Well Reservoir 15 mL reaches only 0.89 mm up: the tip is above the liquid and draws air (this line did it 3 times, after 5 times in the liquid; 126 ul of air in all). The simulator does not notice: it does not follow the liquid. The 3 wells filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 258 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 58,
+   "title": "No no-template control: 7 wells of mix with a sample",
+   "explanation": "At line 58 the robot starts putting mix into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3), and 7 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6 and A7 in slot 3.",
+   "fix": "Add one well (three for qPCR) with 50 ul of mix and 8 ul of water in place of the template, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 71,
+   "title": "7 wells never mixed after template 1, template 2, template 3, template 4 and 3 more went in (8 to 14% of the well)",
+   "explanation": "At line 71 the robot added template 1, template 2, template 3, template 4 and 3 more to wells A1, A2, A3, A4, A5, A6 and A7 in slot 3, which already held mix and water (this line did it 7 times). The addition was 8 to 14% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6 and A7 in slot 3 after line 71: `mix_after=(5, 46 to 80)` on the transfer, or `pipette.mix(5, 46 to 80, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 4.7,
+ "draft": 1
+}

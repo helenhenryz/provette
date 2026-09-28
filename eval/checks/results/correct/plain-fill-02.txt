@@ -1,0 +1,18 @@
+fill-02.py: VERIFIED against plate map fill-02. 48 of 48 wells hold what the plate map says.
+  Destination: PCR strip tubes on aluminium block (slot 3). Reading of the request: 48
+    aliquots.
+
+Labware for the technique (Plate filling): nothing to flag.
+
+Where every liquid ended up (ul):
+  liquid                             declared delivered in source elsewhere    lost
+  Protein stock                        3000.0    2400.0     600.0       0.0     0.0
+
+Prep sheet: what to put on the deck before the run.
+  slot labware                               well  liquid                       load at least  declared
+  2    Protein stock                         A1    Protein stock                       2400.0    3000.0
+  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 µL in slot 1.
+  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.
+
+This checks the logic of the protocol: what goes where, and how much. It does not check the
+  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.

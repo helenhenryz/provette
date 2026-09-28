@@ -1,0 +1,418 @@
+{
+ "id": "fill-01",
+ "request": "Fill a 96-well deep well plate with 500 ul of LB medium per well from a reservoir, then inoculate each well with 5 ul from the matching well of a 96-well glycerol stock plate.",
+ "technique": "Plate filling",
+ "liquids": [
+  {
+   "name": "lb",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)lb|luria\\s*bertani"
+  },
+  {
+   "name": "glycerol@{well}",
+   "role": "sample",
+   "bind": "well",
+   "pattern": ".+"
+  }
+ ],
+ "destination": {
+  "select": "regex",
+  "pattern": "(?i)deep"
+ },
+ "variants": [
+  {
+   "name": "LB plus glycerol stock",
+   "why": "",
+   "pinned": {
+    "A1": {
+     "lb": 500,
+     "glycerol@A1": 5
+    },
+    "A2": {
+     "lb": 500,
+     "glycerol@A2": 5
+    },
+    "A3": {
+     "lb": 500,
+     "glycerol@A3": 5
+    },
+    "A4": {
+     "lb": 500,
+     "glycerol@A4": 5
+    },
+    "A5": {
+     "lb": 500,
+     "glycerol@A5": 5
+    },
+    "A6": {
+     "lb": 500,
+     "glycerol@A6": 5
+    },
+    "A7": {
+     "lb": 500,
+     "glycerol@A7": 5
+    },
+    "A8": {
+     "lb": 500,
+     "glycerol@A8": 5
+    },
+    "A9": {
+     "lb": 500,
+     "glycerol@A9": 5
+    },
+    "A10": {
+     "lb": 500,
+     "glycerol@A10": 5
+    },
+    "A11": {
+     "lb": 500,
+     "glycerol@A11": 5
+    },
+    "A12": {
+     "lb": 500,
+     "glycerol@A12": 5
+    },
+    "B1": {
+     "lb": 500,
+     "glycerol@B1": 5
+    },
+    "B2": {
+     "lb": 500,
+     "glycerol@B2": 5
+    },
+    "B3": {
+     "lb": 500,
+     "glycerol@B3": 5
+    },
+    "B4": {
+     "lb": 500,
+     "glycerol@B4": 5
+    },
+    "B5": {
+     "lb": 500,
+     "glycerol@B5": 5
+    },
+    "B6": {
+     "lb": 500,
+     "glycerol@B6": 5
+    },
+    "B7": {
+     "lb": 500,
+     "glycerol@B7": 5
+    },
+    "B8": {
+     "lb": 500,
+     "glycerol@B8": 5
+    },
+    "B9": {
+     "lb": 500,
+     "glycerol@B9": 5
+    },
+    "B10": {
+     "lb": 500,
+     "glycerol@B10": 5
+    },
+    "B11": {
+     "lb": 500,
+     "glycerol@B11": 5
+    },
+    "B12": {
+     "lb": 500,
+     "glycerol@B12": 5
+    },
+    "C1": {
+     "lb": 500,
+     "glycerol@C1": 5
+    },
+    "C2": {
+     "lb": 500,
+     "glycerol@C2": 5
+    },
+    "C3": {
+     "lb": 500,
+     "glycerol@C3": 5
+    },
+    "C4": {
+     "lb": 500,
+     "glycerol@C4": 5
+    },
+    "C5": {
+     "lb": 500,
+     "glycerol@C5": 5
+    },
+    "C6": {
+     "lb": 500,
+     "glycerol@C6": 5
+    },
+    "C7": {
+     "lb": 500,
+     "glycerol@C7": 5
+    },
+    "C8": {
+     "lb": 500,
+     "glycerol@C8": 5
+    },
+    "C9": {
+     "lb": 500,
+     "glycerol@C9": 5
+    },
+    "C10": {
+     "lb": 500,
+     "glycerol@C10": 5
+    },
+    "C11": {
+     "lb": 500,
+     "glycerol@C11": 5
+    },
+    "C12": {
+     "lb": 500,
+     "glycerol@C12": 5
+    },
+    "D1": {
+     "lb": 500,
+     "glycerol@D1": 5
+    },
+    "D2": {
+     "lb": 500,
+     "glycerol@D2": 5
+    },
+    "D3": {
+     "lb": 500,
+     "glycerol@D3": 5
+    },
+    "D4": {
+     "lb": 500,
+     "glycerol@D4": 5
+    },
+    "D5": {
+     "lb": 500,
+     "glycerol@D5": 5
+    },
+    "D6": {
+     "lb": 500,
+     "glycerol@D6": 5
+    },
+    "D7": {
+     "lb": 500,
+     "glycerol@D7": 5
+    },
+    "D8": {
+     "lb": 500,
+     "glycerol@D8": 5
+    },
+    "D9": {
+     "lb": 500,
+     "glycerol@D9": 5
+    },
+    "D10": {
+     "lb": 500,
+     "glycerol@D10": 5
+    },
+    "D11": {
+     "lb": 500,
+     "glycerol@D11": 5
+    },
+    "D12": {
+     "lb": 500,
+     "glycerol@D12": 5
+    },
+    "E1": {
+     "lb": 500,
+     "glycerol@E1": 5
+    },
+    "E2": {
+     "lb": 500,
+     "glycerol@E2": 5
+    },
+    "E3": {
+     "lb": 500,
+     "glycerol@E3": 5
+    },
+    "E4": {
+     "lb": 500,
+     "glycerol@E4": 5
+    },
+    "E5": {
+     "lb": 500,
+     "glycerol@E5": 5
+    },
+    "E6": {
+     "lb": 500,
+     "glycerol@E6": 5
+    },
+    "E7": {
+     "lb": 500,
+     "glycerol@E7": 5
+    },
+    "E8": {
+     "lb": 500,
+     "glycerol@E8": 5
+    },
+    "E9": {
+     "lb": 500,
+     "glycerol@E9": 5
+    },
+    "E10": {
+     "lb": 500,
+     "glycerol@E10": 5
+    },
+    "E11": {
+     "lb": 500,
+     "glycerol@E11": 5
+    },
+    "E12": {
+     "lb": 500,
+     "glycerol@E12": 5
+    },
+    "F1": {
+     "lb": 500,
+     "glycerol@F1": 5
+    },
+    "F2": {
+     "lb": 500,
+     "glycerol@F2": 5
+    },
+    "F3": {
+     "lb": 500,
+     "glycerol@F3": 5
+    },
+    "F4": {
+     "lb": 500,
+     "glycerol@F4": 5
+    },
+    "F5": {
+     "lb": 500,
+     "glycerol@F5": 5
+    },
+    "F6": {
+     "lb": 500,
+     "glycerol@F6": 5
+    },
+    "F7": {
+     "lb": 500,
+     "glycerol@F7": 5
+    },
+    "F8": {
+     "lb": 500,
+     "glycerol@F8": 5
+    },
+    "F9": {
+     "lb": 500,
+     "glycerol@F9": 5
+    },
+    "F10": {
+     "lb": 500,
+     "glycerol@F10": 5
+    },
+    "F11": {
+     "lb": 500,
+     "glycerol@F11": 5
+    },
+    "F12": {
+     "lb": 500,
+     "glycerol@F12": 5
+    },
+    "G1": {
+     "lb": 500,
+     "glycerol@G1": 5
+    },
+    "G2": {
+     "lb": 500,
+     "glycerol@G2": 5
+    },
+    "G3": {
+     "lb": 500,
+     "glycerol@G3": 5
+    },
+    "G4": {
+     "lb": 500,
+     "glycerol@G4": 5
+    },
+    "G5": {
+     "lb": 500,
+     "glycerol@G5": 5
+    },
+    "G6": {
+     "lb": 500,
+     "glycerol@G6": 5
+    },
+    "G7": {
+     "lb": 500,
+     "glycerol@G7": 5
+    },
+    "G8": {
+     "lb": 500,
+     "glycerol@G8": 5
+    },
+    "G9": {
+     "lb": 500,
+     "glycerol@G9": 5
+    },
+    "G10": {
+     "lb": 500,
+     "glycerol@G10": 5
+    },
+    "G11": {
+     "lb": 500,
+     "glycerol@G11": 5
+    },
+    "G12": {
+     "lb": 500,
+     "glycerol@G12": 5
+    },
+    "H1": {
+     "lb": 500,
+     "glycerol@H1": 5
+    },
+    "H2": {
+     "lb": 500,
+     "glycerol@H2": 5
+    },
+    "H3": {
+     "lb": 500,
+     "glycerol@H3": 5
+    },
+    "H4": {
+     "lb": 500,
+     "glycerol@H4": 5
+    },
+    "H5": {
+     "lb": 500,
+     "glycerol@H5": 5
+    },
+    "H6": {
+     "lb": 500,
+     "glycerol@H6": 5
+    },
+    "H7": {
+     "lb": 500,
+     "glycerol@H7": 5
+    },
+    "H8": {
+     "lb": 500,
+     "glycerol@H8": 5
+    },
+    "H9": {
+     "lb": 500,
+     "glycerol@H9": 5
+    },
+    "H10": {
+     "lb": 500,
+     "glycerol@H10": 5
+    },
+    "H11": {
+     "lb": 500,
+     "glycerol@H11": 5
+    },
+    "H12": {
+     "lb": 500,
+     "glycerol@H12": 5
+    }
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": []
+}

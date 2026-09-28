@@ -1,0 +1,279 @@
+{
+ "id": "hard-mic-01",
+ "request": "MIC plate for 2 antibiotics: in rows A and B of a 96-well plate, dilute each antibiotic 1:2 across columns 1 to 10 in Mueller-Hinton broth from a reservoir, 50 ul per well, starting at 1:2 of the stock in column 1. Then add 50 ul of bacterial culture from a tube to every well in columns 1 to 11, and put 100 ul of broth alone in column 12 as the sterility control. Column 11 is the growth control.",
+ "technique": "Serial dilution",
+ "liquids": [
+  {
+   "name": "antibiotic_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:antibiotic|abx|drug|compound)\\D{0,12}?(\\d+)",
+   "count": 2,
+   "index": "number"
+  },
+  {
+   "name": "broth",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)broth|mueller|mhb|medium|media"
+  },
+  {
+   "name": "culture",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)culture|bacteria|inoculum|cells"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "rows A and B; excess removed from column 10",
+   "why": "the request pins every position",
+   "pinned": {
+    "A1": {
+     "antibiotic_1": 25.0,
+     "broth": 25.0,
+     "culture": 50
+    },
+    "A2": {
+     "antibiotic_1": 12.5,
+     "broth": 37.5,
+     "culture": 50
+    },
+    "A3": {
+     "antibiotic_1": 6.25,
+     "broth": 43.75,
+     "culture": 50
+    },
+    "A4": {
+     "antibiotic_1": 3.125,
+     "broth": 46.875,
+     "culture": 50
+    },
+    "A5": {
+     "antibiotic_1": 1.5625,
+     "broth": 48.4375,
+     "culture": 50
+    },
+    "A6": {
+     "antibiotic_1": 0.7812,
+     "broth": 49.2188,
+     "culture": 50
+    },
+    "A7": {
+     "antibiotic_1": 0.3906,
+     "broth": 49.6094,
+     "culture": 50
+    },
+    "A8": {
+     "antibiotic_1": 0.1953,
+     "broth": 49.8047,
+     "culture": 50
+    },
+    "A9": {
+     "antibiotic_1": 0.0977,
+     "broth": 49.9023,
+     "culture": 50
+    },
+    "A10": {
+     "antibiotic_1": 0.0488,
+     "broth": 49.9512,
+     "culture": 50
+    },
+    "A11": {
+     "broth": 50,
+     "culture": 50
+    },
+    "A12": {
+     "broth": 100
+    },
+    "B1": {
+     "antibiotic_2": 25.0,
+     "broth": 25.0,
+     "culture": 50
+    },
+    "B2": {
+     "antibiotic_2": 12.5,
+     "broth": 37.5,
+     "culture": 50
+    },
+    "B3": {
+     "antibiotic_2": 6.25,
+     "broth": 43.75,
+     "culture": 50
+    },
+    "B4": {
+     "antibiotic_2": 3.125,
+     "broth": 46.875,
+     "culture": 50
+    },
+    "B5": {
+     "antibiotic_2": 1.5625,
+     "broth": 48.4375,
+     "culture": 50
+    },
+    "B6": {
+     "antibiotic_2": 0.7812,
+     "broth": 49.2188,
+     "culture": 50
+    },
+    "B7": {
+     "antibiotic_2": 0.3906,
+     "broth": 49.6094,
+     "culture": 50
+    },
+    "B8": {
+     "antibiotic_2": 0.1953,
+     "broth": 49.8047,
+     "culture": 50
+    },
+    "B9": {
+     "antibiotic_2": 0.0977,
+     "broth": 49.9023,
+     "culture": 50
+    },
+    "B10": {
+     "antibiotic_2": 0.0488,
+     "broth": 49.9512,
+     "culture": 50
+    },
+    "B11": {
+     "broth": 50,
+     "culture": 50
+    },
+    "B12": {
+     "broth": 100
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "rows A and B; column 10 keeps its extra 50 ul",
+   "why": "the request pins every position",
+   "pinned": {
+    "A1": {
+     "antibiotic_1": 25.0,
+     "broth": 25.0,
+     "culture": 50
+    },
+    "A2": {
+     "antibiotic_1": 12.5,
+     "broth": 37.5,
+     "culture": 50
+    },
+    "A3": {
+     "antibiotic_1": 6.25,
+     "broth": 43.75,
+     "culture": 50
+    },
+    "A4": {
+     "antibiotic_1": 3.125,
+     "broth": 46.875,
+     "culture": 50
+    },
+    "A5": {
+     "antibiotic_1": 1.5625,
+     "broth": 48.4375,
+     "culture": 50
+    },
+    "A6": {
+     "antibiotic_1": 0.7812,
+     "broth": 49.2188,
+     "culture": 50
+    },
+    "A7": {
+     "antibiotic_1": 0.3906,
+     "broth": 49.6094,
+     "culture": 50
+    },
+    "A8": {
+     "antibiotic_1": 0.1953,
+     "broth": 49.8047,
+     "culture": 50
+    },
+    "A9": {
+     "antibiotic_1": 0.0977,
+     "broth": 49.9023,
+     "culture": 50
+    },
+    "A10": {
+     "antibiotic_1": 0.0977,
+     "broth": 99.9023,
+     "culture": 50
+    },
+    "A11": {
+     "broth": 50,
+     "culture": 50
+    },
+    "A12": {
+     "broth": 100
+    },
+    "B1": {
+     "antibiotic_2": 25.0,
+     "broth": 25.0,
+     "culture": 50
+    },
+    "B2": {
+     "antibiotic_2": 12.5,
+     "broth": 37.5,
+     "culture": 50
+    },
+    "B3": {
+     "antibiotic_2": 6.25,
+     "broth": 43.75,
+     "culture": 50
+    },
+    "B4": {
+     "antibiotic_2": 3.125,
+     "broth": 46.875,
+     "culture": 50
+    },
+    "B5": {
+     "antibiotic_2": 1.5625,
+     "broth": 48.4375,
+     "culture": 50
+    },
+    "B6": {
+     "antibiotic_2": 0.7812,
+     "broth": 49.2188,
+     "culture": 50
+    },
+    "B7": {
+     "antibiotic_2": 0.3906,
+     "broth": 49.6094,
+     "culture": 50
+    },
+    "B8": {
+     "antibiotic_2": 0.1953,
+     "broth": 49.8047,
+     "culture": 50
+    },
+    "B9": {
+     "antibiotic_2": 0.0977,
+     "broth": 49.9023,
+     "culture": 50
+    },
+    "B10": {
+     "antibiotic_2": 0.0977,
+     "broth": 99.9023,
+     "culture": 50
+    },
+    "B11": {
+     "broth": 50,
+     "culture": 50
+    },
+    "B12": {
+     "broth": 100
+    }
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "Column 1 is 1:2 of the stock in 50 ul of broth; each later column halves it.",
+  "Ambiguous: '50 ul per well' holds in column 10 only if its extra 50 ul is removed."
+ ]
+}

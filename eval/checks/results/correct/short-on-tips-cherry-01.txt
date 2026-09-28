@@ -1,0 +1,37 @@
+cherry-01.py: VERIFIED against plate map cherry-01. 10 of 10 wells hold what the plate map
+  says.
+  Destination: Destination plate (slot 2). Reading of the request: along the row (A1, A2,
+    ...).
+
+Labware for the technique (Cherrypicking): nothing to flag.
+
+Where every liquid ended up (ul):
+  liquid                             declared delivered in source elsewhere    lost
+  Sample B3                             100.0      10.0      90.0       0.0     0.0
+  Sample C7                             100.0      10.0      90.0       0.0     0.0
+  Sample D1                             100.0      10.0      90.0       0.0     0.0
+  Sample A12                            100.0      10.0      90.0       0.0     0.0
+  Sample H6                             100.0      10.0      90.0       0.0     0.0
+  Sample E5                             100.0      10.0      90.0       0.0     0.0
+  Sample F9                             100.0      10.0      90.0       0.0     0.0
+  Sample G2                             100.0      10.0      90.0       0.0     0.0
+  Sample B11                            100.0      10.0      90.0       0.0     0.0
+  Sample C4                             100.0      10.0      90.0       0.0     0.0
+
+Prep sheet: what to put on the deck before the run.
+  slot labware                               well  liquid                       load at least  declared
+  1    Source plate                          D1    Sample D1                             10.0     100.0
+  1    Source plate                          G2    Sample G2                             10.0     100.0
+  1    Source plate                          B3    Sample B3                             10.0     100.0
+  1    Source plate                          C4    Sample C4                             10.0     100.0
+  1    Source plate                          E5    Sample E5                             10.0     100.0
+  1    Source plate                          H6    Sample H6                             10.0     100.0
+  1    Source plate                          C7    Sample C7                             10.0     100.0
+  1    Source plate                          F9    Sample F9                             10.0     100.0
+  1    Source plate                          B11   Sample B11                            10.0     100.0
+  1    Source plate                          A12   Sample A12                            10.0     100.0
+  Tips: 10 from Opentrons OT-2 96 Tip Rack 20 µL in slot 4.
+  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.
+
+This checks the logic of the protocol: what goes where, and how much. It does not check the
+  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.

@@ -1,0 +1,54 @@
+{
+ "id": "hard-pcr-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 3,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 50,
+    "title": "The pipette draws air from well A2 in slot 5: the liquid is below the tip"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 63,
+    "title": "A used tip went into a stock: mix (well A1 in slot 3)"
+   },
+   {
+    "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 63,
+    "title": "(proposed) A tip that had been in a sample went into a reagent"
+   }
+  ],
+  "draft": 3,
+  "rounds": 3
+ },
+ "tool_calls": 8,
+ "turns": 8,
+ "drafts": 4,
+ "checks": 4,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 593386,
+ "tokens_out": 112729,
+ "seconds": 1074.1
+}

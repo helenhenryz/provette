@@ -1,0 +1,134 @@
+{
+ "id": "hard-dil-02",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 97,
+    "title": "The pipette draws air from well A1 in slot 5: the liquid is below the tip"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 112,
+    "title": "10 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 122,
+    "title": "10 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 97,
+    "title": "A used tip went into a stock: dmso (well A1 in slot 5)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 103,
+    "title": "A used tip went into a stock: 3 stocks"
+   },
+   {
+    "rule_id": "MIX-TOO-WEAK",
+    "severity": "warning",
+    "certain": true,
+    "line": 112,
+    "title": "Mixing too weak to stir 23 wells: 3 \u00d7 10 ul in 30 to 90 ul"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "warning",
+    "certain": true,
+    "line": 122,
+    "title": "A used tip carried compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot 2), compound 4 (tube A4 in slot 2), medium (well A1 in slot 4) and 17 more into 18 wells it was never meant for"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "warning",
+    "certain": true,
+    "line": 123,
+    "title": "A used tip carried compound 1 (tube A1 in slot 2), compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot 2), compound 4 (tube A4 in slot 2) and 1 more into 6 wells it was never meant for"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "warning",
+    "certain": true,
+    "line": 123,
+    "title": "18 wells never mixed after dmso, compound 1, compound 2, compound 3 and 1 more went in (10% of the well)"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 104,
+    "title": "No blank on a dilution series: 12 wells of compound 2"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 109,
+    "title": "A used tip carried dmso (well A1 in slot 5) into well A1 in slot 3 it was never meant for"
+   }
+  ],
+  "draft": 2,
+  "rounds": 2
+ },
+ "tool_calls": 12,
+ "turns": 12,
+ "drafts": 3,
+ "checks": 3,
+ "submitted": true,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 1863783,
+ "tokens_out": 279847,
+ "seconds": 717.8,
+ "candidates": [
+  {
+   "dir": "candidate-0",
+   "verified": false,
+   "stop_reason": "submitted",
+   "tokens_in": 487836,
+   "tokens_out": 85677
+  },
+  {
+   "dir": "candidate-1",
+   "verified": false,
+   "stop_reason": "submitted",
+   "tokens_in": 649048,
+   "tokens_out": 94692
+  },
+  {
+   "dir": "candidate-2",
+   "verified": false,
+   "stop_reason": "submitted",
+   "tokens_in": 726899,
+   "tokens_out": 99478
+  }
+ ],
+ "chosen": "candidate-1"
+}

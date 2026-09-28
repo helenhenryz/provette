@@ -1,0 +1,983 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map hard-cherry-01. 24 of 24 wells hold what the plate\n  map says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 3). Reading of the request: down the\n    column (A1, B1, ...).\n\nLabware for the technique (Cherrypicking): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  mix                                   500.0     432.0      68.0       0.0     0.0\n  src_A1                                100.0       2.0      98.0       0.0     0.0\n  src_B2                                100.0       2.0      98.0       0.0     0.0\n  src_C3                                100.0       2.0      98.0       0.0     0.0\n  src_D4                                100.0       2.0      98.0       0.0     0.0\n  src_E5                                100.0       2.0      98.0       0.0     0.0\n  src_F6                                100.0       2.0      98.0       0.0     0.0\n  src_G7                                100.0       2.0      98.0       0.0     0.0\n  src_H8                                100.0       2.0      98.0       0.0     0.0\n  src_I9                                100.0       2.0      98.0       0.0     0.0\n  src_J10                               100.0       2.0      98.0       0.0     0.0\n  src_K11                               100.0       2.0      98.0       0.0     0.0\n  src_L12                               100.0       2.0      98.0       0.0     0.0\n  src_M13                               100.0       2.0      98.0       0.0     0.0\n  src_N14                               100.0       2.0      98.0       0.0     0.0\n  src_O15                               100.0       2.0      98.0       0.0     0.0\n  src_P16                               100.0       2.0      98.0       0.0     0.0\n  src_A17                               100.0       2.0      98.0       0.0     0.0\n  src_B18                               100.0       2.0      98.0       0.0     0.0\n  src_C19                               100.0       2.0      98.0       0.0     0.0\n  src_D20                               100.0       2.0      98.0       0.0     0.0\n  src_E21                               100.0       2.0      98.0       0.0     0.0\n  src_F22                               100.0       2.0      98.0       0.0     0.0\n  src_G23                               100.0       2.0      98.0       0.0     0.0\n  src_H24                               100.0       2.0      98.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Corning 384 Well Plate 112 \u00b5L Flat    A1    src_A1                                 2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    B2    src_B2                                 2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    C3    src_C3                                 2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    D4    src_D4                                 2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    E5    src_E5                                 2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    F6    src_F6                                 2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    G7    src_G7                                 2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    H8    src_H8                                 2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    I9    src_I9                                 2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    J10   src_J10                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    K11   src_K11                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    L12   src_L12                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    M13   src_M13                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    N14   src_N14                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    O15   src_O15                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    P16   src_P16                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    A17   src_A17                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    B18   src_B18                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    C19   src_C19                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    D20   src_D20                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    E21   src_E21                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    F22   src_F22                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    G23   src_G23                                2.0     100.0\n  2    Corning 384 Well Plate 112 \u00b5L Flat    H24   src_H24                                2.0     100.0\n  4    Opentrons 24 Tube Rack with NEST 1.5  A1    mix                                  432.0     500.0\n  Tips: 24 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-cherry-01",
+  "technique": "Cherrypicking",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "3:biorad_96_wellplate_200ul_pcr",
+   "variant": "down the column (A1, B1, ...)",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 24,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "source@A1": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@A1": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "source@B2": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@B2": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "source@C3": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@C3": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "source@D4": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@D4": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {
+      "source@E5": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@E5": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {
+      "source@F6": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@F6": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {
+      "source@G7": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@G7": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {
+      "source@H8": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@H8": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "source@I9": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@I9": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "source@J10": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@J10": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "source@K11": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@K11": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "source@L12": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@L12": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": null,
+     "expected": {
+      "source@M13": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@M13": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": null,
+     "expected": {
+      "source@N14": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@N14": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": null,
+     "expected": {
+      "source@O15": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@O15": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": null,
+     "expected": {
+      "source@P16": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@P16": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "source@A17": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@A17": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "source@B18": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@B18": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "source@C19": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@C19": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "source@D20": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@D20": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": null,
+     "expected": {
+      "source@E21": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@E21": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F3",
+     "group": null,
+     "expected": {
+      "source@F22": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@F22": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G3",
+     "group": null,
+     "expected": {
+      "source@G23": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@G23": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H3",
+     "group": null,
+     "expected": {
+      "source@H24": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "source@H24": 2.0,
+      "mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "mix",
+    "logical": "mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 432.0,
+    "left_in_source_ul": 68.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_A1",
+    "logical": "source@A1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_B2",
+    "logical": "source@B2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_C3",
+    "logical": "source@C3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_D4",
+    "logical": "source@D4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_E5",
+    "logical": "source@E5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_F6",
+    "logical": "source@F6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_G7",
+    "logical": "source@G7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_H8",
+    "logical": "source@H8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_I9",
+    "logical": "source@I9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_J10",
+    "logical": "source@J10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_K11",
+    "logical": "source@K11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_L12",
+    "logical": "source@L12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_M13",
+    "logical": "source@M13",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_N14",
+    "logical": "source@N14",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_O15",
+    "logical": "source@O15",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_P16",
+    "logical": "source@P16",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_A17",
+    "logical": "source@A17",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_B18",
+    "logical": "source@B18",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_C19",
+    "logical": "source@C19",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_D20",
+    "logical": "source@D20",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_E21",
+    "logical": "source@E21",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_F22",
+    "logical": "source@F22",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_G23",
+    "logical": "source@G23",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_H24",
+    "logical": "source@H24",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "src_A1",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "src_B2",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "C3",
+     "liquid": "src_C3",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "D4",
+     "liquid": "src_D4",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "E5",
+     "liquid": "src_E5",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "F6",
+     "liquid": "src_F6",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "G7",
+     "liquid": "src_G7",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "H8",
+     "liquid": "src_H8",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "I9",
+     "liquid": "src_I9",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "J10",
+     "liquid": "src_J10",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "K11",
+     "liquid": "src_K11",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "L12",
+     "liquid": "src_L12",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "M13",
+     "liquid": "src_M13",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "N14",
+     "liquid": "src_N14",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "O15",
+     "liquid": "src_O15",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "P16",
+     "liquid": "src_P16",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "A17",
+     "liquid": "src_A17",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "B18",
+     "liquid": "src_B18",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "C19",
+     "liquid": "src_C19",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "D20",
+     "liquid": "src_D20",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "E21",
+     "liquid": "src_E21",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "F22",
+     "liquid": "src_F22",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "G23",
+     "liquid": "src_G23",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "H24",
+     "liquid": "src_H24",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "mix",
+     "declared_ul": 500.0,
+     "needed_ul": 432.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 24
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (1 error, 2 notes).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: mix (tube A1 in slot 4)\n   line 67:  p20.aspirate(18, mix_tube)\n   At line 67 the tip went into mix (tube A1 in slot 4) while it still carried src_A1 (well\n   A1 in slot 2), src_A17 (well A17 in slot 2), src_B2 (well B2 in slot 2), src_B18 (well\n   B18 in slot 2) and 20 more from an earlier step (this line did it 24 times). A tip that\n   has touched one liquid leaves a little of it in the next liquid it touches, so this stock\n   now holds material that does not belong there. Liquid drawn from it then took the\n   unwanted material along into 23 other wells: wells A2, A3, B1, B2, B3, C1, C2, C3 and 15\n   more in slot 3.\n   Affected: tube A1 in slot 4.\n   Also reached 23 other wells: wells A2, A3, B1, B2, B3, C1, C2, C3 and 15 more in slot 3.\n   Fix: Pick up a fresh tip before line 67 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [a399f52b5912]\n\n2. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 67:  p20.aspirate(18, mix_tube)\n   At line 67 the tip touched the liquid in tube A1 in slot 4 while it still carried src_A1\n   (well A1 in slot 2), src_A17 (well A17 in slot 2), src_B2 (well B2 in slot 2), src_B18\n   (well B18 in slot 2) and 20 more from an earlier step (this line did it 24 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, and the\n   protocol never transfers that liquid into this well on purpose. A reagent is shared: the\n   master mix, the enzyme or the primer in that well goes into every reaction on the plate.\n   A tip that has been in one sample leaves a little of it in the next liquid it touches, so\n   a sample carried into a reagent well turns up in every well that reagent reaches, and a\n   no-template control can no longer be trusted. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 23 other wells: wells A2, A3, B1, B2,\n   B3, C1, C2, C3 and 15 more in slot 3.\n   Affected: tube A1 in slot 4.\n   Also reached 23 other wells: wells A2, A3, B1, B2, B3, C1, C2, C3 and 15 more in slot 3.\n   Fix: Use a fresh tip for each sample at line 67, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [6fcb8b962d85]\n\n3. NOTE NO-NEGATIVE-CONTROL: No no-template control: 24 wells of mix with a sample\n   line 70:  p20.dispense(18, dest_well)\n   At line 70 the robot starts putting mix into Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 3),\n   and 24 wells end holding it together with a sample. No well on this plate holds the mix\n   without a sample, so there is no no-template control. If a reagent is contaminated, or\n   the primers pair with each other, every well gives a signal and nothing on the plate can\n   tell that from a real one. Wells: wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in\n   slot 3.\n   Affected: wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 3.\n   Fix: Add one well (three for qPCR) with 18 ul of mix and 2 ul of water in place of the\n   template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [3fd66e696ce6]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 67,
+   "title": "A used tip went into a stock: mix (tube A1 in slot 4)",
+   "explanation": "At line 67 the tip went into mix (tube A1 in slot 4) while it still carried src_A1 (well A1 in slot 2), src_A17 (well A17 in slot 2), src_B2 (well B2 in slot 2), src_B18 (well B18 in slot 2) and 20 more from an earlier step (this line did it 24 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 23 other wells: wells A2, A3, B1, B2, B3, C1, C2, C3 and 15 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 67 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 67,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 67 the tip touched the liquid in tube A1 in slot 4 while it still carried src_A1 (well A1 in slot 2), src_A17 (well A17 in slot 2), src_B2 (well B2 in slot 2), src_B18 (well B18 in slot 2) and 20 more from an earlier step (this line did it 24 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted. Liquid was later taken out of the affected wells, and the unwanted material went along into 23 other wells: wells A2, A3, B1, B2, B3, C1, C2, C3 and 15 more in slot 3.",
+   "fix": "Use a fresh tip for each sample at line 67, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 70,
+   "title": "No no-template control: 24 wells of mix with a sample",
+   "explanation": "At line 70 the robot starts putting mix into Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 3), and 24 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 3.",
+   "fix": "Add one well (three for qPCR) with 18 ul of mix and 2 ul of water in place of the template, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 5.7,
+ "draft": 0
+}

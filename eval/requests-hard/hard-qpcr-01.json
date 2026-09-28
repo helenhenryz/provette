@@ -1,0 +1,626 @@
+{
+ "id": "hard-qpcr-01",
+ "request": "Set up a qPCR plate for 8 cDNA samples against 3 target genes, each in triplicate, 20 ul reactions: 10 ul of 2x SYBR master mix, 1 ul of the gene's forward primer, 1 ul of its reverse primer, 2 ul of cDNA and 6 ul of water. Include a no-template control in triplicate for each gene, with water in place of cDNA. The master mix, primers and cDNA are in tubes on a cold block.",
+ "technique": "qPCR setup",
+ "liquids": [
+  {
+   "name": "sybr",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)master\\s*mix|mastermix|\\bmix\\b|sybr"
+  },
+  {
+   "name": "fwd_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:forward|fwd)\\D{0,12}?(\\d+)",
+   "count": 3,
+   "index": "number"
+  },
+  {
+   "name": "rev_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:reverse|rev)\\D{0,12}?(\\d+)",
+   "count": 3,
+   "index": "number"
+  },
+  {
+   "name": "cdna_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:cdna|sample|template)\\D{0,12}?(\\d+)",
+   "count": 8,
+   "index": "number"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "72 reactions and 9 no-template controls",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_1": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_1": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_1": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_2": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_2": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_2": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_3": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_3": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_3": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_4": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_4": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_4": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_5": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_5": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_5": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_6": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_6": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_6": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_7": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_7": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_7": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_8": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_8": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "cdna_8": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "water": 8
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "water": 8
+      },
+      {
+       "sybr": 10,
+       "fwd_1": 1,
+       "rev_1": 1,
+       "water": 8
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_1": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_1": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_1": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_2": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_2": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_2": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_3": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_3": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_3": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_4": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_4": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_4": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_5": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_5": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_5": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_6": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_6": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_6": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_7": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_7": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_7": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_8": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_8": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "cdna_8": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "water": 8
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "water": 8
+      },
+      {
+       "sybr": 10,
+       "fwd_2": 1,
+       "rev_2": 1,
+       "water": 8
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_1": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_1": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_1": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_2": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_2": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_2": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_3": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_3": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_3": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_4": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_4": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_4": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_5": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_5": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_5": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_6": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_6": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_6": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_7": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_7": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_7": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_8": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_8": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "cdna_8": 2,
+       "water": 6
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "water": 8
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "water": 8
+      },
+      {
+       "sybr": 10,
+       "fwd_3": 1,
+       "rev_3": 1,
+       "water": 8
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The primers are declared per gene ('forward primer 1', 'reverse primer 2').",
+  "The nine NTC wells are part of the map: a plate without them does not verify."
+ ]
+}

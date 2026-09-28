@@ -1,0 +1,111 @@
+from opentrons import protocol_api
+
+metadata = {
+    "protocolName": "1:3 Serial Dilution Assay",
+    "apiLevel": "2.19"
+}
+
+def run(protocol: protocol_api.ProtocolContext):
+    # Load tip racks
+    tip_rack_20 = protocol.load_labware("opentrons_96_tiprack_20ul", 1)
+    tip_rack_300 = protocol.load_labware("opentrons_96_tiprack_300ul", 2)
+
+    # Load labware
+    tube_rack = protocol.load_labware("opentrons_24_tuberack_nest_1.5ml_snapcap", 3)
+    source_plate = protocol.load_labware("nest_96_wellplate_200ul_flat", 4)
+    dest_plate = protocol.load_labware("nest_96_wellplate_200ul_flat", 5)
+    reservoir = protocol.load_labware("nest_12_reservoir_15ml", 6)
+
+    # Define liquids
+    compound_1 = protocol.define_liquid(name="compound 1", description="10 mM stock of compound 1", display_color="#FF0000")
+    compound_2 = protocol.define_liquid(name="compound 2", description="10 mM stock of compound 2", display_color="#FF6600")
+    compound_3 = protocol.define_liquid(name="compound 3", description="10 mM stock of compound 3", display_color="#FFAA00")
+    compound_4 = protocol.define_liquid(name="compound 4", description="10 mM stock of compound 4", display_color="#FFCC00")
+    dmso = protocol.define_liquid(name="dmso", description="Pure DMSO", display_color="#00FFFF")
+    medium = protocol.define_liquid(name="medium", description="Cell culture medium", display_color="#00FF00")
+
+    # Load liquids into wells
+    tube_rack["A1"].load_liquid(liquid=compound_1, volume=500)
+    tube_rack["A2"].load_liquid(liquid=compound_2, volume=500)
+    tube_rack["A3"].load_liquid(liquid=compound_3, volume=500)
+    tube_rack["A4"].load_liquid(liquid=compound_4, volume=500)
+    reservoir["A1"].load_liquid(liquid=dmso, volume=1500)
+    for row in ["A","B","C","D"]:
+        for col in range(1,7):
+            well = dest_plate[row + str(col)]
+            well.load_liquid(liquid=medium, volume=90)
+
+    # Load pipettes
+    p20 = protocol.load_instrument("p20_single_gen2", "left", tip_racks=[tip_rack_20])
+    p300 = protocol.load_instrument("p300_single_gen2", "right", tip_racks=[tip_rack_300])
+
+    # Process each compound (rows A-D)
+    for idx, row in enumerate(["A","B","C","D"]):
+        compound_num = idx + 1
+        source_tube_well = tube_rack["A" + str(compound_num)]
+        series_wells = [row + str(col) for col in range(1,7)]
+
+        for i, well_name in enumerate(series_wells):
+            well = source_plate[well_name]
+
+            if i == 0:  # First well: add stock
+                p300.pick_up_tip()
+                p300.aspirate(90, source_tube_well)
+                p300.dispense(90, well)
+                # Mix well vigorously: 5 strokes of 72 ul
+                for _ in range(5):
+                    p300.aspirate(72, well)
+                    p300.dispense(72, well)
+                p300.drop_tip()
+            else:
+                # Add diluent (60 ul DMSO) and transfer 30 ul from previous well
+                p300.pick_up_tip()
+                p300.aspirate(60, reservoir["A1"])
+                p300.dispense(60, well)
+                # Transfer from previous well (fresh tip)
+                prev_well_name = series_wells[i-1]
+                prev_well = source_plate[prev_well_name]
+                p300.pick_up_tip()
+                p300.aspirate(30, prev_well)
+                p300.dispense(30, well)
+                # Mix well vigorously: 5 strokes of 72 ul
+                for _ in range(5):
+                    p300.aspirate(72, well)
+                    p300.dispense(72, well)
+                p300.drop_tip()
+                # If last well, remove 30 ul to waste
+                if i == 5:  # last well index (0-indexed)
+                    p300.pick_up_tip()
+                    p300.aspirate(30, well)
+                    p300.drop_tip()
+
+    # Transfer 10 ul from each source well to the corresponding destination well
+    # Also add a blank well (no compound) with just DMSO
+    blank_well = dest_plate["A7"]  # unused well for blank
+    for row in ["A","B","C","D"]:
+        for col in range(1,7):
+            src_well_name = row + str(col)
+            src_well = source_plate[src_well_name]
+            dest_well = dest_plate[src_well_name]
+            p20.pick_up_tip()
+            p20.aspirate(10, src_well)
+            p20.dispense(10, dest_well)
+            # Mix destination well: 5 strokes of 80 ul using p300
+            p300.pick_up_tip()
+            for _ in range(5):
+                p300.aspirate(80, dest_well)
+                p300.dispense(80, dest_well)
+            p300.drop_tip()
+            p20.drop_tip()
+    
+    # Add blank well (DMSO only) after all transfers
+    p20.pick_up_tip()
+    p20.aspirate(10, reservoir["A1"])  # aspirate 10 ul of DMSO
+    p20.dispense(10, blank_well)
+    # Mix blank well: 5 strokes of 80 ul using p300
+    p300.pick_up_tip()
+    for _ in range(5):
+        p300.aspirate(80, blank_well)
+        p300.dispense(80, blank_well)
+    p300.drop_tip()
+    p20.drop_tip()

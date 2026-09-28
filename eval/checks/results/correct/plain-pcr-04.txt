@@ -1,0 +1,29 @@
+pcr-04.py: VERIFIED against plate map pcr-04. 18 of 18 wells hold what the plate map says.
+  Destination: qPCR plate (slot 3). Reading of the request: 6 samples x 3.
+
+Labware for the technique (qPCR setup): nothing to flag.
+
+Where every liquid ended up (ul):
+  liquid                             declared delivered in source elsewhere    lost
+  SYBR master mix with primers          180.0     144.0      36.0       0.0     0.0
+  cDNA sample 1                          20.0       6.0      14.0       0.0     0.0
+  cDNA sample 2                          20.0       6.0      14.0       0.0     0.0
+  cDNA sample 3                          20.0       6.0      14.0       0.0     0.0
+  cDNA sample 4                          20.0       6.0      14.0       0.0     0.0
+  cDNA sample 5                          20.0       6.0      14.0       0.0     0.0
+  cDNA sample 6                          20.0       6.0      14.0       0.0     0.0
+
+Prep sheet: what to put on the deck before the run.
+  slot labware                               well  liquid                       load at least  declared
+  1    cDNA strip tubes on aluminium block   A1    cDNA sample 1                          6.0      20.0
+  1    cDNA strip tubes on aluminium block   B1    cDNA sample 2                          6.0      20.0
+  1    cDNA strip tubes on aluminium block   C1    cDNA sample 3                          6.0      20.0
+  1    cDNA strip tubes on aluminium block   D1    cDNA sample 4                          6.0      20.0
+  1    cDNA strip tubes on aluminium block   E1    cDNA sample 5                          6.0      20.0
+  1    cDNA strip tubes on aluminium block   F1    cDNA sample 6                          6.0      20.0
+  2    Master mix tube rack                  A1    SYBR master mix with primer          144.0     180.0
+  Tips: 19 from Opentrons OT-2 96 Filter Tip Rack 20 µL in slot 4.
+  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.
+
+This checks the logic of the protocol: what goes where, and how much. It does not check the
+  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.

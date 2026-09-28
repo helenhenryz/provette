@@ -1,0 +1,257 @@
+{
+ "id": "hard-rt-01",
+ "request": "Set up reverse transcription for 12 RNA samples, 20 ul reactions in a PCR plate: 4 ul of 5x RT buffer, 1 ul of reverse transcriptase, 1 ul of dNTPs, 1 ul of random primers, 8 ul of RNA and 5 ul of water. For each sample also set up a no-RT control with 1 ul of water in place of the enzyme. The enzyme, buffer, dNTPs and primers are in tubes on a cold block; the RNA samples are in a 96-well plate.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "buffer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)buffer"
+  },
+  {
+   "name": "rt",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)reverse transcriptase|\\brt\\b|rtase|enzyme"
+  },
+  {
+   "name": "dntp",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)dntp"
+  },
+  {
+   "name": "primers",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)primer"
+  },
+  {
+   "name": "rna_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:rna|sample)\\D{0,12}?(\\d+)",
+   "count": 12,
+   "index": "number"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "12 reactions and 12 no-RT controls",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_1": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_2": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_3": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_4": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_5": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_6": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_7": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_8": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_9": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_10": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_11": 8,
+       "water": 5
+      },
+      {
+       "buffer": 4,
+       "rt": 1,
+       "dntp": 1,
+       "primers": 1,
+       "rna_12": 8,
+       "water": 5
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    },
+    {
+     "name": "no-RT controls",
+     "members": [
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_1": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_2": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_3": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_4": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_5": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_6": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_7": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_8": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_9": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_10": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_11": 8,
+       "water": 6
+      },
+      {
+       "buffer": 4,
+       "dntp": 1,
+       "primers": 1,
+       "rna_12": 8,
+       "water": 6
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The twelve no-RT wells are part of the map: a plate without them does not verify."
+ ]
+}

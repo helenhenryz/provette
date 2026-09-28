@@ -1,0 +1,121 @@
+{
+ "id": "dil-03",
+ "request": "Prepare a BSA standard curve for a Bradford assay: 8 concentrations from 2 mg/ml down by 1:2 steps in water, 50 ul each in a 96-well plate, from a 2 mg/ml BSA stock tube.",
+ "technique": "Serial dilution",
+ "liquids": [
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  },
+  {
+   "name": "bsa",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)bsa|stock|albumin"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "8 standards; excess removed from the last well",
+   "why": "'from 2 mg/ml down' makes the first point the neat stock",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "standards",
+     "members": [
+      {
+       "bsa": 50.0
+      },
+      {
+       "bsa": 25.0,
+       "water": 25.0
+      },
+      {
+       "bsa": 12.5,
+       "water": 37.5
+      },
+      {
+       "bsa": 6.25,
+       "water": 43.75
+      },
+      {
+       "bsa": 3.125,
+       "water": 46.875
+      },
+      {
+       "bsa": 1.5625,
+       "water": 48.4375
+      },
+      {
+       "bsa": 0.7812,
+       "water": 49.2188
+      },
+      {
+       "bsa": 0.3906,
+       "water": 49.6094
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  },
+  {
+   "name": "8 standards; last well keeps 100 ul",
+   "why": "'from 2 mg/ml down' makes the first point the neat stock",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "standards",
+     "members": [
+      {
+       "bsa": 50.0
+      },
+      {
+       "bsa": 25.0,
+       "water": 25.0
+      },
+      {
+       "bsa": 12.5,
+       "water": 37.5
+      },
+      {
+       "bsa": 6.25,
+       "water": 43.75
+      },
+      {
+       "bsa": 3.125,
+       "water": 46.875
+      },
+      {
+       "bsa": 1.5625,
+       "water": 48.4375
+      },
+      {
+       "bsa": 0.7812,
+       "water": 49.2188
+      },
+      {
+       "bsa": 0.7812,
+       "water": 99.2188
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "Composition only: a curve made by direct dilution of each point gives the same wells as a serial one and is accepted.",
+  "Ambiguous: '50 ul each' holds for the last well only if the excess 50 ul is removed. A last well left at 100 ul is accepted."
+ ]
+}

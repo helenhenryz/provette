@@ -1,0 +1,3181 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-dil-02. 0 of 24 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: 4 rows x 6\n    points on the assay plate.\n  well A1: expected 90 ul medium (declared in this well, not delivered), 10 ul compound_1;\n    found 90 ul medium (declared in this well, not delivered), 4.22 ul dmso, 0.77 ul\n    compound_1, 0.39 ul compound_3, 4.62 ul compound_4\n      - wrong amount of compound_1: the plate map says 10 ul, the protocol delivers 0.77 ul\n      - holds 4.22 ul of dmso, which the plate map does not list for this well\n      - holds 0.39 ul of compound_3, which the plate map does not list for this well\n      - holds 4.62 ul of compound_4, which the plate map does not list for this well\n  well A2: expected 90 ul medium (declared in this well, not delivered), 3.33 ul compound_1,\n    6.67 ul dmso; found 90 ul medium (declared in this well, not delivered), 4.41 ul dmso,\n    0.97 ul compound_1, 0.36 ul compound_3, 4.26 ul compound_4\n      - wrong amount of compound_1: the plate map says 3.33 ul, the protocol delivers 0.97\n        ul\n      - wrong amount of dmso: the plate map says 6.67 ul, the protocol delivers 4.41 ul\n      - holds 0.36 ul of compound_3, which the plate map does not list for this well\n      - holds 4.26 ul of compound_4, which the plate map does not list for this well\n  well A3: expected 90 ul medium (declared in this well, not delivered), 1.11 ul compound_1,\n    8.89 ul dmso; found 90 ul medium (declared in this well, not delivered), 4.75 ul dmso,\n    0.98 ul compound_1, 0.33 ul compound_3, 3.93 ul compound_4\n      - wrong amount of compound_1: the plate map says 1.11 ul, the protocol delivers 0.98\n        ul\n      - wrong amount of dmso: the plate map says 8.89 ul, the protocol delivers 4.75 ul\n      - holds 0.33 ul of compound_3, which the plate map does not list for this well\n      - holds 3.93 ul of compound_4, which the plate map does not list for this well\n  well A4: expected 90 ul medium (declared in this well, not delivered), 0.37 ul compound_1,\n    9.63 ul dmso; found 90 ul medium (declared in this well, not delivered), 5.13 ul dmso,\n    0.93 ul compound_1, 0.31 ul compound_3, 3.63 ul compound_4\n      - wrong amount of compound_1: the plate map says 0.37 ul, the protocol delivers 0.93\n        ul\n      - wrong amount of dmso: the plate map says 9.63 ul, the protocol delivers 5.13 ul\n      - holds 0.31 ul of compound_3, which the plate map does not list for this well\n      - holds 3.63 ul of compound_4, which the plate map does not list for this well\n  well A5: expected 90 ul medium (declared in this well, not delivered), 0.12 ul compound_1,\n    9.88 ul dmso; found 90 ul medium (declared in this well, not delivered), 5.49 ul dmso,\n    0.87 ul compound_1, 0.28 ul compound_3, 3.35 ul compound_4\n      - wrong amount of compound_1: the plate map says 0.12 ul, the protocol delivers 0.87\n        ul\n      - wrong amount of dmso: the plate map says 9.88 ul, the protocol delivers 5.49 ul\n      - holds 0.28 ul of compound_3, which the plate map does not list for this well\n      - holds 3.35 ul of compound_4, which the plate map does not list for this well\n  well A6: expected 90 ul medium (declared in this well, not delivered), 0.04 ul compound_1,\n    9.96 ul dmso; found 90 ul medium (declared in this well, not delivered), 5.84 ul dmso,\n    0.81 ul compound_1, 0.26 ul compound_3, 3.09 ul compound_4\n      - wrong amount of compound_1: the plate map says 0.04 ul, the protocol delivers 0.81\n        ul\n      - wrong amount of dmso: the plate map says 9.96 ul, the protocol delivers 5.84 ul\n      - holds 0.26 ul of compound_3, which the plate map does not list for this well\n      - holds 3.09 ul of compound_4, which the plate map does not list for this well\n  well B1: expected 90 ul medium (declared in this well, not delivered), 10 ul compound_2;\n    found 90 ul medium (declared in this well, not delivered), 5.58 ul dmso, 0.74 ul\n    compound_1, 0.58 ul compound_2, 0.24 ul compound_3, 2.86 ul compound_4\n      - wrong amount of compound_2: the plate map says 10 ul, the protocol delivers 0.58 ul\n      - holds 5.58 ul of dmso, which the plate map does not list for this well\n      - holds 0.74 ul of compound_1, which the plate map does not list for this well\n      - holds 0.24 ul of compound_3, which the plate map does not list for this well\n      - holds 2.86 ul of compound_4, which the plate map does not list for this well\n  well B2: expected 90 ul medium (declared in this well, not delivered), 3.33 ul compound_2,\n    6.67 ul dmso; found 90 ul medium (declared in this well, not delivered), 5.64 ul dmso,\n    0.69 ul compound_1, 0.82 ul compound_2, 0.22 ul compound_3, 2.64 ul compound_4\n      - wrong amount of compound_2: the plate map says 3.33 ul, the protocol delivers 0.82\n        ul\n      - wrong amount of dmso: the plate map says 6.67 ul, the protocol delivers 5.64 ul\n      - holds 0.69 ul of compound_1, which the plate map does not list for this well\n      - holds 0.22 ul of compound_3, which the plate map does not list for this well\n      - holds 2.64 ul of compound_4, which the plate map does not list for this well\n  well B3: expected 90 ul medium (declared in this well, not delivered), 1.11 ul compound_2,\n    8.89 ul dmso; found 90 ul medium (declared in this well, not delivered), 5.83 ul dmso,\n    0.63 ul compound_1, 0.9 ul compound_2, 0.2 ul compound_3, 2.43 ul compound_4\n      - wrong amount of compound_2: the plate map says 1.11 ul, the protocol delivers 0.9 ul\n      - wrong amount of dmso: the plate map says 8.89 ul, the protocol delivers 5.83 ul\n      - holds 0.63 ul of compound_1, which the plate map does not list for this well\n      - holds 0.2 ul of compound_3, which the plate map does not list for this well\n      - holds 2.43 ul of compound_4, which the plate map does not list for this well\n  well B4: expected 90 ul medium (declared in this well, not delivered), 0.37 ul compound_2,\n    9.63 ul dmso; found 90 ul medium (declared in this well, not delivered), 6.08 ul dmso,\n    0.59 ul compound_1, 0.9 ul compound_2, 0.19 ul compound_3, 2.25 ul compound_4\n      - wrong amount of compound_2: the plate map says 0.37 ul, the protocol delivers 0.9 ul\n      - wrong amount of dmso: the plate map says 9.63 ul, the protocol delivers 6.08 ul\n      - holds 0.59 ul of compound_1, which the plate map does not list for this well\n      - holds 0.19 ul of compound_3, which the plate map does not list for this well\n      - holds 2.25 ul of compound_4, which the plate map does not list for this well\n  well B5: expected 90 ul medium (declared in this well, not delivered), 0.12 ul compound_2,\n    9.88 ul dmso; found 90 ul medium (declared in this well, not delivered), 6.34 ul dmso,\n    0.54 ul compound_1, 0.87 ul compound_2, 0.17 ul compound_3, 2.07 ul compound_4\n      - wrong amount of compound_2: the plate map says 0.12 ul, the protocol delivers 0.87\n        ul\n      - wrong amount of dmso: the plate map says 9.88 ul, the protocol delivers 6.34 ul\n      - holds 0.54 ul of compound_1, which the plate map does not list for this well\n      - holds 0.17 ul of compound_3, which the plate map does not list for this well\n      - holds 2.07 ul of compound_4, which the plate map does not list for this well\n  well B6: expected 90 ul medium (declared in this well, not delivered), 0.04 ul compound_2,\n    9.96 ul dmso; found 90 ul medium (declared in this well, not delivered), 6.6 ul dmso,\n    0.5 ul compound_1, 0.82 ul compound_2, 0.16 ul compound_3, 1.91 ul compound_4\n      - wrong amount of compound_2: the plate map says 0.04 ul, the protocol delivers 0.82\n        ul\n      - wrong amount of dmso: the plate map says 9.96 ul, the protocol delivers 6.6 ul\n      - holds 0.5 ul of compound_1, which the plate map does not list for this well\n      - holds 0.16 ul of compound_3, which the plate map does not list for this well\n      - holds 1.91 ul of compound_4, which the plate map does not list for this well\n  ... and 12 more wells that do not match.\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  compound 1                           1000.0       5.3     910.0      81.0     3.7  <-- FLAG\n  compound 2                           1000.0       4.9     910.0      78.8     6.3  <-- FLAG\n  compound 3                           1000.0       4.3     910.0      74.8    10.9  <-- FLAG\n  compound 4                           1000.0       1.6     910.0      69.6    18.8  <-- FLAG\n  dmso                                 1000.0      82.6     160.0     677.2    80.3\n  medium                               2160.0       0.0    2160.0       0.0     0.0\n  FLAG: 3.7 ul of compound 1 is lost: it left the deck inside a tip that was thrown away.\n  FLAG: compound 1 ends in wells the plate map does not list for it: A1 in slot 3 (50.0 ul),\n    A2 in slot 3 (16.7 ul), A3 in slot 3 (5.6 ul), A4 in slot 3 (1.9 ul), A5 in slot 3 (0.6\n    ul), A6 in slot 3 (0.2 ul) and 15 more.\n  FLAG: 6.3 ul of compound 2 is lost: it left the deck inside a tip that was thrown away.\n  FLAG: compound 2 ends in wells the plate map does not list for it: B1 in slot 3 (37.5 ul),\n    B2 in slot 3 (18.1 ul), B3 in slot 3 (9.4 ul), B4 in slot 3 (4.8 ul), B5 in slot 3 (2.5\n    ul), B6 in slot 3 (1.3 ul) and 12 more.\n  FLAG: 10.9 ul of compound 3 is lost: it left the deck inside a tip that was thrown away.\n  FLAG: compound 3 ends in wells the plate map does not list for it: C1 in slot 3 (30.0 ul),\n    C2 in slot 3 (17.4 ul), C3 in slot 3 (10.7 ul), C4 in slot 3 (6.6 ul), C5 in slot 3 (4.0\n    ul), D1 in slot 3 (2.1 ul) and 13 more.\n  FLAG: 18.8 ul of compound 4 is lost: it left the deck inside a tip that was thrown away.\n  FLAG: compound 4 ends in wells the plate map does not list for it: D1 in slot 3 (25.0 ul),\n    A1 in slot 4 (4.6 ul), A2 in slot 4 (4.3 ul), A3 in slot 4 (3.9 ul), A4 in slot 4 (3.6\n    ul), A5 in slot 4 (3.4 ul) and 12 more.\n  Note: 80.3 ul of dmso is lost: it left the deck inside a tip that was thrown away.\n  Note: dmso ends in wells the plate map does not list for it: A2 in slot 3 (33.3 ul), A3 in\n    slot 3 (44.4 ul), A4 in slot 3 (48.1 ul), A5 in slot 3 (49.4 ul), A6 in slot 3 (49.8\n    ul), B1 in slot 3 (12.4 ul) and 15 more.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    compound 1                            90.0    1000.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    compound 2                            90.0    1000.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A3    compound 3                            90.0    1000.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A4    compound 4                            90.0    1000.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        D2                                          10.0         -  <-- DRAWS AIR\n  3    NEST 96 Well Plate 200 \u00b5L Flat        D3                                          10.0         -  <-- DRAWS AIR\n  3    NEST 96 Well Plate 200 \u00b5L Flat        D4                                          10.0         -  <-- DRAWS AIR\n  3    NEST 96 Well Plate 200 \u00b5L Flat        D5                                          10.0         -  <-- DRAWS AIR\n  3    NEST 96 Well Plate 200 \u00b5L Flat        C6                                          10.0         -  <-- DRAWS AIR\n  3    NEST 96 Well Plate 200 \u00b5L Flat        D6                                          10.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  5    NEST 12 Well Reservoir 15 mL          A1    dmso                                1200.0    1000.0  <-- WOULD RUN DRY\n  FLAG: well in D2, slot 3 is asked for 10 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in D3, slot 3 is asked for 10 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in D4, slot 3 is asked for 10 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in D5, slot 3 is asked for 10 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in C6, slot 3 is asked for 10 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in D6, slot 3 is asked for 10 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: dmso in A1, slot 5 would run dry: the robot draws 1200 ul from it and the protocol\n    declares 1000 ul. The simulator passes it; the robot would pipette air. Fix: declare and\n    load at least 1320 ul in this well, or draw less.\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-dil-02",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "4 rows x 6 points on the assay plate",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 4.220128924606902,
+      "compound_1": 0.769240408425391,
+      "compound_3": 0.3882190787039112,
+      "compound_4": 4.615384615384616
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 10.0,
+       "found_ul": 0.769240408425391,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "dmso",
+       "expected_ul": null,
+       "found_ul": 4.220128924606902,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.3882190787039112,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 4.615384615384616,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 4.408324135534576,
+      "compound_1": 0.9664783257260018,
+      "compound_3": 0.3583560726497642,
+      "compound_4": 4.260355029585799
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 3.3333,
+       "found_ul": 0.9664783257260018,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 4.408324135534576,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.3583560726497642,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 4.260355029585799,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 4.752982962715677,
+      "compound_1": 0.9776039246017795,
+      "compound_3": 0.3307902209074746,
+      "compound_4": 3.9326354119253533
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 1.1111,
+       "found_ul": 0.9776039246017795,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 4.752982962715677,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.3307902209074746,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 3.9326354119253533,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.128109629401367,
+      "compound_1": 0.9308936511993633,
+      "compound_3": 0.30534481929920737,
+      "compound_4": 3.630124995623403
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.3704,
+       "found_ul": 0.9308936511993633,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 5.128109629401367,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.30534481929920737,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 3.630124995623403,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.49337375097638,
+      "compound_1": 0.8687831234242935,
+      "compound_3": 0.28185675627619144,
+      "compound_4": 3.3508846113446795
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.1235,
+       "found_ul": 0.8687831234242935,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.8765,
+       "found_ul": 5.49337375097638,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.28185675627619144,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 3.3508846113446795,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.836871749872468,
+      "compound_1": 0.8051192111127699,
+      "compound_3": 0.260175467331869,
+      "compound_4": 3.093124256625858
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.0412,
+       "found_ul": 0.8051192111127699,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.9588,
+       "found_ul": 5.836871749872468,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.260175467331869,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 3.093124256625858,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.5793979178943065,
+      "compound_1": 0.7439783537843738,
+      "compound_2": 0.5812701369757263,
+      "compound_3": 0.24016196984480215,
+      "compound_4": 2.855191621500792
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 10.0,
+       "found_ul": 0.5812701369757263,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "dmso",
+       "expected_ul": null,
+       "found_ul": 5.5793979178943065,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.7439783537843738,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.24016196984480215,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.855191621500792,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.640096701754723,
+      "compound_1": 0.6871319174966317,
+      "compound_2": 0.8155219118142506,
+      "compound_3": 0.22168797216443276,
+      "compound_4": 2.6355614967699617
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 3.3333,
+       "found_ul": 0.8155219118142506,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 5.640096701754723,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.6871319174966317,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.22168797216443276,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.6355614967699617,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.8305756469214165,
+      "compound_1": 0.6344741068789854,
+      "compound_2": 0.8974891979524648,
+      "compound_3": 0.20463505122870715,
+      "compound_4": 2.4328259970184263
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 1.1111,
+       "found_ul": 0.8974891979524648,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 5.8305756469214165,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.6344741068789854,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.20463505122870715,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.4328259970184263,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.076810323068825,
+      "compound_1": 0.585770447821188,
+      "compound_2": 0.9028397999587869,
+      "compound_3": 0.18889389344188354,
+      "compound_4": 2.2456855357093164
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 0.3704,
+       "found_ul": 0.9028397999587869,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 6.076810323068825,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.585770447821188,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.18889389344188354,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.2456855357093164,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.3402572272281725,
+      "compound_1": 0.5407636989290271,
+      "compound_2": 0.8716749853955381,
+      "compound_3": 0.17436359394635403,
+      "compound_4": 2.0729404945009073
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 0.1235,
+       "found_ul": 0.8716749853955381,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.8765,
+       "found_ul": 6.3402572272281725,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.5407636989290271,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.17436359394635403,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.0729404945009073,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.602048269876201,
+      "compound_1": 0.49919351547277396,
+      "compound_2": 0.8243236714689361,
+      "compound_3": 0.16095100979663451,
+      "compound_4": 1.913483533385453
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 0.0412,
+       "found_ul": 0.8243236714689361,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.9588,
+       "found_ul": 6.602048269876201,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.49919351547277396,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.16095100979663451,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.913483533385453,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.393525158086471,
+      "compound_1": 0.4608054739436133,
+      "compound_2": 0.7692682511864489,
+      "compound_3": 0.6101086244276626,
+      "compound_4": 1.7662924923558028
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 10.0,
+       "found_ul": 0.6101086244276626,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "dmso",
+       "expected_ul": null,
+       "found_ul": 6.393525158086471,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.4608054739436133,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.7692682511864489,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.7662924923558028,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.398240843601483,
+      "compound_1": 0.425365549557751,
+      "compound_2": 0.714942008793425,
+      "compound_3": 0.8310277589496761,
+      "compound_4": 1.630423839097664
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 3.3333,
+       "found_ul": 0.8310277589496761,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 6.398240843601483,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.425365549557751,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.714942008793425,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.630423839097664,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.507345684551146,
+      "compound_1": 0.3926492185920374,
+      "compound_2": 0.6629323977733369,
+      "compound_3": 0.9320660783779429,
+      "compound_4": 1.5050066207055361
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 1.1111,
+       "found_ul": 0.9320660783779429,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 6.507345684551146,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.3926492185920374,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.6629323977733369,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.5050066207055361,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.673392950669636,
+      "compound_1": 0.3624479351270756,
+      "compound_2": 0.6137619791871215,
+      "compound_3": 0.9611602543649025,
+      "compound_4": 1.389236880651264
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 0.3704,
+       "found_ul": 0.9611602543649025,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 6.673392950669636,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.3624479351270756,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.6137619791871215,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.389236880651264,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.8665211644736575,
+      "compound_1": 0.334568855388808,
+      "compound_2": 0.5676653675631588,
+      "compound_3": 0.9488721073578246,
+      "compound_4": 1.2823725052165513
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 0.1235,
+       "found_ul": 0.9488721073578246,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.8765,
+       "found_ul": 6.8665211644736575,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.334568855388808,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.5676653675631588,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.2823725052165513,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_3",
+       "expected_ul": 0.0412,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 9.9588,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.690004639128824,
+      "compound_1": 0.3088335928558874,
+      "compound_2": 0.5245843819007963,
+      "compound_3": 0.9082335351453692,
+      "compound_4": 1.5683438509691243
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_4",
+       "expected_ul": 10.0,
+       "found_ul": 1.5683438509691243,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "dmso",
+       "expected_ul": null,
+       "found_ul": 6.690004639128824,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.3088335928558874,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.5245843819007963,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.9082335351453692,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 3.3333,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 1.1111,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 0.3704,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 0.1235,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 9.8765,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 0.0412,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 9.9588,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 4.220128924606902,
+      "compound_1": 0.769240408425391,
+      "compound_3": 0.3882190787039112,
+      "compound_4": 4.615384615384616
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 10.0,
+       "found_ul": 0.769240408425391,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "dmso",
+       "expected_ul": null,
+       "found_ul": 4.220128924606902,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.3882190787039112,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 4.615384615384616,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 4.408324135534576,
+      "compound_1": 0.9664783257260018,
+      "compound_3": 0.3583560726497642,
+      "compound_4": 4.260355029585799
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 3.3333,
+       "found_ul": 0.9664783257260018,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 4.408324135534576,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.3583560726497642,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 4.260355029585799,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 4.752982962715677,
+      "compound_1": 0.9776039246017795,
+      "compound_3": 0.3307902209074746,
+      "compound_4": 3.9326354119253533
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 1.1111,
+       "found_ul": 0.9776039246017795,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 4.752982962715677,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.3307902209074746,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 3.9326354119253533,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.128109629401367,
+      "compound_1": 0.9308936511993633,
+      "compound_3": 0.30534481929920737,
+      "compound_4": 3.630124995623403
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.3704,
+       "found_ul": 0.9308936511993633,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 5.128109629401367,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.30534481929920737,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 3.630124995623403,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.49337375097638,
+      "compound_1": 0.8687831234242935,
+      "compound_3": 0.28185675627619144,
+      "compound_4": 3.3508846113446795
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.1235,
+       "found_ul": 0.8687831234242935,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.8765,
+       "found_ul": 5.49337375097638,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.28185675627619144,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 3.3508846113446795,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.836871749872468,
+      "compound_1": 0.8051192111127699,
+      "compound_3": 0.260175467331869,
+      "compound_4": 3.093124256625858
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.0412,
+       "found_ul": 0.8051192111127699,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.9588,
+       "found_ul": 5.836871749872468,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.260175467331869,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 3.093124256625858,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.5793979178943065,
+      "compound_1": 0.7439783537843738,
+      "compound_2": 0.5812701369757263,
+      "compound_3": 0.24016196984480215,
+      "compound_4": 2.855191621500792
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 10.0,
+       "found_ul": 0.5812701369757263,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "dmso",
+       "expected_ul": null,
+       "found_ul": 5.5793979178943065,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.7439783537843738,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.24016196984480215,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.855191621500792,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.640096701754723,
+      "compound_1": 0.6871319174966317,
+      "compound_2": 0.8155219118142506,
+      "compound_3": 0.22168797216443276,
+      "compound_4": 2.6355614967699617
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 3.3333,
+       "found_ul": 0.8155219118142506,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 5.640096701754723,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.6871319174966317,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.22168797216443276,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.6355614967699617,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 5.8305756469214165,
+      "compound_1": 0.6344741068789854,
+      "compound_2": 0.8974891979524648,
+      "compound_3": 0.20463505122870715,
+      "compound_4": 2.4328259970184263
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 1.1111,
+       "found_ul": 0.8974891979524648,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 5.8305756469214165,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.6344741068789854,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.20463505122870715,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.4328259970184263,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.076810323068825,
+      "compound_1": 0.585770447821188,
+      "compound_2": 0.9028397999587869,
+      "compound_3": 0.18889389344188354,
+      "compound_4": 2.2456855357093164
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 0.3704,
+       "found_ul": 0.9028397999587869,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 6.076810323068825,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.585770447821188,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.18889389344188354,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.2456855357093164,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.3402572272281725,
+      "compound_1": 0.5407636989290271,
+      "compound_2": 0.8716749853955381,
+      "compound_3": 0.17436359394635403,
+      "compound_4": 2.0729404945009073
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 0.1235,
+       "found_ul": 0.8716749853955381,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.8765,
+       "found_ul": 6.3402572272281725,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.5407636989290271,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.17436359394635403,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 2.0729404945009073,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.602048269876201,
+      "compound_1": 0.49919351547277396,
+      "compound_2": 0.8243236714689361,
+      "compound_3": 0.16095100979663451,
+      "compound_4": 1.913483533385453
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_2",
+       "expected_ul": 0.0412,
+       "found_ul": 0.8243236714689361,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.9588,
+       "found_ul": 6.602048269876201,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.49919351547277396,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.16095100979663451,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.913483533385453,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.393525158086471,
+      "compound_1": 0.4608054739436133,
+      "compound_2": 0.7692682511864489,
+      "compound_3": 0.6101086244276626,
+      "compound_4": 1.7662924923558028
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 10.0,
+       "found_ul": 0.6101086244276626,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "dmso",
+       "expected_ul": null,
+       "found_ul": 6.393525158086471,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.4608054739436133,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.7692682511864489,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.7662924923558028,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.398240843601483,
+      "compound_1": 0.425365549557751,
+      "compound_2": 0.714942008793425,
+      "compound_3": 0.8310277589496761,
+      "compound_4": 1.630423839097664
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 3.3333,
+       "found_ul": 0.8310277589496761,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 6.398240843601483,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.425365549557751,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.714942008793425,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.630423839097664,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.507345684551146,
+      "compound_1": 0.3926492185920374,
+      "compound_2": 0.6629323977733369,
+      "compound_3": 0.9320660783779429,
+      "compound_4": 1.5050066207055361
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 1.1111,
+       "found_ul": 0.9320660783779429,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 6.507345684551146,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.3926492185920374,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.6629323977733369,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.5050066207055361,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.673392950669636,
+      "compound_1": 0.3624479351270756,
+      "compound_2": 0.6137619791871215,
+      "compound_3": 0.9611602543649025,
+      "compound_4": 1.389236880651264
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 0.3704,
+       "found_ul": 0.9611602543649025,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 6.673392950669636,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.3624479351270756,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.6137619791871215,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.389236880651264,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.8665211644736575,
+      "compound_1": 0.334568855388808,
+      "compound_2": 0.5676653675631588,
+      "compound_3": 0.9488721073578246,
+      "compound_4": 1.2823725052165513
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_3",
+       "expected_ul": 0.1235,
+       "found_ul": 0.9488721073578246,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.8765,
+       "found_ul": 6.8665211644736575,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.334568855388808,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.5676653675631588,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_4",
+       "expected_ul": null,
+       "found_ul": 1.2823725052165513,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_3",
+       "expected_ul": 0.0412,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 9.9588,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 6.690004639128824,
+      "compound_1": 0.3088335928558874,
+      "compound_2": 0.5245843819007963,
+      "compound_3": 0.9082335351453692,
+      "compound_4": 1.5683438509691243
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_4",
+       "expected_ul": 10.0,
+       "found_ul": 1.5683438509691243,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "dmso",
+       "expected_ul": null,
+       "found_ul": 6.690004639128824,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.3088335928558874,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_2",
+       "expected_ul": null,
+       "found_ul": 0.5245843819007963,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_3",
+       "expected_ul": null,
+       "found_ul": 0.9082335351453692,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 3.3333,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 1.1111,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 0.3704,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 0.1235,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 9.8765,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "compound_4",
+       "expected_ul": 0.0412,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "dmso",
+       "expected_ul": 9.9588,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "compound 1",
+    "logical": "compound_1",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 5.3181,
+    "left_in_source_ul": 910.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A1]",
+      "ul": 50.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A2]",
+      "ul": 16.6667
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A3]",
+      "ul": 5.5556
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A4]",
+      "ul": 1.8519
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A5]",
+      "ul": 0.6173
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A6]",
+      "ul": 0.2058
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 0.0514
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B2]",
+      "ul": 0.0249
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B3]",
+      "ul": 0.0129
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 0.744
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B2]",
+      "ul": 0.6871
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B3]",
+      "ul": 0.6345
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B4]",
+      "ul": 0.5858
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B5]",
+      "ul": 0.5408
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B6]",
+      "ul": 0.4992
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 0.4608
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 0.4254
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 0.3926
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 0.3624
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 0.3346
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 0.3088
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 3.7196,
+    "flags": [
+     "3.7 ul of compound 1 is lost: it left the deck inside a tip that was thrown away.",
+     "compound 1 ends in wells the plate map does not list for it: A1 in slot 3 (50.0 ul), A2 in slot 3 (16.7 ul), A3 in slot 3 (5.6 ul), A4 in slot 3 (1.9 ul), A5 in slot 3 (0.6 ul), A6 in slot 3 (0.2 ul) and 15 more."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "compound 2",
+    "logical": "compound_2",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 4.8931,
+    "left_in_source_ul": 910.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 37.5
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B2]",
+      "ul": 18.1327
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B3]",
+      "ul": 9.4055
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B4]",
+      "ul": 4.8352
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B5]",
+      "ul": 2.4885
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B6]",
+      "ul": 1.2805
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 0.543
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 0.3151
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 0.1941
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 0.1186
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 0.0725
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 0.0381
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 0.7693
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 0.7149
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 0.6629
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 0.6138
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 0.5677
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 0.5246
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 6.3299,
+    "flags": [
+     "6.3 ul of compound 2 is lost: it left the deck inside a tip that was thrown away.",
+     "compound 2 ends in wells the plate map does not list for it: B1 in slot 3 (37.5 ul), B2 in slot 3 (18.1 ul), B3 in slot 3 (9.4 ul), B4 in slot 3 (4.8 ul), B5 in slot 3 (2.5 ul), B6 in slot 3 (1.3 ul) and 12 more."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "compound 3",
+    "logical": "compound_3",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 4.2832,
+    "left_in_source_ul": 910.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 30.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 17.4103
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 10.7226
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 6.5515
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 4.0071
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 2.1029
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A1]",
+      "ul": 0.3882
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A2]",
+      "ul": 0.3584
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A3]",
+      "ul": 0.3308
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A4]",
+      "ul": 0.3053
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A5]",
+      "ul": 0.2819
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A6]",
+      "ul": 0.2602
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 0.2402
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B2]",
+      "ul": 0.2217
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B3]",
+      "ul": 0.2046
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B4]",
+      "ul": 0.1889
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B5]",
+      "ul": 0.1744
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B6]",
+      "ul": 0.161
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 0.9082
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 10.8988,
+    "flags": [
+     "10.9 ul of compound 3 is lost: it left the deck inside a tip that was thrown away.",
+     "compound 3 ends in wells the plate map does not list for it: C1 in slot 3 (30.0 ul), C2 in slot 3 (17.4 ul), C3 in slot 3 (10.7 ul), C4 in slot 3 (6.6 ul), C5 in slot 3 (4.0 ul), D1 in slot 3 (2.1 ul) and 13 more."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "compound 4",
+    "logical": "compound_4",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 1.5683,
+    "left_in_source_ul": 910.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 25.0
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A1]",
+      "ul": 4.6154
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A2]",
+      "ul": 4.2604
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A3]",
+      "ul": 3.9326
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A4]",
+      "ul": 3.6301
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A5]",
+      "ul": 3.3509
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A6]",
+      "ul": 3.0931
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 2.8552
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B2]",
+      "ul": 2.6356
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B3]",
+      "ul": 2.4328
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B4]",
+      "ul": 2.2457
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B5]",
+      "ul": 2.0729
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B6]",
+      "ul": 1.9135
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 1.7663
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 1.6304
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 1.505
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 1.3892
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 1.2824
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 18.8201,
+    "flags": [
+     "18.8 ul of compound 4 is lost: it left the deck inside a tip that was thrown away.",
+     "compound 4 ends in wells the plate map does not list for it: D1 in slot 3 (25.0 ul), A1 in slot 4 (4.6 ul), A2 in slot 4 (4.3 ul), A3 in slot 4 (3.9 ul), A4 in slot 4 (3.6 ul), A5 in slot 4 (3.4 ul) and 12 more."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "dmso",
+    "logical": "dmso",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 82.555,
+    "left_in_source_ul": 160.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A2]",
+      "ul": 33.3333
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A3]",
+      "ul": 44.4444
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A4]",
+      "ul": 48.1481
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A5]",
+      "ul": 49.3827
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A6]",
+      "ul": 49.7942
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 12.4486
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B2]",
+      "ul": 31.8424
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B3]",
+      "ul": 40.5816
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B4]",
+      "ul": 45.1581
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B5]",
+      "ul": 47.5081
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B6]",
+      "ul": 48.7177
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 19.4562
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 32.2741
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 39.083
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 43.3298
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 45.9203
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 22.859
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[A1]",
+      "ul": 4.2201
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 5.5794
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 6.3935
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 6.69
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 80.2801,
+    "flags": [],
+    "notes": [
+     "80.3 ul of dmso is lost: it left the deck inside a tip that was thrown away.",
+     "dmso ends in wells the plate map does not list for it: A2 in slot 3 (33.3 ul), A3 in slot 3 (44.4 ul), A4 in slot 3 (48.1 ul), A5 in slot 3 (49.4 ul), A6 in slot 3 (49.8 ul), B1 in slot 3 (12.4 ul) and 15 more."
+    ]
+   },
+   {
+    "liquid": "medium",
+    "logical": "medium",
+    "role": "reagent",
+    "declared_ul": 2160.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2160.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "compound 1",
+     "declared_ul": 1000.0,
+     "needed_ul": 90.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "compound 2",
+     "declared_ul": 1000.0,
+     "needed_ul": 90.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "compound 3",
+     "declared_ul": 1000.0,
+     "needed_ul": 90.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "compound 4",
+     "declared_ul": 1000.0,
+     "needed_ul": 90.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D2",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 10.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D3",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 10.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D4",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 10.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D5",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 10.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C6",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 10.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D6",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 10.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "5",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "dmso",
+     "declared_ul": 1000.0,
+     "needed_ul": 1200.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 11 biology problems (3 errors, 6 warnings, 2 notes).\n\n1. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well A1 in slot 5: the liquid is\nbelow the tip\n   line 97:  p300.aspirate(add_vol, dms0_reservoir[\"A1\"])\n   At line 97 the p300_single_gen2 draws 60 ul from dmso (well A1 in slot 5) with its tip 1\n   mm above the bottom of the well. By then the well holds 160 ul, which in this NEST 12\n   Well Reservoir 15 mL reaches only 0.79 mm up: the tip is above the liquid and draws air\n   (this line did it 6 times, after 14 times in the liquid; 360 ul of air in all). The\n   simulator does not notice: it does not follow the liquid. The 6 wells filled from these\n   draws got air instead of liquid.\n   Affected: well A1 in slot 5.\n   Also reached 6 other wells: wells C6, D2, D3, D4, D5 and D6 in slot 3.\n   Fix: Keep the liquid above the tip. This well needs about 258 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [f77953da9208]\n\n2. ERROR PIPETTE-RANGE: 10 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 112:  p300.mix(volume=10, repetitions=3)\n   At line 112 the p300_single_gen2 is asked to draw 10 ul, below its minimum of 20 ul (this\n   line did it 72 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 3.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [8d33de87d00c]\n\n3. ERROR PIPETTE-RANGE: 10 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 122:  p300.aspirate(10, source_plate[well_name])\n   At line 122 the p300_single_gen2 is asked to draw 10 ul, below its minimum of 20 ul (this\n   line did it 24 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 3.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [8e3bfae91d11]\n\n4. WARNING CONTAM-STOCK: A used tip went into a stock: dmso (well A1 in slot 5)\n   line 97:  p300.aspirate(add_vol, dms0_reservoir[\"A1\"])\n   At line 97 the tip went into dmso (well A1 in slot 5) while it still carried compound 1\n   (tube A1 in slot 2), compound 2 (tube A2 in slot 2) and compound 3 (tube A3 in slot 2)\n   from an earlier step (this line did it 3 times). A tip that has touched one liquid leaves\n   a little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. The protocol drew from it again afterwards, but only into wells that\n   were given that material on purpose anyway, so this run is not harmed. What is left in\n   the stock is no longer clean for the next run.\n   Affected: well A1 in slot 5.\n   Fix: Pick up a fresh tip before line 97 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [7d598e299efd]\n\n5. WARNING CONTAM-STOCK: A used tip went into a stock: 3 stocks\n   line 103:  p300.aspirate(transfer_vol, stock_source)\n   At line 103 the tip went into compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot\n   2) and compound 4 (tube A4 in slot 2) while it still carried compound 1 (tube A1 in slot\n   2), compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot 2) and dmso (well A1 in\n   slot 5) from an earlier step (this line did it 3 times). A tip that has touched one\n   liquid leaves a little of it in the next liquid it touches, so these stocks now hold\n   material that does not belong there. The protocol does not draw from them again, so this\n   run is not harmed, but what is left in the stock is no longer clean for the next run.\n   Affected: tubes A2, A3 and A4 in slot 2.\n   Fix: Pick up a fresh tip before line 103 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [f3c8e2d4ac37]\n\n6. WARNING MIX-TOO-WEAK: Mixing too weak to stir 23 wells: 3 \u00d7 10 ul in 30 to 90 ul\n   line 112:  p300.mix(volume=10, repetitions=3)\n   At line 112 the tip mixes wells A2, A3, A4, A5, A6, B1, B2, B3 and 15 more in slot 3 with\n   3 strokes of 10 ul in a well holding 30 to 90 ul (this line did it 23 times). 3 strokes\n   of 10 ul move 0.33 to 1 of the well in all; it takes about 2 wells' worth of strokes to\n   mix (the mixing work). Integra draws over 80% of the well five times; three mixes gave\n   11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you\n   calculated, and in a dilution series every later step inherits the error.\n   Affected: wells A2, A3, A4, A5, A6, B1, B2, B3 and 15 more in slot 3.\n   Fix: Mix the well with about 80% of its volume (72 ul) at least 5 times: `mix(5, 72,\n   well)`. A stroke of the whole well draws air; use no more than 90%.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [e3c04fa71cd0]\n\n7. WARNING CONTAM-WELL: A used tip carried compound 2 (tube A2 in slot 2), compound 3 (tube\nA3 in slot 2), compound 4 (tube A4 in slot 2), medium (well A1 in slot 4) and 17 more into\n18 wells it was never meant for\n   line 122:  p300.aspirate(10, source_plate[well_name])\n   At line 122 the tip touched the liquid in wells A1, A2, A3, A4, A5, A6, B1, B2 and 10\n   more in slot 3 while it still carried compound 2 (tube A2 in slot 2), compound 3 (tube A3\n   in slot 2), compound 4 (tube A4 in slot 2), medium (well A1 in slot 4) and 17 more from\n   an earlier step (this line did it 18 times). A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   these wells on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 3.\n   Fix: Use a fresh tip for each well at line 122. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [da04cedf0f43]\n\n8. WARNING CONTAM-WELL: A used tip carried compound 1 (tube A1 in slot 2), compound 2 (tube\nA2 in slot 2), compound 3 (tube A3 in slot 2), compound 4 (tube A4 in slot 2) and 1 more\ninto 6 wells it was never meant for\n   line 123:  p300.dispense(10, dest_plate[well_name])\n   At line 123 the tip touched the liquid in wells C6, D2, D3, D4, D5 and D6 in slot 4 while\n   it still carried compound 1 (tube A1 in slot 2), compound 2 (tube A2 in slot 2), compound\n   3 (tube A3 in slot 2), compound 4 (tube A4 in slot 2) and 1 more from an earlier step\n   (this line did it 6 times). A tip that has touched one liquid leaves a little of it in\n   the next liquid it touches. The protocol never transfers that liquid into these wells on\n   purpose, so it was not meant to be there. If the wells hold different samples, each now\n   holds a little of another.\n   Affected: wells C6, D2, D3, D4, D5 and D6 in slot 4.\n   Fix: Use a fresh tip for each well at line 123. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [b730eda838d3]\n\n9. WARNING UNMIXED-AT-END: 18 wells never mixed after dmso, compound 1, compound 2, compound\n3 and 1 more went in (10% of the well)\n   line 123:  p300.dispense(10, dest_plate[well_name])\n   At line 123 the robot added dmso, compound 1, compound 2, compound 3 and 1 more to wells\n   A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 4, which already held medium (this\n   line did it 18 times). The addition was 10% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   The liquid added last is a sample, so nothing else in the workflow will mix it: a\n   normalisation or a pool left like this is not what it says it is.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 4.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 4 after line 123:\n   `mix_after=(5, 80)` on the transfer, or `pipette.mix(5, 80, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [559603b1ec09]\n\n10. NOTE NO-NEGATIVE-CONTROL: No blank on a dilution series: 12 wells of compound 2\n   line 104:  p300.dispense(transfer_vol, source_plate[well_name])\n   At line 104 the robot starts a dilution series of compound 2 in NEST 96 Well Plate 200 \u00b5L\n   Flat (slot 3): 12 wells at 12 concentrations, diluted with dmso. No well on this plate\n   holds dmso with no sample, so there is no blank: the curve has no zero to read against,\n   and a signal from the diluent or the plastic cannot be told from the lowest point. Wells:\n   wells B1, B2, B3, B4, B5, B6, C1, C2 and 4 more in slot 3.\n   Affected: wells B1, B2, B3, B4, B5, B6, C1, C2 and 4 more in slot 3.\n   Fix: Add a well of dmso alone, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [a5c970a53127]\n\n11. NOTE CONTAM-WELL: A used tip carried dmso (well A1 in slot 5) into well A1 in slot 3 it\nwas never meant for\n   line 109:  p300.aspirate(transfer_vol, source_plate[prev_well_name])\n   At line 109 the tip touched the liquid in well A1 in slot 3 while it still carried dmso\n   (well A1 in slot 5) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   this well on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another.\n   Affected: well A1 in slot 3.\n   Fix: Use a fresh tip for each well at line 109. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [85fb7306cb1a]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 97,
+   "title": "The pipette draws air from well A1 in slot 5: the liquid is below the tip",
+   "explanation": "At line 97 the p300_single_gen2 draws 60 ul from dmso (well A1 in slot 5) with its tip 1 mm above the bottom of the well. By then the well holds 160 ul, which in this NEST 12 Well Reservoir 15 mL reaches only 0.79 mm up: the tip is above the liquid and draws air (this line did it 6 times, after 14 times in the liquid; 360 ul of air in all). The simulator does not notice: it does not follow the liquid. The 6 wells filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 258 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 112,
+   "title": "10 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 112 the p300_single_gen2 is asked to draw 10 ul, below its minimum of 20 ul (this line did it 72 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 3.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 122,
+   "title": "10 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 122 the p300_single_gen2 is asked to draw 10 ul, below its minimum of 20 ul (this line did it 24 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 3.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 97,
+   "title": "A used tip went into a stock: dmso (well A1 in slot 5)",
+   "explanation": "At line 97 the tip went into dmso (well A1 in slot 5) while it still carried compound 1 (tube A1 in slot 2), compound 2 (tube A2 in slot 2) and compound 3 (tube A3 in slot 2) from an earlier step (this line did it 3 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 97 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 103,
+   "title": "A used tip went into a stock: 3 stocks",
+   "explanation": "At line 103 the tip went into compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot 2) and compound 4 (tube A4 in slot 2) while it still carried compound 1 (tube A1 in slot 2), compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot 2) and dmso (well A1 in slot 5) from an earlier step (this line did it 3 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. The protocol does not draw from them again, so this run is not harmed, but what is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 103 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 112,
+   "title": "Mixing too weak to stir 23 wells: 3 \u00d7 10 ul in 30 to 90 ul",
+   "explanation": "At line 112 the tip mixes wells A2, A3, A4, A5, A6, B1, B2, B3 and 15 more in slot 3 with 3 strokes of 10 ul in a well holding 30 to 90 ul (this line did it 23 times). 3 strokes of 10 ul move 0.33 to 1 of the well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix the well with about 80% of its volume (72 ul) at least 5 times: `mix(5, 72, well)`. A stroke of the whole well draws air; use no more than 90%."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 122,
+   "title": "A used tip carried compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot 2), compound 4 (tube A4 in slot 2), medium (well A1 in slot 4) and 17 more into 18 wells it was never meant for",
+   "explanation": "At line 122 the tip touched the liquid in wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 3 while it still carried compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot 2), compound 4 (tube A4 in slot 2), medium (well A1 in slot 4) and 17 more from an earlier step (this line did it 18 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 122. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 123,
+   "title": "A used tip carried compound 1 (tube A1 in slot 2), compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot 2), compound 4 (tube A4 in slot 2) and 1 more into 6 wells it was never meant for",
+   "explanation": "At line 123 the tip touched the liquid in wells C6, D2, D3, D4, D5 and D6 in slot 4 while it still carried compound 1 (tube A1 in slot 2), compound 2 (tube A2 in slot 2), compound 3 (tube A3 in slot 2), compound 4 (tube A4 in slot 2) and 1 more from an earlier step (this line did it 6 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 123. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "warning",
+   "certain": true,
+   "line": 123,
+   "title": "18 wells never mixed after dmso, compound 1, compound 2, compound 3 and 1 more went in (10% of the well)",
+   "explanation": "At line 123 the robot added dmso, compound 1, compound 2, compound 3 and 1 more to wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 4, which already held medium (this line did it 18 times). The addition was 10% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. The liquid added last is a sample, so nothing else in the workflow will mix it: a normalisation or a pool left like this is not what it says it is.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 4 after line 123: `mix_after=(5, 80)` on the transfer, or `pipette.mix(5, 80, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 104,
+   "title": "No blank on a dilution series: 12 wells of compound 2",
+   "explanation": "At line 104 the robot starts a dilution series of compound 2 in NEST 96 Well Plate 200 \u00b5L Flat (slot 3): 12 wells at 12 concentrations, diluted with dmso. No well on this plate holds dmso with no sample, so there is no blank: the curve has no zero to read against, and a signal from the diluent or the plastic cannot be told from the lowest point. Wells: wells B1, B2, B3, B4, B5, B6, C1, C2 and 4 more in slot 3.",
+   "fix": "Add a well of dmso alone, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 109,
+   "title": "A used tip carried dmso (well A1 in slot 5) into well A1 in slot 3 it was never meant for",
+   "explanation": "At line 109 the tip touched the liquid in well A1 in slot 3 while it still carried dmso (well A1 in slot 5) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 109. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  }
+ ],
+ "seconds": 5.4,
+ "draft": 2
+}

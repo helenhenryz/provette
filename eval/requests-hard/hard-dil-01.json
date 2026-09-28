@@ -1,0 +1,238 @@
+{
+ "id": "hard-dil-01",
+ "request": "Dilute 24 serum samples 1 in 10: 50 ul of each serum from 1.5 ml tubes plus 450 ul of PBS from a reservoir, in a 96-well plate. Then transfer 100 ul of each dilution in duplicate to a coated ELISA plate.",
+ "technique": "Serial dilution",
+ "liquids": [
+  {
+   "name": "serum_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:serum|sample)\\D{0,12}?(\\d+)",
+   "count": 24,
+   "index": "number"
+  },
+  {
+   "name": "pbs",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)pbs|diluent|buffer|saline"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "48 wells of 1:10 serum on the ELISA plate",
+   "why": "the request pins duplicates, not positions",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "dilutions",
+     "members": [
+      {
+       "serum_1": 10,
+       "pbs": 90
+      },
+      {
+       "serum_1": 10,
+       "pbs": 90
+      },
+      {
+       "serum_2": 10,
+       "pbs": 90
+      },
+      {
+       "serum_2": 10,
+       "pbs": 90
+      },
+      {
+       "serum_3": 10,
+       "pbs": 90
+      },
+      {
+       "serum_3": 10,
+       "pbs": 90
+      },
+      {
+       "serum_4": 10,
+       "pbs": 90
+      },
+      {
+       "serum_4": 10,
+       "pbs": 90
+      },
+      {
+       "serum_5": 10,
+       "pbs": 90
+      },
+      {
+       "serum_5": 10,
+       "pbs": 90
+      },
+      {
+       "serum_6": 10,
+       "pbs": 90
+      },
+      {
+       "serum_6": 10,
+       "pbs": 90
+      },
+      {
+       "serum_7": 10,
+       "pbs": 90
+      },
+      {
+       "serum_7": 10,
+       "pbs": 90
+      },
+      {
+       "serum_8": 10,
+       "pbs": 90
+      },
+      {
+       "serum_8": 10,
+       "pbs": 90
+      },
+      {
+       "serum_9": 10,
+       "pbs": 90
+      },
+      {
+       "serum_9": 10,
+       "pbs": 90
+      },
+      {
+       "serum_10": 10,
+       "pbs": 90
+      },
+      {
+       "serum_10": 10,
+       "pbs": 90
+      },
+      {
+       "serum_11": 10,
+       "pbs": 90
+      },
+      {
+       "serum_11": 10,
+       "pbs": 90
+      },
+      {
+       "serum_12": 10,
+       "pbs": 90
+      },
+      {
+       "serum_12": 10,
+       "pbs": 90
+      },
+      {
+       "serum_13": 10,
+       "pbs": 90
+      },
+      {
+       "serum_13": 10,
+       "pbs": 90
+      },
+      {
+       "serum_14": 10,
+       "pbs": 90
+      },
+      {
+       "serum_14": 10,
+       "pbs": 90
+      },
+      {
+       "serum_15": 10,
+       "pbs": 90
+      },
+      {
+       "serum_15": 10,
+       "pbs": 90
+      },
+      {
+       "serum_16": 10,
+       "pbs": 90
+      },
+      {
+       "serum_16": 10,
+       "pbs": 90
+      },
+      {
+       "serum_17": 10,
+       "pbs": 90
+      },
+      {
+       "serum_17": 10,
+       "pbs": 90
+      },
+      {
+       "serum_18": 10,
+       "pbs": 90
+      },
+      {
+       "serum_18": 10,
+       "pbs": 90
+      },
+      {
+       "serum_19": 10,
+       "pbs": 90
+      },
+      {
+       "serum_19": 10,
+       "pbs": 90
+      },
+      {
+       "serum_20": 10,
+       "pbs": 90
+      },
+      {
+       "serum_20": 10,
+       "pbs": 90
+      },
+      {
+       "serum_21": 10,
+       "pbs": 90
+      },
+      {
+       "serum_21": 10,
+       "pbs": 90
+      },
+      {
+       "serum_22": 10,
+       "pbs": 90
+      },
+      {
+       "serum_22": 10,
+       "pbs": 90
+      },
+      {
+       "serum_23": 10,
+       "pbs": 90
+      },
+      {
+       "serum_23": 10,
+       "pbs": 90
+      },
+      {
+       "serum_24": 10,
+       "pbs": 90
+      },
+      {
+       "serum_24": 10,
+       "pbs": 90
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The destination is the ELISA plate; the 500 ul dilutions are an intermediate.",
+  "100 ul of a well holding 50 ul serum + 450 ul PBS is 10 ul serum + 90 ul PBS."
+ ]
+}

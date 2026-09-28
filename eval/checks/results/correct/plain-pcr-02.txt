@@ -1,0 +1,67 @@
+pcr-02.py: VERIFIED against plate map pcr-02. 24 of 24 wells hold what the plate map says.
+  Destination: PCR plate (slot 3). Reading of the request: 24 reactions.
+
+Labware for the technique (PCR setup): nothing to flag.
+
+Where every liquid ended up (ul):
+  liquid                             declared delivered in source elsewhere    lost
+  2x PCR master mix                     400.0     300.0     100.0       0.0     0.0
+  Water                                1000.0     252.0     748.0       0.0     0.0
+  gDNA sample 1                          50.0       2.0      48.0       0.0     0.0
+  gDNA sample 2                          50.0       2.0      48.0       0.0     0.0
+  gDNA sample 3                          50.0       2.0      48.0       0.0     0.0
+  gDNA sample 4                          50.0       2.0      48.0       0.0     0.0
+  gDNA sample 5                          50.0       2.0      48.0       0.0     0.0
+  gDNA sample 6                          50.0       2.0      48.0       0.0     0.0
+  gDNA sample 7                          50.0       2.0      48.0       0.0     0.0
+  gDNA sample 8                          50.0       2.0      48.0       0.0     0.0
+  gDNA sample 9                          50.0       2.0      48.0       0.0     0.0
+  gDNA sample 10                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 11                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 12                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 13                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 14                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 15                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 16                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 17                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 18                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 19                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 20                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 21                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 22                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 23                         50.0       2.0      48.0       0.0     0.0
+  gDNA sample 24                         50.0       2.0      48.0       0.0     0.0
+
+Prep sheet: what to put on the deck before the run.
+  slot labware                               well  liquid                       load at least  declared
+  4    gDNA samples                          A1    gDNA sample 1                          2.0      50.0
+  4    gDNA samples                          B1    gDNA sample 2                          2.0      50.0
+  4    gDNA samples                          C1    gDNA sample 3                          2.0      50.0
+  4    gDNA samples                          D1    gDNA sample 4                          2.0      50.0
+  4    gDNA samples                          A2    gDNA sample 5                          2.0      50.0
+  4    gDNA samples                          B2    gDNA sample 6                          2.0      50.0
+  4    gDNA samples                          C2    gDNA sample 7                          2.0      50.0
+  4    gDNA samples                          D2    gDNA sample 8                          2.0      50.0
+  4    gDNA samples                          A3    gDNA sample 9                          2.0      50.0
+  4    gDNA samples                          B3    gDNA sample 10                         2.0      50.0
+  4    gDNA samples                          C3    gDNA sample 11                         2.0      50.0
+  4    gDNA samples                          D3    gDNA sample 12                         2.0      50.0
+  4    gDNA samples                          A4    gDNA sample 13                         2.0      50.0
+  4    gDNA samples                          B4    gDNA sample 14                         2.0      50.0
+  4    gDNA samples                          C4    gDNA sample 15                         2.0      50.0
+  4    gDNA samples                          D4    gDNA sample 16                         2.0      50.0
+  4    gDNA samples                          A5    gDNA sample 17                         2.0      50.0
+  4    gDNA samples                          B5    gDNA sample 18                         2.0      50.0
+  4    gDNA samples                          C5    gDNA sample 19                         2.0      50.0
+  4    gDNA samples                          D5    gDNA sample 20                         2.0      50.0
+  4    gDNA samples                          A6    gDNA sample 21                         2.0      50.0
+  4    gDNA samples                          B6    gDNA sample 22                         2.0      50.0
+  4    gDNA samples                          C6    gDNA sample 23                         2.0      50.0
+  4    gDNA samples                          D6    gDNA sample 24                         2.0      50.0
+  5    Reagents                              A1    2x PCR master mix                    300.0     400.0
+  5    Reagents                              B1    Water                                252.0    1000.0
+  Tips: 49 from Opentrons OT-2 96 Filter Tip Rack 20 µL in slot 1.
+  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.
+
+This checks the logic of the protocol: what goes where, and how much. It does not check the
+  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.

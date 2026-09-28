@@ -1,0 +1,183 @@
+{
+ "id": "pool-01",
+ "request": "Pool 5 ul from each of 48 indexed sequencing libraries in a 96-well plate into a single 1.5 ml tube.",
+ "technique": "Pooling",
+ "liquids": [
+  {
+   "name": "sample_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:library|sample|dna)\\D{0,12}?(\\d+)",
+   "count": 48,
+   "index": "number"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "pooled libraries",
+   "why": "request does not specify tube well; auto chosen",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "pool",
+     "members": [
+      {
+       "sample_1": 5
+      },
+      {
+       "sample_2": 5
+      },
+      {
+       "sample_3": 5
+      },
+      {
+       "sample_4": 5
+      },
+      {
+       "sample_5": 5
+      },
+      {
+       "sample_6": 5
+      },
+      {
+       "sample_7": 5
+      },
+      {
+       "sample_8": 5
+      },
+      {
+       "sample_9": 5
+      },
+      {
+       "sample_10": 5
+      },
+      {
+       "sample_11": 5
+      },
+      {
+       "sample_12": 5
+      },
+      {
+       "sample_13": 5
+      },
+      {
+       "sample_14": 5
+      },
+      {
+       "sample_15": 5
+      },
+      {
+       "sample_16": 5
+      },
+      {
+       "sample_17": 5
+      },
+      {
+       "sample_18": 5
+      },
+      {
+       "sample_19": 5
+      },
+      {
+       "sample_20": 5
+      },
+      {
+       "sample_21": 5
+      },
+      {
+       "sample_22": 5
+      },
+      {
+       "sample_23": 5
+      },
+      {
+       "sample_24": 5
+      },
+      {
+       "sample_25": 5
+      },
+      {
+       "sample_26": 5
+      },
+      {
+       "sample_27": 5
+      },
+      {
+       "sample_28": 5
+      },
+      {
+       "sample_29": 5
+      },
+      {
+       "sample_30": 5
+      },
+      {
+       "sample_31": 5
+      },
+      {
+       "sample_32": 5
+      },
+      {
+       "sample_33": 5
+      },
+      {
+       "sample_34": 5
+      },
+      {
+       "sample_35": 5
+      },
+      {
+       "sample_36": 5
+      },
+      {
+       "sample_37": 5
+      },
+      {
+       "sample_38": 5
+      },
+      {
+       "sample_39": 5
+      },
+      {
+       "sample_40": 5
+      },
+      {
+       "sample_41": 5
+      },
+      {
+       "sample_42": 5
+      },
+      {
+       "sample_43": 5
+      },
+      {
+       "sample_44": 5
+      },
+      {
+       "sample_45": 5
+      },
+      {
+       "sample_46": 5
+      },
+      {
+       "sample_47": 5
+      },
+      {
+       "sample_48": 5
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The request does not specify which tube well to use; auto selection is applied."
+ ]
+}

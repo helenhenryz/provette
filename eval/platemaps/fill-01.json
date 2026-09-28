@@ -1,0 +1,417 @@
+{
+ "id": "fill-01",
+ "request": "Fill a 96-well deep well plate with 500 ul of LB medium per well from a reservoir, then inoculate each well with 5 ul from the matching well of a 96-well glycerol stock plate.",
+ "technique": "Plate filling",
+ "liquids": [
+  {
+   "name": "lb",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)\\blb\\b|medium|media|broth"
+  },
+  {
+   "name": "stock@{well}",
+   "role": "sample",
+   "bind": "well",
+   "pattern": "(?i)glycerol|stock|strain|clone"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "full plate",
+   "why": "'matching well' pins every position",
+   "pinned": {
+    "A1": {
+     "lb": 500,
+     "stock@A1": 5
+    },
+    "B1": {
+     "lb": 500,
+     "stock@B1": 5
+    },
+    "C1": {
+     "lb": 500,
+     "stock@C1": 5
+    },
+    "D1": {
+     "lb": 500,
+     "stock@D1": 5
+    },
+    "E1": {
+     "lb": 500,
+     "stock@E1": 5
+    },
+    "F1": {
+     "lb": 500,
+     "stock@F1": 5
+    },
+    "G1": {
+     "lb": 500,
+     "stock@G1": 5
+    },
+    "H1": {
+     "lb": 500,
+     "stock@H1": 5
+    },
+    "A2": {
+     "lb": 500,
+     "stock@A2": 5
+    },
+    "B2": {
+     "lb": 500,
+     "stock@B2": 5
+    },
+    "C2": {
+     "lb": 500,
+     "stock@C2": 5
+    },
+    "D2": {
+     "lb": 500,
+     "stock@D2": 5
+    },
+    "E2": {
+     "lb": 500,
+     "stock@E2": 5
+    },
+    "F2": {
+     "lb": 500,
+     "stock@F2": 5
+    },
+    "G2": {
+     "lb": 500,
+     "stock@G2": 5
+    },
+    "H2": {
+     "lb": 500,
+     "stock@H2": 5
+    },
+    "A3": {
+     "lb": 500,
+     "stock@A3": 5
+    },
+    "B3": {
+     "lb": 500,
+     "stock@B3": 5
+    },
+    "C3": {
+     "lb": 500,
+     "stock@C3": 5
+    },
+    "D3": {
+     "lb": 500,
+     "stock@D3": 5
+    },
+    "E3": {
+     "lb": 500,
+     "stock@E3": 5
+    },
+    "F3": {
+     "lb": 500,
+     "stock@F3": 5
+    },
+    "G3": {
+     "lb": 500,
+     "stock@G3": 5
+    },
+    "H3": {
+     "lb": 500,
+     "stock@H3": 5
+    },
+    "A4": {
+     "lb": 500,
+     "stock@A4": 5
+    },
+    "B4": {
+     "lb": 500,
+     "stock@B4": 5
+    },
+    "C4": {
+     "lb": 500,
+     "stock@C4": 5
+    },
+    "D4": {
+     "lb": 500,
+     "stock@D4": 5
+    },
+    "E4": {
+     "lb": 500,
+     "stock@E4": 5
+    },
+    "F4": {
+     "lb": 500,
+     "stock@F4": 5
+    },
+    "G4": {
+     "lb": 500,
+     "stock@G4": 5
+    },
+    "H4": {
+     "lb": 500,
+     "stock@H4": 5
+    },
+    "A5": {
+     "lb": 500,
+     "stock@A5": 5
+    },
+    "B5": {
+     "lb": 500,
+     "stock@B5": 5
+    },
+    "C5": {
+     "lb": 500,
+     "stock@C5": 5
+    },
+    "D5": {
+     "lb": 500,
+     "stock@D5": 5
+    },
+    "E5": {
+     "lb": 500,
+     "stock@E5": 5
+    },
+    "F5": {
+     "lb": 500,
+     "stock@F5": 5
+    },
+    "G5": {
+     "lb": 500,
+     "stock@G5": 5
+    },
+    "H5": {
+     "lb": 500,
+     "stock@H5": 5
+    },
+    "A6": {
+     "lb": 500,
+     "stock@A6": 5
+    },
+    "B6": {
+     "lb": 500,
+     "stock@B6": 5
+    },
+    "C6": {
+     "lb": 500,
+     "stock@C6": 5
+    },
+    "D6": {
+     "lb": 500,
+     "stock@D6": 5
+    },
+    "E6": {
+     "lb": 500,
+     "stock@E6": 5
+    },
+    "F6": {
+     "lb": 500,
+     "stock@F6": 5
+    },
+    "G6": {
+     "lb": 500,
+     "stock@G6": 5
+    },
+    "H6": {
+     "lb": 500,
+     "stock@H6": 5
+    },
+    "A7": {
+     "lb": 500,
+     "stock@A7": 5
+    },
+    "B7": {
+     "lb": 500,
+     "stock@B7": 5
+    },
+    "C7": {
+     "lb": 500,
+     "stock@C7": 5
+    },
+    "D7": {
+     "lb": 500,
+     "stock@D7": 5
+    },
+    "E7": {
+     "lb": 500,
+     "stock@E7": 5
+    },
+    "F7": {
+     "lb": 500,
+     "stock@F7": 5
+    },
+    "G7": {
+     "lb": 500,
+     "stock@G7": 5
+    },
+    "H7": {
+     "lb": 500,
+     "stock@H7": 5
+    },
+    "A8": {
+     "lb": 500,
+     "stock@A8": 5
+    },
+    "B8": {
+     "lb": 500,
+     "stock@B8": 5
+    },
+    "C8": {
+     "lb": 500,
+     "stock@C8": 5
+    },
+    "D8": {
+     "lb": 500,
+     "stock@D8": 5
+    },
+    "E8": {
+     "lb": 500,
+     "stock@E8": 5
+    },
+    "F8": {
+     "lb": 500,
+     "stock@F8": 5
+    },
+    "G8": {
+     "lb": 500,
+     "stock@G8": 5
+    },
+    "H8": {
+     "lb": 500,
+     "stock@H8": 5
+    },
+    "A9": {
+     "lb": 500,
+     "stock@A9": 5
+    },
+    "B9": {
+     "lb": 500,
+     "stock@B9": 5
+    },
+    "C9": {
+     "lb": 500,
+     "stock@C9": 5
+    },
+    "D9": {
+     "lb": 500,
+     "stock@D9": 5
+    },
+    "E9": {
+     "lb": 500,
+     "stock@E9": 5
+    },
+    "F9": {
+     "lb": 500,
+     "stock@F9": 5
+    },
+    "G9": {
+     "lb": 500,
+     "stock@G9": 5
+    },
+    "H9": {
+     "lb": 500,
+     "stock@H9": 5
+    },
+    "A10": {
+     "lb": 500,
+     "stock@A10": 5
+    },
+    "B10": {
+     "lb": 500,
+     "stock@B10": 5
+    },
+    "C10": {
+     "lb": 500,
+     "stock@C10": 5
+    },
+    "D10": {
+     "lb": 500,
+     "stock@D10": 5
+    },
+    "E10": {
+     "lb": 500,
+     "stock@E10": 5
+    },
+    "F10": {
+     "lb": 500,
+     "stock@F10": 5
+    },
+    "G10": {
+     "lb": 500,
+     "stock@G10": 5
+    },
+    "H10": {
+     "lb": 500,
+     "stock@H10": 5
+    },
+    "A11": {
+     "lb": 500,
+     "stock@A11": 5
+    },
+    "B11": {
+     "lb": 500,
+     "stock@B11": 5
+    },
+    "C11": {
+     "lb": 500,
+     "stock@C11": 5
+    },
+    "D11": {
+     "lb": 500,
+     "stock@D11": 5
+    },
+    "E11": {
+     "lb": 500,
+     "stock@E11": 5
+    },
+    "F11": {
+     "lb": 500,
+     "stock@F11": 5
+    },
+    "G11": {
+     "lb": 500,
+     "stock@G11": 5
+    },
+    "H11": {
+     "lb": 500,
+     "stock@H11": 5
+    },
+    "A12": {
+     "lb": 500,
+     "stock@A12": 5
+    },
+    "B12": {
+     "lb": 500,
+     "stock@B12": 5
+    },
+    "C12": {
+     "lb": 500,
+     "stock@C12": 5
+    },
+    "D12": {
+     "lb": 500,
+     "stock@D12": 5
+    },
+    "E12": {
+     "lb": 500,
+     "stock@E12": 5
+    },
+    "F12": {
+     "lb": 500,
+     "stock@F12": 5
+    },
+    "G12": {
+     "lb": 500,
+     "stock@G12": 5
+    },
+    "H12": {
+     "lb": 500,
+     "stock@H12": 5
+    }
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": []
+}

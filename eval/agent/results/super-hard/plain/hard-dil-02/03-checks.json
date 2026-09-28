@@ -1,0 +1,2534 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-dil-02. 4 of 24 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: 4 rows x 6\n    points on the assay plate.\n  well A2: expected 90 ul medium (declared in this well, not delivered), 3.33 ul compound_1,\n    6.67 ul dmso; found 90 ul medium (declared in this well, not delivered), 9.84 ul dmso,\n    0.16 ul compound_1\n      - wrong amount of compound_1: the plate map says 3.33 ul, the protocol delivers 0.16\n        ul\n      - wrong amount of dmso: the plate map says 6.67 ul, the protocol delivers 9.84 ul\n  well A3: expected 90 ul medium (declared in this well, not delivered), 1.11 ul compound_1,\n    8.89 ul dmso; found 90 ul medium (declared in this well, not delivered), 9.84 ul dmso,\n    0.16 ul compound_1\n      - wrong amount of compound_1: the plate map says 1.11 ul, the protocol delivers 0.16\n        ul\n      - wrong amount of dmso: the plate map says 8.89 ul, the protocol delivers 9.84 ul\n  well A4: expected 90 ul medium (declared in this well, not delivered), 0.37 ul compound_1,\n    9.63 ul dmso; found 90 ul medium (declared in this well, not delivered), 9.84 ul dmso,\n    0.16 ul compound_1\n      - wrong amount of compound_1: the plate map says 0.37 ul, the protocol delivers 0.16\n        ul\n      - wrong amount of dmso: the plate map says 9.63 ul, the protocol delivers 9.84 ul\n  well A5: expected 90 ul medium (declared in this well, not delivered), 0.12 ul compound_1,\n    9.88 ul dmso; found 90 ul medium (declared in this well, not delivered), 9.84 ul dmso,\n    0.16 ul compound_1\n      - wrong amount of compound_1: the plate map says 0.12 ul, the protocol delivers 0.16\n        ul\n  well A6: expected 90 ul medium (declared in this well, not delivered), 0.04 ul compound_1,\n    9.96 ul dmso; found 90 ul medium (declared in this well, not delivered), 9.84 ul dmso,\n    0.16 ul compound_1\n      - wrong amount of compound_1: the plate map says 0.04 ul, the protocol delivers 0.16\n        ul\n  well B2: expected 90 ul medium (declared in this well, not delivered), 3.33 ul compound_2,\n    6.67 ul dmso; found 90 ul medium (declared in this well, not delivered), 3.33 ul\n    compound_2, 6.56 ul dmso, 0.11 ul compound_1\n      - holds 0.11 ul of compound_1, which the plate map does not list for this well\n  well B3: expected 90 ul medium (declared in this well, not delivered), 1.11 ul compound_2,\n    8.89 ul dmso; found 90 ul medium (declared in this well, not delivered), 1.11 ul\n    compound_2, 8.74 ul dmso, 0.15 ul compound_1\n      - holds 0.15 ul of compound_1, which the plate map does not list for this well\n  well B4: expected 90 ul medium (declared in this well, not delivered), 0.37 ul compound_2,\n    9.63 ul dmso; found 90 ul medium (declared in this well, not delivered), 0.37 ul\n    compound_2, 9.47 ul dmso, 0.16 ul compound_1\n      - holds 0.16 ul of compound_1, which the plate map does not list for this well\n  well B5: expected 90 ul medium (declared in this well, not delivered), 0.12 ul compound_2,\n    9.88 ul dmso; found 90 ul medium (declared in this well, not delivered), 0.12 ul\n    compound_2, 9.71 ul dmso, 0.16 ul compound_1\n      - holds 0.16 ul of compound_1, which the plate map does not list for this well\n  well B6: expected 90 ul medium (declared in this well, not delivered), 0.04 ul compound_2,\n    9.96 ul dmso; found 90 ul medium (declared in this well, not delivered), 0.04 ul\n    compound_2, 9.8 ul dmso, 0.16 ul compound_1\n      - holds 0.16 ul of compound_1, which the plate map does not list for this well\n  well C2: expected 90 ul medium (declared in this well, not delivered), 3.33 ul compound_3,\n    6.67 ul dmso; found 90 ul medium (declared in this well, not delivered), 3.33 ul\n    compound_3, 6.56 ul dmso, 0.11 ul compound_1\n      - holds 0.11 ul of compound_1, which the plate map does not list for this well\n  well C3: expected 90 ul medium (declared in this well, not delivered), 1.11 ul compound_3,\n    8.89 ul dmso; found 90 ul medium (declared in this well, not delivered), 1.11 ul\n    compound_3, 8.74 ul dmso, 0.15 ul compound_1\n      - holds 0.15 ul of compound_1, which the plate map does not list for this well\n  ... and 8 more wells that do not match.\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  compound 1                            500.0      10.8     470.0      19.2     0.0  <-- FLAG\n  compound 2                            500.0      15.0     470.0      15.0     0.0  <-- FLAG\n  compound 3                            500.0      15.0     470.0      15.0     0.0  <-- FLAG\n  compound 4                            500.0      15.0     470.0      15.0     0.0  <-- FLAG\n  dmso                                 1200.0     182.0     423.0     595.0     0.0\n  medium                               8640.0       0.0    8640.0       0.0     0.0\n  FLAG: compound 1 ends in wells the plate map does not list for it: A2 in slot 3 (7.0 ul),\n    A3 in slot 3 (0.5 ul), A4 in slot 3 (0.5 ul), A5 in slot 3 (0.5 ul), A6 in slot 3 (0.8\n    ul), B2 in slot 3 (0.3 ul) and 29 more.\n  FLAG: compound 2 ends in wells the plate map does not list for it: B2 in slot 3 (10.0 ul),\n    B3 in slot 3 (3.3 ul), B4 in slot 3 (1.1 ul), B5 in slot 3 (0.4 ul), B6 in slot 3 (0.2\n    ul).\n  FLAG: compound 3 ends in wells the plate map does not list for it: C2 in slot 3 (10.0 ul),\n    C3 in slot 3 (3.3 ul), C4 in slot 3 (1.1 ul), C5 in slot 3 (0.4 ul), C6 in slot 3 (0.2\n    ul).\n  FLAG: compound 4 ends in wells the plate map does not list for it: D2 in slot 3 (10.0 ul),\n    D3 in slot 3 (3.3 ul), D4 in slot 3 (1.1 ul), D5 in slot 3 (0.4 ul), D6 in slot 3 (0.2\n    ul).\n  Note: dmso ends in wells the plate map does not list for it: A3 in slot 3 (29.5 ul), A4 in\n    slot 3 (29.5 ul), A5 in slot 3 (29.5 ul), A6 in slot 3 (49.2 ul), B2 in slot 3 (19.7\n    ul), B3 in slot 3 (26.2 ul) and 13 more.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    compound 1                            60.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B1    compound 2                            60.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  C1    compound 3                            60.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  D1    compound 4                            60.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A2    dmso                                 770.0    1200.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A1    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B1    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C1    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D1    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H1    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A2    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B2    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C2    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D2    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H2    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A3    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B3    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C3    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D3    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H3    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A4    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B4    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C4    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D4    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H4    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A5    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B5    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C5    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D5    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H5    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A6    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B6    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C6    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D6    medium                                10.0      90.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H6    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H7    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H8    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H9    medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H10   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H11   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H12   medium                                 0.0      90.0  already in the plate: 90 ul declared, nothing drawn\n  Tips: 24 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  Tips: 44 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-dil-02",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "4 rows x 6 points on the assay plate",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 4,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.836065573770487,
+      "compound_1": 0.16393442622950818
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 3.3333,
+       "found_ul": 0.16393442622950818,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 9.836065573770487,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.836065573770494,
+      "compound_1": 0.1639344262295082
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 1.1111,
+       "found_ul": 0.1639344262295082,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 9.836065573770494,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.836065573770494,
+      "compound_1": 0.1639344262295082
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.3704,
+       "found_ul": 0.1639344262295082,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 9.836065573770494,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.83606557377049,
+      "compound_1": 0.1639344262295082
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.1235,
+       "found_ul": 0.1639344262295082,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.83606557377049,
+      "compound_1": 0.1639344262295082
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.0412,
+       "found_ul": 0.1639344262295082,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 3.333333333333334,
+      "dmso": 6.557377049180328,
+      "compound_1": 0.10928961748633884
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.10928961748633884,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 1.1111111111111112,
+      "dmso": 8.743169398907103,
+      "compound_1": 0.14571948998178513
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.14571948998178513,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.37037037037037035,
+      "dmso": 9.471766848816028,
+      "compound_1": 0.15786278081360056
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.15786278081360056,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.12345679012345677,
+      "dmso": 9.714632665452337,
+      "compound_1": 0.1619105444242057
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1619105444242057,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.04115226337448558,
+      "dmso": 9.795587937664438,
+      "compound_1": 0.16325979896107404
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.16325979896107404,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 3.333333333333334,
+      "dmso": 6.557377049180326,
+      "compound_1": 0.10928961748633881
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.10928961748633881,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 1.1111111111111112,
+      "dmso": 8.743169398907103,
+      "compound_1": 0.1457194899817851
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1457194899817851,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.37037037037037035,
+      "dmso": 9.471766848816028,
+      "compound_1": 0.1578627808136005
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1578627808136005,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.12345679012345677,
+      "dmso": 9.714632665452333,
+      "compound_1": 0.16191054442420563
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.16191054442420563,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.04115226337448558,
+      "dmso": 9.795587937664434,
+      "compound_1": 0.16325979896107398
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.16325979896107398,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 10.0
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 3.333333333333334,
+      "dmso": 6.5573770491803245,
+      "compound_1": 0.1092896174863388
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1092896174863388,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 1.1111111111111112,
+      "dmso": 8.7431693989071,
+      "compound_1": 0.14571948998178505
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.14571948998178505,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.37037037037037035,
+      "dmso": 9.471766848816024,
+      "compound_1": 0.15786278081360047
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.15786278081360047,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.12345679012345677,
+      "dmso": 9.714632665452333,
+      "compound_1": 0.1619105444242056
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1619105444242056,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.04115226337448558,
+      "dmso": 9.795587937664433,
+      "compound_1": 0.16325979896107395
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.16325979896107395,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.836065573770487,
+      "compound_1": 0.16393442622950818
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 3.3333,
+       "found_ul": 0.16393442622950818,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 6.6667,
+       "found_ul": 9.836065573770487,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.836065573770494,
+      "compound_1": 0.1639344262295082
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 1.1111,
+       "found_ul": 0.1639344262295082,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 8.8889,
+       "found_ul": 9.836065573770494,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.836065573770494,
+      "compound_1": 0.1639344262295082
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.3704,
+       "found_ul": 0.1639344262295082,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "dmso",
+       "expected_ul": 9.6296,
+       "found_ul": 9.836065573770494,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.83606557377049,
+      "compound_1": 0.1639344262295082
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.1235,
+       "found_ul": 0.1639344262295082,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_1": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "dmso": 9.83606557377049,
+      "compound_1": 0.1639344262295082
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "compound_1",
+       "expected_ul": 0.0412,
+       "found_ul": 0.1639344262295082,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 3.333333333333334,
+      "dmso": 6.557377049180328,
+      "compound_1": 0.10928961748633884
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.10928961748633884,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 1.1111111111111112,
+      "dmso": 8.743169398907103,
+      "compound_1": 0.14571948998178513
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.14571948998178513,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.37037037037037035,
+      "dmso": 9.471766848816028,
+      "compound_1": 0.15786278081360056
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.15786278081360056,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.12345679012345677,
+      "dmso": 9.714632665452337,
+      "compound_1": 0.1619105444242057
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1619105444242057,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_2": 0.04115226337448558,
+      "dmso": 9.795587937664438,
+      "compound_1": 0.16325979896107404
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.16325979896107404,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 3.333333333333334,
+      "dmso": 6.557377049180326,
+      "compound_1": 0.10928961748633881
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.10928961748633881,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 1.1111111111111112,
+      "dmso": 8.743169398907103,
+      "compound_1": 0.1457194899817851
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1457194899817851,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.37037037037037035,
+      "dmso": 9.471766848816028,
+      "compound_1": 0.1578627808136005
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1578627808136005,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.12345679012345677,
+      "dmso": 9.714632665452333,
+      "compound_1": 0.16191054442420563
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.16191054442420563,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_3": 0.04115226337448558,
+      "dmso": 9.795587937664434,
+      "compound_1": 0.16325979896107398
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.16325979896107398,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 3.3333,
+      "dmso": 6.6667
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 3.333333333333334,
+      "dmso": 6.5573770491803245,
+      "compound_1": 0.1092896174863388
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1092896174863388,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 1.1111,
+      "dmso": 8.8889
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 1.1111111111111112,
+      "dmso": 8.7431693989071,
+      "compound_1": 0.14571948998178505
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.14571948998178505,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.3704,
+      "dmso": 9.6296
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.37037037037037035,
+      "dmso": 9.471766848816024,
+      "compound_1": 0.15786278081360047
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.15786278081360047,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.1235,
+      "dmso": 9.8765
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.12345679012345677,
+      "dmso": 9.714632665452333,
+      "compound_1": 0.1619105444242056
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.1619105444242056,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.0412,
+      "dmso": 9.9588
+     },
+     "found": {
+      "medium (declared in this well, not delivered)": 90.0,
+      "compound_4": 0.04115226337448558,
+      "dmso": 9.795587937664433,
+      "compound_1": 0.16325979896107395
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "compound_1",
+       "expected_ul": null,
+       "found_ul": 0.16325979896107395,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "compound 1",
+    "logical": "compound_1",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.8197,
+    "left_in_source_ul": 470.0,
+    "elsewhere": [
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A2]",
+      "ul": 7.0492
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A3]",
+      "ul": 0.4918
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A4]",
+      "ul": 0.4918
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A5]",
+      "ul": 0.4918
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A6]",
+      "ul": 0.8197
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B2]",
+      "ul": 0.3279
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B3]",
+      "ul": 0.4372
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B4]",
+      "ul": 0.4736
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B5]",
+      "ul": 0.4857
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B6]",
+      "ul": 0.8163
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C2]",
+      "ul": 0.3279
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C3]",
+      "ul": 0.4372
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C4]",
+      "ul": 0.4736
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C5]",
+      "ul": 0.4857
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C6]",
+      "ul": 0.8163
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D2]",
+      "ul": 0.3279
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D3]",
+      "ul": 0.4372
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D4]",
+      "ul": 0.4736
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D5]",
+      "ul": 0.4857
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D6]",
+      "ul": 0.8163
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B2]",
+      "ul": 0.1093
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B3]",
+      "ul": 0.1457
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B4]",
+      "ul": 0.1579
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B5]",
+      "ul": 0.1619
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[B6]",
+      "ul": 0.1633
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 0.1093
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 0.1457
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 0.1579
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 0.1619
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[C6]",
+      "ul": 0.1633
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[D2]",
+      "ul": 0.1093
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[D3]",
+      "ul": 0.1457
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[D4]",
+      "ul": 0.1579
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[D5]",
+      "ul": 0.1619
+     },
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[D6]",
+      "ul": 0.1633
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "compound 1 ends in wells the plate map does not list for it: A2 in slot 3 (7.0 ul), A3 in slot 3 (0.5 ul), A4 in slot 3 (0.5 ul), A5 in slot 3 (0.5 ul), A6 in slot 3 (0.8 ul), B2 in slot 3 (0.3 ul) and 29 more."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "compound 2",
+    "logical": "compound_2",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 14.9794,
+    "left_in_source_ul": 470.0,
+    "elsewhere": [
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B2]",
+      "ul": 10.0
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B3]",
+      "ul": 3.3333
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B4]",
+      "ul": 1.1111
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B5]",
+      "ul": 0.3704
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B6]",
+      "ul": 0.2058
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "compound 2 ends in wells the plate map does not list for it: B2 in slot 3 (10.0 ul), B3 in slot 3 (3.3 ul), B4 in slot 3 (1.1 ul), B5 in slot 3 (0.4 ul), B6 in slot 3 (0.2 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "compound 3",
+    "logical": "compound_3",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 14.9794,
+    "left_in_source_ul": 470.0,
+    "elsewhere": [
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C2]",
+      "ul": 10.0
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C3]",
+      "ul": 3.3333
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C4]",
+      "ul": 1.1111
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C5]",
+      "ul": 0.3704
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C6]",
+      "ul": 0.2058
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "compound 3 ends in wells the plate map does not list for it: C2 in slot 3 (10.0 ul), C3 in slot 3 (3.3 ul), C4 in slot 3 (1.1 ul), C5 in slot 3 (0.4 ul), C6 in slot 3 (0.2 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "compound 4",
+    "logical": "compound_4",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 14.9794,
+    "left_in_source_ul": 470.0,
+    "elsewhere": [
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D2]",
+      "ul": 10.0
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D3]",
+      "ul": 3.3333
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D4]",
+      "ul": 1.1111
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D5]",
+      "ul": 0.3704
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D6]",
+      "ul": 0.2058
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "compound 4 ends in wells the plate map does not list for it: D2 in slot 3 (10.0 ul), D3 in slot 3 (3.3 ul), D4 in slot 3 (1.1 ul), D5 in slot 3 (0.4 ul), D6 in slot 3 (0.2 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "dmso",
+    "logical": "dmso",
+    "role": "reagent",
+    "declared_ul": 1200.0,
+    "delivered_ul": 182.0279,
+    "left_in_source_ul": 422.9508,
+    "elsewhere": [
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A3]",
+      "ul": 29.5082
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A4]",
+      "ul": 29.5082
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A5]",
+      "ul": 29.5082
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A6]",
+      "ul": 49.1803
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B2]",
+      "ul": 19.6721
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B3]",
+      "ul": 26.2295
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B4]",
+      "ul": 28.4153
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B5]",
+      "ul": 29.1439
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B6]",
+      "ul": 48.9779
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C2]",
+      "ul": 19.6721
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C3]",
+      "ul": 26.2295
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C4]",
+      "ul": 28.4153
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C5]",
+      "ul": 29.1439
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C6]",
+      "ul": 48.9779
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D2]",
+      "ul": 19.6721
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D3]",
+      "ul": 26.2295
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D4]",
+      "ul": 28.4153
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D5]",
+      "ul": 29.1439
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D6]",
+      "ul": 48.9779
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "dmso ends in wells the plate map does not list for it: A3 in slot 3 (29.5 ul), A4 in slot 3 (29.5 ul), A5 in slot 3 (29.5 ul), A6 in slot 3 (49.2 ul), B2 in slot 3 (19.7 ul), B3 in slot 3 (26.2 ul) and 13 more."
+    ]
+   },
+   {
+    "liquid": "medium",
+    "logical": "medium",
+    "role": "reagent",
+    "declared_ul": 8640.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 8640.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "compound 1",
+     "declared_ul": 500.0,
+     "needed_ul": 60.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "compound 2",
+     "declared_ul": 500.0,
+     "needed_ul": 60.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "compound 3",
+     "declared_ul": 500.0,
+     "needed_ul": 60.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D1",
+     "liquid": "compound 4",
+     "declared_ul": 500.0,
+     "needed_ul": 60.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "dmso",
+     "declared_ul": 1200.0,
+     "needed_ul": 770.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H1",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H2",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H3",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H4",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H5",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H6",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H7",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H8",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H9",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H10",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H11",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H12",
+     "liquid": "medium",
+     "declared_ul": 90.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 24
+    },
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 44
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 4 biology problems (3 warnings, 1 note).\n\n1. WARNING MIX-TOO-WEAK: Mixing too weak to stir tube A2 in slot 3: 3 \u00d7 40 ul in 1220 ul\n   line 48:  p300.aspirate(vol, src)\n   reached through: run:75 > transfer_p300:48\n   At line 48 the tip mixes tube A2 in slot 3 with 3 strokes of 40 ul in a well holding 1220\n   ul. The well holds more than the p300_single_gen2 can draw, so the stroke is judged\n   against the pipette's 300 ul. 3 strokes of 40 ul move 0.4 of the pipette's 300 ul in all;\n   it takes about 2 pipette-fulls of strokes to mix (the mixing work). Integra draws over\n   80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the\n   well holds is not at the concentration you calculated, and in a dilution series every\n   later step inherits the error.\n   Affected: tube A2 in slot 3.\n   Fix: Mix with the pipette's full volume (300 ul) at least 5 times: `mix(5, 300, well)`,\n   or use a bigger pipette.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [7af41e02a394]\n\n2. WARNING MIX-TOO-WEAK: Mixing too weak to stir 19 wells: 2 \u00d7 48 ul in 60 ul\n   line 51:  p300.mix(2, mix_vol, dest)\n   reached through: run:75 > transfer_p300:51\n   At line 51 the tip mixes tubes A3, A4, A5, A6, B2, B3, B4, B5 and 11 more in slot 3 with\n   2 strokes of 48 ul in a well holding 60 ul (this line did it 19 times). 2 strokes of 48\n   ul move 1.6 of the well in all; it takes about 2 wells' worth of strokes to mix (the\n   mixing work). Fewer than 3 strokes do not mix a well. Integra draws over 80% of the well\n   five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not\n   at the concentration you calculated, and in a dilution series every later step inherits\n   the error.\n   Affected: tubes A3, A4, A5, A6, B2, B3, B4, B5 and 11 more in slot 3.\n   Fix: Mix the well with about 80% of its volume (48 ul) at least 5 times: `mix(5, 48,\n   well)`. A stroke of the whole well draws air; use no more than 90%.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [6b039334d613]\n\n3. WARNING MIX-TOO-WEAK: Too few strokes to mix 24 wells: 2 \u00d7 20 ul in 100 ul\n   line 59:  p20.mix(2, mix_vol, dest)\n   reached through: run:82 > transfer_p20:59\n   At line 59 the tip mixes wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 4 with\n   2 strokes of 20 ul in a well holding 100 ul (this line did it 24 times). The well holds\n   more than the p20_single_gen2 can draw, so the stroke is judged against the pipette's 20\n   ul. Fewer than 3 strokes do not mix a well. Integra draws over 80% of the well five\n   times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at\n   the concentration you calculated, and in a dilution series every later step inherits the\n   error.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 4.\n   Fix: Mix with the pipette's full volume (20 ul) at least 5 times: `mix(5, 20, well)`, or\n   use a bigger pipette.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [8d00bcdb12c0]\n\n4. NOTE NO-NEGATIVE-CONTROL: No blank on a dilution series: 6 wells of compound 2\n   line 48:  p300.aspirate(vol, src)\n   reached through: run:67 > transfer_p300:48\n   At line 48 the robot starts a dilution series of compound 2 in Opentrons 24 Tube Rack\n   with NEST 1.5 mL Snapcap (slot 3): 6 wells at 6 concentrations, each level about 3 times\n   weaker than the one before. No well on this plate holds dmso with no sample, so there is\n   no blank: the curve has no zero to read against, and a signal from the diluent or the\n   plastic cannot be told from the lowest point. Wells: tubes B1, B2, B3, B4, B5 and B6 in\n   slot 3.\n   Affected: tubes B1, B2, B3, B4, B5 and B6 in slot 3.\n   Fix: Add a well of dmso alone, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [5ce09bc388ef]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 48,
+   "title": "Mixing too weak to stir tube A2 in slot 3: 3 \u00d7 40 ul in 1220 ul",
+   "explanation": "At line 48 the tip mixes tube A2 in slot 3 with 3 strokes of 40 ul in a well holding 1220 ul. The well holds more than the p300_single_gen2 can draw, so the stroke is judged against the pipette's 300 ul. 3 strokes of 40 ul move 0.4 of the pipette's 300 ul in all; it takes about 2 pipette-fulls of strokes to mix (the mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix with the pipette's full volume (300 ul) at least 5 times: `mix(5, 300, well)`, or use a bigger pipette."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 51,
+   "title": "Mixing too weak to stir 19 wells: 2 \u00d7 48 ul in 60 ul",
+   "explanation": "At line 51 the tip mixes tubes A3, A4, A5, A6, B2, B3, B4, B5 and 11 more in slot 3 with 2 strokes of 48 ul in a well holding 60 ul (this line did it 19 times). 2 strokes of 48 ul move 1.6 of the well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Fewer than 3 strokes do not mix a well. Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix the well with about 80% of its volume (48 ul) at least 5 times: `mix(5, 48, well)`. A stroke of the whole well draws air; use no more than 90%."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 59,
+   "title": "Too few strokes to mix 24 wells: 2 \u00d7 20 ul in 100 ul",
+   "explanation": "At line 59 the tip mixes wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 4 with 2 strokes of 20 ul in a well holding 100 ul (this line did it 24 times). The well holds more than the p20_single_gen2 can draw, so the stroke is judged against the pipette's 20 ul. Fewer than 3 strokes do not mix a well. Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix with the pipette's full volume (20 ul) at least 5 times: `mix(5, 20, well)`, or use a bigger pipette."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 48,
+   "title": "No blank on a dilution series: 6 wells of compound 2",
+   "explanation": "At line 48 the robot starts a dilution series of compound 2 in Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap (slot 3): 6 wells at 6 concentrations, each level about 3 times weaker than the one before. No well on this plate holds dmso with no sample, so there is no blank: the curve has no zero to read against, and a signal from the diluent or the plastic cannot be told from the lowest point. Wells: tubes B1, B2, B3, B4, B5 and B6 in slot 3.",
+   "fix": "Add a well of dmso alone, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 7.6,
+ "draft": 3
+}

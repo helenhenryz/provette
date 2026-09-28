@@ -1,0 +1,38 @@
+{
+ "id": "pcr-01",
+ "condition": "short-on-tips",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "thinking": "on",
+ "rules_in_prompt": true,
+ "one_shot_only": true,
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 3,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 63,
+    "title": "8 wells never mixed after the liquid from tube A2 in slot 2, the liquid from tube A3 in slot 2, the liquid from tube A4 in slot 2, the liquid from tube A5 in slot 2 and 4 more went in (20% of the well)"
+   }
+  ],
+  "steps": 2
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 3,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 63,
+    "title": "8 wells never mixed after the liquid from tube A2 in slot 2, the liquid from tube A3 in slot 2, the liquid from tube A4 in slot 2, the liquid from tube A5 in slot 2 and 4 more went in (20% of the well)"
+   }
+  ],
+  "rounds": 0
+ }
+}

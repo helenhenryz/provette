@@ -1,0 +1,210 @@
+{
+ "id": "elisa-01",
+ "request": "Add samples to an ELISA plate: 100 ul from each of 40 serum samples in a 96-well source plate into the matching wells of the coated ELISA plate, plus 8 standards from tubes into column 12.",
+ "technique": "ELISA",
+ "liquids": [
+  {
+   "name": "standard_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:standard|std|calibrator)\\D{0,12}?(\\d+)",
+   "count": 8,
+   "index": "number"
+  },
+  {
+   "name": "serum_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:serum|sample)\\D{0,12}?(\\d+)",
+   "count": 40,
+   "index": "any"
+  }
+ ],
+ "destination": {
+  "select": "regex",
+  "pattern": "(?i)elisa|coated|assay"
+ },
+ "variants": [
+  {
+   "name": "40 sera + 8 standards",
+   "why": "'matching wells' and 'column 12' pin positions",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "sera",
+     "members": [
+      {
+       "serum_1": 100
+      },
+      {
+       "serum_2": 100
+      },
+      {
+       "serum_3": 100
+      },
+      {
+       "serum_4": 100
+      },
+      {
+       "serum_5": 100
+      },
+      {
+       "serum_6": 100
+      },
+      {
+       "serum_7": 100
+      },
+      {
+       "serum_8": 100
+      },
+      {
+       "serum_9": 100
+      },
+      {
+       "serum_10": 100
+      },
+      {
+       "serum_11": 100
+      },
+      {
+       "serum_12": 100
+      },
+      {
+       "serum_13": 100
+      },
+      {
+       "serum_14": 100
+      },
+      {
+       "serum_15": 100
+      },
+      {
+       "serum_16": 100
+      },
+      {
+       "serum_17": 100
+      },
+      {
+       "serum_18": 100
+      },
+      {
+       "serum_19": 100
+      },
+      {
+       "serum_20": 100
+      },
+      {
+       "serum_21": 100
+      },
+      {
+       "serum_22": 100
+      },
+      {
+       "serum_23": 100
+      },
+      {
+       "serum_24": 100
+      },
+      {
+       "serum_25": 100
+      },
+      {
+       "serum_26": 100
+      },
+      {
+       "serum_27": 100
+      },
+      {
+       "serum_28": 100
+      },
+      {
+       "serum_29": 100
+      },
+      {
+       "serum_30": 100
+      },
+      {
+       "serum_31": 100
+      },
+      {
+       "serum_32": 100
+      },
+      {
+       "serum_33": 100
+      },
+      {
+       "serum_34": 100
+      },
+      {
+       "serum_35": 100
+      },
+      {
+       "serum_36": 100
+      },
+      {
+       "serum_37": 100
+      },
+      {
+       "serum_38": 100
+      },
+      {
+       "serum_39": 100
+      },
+      {
+       "serum_40": 100
+      }
+     ],
+     "within": null,
+     "position": "same_as_source",
+     "order_hint": null
+    },
+    {
+     "name": "standards",
+     "members": [
+      {
+       "standard_1": 100
+      },
+      {
+       "standard_2": 100
+      },
+      {
+       "standard_3": 100
+      },
+      {
+       "standard_4": 100
+      },
+      {
+       "standard_5": 100
+      },
+      {
+       "standard_6": 100
+      },
+      {
+       "standard_7": 100
+      },
+      {
+       "standard_8": 100
+      }
+     ],
+     "within": [
+      "A12",
+      "B12",
+      "C12",
+      "D12",
+      "E12",
+      "F12",
+      "G12",
+      "H12"
+     ],
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The request gives no volume for the standards; 100 ul, the same as the samples, is the only reading that gives a usable ELISA plate.",
+  "Which 40 source wells hold serum is the protocol's choice; each must land in the well of the same name. Standard 1 in A12 down to standard 8 in H12 is a hint only."
+ ]
+}

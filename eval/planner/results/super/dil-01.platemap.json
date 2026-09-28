@@ -1,0 +1,103 @@
+{
+ "id": "dil-01",
+ "request": "Do a 1:2 serial dilution of a drug stock across one row of a 96-well plate, 12 points, 100 ul final volume per well, diluting into PBS from a reservoir.",
+ "technique": "Serial dilution",
+ "liquids": [
+  {
+   "name": "drug_stock",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)drug\\s*stock"
+  },
+  {
+   "name": "pbs",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)pbs|phosphate\\s*buffered\\s*salt"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "Drug stock 1:2 dilution across row A",
+   "why": "Request does not specify which row; row A chosen for concreteness",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "dilution_series",
+     "members": [
+      {
+       "drug_stock": 100.0
+      },
+      {
+       "drug_stock": 50.0,
+       "pbs": 50.0
+      },
+      {
+       "drug_stock": 25.0,
+       "pbs": 75.0
+      },
+      {
+       "drug_stock": 12.5,
+       "pbs": 87.5
+      },
+      {
+       "drug_stock": 6.25,
+       "pbs": 93.75
+      },
+      {
+       "drug_stock": 3.125,
+       "pbs": 96.875
+      },
+      {
+       "drug_stock": 1.5625,
+       "pbs": 98.4375
+      },
+      {
+       "drug_stock": 0.7812,
+       "pbs": 99.2188
+      },
+      {
+       "drug_stock": 0.3906,
+       "pbs": 99.6094
+      },
+      {
+       "drug_stock": 0.1953,
+       "pbs": 99.8047
+      },
+      {
+       "drug_stock": 0.0977,
+       "pbs": 99.9023
+      },
+      {
+       "drug_stock": 0.0488,
+       "pbs": 99.9512
+      }
+     ],
+     "within": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10",
+      "A11",
+      "A12"
+     ],
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The request does not say which wells; row A selected for the dilution series."
+ ]
+}

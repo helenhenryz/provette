@@ -1,0 +1,31 @@
+{
+ "read_on": "2026-09-22",
+ "source": "https://api.tokenfactory.nebius.com/v1/models?verbose=true (the pricing fields of each model, with the project's key)",
+ "note": "USD per million tokens as Token Factory listed them that day. eval/agent/tabulate.py and the product read this file; nothing else types a price.",
+ "models": {
+  "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B": {
+   "input_per_million_usd": 0.06,
+   "output_per_million_usd": 0.24,
+   "context_length": 262144,
+   "quantization": "fp8"
+  },
+  "nvidia/Nemotron-3_5-Lightning": {
+   "input_per_million_usd": 0.06,
+   "output_per_million_usd": 0.24,
+   "context_length": 1048576,
+   "quantization": "bf16"
+  },
+  "nvidia/Nemotron-3-Ultra-550b-a55b": {
+   "input_per_million_usd": 1.0,
+   "output_per_million_usd": 3.0,
+   "context_length": 1048576,
+   "quantization": "fp4"
+  },
+  "nvidia/nemotron-3-super-120b-a12b": {
+   "input_per_million_usd": 0.3,
+   "output_per_million_usd": 0.9,
+   "context_length": 262144,
+   "quantization": "fp4"
+  }
+ }
+}

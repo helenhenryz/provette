@@ -1,0 +1,244 @@
+{
+ "id": "brad-01",
+ "request": "Bradford assay for 20 protein samples in duplicate: 5 ul of each sample from 1.5 ml tubes into a flat 96-well plate, then 250 ul of Bradford reagent from a reservoir to every well used, including 8 wells of BSA standards that are already in the plate.",
+ "technique": "Bradford assay",
+ "liquids": [
+  {
+   "name": "sample_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:sample|protein)\\D{0,12}?(\\d+)",
+   "count": 20,
+   "index": "number"
+  },
+  {
+   "name": "Bradford_reagent",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)bradford|bradford\\s*reagent"
+  },
+  {
+   "name": "BSA_standard",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)bsa|standard"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "20 samples in duplicate plus 8 BSA standards",
+   "why": "request does not specify well positions; layout chosen arbitrarily",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "wells",
+     "members": [
+      {
+       "sample_1": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_1": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_2": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_2": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_3": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_3": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_4": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_4": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_5": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_5": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_6": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_6": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_7": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_7": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_8": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_8": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_9": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_9": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_10": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_10": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_11": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_11": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_12": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_12": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_13": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_13": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_14": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_14": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_15": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_15": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_16": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_16": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_17": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_17": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_18": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_18": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_19": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_19": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_20": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "sample_20": 5,
+       "Bradford_reagent": 250
+      },
+      {
+       "BSA_standard": "declared",
+       "Bradford_reagent": 250
+      },
+      {
+       "BSA_standard": "declared",
+       "Bradford_reagent": 250
+      },
+      {
+       "BSA_standard": "declared",
+       "Bradford_reagent": 250
+      },
+      {
+       "BSA_standard": "declared",
+       "Bradford_reagent": 250
+      },
+      {
+       "BSA_standard": "declared",
+       "Bradford_reagent": 250
+      },
+      {
+       "BSA_standard": "declared",
+       "Bradford_reagent": 250
+      },
+      {
+       "BSA_standard": "declared",
+       "Bradford_reagent": 250
+      },
+      {
+       "BSA_standard": "declared",
+       "Bradford_reagent": 250
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The request does not specify which wells are used; arbitrary layout chosen.",
+  "BSA standards are already present in the plate; their volume is unknown and thus marked as declared."
+ ]
+}

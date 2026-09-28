@@ -1,0 +1,68 @@
+{
+ "id": "hard-dil-02",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 40,
+    "title": "No blank on a dilution series: 6 wells of compound 1"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 47,
+    "title": "A used tip carried dmso (well A1 in slot 4) into well A1 in slot 1 it was never meant for"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 95,
+    "title": "A used tip carried dmso (well A1 in slot 4) into well B1 in slot 1 it was never meant for"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 143,
+    "title": "A used tip carried dmso (well A1 in slot 4) into well C1 in slot 1 it was never meant for"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 191,
+    "title": "A used tip carried dmso (well A1 in slot 4) into well D1 in slot 1 it was never meant for"
+   }
+  ],
+  "draft": 3,
+  "rounds": 3
+ },
+ "tool_calls": 11,
+ "turns": 11,
+ "drafts": 4,
+ "checks": 4,
+ "submitted": true,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 487836,
+ "tokens_out": 85677,
+ "seconds": 663.7
+}

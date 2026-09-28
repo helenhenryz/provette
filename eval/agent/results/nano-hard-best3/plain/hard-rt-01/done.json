@@ -1,0 +1,240 @@
+{
+ "id": "hard-rt-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 47,
+    "title": "4 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 49,
+    "title": "A used tip went into a stock: rt (tube A2 in slot 2)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 49,
+    "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 51,
+    "title": "A used tip went into a stock: dntp (tube A3 in slot 2)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 51,
+    "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 53,
+    "title": "A used tip went into a stock: primers (tube A4 in slot 2)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 53,
+    "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 56,
+    "title": "A used tip went into a stock: 12 stocks"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 56,
+    "title": "8 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 58,
+    "title": "A used tip went into a stock: water (tube A5 in slot 2)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 58,
+    "title": "5 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 61,
+    "title": "A used tip went into a stock: buffer (tube A1 in slot 2)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 61,
+    "title": "4 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 63,
+    "title": "A used tip went into a stock: dntp (tube A3 in slot 2)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 63,
+    "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 65,
+    "title": "A used tip went into a stock: primers (tube A4 in slot 2)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 65,
+    "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 67,
+    "title": "8 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 69,
+    "title": "6 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "ENZYME-BEFORE-DILUENT",
+    "severity": "warning",
+    "certain": true,
+    "line": 50,
+    "title": "An enzyme was added before the water: rt"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 52,
+    "title": "No no-template control: 24 wells of dntp with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 59,
+    "title": "12 wells never mixed after water went in (25% of the well)"
+   },
+   {
+    "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 63,
+    "title": "(proposed) A tip that had been in a sample went into a reagent"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "note",
+    "certain": true,
+    "line": 67,
+    "title": "A used tip went into a stock: rna 1 (well A1 in slot 3)"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 61,
+    "title": "No no-template control: 24 wells of dntp with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 83,
+    "title": "12 wells never mixed after rt went in (5% of the well)"
+   }
+  ],
+  "draft": 7,
+  "rounds": 6
+ },
+ "tool_calls": 10,
+ "turns": 11,
+ "drafts": 8,
+ "checks": 7,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 1038706,
+ "tokens_out": 231789,
+ "seconds": 913.5,
+ "candidates": [
+  {
+   "dir": "candidate-0",
+   "verified": true,
+   "stop_reason": "submitted",
+   "tokens_in": 338586,
+   "tokens_out": 79555
+  },
+  {
+   "dir": "candidate-1",
+   "verified": false,
+   "stop_reason": "submitted",
+   "tokens_in": 467504,
+   "tokens_out": 81050
+  },
+  {
+   "dir": "candidate-2",
+   "verified": true,
+   "stop_reason": "submitted",
+   "tokens_in": 232616,
+   "tokens_out": 71184
+  }
+ ],
+ "chosen": "candidate-0"
+}

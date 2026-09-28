@@ -1,0 +1,93 @@
+{
+ "id": "prot-01",
+ "request": "Prepare 12 samples for SDS-PAGE: mix 15 ul of each protein sample from a 96-well plate with 5 ul of 4x loading dye from a tube in a PCR plate.",
+ "technique": "Protein",
+ "liquids": [
+  {
+   "name": "sample_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:sample|protein)\\D{0,12}?(\\d+)",
+   "count": 12,
+   "index": "number"
+  },
+  {
+   "name": "loading_dye",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)loading\\s*dye"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "12 reactions in PCR plate",
+   "why": "the request does not specify which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "sample_1": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_2": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_3": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_4": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_5": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_6": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_7": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_8": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_9": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_10": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_11": 15,
+       "loading_dye": 5
+      },
+      {
+       "sample_12": 15,
+       "loading_dye": 5
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "the request does not say which wells; free group placement chosen."
+ ]
+}

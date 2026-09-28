@@ -1,0 +1,983 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map norm-01. 24 of 24 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 2). Reading of the request: 24\n    normalised samples.\n\nLabware for the technique (Normalization): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  sample 1                              200.0       5.9     194.1       0.0     0.0\n  sample 2                              200.0       4.2     195.8       0.0     0.0\n  sample 3                              200.0      11.4     188.6       0.0     0.0\n  sample 4                              200.0       7.5     192.5       0.0     0.0\n  sample 5                              200.0       2.4     197.6       0.0     0.0\n  sample 6                              200.0       5.3     194.7       0.0     0.0\n  sample 7                              200.0      15.2     184.8       0.0     0.0\n  sample 8                              200.0       3.3     196.7       0.0     0.0\n  sample 9                              200.0       6.4     193.6       0.0     0.0\n  sample 10                             200.0       8.3     191.7       0.0     0.0\n  sample 11                             200.0       5.0     195.0       0.0     0.0\n  sample 12                             200.0       9.1     190.9       0.0     0.0\n  sample 13                             200.0       2.6     197.4       0.0     0.0\n  sample 14                             200.0       6.9     193.1       0.0     0.0\n  sample 15                             200.0      10.4     189.6       0.0     0.0\n  sample 16                             200.0       3.8     196.2       0.0     0.0\n  sample 17                             200.0       5.7     194.3       0.0     0.0\n  sample 18                             200.0      20.0     180.0       0.0     0.0\n  sample 19                             200.0       7.8     192.2       0.0     0.0\n  sample 20                             200.0       4.5     195.5       0.0     0.0\n  sample 21                             200.0      12.8     187.2       0.0     0.0\n  sample 22                             200.0       2.9     197.1       0.0     0.0\n  sample 23                             200.0       5.4     194.6       0.0     0.0\n  sample 24                             200.0       8.6     191.4       0.0     0.0\n  water                                2000.0    1024.6     975.4       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  1    NEST 96 Well Plate 200 \u00b5L Flat        A1    sample 1                               5.9     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        B1    sample 2                               4.2     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        C1    sample 3                              11.4     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        D1    sample 4                               7.5     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        E1    sample 5                               2.4     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        F1    sample 6                               5.3     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        G1    sample 7                              15.2     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        H1    sample 8                               3.3     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        A2    sample 9                               6.4     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        B2    sample 10                              8.3     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        C2    sample 11                              5.0     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        D2    sample 12                              9.1     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        E2    sample 13                              2.6     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        F2    sample 14                              6.9     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        G2    sample 15                             10.4     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        H2    sample 16                              3.8     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        A3    sample 17                              5.7     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        B3    sample 18                             20.0     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        C3    sample 19                              7.8     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        D3    sample 20                              4.5     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        E3    sample 21                             12.8     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        F3    sample 22                              2.9     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        G3    sample 23                              5.4     200.0\n  1    NEST 96 Well Plate 200 \u00b5L Flat        H3    sample 24                              8.6     200.0\n  3    NEST 12 Well Reservoir 15 mL          A1    water                               1024.6    2000.0\n  Tips: 48 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 4.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "norm-01",
+  "technique": "Normalization",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "2:nest_96_wellplate_200ul_flat",
+   "variant": "24 normalised samples",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 24,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "normalised",
+     "expected": {
+      "sample_1": 5.8824,
+      "water": 44.1176
+     },
+     "found": {
+      "sample_1": 5.882352941176471,
+      "water": 44.11764705882353
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "normalised",
+     "expected": {
+      "sample_2": 4.1667,
+      "water": 45.8333
+     },
+     "found": {
+      "sample_2": 4.166666666666667,
+      "water": 45.833333333333336
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "normalised",
+     "expected": {
+      "sample_3": 11.3636,
+      "water": 38.6364
+     },
+     "found": {
+      "sample_3": 11.363636363636363,
+      "water": 38.63636363636364
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "normalised",
+     "expected": {
+      "sample_4": 7.4627,
+      "water": 42.5373
+     },
+     "found": {
+      "sample_4": 7.46268656716418,
+      "water": 42.53731343283582
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "normalised",
+     "expected": {
+      "sample_5": 2.381,
+      "water": 47.619
+     },
+     "found": {
+      "sample_5": 2.380952380952381,
+      "water": 47.61904761904762
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "normalised",
+     "expected": {
+      "sample_6": 5.2632,
+      "water": 44.7368
+     },
+     "found": {
+      "sample_6": 5.2631578947368425,
+      "water": 44.73684210526316
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "normalised",
+     "expected": {
+      "sample_7": 15.1515,
+      "water": 34.8485
+     },
+     "found": {
+      "sample_7": 15.151515151515152,
+      "water": 34.848484848484844
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "normalised",
+     "expected": {
+      "sample_8": 3.3333,
+      "water": 46.6667
+     },
+     "found": {
+      "sample_8": 3.3333333333333335,
+      "water": 46.666666666666664
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "normalised",
+     "expected": {
+      "sample_9": 6.4103,
+      "water": 43.5897
+     },
+     "found": {
+      "sample_9": 6.4102564102564115,
+      "water": 43.58974358974359
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "normalised",
+     "expected": {
+      "sample_10": 8.3333,
+      "water": 41.6667
+     },
+     "found": {
+      "sample_10": 8.333333333333334,
+      "water": 41.666666666666664
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "normalised",
+     "expected": {
+      "sample_11": 4.9505,
+      "water": 45.0495
+     },
+     "found": {
+      "sample_11": 4.9504950495049505,
+      "water": 45.04950495049505
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "normalised",
+     "expected": {
+      "sample_12": 9.0909,
+      "water": 40.9091
+     },
+     "found": {
+      "sample_12": 9.090909090909092,
+      "water": 40.90909090909091
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": "normalised",
+     "expected": {
+      "sample_13": 2.6316,
+      "water": 47.3684
+     },
+     "found": {
+      "sample_13": 2.6315789473684212,
+      "water": 47.368421052631575
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": "normalised",
+     "expected": {
+      "sample_14": 6.9444,
+      "water": 43.0556
+     },
+     "found": {
+      "sample_14": 6.944444444444445,
+      "water": 43.05555555555556
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": "normalised",
+     "expected": {
+      "sample_15": 10.4167,
+      "water": 39.5833
+     },
+     "found": {
+      "sample_15": 10.416666666666666,
+      "water": 39.583333333333336
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": "normalised",
+     "expected": {
+      "sample_16": 3.8462,
+      "water": 46.1538
+     },
+     "found": {
+      "sample_16": 3.8461538461538463,
+      "water": 46.15384615384615
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "normalised",
+     "expected": {
+      "sample_17": 5.6818,
+      "water": 44.3182
+     },
+     "found": {
+      "sample_17": 5.681818181818182,
+      "water": 44.31818181818182
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "normalised",
+     "expected": {
+      "sample_18": 20.0,
+      "water": 30.0
+     },
+     "found": {
+      "sample_18": 20.0,
+      "water": 30.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": "normalised",
+     "expected": {
+      "sample_19": 7.8125,
+      "water": 42.1875
+     },
+     "found": {
+      "sample_19": 7.8125,
+      "water": 42.1875
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": "normalised",
+     "expected": {
+      "sample_20": 4.5455,
+      "water": 45.4545
+     },
+     "found": {
+      "sample_20": 4.545454545454546,
+      "water": 45.45454545454545
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": "normalised",
+     "expected": {
+      "sample_21": 12.8205,
+      "water": 37.1795
+     },
+     "found": {
+      "sample_21": 12.820512820512823,
+      "water": 37.17948717948718
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F3",
+     "group": "normalised",
+     "expected": {
+      "sample_22": 2.8571,
+      "water": 47.1429
+     },
+     "found": {
+      "sample_22": 2.857142857142857,
+      "water": 47.142857142857146
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G3",
+     "group": "normalised",
+     "expected": {
+      "sample_23": 5.4348,
+      "water": 44.5652
+     },
+     "found": {
+      "sample_23": 5.434782608695652,
+      "water": 44.565217391304344
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H3",
+     "group": "normalised",
+     "expected": {
+      "sample_24": 8.6207,
+      "water": 41.3793
+     },
+     "found": {
+      "sample_24": 8.620689655172415,
+      "water": 41.37931034482759
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 5.8824,
+    "left_in_source_ul": 194.1176,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 4.1667,
+    "left_in_source_ul": 195.8333,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 11.3636,
+    "left_in_source_ul": 188.6364,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 7.4627,
+    "left_in_source_ul": 192.5373,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 2.381,
+    "left_in_source_ul": 197.619,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 5.2632,
+    "left_in_source_ul": 194.7368,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 15.1515,
+    "left_in_source_ul": 184.8485,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 3.3333,
+    "left_in_source_ul": 196.6667,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 6.4103,
+    "left_in_source_ul": 193.5897,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 8.3333,
+    "left_in_source_ul": 191.6667,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 4.9505,
+    "left_in_source_ul": 195.0495,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 9.0909,
+    "left_in_source_ul": 190.9091,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 13",
+    "logical": "sample_13",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 2.6316,
+    "left_in_source_ul": 197.3684,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 14",
+    "logical": "sample_14",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 6.9444,
+    "left_in_source_ul": 193.0556,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 15",
+    "logical": "sample_15",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 10.4167,
+    "left_in_source_ul": 189.5833,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 16",
+    "logical": "sample_16",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 3.8462,
+    "left_in_source_ul": 196.1538,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 17",
+    "logical": "sample_17",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 5.6818,
+    "left_in_source_ul": 194.3182,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 18",
+    "logical": "sample_18",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 20.0,
+    "left_in_source_ul": 180.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 19",
+    "logical": "sample_19",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 7.8125,
+    "left_in_source_ul": 192.1875,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 20",
+    "logical": "sample_20",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 4.5455,
+    "left_in_source_ul": 195.4545,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 21",
+    "logical": "sample_21",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 12.8205,
+    "left_in_source_ul": 187.1795,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 22",
+    "logical": "sample_22",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 2.8571,
+    "left_in_source_ul": 197.1429,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 23",
+    "logical": "sample_23",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 5.4348,
+    "left_in_source_ul": 194.5652,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 24",
+    "logical": "sample_24",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 8.6207,
+    "left_in_source_ul": 191.3793,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 2000.0,
+    "delivered_ul": 1024.599,
+    "left_in_source_ul": 975.401,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 200.0,
+     "needed_ul": 5.8824,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "sample 2",
+     "declared_ul": 200.0,
+     "needed_ul": 4.1667,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C1",
+     "liquid": "sample 3",
+     "declared_ul": 200.0,
+     "needed_ul": 11.3636,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D1",
+     "liquid": "sample 4",
+     "declared_ul": 200.0,
+     "needed_ul": 7.4627,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E1",
+     "liquid": "sample 5",
+     "declared_ul": 200.0,
+     "needed_ul": 2.381,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F1",
+     "liquid": "sample 6",
+     "declared_ul": 200.0,
+     "needed_ul": 5.2632,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G1",
+     "liquid": "sample 7",
+     "declared_ul": 200.0,
+     "needed_ul": 15.1515,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H1",
+     "liquid": "sample 8",
+     "declared_ul": 200.0,
+     "needed_ul": 3.3333,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "sample 9",
+     "declared_ul": 200.0,
+     "needed_ul": 6.4103,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "sample 10",
+     "declared_ul": 200.0,
+     "needed_ul": 8.3333,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C2",
+     "liquid": "sample 11",
+     "declared_ul": 200.0,
+     "needed_ul": 4.9505,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D2",
+     "liquid": "sample 12",
+     "declared_ul": 200.0,
+     "needed_ul": 9.0909,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E2",
+     "liquid": "sample 13",
+     "declared_ul": 200.0,
+     "needed_ul": 2.6316,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F2",
+     "liquid": "sample 14",
+     "declared_ul": 200.0,
+     "needed_ul": 6.9444,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G2",
+     "liquid": "sample 15",
+     "declared_ul": 200.0,
+     "needed_ul": 10.4167,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H2",
+     "liquid": "sample 16",
+     "declared_ul": 200.0,
+     "needed_ul": 3.8462,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "sample 17",
+     "declared_ul": 200.0,
+     "needed_ul": 5.6818,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "sample 18",
+     "declared_ul": 200.0,
+     "needed_ul": 20.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C3",
+     "liquid": "sample 19",
+     "declared_ul": 200.0,
+     "needed_ul": 7.8125,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D3",
+     "liquid": "sample 20",
+     "declared_ul": 200.0,
+     "needed_ul": 4.5455,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E3",
+     "liquid": "sample 21",
+     "declared_ul": 200.0,
+     "needed_ul": 12.8205,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F3",
+     "liquid": "sample 22",
+     "declared_ul": 200.0,
+     "needed_ul": 2.8571,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G3",
+     "liquid": "sample 23",
+     "declared_ul": 200.0,
+     "needed_ul": 5.4348,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H3",
+     "liquid": "sample 24",
+     "declared_ul": 200.0,
+     "needed_ul": 8.6207,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 2000.0,
+     "needed_ul": 1024.599,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "4",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 48
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (2 errors, 1 warning).\n\n1. ERROR PIPETTE-RANGE: 2.38095 ul, 2.63158 ul, 2.85714 ul, 3.33333 ul and 19 more are below\nwhat the p300_single_gen2 can measure (20 ul at least)\n   line 43:  p300.transfer(vol_sample, src_well, dst_well, new_tip='never')\n   At line 43 the p300_single_gen2 is asked to draw 2.38095 ul, 2.63158 ul, 2.85714 ul,\n   3.33333 ul and 19 more, below its minimum of 20 ul (this line did it 23 times). A pipette\n   cannot measure less than its minimum: it draws the wrong amount, or nothing, and the\n   volumes in this protocol only add up on paper. The simulator passes the move. Wells:\n   wells A1, A2, A3, B1, B2, C1, C2, C3 and 15 more in slot 1.\n   Affected: wells A1, A2, A3, B1, B2, C1, C2, C3 and 15 more in slot 1.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [1463c4d1ec31]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: water (well A1 in slot 3)\n   line 45:  p300.transfer(vol_water, reservoir['A1'], dst_well, new_tip='never')\n   At line 45 the tip went into water (well A1 in slot 3) while it still carried sample 1\n   (well A1 in slot 1), sample 9 (well A2 in slot 1), sample 17 (well A3 in slot 1), sample\n   2 (well B1 in slot 1) and 20 more from an earlier step (this line did it 24 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, so this\n   stock now holds material that does not belong there. Liquid drawn from it then took the\n   unwanted material along into 23 other wells: wells A2, A3, B1, B2, B3, C1, C2, C3 and 15\n   more in slot 2.\n   Affected: well A1 in slot 3.\n   Also reached 23 other wells: wells A2, A3, B1, B2, B3, C1, C2, C3 and 15 more in slot 2.\n   Fix: Pick up a fresh tip before line 45 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [2a918f4059fe]\n\n3. WARNING MIX-TOO-WEAK: Mixing too weak to stir 24 wells: 3 \u00d7 25 ul in 50 ul\n   line 50:  p300.mix(3, 25, dst_well)\n   At line 50 the tip mixes wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 2 with\n   3 strokes of 25 ul in a well holding 50 ul (this line did it 24 times). 3 strokes of 25\n   ul move 1.5 of the well in all; it takes about 2 wells' worth of strokes to mix (the\n   mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV\n   where twenty gave 1.7%. What the well holds is not at the concentration you calculated,\n   and in a dilution series every later step inherits the error.\n   Affected: wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 2.\n   Fix: Mix the well with about 80% of its volume (40 ul) at least 5 times: `mix(5, 40,\n   well)`. A stroke of the whole well draws air; use no more than 90%.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [1a653c6e3ed1]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 43,
+   "title": "2.38095 ul, 2.63158 ul, 2.85714 ul, 3.33333 ul and 19 more are below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 43 the p300_single_gen2 is asked to draw 2.38095 ul, 2.63158 ul, 2.85714 ul, 3.33333 ul and 19 more, below its minimum of 20 ul (this line did it 23 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A1, A2, A3, B1, B2, C1, C2, C3 and 15 more in slot 1.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 45,
+   "title": "A used tip went into a stock: water (well A1 in slot 3)",
+   "explanation": "At line 45 the tip went into water (well A1 in slot 3) while it still carried sample 1 (well A1 in slot 1), sample 9 (well A2 in slot 1), sample 17 (well A3 in slot 1), sample 2 (well B1 in slot 1) and 20 more from an earlier step (this line did it 24 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 23 other wells: wells A2, A3, B1, B2, B3, C1, C2, C3 and 15 more in slot 2.",
+   "fix": "Pick up a fresh tip before line 45 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 50,
+   "title": "Mixing too weak to stir 24 wells: 3 \u00d7 25 ul in 50 ul",
+   "explanation": "At line 50 the tip mixes wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 2 with 3 strokes of 25 ul in a well holding 50 ul (this line did it 24 times). 3 strokes of 25 ul move 1.5 of the well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix the well with about 80% of its volume (40 ul) at least 5 times: `mix(5, 40, well)`. A stroke of the whole well draws air; use no more than 90%."
+  }
+ ],
+ "seconds": 9.4,
+ "draft": 0
+}

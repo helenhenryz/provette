@@ -1,0 +1,80 @@
+{
+ "id": "pcr-02",
+ "condition": "plain",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "thinking": "on",
+ "rules_in_prompt": true,
+ "one_shot_only": true,
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 75,
+    "title": "A used tip went into a stock: water (tube B1 in slot 3)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 78,
+    "title": "A used tip went into a stock: 24 stocks"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 73,
+    "title": "No no-template control: 24 wells of master mix with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 79,
+    "title": "24 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 20 more went in (8% of the well)"
+   }
+  ],
+  "steps": 3
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 75,
+    "title": "A used tip went into a stock: water (tube B1 in slot 3)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 78,
+    "title": "A used tip went into a stock: 24 stocks"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 73,
+    "title": "No no-template control: 24 wells of master mix with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 79,
+    "title": "24 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 20 more went in (8% of the well)"
+   }
+  ],
+  "rounds": 0
+ }
+}

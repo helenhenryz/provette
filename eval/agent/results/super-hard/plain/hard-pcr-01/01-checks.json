@@ -1,0 +1,6222 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-pcr-01. 0 of 96 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3). Reading of the request:\n    full plate.\n  well A1: expected 15 ul mix, 5 ul template@A1; found 15 ul mix\n      - template@A1 is missing: the plate map says 5 ul, none arrives\n  well B1: expected 15 ul mix, 5 ul template@B1; found 15 ul mix\n      - template@B1 is missing: the plate map says 5 ul, none arrives\n  well C1: expected 15 ul mix, 5 ul template@C1; found 15 ul mix\n      - template@C1 is missing: the plate map says 5 ul, none arrives\n  well D1: expected 15 ul mix, 5 ul template@D1; found 15 ul mix\n      - template@D1 is missing: the plate map says 5 ul, none arrives\n  well E1: expected 15 ul mix, 5 ul template@E1; found 15 ul mix\n      - template@E1 is missing: the plate map says 5 ul, none arrives\n  well F1: expected 15 ul mix, 5 ul template@F1; found 15 ul mix\n      - template@F1 is missing: the plate map says 5 ul, none arrives\n  well G1: expected 15 ul mix, 5 ul template@G1; found 15 ul mix\n      - template@G1 is missing: the plate map says 5 ul, none arrives\n  well H1: expected 15 ul mix, 5 ul template@H1; found 15 ul mix\n      - template@H1 is missing: the plate map says 5 ul, none arrives\n  well A2: expected 15 ul mix, 5 ul template@A2; found 15 ul mix\n      - template@A2 is missing: the plate map says 5 ul, none arrives\n  well B2: expected 15 ul mix, 5 ul template@B2; found 15 ul mix\n      - template@B2 is missing: the plate map says 5 ul, none arrives\n  well C2: expected 15 ul mix, 5 ul template@C2; found 15 ul mix\n      - template@C2 is missing: the plate map says 5 ul, none arrives\n  well D2: expected 15 ul mix, 5 ul template@D2; found 15 ul mix\n      - template@D2 is missing: the plate map says 5 ul, none arrives\n  ... and 84 more wells that do not match.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  mix                                  1700.0    1440.0     260.0       0.0     0.0\n  template_A1                            20.0       0.0      20.0       0.0     0.0\n  template_B1                            20.0       0.0      20.0       0.0     0.0\n  template_C1                            20.0       0.0      20.0       0.0     0.0\n  template_D1                            20.0       0.0      20.0       0.0     0.0\n  template_E1                            20.0       0.0      20.0       0.0     0.0\n  template_F1                            20.0       0.0      20.0       0.0     0.0\n  template_G1                            20.0       0.0      20.0       0.0     0.0\n  template_H1                            20.0       0.0      20.0       0.0     0.0\n  template_A2                            20.0       0.0      20.0       0.0     0.0\n  template_B2                            20.0       0.0      20.0       0.0     0.0\n  template_C2                            20.0       0.0      20.0       0.0     0.0\n  template_D2                            20.0       0.0      20.0       0.0     0.0\n  template_E2                            20.0       0.0      20.0       0.0     0.0\n  template_F2                            20.0       0.0      20.0       0.0     0.0\n  template_G2                            20.0       0.0      20.0       0.0     0.0\n  template_H2                            20.0       0.0      20.0       0.0     0.0\n  template_A3                            20.0       0.0      20.0       0.0     0.0\n  template_B3                            20.0       0.0      20.0       0.0     0.0\n  template_C3                            20.0       0.0      20.0       0.0     0.0\n  template_D3                            20.0       0.0      20.0       0.0     0.0\n  template_E3                            20.0       0.0      20.0       0.0     0.0\n  template_F3                            20.0       0.0      20.0       0.0     0.0\n  template_G3                            20.0       0.0      20.0       0.0     0.0\n  template_H3                            20.0       0.0      20.0       0.0     0.0\n  template_A4                            20.0       0.0      20.0       0.0     0.0\n  template_B4                            20.0       0.0      20.0       0.0     0.0\n  template_C4                            20.0       0.0      20.0       0.0     0.0\n  template_D4                            20.0       0.0      20.0       0.0     0.0\n  template_E4                            20.0       0.0      20.0       0.0     0.0\n  template_F4                            20.0       0.0      20.0       0.0     0.0\n  template_G4                            20.0       0.0      20.0       0.0     0.0\n  template_H4                            20.0       0.0      20.0       0.0     0.0\n  template_A5                            20.0       0.0      20.0       0.0     0.0\n  template_B5                            20.0       0.0      20.0       0.0     0.0\n  template_C5                            20.0       0.0      20.0       0.0     0.0\n  template_D5                            20.0       0.0      20.0       0.0     0.0\n  template_E5                            20.0       0.0      20.0       0.0     0.0\n  template_F5                            20.0       0.0      20.0       0.0     0.0\n  template_G5                            20.0       0.0      20.0       0.0     0.0\n  template_H5                            20.0       0.0      20.0       0.0     0.0\n  template_A6                            20.0       0.0      20.0       0.0     0.0\n  template_B6                            20.0       0.0      20.0       0.0     0.0\n  template_C6                            20.0       0.0      20.0       0.0     0.0\n  template_D6                            20.0       0.0      20.0       0.0     0.0\n  template_E6                            20.0       0.0      20.0       0.0     0.0\n  template_F6                            20.0       0.0      20.0       0.0     0.0\n  template_G6                            20.0       0.0      20.0       0.0     0.0\n  template_H6                            20.0       0.0      20.0       0.0     0.0\n  template_A7                            20.0       0.0      20.0       0.0     0.0\n  template_B7                            20.0       0.0      20.0       0.0     0.0\n  template_C7                            20.0       0.0      20.0       0.0     0.0\n  template_D7                            20.0       0.0      20.0       0.0     0.0\n  template_E7                            20.0       0.0      20.0       0.0     0.0\n  template_F7                            20.0       0.0      20.0       0.0     0.0\n  template_G7                            20.0       0.0      20.0       0.0     0.0\n  template_H7                            20.0       0.0      20.0       0.0     0.0\n  template_A8                            20.0       0.0      20.0       0.0     0.0\n  template_B8                            20.0       0.0      20.0       0.0     0.0\n  template_C8                            20.0       0.0      20.0       0.0     0.0\n  template_D8                            20.0       0.0      20.0       0.0     0.0\n  template_E8                            20.0       0.0      20.0       0.0     0.0\n  template_F8                            20.0       0.0      20.0       0.0     0.0\n  template_G8                            20.0       0.0      20.0       0.0     0.0\n  template_H8                            20.0       0.0      20.0       0.0     0.0\n  template_A9                            20.0       0.0      20.0       0.0     0.0\n  template_B9                            20.0       0.0      20.0       0.0     0.0\n  template_C9                            20.0       0.0      20.0       0.0     0.0\n  template_D9                            20.0       0.0      20.0       0.0     0.0\n  template_E9                            20.0       0.0      20.0       0.0     0.0\n  template_F9                            20.0       0.0      20.0       0.0     0.0\n  template_G9                            20.0       0.0      20.0       0.0     0.0\n  template_H9                            20.0       0.0      20.0       0.0     0.0\n  template_A10                           20.0       0.0      20.0       0.0     0.0\n  template_B10                           20.0       0.0      20.0       0.0     0.0\n  template_C10                           20.0       0.0      20.0       0.0     0.0\n  template_D10                           20.0       0.0      20.0       0.0     0.0\n  template_E10                           20.0       0.0      20.0       0.0     0.0\n  template_F10                           20.0       0.0      20.0       0.0     0.0\n  template_G10                           20.0       0.0      20.0       0.0     0.0\n  template_H10                           20.0       0.0      20.0       0.0     0.0\n  template_A11                           20.0       0.0      20.0       0.0     0.0\n  template_B11                           20.0       0.0      20.0       0.0     0.0\n  template_C11                           20.0       0.0      20.0       0.0     0.0\n  template_D11                           20.0       0.0      20.0       0.0     0.0\n  template_E11                           20.0       0.0      20.0       0.0     0.0\n  template_F11                           20.0       0.0      20.0       0.0     0.0\n  template_G11                           20.0       0.0      20.0       0.0     0.0\n  template_H11                           20.0       0.0      20.0       0.0     0.0\n  template_A12                           20.0       0.0      20.0       0.0     0.0\n  template_B12                           20.0       0.0      20.0       0.0     0.0\n  template_C12                           20.0       0.0      20.0       0.0     0.0\n  template_D12                           20.0       0.0      20.0       0.0     0.0\n  template_E12                           20.0       0.0      20.0       0.0     0.0\n  template_F12                           20.0       0.0      20.0       0.0     0.0\n  template_G12                           20.0       0.0      20.0       0.0     0.0\n  template_H12                           20.0       0.0      20.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    mix                                 1440.0    1700.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A1    template_A1                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B1    template_B1                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C1    template_C1                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D1    template_D1                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E1    template_E1                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F1    template_F1                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G1    template_G1                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H1    template_H1                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A2    template_A2                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B2    template_B2                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C2    template_C2                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D2    template_D2                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E2    template_E2                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F2    template_F2                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G2    template_G2                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H2    template_H2                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A3    template_A3                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B3    template_B3                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C3    template_C3                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D3    template_D3                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E3    template_E3                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F3    template_F3                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G3    template_G3                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H3    template_H3                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A4    template_A4                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B4    template_B4                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C4    template_C4                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D4    template_D4                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E4    template_E4                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F4    template_F4                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G4    template_G4                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H4    template_H4                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A5    template_A5                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B5    template_B5                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C5    template_C5                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D5    template_D5                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E5    template_E5                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F5    template_F5                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G5    template_G5                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H5    template_H5                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A6    template_A6                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B6    template_B6                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C6    template_C6                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D6    template_D6                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E6    template_E6                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F6    template_F6                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G6    template_G6                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H6    template_H6                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A7    template_A7                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B7    template_B7                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C7    template_C7                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D7    template_D7                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E7    template_E7                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F7    template_F7                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G7    template_G7                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H7    template_H7                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A8    template_A8                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B8    template_B8                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C8    template_C8                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D8    template_D8                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E8    template_E8                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F8    template_F8                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G8    template_G8                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H8    template_H8                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A9    template_A9                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B9    template_B9                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C9    template_C9                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D9    template_D9                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E9    template_E9                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F9    template_F9                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G9    template_G9                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H9    template_H9                            5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A10   template_A10                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B10   template_B10                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C10   template_C10                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D10   template_D10                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E10   template_E10                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F10   template_F10                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G10   template_G10                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H10   template_H10                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A11   template_A11                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B11   template_B11                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C11   template_C11                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D11   template_D11                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E11   template_E11                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F11   template_F11                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G11   template_G11                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H11   template_H11                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A12   template_A12                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B12   template_B12                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        C12   template_C12                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        D12   template_D12                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        E12   template_E12                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        F12   template_F12                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        G12   template_G12                           5.0      20.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        H12   template_H12                           5.0      20.0\n  Tips: 96 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-pcr-01",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "full plate",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 96,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D1": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E1": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F1": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A2": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B2": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C2": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D2": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E2": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F2": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G2": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H2": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D3": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H3": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B4": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F4": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B5": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B6": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D7": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D8": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E9": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C10": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C11": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E11": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G11": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D1": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E1": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F1": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H1": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A2": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B2": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C2": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D2": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E2": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F2": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G2": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H2": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D3": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G3": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H3",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H3": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B4": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F4": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H4": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B5": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H5",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H5": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B6": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H6",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H6": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D7": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H7",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H7": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D8": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H8",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H8": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E9": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H9",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H9": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H9",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C10": 5.0
+     },
+     "found": {
+      "mix": 15.000000000000002
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H10",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H10": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H10",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C11": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E11": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G11": 5.0
+     },
+     "found": {
+      "mix": 14.999999999999998
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H11",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H11": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H11",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@A12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@A12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@B12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@B12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@C12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@C12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@D12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@D12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@E12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@E12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@F12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@F12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@G12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@G12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H12",
+     "group": null,
+     "expected": {
+      "mix": 15.0,
+      "template@H12": 5.0
+     },
+     "found": {
+      "mix": 15.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template@H12",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "mix",
+    "logical": "mix",
+    "role": "reagent",
+    "declared_ul": 1700.0,
+    "delivered_ul": 1440.0,
+    "left_in_source_ul": 260.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A1",
+    "logical": "template@A1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B1",
+    "logical": "template@B1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C1",
+    "logical": "template@C1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D1",
+    "logical": "template@D1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E1",
+    "logical": "template@E1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F1",
+    "logical": "template@F1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G1",
+    "logical": "template@G1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H1",
+    "logical": "template@H1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A2",
+    "logical": "template@A2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B2",
+    "logical": "template@B2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C2",
+    "logical": "template@C2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D2",
+    "logical": "template@D2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E2",
+    "logical": "template@E2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F2",
+    "logical": "template@F2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G2",
+    "logical": "template@G2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H2",
+    "logical": "template@H2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A3",
+    "logical": "template@A3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B3",
+    "logical": "template@B3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C3",
+    "logical": "template@C3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D3",
+    "logical": "template@D3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E3",
+    "logical": "template@E3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F3",
+    "logical": "template@F3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G3",
+    "logical": "template@G3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H3",
+    "logical": "template@H3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A4",
+    "logical": "template@A4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B4",
+    "logical": "template@B4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C4",
+    "logical": "template@C4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D4",
+    "logical": "template@D4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E4",
+    "logical": "template@E4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F4",
+    "logical": "template@F4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G4",
+    "logical": "template@G4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H4",
+    "logical": "template@H4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A5",
+    "logical": "template@A5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B5",
+    "logical": "template@B5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C5",
+    "logical": "template@C5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D5",
+    "logical": "template@D5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E5",
+    "logical": "template@E5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F5",
+    "logical": "template@F5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G5",
+    "logical": "template@G5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H5",
+    "logical": "template@H5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A6",
+    "logical": "template@A6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B6",
+    "logical": "template@B6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C6",
+    "logical": "template@C6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D6",
+    "logical": "template@D6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E6",
+    "logical": "template@E6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F6",
+    "logical": "template@F6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G6",
+    "logical": "template@G6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H6",
+    "logical": "template@H6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A7",
+    "logical": "template@A7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B7",
+    "logical": "template@B7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C7",
+    "logical": "template@C7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D7",
+    "logical": "template@D7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E7",
+    "logical": "template@E7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F7",
+    "logical": "template@F7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G7",
+    "logical": "template@G7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H7",
+    "logical": "template@H7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A8",
+    "logical": "template@A8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B8",
+    "logical": "template@B8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C8",
+    "logical": "template@C8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D8",
+    "logical": "template@D8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E8",
+    "logical": "template@E8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F8",
+    "logical": "template@F8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G8",
+    "logical": "template@G8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H8",
+    "logical": "template@H8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A9",
+    "logical": "template@A9",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B9",
+    "logical": "template@B9",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C9",
+    "logical": "template@C9",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D9",
+    "logical": "template@D9",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E9",
+    "logical": "template@E9",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F9",
+    "logical": "template@F9",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G9",
+    "logical": "template@G9",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H9",
+    "logical": "template@H9",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A10",
+    "logical": "template@A10",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B10",
+    "logical": "template@B10",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C10",
+    "logical": "template@C10",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D10",
+    "logical": "template@D10",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E10",
+    "logical": "template@E10",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F10",
+    "logical": "template@F10",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G10",
+    "logical": "template@G10",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H10",
+    "logical": "template@H10",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A11",
+    "logical": "template@A11",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B11",
+    "logical": "template@B11",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C11",
+    "logical": "template@C11",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D11",
+    "logical": "template@D11",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E11",
+    "logical": "template@E11",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F11",
+    "logical": "template@F11",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G11",
+    "logical": "template@G11",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H11",
+    "logical": "template@H11",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_A12",
+    "logical": "template@A12",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_B12",
+    "logical": "template@B12",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_C12",
+    "logical": "template@C12",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_D12",
+    "logical": "template@D12",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_E12",
+    "logical": "template@E12",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_F12",
+    "logical": "template@F12",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_G12",
+    "logical": "template@G12",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template_H12",
+    "logical": "template@H12",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "mix",
+     "declared_ul": 1700.0,
+     "needed_ul": 1440.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "template_A1",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "template_B1",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C1",
+     "liquid": "template_C1",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D1",
+     "liquid": "template_D1",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E1",
+     "liquid": "template_E1",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F1",
+     "liquid": "template_F1",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G1",
+     "liquid": "template_G1",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H1",
+     "liquid": "template_H1",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "template_A2",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "template_B2",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C2",
+     "liquid": "template_C2",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D2",
+     "liquid": "template_D2",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E2",
+     "liquid": "template_E2",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F2",
+     "liquid": "template_F2",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G2",
+     "liquid": "template_G2",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H2",
+     "liquid": "template_H2",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "template_A3",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "template_B3",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C3",
+     "liquid": "template_C3",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D3",
+     "liquid": "template_D3",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E3",
+     "liquid": "template_E3",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F3",
+     "liquid": "template_F3",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G3",
+     "liquid": "template_G3",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H3",
+     "liquid": "template_H3",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "template_A4",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B4",
+     "liquid": "template_B4",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C4",
+     "liquid": "template_C4",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D4",
+     "liquid": "template_D4",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E4",
+     "liquid": "template_E4",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F4",
+     "liquid": "template_F4",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G4",
+     "liquid": "template_G4",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H4",
+     "liquid": "template_H4",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "template_A5",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B5",
+     "liquid": "template_B5",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C5",
+     "liquid": "template_C5",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D5",
+     "liquid": "template_D5",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E5",
+     "liquid": "template_E5",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F5",
+     "liquid": "template_F5",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G5",
+     "liquid": "template_G5",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H5",
+     "liquid": "template_H5",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "template_A6",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B6",
+     "liquid": "template_B6",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C6",
+     "liquid": "template_C6",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D6",
+     "liquid": "template_D6",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E6",
+     "liquid": "template_E6",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F6",
+     "liquid": "template_F6",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G6",
+     "liquid": "template_G6",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H6",
+     "liquid": "template_H6",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "template_A7",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B7",
+     "liquid": "template_B7",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C7",
+     "liquid": "template_C7",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D7",
+     "liquid": "template_D7",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E7",
+     "liquid": "template_E7",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F7",
+     "liquid": "template_F7",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G7",
+     "liquid": "template_G7",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H7",
+     "liquid": "template_H7",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "template_A8",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B8",
+     "liquid": "template_B8",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C8",
+     "liquid": "template_C8",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D8",
+     "liquid": "template_D8",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E8",
+     "liquid": "template_E8",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F8",
+     "liquid": "template_F8",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G8",
+     "liquid": "template_G8",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H8",
+     "liquid": "template_H8",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A9",
+     "liquid": "template_A9",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B9",
+     "liquid": "template_B9",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C9",
+     "liquid": "template_C9",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D9",
+     "liquid": "template_D9",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E9",
+     "liquid": "template_E9",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F9",
+     "liquid": "template_F9",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G9",
+     "liquid": "template_G9",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H9",
+     "liquid": "template_H9",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A10",
+     "liquid": "template_A10",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B10",
+     "liquid": "template_B10",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C10",
+     "liquid": "template_C10",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D10",
+     "liquid": "template_D10",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E10",
+     "liquid": "template_E10",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F10",
+     "liquid": "template_F10",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G10",
+     "liquid": "template_G10",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H10",
+     "liquid": "template_H10",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "template_A11",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B11",
+     "liquid": "template_B11",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C11",
+     "liquid": "template_C11",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D11",
+     "liquid": "template_D11",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E11",
+     "liquid": "template_E11",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F11",
+     "liquid": "template_F11",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G11",
+     "liquid": "template_G11",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H11",
+     "liquid": "template_H11",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "template_A12",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B12",
+     "liquid": "template_B12",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C12",
+     "liquid": "template_C12",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D12",
+     "liquid": "template_D12",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E12",
+     "liquid": "template_E12",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F12",
+     "liquid": "template_F12",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G12",
+     "liquid": "template_G12",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H12",
+     "liquid": "template_H12",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 96
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 1 biology problem (1 error).\n\n1. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well A1 in slot 4: the liquid is\nbelow the tip\n   line 36:  p20.aspirate(5, src)\n   At line 36 the p20_single_gen2 draws 5 ul from template_A1 (well A1 in slot 4) with its\n   tip 1 mm above the bottom of the well. By then the well holds 20 ul, which in this NEST\n   96 Well Plate 200 \u00b5L Flat reaches only 0.63 mm up: the tip is above the liquid and draws\n   air (this line did it 96 times; 480 ul of air in all). The simulator does not notice: it\n   does not follow the liquid. The 96 wells filled from these draws got air instead of\n   liquid. Source wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 88 more in slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 88 more in slot 4.\n   Also reached 96 other wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 88 more in slot 3.\n   Fix: Keep the liquid above the tip. This well needs about 35 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [f6742184efad]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 36,
+   "title": "The pipette draws air from well A1 in slot 4: the liquid is below the tip",
+   "explanation": "At line 36 the p20_single_gen2 draws 5 ul from template_A1 (well A1 in slot 4) with its tip 1 mm above the bottom of the well. By then the well holds 20 ul, which in this NEST 96 Well Plate 200 \u00b5L Flat reaches only 0.63 mm up: the tip is above the liquid and draws air (this line did it 96 times; 480 ul of air in all). The simulator does not notice: it does not follow the liquid. The 96 wells filled from these draws got air instead of liquid. Source wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 88 more in slot 4.",
+   "fix": "Keep the liquid above the tip. This well needs about 35 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  }
+ ],
+ "seconds": 8.8,
+ "draft": 1
+}

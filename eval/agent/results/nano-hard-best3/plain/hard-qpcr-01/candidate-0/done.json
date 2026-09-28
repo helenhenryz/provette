@@ -1,0 +1,32 @@
+{
+ "id": "hard-qpcr-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 3,
+  "rounds": 3
+ },
+ "tool_calls": 10,
+ "turns": 10,
+ "drafts": 4,
+ "checks": 4,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 866658,
+ "tokens_out": 116240,
+ "seconds": 1072.1
+}

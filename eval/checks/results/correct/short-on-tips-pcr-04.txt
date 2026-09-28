@@ -1,0 +1,42 @@
+pcr-04.py: VERIFIED against plate map pcr-04. 18 of 18 wells hold what the plate map says.
+  Destination: Bio-Rad 96 Well Plate 200 µL PCR (slot 3). Reading of the request: 6 samples
+    x 3.
+
+Labware for the technique (qPCR setup): nothing to flag.
+
+Where every liquid ended up (ul):
+  liquid                             declared delivered in source elsewhere    lost
+  SYBR master mix                       200.0     144.0      56.0       0.0     0.0
+  cDNA sample 1                          20.0       6.0      13.0       0.0     1.0
+  cDNA sample 2                          20.0       6.0      13.0       0.0     1.0
+  cDNA sample 3                          20.0       6.0      13.0       0.0     1.0
+  cDNA sample 4                          20.0       6.0      13.0       0.0     1.0
+  cDNA sample 5                          20.0       6.0      13.0       0.0     1.0
+  cDNA sample 6                          20.0       6.0      13.0       0.0     1.0
+  Note: 1.0 ul of cDNA sample 1 is lost: it left the deck inside a tip that was thrown away.
+    That is less than one well's worth: a spare volume, if it was meant.
+  Note: 1.0 ul of cDNA sample 2 is lost: it left the deck inside a tip that was thrown away.
+    That is less than one well's worth: a spare volume, if it was meant.
+  Note: 1.0 ul of cDNA sample 3 is lost: it left the deck inside a tip that was thrown away.
+    That is less than one well's worth: a spare volume, if it was meant.
+  Note: 1.0 ul of cDNA sample 4 is lost: it left the deck inside a tip that was thrown away.
+    That is less than one well's worth: a spare volume, if it was meant.
+  Note: 1.0 ul of cDNA sample 5 is lost: it left the deck inside a tip that was thrown away.
+    That is less than one well's worth: a spare volume, if it was meant.
+  Note: 1.0 ul of cDNA sample 6 is lost: it left the deck inside a tip that was thrown away.
+    That is less than one well's worth: a spare volume, if it was meant.
+
+Prep sheet: what to put on the deck before the run.
+  slot labware                               well  liquid                       load at least  declared
+  2    Opentrons 96 Well Aluminum Block with A1    cDNA sample 1                          7.0      20.0
+  2    Opentrons 96 Well Aluminum Block with B1    cDNA sample 2                          7.0      20.0
+  2    Opentrons 96 Well Aluminum Block with C1    cDNA sample 3                          7.0      20.0
+  2    Opentrons 96 Well Aluminum Block with D1    cDNA sample 4                          7.0      20.0
+  2    Opentrons 96 Well Aluminum Block with E1    cDNA sample 5                          7.0      20.0
+  2    Opentrons 96 Well Aluminum Block with F1    cDNA sample 6                          7.0      20.0
+  5    Opentrons 24 Tube Rack with Eppendorf A1    SYBR master mix                      144.0     200.0
+  Tips: 7 from Opentrons OT-2 96 Tip Rack 20 µL in slot 6.
+  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.
+
+This checks the logic of the protocol: what goes where, and how much. It does not check the
+  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.

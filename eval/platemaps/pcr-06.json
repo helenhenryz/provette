@@ -1,0 +1,107 @@
+{
+ "id": "pcr-06",
+ "request": "Colony PCR prep: distribute 20 ul of PCR mix into 16 wells of a PCR plate, then add 1 ul from each of 16 colony resuspensions that are in a second 96-well plate.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "pcr_mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)\\bmix\\b|master"
+  },
+  {
+   "name": "colony_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:colony|resuspension|clone)\\D{0,20}?(\\d+)",
+   "count": 16,
+   "index": "number"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "16 reactions",
+   "why": "'16 wells of a PCR plate': which wells is free",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "pcr_mix": 20,
+       "colony_1": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_2": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_3": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_4": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_5": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_6": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_7": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_8": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_9": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_10": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_11": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_12": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_13": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_14": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_15": 1
+      },
+      {
+       "pcr_mix": 20,
+       "colony_16": 1
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": []
+}

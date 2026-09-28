@@ -1,0 +1,1377 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: VERIFIED against plate map hard-rt-01. 24 of 24 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: 12 reactions\n    and 12 no-RT controls.\n\nLabware for the technique (PCR setup): 1 finding.\n1. WARNING LABWARE-FOR-TECHNIQUE: The wrong kind of plate: NEST 96 Well Plate 200 \u00b5L Flat is\n  a flat plate, and PCR setup needs a PCR plate or PCR strips\n   line 48:  p300.dispense(4, reaction_well)\n   The plate map says the technique is PCR setup, which needs a PCR plate or PCR strips as\n     its destination. The protocol delivers into NEST 96 Well Plate 200 \u00b5L Flat (slot 4,\n     load name nest_96_wellplate_200ul_flat), which is a flat plate. A thermocycler block is\n     drilled for thin-walled 0.2 ml PCR wells; a flat plate does not fit in it, so the\n     reaction can never be run. Every well still holds what the plate map asks for, so the\n     map verifies; the plate is the problem.\n   Affected: wells A1, A10, A11, A12, A2, A3, A4, A5 and 16 more in slot 4.\n   Fix: Load nest_96_wellplate_100ul_pcr_full_skirt (or the 200 ul PCR plate, or PCR strips\n     on the aluminium block) as the destination; a flat plate cannot go in a thermocycler.\n   Source: Opentrons, module setup: no error for an unusual labware and module combination\n           https://docs.opentrons.com/v2/modules/setup.html\n   Source: Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate\n           https://docs.opentrons.com/v2/modules/thermocycler.html\n   Source: ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error\n           https://arxiv.org/html/2606.11150v1\n   [81b0aa80c84f]\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  buffer                                200.0      96.0     104.0       0.0     0.0\n  rt                                    200.0      12.0     188.0       0.0     0.0\n  dntp                                  200.0      24.0     176.0       0.0     0.0\n  primers                               200.0      24.0     176.0       0.0     0.0\n  water                                 200.0     132.0      68.0       0.0     0.0\n  rna 1                                  50.0      16.0      34.0       0.0     0.0\n  rna 2                                  50.0      16.0      34.0       0.0     0.0\n  rna 3                                  50.0      16.0      34.0       0.0     0.0\n  rna 4                                  50.0      16.0      34.0       0.0     0.0\n  rna 5                                  50.0      16.0      34.0       0.0     0.0\n  rna 6                                  50.0      16.0      34.0       0.0     0.0\n  rna 7                                  50.0      16.0      34.0       0.0     0.0\n  rna 8                                  50.0      16.0      34.0       0.0     0.0\n  rna 9                                  50.0      16.0      34.0       0.0     0.0\n  rna 10                                 50.0      16.0      34.0       0.0     0.0\n  rna 11                                 50.0      16.0      34.0       0.0     0.0\n  rna 12                                 50.0      16.0      34.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    buffer                                96.0     200.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    rt                                    12.0     200.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A3    dntp                                  24.0     200.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A4    primers                               24.0     200.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A5    water                                132.0     200.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A1    rna 1                                 16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A2    rna 2                                 16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A3    rna 3                                 16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A4    rna 4                                 16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A5    rna 5                                 16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A6    rna 6                                 16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A7    rna 7                                 16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A8    rna 8                                 16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A9    rna 9                                 16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A10   rna 10                                16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A11   rna 11                                16.0      50.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A12   rna 12                                16.0      50.0\n  Tips: 1 from Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.\n\nI do not know what 'primers' is (declared at line 34): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-rt-01",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [
+   {
+    "rule_id": "LABWARE-FOR-TECHNIQUE",
+    "family": 10,
+    "tier": "structural",
+    "severity": "warning",
+    "certain": true,
+    "roles_basis": "none",
+    "title": "The wrong kind of plate: NEST 96 Well Plate 200 \u00b5L Flat is a flat plate, and PCR setup needs a PCR plate or PCR strips",
+    "explanation": "The plate map says the technique is PCR setup, which needs a PCR plate or PCR strips as its destination. The protocol delivers into NEST 96 Well Plate 200 \u00b5L Flat (slot 4, load name nest_96_wellplate_200ul_flat), which is a flat plate. A thermocycler block is drilled for thin-walled 0.2 ml PCR wells; a flat plate does not fit in it, so the reaction can never be run. Every well still holds what the plate map asks for, so the map verifies; the plate is the problem.",
+    "fix": "Load nest_96_wellplate_100ul_pcr_full_skirt (or the 200 ul PCR plate, or PCR strips on the aluminium block) as the destination; a flat plate cannot go in a thermocycler.",
+    "line": 48,
+    "stack": [
+     "run:48"
+    ],
+    "occurrences": [
+     {
+      "event_index": 2,
+      "line": 48
+     }
+    ],
+    "wells": [
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     }
+    ],
+    "downstream": {
+     "count": 0,
+     "wells": []
+    },
+    "sources": [
+     {
+      "name": "Opentrons, module setup: no error for an unusual labware and module combination",
+      "url": "https://docs.opentrons.com/v2/modules/setup.html"
+     },
+     {
+      "name": "Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate",
+      "url": "https://docs.opentrons.com/v2/modules/thermocycler.html"
+     },
+     {
+      "name": "ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error",
+      "url": "https://arxiv.org/html/2606.11150v1"
+     }
+    ],
+    "fingerprint": "81b0aa80c84f"
+   }
+  ],
+  "unplaced_liquids": [
+   {
+    "name": "primers",
+    "description": "random primers",
+    "wells": [
+     "A4 in slot 2"
+    ],
+    "line": 34,
+    "sentence": "I do not know what 'primers' is (declared at line 34): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   }
+  ],
+  "intent": {
+   "status": "verified",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "12 reactions and 12 no-RT controls",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 24,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_1": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_1": 8.0,
+      "water": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_2": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_2": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_3": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 0.9999999999999999,
+      "primers": 0.9999999999999999,
+      "water": 5.0,
+      "rna_3": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_4": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 0.9999999999999999,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_4": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_5": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 0.9999999999999999,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_5": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_6": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_6": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_7": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_7": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_8": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_8": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_9": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_9": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_10": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_10": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_11": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_11": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_12": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.0,
+      "rna_12": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_1": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 3.9999999999999996,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_1": 8.0,
+      "water": 6.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_2": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 0.9999999999999999,
+      "primers": 0.9999999999999999,
+      "water": 6.0,
+      "rna_2": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_3": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 5.999999999999999,
+      "rna_3": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_4": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 6.0,
+      "rna_4": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_5": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 6.0,
+      "rna_5": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_6": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 6.0,
+      "rna_6": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B7",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_7": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 0.9999999999999999,
+      "primers": 0.9999999999999999,
+      "water": 6.0,
+      "rna_7": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B8",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_8": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 6.0,
+      "rna_8": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B9",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_9": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 6.0,
+      "rna_9": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B10",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_10": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 6.0,
+      "rna_10": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B11",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_11": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 6.0,
+      "rna_11": 8.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B12",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_12": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "water": 6.0,
+      "rna_12": 8.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 96.0,
+    "left_in_source_ul": 104.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rt",
+    "logical": "rt",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 12.0,
+    "left_in_source_ul": 188.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "dntp",
+    "logical": "dntp",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 24.0,
+    "left_in_source_ul": 176.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "primers",
+    "logical": "primers",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 24.0,
+    "left_in_source_ul": 176.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 132.0,
+    "left_in_source_ul": 68.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 1",
+    "logical": "rna_1",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 2",
+    "logical": "rna_2",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 3",
+    "logical": "rna_3",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 4",
+    "logical": "rna_4",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 5",
+    "logical": "rna_5",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 6",
+    "logical": "rna_6",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 7",
+    "logical": "rna_7",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 8",
+    "logical": "rna_8",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 9",
+    "logical": "rna_9",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 10",
+    "logical": "rna_10",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 11",
+    "logical": "rna_11",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 12",
+    "logical": "rna_12",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 34.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "buffer",
+     "declared_ul": 200.0,
+     "needed_ul": 96.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "rt",
+     "declared_ul": 200.0,
+     "needed_ul": 12.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "dntp",
+     "declared_ul": 200.0,
+     "needed_ul": 24.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "primers",
+     "declared_ul": 200.0,
+     "needed_ul": 24.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "water",
+     "declared_ul": 200.0,
+     "needed_ul": 132.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "rna 1",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "rna 2",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "rna 3",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "rna 4",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "rna 5",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "rna 6",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "rna 7",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "rna 8",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A9",
+     "liquid": "rna 9",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A10",
+     "liquid": "rna 10",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "rna 11",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "rna 12",
+     "declared_ul": 50.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 24 biology problems (19 errors, 1 warning, 4 notes).\n\n1. ERROR PIPETTE-RANGE: 4 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 47:  p300.aspirate(4, buffer_well)\n   At line 47 the p300_single_gen2 is asked to draw 4 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A1 in slot 2.\n   Affected: tube A1 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [a073e2f0e245]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: rt (tube A2 in slot 2)\n   line 49:  p300.aspirate(1, rt_well)\n   At line 49 the tip went into rt (tube A2 in slot 2) while it still carried buffer (tube\n   A1 in slot 2), dntp (tube A3 in slot 2), primers (tube A4 in slot 2), water (tube A5 in\n   slot 2) and 11 more from an earlier step (this line did it 12 times). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so this stock now\n   holds material that does not belong there. Liquid drawn from it then took the unwanted\n   material along into 21 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 13 more in\n   slot 4.\n   Affected: tube A2 in slot 2.\n   Also reached 21 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 13 more in slot 4.\n   Fix: Pick up a fresh tip before line 49 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [1aa0536e6242]\n\n3. ERROR PIPETTE-RANGE: 1 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 49:  p300.aspirate(1, rt_well)\n   At line 49 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A2 in slot 2.\n   Affected: tube A2 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [7d1d03057f4e]\n\n4. ERROR CONTAM-STOCK: A used tip went into a stock: dntp (tube A3 in slot 2)\n   line 51:  p300.aspirate(1, dntp_well)\n   At line 51 the tip went into dntp (tube A3 in slot 2) while it still carried buffer (tube\n   A1 in slot 2) and rt (tube A2 in slot 2) from an earlier step. A tip that has touched one\n   liquid leaves a little of it in the next liquid it touches, so this stock now holds\n   material that does not belong there. Liquid drawn from it then took the unwanted material\n   along into 12 other wells: wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in slot 4.\n   Affected: tube A3 in slot 2.\n   Also reached 12 other wells: wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in slot 4.\n   Fix: Pick up a fresh tip before line 51 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [991c42b59099]\n\n5. ERROR PIPETTE-RANGE: 1 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 51:  p300.aspirate(1, dntp_well)\n   At line 51 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A3 in slot 2.\n   Affected: tube A3 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [a583d3e8e304]\n\n6. ERROR CONTAM-STOCK: A used tip went into a stock: primers (tube A4 in slot 2)\n   line 53:  p300.aspirate(1, primers_well)\n   At line 53 the tip went into primers (tube A4 in slot 2) while it still carried buffer\n   (tube A1 in slot 2), rt (tube A2 in slot 2) and dntp (tube A3 in slot 2) from an earlier\n   step. A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches, so this stock now holds material that does not belong there. Liquid drawn from\n   it then took the unwanted material along into 12 other wells: wells B1, B2, B3, B4, B5,\n   B6, B7, B8 and 4 more in slot 4.\n   Affected: tube A4 in slot 2.\n   Also reached 12 other wells: wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in slot 4.\n   Fix: Pick up a fresh tip before line 53 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [387438e6b005]\n\n7. ERROR PIPETTE-RANGE: 1 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 53:  p300.aspirate(1, primers_well)\n   At line 53 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A4 in slot 2.\n   Affected: tube A4 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [8766afdac621]\n\n8. ERROR CONTAM-STOCK: A used tip went into a stock: 12 stocks\n   line 56:  p300.aspirate(8, rna_i_well)\n   At line 56 the tip went into rna 1 (well A1 in slot 3), rna 2 (well A2 in slot 3), rna 3\n   (well A3 in slot 3), rna 4 (well A4 in slot 3) and 8 more while it still carried buffer\n   (tube A1 in slot 2), rt (tube A2 in slot 2), dntp (tube A3 in slot 2), primers (tube A4\n   in slot 2) and 12 more from an earlier step (this line did it 12 times). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so these stocks\n   now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 22 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 14\n   more in slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Also reached 22 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 14 more in slot 4.\n   Fix: Pick up a fresh tip before line 56 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [59b063b8a271]\n\n9. ERROR PIPETTE-RANGE: 8 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 56:  p300.aspirate(8, rna_i_well)\n   At line 56 the p300_single_gen2 is asked to draw 8 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [23d97618b755]\n\n10. ERROR CONTAM-STOCK: A used tip went into a stock: water (tube A5 in slot 2)\n   line 58:  p300.aspirate(5, water_well)\n   At line 58 the tip went into water (tube A5 in slot 2) while it still carried buffer\n   (tube A1 in slot 2), rt (tube A2 in slot 2), dntp (tube A3 in slot 2), primers (tube A4\n   in slot 2) and 12 more from an earlier step (this line did it 12 times). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so this stock now\n   holds material that does not belong there. Liquid drawn from it then took the unwanted\n   material along into 23 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 15 more in\n   slot 4.\n   Affected: tube A5 in slot 2.\n   Also reached 23 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 15 more in slot 4.\n   Fix: Pick up a fresh tip before line 58 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [42f9b6b356a4]\n\n11. ERROR PIPETTE-RANGE: 5 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 58:  p300.aspirate(5, water_well)\n   At line 58 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A5 in slot 2.\n   Affected: tube A5 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [979f8bb42b78]\n\n12. ERROR CONTAM-STOCK: A used tip went into a stock: buffer (tube A1 in slot 2)\n   line 61:  p300.aspirate(4, buffer_well)\n   At line 61 the tip went into buffer (tube A1 in slot 2) while it still carried rt (tube\n   A2 in slot 2), dntp (tube A3 in slot 2), primers (tube A4 in slot 2), water (tube A5 in\n   slot 2) and 12 more from an earlier step (this line did it 12 times). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so this stock now\n   holds material that does not belong there. Liquid drawn from it then took the unwanted\n   material along into 23 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 15 more in\n   slot 4.\n   Affected: tube A1 in slot 2.\n   Also reached 23 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 15 more in slot 4.\n   Fix: Pick up a fresh tip before line 61 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [aa471d4f6c65]\n\n13. ERROR PIPETTE-RANGE: 4 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 61:  p300.aspirate(4, buffer_well)\n   At line 61 the p300_single_gen2 is asked to draw 4 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A1 in slot 2.\n   Affected: tube A1 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [adc36823ea74]\n\n14. ERROR CONTAM-STOCK: A used tip went into a stock: dntp (tube A3 in slot 2)\n   line 63:  p300.aspirate(1, dntp_well)\n   At line 63 the tip went into dntp (tube A3 in slot 2) while it still carried primers\n   (tube A4 in slot 2), water (tube A5 in slot 2), rna 1 (well A1 in slot 3), rna 2 (well A2\n   in slot 3) and 10 more from an earlier step (this line did it 12 times). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so this stock now\n   holds material that does not belong there. Liquid drawn from it then took the unwanted\n   material along into 22 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 14 more in\n   slot 4.\n   Affected: tube A3 in slot 2.\n   Also reached 22 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 14 more in slot 4.\n   Fix: Pick up a fresh tip before line 63 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [e1915926cebe]\n\n15. ERROR PIPETTE-RANGE: 1 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 63:  p300.aspirate(1, dntp_well)\n   At line 63 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A3 in slot 2.\n   Affected: tube A3 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [ffbac31a54a6]\n\n16. ERROR CONTAM-STOCK: A used tip went into a stock: primers (tube A4 in slot 2)\n   line 65:  p300.aspirate(1, primers_well)\n   At line 65 the tip went into primers (tube A4 in slot 2) while it still carried water\n   (tube A5 in slot 2), rna 1 (well A1 in slot 3), rna 2 (well A2 in slot 3), rna 3 (well A3\n   in slot 3) and 9 more from an earlier step (this line did it 12 times). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so this stock now\n   holds material that does not belong there. Liquid drawn from it then took the unwanted\n   material along into 22 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 14 more in\n   slot 4.\n   Affected: tube A4 in slot 2.\n   Also reached 22 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 14 more in slot 4.\n   Fix: Pick up a fresh tip before line 65 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [3e52a224cf08]\n\n17. ERROR PIPETTE-RANGE: 1 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 65:  p300.aspirate(1, primers_well)\n   At line 65 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A4 in slot 2.\n   Affected: tube A4 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [be677700d873]\n\n18. ERROR PIPETTE-RANGE: 8 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 67:  p300.aspirate(8, rna_i_well)\n   At line 67 the p300_single_gen2 is asked to draw 8 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [ee1169d6b138]\n\n19. ERROR PIPETTE-RANGE: 6 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 69:  p300.aspirate(6, water_well)\n   At line 69 the p300_single_gen2 is asked to draw 6 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A5 in slot 2.\n   Affected: tube A5 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [0911ce7621f0]\n\n20. WARNING ENZYME-BEFORE-DILUENT: An enzyme was added before the water: rt\n   line 50:  p300.dispense(1, reaction_well)\n   At line 50 the robot put rt into well A1 in slot 4. Take well A1 in slot 4: at that\n   moment it held only 4 ul, all of it neat buffer, and the water came afterwards, at line\n   59, to make the 9 ul of water or buffer the reaction is built on. An enzyme is shipped in\n   50% glycerol and is meant to be the last thing into a reaction, after the water and the\n   buffer have brought the well to the right dilution. Dropped into neat buffer or a dry\n   well it meets many times the salt it should: a restriction enzyme then cuts at the wrong\n   places (star activity) and a polymerase starts on mis-primed template.\n   Affected: well A1 in slot 4.\n   Fix: Reorder the additions to well A1 in slot 4: water and buffer first, then the sample,\n   then rt last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and\n   hand it out.\n   Source: Thermo Fisher: restriction enzyme key considerations (the enzyme is the final\n   component)\n           https://www.thermofisher.com/us/en/home/life-science/cloning/cloning-learning-center/invitrogen-school-of-molecular-biology/molecular-cloning/restriction-enzymes/restriction-enzyme-key-considerations.html\n   Source: Promega: restriction enzyme resource (add the enzyme last; glycerol and star\n   activity)\n           https://www.promega.com/resources/guides/nucleic-acid-analysis/restriction-enzyme-resource/\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   Source: Qiagen: critical factors for successful real-time PCR (order of addition)\n           https://www.gene-quantification.de/qiagen-qpcr-sample-assay-tech-guide-2010.pdf\n   [f8023b640e71]\n\n21. NOTE NO-NEGATIVE-CONTROL: No no-template control: 24 wells of dntp with a sample\n   line 52:  p300.dispense(1, reaction_well)\n   At line 52 the robot starts putting dntp into NEST 96 Well Plate 200 \u00b5L Flat (slot 4),\n   and 24 wells end holding it together with a sample. No well on this plate holds the mix\n   without a sample, so there is no no-template control. If a reagent is contaminated, or\n   the primers pair with each other, every well gives a signal and nothing on the plate can\n   tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 16 more in\n   slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 16 more in slot 4.\n   Fix: Add one well (three for qPCR) with 1 ul of dntp and 8 ul of water in place of the\n   template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [5686210934b7]\n\n22. NOTE UNMIXED-AT-END: 12 wells never mixed after water went in (25% of the well)\n   line 59:  p300.dispense(5, reaction_well)\n   At line 59 the robot added water to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in\n   slot 4, which already held buffer, rt, dntp, primers and 12 more (this line did it 12\n   times). The addition was 25% of the well, nothing mixed the well afterwards, and the run\n   ended with them that way. Two liquids layered in a small well do not mix on their own, so\n   what the well holds is not at the concentration you calculated. A PCR plate is usually\n   vortexed and spun down before cycling; if this one will not be, mix it.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 4.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 4 after line 59:\n   `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [b827979ccbfa]\n\n23. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 63:  p300.aspirate(1, dntp_well)\n   At line 63 the tip touched the liquid in tube A3 in slot 2 while it still carried rna 1\n   (well A1 in slot 3), rna 2 (well A2 in slot 3), rna 3 (well A3 in slot 3), rna 4 (well A4\n   in slot 3) and 8 more from an earlier step (this line did it 12 times). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, and the protocol\n   never transfers that liquid into this well on purpose. A reagent is shared: the master\n   mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip\n   that has been in one sample leaves a little of it in the next liquid it touches, so a\n   sample carried into a reagent well turns up in every well that reagent reaches, and a no-\n   template control can no longer be trusted. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 22 other wells: wells A2, A3, A4, A5,\n   A6, A7, A8, A9 and 14 more in slot 4.\n   Affected: tube A3 in slot 2.\n   Also reached 22 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 14 more in slot 4.\n   Fix: Use a fresh tip for each sample at line 63, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [f2f05d156d77]\n\n24. NOTE CONTAM-STOCK: A used tip went into a stock: rna 1 (well A1 in slot 3)\n   line 67:  p300.aspirate(8, rna_i_well)\n   At line 67 the tip went into rna 1 (well A1 in slot 3) while it still carried water (tube\n   A5 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of\n   it in the next liquid it touches, so this stock now holds material that does not belong\n   there. The protocol does not draw from it again, so this run is not harmed, but what is\n   left in the stock is no longer clean for the next run.\n   Affected: well A1 in slot 3.\n   Fix: Pick up a fresh tip before line 67 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [f02bf4a20be9]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\n\nI do not know what 'primers' is (declared at line 34): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.",
+ "findings": [
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 47,
+   "title": "4 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 47 the p300_single_gen2 is asked to draw 4 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A1 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 49,
+   "title": "A used tip went into a stock: rt (tube A2 in slot 2)",
+   "explanation": "At line 49 the tip went into rt (tube A2 in slot 2) while it still carried buffer (tube A1 in slot 2), dntp (tube A3 in slot 2), primers (tube A4 in slot 2), water (tube A5 in slot 2) and 11 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 21 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 13 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 49 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 49,
+   "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 49 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A2 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 51,
+   "title": "A used tip went into a stock: dntp (tube A3 in slot 2)",
+   "explanation": "At line 51 the tip went into dntp (tube A3 in slot 2) while it still carried buffer (tube A1 in slot 2) and rt (tube A2 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 12 other wells: wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 51 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 51,
+   "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 51 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A3 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 53,
+   "title": "A used tip went into a stock: primers (tube A4 in slot 2)",
+   "explanation": "At line 53 the tip went into primers (tube A4 in slot 2) while it still carried buffer (tube A1 in slot 2), rt (tube A2 in slot 2) and dntp (tube A3 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 12 other wells: wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 53 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 53,
+   "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 53 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A4 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 56,
+   "title": "A used tip went into a stock: 12 stocks",
+   "explanation": "At line 56 the tip went into rna 1 (well A1 in slot 3), rna 2 (well A2 in slot 3), rna 3 (well A3 in slot 3), rna 4 (well A4 in slot 3) and 8 more while it still carried buffer (tube A1 in slot 2), rt (tube A2 in slot 2), dntp (tube A3 in slot 2), primers (tube A4 in slot 2) and 12 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 22 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 14 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 56 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 56,
+   "title": "8 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 56 the p300_single_gen2 is asked to draw 8 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 58,
+   "title": "A used tip went into a stock: water (tube A5 in slot 2)",
+   "explanation": "At line 58 the tip went into water (tube A5 in slot 2) while it still carried buffer (tube A1 in slot 2), rt (tube A2 in slot 2), dntp (tube A3 in slot 2), primers (tube A4 in slot 2) and 12 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 23 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 15 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 58 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 58,
+   "title": "5 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 58 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A5 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 61,
+   "title": "A used tip went into a stock: buffer (tube A1 in slot 2)",
+   "explanation": "At line 61 the tip went into buffer (tube A1 in slot 2) while it still carried rt (tube A2 in slot 2), dntp (tube A3 in slot 2), primers (tube A4 in slot 2), water (tube A5 in slot 2) and 12 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 23 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 15 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 61 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 61,
+   "title": "4 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 61 the p300_single_gen2 is asked to draw 4 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A1 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 63,
+   "title": "A used tip went into a stock: dntp (tube A3 in slot 2)",
+   "explanation": "At line 63 the tip went into dntp (tube A3 in slot 2) while it still carried primers (tube A4 in slot 2), water (tube A5 in slot 2), rna 1 (well A1 in slot 3), rna 2 (well A2 in slot 3) and 10 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 22 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 14 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 63 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 63,
+   "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 63 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A3 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 65,
+   "title": "A used tip went into a stock: primers (tube A4 in slot 2)",
+   "explanation": "At line 65 the tip went into primers (tube A4 in slot 2) while it still carried water (tube A5 in slot 2), rna 1 (well A1 in slot 3), rna 2 (well A2 in slot 3), rna 3 (well A3 in slot 3) and 9 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 22 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 14 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 65 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 65,
+   "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 65 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A4 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 67,
+   "title": "8 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 67 the p300_single_gen2 is asked to draw 8 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 69,
+   "title": "6 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 69 the p300_single_gen2 is asked to draw 6 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A5 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "ENZYME-BEFORE-DILUENT",
+   "severity": "warning",
+   "certain": true,
+   "line": 50,
+   "title": "An enzyme was added before the water: rt",
+   "explanation": "At line 50 the robot put rt into well A1 in slot 4. Take well A1 in slot 4: at that moment it held only 4 ul, all of it neat buffer, and the water came afterwards, at line 59, to make the 9 ul of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction, after the water and the buffer have brought the well to the right dilution. Dropped into neat buffer or a dry well it meets many times the salt it should: a restriction enzyme then cuts at the wrong places (star activity) and a polymerase starts on mis-primed template.",
+   "fix": "Reorder the additions to well A1 in slot 4: water and buffer first, then the sample, then rt last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and hand it out."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 52,
+   "title": "No no-template control: 24 wells of dntp with a sample",
+   "explanation": "At line 52 the robot starts putting dntp into NEST 96 Well Plate 200 \u00b5L Flat (slot 4), and 24 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 16 more in slot 4.",
+   "fix": "Add one well (three for qPCR) with 1 ul of dntp and 8 ul of water in place of the template, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 59,
+   "title": "12 wells never mixed after water went in (25% of the well)",
+   "explanation": "At line 59 the robot added water to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 4, which already held buffer, rt, dntp, primers and 12 more (this line did it 12 times). The addition was 25% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 4 after line 59: `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 63,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 63 the tip touched the liquid in tube A3 in slot 2 while it still carried rna 1 (well A1 in slot 3), rna 2 (well A2 in slot 3), rna 3 (well A3 in slot 3), rna 4 (well A4 in slot 3) and 8 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted. Liquid was later taken out of the affected wells, and the unwanted material went along into 22 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 14 more in slot 4.",
+   "fix": "Use a fresh tip for each sample at line 63, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "note",
+   "certain": true,
+   "line": 67,
+   "title": "A used tip went into a stock: rna 1 (well A1 in slot 3)",
+   "explanation": "At line 67 the tip went into rna 1 (well A1 in slot 3) while it still carried water (tube A5 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol does not draw from it again, so this run is not harmed, but what is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 67 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  }
+ ],
+ "seconds": 5.8,
+ "draft": 0
+}

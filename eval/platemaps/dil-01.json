@@ -1,0 +1,1774 @@
+{
+ "id": "dil-01",
+ "request": "Do a 1:2 serial dilution of a drug stock across one row of a 96-well plate, 12 points, 100 ul final volume per well, diluting into PBS from a reservoir.",
+ "technique": "Serial dilution",
+ "liquids": [
+  {
+   "name": "pbs",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)pbs|diluent|buffer"
+  },
+  {
+   "name": "drug",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)drug|stock|compound"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "row A; first point is 1:2; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "A1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "A2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "A3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "A4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "A5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "A6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "A7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "A8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "A9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "A10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "A11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "A12": {
+     "drug": 0.0244,
+     "pbs": 99.9756
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row B; first point is 1:2; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "B1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "B2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "B3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "B4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "B5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "B6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "B7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "B8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "B9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "B10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "B11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "B12": {
+     "drug": 0.0244,
+     "pbs": 99.9756
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row C; first point is 1:2; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "C1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "C2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "C3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "C4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "C5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "C6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "C7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "C8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "C9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "C10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "C11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "C12": {
+     "drug": 0.0244,
+     "pbs": 99.9756
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row D; first point is 1:2; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "D1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "D2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "D3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "D4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "D5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "D6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "D7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "D8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "D9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "D10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "D11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "D12": {
+     "drug": 0.0244,
+     "pbs": 99.9756
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row E; first point is 1:2; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "E1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "E2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "E3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "E4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "E5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "E6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "E7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "E8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "E9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "E10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "E11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "E12": {
+     "drug": 0.0244,
+     "pbs": 99.9756
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row F; first point is 1:2; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "F1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "F2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "F3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "F4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "F5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "F6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "F7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "F8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "F9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "F10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "F11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "F12": {
+     "drug": 0.0244,
+     "pbs": 99.9756
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row G; first point is 1:2; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "G1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "G2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "G3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "G4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "G5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "G6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "G7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "G8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "G9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "G10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "G11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "G12": {
+     "drug": 0.0244,
+     "pbs": 99.9756
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row H; first point is 1:2; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "H1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "H2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "H3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "H4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "H5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "H6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "H7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "H8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "H9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "H10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "H11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "H12": {
+     "drug": 0.0244,
+     "pbs": 99.9756
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row A; first point is 1:2; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "A1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "A2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "A3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "A4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "A5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "A6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "A7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "A8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "A9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "A10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "A11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "A12": {
+     "drug": 0.0488,
+     "pbs": 199.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row B; first point is 1:2; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "B1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "B2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "B3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "B4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "B5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "B6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "B7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "B8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "B9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "B10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "B11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "B12": {
+     "drug": 0.0488,
+     "pbs": 199.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row C; first point is 1:2; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "C1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "C2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "C3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "C4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "C5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "C6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "C7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "C8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "C9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "C10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "C11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "C12": {
+     "drug": 0.0488,
+     "pbs": 199.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row D; first point is 1:2; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "D1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "D2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "D3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "D4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "D5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "D6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "D7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "D8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "D9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "D10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "D11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "D12": {
+     "drug": 0.0488,
+     "pbs": 199.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row E; first point is 1:2; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "E1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "E2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "E3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "E4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "E5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "E6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "E7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "E8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "E9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "E10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "E11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "E12": {
+     "drug": 0.0488,
+     "pbs": 199.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row F; first point is 1:2; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "F1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "F2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "F3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "F4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "F5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "F6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "F7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "F8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "F9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "F10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "F11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "F12": {
+     "drug": 0.0488,
+     "pbs": 199.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row G; first point is 1:2; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "G1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "G2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "G3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "G4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "G5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "G6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "G7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "G8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "G9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "G10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "G11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "G12": {
+     "drug": 0.0488,
+     "pbs": 199.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row H; first point is 1:2; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "H1": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "H2": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "H3": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "H4": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "H5": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "H6": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "H7": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "H8": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "H9": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "H10": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "H11": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    },
+    "H12": {
+     "drug": 0.0488,
+     "pbs": 199.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row A; first point is neat stock; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "A1": {
+     "drug": 100.0
+    },
+    "A2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "A3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "A4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "A5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "A6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "A7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "A8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "A9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "A10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "A11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "A12": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row B; first point is neat stock; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "B1": {
+     "drug": 100.0
+    },
+    "B2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "B3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "B4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "B5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "B6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "B7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "B8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "B9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "B10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "B11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "B12": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row C; first point is neat stock; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "C1": {
+     "drug": 100.0
+    },
+    "C2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "C3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "C4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "C5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "C6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "C7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "C8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "C9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "C10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "C11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "C12": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row D; first point is neat stock; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "D1": {
+     "drug": 100.0
+    },
+    "D2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "D3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "D4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "D5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "D6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "D7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "D8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "D9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "D10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "D11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "D12": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row E; first point is neat stock; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "E1": {
+     "drug": 100.0
+    },
+    "E2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "E3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "E4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "E5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "E6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "E7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "E8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "E9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "E10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "E11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "E12": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row F; first point is neat stock; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "F1": {
+     "drug": 100.0
+    },
+    "F2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "F3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "F4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "F5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "F6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "F7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "F8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "F9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "F10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "F11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "F12": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row G; first point is neat stock; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "G1": {
+     "drug": 100.0
+    },
+    "G2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "G3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "G4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "G5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "G6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "G7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "G8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "G9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "G10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "G11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "G12": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row H; first point is neat stock; excess removed from the last well",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "H1": {
+     "drug": 100.0
+    },
+    "H2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "H3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "H4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "H5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "H6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "H7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "H8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "H9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "H10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "H11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "H12": {
+     "drug": 0.0488,
+     "pbs": 99.9512
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row A; first point is neat stock; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "A1": {
+     "drug": 100.0
+    },
+    "A2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "A3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "A4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "A5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "A6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "A7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "A8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "A9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "A10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "A11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "A12": {
+     "drug": 0.0977,
+     "pbs": 199.9023
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row B; first point is neat stock; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "B1": {
+     "drug": 100.0
+    },
+    "B2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "B3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "B4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "B5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "B6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "B7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "B8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "B9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "B10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "B11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "B12": {
+     "drug": 0.0977,
+     "pbs": 199.9023
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row C; first point is neat stock; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "C1": {
+     "drug": 100.0
+    },
+    "C2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "C3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "C4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "C5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "C6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "C7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "C8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "C9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "C10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "C11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "C12": {
+     "drug": 0.0977,
+     "pbs": 199.9023
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row D; first point is neat stock; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "D1": {
+     "drug": 100.0
+    },
+    "D2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "D3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "D4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "D5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "D6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "D7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "D8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "D9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "D10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "D11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "D12": {
+     "drug": 0.0977,
+     "pbs": 199.9023
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row E; first point is neat stock; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "E1": {
+     "drug": 100.0
+    },
+    "E2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "E3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "E4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "E5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "E6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "E7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "E8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "E9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "E10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "E11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "E12": {
+     "drug": 0.0977,
+     "pbs": 199.9023
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row F; first point is neat stock; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "F1": {
+     "drug": 100.0
+    },
+    "F2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "F3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "F4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "F5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "F6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "F7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "F8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "F9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "F10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "F11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "F12": {
+     "drug": 0.0977,
+     "pbs": 199.9023
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row G; first point is neat stock; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "G1": {
+     "drug": 100.0
+    },
+    "G2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "G3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "G4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "G5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "G6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "G7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "G8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "G9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "G10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "G11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "G12": {
+     "drug": 0.0977,
+     "pbs": 199.9023
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "row H; first point is neat stock; last well keeps 200 ul",
+   "why": "'across one row' pins columns 1 to 12 of one row, not which row",
+   "pinned": {
+    "H1": {
+     "drug": 100.0
+    },
+    "H2": {
+     "drug": 50.0,
+     "pbs": 50.0
+    },
+    "H3": {
+     "drug": 25.0,
+     "pbs": 75.0
+    },
+    "H4": {
+     "drug": 12.5,
+     "pbs": 87.5
+    },
+    "H5": {
+     "drug": 6.25,
+     "pbs": 93.75
+    },
+    "H6": {
+     "drug": 3.125,
+     "pbs": 96.875
+    },
+    "H7": {
+     "drug": 1.5625,
+     "pbs": 98.4375
+    },
+    "H8": {
+     "drug": 0.7812,
+     "pbs": 99.2188
+    },
+    "H9": {
+     "drug": 0.3906,
+     "pbs": 99.6094
+    },
+    "H10": {
+     "drug": 0.1953,
+     "pbs": 99.8047
+    },
+    "H11": {
+     "drug": 0.0977,
+     "pbs": 99.9023
+    },
+    "H12": {
+     "drug": 0.0977,
+     "pbs": 199.9023
+    }
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "Ambiguous: whether the first of the 12 points is the undiluted stock or the first 1:2 dilution. Both are accepted.",
+  "Ambiguous: '100 ul final volume per well' is met in the last well only if the last 100 ul is removed. A last well left at 200 ul is accepted (same concentration).",
+  "Left to right is taken as pinned: column 1 is the most concentrated."
+ ]
+}

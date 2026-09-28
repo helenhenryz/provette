@@ -1,0 +1,38 @@
+{
+ "id": "pool-01",
+ "condition": "plain",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "thinking": "on",
+ "rules_in_prompt": true,
+ "one_shot_only": true,
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 3,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 50,
+    "title": "The pipette draws air from well A1 in slot 2: the liquid is below the tip"
+   }
+  ],
+  "steps": 3
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 3,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 50,
+    "title": "The pipette draws air from well A1 in slot 2: the liquid is below the tip"
+   }
+  ],
+  "rounds": 0
+ }
+}

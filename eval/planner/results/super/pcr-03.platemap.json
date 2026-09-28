@@ -1,0 +1,417 @@
+{
+ "id": "pcr-03",
+ "request": "Prepare a 96-well PCR plate where every well gets 18 ul of master mix from a reservoir and 2 ul of template from the matching well of a 96-well sample plate.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "master_mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)master\\s*mix|mastermix"
+  },
+  {
+   "name": "template@{well}",
+   "role": "sample",
+   "bind": "well",
+   "pattern": ".+"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "96 reactions",
+   "why": "each well gets master mix and template from matching well",
+   "pinned": {
+    "A1": {
+     "master_mix": 18,
+     "template@A1": 2
+    },
+    "A2": {
+     "master_mix": 18,
+     "template@A2": 2
+    },
+    "A3": {
+     "master_mix": 18,
+     "template@A3": 2
+    },
+    "A4": {
+     "master_mix": 18,
+     "template@A4": 2
+    },
+    "A5": {
+     "master_mix": 18,
+     "template@A5": 2
+    },
+    "A6": {
+     "master_mix": 18,
+     "template@A6": 2
+    },
+    "A7": {
+     "master_mix": 18,
+     "template@A7": 2
+    },
+    "A8": {
+     "master_mix": 18,
+     "template@A8": 2
+    },
+    "A9": {
+     "master_mix": 18,
+     "template@A9": 2
+    },
+    "A10": {
+     "master_mix": 18,
+     "template@A10": 2
+    },
+    "A11": {
+     "master_mix": 18,
+     "template@A11": 2
+    },
+    "A12": {
+     "master_mix": 18,
+     "template@A12": 2
+    },
+    "B1": {
+     "master_mix": 18,
+     "template@B1": 2
+    },
+    "B2": {
+     "master_mix": 18,
+     "template@B2": 2
+    },
+    "B3": {
+     "master_mix": 18,
+     "template@B3": 2
+    },
+    "B4": {
+     "master_mix": 18,
+     "template@B4": 2
+    },
+    "B5": {
+     "master_mix": 18,
+     "template@B5": 2
+    },
+    "B6": {
+     "master_mix": 18,
+     "template@B6": 2
+    },
+    "B7": {
+     "master_mix": 18,
+     "template@B7": 2
+    },
+    "B8": {
+     "master_mix": 18,
+     "template@B8": 2
+    },
+    "B9": {
+     "master_mix": 18,
+     "template@B9": 2
+    },
+    "B10": {
+     "master_mix": 18,
+     "template@B10": 2
+    },
+    "B11": {
+     "master_mix": 18,
+     "template@B11": 2
+    },
+    "B12": {
+     "master_mix": 18,
+     "template@B12": 2
+    },
+    "C1": {
+     "master_mix": 18,
+     "template@C1": 2
+    },
+    "C2": {
+     "master_mix": 18,
+     "template@C2": 2
+    },
+    "C3": {
+     "master_mix": 18,
+     "template@C3": 2
+    },
+    "C4": {
+     "master_mix": 18,
+     "template@C4": 2
+    },
+    "C5": {
+     "master_mix": 18,
+     "template@C5": 2
+    },
+    "C6": {
+     "master_mix": 18,
+     "template@C6": 2
+    },
+    "C7": {
+     "master_mix": 18,
+     "template@C7": 2
+    },
+    "C8": {
+     "master_mix": 18,
+     "template@C8": 2
+    },
+    "C9": {
+     "master_mix": 18,
+     "template@C9": 2
+    },
+    "C10": {
+     "master_mix": 18,
+     "template@C10": 2
+    },
+    "C11": {
+     "master_mix": 18,
+     "template@C11": 2
+    },
+    "C12": {
+     "master_mix": 18,
+     "template@C12": 2
+    },
+    "D1": {
+     "master_mix": 18,
+     "template@D1": 2
+    },
+    "D2": {
+     "master_mix": 18,
+     "template@D2": 2
+    },
+    "D3": {
+     "master_mix": 18,
+     "template@D3": 2
+    },
+    "D4": {
+     "master_mix": 18,
+     "template@D4": 2
+    },
+    "D5": {
+     "master_mix": 18,
+     "template@D5": 2
+    },
+    "D6": {
+     "master_mix": 18,
+     "template@D6": 2
+    },
+    "D7": {
+     "master_mix": 18,
+     "template@D7": 2
+    },
+    "D8": {
+     "master_mix": 18,
+     "template@D8": 2
+    },
+    "D9": {
+     "master_mix": 18,
+     "template@D9": 2
+    },
+    "D10": {
+     "master_mix": 18,
+     "template@D10": 2
+    },
+    "D11": {
+     "master_mix": 18,
+     "template@D11": 2
+    },
+    "D12": {
+     "master_mix": 18,
+     "template@D12": 2
+    },
+    "E1": {
+     "master_mix": 18,
+     "template@E1": 2
+    },
+    "E2": {
+     "master_mix": 18,
+     "template@E2": 2
+    },
+    "E3": {
+     "master_mix": 18,
+     "template@E3": 2
+    },
+    "E4": {
+     "master_mix": 18,
+     "template@E4": 2
+    },
+    "E5": {
+     "master_mix": 18,
+     "template@E5": 2
+    },
+    "E6": {
+     "master_mix": 18,
+     "template@E6": 2
+    },
+    "E7": {
+     "master_mix": 18,
+     "template@E7": 2
+    },
+    "E8": {
+     "master_mix": 18,
+     "template@E8": 2
+    },
+    "E9": {
+     "master_mix": 18,
+     "template@E9": 2
+    },
+    "E10": {
+     "master_mix": 18,
+     "template@E10": 2
+    },
+    "E11": {
+     "master_mix": 18,
+     "template@E11": 2
+    },
+    "E12": {
+     "master_mix": 18,
+     "template@E12": 2
+    },
+    "F1": {
+     "master_mix": 18,
+     "template@F1": 2
+    },
+    "F2": {
+     "master_mix": 18,
+     "template@F2": 2
+    },
+    "F3": {
+     "master_mix": 18,
+     "template@F3": 2
+    },
+    "F4": {
+     "master_mix": 18,
+     "template@F4": 2
+    },
+    "F5": {
+     "master_mix": 18,
+     "template@F5": 2
+    },
+    "F6": {
+     "master_mix": 18,
+     "template@F6": 2
+    },
+    "F7": {
+     "master_mix": 18,
+     "template@F7": 2
+    },
+    "F8": {
+     "master_mix": 18,
+     "template@F8": 2
+    },
+    "F9": {
+     "master_mix": 18,
+     "template@F9": 2
+    },
+    "F10": {
+     "master_mix": 18,
+     "template@F10": 2
+    },
+    "F11": {
+     "master_mix": 18,
+     "template@F11": 2
+    },
+    "F12": {
+     "master_mix": 18,
+     "template@F12": 2
+    },
+    "G1": {
+     "master_mix": 18,
+     "template@G1": 2
+    },
+    "G2": {
+     "master_mix": 18,
+     "template@G2": 2
+    },
+    "G3": {
+     "master_mix": 18,
+     "template@G3": 2
+    },
+    "G4": {
+     "master_mix": 18,
+     "template@G4": 2
+    },
+    "G5": {
+     "master_mix": 18,
+     "template@G5": 2
+    },
+    "G6": {
+     "master_mix": 18,
+     "template@G6": 2
+    },
+    "G7": {
+     "master_mix": 18,
+     "template@G7": 2
+    },
+    "G8": {
+     "master_mix": 18,
+     "template@G8": 2
+    },
+    "G9": {
+     "master_mix": 18,
+     "template@G9": 2
+    },
+    "G10": {
+     "master_mix": 18,
+     "template@G10": 2
+    },
+    "G11": {
+     "master_mix": 18,
+     "template@G11": 2
+    },
+    "G12": {
+     "master_mix": 18,
+     "template@G12": 2
+    },
+    "H1": {
+     "master_mix": 18,
+     "template@H1": 2
+    },
+    "H2": {
+     "master_mix": 18,
+     "template@H2": 2
+    },
+    "H3": {
+     "master_mix": 18,
+     "template@H3": 2
+    },
+    "H4": {
+     "master_mix": 18,
+     "template@H4": 2
+    },
+    "H5": {
+     "master_mix": 18,
+     "template@H5": 2
+    },
+    "H6": {
+     "master_mix": 18,
+     "template@H6": 2
+    },
+    "H7": {
+     "master_mix": 18,
+     "template@H7": 2
+    },
+    "H8": {
+     "master_mix": 18,
+     "template@H8": 2
+    },
+    "H9": {
+     "master_mix": 18,
+     "template@H9": 2
+    },
+    "H10": {
+     "master_mix": 18,
+     "template@H10": 2
+    },
+    "H11": {
+     "master_mix": 18,
+     "template@H11": 2
+    },
+    "H12": {
+     "master_mix": 18,
+     "template@H12": 2
+    }
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": []
+}

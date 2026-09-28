@@ -1,0 +1,1265 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map hard-cell-01. 96 of 96 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 2). Reading of the request: three lines\n    by column block.\n\nLabware for the technique (Cell culture): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  line 1                               5000.0    3200.0    1800.0       0.0     0.0\n  line 2                               5000.0    3200.0    1800.0       0.0     0.0\n  line 3                               5000.0    3200.0    1800.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    Opentrons 15 Tube Rack with Falcon 15 A1    line 1                              3200.0    5000.0\n  3    Opentrons 15 Tube Rack with Falcon 15 B1    line 2                              3200.0    5000.0\n  3    Opentrons 15 Tube Rack with Falcon 15 C1    line 3                              3200.0    5000.0\n  Tips: 3 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-cell-01",
+  "technique": "Cell culture",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "2:nest_96_wellplate_200ul_flat",
+   "variant": "three lines by column block",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 96,
+   "wells_total": 96,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 99.99999999999999
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F3",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G3",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H3",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E4",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F4",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G4",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H4",
+     "group": null,
+     "expected": {
+      "line_1": 100.0
+     },
+     "found": {
+      "line_1": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 99.99999999999999
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E5",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F5",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G5",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H5",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E6",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F6",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G6",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H6",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B7",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C7",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D7",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E7",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F7",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G7",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H7",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B8",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C8",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D8",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E8",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F8",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G8",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H8",
+     "group": null,
+     "expected": {
+      "line_2": 100.0
+     },
+     "found": {
+      "line_2": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B9",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 99.99999999999999
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C9",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D9",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E9",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F9",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G9",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H9",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C10",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D10",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E10",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F10",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G10",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H10",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C11",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D11",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E11",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F11",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G11",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H11",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C12",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D12",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E12",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F12",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G12",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H12",
+     "group": null,
+     "expected": {
+      "line_3": 100.0
+     },
+     "found": {
+      "line_3": 100.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "line 1",
+    "logical": "line_1",
+    "role": "sample",
+    "declared_ul": 5000.0,
+    "delivered_ul": 3200.0,
+    "left_in_source_ul": 1800.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "line 2",
+    "logical": "line_2",
+    "role": "sample",
+    "declared_ul": 5000.0,
+    "delivered_ul": 3200.0,
+    "left_in_source_ul": 1800.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "line 3",
+    "logical": "line_3",
+    "role": "sample",
+    "declared_ul": 5000.0,
+    "delivered_ul": 3200.0,
+    "left_in_source_ul": 1800.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "Opentrons 15 Tube Rack with Falcon 15 mL Conical",
+     "well": "A1",
+     "liquid": "line 1",
+     "declared_ul": 5000.0,
+     "needed_ul": 3200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 15 Tube Rack with Falcon 15 mL Conical",
+     "well": "B1",
+     "liquid": "line 2",
+     "declared_ul": 5000.0,
+     "needed_ul": 3200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 15 Tube Rack with Falcon 15 mL Conical",
+     "well": "C1",
+     "liquid": "line 3",
+     "declared_ul": 5000.0,
+     "needed_ul": 3200.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 3
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: no biology problems found.\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\nA clean report is not a promise that the experiment will work.",
+ "findings": [],
+ "seconds": 5.2,
+ "draft": 0
+}

@@ -1,0 +1,83 @@
+{
+ "id": "hard-clone-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 77,
+    "title": "A used tip went into a stock: water (well A1 in slot 5)"
+   },
+   {
+    "rule_id": "COLD-MODULE-NEVER-SET",
+    "severity": "warning",
+    "certain": true,
+    "line": 56,
+    "title": "A temperature module was loaded but never set"
+   },
+   {
+    "rule_id": "ENZYME-BEFORE-DILUENT",
+    "severity": "warning",
+    "certain": true,
+    "line": 61,
+    "title": "An enzyme was added before the water: ligase"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 64,
+    "title": "A used tip went into a stock: vector (well A3 in slot 4)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 73,
+    "title": "A used tip went into a stock: 24 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "note",
+    "certain": true,
+    "line": 60,
+    "title": "A used tip went into a stock: ligase (well A2 in slot 4)"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 58,
+    "title": "The pipette draws air from well A1 in slot 5: the liquid is below the tip"
+   }
+  ],
+  "draft": 3,
+  "rounds": 3
+ },
+ "tool_calls": 11,
+ "turns": 11,
+ "drafts": 4,
+ "checks": 4,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 593877,
+ "tokens_out": 101175,
+ "seconds": 834.9
+}

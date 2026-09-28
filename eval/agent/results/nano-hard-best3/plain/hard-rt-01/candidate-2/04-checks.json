@@ -1,0 +1,986 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map hard-rt-01. 24 of 24 wells hold what the plate map\n  says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 1). Reading of the request: 12\n    reactions and 12 no-RT controls.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  rna 1                                  20.0      16.0       4.0       0.0     0.0\n  rna 2                                  20.0      16.0       4.0       0.0     0.0\n  rna 3                                  20.0      16.0       4.0       0.0     0.0\n  rna 4                                  20.0      16.0       4.0       0.0     0.0\n  rna 5                                  20.0      16.0       4.0       0.0     0.0\n  rna 6                                  20.0      16.0       4.0       0.0     0.0\n  rna 7                                  20.0      16.0       4.0       0.0     0.0\n  rna 8                                  20.0      16.0       4.0       0.0     0.0\n  rna 9                                  20.0      16.0       4.0       0.0     0.0\n  rna 10                                 20.0      16.0       4.0       0.0     0.0\n  rna 11                                 20.0      16.0       4.0       0.0     0.0\n  rna 12                                 20.0      16.0       4.0       0.0     0.0\n  buffer                                200.0      96.0     104.0       0.0     0.0\n  rt                                    200.0      12.0     188.0       0.0     0.0\n  dntp                                  200.0      24.0     176.0       0.0     0.0\n  primers                               200.0      24.0     176.0       0.0     0.0\n  water                                 200.0     132.0      68.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A1    rna 1                                 16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B1    rna 2                                 16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C1    rna 3                                 16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D1    rna 4                                 16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E1    rna 5                                 16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F1    rna 6                                 16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G1    rna 7                                 16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H1    rna 8                                 16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A2    rna 9                                 16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B2    rna 10                                16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C2    rna 11                                16.0      20.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D2    rna 12                                16.0      20.0\n  3    Opentrons 24 Well Aluminum Block with A1    buffer                                96.0     200.0\n  3    Opentrons 24 Well Aluminum Block with A2    rt                                    12.0     200.0\n  3    Opentrons 24 Well Aluminum Block with A3    dntp                                  24.0     200.0\n  3    Opentrons 24 Well Aluminum Block with A4    primers                               24.0     200.0\n  3    Opentrons 24 Well Aluminum Block with A5    water                                132.0     200.0\n  Tips: 88 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 4.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.\n\nI do not know what 'primers' is (declared at line 41): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-rt-01",
+  "technique": "PCR setup",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [
+   {
+    "name": "primers",
+    "description": "Random primers",
+    "wells": [
+     "A4 in slot 3"
+    ],
+    "line": 41,
+    "sentence": "I do not know what 'primers' is (declared at line 41): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   }
+  ],
+  "intent": {
+   "status": "verified",
+   "destination": "1:biorad_96_wellplate_200ul_pcr",
+   "variant": "12 reactions and 12 no-RT controls",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 24,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_1": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_1": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_2": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 3.9999999999999996,
+      "water": 5.0,
+      "rna_2": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_3": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_3": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_4": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_4": 8.0,
+      "dntp": 0.9999999999999999,
+      "primers": 0.9999999999999999,
+      "rt": 0.9999999999999999
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_5": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_5": 8.0,
+      "dntp": 0.9999999999999999,
+      "primers": 0.9999999999999999,
+      "rt": 0.9999999999999999
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_6": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_6": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_7": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_7": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_8": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_8": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_9": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_9": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_10": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_10": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_11": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_11": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 4.0,
+      "rt": 1.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_12": 8.0,
+      "water": 5.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 5.0,
+      "rna_12": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rt": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_1": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_1": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_2": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_2": 8.0,
+      "dntp": 0.9999999999999999,
+      "primers": 0.9999999999999999
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_3": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_3": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_4": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_4": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_5": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_5": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_6": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_6": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_7": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_7": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_8": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_8": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_9": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_9": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F3",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_10": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_10": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G3",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_11": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_11": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H3",
+     "group": "no-RT controls",
+     "expected": {
+      "buffer": 4.0,
+      "dntp": 1.0,
+      "primers": 1.0,
+      "rna_12": 8.0,
+      "water": 6.0
+     },
+     "found": {
+      "buffer": 4.0,
+      "water": 6.0,
+      "rna_12": 8.0,
+      "dntp": 1.0,
+      "primers": 1.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "rna 1",
+    "logical": "rna_1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 2",
+    "logical": "rna_2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 3",
+    "logical": "rna_3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 4",
+    "logical": "rna_4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 5",
+    "logical": "rna_5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 6",
+    "logical": "rna_6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 7",
+    "logical": "rna_7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 8",
+    "logical": "rna_8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 9",
+    "logical": "rna_9",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 10",
+    "logical": "rna_10",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 11",
+    "logical": "rna_11",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rna 12",
+    "logical": "rna_12",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 16.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 96.0,
+    "left_in_source_ul": 104.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rt",
+    "logical": "rt",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 12.0,
+    "left_in_source_ul": 188.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "dntp",
+    "logical": "dntp",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 24.0,
+    "left_in_source_ul": 176.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "primers",
+    "logical": "primers",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 24.0,
+    "left_in_source_ul": 176.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 132.0,
+    "left_in_source_ul": 68.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A1",
+     "liquid": "rna 1",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B1",
+     "liquid": "rna 2",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C1",
+     "liquid": "rna 3",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D1",
+     "liquid": "rna 4",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E1",
+     "liquid": "rna 5",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F1",
+     "liquid": "rna 6",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G1",
+     "liquid": "rna 7",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H1",
+     "liquid": "rna 8",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A2",
+     "liquid": "rna 9",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B2",
+     "liquid": "rna 10",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C2",
+     "liquid": "rna 11",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D2",
+     "liquid": "rna 12",
+     "declared_ul": 20.0,
+     "needed_ul": 16.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "buffer",
+     "declared_ul": 200.0,
+     "needed_ul": 96.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "rt",
+     "declared_ul": 200.0,
+     "needed_ul": 12.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "dntp",
+     "declared_ul": 200.0,
+     "needed_ul": 24.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "primers",
+     "declared_ul": 200.0,
+     "needed_ul": 24.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "water",
+     "declared_ul": 200.0,
+     "needed_ul": 132.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "4",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 88
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: 4 biology problems (4 notes).\n\n1. NOTE CONTAM-STOCK: A used tip went into a stock: water (well A5 in slot 3)\n   line 59:  p20.aspirate(5, cold_block[\"A5\"]); p20.dispense(5, well);\n   At line 59 the tip went into water (well A5 in slot 3) while it still carried buffer\n   (well A1 in slot 3) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. The protocol drew from it again afterwards, but only into wells that\n   were given that material on purpose anyway, so this run is not harmed. What is left in\n   the stock is no longer clean for the next run.\n   Affected: well A5 in slot 3.\n   Fix: Pick up a fresh tip before line 59 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [89cc03452782]\n\n2. NOTE NO-NEGATIVE-CONTROL: No no-template control: 24 wells of dntp with a sample\n   line 71:  p20.aspirate(1, cold_block[\"A3\"]); p20.dispense(1, well);\n   At line 71 the robot starts putting dntp into Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 1),\n   and 24 wells end holding it together with a sample. No well on this plate holds the mix\n   without a sample, so there is no no-template control. If a reagent is contaminated, or\n   the primers pair with each other, every well gives a signal and nothing on the plate can\n   tell that from a real one. Wells: wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in\n   slot 1.\n   Affected: wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 1.\n   Fix: Add one well (three for qPCR) with 1 ul of dntp and 8 ul of water in place of the\n   template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [329a6ac45257]\n\n3. NOTE UNMIXED-AT-END: 12 wells never mixed after rt went in (5% of the well)\n   line 81:  p20.aspirate(1, cold_block[\"A2\"]); p20.dispense(1, well);\n   At line 81 the robot added rt to wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot\n   1, which already held buffer, water, rna 1, dntp and 12 more (this line did it 12 times).\n   The addition was 5% of the well, nothing mixed the well afterwards, and the run ended\n   with them that way. Two liquids layered in a small well do not mix on their own, so what\n   the well holds is not at the concentration you calculated. A PCR plate is usually\n   vortexed and spun down before cycling; if this one will not be, mix it.\n   Affected: wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 1.\n   Fix: Mix wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 1 after line 81:\n   `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [d82337816c8c]\n\n4. NOTE UNMIXED-AT-END: 12 wells never mixed after primers went in (5% of the well)\n   line 111:  p20.aspirate(1, cold_block[\"A4\"]); p20.dispense(1, well);\n   At line 111 the robot added primers to wells A3, B3, C3, D3, E2, E3, F2, F3 and 4 more in\n   slot 1, which already held buffer, water, rna 1, dntp and 11 more (this line did it 12\n   times). The addition was 5% of the well, nothing mixed the well afterwards, and the run\n   ended with them that way. Two liquids layered in a small well do not mix on their own, so\n   what the well holds is not at the concentration you calculated. A PCR plate is usually\n   vortexed and spun down before cycling; if this one will not be, mix it.\n   Affected: wells A3, B3, C3, D3, E2, E3, F2, F3 and 4 more in slot 1.\n   Fix: Mix wells A3, B3, C3, D3, E2, E3, F2, F3 and 4 more in slot 1 after line 111:\n   `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [788609bcd7f7]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\n\nI do not know what 'primers' is (declared at line 41): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "note",
+   "certain": true,
+   "line": 59,
+   "title": "A used tip went into a stock: water (well A5 in slot 3)",
+   "explanation": "At line 59 the tip went into water (well A5 in slot 3) while it still carried buffer (well A1 in slot 3) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 59 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 71,
+   "title": "No no-template control: 24 wells of dntp with a sample",
+   "explanation": "At line 71 the robot starts putting dntp into Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 1), and 24 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 1.",
+   "fix": "Add one well (three for qPCR) with 1 ul of dntp and 8 ul of water in place of the template, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 81,
+   "title": "12 wells never mixed after rt went in (5% of the well)",
+   "explanation": "At line 81 the robot added rt to wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 1, which already held buffer, water, rna 1, dntp and 12 more (this line did it 12 times). The addition was 5% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 1 after line 81: `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 111,
+   "title": "12 wells never mixed after primers went in (5% of the well)",
+   "explanation": "At line 111 the robot added primers to wells A3, B3, C3, D3, E2, E3, F2, F3 and 4 more in slot 1, which already held buffer, water, rna 1, dntp and 11 more (this line did it 12 times). The addition was 5% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A3, B3, C3, D3, E2, E3, F2, F3 and 4 more in slot 1 after line 111: `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 8.0,
+ "draft": 4
+}

@@ -1,0 +1,141 @@
+{
+ "id": "norm-01",
+ "request": "Normalize 24 DNA samples to 10 ng/ul in 50 ul. The sample concentrations are: 85, 120, 44, 67, 210, 95, 33, 150, 78, 60, 101, 55, 190, 72, 48, 130, 88, 25, 64, 110, 39, 175, 92, 58 ng/ul. Samples are in a 96-well plate; add water from a reservoir and the right volume of each sample into a new plate.",
+ "technique": "Normalization",
+ "liquids": [
+  {
+   "name": "sample_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:sample|dna|template)\\D{0,12}?(\\d+)",
+   "count": 24,
+   "index": "number"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "24 normalized samples",
+   "why": "the request does not specify which wells in the destination plate",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "sample_1": 5.8824,
+       "water": 44.1176
+      },
+      {
+       "sample_2": 4.1667,
+       "water": 45.8333
+      },
+      {
+       "sample_3": 11.3636,
+       "water": 38.6364
+      },
+      {
+       "sample_4": 7.4627,
+       "water": 42.5373
+      },
+      {
+       "sample_5": 2.381,
+       "water": 47.619
+      },
+      {
+       "sample_6": 5.2632,
+       "water": 44.7368
+      },
+      {
+       "sample_7": 15.1515,
+       "water": 34.8485
+      },
+      {
+       "sample_8": 3.3333,
+       "water": 46.6667
+      },
+      {
+       "sample_9": 6.4103,
+       "water": 43.5897
+      },
+      {
+       "sample_10": 8.3333,
+       "water": 41.6667
+      },
+      {
+       "sample_11": 4.9505,
+       "water": 45.0495
+      },
+      {
+       "sample_12": 9.0909,
+       "water": 40.9091
+      },
+      {
+       "sample_13": 2.6316,
+       "water": 47.3684
+      },
+      {
+       "sample_14": 6.9444,
+       "water": 43.0556
+      },
+      {
+       "sample_15": 10.4167,
+       "water": 39.5833
+      },
+      {
+       "sample_16": 3.8462,
+       "water": 46.1538
+      },
+      {
+       "sample_17": 5.6818,
+       "water": 44.3182
+      },
+      {
+       "sample_18": 20.0,
+       "water": 30.0
+      },
+      {
+       "sample_19": 7.8125,
+       "water": 42.1875
+      },
+      {
+       "sample_20": 4.5455,
+       "water": 45.4545
+      },
+      {
+       "sample_21": 12.8205,
+       "water": 37.1795
+      },
+      {
+       "sample_22": 2.8571,
+       "water": 47.1429
+      },
+      {
+       "sample_23": 5.4348,
+       "water": 44.5652
+      },
+      {
+       "sample_24": 8.6207,
+       "water": 41.3793
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The request does not say which wells; column\u2011major order from A1 chosen for the 24 samples."
+ ]
+}

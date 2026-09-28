@@ -1,0 +1,612 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-mic-01. 22 of 24 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 3). Reading of the request: rows A and\n    B; excess removed from column 10.\n  well A11: expected 50 ul broth, 50 ul culture; found 50 ul culture\n      - broth is missing: the plate map says 50 ul, none arrives\n  well B11: expected 50 ul broth, 50 ul culture; found 50 ul culture\n      - broth is missing: the plate map says 50 ul, none arrives\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  antibiotic 1                         2000.0      50.0    1950.0       0.0     0.0  <-- FLAG\n  antibiotic 2                         2000.0      50.0    1950.0       0.0     0.0  <-- FLAG\n  broth                                2000.0    1100.1     800.0      99.9     0.0\n  culture                              2000.0    1100.0     900.0       0.0     0.0\n  FLAG: antibiotic 1 ends in wells the plate map does not list for it: A6 in slot 2 (0.0\n    ul).\n  FLAG: antibiotic 2 ends in wells the plate map does not list for it: A6 in slot 2 (0.0\n    ul).\n  Note: broth ends in wells the plate map does not list for it: A6 in slot 2 (99.9 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    antibiotic 1                          50.0    2000.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    antibiotic 2                          50.0    2000.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A3    culture                             1100.0    2000.0\n  4    NEST 12 Well Reservoir 15 mL          A1    broth                               1200.0    2000.0\n  Tips: 66 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-mic-01",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_200ul_flat",
+   "variant": "rows A and B; excess removed from column 10",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 22,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 25.0,
+      "broth": 25.0,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 25.0,
+      "antibiotic_1": 25.0,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 12.5,
+      "broth": 37.5,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 37.5,
+      "antibiotic_1": 12.5,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 6.25,
+      "broth": 43.75,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 43.75,
+      "antibiotic_1": 6.25,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 3.125,
+      "broth": 46.875,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 46.875,
+      "antibiotic_1": 3.125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 1.5625,
+      "broth": 48.4375,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 48.4375,
+      "antibiotic_1": 1.5625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.7812,
+      "broth": 49.2188,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.21875,
+      "antibiotic_1": 0.78125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.3906,
+      "broth": 49.6094,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.609375,
+      "antibiotic_1": 0.390625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.1953,
+      "broth": 49.8047,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.8046875,
+      "antibiotic_1": 0.1953125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.0977,
+      "broth": 49.9023,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.90234375,
+      "antibiotic_1": 0.09765625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.0488,
+      "broth": 49.9512,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.951171875,
+      "antibiotic_1": 0.048828125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "broth": 50.0,
+      "culture": 50.0
+     },
+     "found": {
+      "culture": 50.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "broth",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "broth": 100.0
+     },
+     "found": {
+      "broth": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 25.0,
+      "broth": 25.0,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 25.0,
+      "antibiotic_2": 25.0,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 12.5,
+      "broth": 37.5,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 37.5,
+      "antibiotic_2": 12.5,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 6.25,
+      "broth": 43.75,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 43.75,
+      "antibiotic_2": 6.25,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 3.125,
+      "broth": 46.875,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 46.875,
+      "antibiotic_2": 3.125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 1.5625,
+      "broth": 48.4375,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 48.4375,
+      "antibiotic_2": 1.5625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.7812,
+      "broth": 49.2188,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.21875,
+      "antibiotic_2": 0.78125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B7",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.3906,
+      "broth": 49.6094,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.609375,
+      "antibiotic_2": 0.390625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B8",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.1953,
+      "broth": 49.8047,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.8046875,
+      "antibiotic_2": 0.1953125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B9",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.0977,
+      "broth": 49.9023,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.90234375,
+      "antibiotic_2": 0.09765625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.0488,
+      "broth": 49.9512,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.951171875,
+      "antibiotic_2": 0.048828125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {
+      "broth": 50.0,
+      "culture": 50.0
+     },
+     "found": {
+      "culture": 50.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "broth",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {
+      "broth": 100.0
+     },
+     "found": {
+      "broth": 100.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "broth": 50.0,
+      "culture": 50.0
+     },
+     "found": {
+      "culture": 50.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "broth",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {
+      "broth": 50.0,
+      "culture": 50.0
+     },
+     "found": {
+      "culture": 50.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "broth",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "antibiotic 1",
+    "logical": "antibiotic_1",
+    "role": "sample",
+    "declared_ul": 2000.0,
+    "delivered_ul": 49.9512,
+    "left_in_source_ul": 1950.0,
+    "elsewhere": [
+     {
+      "well": "2:opentrons_24_tuberack_nest_1.5ml_snapcap[A6]",
+      "ul": 0.0488
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "antibiotic 1 ends in wells the plate map does not list for it: A6 in slot 2 (0.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "antibiotic 2",
+    "logical": "antibiotic_2",
+    "role": "sample",
+    "declared_ul": 2000.0,
+    "delivered_ul": 49.9512,
+    "left_in_source_ul": 1950.0,
+    "elsewhere": [
+     {
+      "well": "2:opentrons_24_tuberack_nest_1.5ml_snapcap[A6]",
+      "ul": 0.0488
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "antibiotic 2 ends in wells the plate map does not list for it: A6 in slot 2 (0.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "broth",
+    "logical": "broth",
+    "role": "reagent",
+    "declared_ul": 2000.0,
+    "delivered_ul": 1100.0977,
+    "left_in_source_ul": 800.0,
+    "elsewhere": [
+     {
+      "well": "2:opentrons_24_tuberack_nest_1.5ml_snapcap[A6]",
+      "ul": 99.9023
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "broth ends in wells the plate map does not list for it: A6 in slot 2 (99.9 ul)."
+    ]
+   },
+   {
+    "liquid": "culture",
+    "logical": "culture",
+    "role": "reagent",
+    "declared_ul": 2000.0,
+    "delivered_ul": 1100.0,
+    "left_in_source_ul": 900.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "antibiotic 1",
+     "declared_ul": 2000.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "antibiotic 2",
+     "declared_ul": 2000.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "culture",
+     "declared_ul": 2000.0,
+     "needed_ul": 1100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "broth",
+     "declared_ul": 2000.0,
+     "needed_ul": 1200.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 66
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (2 warnings, 1 note).\n\n1. WARNING MIX-BEFORE-DRAW: Liquid drawn from 10 wells before it was mixed: added at line\n51, drawn at line 50 and line 57\n   line 51:  p300.dispense(50, target_well)\n   reached through: run:62 > process_row:51\n   At line 51 liquid was added to wells A1, A2, A3, A4, A5, A6, A7, A8 and 2 more in slot 3,\n   which already held a different liquid (this line did it 10 times). At line 50 and line 57\n   liquid was drawn out of them again, and the well was never mixed in between. Two liquids\n   layered in a small well do not mix on their own, so what the tip drew is not at the\n   concentration you calculated. In a dilution series every later step inherits the error.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 2 more in slot 3.\n   Also reached 1 other well: tube A6 in slot 2.\n   Fix: Mix the well after the addition at line 51: `mix_after=(5, volume)` in a transfer,\n   or `pipette.mix(5, volume, well)`. Integra suggests about 5 cycles at about 80% of the\n   volume in the well.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Svec et al. 2015: how good is a PCR efficiency estimate\n           https://pmc.ncbi.nlm.nih.gov/articles/PMC4822216/\n   [9bcad7a1cbcd]\n\n2. WARNING MIX-BEFORE-DRAW: Liquid drawn from 10 wells before it was mixed: added at line\n51, drawn at line 50 and line 57\n   line 51:  p300.dispense(50, target_well)\n   reached through: run:63 > process_row:51\n   At line 51 liquid was added to wells B1, B2, B3, B4, B5, B6, B7, B8 and 2 more in slot 3,\n   which already held a different liquid (this line did it 10 times). At line 50 and line 57\n   liquid was drawn out of them again, and the well was never mixed in between. Two liquids\n   layered in a small well do not mix on their own, so what the tip drew is not at the\n   concentration you calculated. In a dilution series every later step inherits the error.\n   Affected: wells B1, B2, B3, B4, B5, B6, B7, B8 and 2 more in slot 3.\n   Also reached 1 other well: tube A6 in slot 2.\n   Fix: Mix the well after the addition at line 51: `mix_after=(5, volume)` in a transfer,\n   or `pipette.mix(5, volume, well)`. Integra suggests about 5 cycles at about 80% of the\n   volume in the well.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Svec et al. 2015: how good is a PCR efficiency estimate\n           https://pmc.ncbi.nlm.nih.gov/articles/PMC4822216/\n   [aba06b16d384]\n\n3. NOTE WELL-CAPACITY: Declared more than the well holds: 2000 ul in a 1898 ul well, 3 wells\n   line 50:  p300.aspirate(50, source)\n   reached through: run:62 > process_row:50\n   At line 50 the robot draws from tube A1 in slot 2, which the protocol declares (line 25)\n   to hold 2000 ul; the well holds 1897.79 ul, and 2 more are like it. The prep sheet cannot\n   be followed as written. Wells: tubes A1, A2 and A3 in slot 2.\n   Affected: tubes A1, A2 and A3 in slot 2.\n   Fix: Declare what the well can really hold, or use a bigger container.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [51344bad3928]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "MIX-BEFORE-DRAW",
+   "severity": "warning",
+   "certain": true,
+   "line": 51,
+   "title": "Liquid drawn from 10 wells before it was mixed: added at line 51, drawn at line 50 and line 57",
+   "explanation": "At line 51 liquid was added to wells A1, A2, A3, A4, A5, A6, A7, A8 and 2 more in slot 3, which already held a different liquid (this line did it 10 times). At line 50 and line 57 liquid was drawn out of them again, and the well was never mixed in between. Two liquids layered in a small well do not mix on their own, so what the tip drew is not at the concentration you calculated. In a dilution series every later step inherits the error.",
+   "fix": "Mix the well after the addition at line 51: `mix_after=(5, volume)` in a transfer, or `pipette.mix(5, volume, well)`. Integra suggests about 5 cycles at about 80% of the volume in the well."
+  },
+  {
+   "rule_id": "MIX-BEFORE-DRAW",
+   "severity": "warning",
+   "certain": true,
+   "line": 51,
+   "title": "Liquid drawn from 10 wells before it was mixed: added at line 51, drawn at line 50 and line 57",
+   "explanation": "At line 51 liquid was added to wells B1, B2, B3, B4, B5, B6, B7, B8 and 2 more in slot 3, which already held a different liquid (this line did it 10 times). At line 50 and line 57 liquid was drawn out of them again, and the well was never mixed in between. Two liquids layered in a small well do not mix on their own, so what the tip drew is not at the concentration you calculated. In a dilution series every later step inherits the error.",
+   "fix": "Mix the well after the addition at line 51: `mix_after=(5, volume)` in a transfer, or `pipette.mix(5, volume, well)`. Integra suggests about 5 cycles at about 80% of the volume in the well."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "note",
+   "certain": true,
+   "line": 50,
+   "title": "Declared more than the well holds: 2000 ul in a 1898 ul well, 3 wells",
+   "explanation": "At line 50 the robot draws from tube A1 in slot 2, which the protocol declares (line 25) to hold 2000 ul; the well holds 1897.79 ul, and 2 more are like it. The prep sheet cannot be followed as written. Wells: tubes A1, A2 and A3 in slot 2.",
+   "fix": "Declare what the well can really hold, or use a bigger container."
+  }
+ ],
+ "seconds": 20.5,
+ "draft": 5
+}

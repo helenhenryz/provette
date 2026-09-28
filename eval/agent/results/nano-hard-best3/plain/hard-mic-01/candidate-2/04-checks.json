@@ -1,0 +1,656 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-mic-01. 22 of 24 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 3). Reading of the request: rows A and\n    B; excess removed from column 10.\n  well A11: expected 50 ul broth, 50 ul culture; found 50 ul culture\n      - broth is missing: the plate map says 50 ul, none arrives\n  well B11: expected 50 ul broth, 50 ul culture; found 50 ul culture\n      - broth is missing: the plate map says 50 ul, none arrives\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  broth                                2000.0    1100.1     800.0       0.0    99.9\n  antibiotic 1                         1000.0      50.0     950.0       0.0     0.0\n  antibiotic 2                         1000.0      50.0     950.0       0.0     0.0\n  culture                              2000.0    1100.0     900.0       0.0     0.0\n  Note: 99.9 ul of broth is lost: it left the deck inside a tip that was thrown away.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    antibiotic 1                          50.0    1000.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    antibiotic 2                          50.0    1000.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A3    culture                             1100.0    2000.0\n  4    NEST 12 Well Reservoir 15 mL          A1    broth                               1200.0    2000.0\n  Tips: 7 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-mic-01",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_200ul_flat",
+   "variant": "rows A and B; excess removed from column 10",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 22,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 25.0,
+      "broth": 25.0,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 25.0,
+      "antibiotic_1": 25.0,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 12.5,
+      "broth": 37.5,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 37.5,
+      "antibiotic_1": 12.5,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 6.25,
+      "broth": 43.75,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 43.75,
+      "antibiotic_1": 6.25,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 3.125,
+      "broth": 46.875,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 46.875,
+      "antibiotic_1": 3.125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 1.5625,
+      "broth": 48.4375,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 48.4375,
+      "antibiotic_1": 1.5625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.7812,
+      "broth": 49.2188,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.21875,
+      "antibiotic_1": 0.78125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.3906,
+      "broth": 49.6094,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.609375,
+      "antibiotic_1": 0.390625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.1953,
+      "broth": 49.8047,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.8046875,
+      "antibiotic_1": 0.1953125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.0977,
+      "broth": 49.9023,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.90234375,
+      "antibiotic_1": 0.09765625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "antibiotic_1": 0.0488,
+      "broth": 49.9512,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.951171875,
+      "antibiotic_1": 0.048828125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "broth": 50.0,
+      "culture": 50.0
+     },
+     "found": {
+      "culture": 50.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "broth",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "broth": 100.0
+     },
+     "found": {
+      "broth": 100.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 25.0,
+      "broth": 25.0,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 25.0,
+      "antibiotic_2": 25.0,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 12.5,
+      "broth": 37.5,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 37.5,
+      "antibiotic_2": 12.5,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 6.25,
+      "broth": 43.75,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 43.75,
+      "antibiotic_2": 6.25,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 3.125,
+      "broth": 46.875,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 46.875,
+      "antibiotic_2": 3.125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 1.5625,
+      "broth": 48.4375,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 48.4375,
+      "antibiotic_2": 1.5625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.7812,
+      "broth": 49.2188,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.21875,
+      "antibiotic_2": 0.78125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B7",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.3906,
+      "broth": 49.6094,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.609375,
+      "antibiotic_2": 0.390625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B8",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.1953,
+      "broth": 49.8047,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.8046875,
+      "antibiotic_2": 0.1953125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B9",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.0977,
+      "broth": 49.9023,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.90234375,
+      "antibiotic_2": 0.09765625,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {
+      "antibiotic_2": 0.0488,
+      "broth": 49.9512,
+      "culture": 50.0
+     },
+     "found": {
+      "broth": 49.951171875,
+      "antibiotic_2": 0.048828125,
+      "culture": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {
+      "broth": 50.0,
+      "culture": 50.0
+     },
+     "found": {
+      "culture": 50.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "broth",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {
+      "broth": 100.0
+     },
+     "found": {
+      "broth": 100.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "broth": 50.0,
+      "culture": 50.0
+     },
+     "found": {
+      "culture": 50.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "broth",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {
+      "broth": 50.0,
+      "culture": 50.0
+     },
+     "found": {
+      "culture": 50.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "broth",
+       "expected_ul": 50.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "broth",
+    "logical": "broth",
+    "role": "reagent",
+    "declared_ul": 2000.0,
+    "delivered_ul": 1100.0977,
+    "left_in_source_ul": 800.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 99.9023,
+    "flags": [],
+    "notes": [
+     "99.9 ul of broth is lost: it left the deck inside a tip that was thrown away."
+    ]
+   },
+   {
+    "liquid": "antibiotic 1",
+    "logical": "antibiotic_1",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 49.9512,
+    "left_in_source_ul": 950.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0488,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "antibiotic 2",
+    "logical": "antibiotic_2",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 49.9512,
+    "left_in_source_ul": 950.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0488,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "culture",
+    "logical": "culture",
+    "role": "reagent",
+    "declared_ul": 2000.0,
+    "delivered_ul": 1100.0,
+    "left_in_source_ul": 900.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "antibiotic 1",
+     "declared_ul": 1000.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "antibiotic 2",
+     "declared_ul": 1000.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "culture",
+     "declared_ul": 2000.0,
+     "needed_ul": 1100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "broth",
+     "declared_ul": 2000.0,
+     "needed_ul": 1200.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 7
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 10 biology problems (4 errors, 3 warnings, 3 notes).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: broth (well A1 in slot 4)\n   line 31:  p300.aspirate(50, broth_reservoir[\"A1\"])\n   At line 31 the tip went into broth (well A1 in slot 4) while it still carried antibiotic\n   1 (tube A1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. Liquid drawn from it then took the unwanted material along into 13\n   other wells: tube A2 in slot 2; wells A12, B1, B2, B3, B4, B5, B6, B7 and 4 more in slot\n   3.\n   Affected: well A1 in slot 4.\n   Also reached 13 other wells: tube A2 in slot 2; wells A12, B1, B2, B3, B4, B5, B6, B7 and\n   4 more in slot 3.\n   Fix: Pick up a fresh tip before line 31 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [6af775ce8d59]\n\n2. ERROR PIPETTE-RANGE: 5 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 40:  p300.mix(10, 5, plate[f\"A{i}\"])\n   At line 40 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this\n   line did it 100 times). A pipette cannot measure less than its minimum: it draws the\n   wrong amount, or nothing, and the volumes in this protocol only add up on paper. The\n   simulator passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 2 more in slot\n   3.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 2 more in slot 3.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [b65c0b337d14]\n\n3. ERROR CONTAM-STOCK: A used tip went into a stock: broth (well A1 in slot 4)\n   line 50:  p300.aspirate(50, broth_reservoir[\"A1\"])\n   At line 50 the tip went into broth (well A1 in slot 4) while it still carried antibiotic\n   2 (tube A2 in slot 2) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. Liquid drawn from it then took the unwanted material along into 2 other\n   wells: wells A12 and B12 in slot 3.\n   Affected: well A1 in slot 4.\n   Also reached 2 other wells: wells A12 and B12 in slot 3.\n   Fix: Pick up a fresh tip before line 50 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [b63d78fc7e95]\n\n4. ERROR PIPETTE-RANGE: 5 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 59:  p300.mix(10, 5, plate[f\"B{i}\"])\n   At line 59 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this\n   line did it 100 times). A pipette cannot measure less than its minimum: it draws the\n   wrong amount, or nothing, and the volumes in this protocol only add up on paper. The\n   simulator passes the move. Wells: wells B1, B2, B3, B4, B5, B6, B7, B8 and 2 more in slot\n   3.\n   Affected: wells B1, B2, B3, B4, B5, B6, B7, B8 and 2 more in slot 3.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [b2a96dea6d7d]\n\n5. WARNING MIX-TOO-WEAK: Mixing too weak to stir 10 wells: 10 \u00d7 5 ul in 100 ul\n   line 40:  p300.mix(10, 5, plate[f\"A{i}\"])\n   At line 40 the tip mixes wells A1, A2, A3, A4, A5, A6, A7, A8 and 2 more in slot 3 with\n   10 strokes of 5 ul in a well holding 100 ul (this line did it 10 times). 10 strokes of 5\n   ul move 0.5 of the well in all; it takes about 2 wells' worth of strokes to mix (the\n   mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV\n   where twenty gave 1.7%. What the well holds is not at the concentration you calculated,\n   and in a dilution series every later step inherits the error.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 2 more in slot 3.\n   Fix: Mix the well with about 80% of its volume (80 ul) at least 5 times: `mix(5, 80,\n   well)`. A stroke of the whole well draws air; use no more than 90%.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [111cfad5c9da]\n\n6. WARNING MIX-TOO-WEAK: Mixing too weak to stir 10 wells: 10 \u00d7 5 ul in 100 ul\n   line 59:  p300.mix(10, 5, plate[f\"B{i}\"])\n   At line 59 the tip mixes wells B1, B2, B3, B4, B5, B6, B7, B8 and 2 more in slot 3 with\n   10 strokes of 5 ul in a well holding 100 ul (this line did it 10 times). 10 strokes of 5\n   ul move 0.5 of the well in all; it takes about 2 wells' worth of strokes to mix (the\n   mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV\n   where twenty gave 1.7%. What the well holds is not at the concentration you calculated,\n   and in a dilution series every later step inherits the error.\n   Affected: wells B1, B2, B3, B4, B5, B6, B7, B8 and 2 more in slot 3.\n   Fix: Mix the well with about 80% of its volume (80 ul) at least 5 times: `mix(5, 80,\n   well)`. A stroke of the whole well draws air; use no more than 90%.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [ac117cfb6a82]\n\n7. WARNING CONTAM-WELL: A used tip carried antibiotic 1 (tube A1 in slot 2), antibiotic 2\n(tube A2 in slot 2) and broth (well A1 in slot 4) into 2 wells it was never meant for\n   line 75:  p300.dispense(50, plate[well])\n   At line 75 the tip touched the liquid in wells A11 and B11 in slot 3 while it still\n   carried antibiotic 1 (tube A1 in slot 2), antibiotic 2 (tube A2 in slot 2) and broth\n   (well A1 in slot 4) from an earlier step (this line did it twice). A tip that has touched\n   one liquid leaves a little of it in the next liquid it touches. The protocol never\n   transfers that liquid into these wells on purpose, so it was not meant to be there. If\n   the wells hold different samples, each now holds a little of another.\n   Affected: wells A11 and B11 in slot 3.\n   Fix: Use a fresh tip for each well at line 75. If one tip must serve many wells, dispense\n   from above the liquid (for example `well.top()`) so that the tip never touches what is\n   already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [c9d0a6a6ad5e]\n\n8. NOTE CONTAM-STOCK: A used tip went into a stock: antibiotic 1 (tube A1 in slot 2)\n   line 35:  p300.aspirate(50, tubes[\"A1\"])\n   At line 35 the tip went into antibiotic 1 (tube A1 in slot 2) while it still carried\n   broth (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves\n   a little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. The protocol does not draw from it again, so this run is not harmed,\n   but what is left in the stock is no longer clean for the next run.\n   Affected: tube A1 in slot 2.\n   Fix: Pick up a fresh tip before line 35 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [cead482d7762]\n\n9. NOTE CONTAM-STOCK: A used tip went into a stock: antibiotic 2 (tube A2 in slot 2)\n   line 54:  p300.aspirate(50, tubes[\"A2\"])\n   At line 54 the tip went into antibiotic 2 (tube A2 in slot 2) while it still carried\n   broth (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves\n   a little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. The protocol does not draw from it again, so this run is not harmed,\n   but what is left in the stock is no longer clean for the next run.\n   Affected: tube A2 in slot 2.\n   Fix: Pick up a fresh tip before line 54 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [732883d947be]\n\n10. NOTE WELL-CAPACITY: Declared more than the well holds: 2000 ul in a 1898 ul well, 1 well\n   line 71:  p300.aspirate(50 * n_wells, tubes[\"A3\"])\n   At line 71 the robot draws from tube A3 in slot 2, which the protocol declares (line 22)\n   to hold 2000 ul; the well holds 1897.79 ul. The prep sheet cannot be followed as written.\n   Wells: tube A3 in slot 2.\n   Affected: tube A3 in slot 2.\n   Fix: Declare what the well can really hold, or use a bigger container.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [dd8a1b09b905]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 31,
+   "title": "A used tip went into a stock: broth (well A1 in slot 4)",
+   "explanation": "At line 31 the tip went into broth (well A1 in slot 4) while it still carried antibiotic 1 (tube A1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 13 other wells: tube A2 in slot 2; wells A12, B1, B2, B3, B4, B5, B6, B7 and 4 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 31 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 40,
+   "title": "5 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 40 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this line did it 100 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 2 more in slot 3.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 50,
+   "title": "A used tip went into a stock: broth (well A1 in slot 4)",
+   "explanation": "At line 50 the tip went into broth (well A1 in slot 4) while it still carried antibiotic 2 (tube A2 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 2 other wells: wells A12 and B12 in slot 3.",
+   "fix": "Pick up a fresh tip before line 50 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 59,
+   "title": "5 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 59 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this line did it 100 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells B1, B2, B3, B4, B5, B6, B7, B8 and 2 more in slot 3.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 40,
+   "title": "Mixing too weak to stir 10 wells: 10 \u00d7 5 ul in 100 ul",
+   "explanation": "At line 40 the tip mixes wells A1, A2, A3, A4, A5, A6, A7, A8 and 2 more in slot 3 with 10 strokes of 5 ul in a well holding 100 ul (this line did it 10 times). 10 strokes of 5 ul move 0.5 of the well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix the well with about 80% of its volume (80 ul) at least 5 times: `mix(5, 80, well)`. A stroke of the whole well draws air; use no more than 90%."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 59,
+   "title": "Mixing too weak to stir 10 wells: 10 \u00d7 5 ul in 100 ul",
+   "explanation": "At line 59 the tip mixes wells B1, B2, B3, B4, B5, B6, B7, B8 and 2 more in slot 3 with 10 strokes of 5 ul in a well holding 100 ul (this line did it 10 times). 10 strokes of 5 ul move 0.5 of the well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix the well with about 80% of its volume (80 ul) at least 5 times: `mix(5, 80, well)`. A stroke of the whole well draws air; use no more than 90%."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 75,
+   "title": "A used tip carried antibiotic 1 (tube A1 in slot 2), antibiotic 2 (tube A2 in slot 2) and broth (well A1 in slot 4) into 2 wells it was never meant for",
+   "explanation": "At line 75 the tip touched the liquid in wells A11 and B11 in slot 3 while it still carried antibiotic 1 (tube A1 in slot 2), antibiotic 2 (tube A2 in slot 2) and broth (well A1 in slot 4) from an earlier step (this line did it twice). A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 75. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "note",
+   "certain": true,
+   "line": 35,
+   "title": "A used tip went into a stock: antibiotic 1 (tube A1 in slot 2)",
+   "explanation": "At line 35 the tip went into antibiotic 1 (tube A1 in slot 2) while it still carried broth (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol does not draw from it again, so this run is not harmed, but what is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 35 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "note",
+   "certain": true,
+   "line": 54,
+   "title": "A used tip went into a stock: antibiotic 2 (tube A2 in slot 2)",
+   "explanation": "At line 54 the tip went into antibiotic 2 (tube A2 in slot 2) while it still carried broth (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol does not draw from it again, so this run is not harmed, but what is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 54 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "note",
+   "certain": true,
+   "line": 71,
+   "title": "Declared more than the well holds: 2000 ul in a 1898 ul well, 1 well",
+   "explanation": "At line 71 the robot draws from tube A3 in slot 2, which the protocol declares (line 22) to hold 2000 ul; the well holds 1897.79 ul. The prep sheet cannot be followed as written. Wells: tube A3 in slot 2.",
+   "fix": "Declare what the well can really hold, or use a bigger container."
+  }
+ ],
+ "seconds": 6.9,
+ "draft": 4
+}

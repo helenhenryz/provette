@@ -1,0 +1,40 @@
+{
+ "id": "hard-pcr-03",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 132,
+    "title": "No no-template control: 46 wells of dntp and polymerase with a sample"
+   }
+  ],
+  "draft": 8,
+  "rounds": 8
+ },
+ "tool_calls": 15,
+ "turns": 15,
+ "drafts": 9,
+ "checks": 9,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 840341,
+ "tokens_out": 103755,
+ "seconds": 1162.8
+}

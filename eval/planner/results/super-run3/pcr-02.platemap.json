@@ -1,0 +1,171 @@
+{
+ "id": "pcr-02",
+ "request": "I have 24 genomic DNA samples in a tube rack and one tube of 2x PCR master mix with primers already added. Make 25 ul reactions in a PCR plate: 12.5 ul master mix, 10.5 ul water, 2 ul DNA.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "dna_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:dna|genomic dna|template)\\D{0,12}?(\\d+)",
+   "count": 24,
+   "index": "number"
+  },
+  {
+   "name": "master_mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)master\\s*mix|mastermix"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "24 reactions free",
+   "why": "the request does not specify well positions",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "dna_1": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_2": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_3": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_4": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_5": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_6": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_7": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_8": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_9": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_10": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_11": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_12": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_13": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_14": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_15": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_16": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_17": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_18": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_19": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_20": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_21": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_22": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_23": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      },
+      {
+       "dna_24": 2,
+       "master_mix": 12.5,
+       "water": 10.5
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "the request does not say which wells; order of samples follows numeric index chosen"
+ ]
+}

@@ -1,0 +1,237 @@
+{
+ "id": "hard-norm-01",
+ "request": "Normalize 48 sequencing libraries to 4 nM in 20 ul with elution buffer from a reservoir, into a new PCR plate. The library concentrations in nM, in order, are: 12, 45, 8, 80, 33, 5.5, 60, 21, 14, 9, 72, 27, 6, 40, 18, 55, 11, 30, 7.5, 65, 24, 16, 48, 10, 36, 13, 70, 22, 8.5, 50, 29, 19, 42, 15, 62, 25, 6.5, 38, 17, 76, 20, 9.5, 58, 31, 12.5, 44, 23, 7.",
+ "technique": "Normalization",
+ "liquids": [
+  {
+   "name": "buffer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)buffer|\\beb\\b|elution|\\bte\\b|water"
+  },
+  {
+   "name": "library_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:library|lib|sample)\\D{0,12}?(\\d+)",
+   "count": 48,
+   "index": "number"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "48 normalised libraries",
+   "why": "'a new PCR plate': which wells is free",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "normalised",
+     "members": [
+      {
+       "library_1": 6.6667,
+       "buffer": 13.3333
+      },
+      {
+       "library_2": 1.7778,
+       "buffer": 18.2222
+      },
+      {
+       "library_3": 10.0,
+       "buffer": 10.0
+      },
+      {
+       "library_4": 1.0,
+       "buffer": 19.0
+      },
+      {
+       "library_5": 2.4242,
+       "buffer": 17.5758
+      },
+      {
+       "library_6": 14.5455,
+       "buffer": 5.4545
+      },
+      {
+       "library_7": 1.3333,
+       "buffer": 18.6667
+      },
+      {
+       "library_8": 3.8095,
+       "buffer": 16.1905
+      },
+      {
+       "library_9": 5.7143,
+       "buffer": 14.2857
+      },
+      {
+       "library_10": 8.8889,
+       "buffer": 11.1111
+      },
+      {
+       "library_11": 1.1111,
+       "buffer": 18.8889
+      },
+      {
+       "library_12": 2.963,
+       "buffer": 17.037
+      },
+      {
+       "library_13": 13.3333,
+       "buffer": 6.6667
+      },
+      {
+       "library_14": 2.0,
+       "buffer": 18.0
+      },
+      {
+       "library_15": 4.4444,
+       "buffer": 15.5556
+      },
+      {
+       "library_16": 1.4545,
+       "buffer": 18.5455
+      },
+      {
+       "library_17": 7.2727,
+       "buffer": 12.7273
+      },
+      {
+       "library_18": 2.6667,
+       "buffer": 17.3333
+      },
+      {
+       "library_19": 10.6667,
+       "buffer": 9.3333
+      },
+      {
+       "library_20": 1.2308,
+       "buffer": 18.7692
+      },
+      {
+       "library_21": 3.3333,
+       "buffer": 16.6667
+      },
+      {
+       "library_22": 5.0,
+       "buffer": 15.0
+      },
+      {
+       "library_23": 1.6667,
+       "buffer": 18.3333
+      },
+      {
+       "library_24": 8.0,
+       "buffer": 12.0
+      },
+      {
+       "library_25": 2.2222,
+       "buffer": 17.7778
+      },
+      {
+       "library_26": 6.1538,
+       "buffer": 13.8462
+      },
+      {
+       "library_27": 1.1429,
+       "buffer": 18.8571
+      },
+      {
+       "library_28": 3.6364,
+       "buffer": 16.3636
+      },
+      {
+       "library_29": 9.4118,
+       "buffer": 10.5882
+      },
+      {
+       "library_30": 1.6,
+       "buffer": 18.4
+      },
+      {
+       "library_31": 2.7586,
+       "buffer": 17.2414
+      },
+      {
+       "library_32": 4.2105,
+       "buffer": 15.7895
+      },
+      {
+       "library_33": 1.9048,
+       "buffer": 18.0952
+      },
+      {
+       "library_34": 5.3333,
+       "buffer": 14.6667
+      },
+      {
+       "library_35": 1.2903,
+       "buffer": 18.7097
+      },
+      {
+       "library_36": 3.2,
+       "buffer": 16.8
+      },
+      {
+       "library_37": 12.3077,
+       "buffer": 7.6923
+      },
+      {
+       "library_38": 2.1053,
+       "buffer": 17.8947
+      },
+      {
+       "library_39": 4.7059,
+       "buffer": 15.2941
+      },
+      {
+       "library_40": 1.0526,
+       "buffer": 18.9474
+      },
+      {
+       "library_41": 4.0,
+       "buffer": 16.0
+      },
+      {
+       "library_42": 8.4211,
+       "buffer": 11.5789
+      },
+      {
+       "library_43": 1.3793,
+       "buffer": 18.6207
+      },
+      {
+       "library_44": 2.5806,
+       "buffer": 17.4194
+      },
+      {
+       "library_45": 6.4,
+       "buffer": 13.6
+      },
+      {
+       "library_46": 1.8182,
+       "buffer": 18.1818
+      },
+      {
+       "library_47": 3.4783,
+       "buffer": 16.5217
+      },
+      {
+       "library_48": 11.4286,
+       "buffer": 8.5714
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "Library i has the i-th concentration. Volumes are exact (80 / concentration)."
+ ]
+}

@@ -1,0 +1,3460 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-dil-01. 0 of 48 wells hold what the plate map\n  says.\n  Destination: Corning 96 Well Plate 360 \u00b5L Flat (slot 5). Reading of the request: 48 wells\n    of 1:10 serum on the ELISA plate.\n  well H1 (dilutions): expected 10 ul serum_4, 90 ul pbs; found 68.97 ul serum_4, 31.03 ul\n    pbs\n      - wrong amount of serum_4: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well G1 (dilutions): expected 10 ul serum_4, 90 ul pbs; found 68.97 ul serum_4, 31.03 ul\n    pbs\n      - wrong amount of serum_4: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well F1 (dilutions): expected 10 ul serum_3, 90 ul pbs; found 68.97 ul serum_3, 31.03 ul\n    pbs\n      - wrong amount of serum_3: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well E1 (dilutions): expected 10 ul serum_3, 90 ul pbs; found 68.97 ul serum_3, 31.03 ul\n    pbs\n      - wrong amount of serum_3: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well D1 (dilutions): expected 10 ul serum_2, 90 ul pbs; found 68.97 ul serum_2, 31.03 ul\n    pbs\n      - wrong amount of serum_2: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well C1 (dilutions): expected 10 ul serum_2, 90 ul pbs; found 68.97 ul serum_2, 31.03 ul\n    pbs\n      - wrong amount of serum_2: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well B1 (dilutions): expected 10 ul serum_1, 90 ul pbs; found 68.97 ul serum_1, 31.03 ul\n    pbs\n      - wrong amount of serum_1: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well A1 (dilutions): expected 10 ul serum_1, 90 ul pbs; found 68.97 ul serum_1, 31.03 ul\n    pbs\n      - wrong amount of serum_1: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well H2 (dilutions): expected 10 ul serum_8, 90 ul pbs; found 68.97 ul serum_8, 31.03 ul\n    pbs\n      - wrong amount of serum_8: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well G2 (dilutions): expected 10 ul serum_8, 90 ul pbs; found 68.97 ul serum_8, 31.03 ul\n    pbs\n      - wrong amount of serum_8: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well F2 (dilutions): expected 10 ul serum_7, 90 ul pbs; found 68.97 ul serum_7, 31.03 ul\n    pbs\n      - wrong amount of serum_7: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  well E2 (dilutions): expected 10 ul serum_7, 90 ul pbs; found 68.97 ul serum_7, 31.03 ul\n    pbs\n      - wrong amount of serum_7: the plate map says 10 ul, the protocol delivers 68.97 ul\n      - wrong amount of pbs: the plate map says 90 ul, the protocol delivers 31.03 ul\n  ... and 36 more wells that do not match.\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  serum 1                              1000.0     137.9     862.1       0.0     0.0\n  serum 2                              1000.0     137.9     862.1       0.0     0.0\n  serum 3                              1000.0     137.9     862.1       0.0     0.0\n  serum 4                              1000.0     137.9     862.1       0.0     0.0\n  serum 5                              1000.0     137.9     862.1       0.0     0.0\n  serum 6                              1000.0     137.9     862.1       0.0     0.0\n  serum 7                              1000.0     137.9     862.1       0.0     0.0\n  serum 8                              1000.0     137.9     862.1       0.0     0.0\n  serum 9                              1000.0     137.9     862.1       0.0     0.0\n  serum 10                             1000.0     137.9     862.1       0.0     0.0\n  serum 11                             1000.0     137.9     862.1       0.0     0.0\n  serum 12                             1000.0     137.9     862.1       0.0     0.0\n  serum 13                             1000.0     137.9     862.1       0.0     0.0\n  serum 14                             1000.0     137.9     862.1       0.0     0.0\n  serum 15                             1000.0     137.9     862.1       0.0     0.0\n  serum 16                             1000.0     137.9     862.1       0.0     0.0\n  serum 17                             1000.0     137.9     862.1       0.0     0.0\n  serum 18                             1000.0     137.9     862.1       0.0     0.0\n  serum 19                             1000.0     137.9     862.1       0.0     0.0\n  serum 20                             1000.0     137.9     862.1       0.0     0.0\n  serum 21                             1000.0     137.9     862.1       0.0     0.0\n  serum 22                             1000.0     137.9     862.1       0.0     0.0\n  serum 23                             1000.0     137.9     862.1       0.0     0.0\n  serum 24                             1000.0     137.9     862.1       0.0     0.0\n  pbs                                 12000.0    1489.7    1200.0    9310.3     0.0\n  Note: pbs ends in wells the plate map does not list for it: A1 in slot 3 (387.9 ul), A2 in\n    slot 3 (387.9 ul), A3 in slot 3 (387.9 ul), A4 in slot 3 (387.9 ul), A5 in slot 3 (387.9\n    ul), A6 in slot 3 (387.9 ul) and 18 more.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    serum 1                                0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  B1    serum 2                                0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  C1    serum 3                                0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  D1    serum 4                                0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  A2    serum 5                                0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  B2    serum 6                                0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  C2    serum 7                                0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  D2    serum 8                                0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  A3    serum 9                                0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  B3    serum 10                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  C3    serum 11                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  D3    serum 12                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  A4    serum 13                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  B4    serum 14                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  C4    serum 15                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  D4    serum 16                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  A5    serum 17                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  B5    serum 18                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  C5    serum 19                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  D5    serum 20                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  A6    serum 21                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  B6    serum 22                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  C6    serum 23                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  D6    serum 24                               0.0    1000.0  already in the plate: 1000 ul declared, nothing drawn\n  4    NEST 12 Well Reservoir 15 mL          A1    pbs                                10800.0   12000.0\n  Tips: 48 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  Tips: 24 from Opentrons OT-2 96 Tip Rack 1000 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-dil-01",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "5:corning_96_wellplate_360ul_flat",
+   "variant": "48 wells of 1:10 serum on the ELISA plate",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 48,
+   "wells": [
+    {
+     "well": "H1",
+     "group": "dilutions",
+     "expected": {
+      "serum_4": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_4": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_4",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "dilutions",
+     "expected": {
+      "serum_4": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_4": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_4",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "dilutions",
+     "expected": {
+      "serum_3": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_3": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_3",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "dilutions",
+     "expected": {
+      "serum_3": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_3": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_3",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "dilutions",
+     "expected": {
+      "serum_2": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_2": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_2",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "dilutions",
+     "expected": {
+      "serum_2": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_2": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_2",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "dilutions",
+     "expected": {
+      "serum_1": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_1": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_1",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "dilutions",
+     "expected": {
+      "serum_1": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_1": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_1",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": "dilutions",
+     "expected": {
+      "serum_8": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_8": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_8",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": "dilutions",
+     "expected": {
+      "serum_8": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_8": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_8",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": "dilutions",
+     "expected": {
+      "serum_7": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_7": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_7",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": "dilutions",
+     "expected": {
+      "serum_7": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_7": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_7",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": "dilutions",
+     "expected": {
+      "serum_6": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_6": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_6",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": "dilutions",
+     "expected": {
+      "serum_6": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_6": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_6",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "dilutions",
+     "expected": {
+      "serum_5": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_5": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_5",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "dilutions",
+     "expected": {
+      "serum_5": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_5": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_5",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H3",
+     "group": "dilutions",
+     "expected": {
+      "serum_12": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_12": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_12",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": "dilutions",
+     "expected": {
+      "serum_12": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_12": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_12",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": "dilutions",
+     "expected": {
+      "serum_11": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_11": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_11",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": "dilutions",
+     "expected": {
+      "serum_11": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_11": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_11",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": "dilutions",
+     "expected": {
+      "serum_10": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_10": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_10",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": "dilutions",
+     "expected": {
+      "serum_10": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_10": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_10",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "dilutions",
+     "expected": {
+      "serum_9": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_9": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_9",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "dilutions",
+     "expected": {
+      "serum_9": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_9": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_9",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": "dilutions",
+     "expected": {
+      "serum_16": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_16": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_16",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": "dilutions",
+     "expected": {
+      "serum_16": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_16": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_16",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": "dilutions",
+     "expected": {
+      "serum_15": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_15": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_15",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": "dilutions",
+     "expected": {
+      "serum_15": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_15": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_15",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": "dilutions",
+     "expected": {
+      "serum_14": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_14": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_14",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": "dilutions",
+     "expected": {
+      "serum_14": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_14": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_14",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "dilutions",
+     "expected": {
+      "serum_13": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_13": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_13",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "dilutions",
+     "expected": {
+      "serum_13": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_13": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_13",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H5",
+     "group": "dilutions",
+     "expected": {
+      "serum_20": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_20": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_20",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": "dilutions",
+     "expected": {
+      "serum_20": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_20": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_20",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": "dilutions",
+     "expected": {
+      "serum_19": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_19": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_19",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": "dilutions",
+     "expected": {
+      "serum_19": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_19": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_19",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": "dilutions",
+     "expected": {
+      "serum_18": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_18": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_18",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": "dilutions",
+     "expected": {
+      "serum_18": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_18": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_18",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "dilutions",
+     "expected": {
+      "serum_17": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_17": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_17",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "dilutions",
+     "expected": {
+      "serum_17": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_17": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_17",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H6",
+     "group": "dilutions",
+     "expected": {
+      "serum_24": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_24": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_24",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G6",
+     "group": "dilutions",
+     "expected": {
+      "serum_24": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_24": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_24",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F6",
+     "group": "dilutions",
+     "expected": {
+      "serum_23": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_23": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_23",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E6",
+     "group": "dilutions",
+     "expected": {
+      "serum_23": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_23": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_23",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": "dilutions",
+     "expected": {
+      "serum_22": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_22": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_22",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": "dilutions",
+     "expected": {
+      "serum_22": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_22": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_22",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": "dilutions",
+     "expected": {
+      "serum_21": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_21": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_21",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "dilutions",
+     "expected": {
+      "serum_21": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_21": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_21",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "H1",
+     "group": "dilutions",
+     "expected": {
+      "serum_4": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_4": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_4",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "dilutions",
+     "expected": {
+      "serum_4": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_4": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_4",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "dilutions",
+     "expected": {
+      "serum_3": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_3": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_3",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "dilutions",
+     "expected": {
+      "serum_3": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_3": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_3",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "dilutions",
+     "expected": {
+      "serum_2": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_2": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_2",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "dilutions",
+     "expected": {
+      "serum_2": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_2": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_2",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "dilutions",
+     "expected": {
+      "serum_1": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_1": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_1",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "dilutions",
+     "expected": {
+      "serum_1": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_1": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_1",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": "dilutions",
+     "expected": {
+      "serum_8": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_8": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_8",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": "dilutions",
+     "expected": {
+      "serum_8": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_8": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_8",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": "dilutions",
+     "expected": {
+      "serum_7": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_7": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_7",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": "dilutions",
+     "expected": {
+      "serum_7": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_7": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_7",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": "dilutions",
+     "expected": {
+      "serum_6": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_6": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_6",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": "dilutions",
+     "expected": {
+      "serum_6": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_6": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_6",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "dilutions",
+     "expected": {
+      "serum_5": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_5": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_5",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "dilutions",
+     "expected": {
+      "serum_5": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_5": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_5",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H3",
+     "group": "dilutions",
+     "expected": {
+      "serum_12": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_12": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_12",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": "dilutions",
+     "expected": {
+      "serum_12": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_12": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_12",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": "dilutions",
+     "expected": {
+      "serum_11": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_11": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_11",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": "dilutions",
+     "expected": {
+      "serum_11": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_11": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_11",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": "dilutions",
+     "expected": {
+      "serum_10": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_10": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_10",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": "dilutions",
+     "expected": {
+      "serum_10": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_10": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_10",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "dilutions",
+     "expected": {
+      "serum_9": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_9": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_9",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "dilutions",
+     "expected": {
+      "serum_9": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_9": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_9",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": "dilutions",
+     "expected": {
+      "serum_16": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_16": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_16",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": "dilutions",
+     "expected": {
+      "serum_16": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_16": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_16",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": "dilutions",
+     "expected": {
+      "serum_15": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_15": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_15",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": "dilutions",
+     "expected": {
+      "serum_15": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_15": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_15",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": "dilutions",
+     "expected": {
+      "serum_14": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_14": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_14",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": "dilutions",
+     "expected": {
+      "serum_14": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_14": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_14",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "dilutions",
+     "expected": {
+      "serum_13": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_13": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_13",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "dilutions",
+     "expected": {
+      "serum_13": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_13": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_13",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H5",
+     "group": "dilutions",
+     "expected": {
+      "serum_20": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_20": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_20",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": "dilutions",
+     "expected": {
+      "serum_20": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_20": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_20",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": "dilutions",
+     "expected": {
+      "serum_19": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_19": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_19",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": "dilutions",
+     "expected": {
+      "serum_19": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_19": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_19",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": "dilutions",
+     "expected": {
+      "serum_18": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_18": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_18",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": "dilutions",
+     "expected": {
+      "serum_18": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_18": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_18",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "dilutions",
+     "expected": {
+      "serum_17": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_17": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_17",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "dilutions",
+     "expected": {
+      "serum_17": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_17": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_17",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H6",
+     "group": "dilutions",
+     "expected": {
+      "serum_24": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_24": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_24",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G6",
+     "group": "dilutions",
+     "expected": {
+      "serum_24": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_24": 68.9655172413793,
+      "pbs": 31.034482758620687
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_24",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620687,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F6",
+     "group": "dilutions",
+     "expected": {
+      "serum_23": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_23": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_23",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E6",
+     "group": "dilutions",
+     "expected": {
+      "serum_23": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_23": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_23",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": "dilutions",
+     "expected": {
+      "serum_22": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_22": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_22",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": "dilutions",
+     "expected": {
+      "serum_22": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_22": 68.9655172413793,
+      "pbs": 31.034482758620694
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_22",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.034482758620694,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": "dilutions",
+     "expected": {
+      "serum_21": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_21": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_21",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "dilutions",
+     "expected": {
+      "serum_21": 10.0,
+      "pbs": 90.0
+     },
+     "found": {
+      "serum_21": 68.9655172413793,
+      "pbs": 31.03448275862069
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "serum_21",
+       "expected_ul": 10.0,
+       "found_ul": 68.9655172413793,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 90.0,
+       "found_ul": 31.03448275862069,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "serum 1",
+    "logical": "serum_1",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 2",
+    "logical": "serum_2",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 3",
+    "logical": "serum_3",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 4",
+    "logical": "serum_4",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 5",
+    "logical": "serum_5",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 6",
+    "logical": "serum_6",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 7",
+    "logical": "serum_7",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 8",
+    "logical": "serum_8",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 9",
+    "logical": "serum_9",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 10",
+    "logical": "serum_10",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 11",
+    "logical": "serum_11",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 12",
+    "logical": "serum_12",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 13",
+    "logical": "serum_13",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 14",
+    "logical": "serum_14",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 15",
+    "logical": "serum_15",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 16",
+    "logical": "serum_16",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 17",
+    "logical": "serum_17",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 18",
+    "logical": "serum_18",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 19",
+    "logical": "serum_19",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 20",
+    "logical": "serum_20",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 21",
+    "logical": "serum_21",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 22",
+    "logical": "serum_22",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 23",
+    "logical": "serum_23",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "serum 24",
+    "logical": "serum_24",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 137.931,
+    "left_in_source_ul": 862.069,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "pbs",
+    "logical": "pbs",
+    "role": "reagent",
+    "declared_ul": 12000.0,
+    "delivered_ul": 1489.6552,
+    "left_in_source_ul": 1200.0,
+    "elsewhere": [
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A1]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A2]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A3]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A4]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A5]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[A6]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B1]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B2]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B3]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B4]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B5]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[B6]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C1]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C2]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C3]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C4]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C5]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[C6]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D1]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D2]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D3]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D4]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D5]",
+      "ul": 387.931
+     },
+     {
+      "well": "3:opentrons_24_tuberack_nest_1.5ml_snapcap[D6]",
+      "ul": 387.931
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "pbs ends in wells the plate map does not list for it: A1 in slot 3 (387.9 ul), A2 in slot 3 (387.9 ul), A3 in slot 3 (387.9 ul), A4 in slot 3 (387.9 ul), A5 in slot 3 (387.9 ul), A6 in slot 3 (387.9 ul) and 18 more."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "serum 1",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "serum 2",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "serum 3",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D1",
+     "liquid": "serum 4",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "serum 5",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "serum 6",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "serum 7",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D2",
+     "liquid": "serum 8",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "serum 9",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "serum 10",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "serum 11",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D3",
+     "liquid": "serum 12",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "serum 13",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "serum 14",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C4",
+     "liquid": "serum 15",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D4",
+     "liquid": "serum 16",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "serum 17",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "serum 18",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C5",
+     "liquid": "serum 19",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D5",
+     "liquid": "serum 20",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "serum 21",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "serum 22",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C6",
+     "liquid": "serum 23",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D6",
+     "liquid": "serum 24",
+     "declared_ul": 1000.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "pbs",
+     "declared_ul": 12000.0,
+     "needed_ul": 10800.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 48
+    },
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 1000 \u00b5L",
+     "tips": 24
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: no biology problems found.\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\nA clean report is not a promise that the experiment will work.",
+ "findings": [],
+ "seconds": 7.7,
+ "draft": 3
+}

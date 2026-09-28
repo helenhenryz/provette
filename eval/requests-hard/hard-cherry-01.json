@@ -1,0 +1,234 @@
+{
+ "id": "hard-cherry-01",
+ "request": "Cherrypick 2 ul from these wells of a 384-well source plate into consecutive wells of a 96-well PCR plate starting at A1: A1, B2, C3, D4, E5, F6, G7, H8, I9, J10, K11, L12, M13, N14, O15, P16, A17, B18, C19, D20, E21, F22, G23, H24. Then add 18 ul of PCR master mix from a tube to each of those wells.",
+ "technique": "Cherrypicking",
+ "liquids": [
+  {
+   "name": "mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)master\\s*mix|mastermix|\\bmix\\b|sybr"
+  },
+  {
+   "name": "source@{well}",
+   "role": "sample",
+   "bind": "well",
+   "pattern": ".+"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "down the column (A1, B1, ...)",
+   "why": "'consecutive' can be read either way",
+   "pinned": {
+    "A1": {
+     "source@A1": 2,
+     "mix": 18
+    },
+    "B1": {
+     "source@B2": 2,
+     "mix": 18
+    },
+    "C1": {
+     "source@C3": 2,
+     "mix": 18
+    },
+    "D1": {
+     "source@D4": 2,
+     "mix": 18
+    },
+    "E1": {
+     "source@E5": 2,
+     "mix": 18
+    },
+    "F1": {
+     "source@F6": 2,
+     "mix": 18
+    },
+    "G1": {
+     "source@G7": 2,
+     "mix": 18
+    },
+    "H1": {
+     "source@H8": 2,
+     "mix": 18
+    },
+    "A2": {
+     "source@I9": 2,
+     "mix": 18
+    },
+    "B2": {
+     "source@J10": 2,
+     "mix": 18
+    },
+    "C2": {
+     "source@K11": 2,
+     "mix": 18
+    },
+    "D2": {
+     "source@L12": 2,
+     "mix": 18
+    },
+    "E2": {
+     "source@M13": 2,
+     "mix": 18
+    },
+    "F2": {
+     "source@N14": 2,
+     "mix": 18
+    },
+    "G2": {
+     "source@O15": 2,
+     "mix": 18
+    },
+    "H2": {
+     "source@P16": 2,
+     "mix": 18
+    },
+    "A3": {
+     "source@A17": 2,
+     "mix": 18
+    },
+    "B3": {
+     "source@B18": 2,
+     "mix": 18
+    },
+    "C3": {
+     "source@C19": 2,
+     "mix": 18
+    },
+    "D3": {
+     "source@D20": 2,
+     "mix": 18
+    },
+    "E3": {
+     "source@E21": 2,
+     "mix": 18
+    },
+    "F3": {
+     "source@F22": 2,
+     "mix": 18
+    },
+    "G3": {
+     "source@G23": 2,
+     "mix": 18
+    },
+    "H3": {
+     "source@H24": 2,
+     "mix": 18
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "along the row (A1, A2, ...)",
+   "why": "'consecutive' can be read either way",
+   "pinned": {
+    "A1": {
+     "source@A1": 2,
+     "mix": 18
+    },
+    "A2": {
+     "source@B2": 2,
+     "mix": 18
+    },
+    "A3": {
+     "source@C3": 2,
+     "mix": 18
+    },
+    "A4": {
+     "source@D4": 2,
+     "mix": 18
+    },
+    "A5": {
+     "source@E5": 2,
+     "mix": 18
+    },
+    "A6": {
+     "source@F6": 2,
+     "mix": 18
+    },
+    "A7": {
+     "source@G7": 2,
+     "mix": 18
+    },
+    "A8": {
+     "source@H8": 2,
+     "mix": 18
+    },
+    "A9": {
+     "source@I9": 2,
+     "mix": 18
+    },
+    "A10": {
+     "source@J10": 2,
+     "mix": 18
+    },
+    "A11": {
+     "source@K11": 2,
+     "mix": 18
+    },
+    "A12": {
+     "source@L12": 2,
+     "mix": 18
+    },
+    "B1": {
+     "source@M13": 2,
+     "mix": 18
+    },
+    "B2": {
+     "source@N14": 2,
+     "mix": 18
+    },
+    "B3": {
+     "source@O15": 2,
+     "mix": 18
+    },
+    "B4": {
+     "source@P16": 2,
+     "mix": 18
+    },
+    "B5": {
+     "source@A17": 2,
+     "mix": 18
+    },
+    "B6": {
+     "source@B18": 2,
+     "mix": 18
+    },
+    "B7": {
+     "source@C19": 2,
+     "mix": 18
+    },
+    "B8": {
+     "source@D20": 2,
+     "mix": 18
+    },
+    "B9": {
+     "source@E21": 2,
+     "mix": 18
+    },
+    "B10": {
+     "source@F22": 2,
+     "mix": 18
+    },
+    "B11": {
+     "source@G23": 2,
+     "mix": 18
+    },
+    "B12": {
+     "source@H24": 2,
+     "mix": 18
+    }
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The source is a 384-well plate; its well names run to P24."
+ ]
+}

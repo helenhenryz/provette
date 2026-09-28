@@ -1,0 +1,2067 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-clone-01. 5 of 24 wells hold what the plate map\n  says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 3). Reading of the request: 24\n    ligations.\n  well B1 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_13, 9 ul\n    water; found 2 ul buffer, 5 ul insert_13, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well B2 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_14, 9 ul\n    water; found 2 ul buffer, 5 ul insert_14, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well B3 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_15, 9 ul\n    water; found 2 ul buffer, 5 ul insert_15, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well B4 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_16, 9 ul\n    water; found 2 ul buffer, 5 ul insert_16, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well B5 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_17, 9 ul\n    water; found 2 ul buffer, 5 ul insert_17, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well B6 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_18, 9 ul\n    water; found 2 ul buffer, 5 ul insert_18, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well A6 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_6, 9 ul\n    water; found 2 ul buffer, 5 ul insert_6, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well B7 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_19, 9 ul\n    water; found 2 ul buffer, 5 ul insert_19, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well A7 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_7, 9 ul\n    water; found 2 ul buffer, 5 ul insert_7, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well B8 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_20, 9 ul\n    water; found 2 ul buffer, 5 ul insert_20, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well A8 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_8, 9 ul\n    water; found 2 ul buffer, 5 ul insert_8, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  well B9 (ligations): expected 2 ul buffer, 1 ul ligase, 3 ul vector, 5 ul insert_21, 9 ul\n    water; found 2 ul buffer, 5 ul insert_21, 3 ul vector, 1 ul ligase\n      - water is missing: the plate map says 9 ul, none arrives\n  ... and 7 more wells that do not match.\n\nLabware for the technique (Cloning): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  buffer                                 52.8      48.0       4.8       0.0     0.0\n  ligase                                 26.4      23.0       3.4       0.0     0.0\n  vector                                 79.2      72.0       7.2       0.0     0.0\n  water                                 237.6      45.0     192.6       0.0     0.0\n  insert 1                               10.0       5.0       5.0       0.0     0.0\n  insert 2                               10.0       5.0       5.0       0.0     0.0\n  insert 3                               10.0       5.0       5.0       0.0     0.0\n  insert 4                               10.0       5.0       5.0       0.0     0.0\n  insert 5                               10.0       5.0       5.0       0.0     0.0\n  insert 6                               10.0       5.0       5.0       0.0     0.0\n  insert 7                               10.0       5.0       5.0       0.0     0.0\n  insert 8                               10.0       5.0       5.0       0.0     0.0\n  insert 9                               10.0       5.0       5.0       0.0     0.0\n  insert 10                              10.0       5.0       5.0       0.0     0.0\n  insert 11                              10.0       5.0       5.0       0.0     0.0\n  insert 12                              10.0       5.0       5.0       0.0     0.0\n  insert 13                              10.0       5.0       5.0       0.0     0.0\n  insert 14                              10.0       5.0       5.0       0.0     0.0\n  insert 15                              10.0       5.0       5.0       0.0     0.0\n  insert 16                              10.0       5.0       5.0       0.0     0.0\n  insert 17                              10.0       5.0       5.0       0.0     0.0\n  insert 18                              10.0       5.0       5.0       0.0     0.0\n  insert 19                              10.0       5.0       5.0       0.0     0.0\n  insert 20                              10.0       5.0       5.0       0.0     0.0\n  insert 21                              10.0       5.0       5.0       0.0     0.0\n  insert 22                              10.0       5.0       5.0       0.0     0.0\n  insert 23                              10.0       5.0       5.0       0.0     0.0\n  insert 24                              10.0       5.0       5.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A1    insert 1                               5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B1    insert 13                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A2    insert 2                               5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B2    insert 14                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A3    insert 3                               5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B3    insert 15                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A4    insert 4                               5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B4    insert 16                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A5    insert 5                               5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B5    insert 17                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A6    insert 6                               5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B6    insert 18                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A7    insert 7                               5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B7    insert 19                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A8    insert 8                               5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B8    insert 20                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A9    insert 9                               5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B9    insert 21                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A10   insert 10                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B10   insert 22                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A11   insert 11                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B11   insert 23                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A12   insert 12                              5.0      10.0\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B12   insert 24                              5.0      10.0\n  4    Opentrons 24 Well Aluminum Block with A1    buffer                                48.0      52.8  <-- NO MARGIN\n  4    Opentrons 24 Well Aluminum Block with A2    ligase                                24.0      26.4  <-- NO MARGIN\n  4    Opentrons 24 Well Aluminum Block with A3    vector                                72.0      79.2  <-- NO MARGIN\n  5    NEST 12 Well Reservoir 15 mL          A1    water                                216.0     237.6  <-- NO MARGIN\n  FLAG: buffer in A1, slot 4 has no margin: the robot draws 48 ul of the 52.8 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 98 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: ligase in A2, slot 4 has no margin: the robot draws 24 ul of the 26.4 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 74 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: vector in A3, slot 4 has no margin: the robot draws 72 ul of the 79.2 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 122 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: water in A1, slot 5 has no margin: the robot draws 216 ul of the 237.6 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 266 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  Tips: 96 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  Tips: 24 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 6.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.\n\nI do not know what 'vector' is (declared at line 33): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 1' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 2' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 3' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 4' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 5' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 6' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 7' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 8' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 9' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 10' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 11' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 12' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 13' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 14' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 15' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 16' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 17' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 18' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 19' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 20' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 21' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 22' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 23' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'insert 24' is (declared at line 43): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-clone-01",
+  "technique": "Cloning",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [
+   {
+    "name": "vector",
+    "description": "Cut vector",
+    "wells": [
+     "A3 in slot 4"
+    ],
+    "line": 33,
+    "sentence": "I do not know what 'vector' is (declared at line 33): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 1",
+    "description": "Insert 1",
+    "wells": [
+     "A1 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 1' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 2",
+    "description": "Insert 2",
+    "wells": [
+     "A2 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 2' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 3",
+    "description": "Insert 3",
+    "wells": [
+     "A3 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 3' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 4",
+    "description": "Insert 4",
+    "wells": [
+     "A4 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 4' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 5",
+    "description": "Insert 5",
+    "wells": [
+     "A5 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 5' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 6",
+    "description": "Insert 6",
+    "wells": [
+     "A6 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 6' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 7",
+    "description": "Insert 7",
+    "wells": [
+     "A7 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 7' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 8",
+    "description": "Insert 8",
+    "wells": [
+     "A8 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 8' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 9",
+    "description": "Insert 9",
+    "wells": [
+     "A9 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 9' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 10",
+    "description": "Insert 10",
+    "wells": [
+     "A10 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 10' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 11",
+    "description": "Insert 11",
+    "wells": [
+     "A11 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 11' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 12",
+    "description": "Insert 12",
+    "wells": [
+     "A12 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 12' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 13",
+    "description": "Insert 13",
+    "wells": [
+     "B1 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 13' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 14",
+    "description": "Insert 14",
+    "wells": [
+     "B2 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 14' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 15",
+    "description": "Insert 15",
+    "wells": [
+     "B3 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 15' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 16",
+    "description": "Insert 16",
+    "wells": [
+     "B4 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 16' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 17",
+    "description": "Insert 17",
+    "wells": [
+     "B5 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 17' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 18",
+    "description": "Insert 18",
+    "wells": [
+     "B6 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 18' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 19",
+    "description": "Insert 19",
+    "wells": [
+     "B7 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 19' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 20",
+    "description": "Insert 20",
+    "wells": [
+     "B8 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 20' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 21",
+    "description": "Insert 21",
+    "wells": [
+     "B9 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 21' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 22",
+    "description": "Insert 22",
+    "wells": [
+     "B10 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 22' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 23",
+    "description": "Insert 23",
+    "wells": [
+     "B11 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 23' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "insert 24",
+    "description": "Insert 24",
+    "wells": [
+     "B12 in slot 2"
+    ],
+    "line": 43,
+    "sentence": "I do not know what 'insert 24' is (declared at line 43): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   }
+  ],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:biorad_96_wellplate_200ul_pcr",
+   "variant": "24 ligations",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 5,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_1": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "water": 9.0,
+      "buffer": 2.0,
+      "insert_1": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_2": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "water": 9.0,
+      "buffer": 1.9999999999999998,
+      "insert_2": 5.0,
+      "vector": 3.0,
+      "ligase": 0.9999999999999999
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_3": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "water": 9.0,
+      "buffer": 2.0,
+      "insert_3": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_4": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "water": 9.0,
+      "buffer": 2.0,
+      "insert_4": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_5": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "water": 9.0,
+      "buffer": 2.0,
+      "insert_5": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_13": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_13": 5.0,
+      "vector": 2.9999999999999996,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_14": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_14": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_15": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_15": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_16": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_16": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_17": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_17": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_18": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_18": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_6": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_6": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_19": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_19": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_7": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_7": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B8",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_20": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_20": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_8": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_8": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B9",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_21": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_21": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_9": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_9": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B10",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_22": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_22": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_10": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_10": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_23": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_23": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_11": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_11": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_12": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_12": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_24": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_24": 5.0,
+      "vector": 3.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "ligase",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "B1",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_13": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_13": 5.0,
+      "vector": 2.9999999999999996,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_14": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_14": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_15": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_15": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_16": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_16": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_17": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_17": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_18": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_18": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_6": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_6": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_19": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_19": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_7": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_7": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B8",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_20": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_20": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_8": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_8": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B9",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_21": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_21": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_9": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_9": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B10",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_22": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_22": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_10": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_10": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_23": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_23": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_11": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_11": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_12": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_12": 5.0,
+      "vector": 3.0,
+      "ligase": 1.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": "ligations",
+     "expected": {
+      "buffer": 2.0,
+      "ligase": 1.0,
+      "vector": 3.0,
+      "insert_24": 5.0,
+      "water": 9.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "insert_24": 5.0,
+      "vector": 3.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "ligase",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 9.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 52.8,
+    "delivered_ul": 48.0,
+    "left_in_source_ul": 4.8,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "ligase",
+    "logical": "ligase",
+    "role": "reagent",
+    "declared_ul": 26.4,
+    "delivered_ul": 23.0,
+    "left_in_source_ul": 3.4,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "vector",
+    "logical": "vector",
+    "role": "reagent",
+    "declared_ul": 79.2,
+    "delivered_ul": 72.0,
+    "left_in_source_ul": 7.2,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 237.6,
+    "delivered_ul": 45.0,
+    "left_in_source_ul": 192.6,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 1",
+    "logical": "insert_1",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 2",
+    "logical": "insert_2",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 3",
+    "logical": "insert_3",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 4",
+    "logical": "insert_4",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 5",
+    "logical": "insert_5",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 6",
+    "logical": "insert_6",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 7",
+    "logical": "insert_7",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 8",
+    "logical": "insert_8",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 9",
+    "logical": "insert_9",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 10",
+    "logical": "insert_10",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 11",
+    "logical": "insert_11",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 12",
+    "logical": "insert_12",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 13",
+    "logical": "insert_13",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 14",
+    "logical": "insert_14",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 15",
+    "logical": "insert_15",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 16",
+    "logical": "insert_16",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 17",
+    "logical": "insert_17",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 18",
+    "logical": "insert_18",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 19",
+    "logical": "insert_19",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 20",
+    "logical": "insert_20",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 21",
+    "logical": "insert_21",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 22",
+    "logical": "insert_22",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 23",
+    "logical": "insert_23",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "insert 24",
+    "logical": "insert_24",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A1",
+     "liquid": "insert 1",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B1",
+     "liquid": "insert 13",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A2",
+     "liquid": "insert 2",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B2",
+     "liquid": "insert 14",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A3",
+     "liquid": "insert 3",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B3",
+     "liquid": "insert 15",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A4",
+     "liquid": "insert 4",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B4",
+     "liquid": "insert 16",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A5",
+     "liquid": "insert 5",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B5",
+     "liquid": "insert 17",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A6",
+     "liquid": "insert 6",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B6",
+     "liquid": "insert 18",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A7",
+     "liquid": "insert 7",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B7",
+     "liquid": "insert 19",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A8",
+     "liquid": "insert 8",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B8",
+     "liquid": "insert 20",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A9",
+     "liquid": "insert 9",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B9",
+     "liquid": "insert 21",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A10",
+     "liquid": "insert 10",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B10",
+     "liquid": "insert 22",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A11",
+     "liquid": "insert 11",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B11",
+     "liquid": "insert 23",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A12",
+     "liquid": "insert 12",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B12",
+     "liquid": "insert 24",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "buffer",
+     "declared_ul": 52.8,
+     "needed_ul": 48.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "ligase",
+     "declared_ul": 26.4,
+     "needed_ul": 24.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "vector",
+     "declared_ul": 79.2,
+     "needed_ul": 72.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 237.6,
+     "needed_ul": 216.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 96
+    },
+    {
+     "slot": "6",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 24
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (2 errors, 1 note).\n\n1. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well A1 in slot 5: the liquid is\nbelow the tip\n   line 58:  p20.aspirate(9, water_reservoir[\"A1\"])\n   At line 58 the p20_single_gen2 draws 9 ul from water (well A1 in slot 5) with its tip 1\n   mm above the bottom of the well. By then the well holds 193 ul, which in this NEST 12\n   Well Reservoir 15 mL reaches only 0.90 mm up: the tip is above the liquid and draws air\n   (this line did it 19 times, after 5 times in the liquid; 171 ul of air in all). The\n   simulator does not notice: it does not follow the liquid. The 19 wells filled from these\n   draws got air instead of liquid.\n   Affected: well A1 in slot 5.\n   Also reached 19 other wells: wells A6, A7, A8, A9, A10, A11, A12, B1 and 11 more in slot\n   3.\n   Fix: Keep the liquid above the tip. This well needs about 258 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [b8c802568861]\n\n2. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well A2 in slot 4: the liquid is\nbelow the tip\n   line 87:  p20.aspirate(1, cold_block[\"A2\"])\n   At line 87 the p20_single_gen2 draws 1 ul from ligase (well A2 in slot 4) with its tip 1\n   mm above the bottom of the well. By then the well holds 3 ul, which in this Opentrons 24\n   Well Aluminum Block with NEST 1.5 mL Snapcap reaches only 0.82 mm up: the tip is above\n   the liquid and draws air (this line did it once, after 23 times in the liquid; 1 ul of\n   air in all). The simulator does not notice: it does not follow the liquid. The 1 well\n   filled from these draws got air instead of liquid.\n   Affected: well A2 in slot 4.\n   Also reached 1 other well: well B12 in slot 3.\n   Fix: Keep the liquid above the tip. This well needs about 6 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [29aa96c55d1d]\n\n3. NOTE UNMIXED-AT-END: 23 wells never mixed after ligase went in (5 to 9% of the well)\n   line 88:  p20.dispense(1, dest_well)\n   At line 88 the robot added ligase to wells A1, A2, A3, A4, A5, A6, A7, A8 and 15 more in\n   slot 3, which already held water, buffer, insert 1, vector and 22 more (this line did it\n   23 times). The addition was 5 to 9% of the well, nothing mixed the well afterwards, and\n   the run ended with them that way. Two liquids layered in a small well do not mix on their\n   own, so what the well holds is not at the concentration you calculated. If the plate is\n   vortexed and spun down before it is used, nothing is wrong; if it goes straight to the\n   instrument, the wells are not what the protocol says they are.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 15 more in slot 3.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 15 more in slot 3 after line 88:\n   `mix_after=(5, 9 to 16)` on the transfer, or `pipette.mix(5, 9 to 16, well)`, with the\n   volume about 80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [9683401a3415]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\n\nI do not know what 'vector' is (declared at line 33): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 1' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 2' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 3' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 4' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 5' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 6' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 7' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 8' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 9' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 10' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 11' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 12' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 13' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 14' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 15' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 16' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 17' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 18' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 19' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 20' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 21' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 22' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 23' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'insert 24' is (declared at line 43): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.",
+ "findings": [
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 58,
+   "title": "The pipette draws air from well A1 in slot 5: the liquid is below the tip",
+   "explanation": "At line 58 the p20_single_gen2 draws 9 ul from water (well A1 in slot 5) with its tip 1 mm above the bottom of the well. By then the well holds 193 ul, which in this NEST 12 Well Reservoir 15 mL reaches only 0.90 mm up: the tip is above the liquid and draws air (this line did it 19 times, after 5 times in the liquid; 171 ul of air in all). The simulator does not notice: it does not follow the liquid. The 19 wells filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 258 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 87,
+   "title": "The pipette draws air from well A2 in slot 4: the liquid is below the tip",
+   "explanation": "At line 87 the p20_single_gen2 draws 1 ul from ligase (well A2 in slot 4) with its tip 1 mm above the bottom of the well. By then the well holds 3 ul, which in this Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap reaches only 0.82 mm up: the tip is above the liquid and draws air (this line did it once, after 23 times in the liquid; 1 ul of air in all). The simulator does not notice: it does not follow the liquid. The 1 well filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 6 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 88,
+   "title": "23 wells never mixed after ligase went in (5 to 9% of the well)",
+   "explanation": "At line 88 the robot added ligase to wells A1, A2, A3, A4, A5, A6, A7, A8 and 15 more in slot 3, which already held water, buffer, insert 1, vector and 22 more (this line did it 23 times). The addition was 5 to 9% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes straight to the instrument, the wells are not what the protocol says they are.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 15 more in slot 3 after line 88: `mix_after=(5, 9 to 16)` on the transfer, or `pipette.mix(5, 9 to 16, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 6.0,
+ "draft": 1
+}

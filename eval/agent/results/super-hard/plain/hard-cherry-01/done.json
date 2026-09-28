@@ -1,0 +1,48 @@
+{
+ "id": "hard-cherry-01",
+ "condition": "plain",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 44,
+    "title": "No no-template control: 24 wells of mix with a sample"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 44,
+    "title": "No no-template control: 24 wells of mix with a sample"
+   }
+  ],
+  "draft": 0,
+  "rounds": 0
+ },
+ "tool_calls": 9,
+ "turns": 9,
+ "drafts": 1,
+ "checks": 1,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 47338,
+ "tokens_out": 1928,
+ "seconds": 28.0
+}

@@ -1,0 +1,183 @@
+{
+ "id": "pool-01",
+ "request": "Pool 5 ul from each of 48 indexed sequencing libraries in a 96-well plate into a single 1.5 ml tube.",
+ "technique": "Pooling",
+ "liquids": [
+  {
+   "name": "library_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:library)\\D{0,12}?(\\d+)",
+   "count": 48,
+   "index": "number"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "pool 48 libraries into tube",
+   "why": "request does not specify tube position; single destination assumed",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "pooled libraries",
+     "members": [
+      {
+       "library_1": 5
+      },
+      {
+       "library_2": 5
+      },
+      {
+       "library_3": 5
+      },
+      {
+       "library_4": 5
+      },
+      {
+       "library_5": 5
+      },
+      {
+       "library_6": 5
+      },
+      {
+       "library_7": 5
+      },
+      {
+       "library_8": 5
+      },
+      {
+       "library_9": 5
+      },
+      {
+       "library_10": 5
+      },
+      {
+       "library_11": 5
+      },
+      {
+       "library_12": 5
+      },
+      {
+       "library_13": 5
+      },
+      {
+       "library_14": 5
+      },
+      {
+       "library_15": 5
+      },
+      {
+       "library_16": 5
+      },
+      {
+       "library_17": 5
+      },
+      {
+       "library_18": 5
+      },
+      {
+       "library_19": 5
+      },
+      {
+       "library_20": 5
+      },
+      {
+       "library_21": 5
+      },
+      {
+       "library_22": 5
+      },
+      {
+       "library_23": 5
+      },
+      {
+       "library_24": 5
+      },
+      {
+       "library_25": 5
+      },
+      {
+       "library_26": 5
+      },
+      {
+       "library_27": 5
+      },
+      {
+       "library_28": 5
+      },
+      {
+       "library_29": 5
+      },
+      {
+       "library_30": 5
+      },
+      {
+       "library_31": 5
+      },
+      {
+       "library_32": 5
+      },
+      {
+       "library_33": 5
+      },
+      {
+       "library_34": 5
+      },
+      {
+       "library_35": 5
+      },
+      {
+       "library_36": 5
+      },
+      {
+       "library_37": 5
+      },
+      {
+       "library_38": 5
+      },
+      {
+       "library_39": 5
+      },
+      {
+       "library_40": 5
+      },
+      {
+       "library_41": 5
+      },
+      {
+       "library_42": 5
+      },
+      {
+       "library_43": 5
+      },
+      {
+       "library_44": 5
+      },
+      {
+       "library_45": 5
+      },
+      {
+       "library_46": 5
+      },
+      {
+       "library_47": 5
+      },
+      {
+       "library_48": 5
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The request does not say which wells; single 1.5 ml tube assumed as destination."
+ ]
+}

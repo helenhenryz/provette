@@ -1,0 +1,91 @@
+{
+ "id": "hard-pcr-02",
+ "request": "Set up 8 preparative PCR reactions of 100 ul each in a PCR plate: 50 ul of 2x master mix, 42 ul of water and 8 ul of template, one template per reaction, from 1.5 ml tubes.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)master\\s*mix|mastermix|\\bmix\\b|sybr"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  },
+  {
+   "name": "template_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:template|sample|dna)\\D{0,12}?(\\d+)",
+   "count": 8,
+   "index": "number"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "8 reactions of 100 ul",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "mix": 50,
+       "water": 42,
+       "template_1": 8
+      },
+      {
+       "mix": 50,
+       "water": 42,
+       "template_2": 8
+      },
+      {
+       "mix": 50,
+       "water": 42,
+       "template_3": 8
+      },
+      {
+       "mix": 50,
+       "water": 42,
+       "template_4": 8
+      },
+      {
+       "mix": 50,
+       "water": 42,
+       "template_5": 8
+      },
+      {
+       "mix": 50,
+       "water": 42,
+       "template_6": 8
+      },
+      {
+       "mix": 50,
+       "water": 42,
+       "template_7": 8
+      },
+      {
+       "mix": 50,
+       "water": 42,
+       "template_8": 8
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "100 ul reactions: a plate rated 100 ul is full to its working volume."
+ ]
+}

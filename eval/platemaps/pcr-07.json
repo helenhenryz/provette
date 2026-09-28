@@ -1,0 +1,165 @@
+{
+ "id": "pcr-07",
+ "request": "Assemble PCR reactions from separate components for 12 samples: 10 ul buffer mix, 0.5 ul polymerase, 1 ul forward primer, 1 ul reverse primer, 10.5 ul water and 2 ul template per 25 ul reaction. Components are in 1.5 ml tubes on a cold block.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "sample_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:sample|dna|template)\\D{0,12}?(\\d+)",
+   "count": 12,
+   "index": "number"
+  },
+  {
+   "name": "polymerase",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)polymerase|taq"
+  },
+  {
+   "name": "fwd_primer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)forward|fwd"
+  },
+  {
+   "name": "rev_primer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)reverse|rev\\b"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  },
+  {
+   "name": "buffer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)buffer"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "12 reactions",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_1": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_2": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_3": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_4": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_5": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_6": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_7": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_8": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_9": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_10": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_11": 2
+      },
+      {
+       "buffer": 10,
+       "polymerase": 0.5,
+       "fwd_primer": 1,
+       "rev_primer": 1,
+       "water": 10.5,
+       "sample_12": 2
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "0.5 ul is below what an OT-2 pipette can move alone, so a pooled master mix is expected; after ideal mixing each well still resolves to the listed amounts."
+ ]
+}

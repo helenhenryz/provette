@@ -1,0 +1,101 @@
+import opentrons
+from opentrons import protocol_api
+
+metadata = {"protocolName": "BCA assay", "apiLevel": "2.19"}
+
+def run(protocol: protocol_api.ProtocolContext):
+    # labware
+    tips20 = protocol.load_labware("opentrons_96_tiprack_20ul", 8)   # for p20
+    tips300_1 = protocol.load_labware("opentrons_96_tiprack_300ul", 1)
+    tips300_2 = protocol.load_labware("opentrons_96_tiprack_300ul", 6)
+    tuberack = protocol.load_labware("opentrons_24_tuberack_nest_1.5ml_snapcap", 2)
+    src_samples = protocol.load_labware("nest_96_wellplate_200ul_flat", 3)
+    dst_plate = protocol.load_labware("nest_96_wellplate_2ml_deep", 4)
+    reservoir = protocol.load_labware("nest_12_reservoir_15ml", 5)
+
+    # pipettes
+    p20 = protocol.load_instrument("p20_single_gen2", "left", tip_racks=[tips20])
+    p300 = protocol.load_instrument("p300_single_gen2", "right", tip_racks=[tips300_1, tips300_2])
+
+    # define liquids
+    reagent = protocol.define_liquid(name="reagent", description="BCA working reagent", display_color="#FF0000")
+    bsa = protocol.define_liquid(name="bsa", description="2 mg/ml BSA stock", display_color="#00FF00")
+    water = protocol.define_liquid(name="water", description="nuclease-free water", display_color="#0000FF")
+    samples = {}
+    for i in range(1, 41):
+        name = f"sample {i}"
+        liq = protocol.define_liquid(name=name, description=f"Protein sample {i}", display_color="#FFA500")
+        samples[name] = liq
+
+    # load liquids onto deck
+    tuberack["A1"].load_liquid(liquid=bsa, volume=1500)  # BSA stock
+    tuberack["A2"].load_liquid(liquid=water, volume=1500)  # water
+    reservoir["A1"].load_liquid(liquid=reagent, volume=20000)  # reagent, enough for 96*200=19200
+    for i in range(1, 41):
+        col = (i-1) // 8 + 1
+        row = ((i-1) % 8)
+        well = chr(65+row) + str(col)
+        src_samples[well].load_liquid(liquid=samples[f"sample {i}"], volume=200)
+
+    def smart_transfer(vol, src, dest, mix_after=None):
+        """Transfer vol using p20 if vol <20 else p300."""
+        if vol < 20:
+            if mix_after:
+                p20.transfer(vol, src, dest, mix_after=mix_after)
+            else:
+                p20.transfer(vol, src, dest)
+        else:
+            if mix_after:
+                p300.transfer(vol, src, dest, mix_after=mix_after)
+            else:
+                p300.transfer(vol, src, dest)
+
+    # ---- transfer samples to destination plate (duplicate) ----
+    for i in range(1, 41):
+        col_src = (i-1) // 8 + 1
+        row_src = ((i-1) % 8)
+        well_src = chr(65+row_src) + str(col_src)
+        # destinations: two consecutive wells in column‑wise order
+        dst_index = (i-1)*2
+        dst_row = dst_index // 12
+        dst_col = (dst_index % 12) + 1
+        well_dst1 = chr(65+dst_row) + str(dst_col)
+        dst_index2 = dst_index + 1
+        dst_row2 = dst_index2 // 12
+        dst_col2 = (dst_index2 % 12) + 1
+        well_dst2 = chr(65+dst_row2) + str(dst_col2)
+        smart_transfer(25, src_samples[well_src], dst_plate[well_dst1])
+        smart_transfer(25, src_samples[well_src], dst_plate[well_dst2])
+
+    # ---- prepare standards (BSA dilutions) directly in destination plate ----
+    # unique standard points (bsa_ul, water_ul) as per plate map
+    std_points = [
+        (25.0, 0.0),
+        (12.5, 12.5),
+        (6.25, 18.75),
+        (3.12, 21.88),
+        (1.56, 23.44),
+        (0.78, 24.22),
+        (0.39, 24.61),
+        (0.0, 25.0)
+    ]
+    std_start_idx = 80  # after samples
+    point_idx = 0
+    for bsa_vol, water_vol in std_points:
+        for rep in range(2):  # duplicate each point
+            idx = std_start_idx + point_idx*2 + rep
+            dst_row = idx // 12
+            dst_col = (idx % 12) + 1
+            dst_well = chr(65+dst_row) + str(dst_col)
+            if bsa_vol > 0:
+                smart_transfer(bsa_vol, tuberack["A1"], dst_plate[dst_well], mix_after=(2, 25))
+            if water_vol > 0:
+                smart_transfer(water_vol, tuberack["A2"], dst_plate[dst_well], mix_after=(2, 25))
+        point_idx += 1
+
+    # ---- add 200 ul reagent to all used wells (96 wells) ----
+    for i in range(96):
+        row = i // 12
+        col = (i % 12) + 1
+        well = chr(65+row) + str(col)
+        smart_transfer(200, reservoir["A1"], dst_plate[well])

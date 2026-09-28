@@ -1,0 +1,231 @@
+{
+ "id": "hard-clone-01",
+ "request": "Set up 24 ligation reactions, 20 ul each: 2 ul of 10x T4 DNA ligase buffer, 1 ul of T4 DNA ligase, 3 ul of cut vector, 5 ul of a different insert per reaction, and 9 ul of water. The ligase, buffer and vector are in tubes on a cold block at 4 C; the inserts are in a 96-well plate. Reactions go in a PCR plate.",
+ "technique": "Cloning",
+ "liquids": [
+  {
+   "name": "buffer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)buffer"
+  },
+  {
+   "name": "ligase",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)ligase|enzyme"
+  },
+  {
+   "name": "vector",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)vector|backbone|plasmid"
+  },
+  {
+   "name": "insert_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:insert|fragment|sample)\\D{0,12}?(\\d+)",
+   "count": 24,
+   "index": "number"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "24 ligations",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "ligations",
+     "members": [
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_1": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_2": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_3": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_4": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_5": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_6": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_7": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_8": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_9": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_10": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_11": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_12": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_13": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_14": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_15": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_16": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_17": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_18": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_19": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_20": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_21": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_22": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_23": 5,
+       "water": 9
+      },
+      {
+       "buffer": 2,
+       "ligase": 1,
+       "vector": 3,
+       "insert_24": 5,
+       "water": 9
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "Buffer, ligase, vector and water may be pooled first; each well still resolves."
+ ]
+}

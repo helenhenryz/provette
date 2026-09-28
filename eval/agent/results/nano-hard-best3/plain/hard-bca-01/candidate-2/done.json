@@ -1,0 +1,54 @@
+{
+ "id": "hard-bca-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 97,
+    "title": "A used tip went into a stock: reagent (well A1 in slot 4)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 116,
+    "title": "0.39 ul and 0.78 ul are below what the p20_single_gen2 can measure (1 ul at least)"
+   },
+   {
+    "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 97,
+    "title": "(proposed) A tip that had been in a sample went into a reagent"
+   }
+  ],
+  "draft": 7,
+  "rounds": 7
+ },
+ "tool_calls": 15,
+ "turns": 15,
+ "drafts": 8,
+ "checks": 8,
+ "submitted": true,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 795407,
+ "tokens_out": 98160,
+ "seconds": 1111.9
+}

@@ -1,0 +1,461 @@
+{
+ "id": "hard-bca-01",
+ "request": "BCA protein assay in a 96-well plate: 25 ul of each of 40 protein samples from a 96-well plate in duplicate, and a standard curve of 7 points made by 1:2 serial dilution of the 2 mg/ml BSA stock in water (100 ul per point, from a tube) plus a water blank, 25 ul of each standard and the blank in duplicate. Then add 200 ul of BCA working reagent from a reservoir to every well used.",
+ "technique": "Protein assay",
+ "liquids": [
+  {
+   "name": "reagent",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)bca|working reagent|reagent"
+  },
+  {
+   "name": "bsa",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)bsa|standard|albumin"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  },
+  {
+   "name": "sample_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:sample|protein|lysate)\\D{0,12}?(\\d+)",
+   "count": 40,
+   "index": "number"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "80 sample wells and 16 standard wells",
+   "why": "positions are free",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "samples",
+     "members": [
+      {
+       "sample_1": 25,
+       "reagent": 200
+      },
+      {
+       "sample_1": 25,
+       "reagent": 200
+      },
+      {
+       "sample_2": 25,
+       "reagent": 200
+      },
+      {
+       "sample_2": 25,
+       "reagent": 200
+      },
+      {
+       "sample_3": 25,
+       "reagent": 200
+      },
+      {
+       "sample_3": 25,
+       "reagent": 200
+      },
+      {
+       "sample_4": 25,
+       "reagent": 200
+      },
+      {
+       "sample_4": 25,
+       "reagent": 200
+      },
+      {
+       "sample_5": 25,
+       "reagent": 200
+      },
+      {
+       "sample_5": 25,
+       "reagent": 200
+      },
+      {
+       "sample_6": 25,
+       "reagent": 200
+      },
+      {
+       "sample_6": 25,
+       "reagent": 200
+      },
+      {
+       "sample_7": 25,
+       "reagent": 200
+      },
+      {
+       "sample_7": 25,
+       "reagent": 200
+      },
+      {
+       "sample_8": 25,
+       "reagent": 200
+      },
+      {
+       "sample_8": 25,
+       "reagent": 200
+      },
+      {
+       "sample_9": 25,
+       "reagent": 200
+      },
+      {
+       "sample_9": 25,
+       "reagent": 200
+      },
+      {
+       "sample_10": 25,
+       "reagent": 200
+      },
+      {
+       "sample_10": 25,
+       "reagent": 200
+      },
+      {
+       "sample_11": 25,
+       "reagent": 200
+      },
+      {
+       "sample_11": 25,
+       "reagent": 200
+      },
+      {
+       "sample_12": 25,
+       "reagent": 200
+      },
+      {
+       "sample_12": 25,
+       "reagent": 200
+      },
+      {
+       "sample_13": 25,
+       "reagent": 200
+      },
+      {
+       "sample_13": 25,
+       "reagent": 200
+      },
+      {
+       "sample_14": 25,
+       "reagent": 200
+      },
+      {
+       "sample_14": 25,
+       "reagent": 200
+      },
+      {
+       "sample_15": 25,
+       "reagent": 200
+      },
+      {
+       "sample_15": 25,
+       "reagent": 200
+      },
+      {
+       "sample_16": 25,
+       "reagent": 200
+      },
+      {
+       "sample_16": 25,
+       "reagent": 200
+      },
+      {
+       "sample_17": 25,
+       "reagent": 200
+      },
+      {
+       "sample_17": 25,
+       "reagent": 200
+      },
+      {
+       "sample_18": 25,
+       "reagent": 200
+      },
+      {
+       "sample_18": 25,
+       "reagent": 200
+      },
+      {
+       "sample_19": 25,
+       "reagent": 200
+      },
+      {
+       "sample_19": 25,
+       "reagent": 200
+      },
+      {
+       "sample_20": 25,
+       "reagent": 200
+      },
+      {
+       "sample_20": 25,
+       "reagent": 200
+      },
+      {
+       "sample_21": 25,
+       "reagent": 200
+      },
+      {
+       "sample_21": 25,
+       "reagent": 200
+      },
+      {
+       "sample_22": 25,
+       "reagent": 200
+      },
+      {
+       "sample_22": 25,
+       "reagent": 200
+      },
+      {
+       "sample_23": 25,
+       "reagent": 200
+      },
+      {
+       "sample_23": 25,
+       "reagent": 200
+      },
+      {
+       "sample_24": 25,
+       "reagent": 200
+      },
+      {
+       "sample_24": 25,
+       "reagent": 200
+      },
+      {
+       "sample_25": 25,
+       "reagent": 200
+      },
+      {
+       "sample_25": 25,
+       "reagent": 200
+      },
+      {
+       "sample_26": 25,
+       "reagent": 200
+      },
+      {
+       "sample_26": 25,
+       "reagent": 200
+      },
+      {
+       "sample_27": 25,
+       "reagent": 200
+      },
+      {
+       "sample_27": 25,
+       "reagent": 200
+      },
+      {
+       "sample_28": 25,
+       "reagent": 200
+      },
+      {
+       "sample_28": 25,
+       "reagent": 200
+      },
+      {
+       "sample_29": 25,
+       "reagent": 200
+      },
+      {
+       "sample_29": 25,
+       "reagent": 200
+      },
+      {
+       "sample_30": 25,
+       "reagent": 200
+      },
+      {
+       "sample_30": 25,
+       "reagent": 200
+      },
+      {
+       "sample_31": 25,
+       "reagent": 200
+      },
+      {
+       "sample_31": 25,
+       "reagent": 200
+      },
+      {
+       "sample_32": 25,
+       "reagent": 200
+      },
+      {
+       "sample_32": 25,
+       "reagent": 200
+      },
+      {
+       "sample_33": 25,
+       "reagent": 200
+      },
+      {
+       "sample_33": 25,
+       "reagent": 200
+      },
+      {
+       "sample_34": 25,
+       "reagent": 200
+      },
+      {
+       "sample_34": 25,
+       "reagent": 200
+      },
+      {
+       "sample_35": 25,
+       "reagent": 200
+      },
+      {
+       "sample_35": 25,
+       "reagent": 200
+      },
+      {
+       "sample_36": 25,
+       "reagent": 200
+      },
+      {
+       "sample_36": 25,
+       "reagent": 200
+      },
+      {
+       "sample_37": 25,
+       "reagent": 200
+      },
+      {
+       "sample_37": 25,
+       "reagent": 200
+      },
+      {
+       "sample_38": 25,
+       "reagent": 200
+      },
+      {
+       "sample_38": 25,
+       "reagent": 200
+      },
+      {
+       "sample_39": 25,
+       "reagent": 200
+      },
+      {
+       "sample_39": 25,
+       "reagent": 200
+      },
+      {
+       "sample_40": 25,
+       "reagent": 200
+      },
+      {
+       "sample_40": 25,
+       "reagent": 200
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    },
+    {
+     "name": "standards",
+     "members": [
+      {
+       "bsa": 25.0,
+       "reagent": 200
+      },
+      {
+       "bsa": 25.0,
+       "reagent": 200
+      },
+      {
+       "bsa": 12.5,
+       "water": 12.5,
+       "reagent": 200
+      },
+      {
+       "bsa": 12.5,
+       "water": 12.5,
+       "reagent": 200
+      },
+      {
+       "bsa": 6.25,
+       "water": 18.75,
+       "reagent": 200
+      },
+      {
+       "bsa": 6.25,
+       "water": 18.75,
+       "reagent": 200
+      },
+      {
+       "bsa": 3.125,
+       "water": 21.875,
+       "reagent": 200
+      },
+      {
+       "bsa": 3.125,
+       "water": 21.875,
+       "reagent": 200
+      },
+      {
+       "bsa": 1.5625,
+       "water": 23.4375,
+       "reagent": 200
+      },
+      {
+       "bsa": 1.5625,
+       "water": 23.4375,
+       "reagent": 200
+      },
+      {
+       "bsa": 0.7812,
+       "water": 24.2188,
+       "reagent": 200
+      },
+      {
+       "bsa": 0.7812,
+       "water": 24.2188,
+       "reagent": 200
+      },
+      {
+       "bsa": 0.3906,
+       "water": 24.6094,
+       "reagent": 200
+      },
+      {
+       "bsa": 0.3906,
+       "water": 24.6094,
+       "reagent": 200
+      },
+      {
+       "water": 25,
+       "reagent": 200
+      },
+      {
+       "water": 25,
+       "reagent": 200
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": null
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "Every well ends at 225 ul; the plate must hold that."
+ ]
+}

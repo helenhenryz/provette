@@ -1,0 +1,54 @@
+{
+ "id": "dil-01",
+ "condition": "plain",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "runner": "nebius",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 39,
+    "title": "More liquid than the well is rated for: 200 ul against 100 ul, 12 wells"
+   },
+   {
+    "rule_id": "MIX-TOO-WEAK",
+    "severity": "warning",
+    "certain": true,
+    "line": 43,
+    "title": "Mixing too weak to stir 12 wells: 3 \u00d7 20 ul in 200 ul"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 39,
+    "title": "No blank on a dilution series: 12 wells of drug"
+   }
+  ],
+  "draft": 21,
+  "rounds": 21
+ },
+ "tool_calls": 25,
+ "turns": 25,
+ "drafts": 22,
+ "checks": 22,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "call budget",
+ "tokens_in": 656589,
+ "tokens_out": 39323,
+ "seconds": 597.9
+}

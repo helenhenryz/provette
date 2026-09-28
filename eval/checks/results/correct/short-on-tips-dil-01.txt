@@ -1,0 +1,22 @@
+dil-01.py: VERIFIED against plate map dil-01. 12 of 12 wells hold what the plate map says.
+  Destination: Dilution plate (slot 1). Reading of the request: row A; first point is neat
+    stock; excess removed from the last well.
+
+Labware for the technique (Serial dilution): nothing to flag.
+
+Where every liquid ended up (ul):
+  liquid                             declared delivered in source elsewhere    lost
+  PBS                                  5000.0    1000.0    3900.0     100.0     0.0
+  Drug stock                            500.0     200.0     300.0       0.0     0.0
+  Note: PBS ends in wells the plate map does not list for it: A12 in slot 2 (100.0 ul).
+  Note: Drug stock ends in wells the plate map does not list for it: A12 in slot 2 (0.0 ul).
+
+Prep sheet: what to put on the deck before the run.
+  slot labware                               well  liquid                       load at least  declared
+  2    Reservoir                             A1    PBS                                 1100.0    5000.0
+  3    Drug stock                            A1    Drug stock                           200.0     500.0
+  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 µL in slot 4.
+  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.
+
+This checks the logic of the protocol: what goes where, and how much. It does not check the
+  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.

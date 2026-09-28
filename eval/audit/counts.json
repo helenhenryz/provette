@@ -1,0 +1,134 @@
+{
+ "protocols_checked": 787,
+ "protocols_not_simulating": 46,
+ "findings_by_rule_and_severity": {
+  "CONTAM-STOCK:warning": 196,
+  "CONTAM-STOCK:note": 162,
+  "CONTAM-STOCK:error": 171,
+  "UNMIXED-AT-END:note": 130,
+  "MIX-BEFORE-DRAW:warning": 297,
+  "COLD-MODULE-NEVER-SET:warning": 48,
+  "PIPETTE-RANGE:error": 407,
+  "CONTAM-WELL:warning": 39,
+  "CONTAM-WELL:note": 15,
+  "MIX-TOO-WEAK:warning": 184,
+  "WELL-CAPACITY:error": 36,
+  "WELL-CAPACITY:warning": 82,
+  "SOURCE-TOO-SHALLOW:error": 2,
+  "WELL-CAPACITY:note": 1,
+  "NO-SAMPLE-INTO-REAGENT-WELL:note": 1
+ },
+ "protocols_by_worst_finding": {
+  "warning": 223,
+  "clean": 279,
+  "error": 218,
+  "note": 67
+ },
+ "by_category": {
+  "Broad Category": {
+   "error": 2,
+   "warning": 6,
+   "clean": 1
+  },
+  "Cell And Tissue Culture": {
+   "warning": 2
+  },
+  "Covid Workstation": {
+   "clean": 4,
+   "note": 1,
+   "warning": 4,
+   "error": 5
+  },
+  "DNA/RNA": {
+   "warning": 1,
+   "clean": 1
+  },
+  "Featured": {
+   "clean": 7,
+   "note": 2,
+   "warning": 3,
+   "error": 7
+  },
+  "General Liquid Handling": {
+   "warning": 1,
+   "clean": 1
+  },
+  "Getting Started": {
+   "error": 2,
+   "clean": 4
+  },
+  "Heater Shaker": {
+   "error": 1
+  },
+  "Microbiology": {
+   "clean": 1
+  },
+  "NGS Library Prep": {
+   "warning": 79,
+   "error": 65,
+   "clean": 47,
+   "note": 6
+  },
+  "Normalization": {
+   "clean": 1,
+   "note": 1
+  },
+  "Nucleic Acid Extraction & Purification": {
+   "warning": 23,
+   "error": 38,
+   "note": 7,
+   "clean": 22
+  },
+  "PCR": {
+   "clean": 48,
+   "warning": 25,
+   "error": 18,
+   "note": 20
+  },
+  "PCR Prep": {
+   "warning": 1,
+   "clean": 2
+  },
+  "Protein Purification": {
+   "clean": 3,
+   "error": 7,
+   "warning": 3
+  },
+  "Proteins & Proteomics": {
+   "warning": 7,
+   "error": 15,
+   "clean": 7
+  },
+  "Purification": {
+   "warning": 2
+  },
+  "Sample Prep": {
+   "warning": 63,
+   "error": 57,
+   "note": 28,
+   "clean": 127
+  },
+  "Serial Dilution": {
+   "warning": 1
+  },
+  "Standard Curve For Hydrogen Peroxide": {
+   "error": 1
+  },
+  "Sterile Workflows": {
+   "clean": 2,
+   "warning": 2,
+   "note": 1
+  },
+  "Thermocycler": {
+   "clean": 1
+  },
+  "Titration": {
+   "note": 1
+  }
+ },
+ "caveats": [
+  "Parameters take the library's default values (fields.json), which may not be what a user would run.",
+  "Only 11 of 833 protocols declare their liquids, so the contamination rules cannot tell eight replicates from eight samples; those findings need a person.",
+  "A finding is a finding, not a confirmed problem, until the triage column is filled."
+ ]
+}

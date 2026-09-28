@@ -1,0 +1,2356 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-norm-01. 31 of 48 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 3). Reading of the request: 48\n    normalised libraries.\n  well H3 (normalised): expected 8 ul library_24, 12 ul buffer; found 8 ul library_24, 18.86\n    ul buffer\n      - wrong amount of buffer: the plate map says 12 ul, the protocol delivers 18.86 ul\n  well G3 (normalised): expected 1.67 ul library_23, 18.33 ul buffer; found 1.67 ul\n    library_23, 13.85 ul buffer\n      - wrong amount of buffer: the plate map says 18.33 ul, the protocol delivers 13.85 ul\n  well F3 (normalised): expected 5 ul library_22, 15 ul buffer; found 5 ul library_22, 17.78\n    ul buffer\n      - wrong amount of buffer: the plate map says 15 ul, the protocol delivers 17.78 ul\n  well H4 (normalised): expected 4.21 ul library_32, 15.79 ul buffer; found 4.21 ul\n    library_32, 16.8 ul buffer\n      - wrong amount of buffer: the plate map says 15.79 ul, the protocol delivers 16.8 ul\n  well G4 (normalised): expected 2.76 ul library_31, 17.24 ul buffer; found 2.76 ul\n    library_31, 18.71 ul buffer\n      - wrong amount of buffer: the plate map says 17.24 ul, the protocol delivers 18.71 ul\n  well F4 (normalised): expected 1.6 ul library_30, 18.4 ul buffer; found 1.6 ul library_30,\n    14.67 ul buffer\n      - wrong amount of buffer: the plate map says 18.4 ul, the protocol delivers 14.67 ul\n  well E4 (normalised): expected 9.41 ul library_29, 10.59 ul buffer; found 9.41 ul\n    library_29, 18.1 ul buffer\n      - wrong amount of buffer: the plate map says 10.59 ul, the protocol delivers 18.1 ul\n  well D4 (normalised): expected 3.64 ul library_28, 16.36 ul buffer; found 3.64 ul\n    library_28, 15.79 ul buffer\n      - wrong amount of buffer: the plate map says 16.36 ul, the protocol delivers 15.79 ul\n  well C4 (normalised): expected 1.14 ul library_27, 18.86 ul buffer; found 1.14 ul\n    library_27, 17.24 ul buffer\n      - wrong amount of buffer: the plate map says 18.86 ul, the protocol delivers 17.24 ul\n  well B4 (normalised): expected 6.15 ul library_26, 13.85 ul buffer; found 6.15 ul\n    library_26, 18.4 ul buffer\n      - wrong amount of buffer: the plate map says 13.85 ul, the protocol delivers 18.4 ul\n  well A4 (normalised): expected 2.22 ul library_25, 17.78 ul buffer; found 2.22 ul\n    library_25, 10.59 ul buffer\n      - wrong amount of buffer: the plate map says 17.78 ul, the protocol delivers 10.59 ul\n  well F5 (normalised): expected 2.11 ul library_38, 17.89 ul buffer; found 2.11 ul\n    library_38, 17.42 ul buffer\n      - wrong amount of buffer: the plate map says 17.89 ul, the protocol delivers 17.42 ul\n  ... and 5 more wells that do not match.\n\nLabware for the technique (Normalization): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  buffer                              10000.0     738.1    9261.9       0.0     0.0\n  library 1                             100.0       6.7      93.3       0.0     0.0\n  library 2                             100.0       1.8      98.2       0.0     0.0\n  library 3                             100.0      10.0      90.0       0.0     0.0\n  library 4                             100.0       1.0      99.0       0.0     0.0\n  library 5                             100.0       2.4      97.6       0.0     0.0\n  library 6                             100.0      14.6      85.5       0.0     0.0\n  library 7                             100.0       1.3      98.7       0.0     0.0\n  library 8                             100.0       3.8      96.2       0.0     0.0\n  library 9                             100.0       5.7      94.3       0.0     0.0\n  library 10                            100.0       8.9      91.1       0.0     0.0\n  library 11                            100.0       1.1      98.9       0.0     0.0\n  library 12                            100.0       3.0      97.0       0.0     0.0\n  library 13                            100.0      13.3      86.7       0.0     0.0\n  library 14                            100.0       2.0      98.0       0.0     0.0\n  library 15                            100.0       4.4      95.6       0.0     0.0\n  library 16                            100.0       1.4      98.5       0.0     0.0\n  library 17                            100.0       7.3      92.7       0.0     0.0\n  library 18                            100.0       2.7      97.3       0.0     0.0\n  library 19                            100.0      10.7      89.3       0.0     0.0\n  library 20                            100.0       1.2      98.8       0.0     0.0\n  library 21                            100.0       3.3      96.7       0.0     0.0\n  library 22                            100.0       5.0      95.0       0.0     0.0\n  library 23                            100.0       1.7      98.3       0.0     0.0\n  library 24                            100.0       8.0      92.0       0.0     0.0\n  library 25                            100.0       2.2      97.8       0.0     0.0\n  library 26                            100.0       6.2      93.8       0.0     0.0\n  library 27                            100.0       1.1      98.9       0.0     0.0\n  library 28                            100.0       3.6      96.4       0.0     0.0\n  library 29                            100.0       9.4      90.6       0.0     0.0\n  library 30                            100.0       1.6      98.4       0.0     0.0\n  library 31                            100.0       2.8      97.2       0.0     0.0\n  library 32                            100.0       4.2      95.8       0.0     0.0\n  library 33                            100.0       1.9      98.1       0.0     0.0\n  library 34                            100.0       5.3      94.7       0.0     0.0\n  library 35                            100.0       1.3      98.7       0.0     0.0\n  library 36                            100.0       3.2      96.8       0.0     0.0\n  library 37                            100.0      12.3      87.7       0.0     0.0\n  library 38                            100.0       2.1      97.9       0.0     0.0\n  library 39                            100.0       4.7      95.3       0.0     0.0\n  library 40                            100.0       1.1      99.0       0.0     0.0\n  library 41                            100.0       4.0      96.0       0.0     0.0\n  library 42                            100.0       8.4      91.6       0.0     0.0\n  library 43                            100.0       1.4      98.6       0.0     0.0\n  library 44                            100.0       2.6      97.4       0.0     0.0\n  library 45                            100.0       6.4      93.6       0.0     0.0\n  library 46                            100.0       1.8      98.2       0.0     0.0\n  library 47                            100.0       3.5      96.5       0.0     0.0\n  library 48                            100.0      11.4      88.6       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A1    library 1                              6.7     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B1    library 2                              1.8     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C1    library 3                             10.0     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D1    library 4                              1.0     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E1    library 5                              2.4     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F1    library 6                             14.5     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G1    library 7                              1.3     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H1    library 8                              3.8     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A2    library 9                              5.7     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B2    library 10                             8.9     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C2    library 11                             1.1     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D2    library 12                             3.0     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E2    library 13                            13.3     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F2    library 14                             2.0     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G2    library 15                             4.4     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H2    library 16                             1.5     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A3    library 17                             7.3     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B3    library 18                             2.7     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C3    library 19                            10.7     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D3    library 20                             1.2     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E3    library 21                             3.3     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F3    library 22                             5.0     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G3    library 23                             1.7     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H3    library 24                             8.0     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A4    library 25                             2.2     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B4    library 26                             6.2     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C4    library 27                             1.1     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D4    library 28                             3.6     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E4    library 29                             9.4     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F4    library 30                             1.6     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G4    library 31                             2.8     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H4    library 32                             4.2     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A5    library 33                             1.9     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B5    library 34                             5.3     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C5    library 35                             1.3     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D5    library 36                             3.2     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E5    library 37                            12.3     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F5    library 38                             2.1     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G5    library 39                             4.7     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H5    library 40                             1.0     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A6    library 41                             4.0     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B6    library 42                             8.4     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C6    library 43                             1.4     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D6    library 44                             2.6     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E6    library 45                             6.4     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F6    library 46                             1.8     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G6    library 47                             3.5     100.0\n  1    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H6    library 48                            11.4     100.0\n  2    NEST 12 Well Reservoir 15 mL          A1    buffer                               738.1   10000.0\n  Tips: 48 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 4.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-norm-01",
+  "technique": "Normalization",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_200ul_flat",
+   "variant": "48 normalised libraries",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 31,
+   "wells_total": 48,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "normalised",
+     "expected": {
+      "library_1": 6.6667,
+      "buffer": 13.3333
+     },
+     "found": {
+      "library_1": 6.67,
+      "buffer": 13.33
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "normalised",
+     "expected": {
+      "library_2": 1.7778,
+      "buffer": 18.2222
+     },
+     "found": {
+      "library_2": 1.78,
+      "buffer": 18.22
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "normalised",
+     "expected": {
+      "library_3": 10.0,
+      "buffer": 10.0
+     },
+     "found": {
+      "library_3": 10.0,
+      "buffer": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "normalised",
+     "expected": {
+      "library_4": 1.0,
+      "buffer": 19.0
+     },
+     "found": {
+      "library_4": 1.0,
+      "buffer": 19.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "normalised",
+     "expected": {
+      "library_5": 2.4242,
+      "buffer": 17.5758
+     },
+     "found": {
+      "library_5": 2.42,
+      "buffer": 17.58
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "normalised",
+     "expected": {
+      "library_6": 14.5455,
+      "buffer": 5.4545
+     },
+     "found": {
+      "library_6": 14.550000000000002,
+      "buffer": 5.45
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "normalised",
+     "expected": {
+      "library_7": 1.3333,
+      "buffer": 18.6667
+     },
+     "found": {
+      "library_7": 1.33,
+      "buffer": 18.67
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "normalised",
+     "expected": {
+      "library_8": 3.8095,
+      "buffer": 16.1905
+     },
+     "found": {
+      "library_8": 3.81,
+      "buffer": 16.19
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "normalised",
+     "expected": {
+      "library_9": 5.7143,
+      "buffer": 14.2857
+     },
+     "found": {
+      "library_9": 5.71,
+      "buffer": 14.29
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "normalised",
+     "expected": {
+      "library_10": 8.8889,
+      "buffer": 11.1111
+     },
+     "found": {
+      "library_10": 8.89,
+      "buffer": 11.11
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "normalised",
+     "expected": {
+      "library_11": 1.1111,
+      "buffer": 18.8889
+     },
+     "found": {
+      "library_11": 1.11,
+      "buffer": 18.89
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "normalised",
+     "expected": {
+      "library_12": 2.963,
+      "buffer": 17.037
+     },
+     "found": {
+      "library_12": 2.96,
+      "buffer": 17.04
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": "normalised",
+     "expected": {
+      "library_13": 13.3333,
+      "buffer": 6.6667
+     },
+     "found": {
+      "library_13": 13.33,
+      "buffer": 6.67
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": "normalised",
+     "expected": {
+      "library_14": 2.0,
+      "buffer": 18.0
+     },
+     "found": {
+      "library_14": 2.0,
+      "buffer": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": "normalised",
+     "expected": {
+      "library_15": 4.4444,
+      "buffer": 15.5556
+     },
+     "found": {
+      "library_15": 4.44,
+      "buffer": 15.56
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": "normalised",
+     "expected": {
+      "library_16": 1.4545,
+      "buffer": 18.5455
+     },
+     "found": {
+      "library_16": 1.45,
+      "buffer": 18.55
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "normalised",
+     "expected": {
+      "library_17": 7.2727,
+      "buffer": 12.7273
+     },
+     "found": {
+      "library_17": 7.2700000000000005,
+      "buffer": 12.73
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "normalised",
+     "expected": {
+      "library_18": 2.6667,
+      "buffer": 17.3333
+     },
+     "found": {
+      "library_18": 2.67,
+      "buffer": 17.33
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": "normalised",
+     "expected": {
+      "library_19": 10.6667,
+      "buffer": 9.3333
+     },
+     "found": {
+      "library_19": 10.67,
+      "buffer": 9.33
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": "normalised",
+     "expected": {
+      "library_20": 1.2308,
+      "buffer": 18.7692
+     },
+     "found": {
+      "library_20": 1.23,
+      "buffer": 18.77
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": "normalised",
+     "expected": {
+      "library_21": 3.3333,
+      "buffer": 16.6667
+     },
+     "found": {
+      "library_21": 3.3300000000000005,
+      "buffer": 16.67
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G5",
+     "group": "normalised",
+     "expected": {
+      "library_39": 4.7059,
+      "buffer": 15.2941
+     },
+     "found": {
+      "library_39": 4.71,
+      "buffer": 15.29
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H5",
+     "group": "normalised",
+     "expected": {
+      "library_40": 1.0526,
+      "buffer": 18.9474
+     },
+     "found": {
+      "library_40": 1.05,
+      "buffer": 18.95
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "normalised",
+     "expected": {
+      "library_41": 4.0,
+      "buffer": 16.0
+     },
+     "found": {
+      "library_41": 4.0,
+      "buffer": 16.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": "normalised",
+     "expected": {
+      "library_42": 8.4211,
+      "buffer": 11.5789
+     },
+     "found": {
+      "library_42": 8.42,
+      "buffer": 11.58
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C6",
+     "group": "normalised",
+     "expected": {
+      "library_43": 1.3793,
+      "buffer": 18.6207
+     },
+     "found": {
+      "library_43": 1.38,
+      "buffer": 18.62
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D6",
+     "group": "normalised",
+     "expected": {
+      "library_44": 2.5806,
+      "buffer": 17.4194
+     },
+     "found": {
+      "library_44": 2.58,
+      "buffer": 17.42
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E6",
+     "group": "normalised",
+     "expected": {
+      "library_45": 6.4,
+      "buffer": 13.6
+     },
+     "found": {
+      "library_45": 6.4,
+      "buffer": 13.6
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F6",
+     "group": "normalised",
+     "expected": {
+      "library_46": 1.8182,
+      "buffer": 18.1818
+     },
+     "found": {
+      "library_46": 1.82,
+      "buffer": 18.18
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G6",
+     "group": "normalised",
+     "expected": {
+      "library_47": 3.4783,
+      "buffer": 16.5217
+     },
+     "found": {
+      "library_47": 3.4799999999999995,
+      "buffer": 16.52
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H6",
+     "group": "normalised",
+     "expected": {
+      "library_48": 11.4286,
+      "buffer": 8.5714
+     },
+     "found": {
+      "library_48": 11.43,
+      "buffer": 8.57
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H3",
+     "group": "normalised",
+     "expected": {
+      "library_24": 8.0,
+      "buffer": 12.0
+     },
+     "found": {
+      "library_24": 8.0,
+      "buffer": 18.86
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 12.0,
+       "found_ul": 18.86,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": "normalised",
+     "expected": {
+      "library_23": 1.6667,
+      "buffer": 18.3333
+     },
+     "found": {
+      "library_23": 1.67,
+      "buffer": 13.85
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.3333,
+       "found_ul": 13.85,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": "normalised",
+     "expected": {
+      "library_22": 5.0,
+      "buffer": 15.0
+     },
+     "found": {
+      "library_22": 5.0,
+      "buffer": 17.78
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 15.0,
+       "found_ul": 17.78,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": "normalised",
+     "expected": {
+      "library_32": 4.2105,
+      "buffer": 15.7895
+     },
+     "found": {
+      "library_32": 4.21,
+      "buffer": 16.8
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 15.7895,
+       "found_ul": 16.8,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": "normalised",
+     "expected": {
+      "library_31": 2.7586,
+      "buffer": 17.2414
+     },
+     "found": {
+      "library_31": 2.76,
+      "buffer": 18.71
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 17.2414,
+       "found_ul": 18.71,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": "normalised",
+     "expected": {
+      "library_30": 1.6,
+      "buffer": 18.4
+     },
+     "found": {
+      "library_30": 1.6,
+      "buffer": 14.67
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.4,
+       "found_ul": 14.67,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": "normalised",
+     "expected": {
+      "library_29": 9.4118,
+      "buffer": 10.5882
+     },
+     "found": {
+      "library_29": 9.41,
+      "buffer": 18.1
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 10.5882,
+       "found_ul": 18.1,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": "normalised",
+     "expected": {
+      "library_28": 3.6364,
+      "buffer": 16.3636
+     },
+     "found": {
+      "library_28": 3.64,
+      "buffer": 15.79
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 16.3636,
+       "found_ul": 15.79,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": "normalised",
+     "expected": {
+      "library_27": 1.1429,
+      "buffer": 18.8571
+     },
+     "found": {
+      "library_27": 1.14,
+      "buffer": 17.24
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.8571,
+       "found_ul": 17.24,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "normalised",
+     "expected": {
+      "library_26": 6.1538,
+      "buffer": 13.8462
+     },
+     "found": {
+      "library_26": 6.15,
+      "buffer": 18.4
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 13.8462,
+       "found_ul": 18.4,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "normalised",
+     "expected": {
+      "library_25": 2.2222,
+      "buffer": 17.7778
+     },
+     "found": {
+      "library_25": 2.22,
+      "buffer": 10.59
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 17.7778,
+       "found_ul": 10.59,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": "normalised",
+     "expected": {
+      "library_38": 2.1053,
+      "buffer": 17.8947
+     },
+     "found": {
+      "library_38": 2.11,
+      "buffer": 17.42
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 17.8947,
+       "found_ul": 17.42,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": "normalised",
+     "expected": {
+      "library_37": 12.3077,
+      "buffer": 7.6923
+     },
+     "found": {
+      "library_37": 12.31,
+      "buffer": 18.62
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 7.6923,
+       "found_ul": 18.62,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": "normalised",
+     "expected": {
+      "library_36": 3.2,
+      "buffer": 16.8
+     },
+     "found": {
+      "library_36": 3.2,
+      "buffer": 11.58
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 16.8,
+       "found_ul": 11.58,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": "normalised",
+     "expected": {
+      "library_35": 1.2903,
+      "buffer": 18.7097
+     },
+     "found": {
+      "library_35": 1.29,
+      "buffer": 16.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.7097,
+       "found_ul": 16.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "normalised",
+     "expected": {
+      "library_34": 5.3333,
+      "buffer": 14.6667
+     },
+     "found": {
+      "library_34": 5.33,
+      "buffer": 17.89
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 14.6667,
+       "found_ul": 17.89,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "normalised",
+     "expected": {
+      "library_33": 1.9048,
+      "buffer": 18.0952
+     },
+     "found": {
+      "library_33": 1.9,
+      "buffer": 7.69
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.0952,
+       "found_ul": 7.69,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "H3",
+     "group": "normalised",
+     "expected": {
+      "library_24": 8.0,
+      "buffer": 12.0
+     },
+     "found": {
+      "library_24": 8.0,
+      "buffer": 18.86
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 12.0,
+       "found_ul": 18.86,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": "normalised",
+     "expected": {
+      "library_23": 1.6667,
+      "buffer": 18.3333
+     },
+     "found": {
+      "library_23": 1.67,
+      "buffer": 13.85
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.3333,
+       "found_ul": 13.85,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": "normalised",
+     "expected": {
+      "library_22": 5.0,
+      "buffer": 15.0
+     },
+     "found": {
+      "library_22": 5.0,
+      "buffer": 17.78
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 15.0,
+       "found_ul": 17.78,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": "normalised",
+     "expected": {
+      "library_32": 4.2105,
+      "buffer": 15.7895
+     },
+     "found": {
+      "library_32": 4.21,
+      "buffer": 16.8
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 15.7895,
+       "found_ul": 16.8,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": "normalised",
+     "expected": {
+      "library_31": 2.7586,
+      "buffer": 17.2414
+     },
+     "found": {
+      "library_31": 2.76,
+      "buffer": 18.71
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 17.2414,
+       "found_ul": 18.71,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": "normalised",
+     "expected": {
+      "library_30": 1.6,
+      "buffer": 18.4
+     },
+     "found": {
+      "library_30": 1.6,
+      "buffer": 14.67
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.4,
+       "found_ul": 14.67,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": "normalised",
+     "expected": {
+      "library_29": 9.4118,
+      "buffer": 10.5882
+     },
+     "found": {
+      "library_29": 9.41,
+      "buffer": 18.1
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 10.5882,
+       "found_ul": 18.1,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": "normalised",
+     "expected": {
+      "library_28": 3.6364,
+      "buffer": 16.3636
+     },
+     "found": {
+      "library_28": 3.64,
+      "buffer": 15.79
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 16.3636,
+       "found_ul": 15.79,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": "normalised",
+     "expected": {
+      "library_27": 1.1429,
+      "buffer": 18.8571
+     },
+     "found": {
+      "library_27": 1.14,
+      "buffer": 17.24
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.8571,
+       "found_ul": 17.24,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "normalised",
+     "expected": {
+      "library_26": 6.1538,
+      "buffer": 13.8462
+     },
+     "found": {
+      "library_26": 6.15,
+      "buffer": 18.4
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 13.8462,
+       "found_ul": 18.4,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "normalised",
+     "expected": {
+      "library_25": 2.2222,
+      "buffer": 17.7778
+     },
+     "found": {
+      "library_25": 2.22,
+      "buffer": 10.59
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 17.7778,
+       "found_ul": 10.59,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": "normalised",
+     "expected": {
+      "library_38": 2.1053,
+      "buffer": 17.8947
+     },
+     "found": {
+      "library_38": 2.11,
+      "buffer": 17.42
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 17.8947,
+       "found_ul": 17.42,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": "normalised",
+     "expected": {
+      "library_37": 12.3077,
+      "buffer": 7.6923
+     },
+     "found": {
+      "library_37": 12.31,
+      "buffer": 18.62
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 7.6923,
+       "found_ul": 18.62,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": "normalised",
+     "expected": {
+      "library_36": 3.2,
+      "buffer": 16.8
+     },
+     "found": {
+      "library_36": 3.2,
+      "buffer": 11.58
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 16.8,
+       "found_ul": 11.58,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": "normalised",
+     "expected": {
+      "library_35": 1.2903,
+      "buffer": 18.7097
+     },
+     "found": {
+      "library_35": 1.29,
+      "buffer": 16.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.7097,
+       "found_ul": 16.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "normalised",
+     "expected": {
+      "library_34": 5.3333,
+      "buffer": 14.6667
+     },
+     "found": {
+      "library_34": 5.33,
+      "buffer": 17.89
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 14.6667,
+       "found_ul": 17.89,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "normalised",
+     "expected": {
+      "library_33": 1.9048,
+      "buffer": 18.0952
+     },
+     "found": {
+      "library_33": 1.9,
+      "buffer": 7.69
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 18.0952,
+       "found_ul": 7.69,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 10000.0,
+    "delivered_ul": 738.1,
+    "left_in_source_ul": 9261.9,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 1",
+    "logical": "library_1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 6.67,
+    "left_in_source_ul": 93.33,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 2",
+    "logical": "library_2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.78,
+    "left_in_source_ul": 98.22,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 3",
+    "logical": "library_3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 4",
+    "logical": "library_4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 5",
+    "logical": "library_5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.42,
+    "left_in_source_ul": 97.58,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 6",
+    "logical": "library_6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 14.55,
+    "left_in_source_ul": 85.45,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 7",
+    "logical": "library_7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.33,
+    "left_in_source_ul": 98.67,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 8",
+    "logical": "library_8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 3.81,
+    "left_in_source_ul": 96.19,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 9",
+    "logical": "library_9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.71,
+    "left_in_source_ul": 94.29,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 10",
+    "logical": "library_10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 8.89,
+    "left_in_source_ul": 91.11,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 11",
+    "logical": "library_11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.11,
+    "left_in_source_ul": 98.89,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 12",
+    "logical": "library_12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.96,
+    "left_in_source_ul": 97.04,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 13",
+    "logical": "library_13",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 13.33,
+    "left_in_source_ul": 86.67,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 14",
+    "logical": "library_14",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 15",
+    "logical": "library_15",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 4.44,
+    "left_in_source_ul": 95.56,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 16",
+    "logical": "library_16",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.45,
+    "left_in_source_ul": 98.55,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 17",
+    "logical": "library_17",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 7.27,
+    "left_in_source_ul": 92.73,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 18",
+    "logical": "library_18",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.67,
+    "left_in_source_ul": 97.33,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 19",
+    "logical": "library_19",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.67,
+    "left_in_source_ul": 89.33,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 20",
+    "logical": "library_20",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.23,
+    "left_in_source_ul": 98.77,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 21",
+    "logical": "library_21",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 3.33,
+    "left_in_source_ul": 96.67,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 22",
+    "logical": "library_22",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 23",
+    "logical": "library_23",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.67,
+    "left_in_source_ul": 98.33,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 24",
+    "logical": "library_24",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 92.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 25",
+    "logical": "library_25",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.22,
+    "left_in_source_ul": 97.78,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 26",
+    "logical": "library_26",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 6.15,
+    "left_in_source_ul": 93.85,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 27",
+    "logical": "library_27",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.14,
+    "left_in_source_ul": 98.86,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 28",
+    "logical": "library_28",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 3.64,
+    "left_in_source_ul": 96.36,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 29",
+    "logical": "library_29",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 9.41,
+    "left_in_source_ul": 90.59,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 30",
+    "logical": "library_30",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.6,
+    "left_in_source_ul": 98.4,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 31",
+    "logical": "library_31",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.76,
+    "left_in_source_ul": 97.24,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 32",
+    "logical": "library_32",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 4.21,
+    "left_in_source_ul": 95.79,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 33",
+    "logical": "library_33",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.9,
+    "left_in_source_ul": 98.1,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 34",
+    "logical": "library_34",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.33,
+    "left_in_source_ul": 94.67,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 35",
+    "logical": "library_35",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.29,
+    "left_in_source_ul": 98.71,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 36",
+    "logical": "library_36",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 3.2,
+    "left_in_source_ul": 96.8,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 37",
+    "logical": "library_37",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 12.31,
+    "left_in_source_ul": 87.69,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 38",
+    "logical": "library_38",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.11,
+    "left_in_source_ul": 97.89,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 39",
+    "logical": "library_39",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 4.71,
+    "left_in_source_ul": 95.29,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 40",
+    "logical": "library_40",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.05,
+    "left_in_source_ul": 98.95,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 41",
+    "logical": "library_41",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 4.0,
+    "left_in_source_ul": 96.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 42",
+    "logical": "library_42",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 8.42,
+    "left_in_source_ul": 91.58,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 43",
+    "logical": "library_43",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.38,
+    "left_in_source_ul": 98.62,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 44",
+    "logical": "library_44",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.58,
+    "left_in_source_ul": 97.42,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 45",
+    "logical": "library_45",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 6.4,
+    "left_in_source_ul": 93.6,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 46",
+    "logical": "library_46",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.82,
+    "left_in_source_ul": 98.18,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 47",
+    "logical": "library_47",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 3.48,
+    "left_in_source_ul": 96.52,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "library 48",
+    "logical": "library_48",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 11.43,
+    "left_in_source_ul": 88.57,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A1",
+     "liquid": "library 1",
+     "declared_ul": 100.0,
+     "needed_ul": 6.67,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B1",
+     "liquid": "library 2",
+     "declared_ul": 100.0,
+     "needed_ul": 1.78,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C1",
+     "liquid": "library 3",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D1",
+     "liquid": "library 4",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E1",
+     "liquid": "library 5",
+     "declared_ul": 100.0,
+     "needed_ul": 2.42,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F1",
+     "liquid": "library 6",
+     "declared_ul": 100.0,
+     "needed_ul": 14.55,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G1",
+     "liquid": "library 7",
+     "declared_ul": 100.0,
+     "needed_ul": 1.33,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H1",
+     "liquid": "library 8",
+     "declared_ul": 100.0,
+     "needed_ul": 3.81,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A2",
+     "liquid": "library 9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.71,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B2",
+     "liquid": "library 10",
+     "declared_ul": 100.0,
+     "needed_ul": 8.89,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C2",
+     "liquid": "library 11",
+     "declared_ul": 100.0,
+     "needed_ul": 1.11,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D2",
+     "liquid": "library 12",
+     "declared_ul": 100.0,
+     "needed_ul": 2.96,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E2",
+     "liquid": "library 13",
+     "declared_ul": 100.0,
+     "needed_ul": 13.33,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F2",
+     "liquid": "library 14",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G2",
+     "liquid": "library 15",
+     "declared_ul": 100.0,
+     "needed_ul": 4.44,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H2",
+     "liquid": "library 16",
+     "declared_ul": 100.0,
+     "needed_ul": 1.45,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A3",
+     "liquid": "library 17",
+     "declared_ul": 100.0,
+     "needed_ul": 7.27,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B3",
+     "liquid": "library 18",
+     "declared_ul": 100.0,
+     "needed_ul": 2.67,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C3",
+     "liquid": "library 19",
+     "declared_ul": 100.0,
+     "needed_ul": 10.67,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D3",
+     "liquid": "library 20",
+     "declared_ul": 100.0,
+     "needed_ul": 1.23,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E3",
+     "liquid": "library 21",
+     "declared_ul": 100.0,
+     "needed_ul": 3.33,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F3",
+     "liquid": "library 22",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G3",
+     "liquid": "library 23",
+     "declared_ul": 100.0,
+     "needed_ul": 1.67,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H3",
+     "liquid": "library 24",
+     "declared_ul": 100.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A4",
+     "liquid": "library 25",
+     "declared_ul": 100.0,
+     "needed_ul": 2.22,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B4",
+     "liquid": "library 26",
+     "declared_ul": 100.0,
+     "needed_ul": 6.15,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C4",
+     "liquid": "library 27",
+     "declared_ul": 100.0,
+     "needed_ul": 1.14,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D4",
+     "liquid": "library 28",
+     "declared_ul": 100.0,
+     "needed_ul": 3.64,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E4",
+     "liquid": "library 29",
+     "declared_ul": 100.0,
+     "needed_ul": 9.41,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F4",
+     "liquid": "library 30",
+     "declared_ul": 100.0,
+     "needed_ul": 1.6,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G4",
+     "liquid": "library 31",
+     "declared_ul": 100.0,
+     "needed_ul": 2.76,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H4",
+     "liquid": "library 32",
+     "declared_ul": 100.0,
+     "needed_ul": 4.21,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A5",
+     "liquid": "library 33",
+     "declared_ul": 100.0,
+     "needed_ul": 1.9,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B5",
+     "liquid": "library 34",
+     "declared_ul": 100.0,
+     "needed_ul": 5.33,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C5",
+     "liquid": "library 35",
+     "declared_ul": 100.0,
+     "needed_ul": 1.29,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D5",
+     "liquid": "library 36",
+     "declared_ul": 100.0,
+     "needed_ul": 3.2,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E5",
+     "liquid": "library 37",
+     "declared_ul": 100.0,
+     "needed_ul": 12.31,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F5",
+     "liquid": "library 38",
+     "declared_ul": 100.0,
+     "needed_ul": 2.11,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G5",
+     "liquid": "library 39",
+     "declared_ul": 100.0,
+     "needed_ul": 4.71,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H5",
+     "liquid": "library 40",
+     "declared_ul": 100.0,
+     "needed_ul": 1.05,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A6",
+     "liquid": "library 41",
+     "declared_ul": 100.0,
+     "needed_ul": 4.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B6",
+     "liquid": "library 42",
+     "declared_ul": 100.0,
+     "needed_ul": 8.42,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C6",
+     "liquid": "library 43",
+     "declared_ul": 100.0,
+     "needed_ul": 1.38,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D6",
+     "liquid": "library 44",
+     "declared_ul": 100.0,
+     "needed_ul": 2.58,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E6",
+     "liquid": "library 45",
+     "declared_ul": 100.0,
+     "needed_ul": 6.4,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F6",
+     "liquid": "library 46",
+     "declared_ul": 100.0,
+     "needed_ul": 1.82,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G6",
+     "liquid": "library 47",
+     "declared_ul": 100.0,
+     "needed_ul": 3.48,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H6",
+     "liquid": "library 48",
+     "declared_ul": 100.0,
+     "needed_ul": 11.43,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "buffer",
+     "declared_ul": 10000.0,
+     "needed_ul": 738.1,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "4",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 48
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 2 biology problems (1 error, 1 note).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: buffer (well A1 in slot 2)\n   line 59:  p20.aspirate(buf_vol, reservoir[\"A1\"])\n   At line 59 the tip went into buffer (well A1 in slot 2) while it still carried library 1\n   (well A1 in slot 1), library 9 (well A2 in slot 1), library 17 (well A3 in slot 1),\n   library 25 (well A4 in slot 1) and 44 more from an earlier step (this line did it 48\n   times). A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches, so this stock now holds material that does not belong there. Liquid drawn from\n   it then took the unwanted material along into 47 other wells: wells A2, A3, A4, A5, A6,\n   B1, B2, B3 and 39 more in slot 3.\n   Affected: well A1 in slot 2.\n   Also reached 47 other wells: wells A2, A3, A4, A5, A6, B1, B2, B3 and 39 more in slot 3.\n   Fix: Pick up a fresh tip before line 59 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [04d3a4dbcf9d]\n\n2. NOTE UNMIXED-AT-END: Well F1 in slot 3 never mixed after buffer went in (27% of the well)\n   line 60:  p20.dispense(buf_vol, dest_well)\n   At line 60 the robot added buffer to well F1 in slot 3, which already held library 6. The\n   addition was 27% of the well, nothing mixed the well afterwards, and the run ended with\n   it that way. Two liquids layered in a small well do not mix on their own, so what the\n   well holds is not at the concentration you calculated. If the plate is vortexed and spun\n   down before it is used, nothing is wrong; if it goes straight to the instrument, the\n   wells are not what the protocol says they are.\n   Affected: well F1 in slot 3.\n   Fix: Mix well F1 in slot 3 after line 60: `mix_after=(5, 16)` on the transfer, or\n   `pipette.mix(5, 16, well)`, with the volume about 80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [418fe2f11100]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 59,
+   "title": "A used tip went into a stock: buffer (well A1 in slot 2)",
+   "explanation": "At line 59 the tip went into buffer (well A1 in slot 2) while it still carried library 1 (well A1 in slot 1), library 9 (well A2 in slot 1), library 17 (well A3 in slot 1), library 25 (well A4 in slot 1) and 44 more from an earlier step (this line did it 48 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 47 other wells: wells A2, A3, A4, A5, A6, B1, B2, B3 and 39 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 59 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 60,
+   "title": "Well F1 in slot 3 never mixed after buffer went in (27% of the well)",
+   "explanation": "At line 60 the robot added buffer to well F1 in slot 3, which already held library 6. The addition was 27% of the well, nothing mixed the well afterwards, and the run ended with it that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes straight to the instrument, the wells are not what the protocol says they are.",
+   "fix": "Mix well F1 in slot 3 after line 60: `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 5.3,
+ "draft": 3
+}

@@ -1,0 +1,78 @@
+{
+ "id": "hard-pcr-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 3,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 69,
+    "title": "The pipette draws air from well A1 in slot 3: the liquid is below the tip"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 63,
+    "title": "A used tip went into a stock: 96 stocks"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 66,
+    "title": "96 wells never mixed after source_A1, source_A2, source_A3, source_A4 and 92 more went in (25% of the well)"
+   }
+  ],
+  "draft": 5,
+  "rounds": 5
+ },
+ "tool_calls": 10,
+ "turns": 10,
+ "drafts": 6,
+ "checks": 6,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 1743196,
+ "tokens_out": 325346,
+ "seconds": 1004.1,
+ "candidates": [
+  {
+   "dir": "candidate-0",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 580444,
+   "tokens_out": 109211
+  },
+  {
+   "dir": "candidate-1",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 569366,
+   "tokens_out": 103406
+  },
+  {
+   "dir": "candidate-2",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 593386,
+   "tokens_out": 112729
+  }
+ ],
+ "chosen": "candidate-1"
+}

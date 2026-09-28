@@ -1,0 +1,160 @@
+{
+ "id": "hard-dil-02",
+ "request": "Make a 1:3 serial dilution of 4 compounds, 6 points each, in DMSO in a 96-well plate, 60 ul per well, starting from the neat 10 mM stocks in 1.5 ml tubes, one compound per row. Then transfer 10 ul of every point into the matching well of a cell assay plate whose wells already hold 90 ul of medium.",
+ "technique": "Serial dilution",
+ "liquids": [
+  {
+   "name": "compound_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:compound|cmpd|drug)\\D{0,12}?(\\d+)",
+   "count": 4,
+   "index": "number"
+  },
+  {
+   "name": "dmso",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)dmso"
+  },
+  {
+   "name": "medium",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)medium|media"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "4 rows x 6 points on the assay plate",
+   "why": "'matching well' and 'one compound per row' pin every position",
+   "pinned": {
+    "A1": {
+     "medium": "declared",
+     "compound_1": 10.0
+    },
+    "A2": {
+     "medium": "declared",
+     "compound_1": 3.3333,
+     "dmso": 6.6667
+    },
+    "A3": {
+     "medium": "declared",
+     "compound_1": 1.1111,
+     "dmso": 8.8889
+    },
+    "A4": {
+     "medium": "declared",
+     "compound_1": 0.3704,
+     "dmso": 9.6296
+    },
+    "A5": {
+     "medium": "declared",
+     "compound_1": 0.1235,
+     "dmso": 9.8765
+    },
+    "A6": {
+     "medium": "declared",
+     "compound_1": 0.0412,
+     "dmso": 9.9588
+    },
+    "B1": {
+     "medium": "declared",
+     "compound_2": 10.0
+    },
+    "B2": {
+     "medium": "declared",
+     "compound_2": 3.3333,
+     "dmso": 6.6667
+    },
+    "B3": {
+     "medium": "declared",
+     "compound_2": 1.1111,
+     "dmso": 8.8889
+    },
+    "B4": {
+     "medium": "declared",
+     "compound_2": 0.3704,
+     "dmso": 9.6296
+    },
+    "B5": {
+     "medium": "declared",
+     "compound_2": 0.1235,
+     "dmso": 9.8765
+    },
+    "B6": {
+     "medium": "declared",
+     "compound_2": 0.0412,
+     "dmso": 9.9588
+    },
+    "C1": {
+     "medium": "declared",
+     "compound_3": 10.0
+    },
+    "C2": {
+     "medium": "declared",
+     "compound_3": 3.3333,
+     "dmso": 6.6667
+    },
+    "C3": {
+     "medium": "declared",
+     "compound_3": 1.1111,
+     "dmso": 8.8889
+    },
+    "C4": {
+     "medium": "declared",
+     "compound_3": 0.3704,
+     "dmso": 9.6296
+    },
+    "C5": {
+     "medium": "declared",
+     "compound_3": 0.1235,
+     "dmso": 9.8765
+    },
+    "C6": {
+     "medium": "declared",
+     "compound_3": 0.0412,
+     "dmso": 9.9588
+    },
+    "D1": {
+     "medium": "declared",
+     "compound_4": 10.0
+    },
+    "D2": {
+     "medium": "declared",
+     "compound_4": 3.3333,
+     "dmso": 6.6667
+    },
+    "D3": {
+     "medium": "declared",
+     "compound_4": 1.1111,
+     "dmso": 8.8889
+    },
+    "D4": {
+     "medium": "declared",
+     "compound_4": 0.3704,
+     "dmso": 9.6296
+    },
+    "D5": {
+     "medium": "declared",
+     "compound_4": 0.1235,
+     "dmso": 9.8765
+    },
+    "D6": {
+     "medium": "declared",
+     "compound_4": 0.0412,
+     "dmso": 9.9588
+    }
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The destination is the assay plate, whose wells keep their declared 90 ul of medium and gain 10 ul of the dilution point: compound 10/3^k ul and DMSO the rest. Six points, because the checker counts anything at or below 0.01 ul as absent.",
+  "Point 1 is the neat stock ('starting from the neat 10 mM stocks')."
+ ]
+}

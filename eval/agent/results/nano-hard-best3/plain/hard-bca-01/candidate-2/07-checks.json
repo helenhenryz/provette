@@ -1,0 +1,2462 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-bca-01. 95 of 96 wells hold what the plate map\n  says.\n  Destination: Corning 96 Well Plate 360 \u00b5L Flat (slot 1). Reading of the request: 80 sample\n    wells and 16 standard wells.\n  well H12 (standards): expected 25 ul water, 200 ul reagent; found 25 ul water\n      - reagent is missing: the plate map says 200 ul, none arrives\n\nLabware for the technique (Protein assay): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  reagent                             20000.0   19000.0    1000.0       0.0     0.0\n  bsa                                  1000.0      99.2     900.8       0.0     0.0\n  water                                1000.0     300.8     699.2       0.0     0.0\n  sample 1                              200.0      50.0     150.0       0.0     0.0\n  sample 2                              200.0      50.0     150.0       0.0     0.0\n  sample 3                              200.0      50.0     150.0       0.0     0.0\n  sample 4                              200.0      50.0     150.0       0.0     0.0\n  sample 5                              200.0      50.0     150.0       0.0     0.0\n  sample 6                              200.0      50.0     150.0       0.0     0.0\n  sample 7                              200.0      50.0     150.0       0.0     0.0\n  sample 8                              200.0      50.0     150.0       0.0     0.0\n  sample 9                              200.0      50.0     150.0       0.0     0.0\n  sample 10                             200.0      50.0     150.0       0.0     0.0\n  sample 11                             200.0      50.0     150.0       0.0     0.0\n  sample 12                             200.0      50.0     150.0       0.0     0.0\n  sample 13                             200.0      50.0     150.0       0.0     0.0\n  sample 14                             200.0      50.0     150.0       0.0     0.0\n  sample 15                             200.0      50.0     150.0       0.0     0.0\n  sample 16                             200.0      50.0     150.0       0.0     0.0\n  sample 17                             200.0      50.0     150.0       0.0     0.0\n  sample 18                             200.0      50.0     150.0       0.0     0.0\n  sample 19                             200.0      50.0     150.0       0.0     0.0\n  sample 20                             200.0      50.0     150.0       0.0     0.0\n  sample 21                             200.0      50.0     150.0       0.0     0.0\n  sample 22                             200.0      50.0     150.0       0.0     0.0\n  sample 23                             200.0      50.0     150.0       0.0     0.0\n  sample 24                             200.0      50.0     150.0       0.0     0.0\n  sample 25                             200.0      50.0     150.0       0.0     0.0\n  sample 26                             200.0      50.0     150.0       0.0     0.0\n  sample 27                             200.0      50.0     150.0       0.0     0.0\n  sample 28                             200.0      50.0     150.0       0.0     0.0\n  sample 29                             200.0      50.0     150.0       0.0     0.0\n  sample 30                             200.0      50.0     150.0       0.0     0.0\n  sample 31                             200.0      50.0     150.0       0.0     0.0\n  sample 32                             200.0      50.0     150.0       0.0     0.0\n  sample 33                             200.0      50.0     150.0       0.0     0.0\n  sample 34                             200.0      50.0     150.0       0.0     0.0\n  sample 35                             200.0      50.0     150.0       0.0     0.0\n  sample 36                             200.0      50.0     150.0       0.0     0.0\n  sample 37                             200.0      50.0     150.0       0.0     0.0\n  sample 38                             200.0      50.0     150.0       0.0     0.0\n  sample 39                             200.0      50.0     150.0       0.0     0.0\n  sample 40                             200.0      50.0     150.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A1    sample 1                              50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B1    sample 13                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C1    sample 25                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     D1    sample 37                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A2    sample 2                              50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B2    sample 14                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C2    sample 26                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     D2    sample 38                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A3    sample 3                              50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B3    sample 15                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C3    sample 27                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     D3    sample 39                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A4    sample 4                              50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B4    sample 16                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C4    sample 28                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     D4    sample 40                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A5    sample 5                              50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B5    sample 17                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C5    sample 29                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A6    sample 6                              50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B6    sample 18                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C6    sample 30                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A7    sample 7                              50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B7    sample 19                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C7    sample 31                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A8    sample 8                              50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B8    sample 20                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C8    sample 32                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A9    sample 9                              50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B9    sample 21                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C9    sample 33                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A10   sample 10                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B10   sample 22                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C10   sample 34                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A11   sample 11                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B11   sample 23                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C11   sample 35                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A12   sample 12                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B12   sample 24                             50.0     200.0\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C12   sample 36                             50.0     200.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    bsa                                   99.2    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A2    water                                300.8    1000.0\n  4    NEST 1 Well Reservoir 195 mL          A1    reagent                            19200.0   20000.0  <-- NO MARGIN\n  FLAG: reagent in A1, slot 4 has no margin: the robot draws 19200 ul of the 20000 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 21120 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  Tips: 16 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 5.\n  Tips: 68 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 6.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-bca-01",
+  "technique": "Protein assay",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "1:corning_96_wellplate_360ul_flat",
+   "variant": "80 sample wells and 16 standard wells",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 95,
+   "wells_total": 96,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "samples",
+     "expected": {
+      "sample_1": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_1": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "samples",
+     "expected": {
+      "sample_1": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_1": 25.0,
+      "reagent": 200.00000000000003
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "samples",
+     "expected": {
+      "sample_2": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_2": 25.0,
+      "reagent": 199.99999999999997
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "samples",
+     "expected": {
+      "sample_2": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_2": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "samples",
+     "expected": {
+      "sample_3": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_3": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "samples",
+     "expected": {
+      "sample_3": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_3": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "samples",
+     "expected": {
+      "sample_4": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_4": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "samples",
+     "expected": {
+      "sample_4": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_4": 25.0,
+      "reagent": 200.00000000000003
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "samples",
+     "expected": {
+      "sample_5": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_5": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "samples",
+     "expected": {
+      "sample_5": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_5": 25.0,
+      "reagent": 200.00000000000003
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "samples",
+     "expected": {
+      "sample_6": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_6": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "samples",
+     "expected": {
+      "sample_6": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_6": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "samples",
+     "expected": {
+      "sample_7": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_7": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "samples",
+     "expected": {
+      "sample_7": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_7": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "samples",
+     "expected": {
+      "sample_8": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_8": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": "samples",
+     "expected": {
+      "sample_8": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_8": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": "samples",
+     "expected": {
+      "sample_9": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_9": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": "samples",
+     "expected": {
+      "sample_9": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_9": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B7",
+     "group": "samples",
+     "expected": {
+      "sample_10": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_10": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B8",
+     "group": "samples",
+     "expected": {
+      "sample_10": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_10": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B9",
+     "group": "samples",
+     "expected": {
+      "sample_11": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_11": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B10",
+     "group": "samples",
+     "expected": {
+      "sample_11": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_11": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B11",
+     "group": "samples",
+     "expected": {
+      "sample_12": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_12": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B12",
+     "group": "samples",
+     "expected": {
+      "sample_12": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_12": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "samples",
+     "expected": {
+      "sample_13": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_13": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "samples",
+     "expected": {
+      "sample_13": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_13": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": "samples",
+     "expected": {
+      "sample_14": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_14": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C4",
+     "group": "samples",
+     "expected": {
+      "sample_14": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_14": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C5",
+     "group": "samples",
+     "expected": {
+      "sample_15": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_15": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C6",
+     "group": "samples",
+     "expected": {
+      "sample_15": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_15": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C7",
+     "group": "samples",
+     "expected": {
+      "sample_16": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_16": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C8",
+     "group": "samples",
+     "expected": {
+      "sample_16": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_16": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C9",
+     "group": "samples",
+     "expected": {
+      "sample_17": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_17": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C10",
+     "group": "samples",
+     "expected": {
+      "sample_17": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_17": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C11",
+     "group": "samples",
+     "expected": {
+      "sample_18": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_18": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C12",
+     "group": "samples",
+     "expected": {
+      "sample_18": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_18": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "samples",
+     "expected": {
+      "sample_19": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_19": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "samples",
+     "expected": {
+      "sample_19": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_19": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": "samples",
+     "expected": {
+      "sample_20": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_20": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D4",
+     "group": "samples",
+     "expected": {
+      "sample_20": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_20": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D5",
+     "group": "samples",
+     "expected": {
+      "sample_21": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_21": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D6",
+     "group": "samples",
+     "expected": {
+      "sample_21": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_21": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D7",
+     "group": "samples",
+     "expected": {
+      "sample_22": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_22": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D8",
+     "group": "samples",
+     "expected": {
+      "sample_22": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_22": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D9",
+     "group": "samples",
+     "expected": {
+      "sample_23": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_23": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D10",
+     "group": "samples",
+     "expected": {
+      "sample_23": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_23": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D11",
+     "group": "samples",
+     "expected": {
+      "sample_24": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_24": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D12",
+     "group": "samples",
+     "expected": {
+      "sample_24": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_24": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "samples",
+     "expected": {
+      "sample_25": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_25": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": "samples",
+     "expected": {
+      "sample_25": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_25": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": "samples",
+     "expected": {
+      "sample_26": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_26": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E4",
+     "group": "samples",
+     "expected": {
+      "sample_26": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_26": 25.0,
+      "reagent": 199.99999999999997
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E5",
+     "group": "samples",
+     "expected": {
+      "sample_27": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_27": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E6",
+     "group": "samples",
+     "expected": {
+      "sample_27": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_27": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E7",
+     "group": "samples",
+     "expected": {
+      "sample_28": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_28": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E8",
+     "group": "samples",
+     "expected": {
+      "sample_28": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_28": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E9",
+     "group": "samples",
+     "expected": {
+      "sample_29": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_29": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E10",
+     "group": "samples",
+     "expected": {
+      "sample_29": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_29": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E11",
+     "group": "samples",
+     "expected": {
+      "sample_30": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_30": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E12",
+     "group": "samples",
+     "expected": {
+      "sample_30": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_30": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "samples",
+     "expected": {
+      "sample_31": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_31": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": "samples",
+     "expected": {
+      "sample_31": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_31": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F3",
+     "group": "samples",
+     "expected": {
+      "sample_32": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_32": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F4",
+     "group": "samples",
+     "expected": {
+      "sample_32": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_32": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F5",
+     "group": "samples",
+     "expected": {
+      "sample_33": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_33": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F6",
+     "group": "samples",
+     "expected": {
+      "sample_33": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_33": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F7",
+     "group": "samples",
+     "expected": {
+      "sample_34": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_34": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F8",
+     "group": "samples",
+     "expected": {
+      "sample_34": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_34": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F9",
+     "group": "samples",
+     "expected": {
+      "sample_35": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_35": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F10",
+     "group": "samples",
+     "expected": {
+      "sample_35": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_35": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F11",
+     "group": "samples",
+     "expected": {
+      "sample_36": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_36": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F12",
+     "group": "samples",
+     "expected": {
+      "sample_36": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_36": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "samples",
+     "expected": {
+      "sample_37": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_37": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": "samples",
+     "expected": {
+      "sample_37": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_37": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G3",
+     "group": "samples",
+     "expected": {
+      "sample_38": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_38": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G4",
+     "group": "samples",
+     "expected": {
+      "sample_38": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_38": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G5",
+     "group": "samples",
+     "expected": {
+      "sample_39": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_39": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G6",
+     "group": "samples",
+     "expected": {
+      "sample_39": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_39": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G7",
+     "group": "samples",
+     "expected": {
+      "sample_40": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_40": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G8",
+     "group": "samples",
+     "expected": {
+      "sample_40": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "sample_40": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G9",
+     "group": "standards",
+     "expected": {
+      "bsa": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G10",
+     "group": "standards",
+     "expected": {
+      "bsa": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G11",
+     "group": "standards",
+     "expected": {
+      "bsa": 12.5,
+      "water": 12.5,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 12.5,
+      "water": 12.5,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G12",
+     "group": "standards",
+     "expected": {
+      "bsa": 12.5,
+      "water": 12.5,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 12.5,
+      "water": 12.5,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "standards",
+     "expected": {
+      "bsa": 6.25,
+      "water": 18.75,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 6.25,
+      "water": 18.75,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": "standards",
+     "expected": {
+      "bsa": 6.25,
+      "water": 18.75,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 6.25,
+      "water": 18.75,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H3",
+     "group": "standards",
+     "expected": {
+      "bsa": 3.125,
+      "water": 21.875,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 3.12,
+      "water": 21.88,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H4",
+     "group": "standards",
+     "expected": {
+      "bsa": 3.125,
+      "water": 21.875,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 3.12,
+      "water": 21.88,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H5",
+     "group": "standards",
+     "expected": {
+      "bsa": 1.5625,
+      "water": 23.4375,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 1.56,
+      "water": 23.44,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H6",
+     "group": "standards",
+     "expected": {
+      "bsa": 1.5625,
+      "water": 23.4375,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 1.56,
+      "water": 23.44,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H7",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.7812,
+      "water": 24.2188,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 0.78,
+      "water": 24.22,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H8",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.7812,
+      "water": 24.2188,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 0.78,
+      "water": 24.22,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H9",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.3906,
+      "water": 24.6094,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 0.39,
+      "water": 24.61,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H10",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.3906,
+      "water": 24.6094,
+      "reagent": 200.0
+     },
+     "found": {
+      "bsa": 0.39,
+      "water": 24.609999999999996,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H11",
+     "group": "standards",
+     "expected": {
+      "water": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "water": 25.0,
+      "reagent": 200.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H12",
+     "group": "standards",
+     "expected": {
+      "water": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "water": 25.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "reagent",
+       "expected_ul": 200.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "H12",
+     "group": "standards",
+     "expected": {
+      "water": 25.0,
+      "reagent": 200.0
+     },
+     "found": {
+      "water": 25.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "reagent",
+       "expected_ul": 200.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "reagent",
+    "logical": "reagent",
+    "role": "reagent",
+    "declared_ul": 20000.0,
+    "delivered_ul": 19000.0,
+    "left_in_source_ul": 1000.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "bsa",
+    "logical": "bsa",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 99.2,
+    "left_in_source_ul": 900.8,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 300.8,
+    "left_in_source_ul": 699.2,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 13",
+    "logical": "sample_13",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 14",
+    "logical": "sample_14",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 15",
+    "logical": "sample_15",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 16",
+    "logical": "sample_16",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 17",
+    "logical": "sample_17",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 18",
+    "logical": "sample_18",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 19",
+    "logical": "sample_19",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 20",
+    "logical": "sample_20",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 21",
+    "logical": "sample_21",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 22",
+    "logical": "sample_22",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 23",
+    "logical": "sample_23",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 24",
+    "logical": "sample_24",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 25",
+    "logical": "sample_25",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 26",
+    "logical": "sample_26",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 27",
+    "logical": "sample_27",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 28",
+    "logical": "sample_28",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 29",
+    "logical": "sample_29",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 30",
+    "logical": "sample_30",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 31",
+    "logical": "sample_31",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 32",
+    "logical": "sample_32",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 33",
+    "logical": "sample_33",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 34",
+    "logical": "sample_34",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 35",
+    "logical": "sample_35",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 36",
+    "logical": "sample_36",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 37",
+    "logical": "sample_37",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 38",
+    "logical": "sample_38",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 39",
+    "logical": "sample_39",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 40",
+    "logical": "sample_40",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 50.0,
+    "left_in_source_ul": 150.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "sample 13",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C1",
+     "liquid": "sample 25",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "D1",
+     "liquid": "sample 37",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "sample 2",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "sample 14",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C2",
+     "liquid": "sample 26",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "D2",
+     "liquid": "sample 38",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "sample 3",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "sample 15",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C3",
+     "liquid": "sample 27",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "D3",
+     "liquid": "sample 39",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "sample 4",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B4",
+     "liquid": "sample 16",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C4",
+     "liquid": "sample 28",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "D4",
+     "liquid": "sample 40",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "sample 5",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B5",
+     "liquid": "sample 17",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C5",
+     "liquid": "sample 29",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "sample 6",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B6",
+     "liquid": "sample 18",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C6",
+     "liquid": "sample 30",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "sample 7",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B7",
+     "liquid": "sample 19",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C7",
+     "liquid": "sample 31",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "sample 8",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B8",
+     "liquid": "sample 20",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C8",
+     "liquid": "sample 32",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A9",
+     "liquid": "sample 9",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B9",
+     "liquid": "sample 21",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C9",
+     "liquid": "sample 33",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A10",
+     "liquid": "sample 10",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B10",
+     "liquid": "sample 22",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C10",
+     "liquid": "sample 34",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "sample 11",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B11",
+     "liquid": "sample 23",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C11",
+     "liquid": "sample 35",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "sample 12",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B12",
+     "liquid": "sample 24",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C12",
+     "liquid": "sample 36",
+     "declared_ul": 200.0,
+     "needed_ul": 50.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "bsa",
+     "declared_ul": 1000.0,
+     "needed_ul": 99.2,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "water",
+     "declared_ul": 1000.0,
+     "needed_ul": 300.8,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 1 Well Reservoir 195 mL",
+     "well": "A1",
+     "liquid": "reagent",
+     "declared_ul": 20000.0,
+     "needed_ul": 19200.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "5",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 16
+    },
+    {
+     "slot": "6",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 68
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (2 errors, 1 note).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: reagent (well A1 in slot 4)\n   line 97:  p300.aspirate(200, reservoir[\"A1\"])\n   At line 97 the tip went into reagent (well A1 in slot 4) while it still carried sample 1\n   (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4\n   (well A4 in slot 2) and 36 more from an earlier step (this line did it 40 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, so this\n   stock now holds material that does not belong there. Liquid drawn from it then took the\n   unwanted material along into 93 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 85\n   more in slot 1.\n   Affected: well A1 in slot 4.\n   Also reached 93 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 85 more in slot 1.\n   Fix: Pick up a fresh tip before line 97 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [8f6749bc500e]\n\n2. ERROR PIPETTE-RANGE: 0.39 ul and 0.78 ul are below what the p20_single_gen2 can measure\n(1 ul at least)\n   line 116:  pipette.aspirate(bsa_vol, bsa_well)\n   At line 116 the p20_single_gen2 is asked to draw 0.39 ul and 0.78 ul, below its minimum\n   of 1 ul (this line did it 4 times). A pipette cannot measure less than its minimum: it\n   draws the wrong amount, or nothing, and the volumes in this protocol only add up on\n   paper. The simulator passes the move. Wells: tube A1 in slot 3.\n   Affected: tube A1 in slot 3.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [d57dd312458b]\n\n3. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 97:  p300.aspirate(200, reservoir[\"A1\"])\n   At line 97 the tip touched the liquid in well A1 in slot 4 while it still carried sample\n   1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample\n   4 (well A4 in slot 2) and 36 more from an earlier step (this line did it 40 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, and the\n   protocol never transfers that liquid into this well on purpose. A reagent is shared: the\n   master mix, the enzyme or the primer in that well goes into every reaction on the plate.\n   A tip that has been in one sample leaves a little of it in the next liquid it touches, so\n   a sample carried into a reagent well turns up in every well that reagent reaches, and a\n   no-template control can no longer be trusted. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 93 other wells: wells A3, A4, A5, A6,\n   A7, A8, A9, A10 and 85 more in slot 1.\n   Affected: well A1 in slot 4.\n   Also reached 93 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 85 more in slot 1.\n   Fix: Use a fresh tip for each sample at line 97, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [2635cc335f50]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 97,
+   "title": "A used tip went into a stock: reagent (well A1 in slot 4)",
+   "explanation": "At line 97 the tip went into reagent (well A1 in slot 4) while it still carried sample 1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4 (well A4 in slot 2) and 36 more from an earlier step (this line did it 40 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 93 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 85 more in slot 1.",
+   "fix": "Pick up a fresh tip before line 97 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 116,
+   "title": "0.39 ul and 0.78 ul are below what the p20_single_gen2 can measure (1 ul at least)",
+   "explanation": "At line 116 the p20_single_gen2 is asked to draw 0.39 ul and 0.78 ul, below its minimum of 1 ul (this line did it 4 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A1 in slot 3.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 97,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 97 the tip touched the liquid in well A1 in slot 4 while it still carried sample 1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4 (well A4 in slot 2) and 36 more from an earlier step (this line did it 40 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted. Liquid was later taken out of the affected wells, and the unwanted material went along into 93 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 85 more in slot 1.",
+   "fix": "Use a fresh tip for each sample at line 97, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  }
+ ],
+ "seconds": 7.1,
+ "draft": 7
+}

@@ -1,0 +1,589 @@
+{
+ "id": "hard-elisa-01",
+ "request": "Prepare an ELISA standard curve and add the samples. Make 7 standards by 1:2 serial dilution of the 200 ng/ml standard stock in assay diluent, 250 ul per point, from a 1.5 ml tube, plus a blank of diluent only. Then add 100 ul of each standard and the blank in duplicate, and 100 ul of each of 32 pre-diluted serum samples in duplicate, to a coated 96-well ELISA plate.",
+ "technique": "ELISA",
+ "liquids": [
+  {
+   "name": "standard",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)standard|stock"
+  },
+  {
+   "name": "diluent",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)diluent|buffer|pbs"
+  },
+  {
+   "name": "serum_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:serum|sample)\\D{0,12}?(\\d+)",
+   "count": 32,
+   "index": "number"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "16 standard wells and 64 sample wells; first point is 1:2",
+   "why": "positions are free; whether point 1 is neat is ambiguous",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "standards",
+     "members": [
+      {
+       "standard": 50.0,
+       "diluent": 50.0
+      },
+      {
+       "standard": 50.0,
+       "diluent": 50.0
+      },
+      {
+       "standard": 25.0,
+       "diluent": 75.0
+      },
+      {
+       "standard": 25.0,
+       "diluent": 75.0
+      },
+      {
+       "standard": 12.5,
+       "diluent": 87.5
+      },
+      {
+       "standard": 12.5,
+       "diluent": 87.5
+      },
+      {
+       "standard": 6.25,
+       "diluent": 93.75
+      },
+      {
+       "standard": 6.25,
+       "diluent": 93.75
+      },
+      {
+       "standard": 3.125,
+       "diluent": 96.875
+      },
+      {
+       "standard": 3.125,
+       "diluent": 96.875
+      },
+      {
+       "standard": 1.5625,
+       "diluent": 98.4375
+      },
+      {
+       "standard": 1.5625,
+       "diluent": 98.4375
+      },
+      {
+       "standard": 0.7812,
+       "diluent": 99.2188
+      },
+      {
+       "standard": 0.7812,
+       "diluent": 99.2188
+      },
+      {
+       "diluent": 100
+      },
+      {
+       "diluent": 100
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": null
+    },
+    {
+     "name": "samples",
+     "members": [
+      {
+       "serum_1": 100
+      },
+      {
+       "serum_1": 100
+      },
+      {
+       "serum_2": 100
+      },
+      {
+       "serum_2": 100
+      },
+      {
+       "serum_3": 100
+      },
+      {
+       "serum_3": 100
+      },
+      {
+       "serum_4": 100
+      },
+      {
+       "serum_4": 100
+      },
+      {
+       "serum_5": 100
+      },
+      {
+       "serum_5": 100
+      },
+      {
+       "serum_6": 100
+      },
+      {
+       "serum_6": 100
+      },
+      {
+       "serum_7": 100
+      },
+      {
+       "serum_7": 100
+      },
+      {
+       "serum_8": 100
+      },
+      {
+       "serum_8": 100
+      },
+      {
+       "serum_9": 100
+      },
+      {
+       "serum_9": 100
+      },
+      {
+       "serum_10": 100
+      },
+      {
+       "serum_10": 100
+      },
+      {
+       "serum_11": 100
+      },
+      {
+       "serum_11": 100
+      },
+      {
+       "serum_12": 100
+      },
+      {
+       "serum_12": 100
+      },
+      {
+       "serum_13": 100
+      },
+      {
+       "serum_13": 100
+      },
+      {
+       "serum_14": 100
+      },
+      {
+       "serum_14": 100
+      },
+      {
+       "serum_15": 100
+      },
+      {
+       "serum_15": 100
+      },
+      {
+       "serum_16": 100
+      },
+      {
+       "serum_16": 100
+      },
+      {
+       "serum_17": 100
+      },
+      {
+       "serum_17": 100
+      },
+      {
+       "serum_18": 100
+      },
+      {
+       "serum_18": 100
+      },
+      {
+       "serum_19": 100
+      },
+      {
+       "serum_19": 100
+      },
+      {
+       "serum_20": 100
+      },
+      {
+       "serum_20": 100
+      },
+      {
+       "serum_21": 100
+      },
+      {
+       "serum_21": 100
+      },
+      {
+       "serum_22": 100
+      },
+      {
+       "serum_22": 100
+      },
+      {
+       "serum_23": 100
+      },
+      {
+       "serum_23": 100
+      },
+      {
+       "serum_24": 100
+      },
+      {
+       "serum_24": 100
+      },
+      {
+       "serum_25": 100
+      },
+      {
+       "serum_25": 100
+      },
+      {
+       "serum_26": 100
+      },
+      {
+       "serum_26": 100
+      },
+      {
+       "serum_27": 100
+      },
+      {
+       "serum_27": 100
+      },
+      {
+       "serum_28": 100
+      },
+      {
+       "serum_28": 100
+      },
+      {
+       "serum_29": 100
+      },
+      {
+       "serum_29": 100
+      },
+      {
+       "serum_30": 100
+      },
+      {
+       "serum_30": 100
+      },
+      {
+       "serum_31": 100
+      },
+      {
+       "serum_31": 100
+      },
+      {
+       "serum_32": 100
+      },
+      {
+       "serum_32": 100
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  },
+  {
+   "name": "16 standard wells and 64 sample wells; first point is the neat stock",
+   "why": "positions are free; whether point 1 is neat is ambiguous",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "standards",
+     "members": [
+      {
+       "standard": 100.0
+      },
+      {
+       "standard": 100.0
+      },
+      {
+       "standard": 50.0,
+       "diluent": 50.0
+      },
+      {
+       "standard": 50.0,
+       "diluent": 50.0
+      },
+      {
+       "standard": 25.0,
+       "diluent": 75.0
+      },
+      {
+       "standard": 25.0,
+       "diluent": 75.0
+      },
+      {
+       "standard": 12.5,
+       "diluent": 87.5
+      },
+      {
+       "standard": 12.5,
+       "diluent": 87.5
+      },
+      {
+       "standard": 6.25,
+       "diluent": 93.75
+      },
+      {
+       "standard": 6.25,
+       "diluent": 93.75
+      },
+      {
+       "standard": 3.125,
+       "diluent": 96.875
+      },
+      {
+       "standard": 3.125,
+       "diluent": 96.875
+      },
+      {
+       "standard": 1.5625,
+       "diluent": 98.4375
+      },
+      {
+       "standard": 1.5625,
+       "diluent": 98.4375
+      },
+      {
+       "diluent": 100
+      },
+      {
+       "diluent": 100
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": null
+    },
+    {
+     "name": "samples",
+     "members": [
+      {
+       "serum_1": 100
+      },
+      {
+       "serum_1": 100
+      },
+      {
+       "serum_2": 100
+      },
+      {
+       "serum_2": 100
+      },
+      {
+       "serum_3": 100
+      },
+      {
+       "serum_3": 100
+      },
+      {
+       "serum_4": 100
+      },
+      {
+       "serum_4": 100
+      },
+      {
+       "serum_5": 100
+      },
+      {
+       "serum_5": 100
+      },
+      {
+       "serum_6": 100
+      },
+      {
+       "serum_6": 100
+      },
+      {
+       "serum_7": 100
+      },
+      {
+       "serum_7": 100
+      },
+      {
+       "serum_8": 100
+      },
+      {
+       "serum_8": 100
+      },
+      {
+       "serum_9": 100
+      },
+      {
+       "serum_9": 100
+      },
+      {
+       "serum_10": 100
+      },
+      {
+       "serum_10": 100
+      },
+      {
+       "serum_11": 100
+      },
+      {
+       "serum_11": 100
+      },
+      {
+       "serum_12": 100
+      },
+      {
+       "serum_12": 100
+      },
+      {
+       "serum_13": 100
+      },
+      {
+       "serum_13": 100
+      },
+      {
+       "serum_14": 100
+      },
+      {
+       "serum_14": 100
+      },
+      {
+       "serum_15": 100
+      },
+      {
+       "serum_15": 100
+      },
+      {
+       "serum_16": 100
+      },
+      {
+       "serum_16": 100
+      },
+      {
+       "serum_17": 100
+      },
+      {
+       "serum_17": 100
+      },
+      {
+       "serum_18": 100
+      },
+      {
+       "serum_18": 100
+      },
+      {
+       "serum_19": 100
+      },
+      {
+       "serum_19": 100
+      },
+      {
+       "serum_20": 100
+      },
+      {
+       "serum_20": 100
+      },
+      {
+       "serum_21": 100
+      },
+      {
+       "serum_21": 100
+      },
+      {
+       "serum_22": 100
+      },
+      {
+       "serum_22": 100
+      },
+      {
+       "serum_23": 100
+      },
+      {
+       "serum_23": 100
+      },
+      {
+       "serum_24": 100
+      },
+      {
+       "serum_24": 100
+      },
+      {
+       "serum_25": 100
+      },
+      {
+       "serum_25": 100
+      },
+      {
+       "serum_26": 100
+      },
+      {
+       "serum_26": 100
+      },
+      {
+       "serum_27": 100
+      },
+      {
+       "serum_27": 100
+      },
+      {
+       "serum_28": 100
+      },
+      {
+       "serum_28": 100
+      },
+      {
+       "serum_29": 100
+      },
+      {
+       "serum_29": 100
+      },
+      {
+       "serum_30": 100
+      },
+      {
+       "serum_30": 100
+      },
+      {
+       "serum_31": 100
+      },
+      {
+       "serum_31": 100
+      },
+      {
+       "serum_32": 100
+      },
+      {
+       "serum_32": 100
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The destination is the ELISA plate; the 250 ul dilution series is intermediate (500 ul in a point before it is passed on: the series plate must hold that).",
+  "Each standard well holds 100 ul of its point: the stock's share and the diluent's."
+ ]
+}

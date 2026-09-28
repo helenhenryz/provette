@@ -1,0 +1,96 @@
+{
+ "id": "cherry-01",
+ "request": "Cherrypick 10 ul from these wells of a source plate into consecutive wells of a destination plate starting at A1: B3, C7, D1, A12, H6, E5, F9, G2, B11, C4.",
+ "technique": "Cherrypicking",
+ "liquids": [
+  {
+   "name": "template@{well}",
+   "role": "sample",
+   "bind": "well",
+   "pattern": ".+"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "down column from A1",
+   "why": "the request does not specify orientation; column-major from A1 chosen",
+   "pinned": {
+    "A1": {
+     "template@B3": 10
+    },
+    "B1": {
+     "template@C7": 10
+    },
+    "C1": {
+     "template@D1": 10
+    },
+    "D1": {
+     "template@A12": 10
+    },
+    "E1": {
+     "template@H6": 10
+    },
+    "F1": {
+     "template@E5": 10
+    },
+    "G1": {
+     "template@F9": 10
+    },
+    "H1": {
+     "template@G2": 10
+    },
+    "A2": {
+     "template@B11": 10
+    },
+    "B2": {
+     "template@C4": 10
+    }
+   },
+   "groups": []
+  },
+  {
+   "name": "along row from A1",
+   "why": "the request does not specify orientation; row-major from A1 chosen",
+   "pinned": {
+    "A1": {
+     "template@B3": 10
+    },
+    "A2": {
+     "template@C7": 10
+    },
+    "A3": {
+     "template@D1": 10
+    },
+    "A4": {
+     "template@A12": 10
+    },
+    "A5": {
+     "template@H6": 10
+    },
+    "A6": {
+     "template@E5": 10
+    },
+    "A7": {
+     "template@F9": 10
+    },
+    "A8": {
+     "template@G2": 10
+    },
+    "A9": {
+     "template@B11": 10
+    },
+    "A10": {
+     "template@C4": 10
+    }
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The request does not specify orientation; both column-major and row\u2011major layouts are provided as variants."
+ ]
+}

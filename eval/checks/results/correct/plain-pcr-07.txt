@@ -1,0 +1,60 @@
+pcr-07.py: VERIFIED against plate map pcr-07. 12 of 12 wells hold what the plate map says.
+  Destination: PCR plate on cold block (slot 2). Reading of the request: 12 reactions.
+
+Labware for the technique (PCR setup): nothing to flag.
+
+Where every liquid ended up (ul):
+  liquid                             declared delivered in source elsewhere    lost
+  PCR buffer mix                        200.0     120.0      60.0      20.0     0.0
+  DNA polymerase                         20.0       6.0      13.0       1.0     0.0
+  Forward primer                         50.0      12.0      36.0       2.0     0.0
+  Reverse primer                         50.0      12.0      36.0       2.0     0.0
+  Nuclease-free water                   500.0     126.0     353.0      21.0     0.0
+  Template 1                             20.0       2.0      18.0       0.0     0.0
+  Template 2                             20.0       2.0      18.0       0.0     0.0
+  Template 3                             20.0       2.0      18.0       0.0     0.0
+  Template 4                             20.0       2.0      18.0       0.0     0.0
+  Template 5                             20.0       2.0      18.0       0.0     0.0
+  Template 6                             20.0       2.0      18.0       0.0     0.0
+  Template 7                             20.0       2.0      18.0       0.0     0.0
+  Template 8                             20.0       2.0      18.0       0.0     0.0
+  Template 9                             20.0       2.0      18.0       0.0     0.0
+  Template 10                            20.0       2.0      18.0       0.0     0.0
+  Template 11                            20.0       2.0      18.0       0.0     0.0
+  Template 12                            20.0       2.0      18.0       0.0     0.0
+  Note: PCR buffer mix ends in wells the plate map does not list for it: A6 in slot 1 (20.0
+    ul).
+  Note: DNA polymerase ends in wells the plate map does not list for it: A6 in slot 1 (1.0
+    ul).
+  Note: Forward primer ends in wells the plate map does not list for it: A6 in slot 1 (2.0
+    ul).
+  Note: Reverse primer ends in wells the plate map does not list for it: A6 in slot 1 (2.0
+    ul).
+  Note: Nuclease-free water ends in wells the plate map does not list for it: A6 in slot 1
+    (21.0 ul).
+
+Prep sheet: what to put on the deck before the run.
+  slot labware                               well  liquid                       load at least  declared
+  1    Cold block: components + templates    A1    PCR buffer mix                       140.0     200.0
+  1    Cold block: components + templates    B1    Template 1                             2.0      20.0
+  1    Cold block: components + templates    C1    Template 7                             2.0      20.0
+  1    Cold block: components + templates    A2    DNA polymerase                         7.0      20.0
+  1    Cold block: components + templates    B2    Template 2                             2.0      20.0
+  1    Cold block: components + templates    C2    Template 8                             2.0      20.0
+  1    Cold block: components + templates    A3    Forward primer                        14.0      50.0
+  1    Cold block: components + templates    B3    Template 3                             2.0      20.0
+  1    Cold block: components + templates    C3    Template 9                             2.0      20.0
+  1    Cold block: components + templates    A4    Reverse primer                        14.0      50.0
+  1    Cold block: components + templates    B4    Template 4                             2.0      20.0
+  1    Cold block: components + templates    C4    Template 10                            2.0      20.0
+  1    Cold block: components + templates    A5    Nuclease-free water                  147.0     500.0
+  1    Cold block: components + templates    B5    Template 5                             2.0      20.0
+  1    Cold block: components + templates    C5    Template 11                            2.0      20.0
+  1    Cold block: components + templates    B6    Template 6                             2.0      20.0
+  1    Cold block: components + templates    C6    Template 12                            2.0      20.0
+  Tips: 3 from Opentrons OT-2 96 Filter Tip Rack 200 µL in slot 4.
+  Tips: 15 from Opentrons OT-2 96 Filter Tip Rack 20 µL in slot 5.
+  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.
+
+This checks the logic of the protocol: what goes where, and how much. It does not check the
+  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.

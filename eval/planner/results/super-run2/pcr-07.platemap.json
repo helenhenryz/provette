@@ -1,0 +1,165 @@
+{
+ "id": "pcr-07",
+ "request": "Assemble PCR reactions from separate components for 12 samples: 10 ul buffer mix, 0.5 ul polymerase, 1 ul forward primer, 1 ul reverse primer, 10.5 ul water and 2 ul template per 25 ul reaction. Components are in 1.5 ml tubes on a cold block.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "buffer_mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)buffer\\s*mix|buffermix"
+  },
+  {
+   "name": "polymerase",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)polymerase"
+  },
+  {
+   "name": "forward_primer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)forward\\s*primer|forwardprimer"
+  },
+  {
+   "name": "reverse_primer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)reverse\\s*primer|reverseprimer"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  },
+  {
+   "name": "template_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:template)\\D{0,12}?(\\d+)",
+   "count": 12,
+   "index": "number"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "PCR reactions free placement",
+   "why": "the request does not specify well positions; free placement chosen",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_1": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_2": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_3": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_4": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_5": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_6": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_7": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_8": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_9": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_10": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_11": 2
+      },
+      {
+       "buffer_mix": 10,
+       "polymerase": 0.5,
+       "forward_primer": 1,
+       "reverse_primer": 1,
+       "water": 10.5,
+       "template_12": 2
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "the request does not say which wells; free placement chosen"
+ ]
+}

@@ -1,0 +1,994 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map hard-pcr-02. 0 of 8 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3). Reading of the request: 8\n    reactions of 100 ul.\n  well H1 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_8; found 50 ul mix,\n    100 ul [undeclared liquid from D1 in slot 2], 42 ul water, 84 ul [undeclared liquid from\n    D2 in slot 2], 8 ul template_8\n      - holds 100 ul of [undeclared liquid from D1 in slot 2], which the plate map does not\n        list for this well\n      - holds 84 ul of [undeclared liquid from D2 in slot 2], which the plate map does not\n        list for this well\n  well G1 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_7; found 100 ul\n    [undeclared liquid from D1 in slot 2], 50 ul mix, 84 ul [undeclared liquid from D2 in\n    slot 2], 42 ul water, 8 ul template_7\n      - holds 100 ul of [undeclared liquid from D1 in slot 2], which the plate map does not\n        list for this well\n      - holds 84 ul of [undeclared liquid from D2 in slot 2], which the plate map does not\n        list for this well\n  well E1 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_5; found 20 ul\n    template_5, 50 ul mix, 50 ul [undeclared liquid from D1 in slot 2], 20 ul template_6, 42\n    ul water, 42 ul [undeclared liquid from D2 in slot 2]\n      - wrong amount of template_5: the plate map says 8 ul, the protocol delivers 20 ul\n      - holds 50 ul of [undeclared liquid from D1 in slot 2], which the plate map does not\n        list for this well\n      - holds 20 ul of template_6, which the plate map does not list for this well\n      - holds 42 ul of [undeclared liquid from D2 in slot 2], which the plate map does not\n        list for this well\n  well D1 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_4; found 50 ul mix, 50\n    ul [undeclared liquid from D1 in slot 2], 42 ul water, 42 ul [undeclared liquid from D2\n    in slot 2], 8 ul template_4\n      - holds 50 ul of [undeclared liquid from D1 in slot 2], which the plate map does not\n        list for this well\n      - holds 42 ul of [undeclared liquid from D2 in slot 2], which the plate map does not\n        list for this well\n  well C1 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_1; found 20 ul\n    template_1, 50 ul mix, 50 ul [undeclared liquid from D1 in slot 2], 20 ul template_2, 42\n    ul water, 42 ul [undeclared liquid from D2 in slot 2], 8 ul template_3\n      - wrong amount of template_1: the plate map says 8 ul, the protocol delivers 20 ul\n      - holds 50 ul of [undeclared liquid from D1 in slot 2], which the plate map does not\n        list for this well\n      - holds 20 ul of template_2, which the plate map does not list for this well\n      - holds 42 ul of [undeclared liquid from D2 in slot 2], which the plate map does not\n        list for this well\n      - holds 8 ul of template_3, which the plate map does not list for this well\n  well F1 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_2; found 50 ul mix, 50\n    ul [undeclared liquid from D1 in slot 2], 42 ul water, 42 ul [undeclared liquid from D2\n    in slot 2]\n      - template_2 is missing: the plate map says 8 ul, none arrives\n      - holds 50 ul of [undeclared liquid from D1 in slot 2], which the plate map does not\n        list for this well\n      - holds 42 ul of [undeclared liquid from D2 in slot 2], which the plate map does not\n        list for this well\n  well B1 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_3; found 150 ul mix,\n    106 ul water\n      - wrong amount of mix: the plate map says 50 ul, the protocol delivers 150 ul\n      - wrong amount of water: the plate map says 42 ul, the protocol delivers 106 ul\n      - template_3 is missing: the plate map says 8 ul, none arrives\n  well A1 (reactions): expected 50 ul mix, 42 ul water, 8 ul template_6; found 50 ul mix, 42\n    ul water\n      - template_6 is missing: the plate map says 8 ul, none arrives\n  Note: The reactions are all there, but not in the order of their numbers when the plate is\n    read along rows or down columns. The request does not fix the order, so this is a note:\n    check that your plate layout sheet matches the protocol, not the numbering.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  mix                                   500.0     500.0       0.0       0.0     0.0\n  water                                 400.0     400.0       0.0       0.0     0.0\n  template 1                             20.0      20.0       0.0       0.0     0.0\n  template 2                             20.0       0.0       0.0      20.0     0.0  <-- FLAG\n  template 3                             20.0       0.0      12.0       8.0     0.0  <-- FLAG\n  template 4                             20.0       8.0      12.0       0.0     0.0\n  template 5                             20.0      20.0       0.0       0.0     0.0\n  template 6                             20.0       0.0       0.0      20.0     0.0  <-- FLAG\n  template 7                             20.0       8.0      12.0       0.0     0.0\n  template 8                             20.0       8.0      12.0       0.0     0.0\n  FLAG: template 2 ends in wells the plate map does not list for it: C1 in slot 3 (20.0 ul).\n  FLAG: template 3 ends in wells the plate map does not list for it: C1 in slot 3 (8.0 ul).\n  FLAG: template 6 ends in wells the plate map does not list for it: E1 in slot 3 (20.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    mix                                 2000.0     500.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  B1    template 1                           408.0      20.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  C1    template 5                           408.0      20.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    water                               1680.0     400.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  B2    template 2                           344.0      20.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  C2    template 6                           344.0      20.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  B3    template 3                             8.0      20.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C3    template 7                             8.0      20.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B4    template 4                             8.0      20.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C4    template 8                             8.0      20.0\n  FLAG: mix in A1, slot 2 would run dry: the robot draws 2000 ul from it and the protocol\n    declares 500 ul. The simulator passes it; the robot would pipette air. Fix: declare and\n    load at least 2200 ul in this well, or draw less.\n  FLAG: template 1 in B1, slot 2 would run dry: the robot draws 408 ul from it and the\n    protocol declares 20 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 458 ul in this well, or draw less.\n  FLAG: template 5 in C1, slot 2 would run dry: the robot draws 408 ul from it and the\n    protocol declares 20 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 458 ul in this well, or draw less.\n  FLAG: water in A2, slot 2 would run dry: the robot draws 1680 ul from it and the protocol\n    declares 400 ul. The simulator passes it; the robot would pipette air. Fix: declare and\n    load at least 1848 ul in this well, or draw less.\n  FLAG: template 2 in B2, slot 2 would run dry: the robot draws 344 ul from it and the\n    protocol declares 20 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 394 ul in this well, or draw less.\n  FLAG: template 6 in C2, slot 2 would run dry: the robot draws 344 ul from it and the\n    protocol declares 20 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 394 ul in this well, or draw less.\n  Tips: 24 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-pcr-02",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "8 reactions of 100 ul",
+   "problems": [],
+   "notes": [
+    "The reactions are all there, but not in the order of their numbers when the plate is read along rows or down columns. The request does not fix the order, so this is a note: check that your plate layout sheet matches the protocol, not the numbering."
+   ],
+   "wells_ok": 0,
+   "wells_total": 8,
+   "wells": [
+    {
+     "well": "H1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_8": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 100.0,
+      "water": 42.0,
+      "[undeclared liquid from D2 in slot 2]": 84.0,
+      "template_8": 8.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 100.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 84.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_7": 8.0
+     },
+     "found": {
+      "[undeclared liquid from D1 in slot 2]": 100.0,
+      "mix": 50.0,
+      "[undeclared liquid from D2 in slot 2]": 84.0,
+      "water": 42.0,
+      "template_7": 8.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 100.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 84.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_5": 8.0
+     },
+     "found": {
+      "template_5": 20.0,
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 50.0,
+      "template_6": 20.0,
+      "water": 42.0,
+      "[undeclared liquid from D2 in slot 2]": 42.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "template_5",
+       "expected_ul": 8.0,
+       "found_ul": 20.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 50.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "template_6",
+       "expected_ul": null,
+       "found_ul": 20.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 42.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_4": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 50.0,
+      "water": 41.99999999999999,
+      "[undeclared liquid from D2 in slot 2]": 42.0,
+      "template_4": 8.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 50.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 42.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_1": 8.0
+     },
+     "found": {
+      "template_1": 20.0,
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 50.0,
+      "template_2": 20.0,
+      "water": 42.0,
+      "[undeclared liquid from D2 in slot 2]": 42.0,
+      "template_3": 8.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "template_1",
+       "expected_ul": 8.0,
+       "found_ul": 20.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 50.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "template_2",
+       "expected_ul": null,
+       "found_ul": 20.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 42.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "template_3",
+       "expected_ul": null,
+       "found_ul": 8.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_2": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 50.0,
+      "water": 42.0,
+      "[undeclared liquid from D2 in slot 2]": 42.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template_2",
+       "expected_ul": 8.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 50.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 42.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_3": 8.0
+     },
+     "found": {
+      "mix": 150.0,
+      "water": 106.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "mix",
+       "expected_ul": 50.0,
+       "found_ul": 150.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 42.0,
+       "found_ul": 106.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "template_3",
+       "expected_ul": 8.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_6": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "water": 42.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template_6",
+       "expected_ul": 8.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "H1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_8": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 100.0,
+      "water": 42.0,
+      "[undeclared liquid from D2 in slot 2]": 84.0,
+      "template_8": 8.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 100.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 84.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_7": 8.0
+     },
+     "found": {
+      "[undeclared liquid from D1 in slot 2]": 100.0,
+      "mix": 50.0,
+      "[undeclared liquid from D2 in slot 2]": 84.0,
+      "water": 42.0,
+      "template_7": 8.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 100.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 84.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_5": 8.0
+     },
+     "found": {
+      "template_5": 20.0,
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 50.0,
+      "template_6": 20.0,
+      "water": 42.0,
+      "[undeclared liquid from D2 in slot 2]": 42.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "template_5",
+       "expected_ul": 8.0,
+       "found_ul": 20.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 50.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "template_6",
+       "expected_ul": null,
+       "found_ul": 20.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 42.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_4": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 50.0,
+      "water": 41.99999999999999,
+      "[undeclared liquid from D2 in slot 2]": 42.0,
+      "template_4": 8.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 50.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 42.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_1": 8.0
+     },
+     "found": {
+      "template_1": 20.0,
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 50.0,
+      "template_2": 20.0,
+      "water": 42.0,
+      "[undeclared liquid from D2 in slot 2]": 42.0,
+      "template_3": 8.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "template_1",
+       "expected_ul": 8.0,
+       "found_ul": 20.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 50.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "template_2",
+       "expected_ul": null,
+       "found_ul": 20.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 42.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "template_3",
+       "expected_ul": null,
+       "found_ul": 8.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_2": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "[undeclared liquid from D1 in slot 2]": 50.0,
+      "water": 42.0,
+      "[undeclared liquid from D2 in slot 2]": 42.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template_2",
+       "expected_ul": 8.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 50.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D2 in slot 2]",
+       "expected_ul": null,
+       "found_ul": 42.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_3": 8.0
+     },
+     "found": {
+      "mix": 150.0,
+      "water": 106.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "mix",
+       "expected_ul": 50.0,
+       "found_ul": 150.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 42.0,
+       "found_ul": 106.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "template_3",
+       "expected_ul": 8.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "mix": 50.0,
+      "water": 42.0,
+      "template_6": 8.0
+     },
+     "found": {
+      "mix": 50.0,
+      "water": 42.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "template_6",
+       "expected_ul": 8.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "mix",
+    "logical": "mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 500.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 400.0,
+    "delivered_ul": 400.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 1",
+    "logical": "template_1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 20.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 2",
+    "logical": "template_2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_100ul_pcr_full_skirt[C1]",
+      "ul": 20.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "template 2 ends in wells the plate map does not list for it: C1 in slot 3 (20.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "template 3",
+    "logical": "template_3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_100ul_pcr_full_skirt[C1]",
+      "ul": 8.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "template 3 ends in wells the plate map does not list for it: C1 in slot 3 (8.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "template 4",
+    "logical": "template_4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 5",
+    "logical": "template_5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 20.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 6",
+    "logical": "template_6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_100ul_pcr_full_skirt[E1]",
+      "ul": 20.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "template 6 ends in wells the plate map does not list for it: E1 in slot 3 (20.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "template 7",
+    "logical": "template_7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template 8",
+    "logical": "template_8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 8.0,
+    "left_in_source_ul": 12.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "mix",
+     "declared_ul": 500.0,
+     "needed_ul": 2000.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "template 1",
+     "declared_ul": 20.0,
+     "needed_ul": 408.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "template 5",
+     "declared_ul": 20.0,
+     "needed_ul": 408.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "water",
+     "declared_ul": 400.0,
+     "needed_ul": 1680.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "template 2",
+     "declared_ul": 20.0,
+     "needed_ul": 344.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "template 6",
+     "declared_ul": 20.0,
+     "needed_ul": 344.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "template 3",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "template 7",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "template 4",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C4",
+     "liquid": "template 8",
+     "declared_ul": 20.0,
+     "needed_ul": 8.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 24
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 11 biology problems (3 errors, 4 warnings, 4 notes).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: tube D1 in slot 2\n   line 35:  p300_multi.aspirate(50, mix_well)\n   At line 35 the tip went into tube D1 in slot 2 while it still carried mix (tube A1 in\n   slot 2), template 1 (tube B1 in slot 2) and template 5 (tube C1 in slot 2) from an\n   earlier step (this line did it 3 times). A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. Liquid drawn from it then took the unwanted material along into 2 other\n   wells: wells C1 and D1 in slot 3.\n   Affected: tube D1 in slot 2.\n   Also reached 2 other wells: wells C1 and D1 in slot 3.\n   Fix: Pick up a fresh tip before line 35 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [bb14040a2c23]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: 2 stocks\n   line 44:  p300_multi.aspirate(42, water_well)\n   At line 44 the tip went into water (tube A2 in slot 2) and tube D2 in slot 2 while it\n   still carried mix (tube A1 in slot 2), water (tube A2 in slot 2), template 2 (tube B2 in\n   slot 2), template 6 (tube C2 in slot 2) and 1 more from an earlier step (this line did it\n   4 times). A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches, so these stocks now hold material that does not belong there. Liquid drawn from\n   them then took the unwanted material along into 1 other well: well B1 in slot 3.\n   Affected: tubes A2 and D2 in slot 2.\n   Also reached 1 other well: well B1 in slot 3.\n   Fix: Pick up a fresh tip before line 44 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [76c3c0e61a7f]\n\n3. ERROR WELL-CAPACITY: More liquid than the well can hold: 284 ul in a 217 ul well, 5 wells\n   line 45:  p300_multi.dispense(42, dw)\n   At line 45 the robot filled wells B1, C1, E1, G1 and H1 in slot 3 past the rim (217 ul to\n   the rim by the labware definition's shape; the maker states 100 ul) (this line did it 5\n   times), reaching 284 ul. The liquid runs into the neighbouring wells and onto the deck;\n   the volumes still add up on paper, so the plate map does not see it, and the simulator\n   says nothing. Wells: wells B1, C1, E1, G1 and H1 in slot 3.\n   Affected: wells B1, C1, E1, G1 and H1 in slot 3.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [5671da5f539e]\n\n4. WARNING CONTAM-WELL: A used tip carried template 1 (tube B1 in slot 2) and template 5\n(tube C1 in slot 2) into 5 wells it was never meant for\n   line 36:  p300_multi.dispense(50, dw)\n   At line 36 the tip touched the liquid in wells D1, E1, F1, G1 and H1 in slot 3 while it\n   still carried template 1 (tube B1 in slot 2) and template 5 (tube C1 in slot 2) from an\n   earlier step (this line did it 5 times). A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   these wells on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another.\n   Affected: wells D1, E1, F1, G1 and H1 in slot 3.\n   Fix: Use a fresh tip for each well at line 36. If one tip must serve many wells, dispense\n   from above the liquid (for example `well.top()`) so that the tip never touches what is\n   already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [068175e5fc75]\n\n5. WARNING ENZYME-BEFORE-DILUENT: An enzyme was added before the water: mix\n   line 36:  p300_multi.dispense(50, dw)\n   At line 36 the robot put mix into wells C1, D1, E1, F1, G1 and H1 in slot 3 (this line\n   did it twice). Take well D1 in slot 3: at that moment it was dry, and the water came\n   afterwards, at line 45, to make the 42 ul of water or buffer the reaction is built on. An\n   enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction,\n   after the water and the buffer have brought the well to the right dilution. Dropped into\n   neat buffer or a dry well it meets many times the salt it should: a restriction enzyme\n   then cuts at the wrong places (star activity) and a polymerase starts on mis-primed\n   template.\n   Affected: wells C1, D1, E1, F1, G1 and H1 in slot 3.\n   Fix: Reorder the additions to wells C1, D1, E1, F1, G1 and H1 in slot 3: water and buffer\n   first, then the sample, then mix last. Or make a master mix of water, buffer and enzyme\n   in one tube, mix it, and hand it out.\n   Source: Thermo Fisher: restriction enzyme key considerations (the enzyme is the final\n   component)\n           https://www.thermofisher.com/us/en/home/life-science/cloning/cloning-learning-center/invitrogen-school-of-molecular-biology/molecular-cloning/restriction-enzymes/restriction-enzyme-key-considerations.html\n   Source: Promega: restriction enzyme resource (add the enzyme last; glycerol and star\n   activity)\n           https://www.promega.com/resources/guides/nucleic-acid-analysis/restriction-enzyme-resource/\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   Source: Qiagen: critical factors for successful real-time PCR (order of addition)\n           https://www.gene-quantification.de/qiagen-qpcr-sample-assay-tech-guide-2010.pdf\n   [22554c6708b7]\n\n6. WARNING CONTAM-WELL: A used tip carried template 2 (tube B2 in slot 2) and template 6\n(tube C2 in slot 2) into 5 wells it was never meant for\n   line 45:  p300_multi.dispense(42, dw)\n   At line 45 the tip touched the liquid in wells D1, E1, F1, G1 and H1 in slot 3 while it\n   still carried template 2 (tube B2 in slot 2) and template 6 (tube C2 in slot 2) from an\n   earlier step (this line did it 5 times). A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   these wells on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another.\n   Affected: wells D1, E1, F1, G1 and H1 in slot 3.\n   Fix: Use a fresh tip for each well at line 45. If one tip must serve many wells, dispense\n   from above the liquid (for example `well.top()`) so that the tip never touches what is\n   already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [af401eeca74b]\n\n7. WARNING WELL-CAPACITY: More liquid than the well is rated for: 192 ul against 100 ul, 2\nwells\n   line 45:  p300_multi.dispense(42, dw)\n   At line 45 the robot filled wells D1 and F1 in slot 3 past the 100 ul the maker states\n   for it (this line did it twice), reaching 192 ul, under the 217 ul the well holds to its\n   rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going\n   in displaces it over the edge, and the volumes still add up on paper, so the plate map\n   does not see it and the simulator says nothing. Wells: wells D1 and F1 in slot 3.\n   Affected: wells D1 and F1 in slot 3.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [be26b9114b0a]\n\n8. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 36:  p300_multi.dispense(50, dw)\n   At line 36 the tip touched the liquid in wells D1, E1, F1, G1 and H1 in slot 3 while it\n   still carried template 1 (tube B1 in slot 2) and template 5 (tube C1 in slot 2) from an\n   earlier step (this line did it 5 times). A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, and the protocol never transfers that liquid\n   into these wells on purpose. A reagent is shared: the master mix, the enzyme or the\n   primer in that well goes into every reaction on the plate. A tip that has been in one\n   sample leaves a little of it in the next liquid it touches, so a sample carried into a\n   reagent well turns up in every well that reagent reaches, and a no-template control can\n   no longer be trusted.\n   Affected: wells D1, E1, F1, G1 and H1 in slot 3.\n   Fix: Use a fresh tip for each sample at line 36, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [e373fa67e809]\n\n9. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 45:  p300_multi.dispense(42, dw)\n   At line 45 the tip touched the liquid in wells D1, E1, F1, G1 and H1 in slot 3 while it\n   still carried template 2 (tube B2 in slot 2) and template 6 (tube C2 in slot 2) from an\n   earlier step (this line did it 5 times). A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, and the protocol never transfers that liquid\n   into these wells on purpose. A reagent is shared: the master mix, the enzyme or the\n   primer in that well goes into every reaction on the plate. A tip that has been in one\n   sample leaves a little of it in the next liquid it touches, so a sample carried into a\n   reagent well turns up in every well that reagent reaches, and a no-template control can\n   no longer be trusted.\n   Affected: wells D1, E1, F1, G1 and H1 in slot 3.\n   Fix: Use a fresh tip for each sample at line 45, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [23eea07b834c]\n\n10. NOTE UNMIXED-AT-END: 3 wells never mixed after water and the liquid from tube D2 in slot\n2 went in (19 to 23% of the well)\n   line 45:  p300_multi.dispense(42, dw)\n   At line 45 the robot added water and the liquid from tube D2 in slot 2 to wells B1, E1\n   and F1 in slot 3, which already held mix, template 5, the liquid from tube D1 in slot 2,\n   template 6 and 1 more (this line did it 3 times). The addition was 19 to 23% of the well,\n   nothing mixed the well afterwards, and the run ended with them that way. Two liquids\n   layered in a small well do not mix on their own, so what the well holds is not at the\n   concentration you calculated. A PCR plate is usually vortexed and spun down before\n   cycling; if this one will not be, mix it.\n   Affected: wells B1, E1 and F1 in slot 3.\n   Fix: Mix wells B1, E1 and F1 in slot 3 after line 45: `mix_after=(5, 147 to 205)` on the\n   transfer, or `pipette.mix(5, 147 to 205, well)`, with the volume about 80% of what the\n   well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [76d2bbb942a8]\n\n11. NOTE UNMIXED-AT-END: 4 wells never mixed after template 3, template 4, template 7 and\ntemplate 8 went in (3 to 4% of the well)\n   line 54:  p20_single.dispense(8, dst)\n   At line 54 the robot added template 3, template 4, template 7 and template 8 to wells C1,\n   D1, G1 and H1 in slot 3, which already held template 1, mix, the liquid from tube D1 in\n   slot 2, template 2 and 2 more (this line did it 4 times). The addition was 3 to 4% of the\n   well, nothing mixed the well afterwards, and the run ended with them that way. Two\n   liquids layered in a small well do not mix on their own, so what the well holds is not at\n   the concentration you calculated. A PCR plate is usually vortexed and spun down before\n   cycling; if this one will not be, mix it.\n   Affected: wells C1, D1, G1 and H1 in slot 3.\n   Fix: Mix wells C1, D1, G1 and H1 in slot 3 after line 54: `mix_after=(5, 154 to 227)` on\n   the transfer, or `pipette.mix(5, 154 to 227, well)`, with the volume about 80% of what\n   the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [3f5a29a96523]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 35,
+   "title": "A used tip went into a stock: tube D1 in slot 2",
+   "explanation": "At line 35 the tip went into tube D1 in slot 2 while it still carried mix (tube A1 in slot 2), template 1 (tube B1 in slot 2) and template 5 (tube C1 in slot 2) from an earlier step (this line did it 3 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 2 other wells: wells C1 and D1 in slot 3.",
+   "fix": "Pick up a fresh tip before line 35 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 44,
+   "title": "A used tip went into a stock: 2 stocks",
+   "explanation": "At line 44 the tip went into water (tube A2 in slot 2) and tube D2 in slot 2 while it still carried mix (tube A1 in slot 2), water (tube A2 in slot 2), template 2 (tube B2 in slot 2), template 6 (tube C2 in slot 2) and 1 more from an earlier step (this line did it 4 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 1 other well: well B1 in slot 3.",
+   "fix": "Pick up a fresh tip before line 44 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 45,
+   "title": "More liquid than the well can hold: 284 ul in a 217 ul well, 5 wells",
+   "explanation": "At line 45 the robot filled wells B1, C1, E1, G1 and H1 in slot 3 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul) (this line did it 5 times), reaching 284 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells B1, C1, E1, G1 and H1 in slot 3.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 36,
+   "title": "A used tip carried template 1 (tube B1 in slot 2) and template 5 (tube C1 in slot 2) into 5 wells it was never meant for",
+   "explanation": "At line 36 the tip touched the liquid in wells D1, E1, F1, G1 and H1 in slot 3 while it still carried template 1 (tube B1 in slot 2) and template 5 (tube C1 in slot 2) from an earlier step (this line did it 5 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 36. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "ENZYME-BEFORE-DILUENT",
+   "severity": "warning",
+   "certain": true,
+   "line": 36,
+   "title": "An enzyme was added before the water: mix",
+   "explanation": "At line 36 the robot put mix into wells C1, D1, E1, F1, G1 and H1 in slot 3 (this line did it twice). Take well D1 in slot 3: at that moment it was dry, and the water came afterwards, at line 45, to make the 42 ul of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction, after the water and the buffer have brought the well to the right dilution. Dropped into neat buffer or a dry well it meets many times the salt it should: a restriction enzyme then cuts at the wrong places (star activity) and a polymerase starts on mis-primed template.",
+   "fix": "Reorder the additions to wells C1, D1, E1, F1, G1 and H1 in slot 3: water and buffer first, then the sample, then mix last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and hand it out."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 45,
+   "title": "A used tip carried template 2 (tube B2 in slot 2) and template 6 (tube C2 in slot 2) into 5 wells it was never meant for",
+   "explanation": "At line 45 the tip touched the liquid in wells D1, E1, F1, G1 and H1 in slot 3 while it still carried template 2 (tube B2 in slot 2) and template 6 (tube C2 in slot 2) from an earlier step (this line did it 5 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 45. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 45,
+   "title": "More liquid than the well is rated for: 192 ul against 100 ul, 2 wells",
+   "explanation": "At line 45 the robot filled wells D1 and F1 in slot 3 past the 100 ul the maker states for it (this line did it twice), reaching 192 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells D1 and F1 in slot 3.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 36,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 36 the tip touched the liquid in wells D1, E1, F1, G1 and H1 in slot 3 while it still carried template 1 (tube B1 in slot 2) and template 5 (tube C1 in slot 2) from an earlier step (this line did it 5 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into these wells on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted.",
+   "fix": "Use a fresh tip for each sample at line 36, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 45,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 45 the tip touched the liquid in wells D1, E1, F1, G1 and H1 in slot 3 while it still carried template 2 (tube B2 in slot 2) and template 6 (tube C2 in slot 2) from an earlier step (this line did it 5 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into these wells on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted.",
+   "fix": "Use a fresh tip for each sample at line 45, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 45,
+   "title": "3 wells never mixed after water and the liquid from tube D2 in slot 2 went in (19 to 23% of the well)",
+   "explanation": "At line 45 the robot added water and the liquid from tube D2 in slot 2 to wells B1, E1 and F1 in slot 3, which already held mix, template 5, the liquid from tube D1 in slot 2, template 6 and 1 more (this line did it 3 times). The addition was 19 to 23% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells B1, E1 and F1 in slot 3 after line 45: `mix_after=(5, 147 to 205)` on the transfer, or `pipette.mix(5, 147 to 205, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 54,
+   "title": "4 wells never mixed after template 3, template 4, template 7 and template 8 went in (3 to 4% of the well)",
+   "explanation": "At line 54 the robot added template 3, template 4, template 7 and template 8 to wells C1, D1, G1 and H1 in slot 3, which already held template 1, mix, the liquid from tube D1 in slot 2, template 2 and 2 more (this line did it 4 times). The addition was 3 to 4% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells C1, D1, G1 and H1 in slot 3 after line 54: `mix_after=(5, 154 to 227)` on the transfer, or `pipette.mix(5, 154 to 227, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 4.8,
+ "draft": 4
+}

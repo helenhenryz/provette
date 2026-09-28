@@ -1,0 +1,34 @@
+pcr-01.py: VERIFIED against plate map pcr-01. 8 of 8 wells hold what the plate map says.
+  Destination: PCR plate (slot 2). Reading of the request: 8 reactions.
+
+Labware for the technique (PCR setup): nothing to flag.
+
+Where every liquid ended up (ul):
+  liquid                             declared delivered in source elsewhere    lost
+  PCR master mix                        200.0     160.0      40.0       0.0     0.0
+  DNA sample 1                           50.0       5.0      45.0       0.0     0.0
+  DNA sample 2                           50.0       5.0      45.0       0.0     0.0
+  DNA sample 3                           50.0       5.0      45.0       0.0     0.0
+  DNA sample 4                           50.0       5.0      45.0       0.0     0.0
+  DNA sample 5                           50.0       5.0      45.0       0.0     0.0
+  DNA sample 6                           50.0       5.0      45.0       0.0     0.0
+  DNA sample 7                           50.0       5.0      45.0       0.0     0.0
+  DNA sample 8                           50.0       5.0      45.0       0.0     0.0
+
+Prep sheet: what to put on the deck before the run.
+  slot labware                               well  liquid                       load at least  declared
+  1    Tube rack: master mix + samples       A1    PCR master mix                       160.0     200.0
+  1    Tube rack: master mix + samples       B1    DNA sample 1                           5.0      50.0
+  1    Tube rack: master mix + samples       C1    DNA sample 7                           5.0      50.0
+  1    Tube rack: master mix + samples       B2    DNA sample 2                           5.0      50.0
+  1    Tube rack: master mix + samples       C2    DNA sample 8                           5.0      50.0
+  1    Tube rack: master mix + samples       B3    DNA sample 3                           5.0      50.0
+  1    Tube rack: master mix + samples       B4    DNA sample 4                           5.0      50.0
+  1    Tube rack: master mix + samples       B5    DNA sample 5                           5.0      50.0
+  1    Tube rack: master mix + samples       B6    DNA sample 6                           5.0      50.0
+  Tips: 1 from Opentrons OT-2 96 Filter Tip Rack 200 µL in slot 4.
+  Tips: 8 from Opentrons OT-2 96 Filter Tip Rack 20 µL in slot 5.
+  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.
+
+This checks the logic of the protocol: what goes where, and how much. It does not check the
+  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.

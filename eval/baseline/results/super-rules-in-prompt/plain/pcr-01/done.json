@@ -1,0 +1,52 @@
+{
+ "id": "pcr-01",
+ "condition": "plain",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "thinking": "on",
+ "rules_in_prompt": true,
+ "one_shot_only": true,
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 59,
+    "title": "No no-template control: 8 wells of master mix with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 65,
+    "title": "8 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 4 more went in (20% of the well)"
+   }
+  ],
+  "steps": 2
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 59,
+    "title": "No no-template control: 8 wells of master mix with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 65,
+    "title": "8 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 4 more went in (20% of the well)"
+   }
+  ],
+  "rounds": 0
+ }
+}

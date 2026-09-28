@@ -1,0 +1,419 @@
+{
+ "id": "hard-pcr-01",
+ "request": "Set up a 96-well qPCR plate: 15 ul of master mix into every well from the 1.6 ml of mix available, then 5 ul of template from the matching well of a 96-well sample plate.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)master\\s*mix|mastermix|\\bmix\\b|sybr"
+  },
+  {
+   "name": "template@{well}",
+   "role": "sample",
+   "bind": "well",
+   "pattern": "(?i)template|sample|dna"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "full plate",
+   "why": "'matching well' pins every position",
+   "pinned": {
+    "A1": {
+     "mix": 15,
+     "template@A1": 5
+    },
+    "B1": {
+     "mix": 15,
+     "template@B1": 5
+    },
+    "C1": {
+     "mix": 15,
+     "template@C1": 5
+    },
+    "D1": {
+     "mix": 15,
+     "template@D1": 5
+    },
+    "E1": {
+     "mix": 15,
+     "template@E1": 5
+    },
+    "F1": {
+     "mix": 15,
+     "template@F1": 5
+    },
+    "G1": {
+     "mix": 15,
+     "template@G1": 5
+    },
+    "H1": {
+     "mix": 15,
+     "template@H1": 5
+    },
+    "A2": {
+     "mix": 15,
+     "template@A2": 5
+    },
+    "B2": {
+     "mix": 15,
+     "template@B2": 5
+    },
+    "C2": {
+     "mix": 15,
+     "template@C2": 5
+    },
+    "D2": {
+     "mix": 15,
+     "template@D2": 5
+    },
+    "E2": {
+     "mix": 15,
+     "template@E2": 5
+    },
+    "F2": {
+     "mix": 15,
+     "template@F2": 5
+    },
+    "G2": {
+     "mix": 15,
+     "template@G2": 5
+    },
+    "H2": {
+     "mix": 15,
+     "template@H2": 5
+    },
+    "A3": {
+     "mix": 15,
+     "template@A3": 5
+    },
+    "B3": {
+     "mix": 15,
+     "template@B3": 5
+    },
+    "C3": {
+     "mix": 15,
+     "template@C3": 5
+    },
+    "D3": {
+     "mix": 15,
+     "template@D3": 5
+    },
+    "E3": {
+     "mix": 15,
+     "template@E3": 5
+    },
+    "F3": {
+     "mix": 15,
+     "template@F3": 5
+    },
+    "G3": {
+     "mix": 15,
+     "template@G3": 5
+    },
+    "H3": {
+     "mix": 15,
+     "template@H3": 5
+    },
+    "A4": {
+     "mix": 15,
+     "template@A4": 5
+    },
+    "B4": {
+     "mix": 15,
+     "template@B4": 5
+    },
+    "C4": {
+     "mix": 15,
+     "template@C4": 5
+    },
+    "D4": {
+     "mix": 15,
+     "template@D4": 5
+    },
+    "E4": {
+     "mix": 15,
+     "template@E4": 5
+    },
+    "F4": {
+     "mix": 15,
+     "template@F4": 5
+    },
+    "G4": {
+     "mix": 15,
+     "template@G4": 5
+    },
+    "H4": {
+     "mix": 15,
+     "template@H4": 5
+    },
+    "A5": {
+     "mix": 15,
+     "template@A5": 5
+    },
+    "B5": {
+     "mix": 15,
+     "template@B5": 5
+    },
+    "C5": {
+     "mix": 15,
+     "template@C5": 5
+    },
+    "D5": {
+     "mix": 15,
+     "template@D5": 5
+    },
+    "E5": {
+     "mix": 15,
+     "template@E5": 5
+    },
+    "F5": {
+     "mix": 15,
+     "template@F5": 5
+    },
+    "G5": {
+     "mix": 15,
+     "template@G5": 5
+    },
+    "H5": {
+     "mix": 15,
+     "template@H5": 5
+    },
+    "A6": {
+     "mix": 15,
+     "template@A6": 5
+    },
+    "B6": {
+     "mix": 15,
+     "template@B6": 5
+    },
+    "C6": {
+     "mix": 15,
+     "template@C6": 5
+    },
+    "D6": {
+     "mix": 15,
+     "template@D6": 5
+    },
+    "E6": {
+     "mix": 15,
+     "template@E6": 5
+    },
+    "F6": {
+     "mix": 15,
+     "template@F6": 5
+    },
+    "G6": {
+     "mix": 15,
+     "template@G6": 5
+    },
+    "H6": {
+     "mix": 15,
+     "template@H6": 5
+    },
+    "A7": {
+     "mix": 15,
+     "template@A7": 5
+    },
+    "B7": {
+     "mix": 15,
+     "template@B7": 5
+    },
+    "C7": {
+     "mix": 15,
+     "template@C7": 5
+    },
+    "D7": {
+     "mix": 15,
+     "template@D7": 5
+    },
+    "E7": {
+     "mix": 15,
+     "template@E7": 5
+    },
+    "F7": {
+     "mix": 15,
+     "template@F7": 5
+    },
+    "G7": {
+     "mix": 15,
+     "template@G7": 5
+    },
+    "H7": {
+     "mix": 15,
+     "template@H7": 5
+    },
+    "A8": {
+     "mix": 15,
+     "template@A8": 5
+    },
+    "B8": {
+     "mix": 15,
+     "template@B8": 5
+    },
+    "C8": {
+     "mix": 15,
+     "template@C8": 5
+    },
+    "D8": {
+     "mix": 15,
+     "template@D8": 5
+    },
+    "E8": {
+     "mix": 15,
+     "template@E8": 5
+    },
+    "F8": {
+     "mix": 15,
+     "template@F8": 5
+    },
+    "G8": {
+     "mix": 15,
+     "template@G8": 5
+    },
+    "H8": {
+     "mix": 15,
+     "template@H8": 5
+    },
+    "A9": {
+     "mix": 15,
+     "template@A9": 5
+    },
+    "B9": {
+     "mix": 15,
+     "template@B9": 5
+    },
+    "C9": {
+     "mix": 15,
+     "template@C9": 5
+    },
+    "D9": {
+     "mix": 15,
+     "template@D9": 5
+    },
+    "E9": {
+     "mix": 15,
+     "template@E9": 5
+    },
+    "F9": {
+     "mix": 15,
+     "template@F9": 5
+    },
+    "G9": {
+     "mix": 15,
+     "template@G9": 5
+    },
+    "H9": {
+     "mix": 15,
+     "template@H9": 5
+    },
+    "A10": {
+     "mix": 15,
+     "template@A10": 5
+    },
+    "B10": {
+     "mix": 15,
+     "template@B10": 5
+    },
+    "C10": {
+     "mix": 15,
+     "template@C10": 5
+    },
+    "D10": {
+     "mix": 15,
+     "template@D10": 5
+    },
+    "E10": {
+     "mix": 15,
+     "template@E10": 5
+    },
+    "F10": {
+     "mix": 15,
+     "template@F10": 5
+    },
+    "G10": {
+     "mix": 15,
+     "template@G10": 5
+    },
+    "H10": {
+     "mix": 15,
+     "template@H10": 5
+    },
+    "A11": {
+     "mix": 15,
+     "template@A11": 5
+    },
+    "B11": {
+     "mix": 15,
+     "template@B11": 5
+    },
+    "C11": {
+     "mix": 15,
+     "template@C11": 5
+    },
+    "D11": {
+     "mix": 15,
+     "template@D11": 5
+    },
+    "E11": {
+     "mix": 15,
+     "template@E11": 5
+    },
+    "F11": {
+     "mix": 15,
+     "template@F11": 5
+    },
+    "G11": {
+     "mix": 15,
+     "template@G11": 5
+    },
+    "H11": {
+     "mix": 15,
+     "template@H11": 5
+    },
+    "A12": {
+     "mix": 15,
+     "template@A12": 5
+    },
+    "B12": {
+     "mix": 15,
+     "template@B12": 5
+    },
+    "C12": {
+     "mix": 15,
+     "template@C12": 5
+    },
+    "D12": {
+     "mix": 15,
+     "template@D12": 5
+    },
+    "E12": {
+     "mix": 15,
+     "template@E12": 5
+    },
+    "F12": {
+     "mix": 15,
+     "template@F12": 5
+    },
+    "G12": {
+     "mix": 15,
+     "template@G12": 5
+    },
+    "H12": {
+     "mix": 15,
+     "template@H12": 5
+    }
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "96 x 15 ul is 1,440 ul of the 1,600 ul available: 160 ul is left at the end."
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "id": "pcr-01",
+ "request": "Set up PCR reactions for 8 DNA samples in a 96-well PCR plate. Each reaction is 20 ul of master mix plus 5 ul of sample. The master mix is in a 1.5 ml tube and the samples are in 1.5 ml tubes.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "sample_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:sample|dna|template)\\D{0,12}?(\\d+)",
+   "count": 8,
+   "index": "number"
+  },
+  {
+   "name": "master_mix",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)master\\s*mix|mastermix"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "8 reactions free layout",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "master_mix": 20,
+       "sample_1": 5
+      },
+      {
+       "master_mix": 20,
+       "sample_2": 5
+      },
+      {
+       "master_mix": 20,
+       "sample_3": 5
+      },
+      {
+       "master_mix": 20,
+       "sample_4": 5
+      },
+      {
+       "master_mix": 20,
+       "sample_5": 5
+      },
+      {
+       "master_mix": 20,
+       "sample_6": 5
+      },
+      {
+       "master_mix": 20,
+       "sample_7": 5
+      },
+      {
+       "master_mix": 20,
+       "sample_8": 5
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "The request does not specify well placement; a free layout is assumed."
+ ]
+}

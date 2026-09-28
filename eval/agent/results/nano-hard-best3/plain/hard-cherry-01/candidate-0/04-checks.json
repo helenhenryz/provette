@@ -1,0 +1,1182 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map hard-cherry-01. 24 of 24 wells hold what the plate\n  map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 2). Reading of the request:\n    down the column (A1, B1, ...).\n\nLabware for the technique (Cherrypicking): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  source_A1                             100.0       2.0      98.0       0.0     0.0\n  source_B2                             100.0       2.0      98.0       0.0     0.0\n  source_C3                             100.0       2.0      98.0       0.0     0.0\n  source_D4                             100.0       2.0      98.0       0.0     0.0\n  source_E5                             100.0       2.0      98.0       0.0     0.0\n  source_F6                             100.0       2.0      98.0       0.0     0.0\n  source_G7                             100.0       2.0      98.0       0.0     0.0\n  source_H8                             100.0       2.0      98.0       0.0     0.0\n  source_I9                             100.0       2.0      98.0       0.0     0.0\n  source_J10                            100.0       2.0      98.0       0.0     0.0\n  source_K11                            100.0       2.0      98.0       0.0     0.0\n  source_L12                            100.0       2.0      98.0       0.0     0.0\n  source_M13                            100.0       2.0      98.0       0.0     0.0\n  source_N14                            100.0       2.0      98.0       0.0     0.0\n  source_O15                            100.0       2.0      98.0       0.0     0.0\n  source_P16                            100.0       2.0      98.0       0.0     0.0\n  source_A17                            100.0       2.0      98.0       0.0     0.0\n  source_B18                            100.0       2.0      98.0       0.0     0.0\n  source_C19                            100.0       2.0      98.0       0.0     0.0\n  source_D20                            100.0       2.0      98.0       0.0     0.0\n  source_E21                            100.0       2.0      98.0       0.0     0.0\n  source_F22                            100.0       2.0      98.0       0.0     0.0\n  source_G23                            100.0       2.0      98.0       0.0     0.0\n  source_H24                            100.0       2.0      98.0       0.0     0.0\n  mix                                   500.0     432.0      68.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  1    Corning 384 Well Plate 112 \u00b5L Flat    A1    source_A1                              2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    B2    source_B2                              2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    C3    source_C3                              2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    D4    source_D4                              2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    E5    source_E5                              2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    F6    source_F6                              2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    G7    source_G7                              2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    H8    source_H8                              2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    I9    source_I9                              2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    J10   source_J10                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    K11   source_K11                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    L12   source_L12                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    M13   source_M13                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    N14   source_N14                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    O15   source_O15                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    P16   source_P16                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    A17   source_A17                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    B18   source_B18                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    C19   source_C19                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    D20   source_D20                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    E21   source_E21                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    F22   source_F22                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    G23   source_G23                             2.0     100.0\n  1    Corning 384 Well Plate 112 \u00b5L Flat    H24   source_H24                             2.0     100.0\n  3    Opentrons 15 Tube Rack with Falcon 15 A1    mix                                  432.0     500.0\n  Tips: 48 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 4.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.\n\nI do not know what 'source_A1' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_B2' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_C3' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_D4' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_E5' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_F6' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_G7' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_H8' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_I9' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_J10' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_K11' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_L12' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_M13' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_N14' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_O15' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_P16' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_A17' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_B18' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_C19' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_D20' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_E21' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_F22' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_G23' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'source_H24' is (declared at line 21): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "hard-cherry-01",
+  "technique": "Cherrypicking",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [
+   {
+    "name": "source_A1",
+    "description": "",
+    "wells": [
+     "A1 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_A1' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_B2",
+    "description": "",
+    "wells": [
+     "B2 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_B2' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_C3",
+    "description": "",
+    "wells": [
+     "C3 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_C3' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_D4",
+    "description": "",
+    "wells": [
+     "D4 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_D4' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_E5",
+    "description": "",
+    "wells": [
+     "E5 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_E5' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_F6",
+    "description": "",
+    "wells": [
+     "F6 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_F6' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_G7",
+    "description": "",
+    "wells": [
+     "G7 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_G7' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_H8",
+    "description": "",
+    "wells": [
+     "H8 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_H8' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_I9",
+    "description": "",
+    "wells": [
+     "I9 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_I9' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_J10",
+    "description": "",
+    "wells": [
+     "J10 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_J10' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_K11",
+    "description": "",
+    "wells": [
+     "K11 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_K11' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_L12",
+    "description": "",
+    "wells": [
+     "L12 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_L12' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_M13",
+    "description": "",
+    "wells": [
+     "M13 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_M13' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_N14",
+    "description": "",
+    "wells": [
+     "N14 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_N14' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_O15",
+    "description": "",
+    "wells": [
+     "O15 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_O15' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_P16",
+    "description": "",
+    "wells": [
+     "P16 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_P16' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_A17",
+    "description": "",
+    "wells": [
+     "A17 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_A17' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_B18",
+    "description": "",
+    "wells": [
+     "B18 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_B18' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_C19",
+    "description": "",
+    "wells": [
+     "C19 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_C19' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_D20",
+    "description": "",
+    "wells": [
+     "D20 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_D20' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_E21",
+    "description": "",
+    "wells": [
+     "E21 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_E21' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_F22",
+    "description": "",
+    "wells": [
+     "F22 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_F22' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_G23",
+    "description": "",
+    "wells": [
+     "G23 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_G23' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "source_H24",
+    "description": "",
+    "wells": [
+     "H24 in slot 1"
+    ],
+    "line": 21,
+    "sentence": "I do not know what 'source_H24' is (declared at line 21): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   }
+  ],
+  "intent": {
+   "status": "verified",
+   "destination": "2:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "down the column (A1, B1, ...)",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 24,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "source@A1": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@A1": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "source@B2": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@B2": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "source@C3": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@C3": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "source@D4": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@D4": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {
+      "source@E5": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@E5": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {
+      "source@F6": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@F6": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {
+      "source@G7": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@G7": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {
+      "source@H8": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@H8": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "source@I9": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@I9": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "source@J10": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@J10": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "source@K11": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@K11": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "source@L12": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@L12": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": null,
+     "expected": {
+      "source@M13": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@M13": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": null,
+     "expected": {
+      "source@N14": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@N14": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": null,
+     "expected": {
+      "source@O15": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@O15": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": null,
+     "expected": {
+      "source@P16": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@P16": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "source@A17": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@A17": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "source@B18": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@B18": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "source@C19": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@C19": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "source@D20": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@D20": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": null,
+     "expected": {
+      "source@E21": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@E21": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F3",
+     "group": null,
+     "expected": {
+      "source@F22": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@F22": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G3",
+     "group": null,
+     "expected": {
+      "source@G23": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@G23": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H3",
+     "group": null,
+     "expected": {
+      "source@H24": 2.0,
+      "mix": 18.0
+     },
+     "found": {
+      "mix": 18.0,
+      "source@H24": 2.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "source_A1",
+    "logical": "source@A1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_B2",
+    "logical": "source@B2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_C3",
+    "logical": "source@C3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_D4",
+    "logical": "source@D4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_E5",
+    "logical": "source@E5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_F6",
+    "logical": "source@F6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_G7",
+    "logical": "source@G7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_H8",
+    "logical": "source@H8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_I9",
+    "logical": "source@I9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_J10",
+    "logical": "source@J10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_K11",
+    "logical": "source@K11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_L12",
+    "logical": "source@L12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_M13",
+    "logical": "source@M13",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_N14",
+    "logical": "source@N14",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_O15",
+    "logical": "source@O15",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_P16",
+    "logical": "source@P16",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_A17",
+    "logical": "source@A17",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_B18",
+    "logical": "source@B18",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_C19",
+    "logical": "source@C19",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_D20",
+    "logical": "source@D20",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_E21",
+    "logical": "source@E21",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_F22",
+    "logical": "source@F22",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_G23",
+    "logical": "source@G23",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "source_H24",
+    "logical": "source@H24",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "mix",
+    "logical": "mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 432.0,
+    "left_in_source_ul": 68.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "source_A1",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "source_B2",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "C3",
+     "liquid": "source_C3",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "D4",
+     "liquid": "source_D4",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "E5",
+     "liquid": "source_E5",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "F6",
+     "liquid": "source_F6",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "G7",
+     "liquid": "source_G7",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "H8",
+     "liquid": "source_H8",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "I9",
+     "liquid": "source_I9",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "J10",
+     "liquid": "source_J10",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "K11",
+     "liquid": "source_K11",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "L12",
+     "liquid": "source_L12",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "M13",
+     "liquid": "source_M13",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "N14",
+     "liquid": "source_N14",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "O15",
+     "liquid": "source_O15",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "P16",
+     "liquid": "source_P16",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "A17",
+     "liquid": "source_A17",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "B18",
+     "liquid": "source_B18",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "C19",
+     "liquid": "source_C19",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "D20",
+     "liquid": "source_D20",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "E21",
+     "liquid": "source_E21",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "F22",
+     "liquid": "source_F22",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "G23",
+     "liquid": "source_G23",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Corning 384 Well Plate 112 \u00b5L Flat",
+     "well": "H24",
+     "liquid": "source_H24",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 15 Tube Rack with Falcon 15 mL Conical",
+     "well": "A1",
+     "liquid": "mix",
+     "declared_ul": 500.0,
+     "needed_ul": 432.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "4",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 48
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: 1 biology problem (1 note).\n\n1. NOTE UNMIXED-AT-END: 24 wells never mixed after source_A1, source_B2, source_C3,\nsource_D4 and 20 more went in (10% of the well)\n   line 66:  p20.dispense(2, dest_plate[dest_well])\n   At line 66 the robot added source_A1, source_B2, source_C3, source_D4 and 20 more to\n   wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 2, which already held mix (this\n   line did it 24 times). The addition was 10% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   A PCR plate is usually vortexed and spun down before cycling; if this one will not be,\n   mix it.\n   Affected: wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 2.\n   Fix: Mix wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 2 after line 66:\n   `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [182472666842]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\n\nI do not know what 'source_A1' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_B2' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_C3' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_D4' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_E5' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_F6' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_G7' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_H8' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_I9' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_J10' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_K11' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_L12' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_M13' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_N14' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_O15' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_P16' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_A17' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_B18' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_C19' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_D20' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_E21' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_F22' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_G23' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'source_H24' is (declared at line 21): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.",
+ "findings": [
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 66,
+   "title": "24 wells never mixed after source_A1, source_B2, source_C3, source_D4 and 20 more went in (10% of the well)",
+   "explanation": "At line 66 the robot added source_A1, source_B2, source_C3, source_D4 and 20 more to wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 2, which already held mix (this line did it 24 times). The addition was 10% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, A3, B1, B2, B3, C1, C2 and 16 more in slot 2 after line 66: `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 5.6,
+ "draft": 4
+}

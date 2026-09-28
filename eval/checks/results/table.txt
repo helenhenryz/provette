@@ -1,0 +1,99 @@
+| operator | generated | pass the simulator | compare | cannot check | accounting | prep | `provette check` | nothing |
+|---|---|---|---|---|---|---|---|---|
+| a volume | 108 | 85 | 83 | 0 | 0 | 12 | 10 | 2 |
+| b drop-last | 31 | 29 | 16 | 13 | 11 | 0 | 0 | 0 |
+| c reorder | 47 | 38 | 16 | 0 | 6 | 2 | 0 | 22 |
+| d wrong-source | 16 | 16 | 16 | 0 | 1 | 8 | 5 | 0 |
+| e to-trash | 77 | 74 | 68 | 0 | 30 | 26 | 35 | 6 |
+| all | 279 | 242 | 199 | 13 | 48 | 48 | 50 | 30 |
+
+SURVIVOR brad-01-c10 line 33: reverse the list plate.columns()[0]  same_deck=False same_destination=False order_note=False layout_free=True
+       -    for (i, (well, conc)) in enumerate(zip(plate.columns()[0], std_conc)):
+       +    for (i, (well, conc)) in enumerate(zip(_provette_reorder(plate.columns()[0], 'reverse'), std_conc)):
+SURVIVOR brad-01-c11 line 33: rotate the list plate.columns()[0]  same_deck=False same_destination=False order_note=False layout_free=True
+       -    for (i, (well, conc)) in enumerate(zip(plate.columns()[0], std_conc)):
+       +    for (i, (well, conc)) in enumerate(zip(_provette_reorder(plate.columns()[0], 'rotate'), std_conc)):
+SURVIVOR cherry-01-c5 line 23: reverse the list SOURCE_WELLS  same_deck=True same_destination=True order_note=False layout_free=False
+       -    for (name, color) in zip(SOURCE_WELLS, colors):
+       +    for (name, color) in zip(_provette_reorder(SOURCE_WELLS, 'reverse'), colors):
+SURVIVOR cherry-01-c6 line 23: rotate the list SOURCE_WELLS  same_deck=True same_destination=True order_note=False layout_free=False
+       -    for (name, color) in zip(SOURCE_WELLS, colors):
+       +    for (name, color) in zip(_provette_reorder(SOURCE_WELLS, 'rotate'), colors):
+SURVIVOR clone-01-c11 line 66: reverse the list plasmid_tubes  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (tube, r) in zip(plasmid_tubes, reactions):
+       +    for (tube, r) in zip(_provette_reorder(plasmid_tubes, 'reverse'), reactions):
+SURVIVOR clone-01-c12 line 66: rotate the list plasmid_tubes  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (tube, r) in zip(plasmid_tubes, reactions):
+       +    for (tube, r) in zip(_provette_reorder(plasmid_tubes, 'rotate'), reactions):
+SURVIVOR dil-01-a3 line 38: halve the number 2  same_deck=True same_destination=True order_note=False layout_free=False
+       -    p300.dispense(2 * FINAL_VOL, row[0])
+       +    p300.dispense(1.0 * FINAL_VOL, row[0])
+SURVIVOR dil-01-e17 line 33: the second time this transfer runs, it goes into the trash  same_deck=True same_destination=True order_note=False layout_free=False
+       -    p300.transfer(FINAL_VOL, pbs, row[1:], new_tip='once')
+       +    p300.transfer(FINAL_VOL, pbs, protocol.fixed_trash if _provette_nth(2) else row[1:], new_tip='once')
+SURVIVOR dil-01-e19 line 38: the second time this dispense runs, it goes into the trash  same_deck=True same_destination=True order_note=False layout_free=False
+       -    p300.dispense(2 * FINAL_VOL, row[0])
+       +    p300.dispense(2 * FINAL_VOL, protocol.fixed_trash if _provette_nth(2) else row[0])
+SURVIVOR dil-03-a3 line 49: halve the number 2  same_deck=True same_destination=True order_note=False layout_free=True
+       -    p300.dispense(2 * FINAL_VOL, wells[0].bottom(1), rate=0.5)
+       +    p300.dispense(1.0 * FINAL_VOL, wells[0].bottom(1), rate=0.5)
+SURVIVOR dil-03-e16 line 49: the second time this dispense runs, it goes into the trash  same_deck=True same_destination=True order_note=False layout_free=True
+       -    p300.dispense(2 * FINAL_VOL, wells[0].bottom(1), rate=0.5)
+       +    p300.dispense(2 * FINAL_VOL, protocol.fixed_trash if _provette_nth(2) else wells[0].bottom(1), rate=0.5)
+SURVIVOR elisa-01-c6 line 42: reverse the list std_tubes  same_deck=False same_destination=False order_note=True layout_free=False
+       -    for (tube, dest) in zip(std_tubes, elisa.columns_by_name()['12']):
+       +    for (tube, dest) in zip(_provette_reorder(std_tubes, 'reverse'), elisa.columns_by_name()['12']):
+SURVIVOR elisa-01-c7 line 42: rotate the list std_tubes  same_deck=False same_destination=False order_note=True layout_free=False
+       -    for (tube, dest) in zip(std_tubes, elisa.columns_by_name()['12']):
+       +    for (tube, dest) in zip(_provette_reorder(std_tubes, 'rotate'), elisa.columns_by_name()['12']):
+SURVIVOR norm-01-c11 line 38: reverse the list CONCENTRATIONS  same_deck=True same_destination=True order_note=False layout_free=True
+       -    for (c, v) in zip(CONCENTRATIONS, sample_vols):
+       +    for (c, v) in zip(_provette_reorder(CONCENTRATIONS, 'reverse'), sample_vols):
+SURVIVOR norm-01-c12 line 38: rotate the list CONCENTRATIONS  same_deck=True same_destination=True order_note=False layout_free=True
+       -    for (c, v) in zip(CONCENTRATIONS, sample_vols):
+       +    for (c, v) in zip(_provette_reorder(CONCENTRATIONS, 'rotate'), sample_vols):
+SURVIVOR pcr-01-c8 line 57: reverse the list sample_tubes  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (src, dest) in zip(sample_tubes, dest_wells):
+       +    for (src, dest) in zip(_provette_reorder(sample_tubes, 'reverse'), dest_wells):
+SURVIVOR pcr-01-c9 line 57: rotate the list sample_tubes  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (src, dest) in zip(sample_tubes, dest_wells):
+       +    for (src, dest) in zip(_provette_reorder(sample_tubes, 'rotate'), dest_wells):
+SURVIVOR pcr-02-c11 line 63: reverse the list samples  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (s, d) in zip(samples, dests):
+       +    for (s, d) in zip(_provette_reorder(samples, 'reverse'), dests):
+SURVIVOR pcr-02-c12 line 63: rotate the list samples  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (s, d) in zip(samples, dests):
+       +    for (s, d) in zip(_provette_reorder(samples, 'rotate'), dests):
+SURVIVOR pcr-04-c10 line 63: reverse the list cdna_tubes  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (src, wells) in zip(cdna_tubes, replicate_wells):
+       +    for (src, wells) in zip(_provette_reorder(cdna_tubes, 'reverse'), replicate_wells):
+SURVIVOR pcr-04-c11 line 63: rotate the list cdna_tubes  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (src, wells) in zip(cdna_tubes, replicate_wells):
+       +    for (src, wells) in zip(_provette_reorder(cdna_tubes, 'rotate'), replicate_wells):
+SURVIVOR pcr-06-c8 line 46: reverse the list sources  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (s, d) in zip(sources, dests):
+       +    for (s, d) in zip(_provette_reorder(sources, 'reverse'), dests):
+SURVIVOR pcr-06-c9 line 46: rotate the list sources  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (s, d) in zip(sources, dests):
+       +    for (s, d) in zip(_provette_reorder(sources, 'rotate'), dests):
+SURVIVOR pcr-07-c17 line 91: reverse the list template_tubes  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (src, dest) in zip(template_tubes, dest_wells):
+       +    for (src, dest) in zip(_provette_reorder(template_tubes, 'reverse'), dest_wells):
+SURVIVOR pcr-07-c18 line 91: rotate the list template_tubes  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (src, dest) in zip(template_tubes, dest_wells):
+       +    for (src, dest) in zip(_provette_reorder(template_tubes, 'rotate'), dest_wells):
+SURVIVOR pcr-07-e26 line 66: the second time this transfer runs, it goes into the trash  same_deck=True same_destination=True order_note=False layout_free=True
+       -    p300.transfer(WATER * N_MIX, water_tube, mm_tube, new_tip='always')
+       +    p300.transfer(WATER * N_MIX, water_tube, protocol.fixed_trash if _provette_nth(2) else mm_tube, new_tip='always')
+SURVIVOR pcr-07-e28 line 67: the second time this transfer runs, it goes into the trash  same_deck=True same_destination=True order_note=False layout_free=True
+       -    p300.transfer(BUFFER * N_MIX, buffer_tube, mm_tube.bottom(3), new_tip='always')
+       +    p300.transfer(BUFFER * N_MIX, buffer_tube, protocol.fixed_trash if _provette_nth(2) else mm_tube.bottom(3), new_tip='always')
+SURVIVOR pcr-07-e29 line 69: the second time this transfer runs, it goes into the trash  same_deck=True same_destination=True order_note=False layout_free=True
+       -    p20.transfer(REV * N_MIX, rev_tube, mm_tube.bottom(3), new_tip='always', mix_after=(2, 10))
+       +    p20.transfer(REV * N_MIX, rev_tube, protocol.fixed_trash if _provette_nth(2) else mm_tube.bottom(3), new_tip='always', mix_after=(2, 10))
+SURVIVOR prot-01-c8 line 45: reverse the list sources  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (s, d) in zip(sources, dests):
+       +    for (s, d) in zip(_provette_reorder(sources, 'reverse'), dests):
+SURVIVOR prot-01-c9 line 45: rotate the list sources  same_deck=False same_destination=False order_note=True layout_free=True
+       -    for (s, d) in zip(sources, dests):
+       +    for (s, d) in zip(_provette_reorder(sources, 'rotate'), dests):

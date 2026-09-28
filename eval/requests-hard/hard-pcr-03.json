@@ -1,0 +1,507 @@
+{
+ "id": "hard-pcr-03",
+ "request": "Assemble 48 PCR reactions of 25 ul from separate components for 48 templates in a 96-well plate: 5 ul of 5x buffer, 0.5 ul of dNTPs, 0.25 ul of polymerase, 1.25 ul of forward primer, 1.25 ul of reverse primer, 14.75 ul of water and 2 ul of template. The components are in 1.5 ml tubes on a cold block.",
+ "technique": "PCR setup",
+ "liquids": [
+  {
+   "name": "template_{i}",
+   "role": "sample",
+   "bind": "indexed",
+   "pattern": "(?i)(?:template|sample|dna)\\D{0,12}?(\\d+)",
+   "count": 48,
+   "index": "number"
+  },
+  {
+   "name": "fwd_primer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)forward|fwd"
+  },
+  {
+   "name": "rev_primer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)reverse|rev\\b"
+  },
+  {
+   "name": "polymerase",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)polymerase|taq|enzyme"
+  },
+  {
+   "name": "dntp",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)dntp"
+  },
+  {
+   "name": "buffer",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)buffer"
+  },
+  {
+   "name": "water",
+   "role": "reagent",
+   "bind": "name",
+   "pattern": "(?i)water|h2o"
+  }
+ ],
+ "destination": {
+  "select": "auto"
+ },
+ "variants": [
+  {
+   "name": "48 reactions",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_1": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_2": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_3": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_4": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_5": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_6": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_7": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_8": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_9": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_10": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_11": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_12": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_13": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_14": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_15": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_16": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_17": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_18": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_19": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_20": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_21": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_22": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_23": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_24": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_25": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_26": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_27": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_28": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_29": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_30": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_31": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_32": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_33": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_34": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_35": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_36": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_37": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_38": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_39": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_40": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_41": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_42": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_43": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_44": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_45": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_46": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_47": 2
+      },
+      {
+       "buffer": 5,
+       "dntp": 0.5,
+       "polymerase": 0.25,
+       "fwd_primer": 1.25,
+       "rev_primer": 1.25,
+       "water": 14.75,
+       "template_48": 2
+      }
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": [
+  "0.25 ul of polymerase and 0.5 ul of dNTPs are below any OT-2 pipette: a master mix is the only way; after ideal mixing each well still resolves to the listed amounts."
+ ]
+}

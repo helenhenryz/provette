@@ -1,0 +1,64 @@
+{
+ "id": "hard-elisa-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 67,
+    "title": "0.78 ul, 1.56 ul, 3.12 ul, 6.25 ul and 1 more are below what the p300_single_gen2 can measure (20 ul at least)"
+   }
+  ],
+  "draft": 6,
+  "rounds": 6
+ },
+ "tool_calls": 13,
+ "turns": 15,
+ "drafts": 7,
+ "checks": 7,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 2028922,
+ "tokens_out": 305825,
+ "seconds": 1107.8,
+ "candidates": [
+  {
+   "dir": "candidate-0",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 848190,
+   "tokens_out": 100510
+  },
+  {
+   "dir": "candidate-1",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 380490,
+   "tokens_out": 103427
+  },
+  {
+   "dir": "candidate-2",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 800242,
+   "tokens_out": 101888
+  }
+ ],
+ "chosen": "candidate-1"
+}

@@ -1,0 +1,49 @@
+pcr-06.py: VERIFIED against plate map pcr-06. 16 of 16 wells hold what the plate map says.
+  Destination: PCR plate (slot 3). Reading of the request: 16 reactions.
+
+Labware for the technique (PCR setup): nothing to flag.
+
+Where every liquid ended up (ul):
+  liquid                             declared delivered in source elsewhere    lost
+  PCR mix                               400.0     320.0      80.0       0.0     0.0
+  Colony 1                               50.0       1.0      49.0       0.0     0.0
+  Colony 2                               50.0       1.0      49.0       0.0     0.0
+  Colony 3                               50.0       1.0      49.0       0.0     0.0
+  Colony 4                               50.0       1.0      49.0       0.0     0.0
+  Colony 5                               50.0       1.0      49.0       0.0     0.0
+  Colony 6                               50.0       1.0      49.0       0.0     0.0
+  Colony 7                               50.0       1.0      49.0       0.0     0.0
+  Colony 8                               50.0       1.0      49.0       0.0     0.0
+  Colony 9                               50.0       1.0      49.0       0.0     0.0
+  Colony 10                              50.0       1.0      49.0       0.0     0.0
+  Colony 11                              50.0       1.0      49.0       0.0     0.0
+  Colony 12                              50.0       1.0      49.0       0.0     0.0
+  Colony 13                              50.0       1.0      49.0       0.0     0.0
+  Colony 14                              50.0       1.0      49.0       0.0     0.0
+  Colony 15                              50.0       1.0      49.0       0.0     0.0
+  Colony 16                              50.0       1.0      49.0       0.0     0.0
+
+Prep sheet: what to put on the deck before the run.
+  slot labware                               well  liquid                       load at least  declared
+  1    Opentrons 24 Tube Rack with NEST 1.5  A1    PCR mix                              320.0     400.0
+  2    Colony resuspensions                  A1    Colony 1                              10.0      50.0
+  2    Colony resuspensions                  B1    Colony 2                              10.0      50.0
+  2    Colony resuspensions                  C1    Colony 3                              10.0      50.0
+  2    Colony resuspensions                  D1    Colony 4                              10.0      50.0
+  2    Colony resuspensions                  E1    Colony 5                              10.0      50.0
+  2    Colony resuspensions                  F1    Colony 6                              10.0      50.0
+  2    Colony resuspensions                  G1    Colony 7                              10.0      50.0
+  2    Colony resuspensions                  H1    Colony 8                              10.0      50.0
+  2    Colony resuspensions                  A2    Colony 9                              10.0      50.0
+  2    Colony resuspensions                  B2    Colony 10                             10.0      50.0
+  2    Colony resuspensions                  C2    Colony 11                             10.0      50.0
+  2    Colony resuspensions                  D2    Colony 12                             10.0      50.0
+  2    Colony resuspensions                  E2    Colony 13                             10.0      50.0
+  2    Colony resuspensions                  F2    Colony 14                             10.0      50.0
+  2    Colony resuspensions                  G2    Colony 15                             10.0      50.0
+  2    Colony resuspensions                  H2    Colony 16                             10.0      50.0
+  Tips: 16 from Opentrons OT-2 96 Tip Rack 20 µL in slot 4.
+  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.
+
+This checks the logic of the protocol: what goes where, and how much. It does not check the
+  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.
