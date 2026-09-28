@@ -1,0 +1,24 @@
+{
+ "id": "cherrypick-flat",
+ "technique": "Cherrypicking",
+ "request": "Cherry-pick 10 ul from wells B3, D7, F2 and H11 of the source plate into the first four wells of a fresh plate.",
+ "liquids": [
+  {"name": "clone@{well}", "role": "sample", "bind": "well", "pattern": "(?i)clone"}
+ ],
+ "destination": {"select": "regex", "pattern": "(?i)picked"},
+ "variants": [
+  {
+   "name": "4 picks",
+   "why": "the request pins the order",
+   "pinned": {
+    "A1": {"clone@B3": 10},
+    "B1": {"clone@D7": 10},
+    "C1": {"clone@F2": 10},
+    "D1": {"clone@H11": 10}
+   },
+   "groups": []
+  }
+ ],
+ "discard_intended": [],
+ "notes": []
+}

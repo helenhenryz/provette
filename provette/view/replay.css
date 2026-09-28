@@ -1,0 +1,124 @@
+:root { --ink: #1c1c1c; --muted: #666; --line: #d7d7d7; --paper: #fff; --panel: #f6f6f4;
+  --error: #c62828; --warning: #e08a00; --note: #4a6fa5; --ok: #2e7d32; --cur: #fff3b0;
+  --label-min-px: 0; /* the labware labels' smallest size on screen; 0 = the deck's own 5 units */ }
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink); background: var(--paper); }
+header { padding: 14px 20px 8px; border-bottom: 1px solid var(--line); }
+header h1 { margin: 0 0 4px; font-size: 20px; }
+.verdict { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 15px; }
+.verdict .check { font-weight: 600; }
+.verdict .ok { color: var(--ok); } .verdict .bad { color: var(--error); }
+main { display: grid; grid-template-columns: minmax(560px, 3fr) minmax(360px, 2fr);
+  gap: 16px; padding: 14px 20px; }
+@media (max-width: 1000px) { main { grid-template-columns: 1fr; } }
+/* A column never grows to fit the code's longest line: the code panel scrolls instead. */
+main > *, .lower > div { min-width: 0; }
+.deck-box { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
+svg#deck { width: 100%; height: auto; display: block; }
+svg#closeup { width: 100%; height: auto; display: block; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 8px; padding: 4px; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 8px 0; }
+.controls button { font: inherit; padding: 4px 12px; border: 1px solid #999; border-radius: 6px;
+  background: #fff; cursor: pointer; }
+.controls button:hover { background: #eee; }
+.controls button#play { font-weight: 600; min-width: 72px; }
+.controls input[type=range] { flex: 1 1 200px; }
+.controls label { color: var(--muted); font-size: 14px; }
+#step-label { font-weight: 600; margin-top: 4px; }
+#readout { font-size: 17px; min-height: 1.5em; }
+#tip-line { color: var(--muted); font-size: 14px; min-height: 1.2em; }
+.key { color: var(--muted); font-size: 13px; margin-top: 6px; }
+.side h2, .lower h2 { font-size: 15px; margin: 10px 0 4px; }
+#closeup-title { color: var(--muted); font-size: 14px; margin: 8px 0 4px; display: flex; gap: 10px; }
+.lower { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; padding: 0 20px 14px; }
+@media (max-width: 1000px) { .lower { grid-template-columns: 1fr; } }
+#code { font: 12.5px/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 8px; max-height: 420px; overflow: auto; padding: 6px 0; }
+#code .ln { display: flex; white-space: pre; padding: 0 8px; }
+#code .num { color: #999; width: 3.2em; flex: none; text-align: right; padding-right: 10px; user-select: none; }
+#code .ln.cur { background: var(--cur); }
+#code .ln.mark .num { color: var(--error); font-weight: 700; }
+#code .ln.mark { box-shadow: inset 3px 0 var(--error); }
+#findings { list-style: none; margin: 0; padding: 0; max-height: 420px; overflow: auto; }
+.finding { border: 1px solid var(--line); border-left-width: 5px; border-radius: 6px; padding: 8px 10px;
+  margin-bottom: 8px; cursor: pointer; background: #fff; }
+.finding:hover { background: #fafafa; }
+.finding.selected { outline: 2px solid var(--ink); }
+.finding.error { border-left-color: var(--error); }
+.finding.warning { border-left-color: var(--warning); }
+.finding.note { border-left-color: var(--note); }
+.finding.mismatch { border-left-color: var(--error); }
+.f-head { font-weight: 600; margin-bottom: 3px; }
+.f-text { font-size: 14px; } .f-fix { font-size: 14px; margin-top: 4px; }
+.f-note { font-size: 13px; color: var(--muted); margin-top: 3px; }
+.f-section { color: var(--muted); font-size: 14px; margin: 6px 0; }
+#legend { list-style: none; margin: 0; padding: 0; font-size: 14px; }
+#legend li, .legend-key li { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+.swatch { width: 18px; height: 18px; border-radius: 3px; border: 1px solid #999; flex: none; }
+.legend-key { list-style: none; margin: 8px 0 0; padding: 8px 0 0; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+.swatch.hatch { background: repeating-linear-gradient(45deg, #0072B2 0 3px, #fff 3px 6px); }
+.swatch.faint { background: #0072B2; opacity: 0.45; }
+.swatch.fresh { background: #4b5a6a; } .swatch.parked { background: repeating-linear-gradient(45deg, #8a6d00 0 2px, #fff 2px 4px); }
+.swatch.gone { background: #fff; border-style: dashed; }
+.prep { padding: 0 20px 14px; overflow-x: auto; /* the table is wider than a phone */ }
+.prep table { border-collapse: collapse; font-size: 14px; }
+.prep th, .prep td { border: 1px solid var(--line); padding: 4px 10px; text-align: left; }
+.prep th { background: var(--panel); }
+.prep td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.prep tr.flag td { background: #fdecea; }
+.prep .flags { margin: 8px 0; font-size: 14px; }
+.prep details { margin-top: 8px; font-size: 13px; }
+.prep pre { background: var(--panel); padding: 8px; overflow: auto; border-radius: 6px; }
+footer { padding: 12px 20px 30px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+#tooltip { position: fixed; display: none; max-width: 380px; background: #222; color: #fff; padding: 6px 9px;
+  border-radius: 6px; font-size: 13px; pointer-events: none; z-index: 10; }
+
+/* the deck */
+.slot { fill: #ebebe6; stroke: #c9c9c2; stroke-width: 0.6; }
+.slot-number { font-size: 16px; fill: #b9b9b2; font-weight: 700; }
+.lw-body { fill: #fff; stroke: #777; stroke-width: 0.5; }
+.trash .lw-body { fill: #d9dde3; stroke: #667; }
+.lw-label { font-size: 5px; font-weight: 600; fill: #222; pointer-events: none; }
+.lw-note { font-size: 3.2px; fill: var(--error); }
+.well-base { fill: #f7f7f5; stroke: none; }
+.well-outline { fill: none; stroke: #8b8b85; stroke-width: 0.25; }
+.well.hl .well-outline { stroke: var(--error); stroke-width: 1.1; }
+.well.hl2 .well-outline { stroke: var(--warning); stroke-width: 0.8; stroke-dasharray: 0.9 0.6; }
+.unknown-volume { fill: none; stroke: #444; stroke-width: 0.3; stroke-dasharray: 0.6 0.5; }
+.tip-fresh { fill: #4b5a6a; }
+.tip-parked { fill: url(#hatch-parked); }
+.labware { cursor: pointer; }
+.pipette-tip .tip-body { fill: #fff; }
+.pipette-tip .tip-edge { fill: none; stroke: #111; stroke-width: 0.5; }
+.tip-label { font-size: 4px; font-weight: 700; fill: #111; paint-order: stroke; stroke: #fff; stroke-width: 1; }
+
+/* Compact: the product's frame (?compact=1, or render(compact=True)). The product's type
+   scale and light colour tokens (web/src/tokens.css; the dark ones come with ?theme=dark),
+   tighter margins, and labware labels never smaller than 11 px (replay.js, fitLabels). */
+html.compact { --label-min-px: 11; --ink: #1a1d21; --muted: #5b6470; --line: #dfe3e8; --paper: #fff;
+  --panel: #f6f7f8; --error: #c7382f; --warning: #d97a13; --note: #2f6fd6; --ok: #0f8a5f; --cur: #fdf1e2; }
+html.compact body { font: 13px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif; display: flow-root; /* its height counts its children's margins */ }
+html.compact header { padding: 10px 12px 6px; } html.compact header h1 { font-size: 17px; }
+html.compact main { padding: 8px 12px; gap: 12px; }
+html.compact .lower { padding: 0 12px 12px; gap: 12px; }
+html.compact .prep { padding: 0 12px 12px; }
+html.compact footer { padding: 8px 12px 12px; }
+html.compact .verdict, html.compact .side h2, html.compact .lower h2, html.compact .f-text,
+html.compact .f-fix, html.compact .f-section, html.compact #legend, html.compact .prep table,
+html.compact .prep .flags, html.compact footer, html.compact #code { font-size: 13px; }
+html.compact #readout { font-size: 15px; }
+html.compact .key, html.compact .legend-key, html.compact .f-note, html.compact #tip-line,
+html.compact #closeup-title, html.compact .controls label, html.compact .prep details,
+html.compact #tooltip { font-size: 12px; }
+html.compact .controls button { background: var(--panel); border-color: var(--line); color: var(--ink);
+  padding: 3px 10px; }
+html.compact .finding { background: var(--panel); border-color: var(--line); border-left-width: 4px;
+  padding: 6px 8px; margin-bottom: 6px; }
+html.compact .finding.error { border-left-color: var(--error); }
+html.compact .finding.warning { border-left-color: var(--warning); }
+html.compact .finding.note { border-left-color: var(--note); }
+html.compact .finding.mismatch { border-left-color: var(--error); }
+html.compact .finding:hover { background: var(--line); }
+html.compact .lw-label { paint-order: stroke; stroke: #fff; stroke-width: 0.9; stroke-linejoin: round; }

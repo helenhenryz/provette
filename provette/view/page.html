@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"__HTML_CLASS__>
+<head>
+<meta charset="utf-8">
+<script>/* ?compact=1: the product's frame (see replay.css, "compact") */
+if (/[?&]compact=1(?:&|$)/.test(window.location.search)) document.documentElement.classList.add("compact");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provette replay: __TITLE__</title>
+<style>__CSS__</style>
+</head>
+<body>
+<header>
+  <h1>Provette replay: __TITLE__</h1>
+  <div class="verdict">__VERDICT__</div>
+</header>
+<main>
+  <section class="deck-box">
+    <svg id="deck" xmlns="http://www.w3.org/2000/svg" role="img"
+      aria-label="The robot's deck, seen from above"></svg>
+    <div class="controls">
+      <button id="first" title="Go to the start (Home)">|&lt;</button>
+      <button id="back" title="One step back (left arrow)">&lt;</button>
+      <button id="play" title="Play or pause (space)">Play</button>
+      <button id="forward" title="One step forward (right arrow)">&gt;</button>
+      <button id="last" title="Go to the end (End)">&gt;|</button>
+      <input id="slider" type="range" min="0" max="0" value="0" step="1" aria-label="Step">
+      <label>speed <select id="speed">
+        <option value="1">1 step/s</option><option value="2">2 steps/s</option>
+        <option value="4" selected>4 steps/s</option><option value="10">10 steps/s</option>
+        <option value="25">25 steps/s</option></select></label>
+    </div>
+    <div id="step-label"></div>
+    <div id="readout"></div>
+    <div id="tip-line"></div>
+    <div class="key">aspirate = draw liquid up into the tip; dispense = push it out. Hover a well
+      to read what it holds. Click a labware to see it close up. Arrow keys step; space plays.</div>
+  </section>
+  <aside class="side">
+    <div id="closeup-title"></div>
+    <svg id="closeup" xmlns="http://www.w3.org/2000/svg" role="img"
+      aria-label="Close-up of one labware"></svg>
+    <label class="key"><input type="checkbox" id="follow" checked> follow the pipette</label>
+    <h2>The liquids (colour = where a liquid started)</h2>
+    <ul id="legend"></ul>
+    <ul class="legend-key">
+      <li><span class="swatch"></span> solid band: liquid that was pipetted in,
+        height = its share of the well</li>
+      <li><span class="swatch hatch"></span> hatched: only a film left by a used tip
+        (carry-over), no volume</li>
+      <li><span class="swatch faint"></span> faint: the model is not certain the tip touched
+        the liquid</li>
+      <li><span class="swatch fresh"></span> tip rack: dark = fresh tip,
+        <span class="swatch parked"></span> hatched = used tip put back,
+        <span class="swatch gone"></span> empty = tip used and thrown away</li>
+    </ul>
+  </aside>
+</main>
+<section class="lower">
+  <div>
+    <h2>The protocol (the current line is marked)</h2>
+    <div id="code"></div>
+  </div>
+  <div>
+    <h2>What Provette found (click one to see it on the deck)</h2>
+    <ul id="findings"></ul>
+  </div>
+  <div>
+    <h2>What is on the deck</h2>
+    __DECK_TABLE__
+  </div>
+</section>
+__PREP__
+<footer>__FOOTER__</footer>
+<div id="tooltip" role="tooltip"></div>
+<script id="provette-data" type="application/json">__DATA__</script>
+<script>__JS__</script>
+</body>
+</html>

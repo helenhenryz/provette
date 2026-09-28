@@ -1,0 +1,31 @@
+{
+ "id": "colony-pcr",
+ "technique": "PCR setup",
+ "request": "Colony PCR prep: 20 ul of PCR mix into 8 wells of a PCR plate, then 1 ul from each of 8 colony resuspensions in a second plate.",
+ "liquids": [
+  {"name": "mix", "role": "reagent", "bind": "name", "pattern": "(?i)master\\s*mix|pcr mix"},
+  {"name": "colony_{i}", "role": "sample", "bind": "indexed", "pattern": "(?i)colony\\D{0,12}?(\\d+)", "count": 8, "index": "number"}
+ ],
+ "destination": {"select": "regex", "pattern": "(?i)pcr plate"},
+ "variants": [
+  {
+   "name": "8 reactions",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {"mix": 20, "colony_1": 1}, {"mix": 20, "colony_2": 1}, {"mix": 20, "colony_3": 1}, {"mix": 20, "colony_4": 1},
+      {"mix": 20, "colony_5": 1}, {"mix": 20, "colony_6": 1}, {"mix": 20, "colony_7": 1}, {"mix": 20, "colony_8": 1}
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": []
+}

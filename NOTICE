@@ -1,0 +1,19 @@
+Provette
+Copyright 2026 Helen Henry and Nyle Hussain
+
+Licensed under the Apache License, Version 2.0 (LICENSE).
+
+Third-party material in this repository:
+
+* provette/agent/nemotron3_nano/chat_template.jinja and tokenizer_config.json are the tokenizer
+  files of NVIDIA-Nemotron-3-Nano-30B-A3B, fetched unchanged from Hugging Face and governed by
+  the NVIDIA Nemotron Open Model License, not by the Apache License. The NOTE file beside them
+  says where they came from and why they are here; nothing imports them at run time.
+
+* Labware definitions are read at run time from the installed `opentrons` package (Apache-2.0)
+  and are not copied here. The Opentrons protocol library (D-10 in DECISIONS.md) is fetched at
+  run time into .cache/ and never committed; the repository holds slugs, line numbers, findings
+  and short quoted snippets only.
+
+* The test fixtures under tests/fixtures and the requests under eval/ were written for this
+  project.

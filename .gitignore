@@ -1,0 +1,28 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+node_modules/
+dist/
+build/
+*.egg-info/
+.DS_Store
+.cache/
+
+# the API's local data (live checks, runs, the analysis cache)
+.data/
+web/node_modules/
+web/dist/
+
+# make check output someone saved by hand; never tracked
+*.log
+
+
+# each episode's replay page: the app rebuilds it from the episode, and `provette view` makes one
+eval/**/replay.html

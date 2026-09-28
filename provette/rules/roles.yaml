@@ -1,0 +1,166 @@
+# The word lists that tell Provette what a declared liquid is, from its name.
+#
+# This file is ours, the biology. No programming is needed to change it.
+#
+# When a protocol declares a liquid (define_liquid / load_liquid), Provette reads the name it
+# gave, and then the description, and looks for the words below. A word matches on its own,
+# as a whole word, in any case: "water" matches "Nuclease-free Water" but not "watershed".
+# A phrase of two words ("master mix") matches those two words in that order.
+#
+# How to add a word: find the list it belongs to, and add one line under the last word of
+# that list, in the same shape:
+#     - lysozyme
+# Then run `make check` (or ask the product to add it for you: it writes the same line).
+# A word that is in no list is reported by `provette check` and `provette verify` as "I do not
+# know what ... is", and the checks that grade by what was carried leave it unplaced.
+#
+# A line between slashes is a pattern for a programmer, used exactly as written:
+#     - '/\bstock\b.*\b(?:drug|compound|bsa|protein)/'
+# You never need one to add an ordinary word.
+#
+# The lists are read in this order for the role: sample first, then reagent, then carrier.
+# So "DNA in TE buffer" is a sample, not a carrier. For the order of addition, add_last is
+# read before add_first. What each list means is in provette/rules/README.md and in
+# docs/rulebook.md; the table of what may be carried into what is in docs/rule-sources.md.
+
+# One of many, and must not meet the others: samples, DNA, cDNA, libraries, colonies, serum,
+# standards of a curve, compounds, plasmids.
+sample:
+  - sample
+  - samples
+  - dna
+  - cdna
+  - rna
+  - template
+  - colony
+  - colonies
+  - library
+  - libraries
+  - plasma
+  - serum
+  - sera
+  - lysate
+  - culture
+  - cell
+  - cells
+  - standard
+  - standards
+  - plasmid
+  - part
+  - construct
+  - compound
+  - drug
+  - antibiotic
+  - extract
+  - genomic
+  - '/\bstock\b.*\b(?:drug|compound|bsa|protein)/'  # "stock of drug", "protein stock solution"
+  - bsa
+  - ligation
+  - digest
+  - pcr product
+  - amplicon
+  - protein
+  - specimen
+
+# The shared active ingredients: master mix, enzymes, primers, dyes, beads, antibodies,
+# substrates.
+reagent:
+  - master mix
+  - mastermix
+  - mix
+  - enzyme
+  - polymerase
+  - taq
+  - primer
+  - ligase
+  - bsai
+  - dye
+  - bradford
+  - bead
+  - beads
+  - sybr
+  - antibody
+  - substrate
+  - tmb
+  - mtt
+  - dntp
+  - probe
+  - reagent
+  - loading
+  - coomassie
+  - magnet
+  - ampure
+  - spri
+
+# Inert: water, buffers, saline, media, solvents, ethanol. A trace of it anywhere changes
+# nothing that matters.
+carrier:
+  - water
+  - h2o
+  - pbs
+  - saline
+  - buffer
+  - diluent
+  - tbs
+  - tbst
+  - hbss
+  - tris
+  - te
+  - medium
+  - media
+  - lb
+  - soc
+  - broth
+  - ethanol
+  - etoh
+  - dmso
+  - glycerol
+  - assay diluent
+  - wash
+  - elution
+  - blocking
+
+# Order of addition (ENZYME-BEFORE-DILUENT). The liquids that go into a reaction last:
+# enzymes, polymerases, master mixes, shipped in glycerol and meant to meet a well that is
+# already at the right dilution.
+add_last:
+  - enzyme
+  - polymerase
+  - taq
+  - ligase
+  - bsai
+  - restriction
+  - '/\breverse transcript\w*/'  # reverse transcriptase, reverse transcription
+  - rt
+  - master mix
+  - mastermix
+
+# The liquids that go in first: the water or buffer that makes the dilution. A sample is never
+# the diluent, whatever words its name holds.
+add_first:
+  - water
+  - h2o
+  - buffer
+  - diluent
+  - te
+  - tris
+  - medium
+
+# Controls (NO-NEGATIVE-CONTROL). A reagent named with one of these is the shared PCR or qPCR
+# reaction mix, whose plate needs a no-template control. "premix" is not "mix".
+mix:
+  - master mix
+  - mastermix
+  - mix
+  - sybr
+  - taq
+  - polymerase
+  - qpcr
+  - pcr
+
+# A reagent named with one of these is the reverse transcriptase, whose plate needs a no-RT
+# well. "start" is not "rt".
+rt:
+  - rt
+  - '/\breverse transcript\w*/'  # reverse transcriptase, reverse transcription
+  - rtase

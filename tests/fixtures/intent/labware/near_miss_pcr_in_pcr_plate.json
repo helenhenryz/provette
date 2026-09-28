@@ -1,0 +1,31 @@
+{
+ "id": "pcr-right-plate",
+ "technique": "PCR setup",
+ "request": "Set up PCR reactions for 4 DNA samples in a 96-well PCR plate: 20 ul of master mix plus 5 ul of sample. The master mix and the samples are in 1.5 ml tubes.",
+ "liquids": [
+  {"name": "master_mix", "role": "reagent", "bind": "name", "pattern": "(?i)master\\s*mix"},
+  {"name": "sample_{i}", "role": "sample", "bind": "indexed", "pattern": "(?i)sample\\s*(\\d+)", "count": 4, "index": "number"}
+ ],
+ "destination": {"select": "auto"},
+ "variants": [
+  {
+   "name": "4 reactions",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "reactions",
+     "members": [
+      {"master_mix": 20, "sample_1": 5}, {"master_mix": 20, "sample_2": 5},
+      {"master_mix": 20, "sample_3": 5}, {"master_mix": 20, "sample_4": 5}
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": []
+}

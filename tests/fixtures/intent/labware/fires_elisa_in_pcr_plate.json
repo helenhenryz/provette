@@ -1,0 +1,30 @@
+{
+ "id": "elisa-pcr",
+ "technique": "ELISA",
+ "request": "Add samples to an ELISA plate: 100 ul from each of 8 serum samples in tubes into the coated ELISA plate.",
+ "liquids": [
+  {"name": "serum_{i}", "role": "sample", "bind": "indexed", "pattern": "(?i)serum\\D{0,12}?(\\d+)", "count": 8, "index": "number"}
+ ],
+ "destination": {"select": "regex", "pattern": "(?i)elisa"},
+ "variants": [
+  {
+   "name": "8 sera",
+   "why": "the request does not say which wells",
+   "pinned": {},
+   "groups": [
+    {
+     "name": "sera",
+     "members": [
+      {"serum_1": 100}, {"serum_2": 100}, {"serum_3": 100}, {"serum_4": 100},
+      {"serum_5": 100}, {"serum_6": 100}, {"serum_7": 100}, {"serum_8": 100}
+     ],
+     "within": null,
+     "position": "free",
+     "order_hint": "index"
+    }
+   ]
+  }
+ ],
+ "discard_intended": [],
+ "notes": []
+}

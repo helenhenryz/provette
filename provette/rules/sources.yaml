@@ -1,0 +1,120 @@
+# The sources a rule may rest on: every row of docs/rule-sources.md, as data.
+#
+# This file is ours, the biology. No programming is needed to change it.
+#
+# Each entry is a NAME in capitals and underscores (the name a rule cites in its `sources`
+# list), then what it is (`name`) and where to read it (`url`). A rule that cites a name that
+# is not here does not load, and `provette check` says which name; so add the source here first.
+#
+# How to add one: add it to docs/rule-sources.md, with what it says; then add three lines at
+# the end of this file, in the same shape as the others:
+#     MY_LAB_MANUAL:
+#       name: "My lab's manual, page 12: keep the enzyme on ice"
+#       url: "https://example.org/manual.pdf"
+# The NAME must be new, the url must start with http:// or https://, and both fields are one
+# line each. Then run `make check` (or ask the product's rule form to add it: it writes the
+# same three lines). The Python rules in this directory cite these names too
+# (`sources.THERMO_T4_LIGASE`), so never rename or remove one without changing the rule.
+
+LAB_MANAGER_CARRY_OVER:
+  name: "Lab Manager: minimizing cross-contamination in automated liquid handling"
+  url: "https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194"
+WHO_MASTER_MIX:
+  name: "WHO: dos and don'ts for molecular testing"
+  url: "https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing"
+INTEGRA_SERIAL_DILUTION:
+  name: "Integra: how to perform serial dilutions"
+  url: "https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide"
+SVEC_2015:
+  name: "Svec et al. 2015: how good is a PCR efficiency estimate"
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4822216/"
+OPENTRONS_PIPETTES:
+  name: "Opentrons: pipette characteristics (volume ranges)"
+  url: "https://docs.opentrons.com/v2/pipettes/characteristics.html"
+INTEGRA_PIPETTING_TIPS:
+  name: "Integra: pipetting tips (work at 35 to 100% of nominal volume)"
+  url: "https://www.integra-biosciences.com/united-states/en/pipetting-tips"
+OPENTRONS_LABWARE_SCHEMA:
+  name: "Opentrons labware schema 2: totalLiquidVolume, the total well volume in microlitres"
+  url: "https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json"
+LABOP_2023:
+  name: "Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container holds"
+  url: "https://jakebeal.github.io/Publications/JETC23-LabOP.pdf"
+OPENTRONS_LIQUID_CONTROL:
+  name: "Opentrons: liquid control (aspirates 1 mm above the bottom of the well by default)"
+  url: "https://docs.opentrons.com/v2/basic_commands/liquids.html"
+ARTEL_SOURCES_OF_ERROR:
+  name: "Artel: automated liquid handlers as sources of error"
+  url: "https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error"
+GILSON_GUIDE:
+  name: "Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)"
+  url: "https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf"
+LABAUTOMATION_ASPIRATING_AIR:
+  name: "labautomation.io 7592: negative controls positive after aspirating air"
+  url: "https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592"
+ILLUMINA_NORMALISING_LIBRARIES:
+  name: "Illumina: normalising library concentrations (pipette up and down 10 times to mix)"
+  url: "https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html"
+THERMO_POWERTRACK:
+  name: "Thermo PowerTrack user guide (a reaction plate not mixed well gives variable replicates)"
+  url: "https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf"
+INTEGRA_DEAD_VOLUME:
+  name: "Integra: 260 ul dead volume in a standard reservoir"
+  url: "https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot"
+OPENTRONS_TEMPERATURE_MODULE:
+  name: "Opentrons, temperature module: at room temperature until set_temperature, which blocks"
+  url: "https://docs.opentrons.com/v2/modules/temperature_module.html"
+THERMO_T4_LIGASE:
+  name: "Thermo Fisher T4 ligase manual: keep on ice, use within minutes"
+  url: "https://documents.thermofisher.com/TFS-Assets/LSG/manuals/t4dnaligase_1U_man.pdf"
+NEB_Q5_MANUAL:
+  name: "NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)"
+  url: "https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf"
+INTEGRA_SERIAL_DILUTION_PROTOCOLS:
+  name: "Integra: three serial-dilution protocols (over 80% of the volume, five times)"
+  url: "https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot"
+BECKMAN_AMPURE:
+  name: "Beckman AMPure XP instructions (mix with a tip volume just below the well volume)"
+  url: "https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf"
+ESCA_SERIAL_DILUTION:
+  name: "Esca Automation: serial dilution, a classic technique"
+  url: "https://escaautomation.substack.com/p/serial-dilution-a-classic-technique"
+LABAUTOMATION_3654:
+  name: "labautomation.io 3654: how to mix a bacteria sample enough"
+  url: "https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654"
+THERMO_RESTRICTION_ENZYMES:
+  name: "Thermo Fisher: restriction enzyme key considerations (the enzyme is the final component)"
+  url: "https://www.thermofisher.com/us/en/home/life-science/cloning/cloning-learning-center/invitrogen-school-of-molecular-biology/molecular-cloning/restriction-enzymes/restriction-enzyme-key-considerations.html"
+PROMEGA_RESTRICTION_ENZYMES:
+  name: "Promega: restriction enzyme resource (add the enzyme last; glycerol and star activity)"
+  url: "https://www.promega.com/resources/guides/nucleic-acid-analysis/restriction-enzyme-resource/"
+QIAGEN_QPCR_GUIDE:
+  name: "Qiagen: critical factors for successful real-time PCR (order of addition)"
+  url: "https://www.gene-quantification.de/qiagen-qpcr-sample-assay-tech-guide-2010.pdf"
+MIQE_2009:
+  name: "MIQE 2009: a no-template control on every plate is essential"
+  url: "https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf"
+MIQE_2_0:
+  name: "MIQE 2.0 (2025): the no-template and no-RT controls, still essential"
+  url: "https://academic.oup.com/clinchem/article/71/6/634/8119148"
+BUSTIN_2025:
+  name: "Bustin 2025: MIQE compliance remains patchy"
+  url: "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML"
+QIAGEN_PCR_CONTROLS:
+  name: "Qiagen bench guide: PCR controls (no-template, no-RT, positive)"
+  url: "https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls"
+BIO_RAD_QPCR_GUIDE:
+  name: "Bio-Rad real-time PCR applications guide: controls in triplicate"
+  url: "https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf"
+OPENTRONS_MODULE_SETUP:
+  name: "Opentrons, module setup: no error for an unusual labware and module combination"
+  url: "https://docs.opentrons.com/v2/modules/setup.html"
+OPENTRONS_THERMOCYCLER:
+  name: "Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate"
+  url: "https://docs.opentrons.com/v2/modules/thermocycler.html"
+ABC_BENCH_2026:
+  name: "ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error"
+  url: "https://arxiv.org/html/2606.11150v1"
+THERMO_MAXIMA_SYBR:
+  name: "Thermo Maxima SYBR manual: the NTC contains all components except template DNA"
+  url: "https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf"
