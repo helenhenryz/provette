@@ -426,7 +426,11 @@ chevron), Words (the seven lists, an add-a-word input each), Coverage (per techn
 "Start a rule from this"). **`/rules/new`** (`RuleForm.tsx`): the sentence with blanks at the top ("A tip that touched [a sample]
 must never go into [a stock]"), the shape chosen by its sentence, the fields, a source picker that can add one, a preview on one
 episode's final draft (`POST /api/rules/preview`, in the worker subprocess), "the file this writes" under a fold, and Save as
-proposed.
+proposed. Every rule runs on every protocol and speaks only when its situation occurs, which the Rules tab
+says in one line; nothing picks rules per run or per technique (`provette/rules/__init__.py`, `run_rules`). A rule or a word
+added on the site (the volume's copy) and still proposed can be taken out there, behind the judge password: `DELETE
+/api/rules/declared/{id}` and `DELETE /api/roles/{list}?word=`, refused for anything the package ships with or an adopted rule,
+which change only through the repository (`api/declared.py`, `SHIPPED_DIR`; `provette/rules/roles_edit.py`, `remove_word`).
 
 **`/methods`** (`web/src/pages/How.tsx`; `api/evidence.py`): how the checks work, then four questions, each answered in a sentence with its table, every
 number computed from a file under `eval/` when the page loads, the files named under each table, each pinned to the README by

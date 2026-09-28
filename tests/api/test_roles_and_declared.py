@@ -213,3 +213,41 @@ def test_saving_a_rule_writes_the_file_as_proposed_and_reloads(
         ).status_code
         == 409
     )
+
+
+def test_a_word_added_here_can_be_taken_out_and_a_shipped_one_cannot(client: TestClient) -> None:
+    h = {"x-judge-password": PASSWORD}
+    before = client.get("/api/roles").json()
+    assert all(words == [] for words in before["added_here"].values())  # nothing added yet
+    assert (
+        client.post("/api/roles/reagent", json={"word": "lysozyme"}, headers=h).status_code == 200
+    )
+    assert client.get("/api/roles").json()["added_here"]["reagent"] == ["lysozyme"]
+    shipped = before["lists"]["mix"][0]
+    assert client.delete(f"/api/roles/mix?word={shipped}").status_code == 401
+    r = client.delete(f"/api/roles/mix?word={shipped}", headers=h)
+    assert r.status_code == 403 and "ships with Provette" in r.json()["detail"]
+    r = client.delete("/api/roles/reagent?word=lysozyme", headers=h)
+    assert r.status_code == 200 and "lysozyme" not in r.json()["lists"]["reagent"]
+    assert r.json()["added_here"]["reagent"] == []
+    assert client.delete("/api/roles/reagent?word=lysozyme", headers=h).status_code == 422
+
+
+def test_a_rule_added_here_can_be_deleted_and_a_shipped_one_cannot(client: TestClient) -> None:
+    h = {"x-judge-password": PASSWORD}
+    rows = {r["id"]: r for r in client.get("/api/rules/declared").json()["rules"]}
+    assert rows["NO-SAMPLE-INTO-REAGENT-WELL"]["removable"] is False  # shipped
+    assert rows["ENZYME-BEFORE-DILUENT"]["removable"] is False  # shipped and adopted
+    assert (
+        client.post("/api/rules/declared", json={"rule": ENZYME_RULE}, headers=h).status_code == 200
+    )
+    rows = {r["id"]: r for r in client.get("/api/rules/declared").json()["rules"]}
+    assert rows["TEST-ENZYME-LAST"]["removable"] is True
+    assert client.delete("/api/rules/declared/TEST-ENZYME-LAST").status_code == 401
+    r = client.delete("/api/rules/declared/NO-SAMPLE-INTO-REAGENT-WELL", headers=h)
+    assert r.status_code == 403 and "repository" in r.json()["detail"]
+    r = client.delete("/api/rules/declared/TEST-ENZYME-LAST", headers=h)
+    assert r.status_code == 200 and "TEST-ENZYME-LAST" not in r.json()["rules_loaded"]
+    ids = [x["rule_id"] for x in client.get("/api/rules").json()["rules"]]
+    assert "TEST-ENZYME-LAST" not in ids and "NO-SAMPLE-INTO-REAGENT-WELL" in ids
+    assert client.delete("/api/rules/declared/TEST-ENZYME-LAST", headers=h).status_code == 404

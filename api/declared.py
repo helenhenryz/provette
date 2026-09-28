@@ -123,15 +123,51 @@ def add_source(request: Request, body: SourceIn) -> dict[str, Any]:
     }
 
 
+# The declared rules as they ship with the package. On a deployment the live directory is a
+# copy on the volume (PROVETTE_DECLARED_DIR); a rule there and not here was added on the site.
+SHIPPED_DIR = Path(declared.__file__).parent / "declared"  # never the volume's copy
+
+
+def _removable(path: Path, data: dict[str, Any], directory: Path) -> bool:
+    """A rule the site may delete: added on this deployment and still proposed. A shipped rule
+    and an adopted one change only through the repository."""
+    added_here = (
+        directory.resolve() != SHIPPED_DIR.resolve() and not (SHIPPED_DIR / path.name).is_file()
+    )
+    return added_here and data.get("status") != "adopted"
+
+
 @router.get("/declared")
 def list_declared(request: Request) -> dict[str, Any]:
     rows = []
-    for path in sorted(declared_dir(request).glob("*.yaml")):
+    directory = declared_dir(request)
+    for path in sorted(directory.glob("*.yaml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-        if True and data.get("adopted_on") is not None:
+        if data.get("adopted_on") is not None:
             data["adopted_on"] = str(data["adopted_on"])
-        rows.append({"file": path.name, **data})
+        rows.append({"file": path.name, **data, "removable": _removable(path, data, directory)})
     return {"rules": rows, "shapes": SHAPES}
+
+
+@router.delete("/declared/{rule_id}")
+def delete_declared(request: Request, rule_id: str) -> dict[str, Any]:
+    """Delete a rule added on this deployment, still proposed; the rules reload, so it stops
+    running from the next check."""
+    require_judge_password(request, "deleting a rule")
+    directory = declared_dir(request)
+    path = directory / f"{rule_id}.yaml"
+    if not rule_id.replace("-", "").replace("_", "").isalnum() or not path.is_file():
+        raise HTTPException(404, f"no rule called {rule_id} was added here")
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    if not _removable(path, data, directory):
+        raise HTTPException(
+            403,
+            f"{rule_id} ships with Provette or has been adopted: it changes only through the "
+            "repository",
+        )
+    path.unlink()
+    loaded = reload_rules(directory)
+    return {"deleted": rule_id, "rules_loaded": loaded}
 
 
 def _final_draft_path(request: Request, episode_id: str) -> Path:

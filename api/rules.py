@@ -53,7 +53,12 @@ class WordRequest(BaseModel):
 
 
 def _roles_answer() -> dict[str, Any]:
-    return {"list_names": list(LIST_NAMES), "places": PLACES, "lists": roles_edit.lists()}
+    return {
+        "list_names": list(LIST_NAMES),
+        "places": PLACES,
+        "lists": roles_edit.lists(),
+        "added_here": roles_edit.added(),  # the words added on this deployment: only these come out
+    }
 
 
 @router.get("/roles")
@@ -71,3 +76,15 @@ def add_role_word(request: Request, list_name: str, body: WordRequest) -> dict[s
     except roles_edit.RolesEditError as error:
         raise HTTPException(422, str(error)) from error
     return {"added": {"list": list_name, "word": body.word.strip()}, **_roles_answer()}
+
+
+@router.delete("/roles/{list_name}")
+def remove_role_word(request: Request, list_name: str, word: str) -> dict[str, Any]:
+    """Take out one word added on this deployment; a shipped word is refused."""
+    require_judge_password(request, "removing a word")
+    try:
+        roles_edit.remove_word(list_name, word)
+    except roles_edit.RolesEditError as error:
+        status = 403 if "ships with Provette" in str(error) else 422
+        raise HTTPException(status, str(error)) from error
+    return {"removed": {"list": list_name, "word": word.strip()}, **_roles_answer()}
