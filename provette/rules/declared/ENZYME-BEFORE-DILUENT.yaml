@@ -1,0 +1,30 @@
+# ENZYME-BEFORE-DILUENT, as a declared rule. Every clone-01 and pcr-07 draft from every
+# model in eval/agent did this: buffer, enzyme, plasmid, water. The word lists `add_last`
+# (enzyme, polymerase, Taq, ligase, BsaI, restriction, reverse transcriptase, RT, master mix)
+# and `add_first` (water, H2O, buffer, diluent, TE, Tris, medium) are in roles.py.
+id: ENZYME-BEFORE-DILUENT
+shape: add_after
+title: An enzyme was added before the water
+severity: warning
+first: add_first
+last: add_last
+half_clause: true
+share: 0.5  # the share of its final water and buffer a well must hold before the enzyme goes in
+why: >
+  An enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction,
+  after the water and the buffer have brought the well to the right dilution. Dropped into
+  neat buffer or a dry well it meets many times the salt it should: a restriction enzyme
+  then cuts at the wrong places (star activity) and a polymerase starts on mis-primed
+  template.
+fix: >
+  Reorder the additions to {wells}: water and buffer first, then the sample, then {liquids}
+  last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and hand it
+  out.
+sources:
+  - THERMO_RESTRICTION_ENZYMES
+  - PROMEGA_RESTRICTION_ENZYMES
+  - NEB_Q5_MANUAL
+  - QIAGEN_QPCR_GUIDE
+proposed_by: the team
+status: adopted
+adopted_on: 2026-09-23

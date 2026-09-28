@@ -1,0 +1,23 @@
+# The second declared rule, written as an example of the form: a tip that has been in a
+# sample must not go into a well that holds a reagent. It is proposed, so it is reported as a
+# note until we adopt it; CONTAM-STOCK and CONTAM-WELL still grade the same touch.
+id: NO-SAMPLE-INTO-REAGENT-WELL
+shape: no_carry_over
+title: A tip that had been in a sample went into a reagent
+severity: warning
+carried_role: sample
+into_role: reagent_well
+why: >
+  A reagent is shared: the master mix, the enzyme or the primer in that well goes into
+  every reaction on the plate. A tip that has been in one sample leaves a little of it in
+  the next liquid it touches, so a sample carried into a reagent well turns up in every
+  well that reagent reaches, and a no-template control can no longer be trusted.
+fix: >
+  Use a fresh tip for each sample at line {line}, or add the reagent to the wells first,
+  while the tip is clean, and the samples afterwards with a fresh tip each.
+sources:
+  - LAB_MANAGER_CARRY_OVER
+  - WHO_MASTER_MIX
+proposed_by: example
+status: proposed
+adopted_on: null

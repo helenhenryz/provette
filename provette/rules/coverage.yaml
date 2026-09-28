@@ -1,0 +1,359 @@
+# What Provette checks, and does not check, for each technique.
+#
+# The product shows this beside every verdict as "checked / not checked for this
+# technique". Silence is not safety: a verified protocol was checked for the things under
+# `checked` and for nothing else, and the things under `not_checked` are real mistakes
+# from docs/detection-catalogue.md (the N-numbers are its rows) that no rule looks at.
+#
+# Contract. Top-level keys are the technique words of eval/requests/requests.jsonl and
+# eval/requests-hard/requests.jsonl, exactly as written there, plus `default` for a
+# technique not listed. Each entry has three lists of short lines in a first-year
+# student's words:
+#   checked:      "<CHECK>: <what it catches for this technique>"; the checks are the
+#                 twelve of provette/rules (the eleven adopted rules, and LABWARE-FOR-TECHNIQUE
+#                 in the plate-map verifier; a proposed rule is not counted until it is
+#                 adopted) plus "plate map" and "prep sheet"
+#   not_checked:  "<the mistake> (N<row>)" for failure classes the catalogue found and
+#                 nothing checks; the catalogue row has the source and the numbers
+#   physics:      two or three things a script can never show for this technique, from
+#                 the catalogue's "what a script cannot show"
+# Example:
+#   Pooling:
+#     checked:
+#       - "CONTAM-STOCK: one tip through several libraries carries each into the next"
+#     not_checked:
+#       - "the pool is never mixed after the last library goes in (N6 fires only for a small last addition)"
+#     physics:
+#       - "index hopping on the sequencer between pooled libraries (about 0.5%)"
+# Written from the catalogue; the wording and the lists are ours.
+
+PCR setup:
+  checked:
+    - "plate map: every reaction well holds the mix, water and template it should, to the microlitre"
+    - "prep sheet: no tube or reservoir runs dry or is drawn within 10% of what was declared"
+    - "CONTAM-STOCK: a tip that touched a template goes back into the master mix, and the mix then carries it everywhere"
+    - "CONTAM-WELL: a tip carries one template into another sample's reaction"
+    - "MIX-BEFORE-DRAW: a mix or a dilution is drawn from before it was mixed"
+    - "UNMIXED-AT-END: 2 µl of template dropped under 18 µl of mix and never mixed (a note; the plate is usually spun)"
+    - "ENZYME-BEFORE-DILUENT: the polymerase or the 2x mix goes into a dry well or neat buffer before the water"
+    - "COLD-MODULE-NEVER-SET: the cold block the mix sits on was never switched on"
+    - "NO-NEGATIVE-CONTROL: no well of mix and water on the plate (a note)"
+    - "PIPETTE-RANGE: 0.5 µl of polymerase asked of a pipette that cannot draw it"
+    - "WELL-CAPACITY: 100 µl reactions in wells that hold 100, or a mix that spills them"
+    - "SOURCE-TOO-SHALLOW: master mix in a trough too shallow for the tip, so the last wells get air"
+    - "MIX-TOO-WEAK: a mix of a few microlitres in a full well"
+    - "LABWARE-FOR-TECHNIQUE: a flat culture plate used as the PCR plate"
+  not_checked:
+    - "too much template, primers outside 0.1 to 1 µM, or an enzyme over a tenth of the reaction (N10)"
+    - "components pipetted one by one into every well instead of a master mix, and sub-microlitre enzyme volumes (N11)"
+    - "how long a non-hot-start polymerase sat at room temperature (N21)"
+    - "the first and last wells getting the enzyme minutes apart (N16)"
+    - "fewer than three replicates of a sample or a control (N14)"
+    - "a blow-out into the master mix tube after the last dispense (N15)"
+    - "a thermocycler profile run with no lid temperature set (N18)"
+    - "a P20 tip rack given to a P300, or an 8-channel sent into a tube rack (N13)"
+  physics:
+    - "a drop hanging on the tip after a 2 µl template dispense"
+    - "aerosol from a blow-out landing in the next well"
+    - "a master mix that foams when mixed"
+
+qPCR setup:
+  checked:
+    - "plate map: every reaction holds the SYBR mix and the cDNA it should; the NTC wells, if the map lists them, hold mix and water"
+    - "prep sheet: the mix tube is not drawn dry"
+    - "CONTAM-STOCK: a tip that touched cDNA goes back into the SYBR mix"
+    - "CONTAM-WELL: one cDNA carried into another sample's triplicate"
+    - "MIX-BEFORE-DRAW: a standard curve drawn from before each step was mixed"
+    - "UNMIXED-AT-END: 2 µl of cDNA under 8 µl of mix, never mixed (a note)"
+    - "ENZYME-BEFORE-DILUENT: the mix into a dry well before the water"
+    - "COLD-MODULE-NEVER-SET: a cold block loaded and never set"
+    - "NO-NEGATIVE-CONTROL: no NTC well; no blank in a standard curve; no no-RT well when an RT mix is used (notes)"
+    - "PIPETTE-RANGE: a volume below the pipette's minimum"
+    - "WELL-CAPACITY, SOURCE-TOO-SHALLOW, MIX-TOO-WEAK, LABWARE-FOR-TECHNIQUE: as for PCR setup"
+  not_checked:
+    - "undiluted cDNA over a tenth of the reaction, or a reaction under 10 µl (N10)"
+    - "fewer than three technical replicates, which MIQE asks for (N14)"
+    - "a strong positive placed next to a no-template control (N23)"
+    - "how long an assembled SYBR plate waited in the light at room temperature (N21)"
+    - "a thermocycler profile with no lid temperature (N18)"
+    - "the mix pipetted from a fresh tip with no pre-wet, so the first well is short (N19)"
+  physics:
+    - "SYBR bleached by light while the plate waits"
+    - "the film of mix left in a tip by its detergent"
+    - "a drop of cDNA that stays on the tip"
+
+Serial dilution:
+  checked:
+    - "plate map: every point holds the right share of stock and diluent, to the microlitre, and the last well's excess is handled the way the request allows"
+    - "prep sheet: the diluent and the stock last to the end"
+    - "MIX-BEFORE-DRAW: a point drawn from before it was mixed, which every later point inherits"
+    - "MIX-TOO-WEAK: a mix stroke too small, too few strokes, or a stroke of the whole well"
+    - "CONTAM-STOCK: a diluent tip that touched a point going back into the stock (a note when it carried diluent)"
+    - "CONTAM-WELL: nothing for one tip walking down the series on purpose; a warning if it carries a point where it does not belong"
+    - "WELL-CAPACITY: a 200 µl step in a 100 µl plate, or mixing a well at its brim"
+    - "SOURCE-TOO-SHALLOW: diluent drawn from a trough after the surface fell under the tip"
+    - "UNMIXED-AT-END: a last point never mixed (a note)"
+    - "PIPETTE-RANGE: a transfer below the pipette's minimum"
+    - "NO-NEGATIVE-CONTROL: no diluent-only blank beside a standard curve (a note)"
+  not_checked:
+    - "a transfer volume under 5 µl, which Integra says compounds error down the series (N10 and the rule-sources row)"
+    - "the number of points: eight 1:3 steps leave a few nanolitres of stock the checker cannot even count (N1's note in requests-hard)"
+    - "a volatile diluent (DMSO, ethanol) moved with no air gap (N17)"
+    - "cells or bacteria in the series settling between steps (N12)"
+    - "the same tip reused down the series, which Integra allows and Svec did not: reported as a note, not a verdict"
+  physics:
+    - "a droplet on the outside of a deeply immersed tip carried to the next point"
+    - "the compounding of small volume errors, 11.8% CV at 3 mixes against 1.7% at 20"
+    - "evaporation from an open plate during a long series"
+
+Normalization:
+  checked:
+    - "plate map: every well holds the exact sample and water volumes the concentrations require"
+    - "prep sheet: the water lasts; every sample tube has what it needs"
+    - "UNMIXED-AT-END: sample dropped under water and never mixed (a warning: nothing else will ever mix it)"
+    - "PIPETTE-RANGE: a 1 µl sample asked of a P300"
+    - "CONTAM-WELL and CONTAM-STOCK: one tip through several samples, or a sample tip into the water"
+    - "SOURCE-TOO-SHALLOW: water drawn from a trough after it runs shallow"
+    - "WELL-CAPACITY: a declared volume larger than the well"
+  not_checked:
+    - "a volume so small the pipette is imprecise even inside its range (N20)"
+    - "the normalised plate made without an intermediate dilution where the arithmetic needed one (only the map sees the result)"
+    - "the same tip reused for the water into wells that already hold sample (CONTAM-WELL sees it only when the tip dips into the liquid)"
+  physics:
+    - "a 1 µl draw that is off by a third, which no script shows"
+    - "a drop of sample left on the tip wall"
+
+Pooling:
+  checked:
+    - "plate map: the pool holds the stated volume of every library"
+    - "CONTAM-STOCK: one tip through several libraries carries each into the next library's well"
+    - "sample accounting: a library that ends in the trash instead of the pool"
+    - "WELL-CAPACITY: 96 × 25 µl into a tube that holds less"
+    - "SOURCE-TOO-SHALLOW: 10 µl of library in a flat well drawn at 1 mm, which is above the liquid"
+    - "PIPETTE-RANGE: a 5 µl draw on a P300"
+  not_checked:
+    - "the pool never mixed after the last library (UNMIXED-AT-END fires only for a small last addition on a large one) (N6)"
+    - "two libraries that share an index, which only the plate map could carry (N9's index note)"
+    - "free adapters not cleaned up before pooling (N9)"
+  physics:
+    - "index hopping on the sequencer between pooled libraries, about 0.5%"
+    - "residue on a standard tip between libraries even with a tip change"
+
+Cherrypicking:
+  checked:
+    - "plate map: each pick lands in the well the request names, in the order it can be read"
+    - "CONTAM-WELL and CONTAM-STOCK: one tip through several source wells"
+    - "PIPETTE-RANGE: 2 µl picks on a P300"
+    - "UNMIXED-AT-END: a pick dropped under a larger volume and never mixed"
+    - "SOURCE-TOO-SHALLOW: a pick from a shallow well drawn above the liquid"
+  not_checked:
+    - "a wrong well name that still exists on the plate: only the plate map can see a swap, and only when it pins positions (D-27 in DECISIONS.md)"
+    - "picks from a 384-well plate with an 8-channel that does not fit its rows (N13)"
+  physics:
+    - "a 2 µl pick that stays in the tip"
+
+Plate filling:
+  checked:
+    - "plate map: every well holds its medium and its matching stock"
+    - "prep sheet: the reservoir lasts for 96 wells; the tips last"
+    - "CONTAM-WELL: one tip through the stock plate into the medium plate"
+    - "MIX-TOO-WEAK: two strokes of 10 µl in a 505 µl well"
+    - "WELL-CAPACITY: 500 µl into a plate that holds 200"
+    - "SOURCE-TOO-SHALLOW: 5 µl of stock in a flat well drawn at 1 mm"
+    - "COLD-MODULE-NEVER-SET: a block loaded for the stocks and never set"
+  not_checked:
+    - "a frozen glycerol plate left at room temperature for a 40-minute run (N21)"
+    - "evaporation from an open deep-well plate over a long fill (N24)"
+    - "a blow-out into the medium reservoir after every dispense (N15)"
+  physics:
+    - "medium that foams when dispensed from height"
+    - "a drop of glycerol stock hanging on the tip"
+
+ELISA:
+  checked:
+    - "plate map: every well holds its sample or standard, in duplicate where the request says"
+    - "prep sheet: the diluent lasts through the standard series"
+    - "MIX-BEFORE-DRAW: a standard series drawn from before it was mixed"
+    - "CONTAM-WELL: one tip carrying serum from one sample's well into another's"
+    - "LABWARE-FOR-TECHNIQUE: a PCR plate used as the ELISA plate"
+    - "WELL-CAPACITY: 500 µl of a 1:10 dilution in a flat plate"
+    - "NO-NEGATIVE-CONTROL: no diluent-only blank beside the standards (a note)"
+    - "SOURCE-TOO-SHALLOW, PIPETTE-RANGE, MIX-TOO-WEAK: as for a serial dilution"
+  not_checked:
+    - "wash steps: how many, how long they soak, whether every well was emptied (N9's ELISA rows in the catalogue's sources)"
+    - "wells left dry between steps, or a plate left unsealed for an hour's incubation (N24)"
+    - "incubation times shorter than the kit says (the catalogue's step-timing rows)"
+    - "a tip dispensing at the bottom of a coated well and scraping the coat (the catalogue lists it as a candidate with no source yet)"
+    - "reagents used straight from the fridge (the catalogue's equilibration rows)"
+  physics:
+    - "evaporation at the plate's edge during a two-hour incubation"
+    - "a drop on a deeply immersed tip carried between wells"
+    - "substrate bleached by light"
+
+Bradford assay:
+  checked:
+    - "plate map: 5 µl of each sample and 250 µl of reagent in every well used; the standards keep their declared volume"
+    - "UNMIXED-AT-END: 5 µl of sample under 250 µl of reagent, never mixed (a warning)"
+    - "CONTAM-WELL: one tip through the samples"
+    - "WELL-CAPACITY: 255 µl in a well that holds 200"
+    - "LABWARE-FOR-TECHNIQUE: a PCR plate used for a plate-reader assay"
+    - "NO-NEGATIVE-CONTROL: no reagent-only blank (a note)"
+    - "PIPETTE-RANGE, SOURCE-TOO-SHALLOW, MIX-TOO-WEAK: as elsewhere"
+  not_checked:
+    - "the standards' real volume in the plate, which the map takes on trust as declared"
+    - "fewer than two replicates of a sample (N14)"
+    - "the time between the reagent going in and the read, which differs by minutes across the plate (N16)"
+  physics:
+    - "reagent that foams when dispensed from height"
+    - "protein that sticks to the tip"
+
+Protein assay:
+  checked:
+    - "as for Bradford assay: the plate map, the unmixed well, the overfilled well, the wrong plate, the missing blank"
+  not_checked:
+    - "as for Bradford assay: replicates, the time spread across the plate, the standards' real volume"
+    - "the working reagent's freshness, which the script cannot see"
+  physics:
+    - "as for Bradford assay"
+
+Protein:
+  checked:
+    - "plate map: 15 µl of sample and 5 µl of dye in every well"
+    - "UNMIXED-AT-END: 5 µl of viscous dye on 15 µl of sample, never mixed (a warning: nothing else will mix a gel sample)"
+    - "MIX-TOO-WEAK: a 20 µl stroke in a 20 µl well, which draws air and foams"
+    - "LABWARE-FOR-TECHNIQUE: a flat culture plate where a PCR plate or strips are needed for heating"
+    - "CONTAM-WELL: one tip through the samples"
+    - "PIPETTE-RANGE, SOURCE-TOO-SHALLOW: as elsewhere"
+  not_checked:
+    - "a viscous dye pipetted at aqueous speed with no pause after the draw (N17)"
+    - "a heat step that is never run, or run without the plate being sealed (the catalogue lists sealing as not observable)"
+  physics:
+    - "loading dye that clings to the inside of the tip"
+    - "a sample that foams when mixed"
+
+Cloning:
+  checked:
+    - "plate map: every digest or ligation holds its buffer, enzyme, DNA and water"
+    - "ENZYME-BEFORE-DILUENT: the enzyme or ligase into neat 10x buffer before the water"
+    - "COLD-MODULE-NEVER-SET: the cold block the enzymes sit on was never set"
+    - "CONTAM-STOCK: a tip that touched a plasmid going back into the enzyme tube"
+    - "CONTAM-WELL: one plasmid carried into another's reaction"
+    - "PIPETTE-RANGE: 1 µl of enzyme on a P300"
+    - "UNMIXED-AT-END: the enzyme dropped in last and never mixed (a note)"
+    - "SOURCE-TOO-SHALLOW: an enzyme in a reservoir channel too shallow to draw from"
+    - "LABWARE-FOR-TECHNIQUE: reactions in a flat plate that cannot be incubated in a cycler"
+  not_checked:
+    - "the enzyme over a tenth of the reaction, so glycerol over 5% and star activity (N10)"
+    - "how long the ligase sat off the cold block (N21; no source gives hours)"
+    - "the digest incubated too long, or the ligation too short, or the ligase not heat-killed (the catalogue's step-timing rows)"
+    - "components pipetted one by one where a master mix was needed (N11)"
+    - "ethanol or EDTA carried into the reaction from an earlier step (the catalogue's contaminant rows)"
+  physics:
+    - "enzyme in 50% glycerol that clings to the tip, so 1 µl is not 1 µl"
+    - "star activity itself: the checker sees the glycerol share only if a rule for it exists"
+
+Transformation:
+  checked:
+    - "plate map: each well of competent cells holds its ligation and later its SOC"
+    - "COLD-MODULE-NEVER-SET: the cells on a block that was never set to 4 °C"
+    - "CONTAM-WELL: one tip through the ligations into the cells"
+    - "MIX-TOO-WEAK and UNMIXED-AT-END: 2 µl of ligation on 25 µl of cells"
+    - "PIPETTE-RANGE, SOURCE-TOO-SHALLOW, WELL-CAPACITY: as elsewhere"
+  not_checked:
+    - "the 20-minute incubation on ice being shorter than asked, and the heat shock, which happens off the robot at a pause"
+    - "SOC added before the heat shock: the order across a pause is not judged"
+    - "cells warmed while the block ramps: the module's ramp time is not modelled"
+  physics:
+    - "competent cells killed by rough mixing"
+    - "the heat shock itself"
+
+Cell culture:
+  checked:
+    - "plate map: every well holds its cell suspension, and the edge wells their PBS where the request says"
+    - "CONTAM-STOCK: one tip through several cell lines, or a tip into the medium after the cells"
+    - "SOURCE-TOO-SHALLOW: a suspension in a trough drawn after it runs shallow"
+    - "WELL-CAPACITY: 200 µl in wells that hold 200 and then mixed"
+    - "COLD-MODULE-NEVER-SET: a block loaded for the cells and never set"
+    - "PIPETTE-RANGE, CONTAM-WELL: as elsewhere"
+  not_checked:
+    - "cells settling in the tube during a 96-well series with no remix (N12)"
+    - "the time the cells spent off the incubator, and the spread of it across the plate (N16)"
+    - "evaporation and the edge effect in the outer 36 wells over days (N24)"
+    - "a suspension mixed hard enough to froth (MIX-TOO-WEAK only sees strokes that are too small)"
+    - "a non-filter tip used with a culture (the catalogue's hygiene rows)"
+  physics:
+    - "cells clumping in the tube"
+    - "the outer wells losing a third of their growth to evaporation"
+    - "a tip touching the cell layer"
+
+Cell assay:
+  checked:
+    - "plate map: each well holds its medium and the compound volume it should"
+    - "CONTAM-WELL: one tip through the compound plate into the cells"
+    - "MIX-BEFORE-DRAW: compound dilutions drawn from before they were mixed"
+    - "WELL-CAPACITY: a well at its brim when the compound goes in"
+    - "PIPETTE-RANGE, SOURCE-TOO-SHALLOW, UNMIXED-AT-END: as elsewhere"
+  not_checked:
+    - "medium removed from a well of cells before the addition: a removal of a declared liquid is not judged by the map"
+    - "DMSO over the share cells tolerate (N10's family; no rule)"
+    - "the wait after the reagent (MTT's three hours) being shorter than asked (the catalogue's step-timing rows)"
+    - "compound dilutions in DMSO moved with no air gap (N17)"
+    - "the time spread across the plate for a timed reagent (N16)"
+  physics:
+    - "a tip touching the cell layer while removing medium"
+    - "DMSO that evaporates from an open plate"
+
+Bead cleanup:
+  checked:
+    - "plate map, where one exists: the eluate holds what it should"
+    - "CONTAM-WELL and CONTAM-STOCK: one tip through several samples, or a sample tip into the bead or ethanol stock"
+    - "WELL-CAPACITY: 200 µl of ethanol wash into a 100 µl PCR well already holding beads (past the rim is an error, past the working volume a warning)"
+    - "SOURCE-TOO-SHALLOW: beads or ethanol drawn from a shallow trough"
+    - "MIX-TOO-WEAK: beads and sample mixed with too small a stroke"
+    - "PIPETTE-RANGE: a P300 asked for 10 µl of eluate"
+  not_checked:
+    - "the supernatant removed before the beads settled: the magnet's engage time is not judged (N9)"
+    - "fewer than two ethanol washes, beads over-dried, ethanol not fresh, elution shorter than two minutes, the whole eluate moved with the beads (N9)"
+    - "beads not resuspended before use, or settled in the tube during a series (N12)"
+    - "the wrong bead-to-sample ratio, which only the map could carry (N9)"
+    - "ethanol left in the well when the elution buffer goes in (the catalogue's residual-ethanol row)"
+    - "ethanol moved with no air gap (N17)"
+  physics:
+    - "beads that clump after hours of handling"
+    - "the magnet up to a millimetre off, so beads sit where the tip draws"
+    - "ethanol that drips from the tip in transit"
+
+Nucleic acid extraction:
+  checked:
+    - "as for Bead cleanup: the tips, the overfilled wells, the shallow troughs, the weak mixes, the pipette range"
+    - "prep sheet: the binding buffer and wash buffers last through the plate"
+  not_checked:
+    - "as for Bead cleanup: settle times, wash counts, drying, elution, ratios (N9)"
+    - "the lysis incubation being shorter than asked (the catalogue's step-timing rows)"
+    - "a plate emptied off the robot at a pause, which the checker cannot see (the catalogue's audit verdicts)"
+  physics:
+    - "as for Bead cleanup"
+
+default:
+  checked:
+    - "plate map, if one was approved: every well holds what it should"
+    - "prep sheet: no source runs dry or is drawn within 10% of what was declared; the tips last"
+    - "CONTAM-STOCK and CONTAM-WELL: a used tip carrying a liquid where it does not belong"
+    - "MIX-BEFORE-DRAW and UNMIXED-AT-END: a well drawn from, or left, unmixed after an addition"
+    - "MIX-TOO-WEAK: a mix stroke too small, too few, or the whole well"
+    - "WELL-CAPACITY: more liquid than the well holds"
+    - "SOURCE-TOO-SHALLOW: the tip above the liquid in a well whose shape is known"
+    - "COLD-MODULE-NEVER-SET: a temperature module loaded and never set"
+    - "ENZYME-BEFORE-DILUENT: an enzyme into a well before its water or buffer"
+    - "NO-NEGATIVE-CONTROL: a PCR plate with no NTC, a curve with no blank (notes)"
+    - "PIPETTE-RANGE: a volume below the pipette's minimum"
+    - "LABWARE-FOR-TECHNIQUE: nothing, because the technique is not in its table"
+  not_checked:
+    - "this technique is not in the table, so nothing specific to it was checked: the checks above are the general ones only"
+    - "incubation and wait times against a kit (the catalogue's step-timing rows)"
+    - "reagents kept cold, or warm, for the right time (N21)"
+    - "replicates and controls beyond the PCR ones (N14)"
+    - "settling suspensions (N12), volatile or viscous liquids (N17), the time spread across a plate (N16)"
+    - "anything that happens at a pause, off the robot"
+  physics:
+    - "the volume actually delivered, drops, films, foam and evaporation: a real run, never a script"
