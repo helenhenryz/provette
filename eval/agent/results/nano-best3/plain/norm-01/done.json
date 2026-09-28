@@ -1,0 +1,56 @@
+{
+ "id": "norm-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [],
+  "draft": 5,
+  "rounds": 5
+ },
+ "tool_calls": 12,
+ "turns": 12,
+ "drafts": 6,
+ "checks": 6,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 2223088,
+ "tokens_out": 255234,
+ "seconds": 476.8,
+ "candidates": [
+  {
+   "dir": "candidate-0",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 360063,
+   "tokens_out": 101831
+  },
+  {
+   "dir": "candidate-1",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 1470216,
+   "tokens_out": 103955
+  },
+  {
+   "dir": "candidate-2",
+   "verified": true,
+   "stop_reason": "submitted",
+   "tokens_in": 392809,
+   "tokens_out": 49448
+  }
+ ],
+ "chosen": "candidate-2"
+}

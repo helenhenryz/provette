@@ -1,0 +1,69 @@
+{
+ "id": "pcr-01",
+ "condition": "short-on-tips",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 47,
+    "title": "A used tip went into a stock: 8 stocks"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 47,
+    "title": "5 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 45,
+    "title": "No no-template control: 8 wells of master mix with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 48,
+    "title": "8 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 4 more went in (20% of the well)"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 42,
+    "title": "No no-template control: 8 wells of master mix with a sample"
+   }
+  ],
+  "draft": 3,
+  "rounds": 2
+ },
+ "tool_calls": 9,
+ "turns": 10,
+ "drafts": 4,
+ "checks": 3,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 317309,
+ "tokens_out": 76878,
+ "seconds": 922.8
+}

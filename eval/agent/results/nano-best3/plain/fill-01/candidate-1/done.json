@@ -1,0 +1,55 @@
+{
+ "id": "fill-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "note",
+    "certain": true,
+    "line": 43,
+    "title": "Declared more than the well holds: 500 ul in a 217 ul well, 96 wells"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 44,
+    "title": "96 wells never mixed after glycerol went in (1% of the well)"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "MIX-TOO-WEAK",
+    "severity": "warning",
+    "certain": true,
+    "line": 46,
+    "title": "A pipette too small to mix 96 wells: 20 ul at most in 505 ul"
+   }
+  ],
+  "draft": 6,
+  "rounds": 6
+ },
+ "tool_calls": 9,
+ "turns": 9,
+ "drafts": 7,
+ "checks": 7,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 533570,
+ "tokens_out": 100757,
+ "seconds": 1667.4
+}

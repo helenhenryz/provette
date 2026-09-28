@@ -1,0 +1,653 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map fill-02. 48 of 48 wells hold what the plate map\n  says.\n  Destination: Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L (slot 3).\n    Reading of the request: 48 aliquots.\n\nLabware for the technique (Plate filling): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  protein                             15000.0    2400.0   12600.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 15 Tube Rack with Falcon 15 A1    protein                             2400.0   15000.0\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "fill-02",
+  "technique": "Plate filling",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "3:opentrons_96_aluminumblock_generic_pcr_strip_200ul",
+   "variant": "48 aliquots",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 48,
+   "wells_total": 48,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F3",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G3",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H3",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C4",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D4",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E4",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F4",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G4",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H4",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C5",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D5",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E5",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F5",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G5",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H5",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C6",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D6",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E6",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F6",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G6",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H6",
+     "group": "aliquots",
+     "expected": {
+      "protein": 50.0
+     },
+     "found": {
+      "protein": 50.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "protein",
+    "logical": "protein",
+    "role": "reagent",
+    "declared_ul": 15000.0,
+    "delivered_ul": 2400.0,
+    "left_in_source_ul": 12600.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 15 Tube Rack with Falcon 15 mL Conical",
+     "well": "A1",
+     "liquid": "protein",
+     "declared_ul": 15000.0,
+     "needed_ul": 2400.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 1 biology problem (1 warning).\n\n1. WARNING COLD-MODULE-NEVER-SET: A temperature module was loaded but never set\n   line 33:  p300.dispense(50, dest_wells[i + j])\n   At line 33 the robot puts liquid into wells A1, A2, A3, A4, A5, A6, B1, B2 and 40 more in\n   slot 3, on a temperature module that the protocol never sets. A temperature module stays\n   at room temperature until `set_temperature` is called, so protein (sample) sat on a block\n   that was never cold; the robot pipetted there 48 times over the run. The person setting\n   up the deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6,\n   B1, B2 and 40 more in slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 40 more in slot 3.\n   Fix: Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 96\n   Well Aluminum Block with Generic PCR Strip 200 \u00b5L in slot 3, and\n   `temp_module.deactivate()` at the end.\n   Source: Opentrons, temperature module: at room temperature until set_temperature, which\n   blocks\n           https://docs.opentrons.com/v2/modules/temperature_module.html\n   Source: Thermo Fisher T4 ligase manual: keep on ice, use within minutes\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/t4dnaligase_1U_man.pdf\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   [676cc928e212]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "COLD-MODULE-NEVER-SET",
+   "severity": "warning",
+   "certain": true,
+   "line": 33,
+   "title": "A temperature module was loaded but never set",
+   "explanation": "At line 33 the robot puts liquid into wells A1, A2, A3, A4, A5, A6, B1, B2 and 40 more in slot 3, on a temperature module that the protocol never sets. A temperature module stays at room temperature until `set_temperature` is called, so protein (sample) sat on a block that was never cold; the robot pipetted there 48 times over the run. The person setting up the deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 40 more in slot 3.",
+   "fix": "Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L in slot 3, and `temp_module.deactivate()` at the end."
+  }
+ ],
+ "seconds": 4.3,
+ "draft": 2
+}

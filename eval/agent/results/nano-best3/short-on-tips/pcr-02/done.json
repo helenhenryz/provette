@@ -1,0 +1,71 @@
+{
+ "id": "pcr-02",
+ "condition": "short-on-tips",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 49,
+    "title": "No no-template control: 24 wells of master mix with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 59,
+    "title": "24 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 20 more went in (8% of the well)"
+   }
+  ],
+  "draft": 3,
+  "rounds": 3
+ },
+ "tool_calls": 10,
+ "turns": 10,
+ "drafts": 4,
+ "checks": 4,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 2250407,
+ "tokens_out": 234139,
+ "seconds": 533.1,
+ "candidates": [
+  {
+   "dir": "candidate-0",
+   "verified": true,
+   "stop_reason": "submitted",
+   "tokens_in": 402149,
+   "tokens_out": 58559
+  },
+  {
+   "dir": "candidate-1",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 1397385,
+   "tokens_out": 107225
+  },
+  {
+   "dir": "candidate-2",
+   "verified": true,
+   "stop_reason": "submitted",
+   "tokens_in": 450873,
+   "tokens_out": 68355
+  }
+ ],
+ "chosen": "candidate-0"
+}

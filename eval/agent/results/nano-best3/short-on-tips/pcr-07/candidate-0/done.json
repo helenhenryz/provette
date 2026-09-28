@@ -1,0 +1,103 @@
+{
+ "id": "pcr-07",
+ "condition": "short-on-tips",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 61,
+    "title": "The pipette draws air from well C2 in slot 2: the liquid is below the tip"
+   },
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 64,
+    "title": "The pipette draws air from well C3 in slot 2: the liquid is below the tip"
+   },
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 67,
+    "title": "The pipette draws air from well C4 in slot 2: the liquid is below the tip"
+   },
+   {
+    "rule_id": "COLD-MODULE-NEVER-SET",
+    "severity": "warning",
+    "certain": true,
+    "line": 58,
+    "title": "A temperature module was loaded but never set"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 58,
+    "title": "A used tip went into a stock: buffer (well C1 in slot 2)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 61,
+    "title": "A used tip went into a stock: polymerase (well C2 in slot 2)"
+   },
+   {
+    "rule_id": "ENZYME-BEFORE-DILUENT",
+    "severity": "warning",
+    "certain": true,
+    "line": 62,
+    "title": "An enzyme was added before the water: polymerase"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 64,
+    "title": "A used tip went into a stock: fwd primer (well C3 in slot 2)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 67,
+    "title": "A used tip went into a stock: rev primer (well C4 in slot 2)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 70,
+    "title": "A used tip went into a stock: water (well C5 in slot 2)"
+   }
+  ],
+  "draft": 6,
+  "rounds": 6
+ },
+ "tool_calls": 11,
+ "turns": 11,
+ "drafts": 7,
+ "checks": 7,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 769602,
+ "tokens_out": 110579,
+ "seconds": 1224.1
+}

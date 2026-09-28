@@ -1,0 +1,69 @@
+{
+ "id": "pcr-06",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 63,
+    "title": "A used tip went into a stock: 16 stocks"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 64,
+    "title": "16 wells never mixed after colony 1, colony 13, the liquid from well C1 in slot 2, the liquid from well D1 in slot 2 and 12 more went in (5% of the well)"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 64,
+    "title": "A used tip went into a stock: 16 stocks"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 63,
+    "title": "No no-template control: 16 wells of pcr mix with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 65,
+    "title": "16 wells never mixed after colony 1, colony 2, colony 3, colony 4 and 12 more went in (5% of the well)"
+   }
+  ],
+  "draft": 3,
+  "rounds": 3
+ },
+ "tool_calls": 9,
+ "turns": 10,
+ "drafts": 4,
+ "checks": 4,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 476140,
+ "tokens_out": 109572,
+ "seconds": 1043.5
+}

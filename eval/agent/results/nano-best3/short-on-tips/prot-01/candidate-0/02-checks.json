@@ -1,0 +1,511 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map prot-01. 12 of 12 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 4). Reading of the request: 12\n    gel samples.\n\nLabware for the technique (Protein): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  dye                                   100.0      60.0      40.0       0.0     0.0\n  sample 1                              150.0      15.0     135.0       0.0     0.0\n  sample 2                              150.0      15.0     135.0       0.0     0.0\n  sample 3                              150.0      15.0     135.0       0.0     0.0\n  sample 4                              150.0      15.0     135.0       0.0     0.0\n  sample 5                              150.0      15.0     135.0       0.0     0.0\n  sample 6                              150.0      15.0     135.0       0.0     0.0\n  sample 7                              150.0      15.0     135.0       0.0     0.0\n  sample 8                              150.0      15.0     135.0       0.0     0.0\n  sample 9                              150.0      15.0     135.0       0.0     0.0\n  sample 10                             150.0      15.0     135.0       0.0     0.0\n  sample 11                             150.0      15.0     135.0       0.0     0.0\n  sample 12                             150.0      15.0     135.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A1    sample 1                              15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B1    sample 2                              15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C1    sample 3                              15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D1    sample 4                              15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E1    sample 5                              15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F1    sample 6                              15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G1    sample 7                              15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H1    sample 8                              15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A2    sample 9                              15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B2    sample 10                             15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C2    sample 11                             15.0     150.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D2    sample 12                             15.0     150.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A1    dye                                   60.0     100.0\n  Tips: 24 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "prot-01",
+  "technique": "Protein",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "4:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "12 gel samples",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 12,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "gel samples",
+     "expected": {
+      "sample_1": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_1": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "gel samples",
+     "expected": {
+      "sample_2": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_2": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "gel samples",
+     "expected": {
+      "sample_3": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_3": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "gel samples",
+     "expected": {
+      "sample_4": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_4": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "gel samples",
+     "expected": {
+      "sample_5": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_5": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "gel samples",
+     "expected": {
+      "sample_6": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_6": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "gel samples",
+     "expected": {
+      "sample_7": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_7": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "gel samples",
+     "expected": {
+      "sample_8": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_8": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "gel samples",
+     "expected": {
+      "sample_9": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_9": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "gel samples",
+     "expected": {
+      "sample_10": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_10": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "gel samples",
+     "expected": {
+      "sample_11": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_11": 15.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "gel samples",
+     "expected": {
+      "sample_12": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "dye": 5.0,
+      "sample_12": 15.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "dye",
+    "logical": "dye",
+    "role": "reagent",
+    "declared_ul": 100.0,
+    "delivered_ul": 60.0,
+    "left_in_source_ul": 40.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 135.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "sample 2",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C1",
+     "liquid": "sample 3",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D1",
+     "liquid": "sample 4",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E1",
+     "liquid": "sample 5",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F1",
+     "liquid": "sample 6",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G1",
+     "liquid": "sample 7",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H1",
+     "liquid": "sample 8",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "sample 9",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "sample 10",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C2",
+     "liquid": "sample 11",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D2",
+     "liquid": "sample 12",
+     "declared_ul": 150.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A1",
+     "liquid": "dye",
+     "declared_ul": 100.0,
+     "needed_ul": 60.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 24
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: no biology problems found.\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\nA clean report is not a promise that the experiment will work.",
+ "findings": [],
+ "seconds": 4.8,
+ "draft": 2
+}

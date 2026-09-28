@@ -1,0 +1,21 @@
+# A two-entry stub of provette/rules/coverage.yaml, in its contract:
+# per technique `checked`, `not_checked`, `physics`, plus `default`.
+# The tests read this file; the product reads the real one.
+"PCR setup":
+  checked:
+    - Every reaction well holds the master mix and the sample the plate map asks for.
+    - No used tip goes back into a stock tube.
+    - A reaction is mixed before it is drawn from.
+  not_checked:
+    - Whether the primers are the right ones for the template.
+    - Whether the plate is sealed before the thermocycler.
+  physics:
+    - Whether 2 µl of template is pipetted accurately.
+default:
+  checked:
+    - Every well holds what the plate map asks for.
+    - No used tip carries one liquid into another it was never meant for.
+  not_checked:
+    - "Anything specific to this technique: nothing here knows what it is."
+  physics:
+    - How the liquids behave in the tip and the well.

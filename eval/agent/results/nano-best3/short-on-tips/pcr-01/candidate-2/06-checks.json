@@ -1,0 +1,396 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map pcr-01. 8 of 8 wells hold what the plate map says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 4). Reading of the request: 8\n    reactions.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  master mix                           1000.0     160.0     840.0       0.0     0.0\n  sample 1                              500.0       5.0     495.0       0.0     0.0\n  sample 2                              500.0       5.0     495.0       0.0     0.0\n  sample 3                              500.0       5.0     495.0       0.0     0.0\n  sample 4                              500.0       5.0     495.0       0.0     0.0\n  sample 5                              500.0       5.0     495.0       0.0     0.0\n  sample 6                              500.0       5.0     495.0       0.0     0.0\n  sample 7                              500.0       5.0     495.0       0.0     0.0\n  sample 8                              500.0       5.0     495.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    master mix                           160.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B1    sample 6                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A2    sample 1                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B2    sample 7                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A3    sample 2                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B3    sample 8                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A4    sample 3                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A5    sample 4                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A6    sample 5                               5.0     500.0\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-01",
+  "technique": "PCR setup",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "4:biorad_96_wellplate_200ul_pcr",
+   "variant": "8 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 8,
+   "wells_total": 8,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_1": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_1": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_2": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_2": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_3": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_3": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_4": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_4": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_5": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_5": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_6": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_6": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_7": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_7": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_8": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_8": 5.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "master mix",
+    "logical": "master_mix",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 160.0,
+    "left_in_source_ul": 840.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "master mix",
+     "declared_ul": 1000.0,
+     "needed_ul": 160.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 6",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "sample 1",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 7",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "sample 2",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 8",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "sample 3",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "sample 4",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 5",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 1
+    },
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (1 error, 2 notes).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: 7 stocks\n   line 57:  p20_single.aspirate(5, sample_wells[i])\n   At line 57 the tip went into sample 2 (tube A3 in slot 3), sample 3 (tube A4 in slot 3),\n   sample 4 (tube A5 in slot 3), sample 5 (tube A6 in slot 3) and 3 more while it still\n   carried master mix (tube A1 in slot 3), sample 1 (tube A2 in slot 3), sample 2 (tube A3\n   in slot 3), sample 3 (tube A4 in slot 3) and 4 more from an earlier step (this line did\n   it 7 times). A tip that has touched one liquid leaves a little of it in the next liquid\n   it touches, so these stocks now hold material that does not belong there. Liquid drawn\n   from them then took the unwanted material along into 7 other wells: wells A2, A3, A4, A5,\n   A6, A7 and A8 in slot 4.\n   Affected: tubes A3, A4, A5, A6, B1, B2 and B3 in slot 3.\n   Also reached 7 other wells: wells A2, A3, A4, A5, A6, A7 and A8 in slot 4.\n   Fix: Pick up a fresh tip before line 57 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [01cb7b345a0f]\n\n2. NOTE NO-NEGATIVE-CONTROL: No no-template control: 8 wells of master mix with a sample\n   line 51:  p300_single.dispense(20, well)\n   At line 51 the robot starts putting master mix into Bio-Rad 96 Well Plate 200 \u00b5L PCR\n   (slot 4), and 8 wells end holding it together with a sample. No well on this plate holds\n   the mix without a sample, so there is no no-template control. If a reagent is\n   contaminated, or the primers pair with each other, every well gives a signal and nothing\n   on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7 and\n   A8 in slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.\n   Fix: Add one well (three for qPCR) with 20 ul of master mix and 5 ul of water in place of\n   the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [c6400fdf3b8c]\n\n3. NOTE UNMIXED-AT-END: 8 wells never mixed after sample 1, sample 2, sample 3, sample 4 and\n4 more went in (20% of the well)\n   line 58:  p20_single.dispense(5, dest_wells[i])\n   At line 58 the robot added sample 1, sample 2, sample 3, sample 4 and 4 more to wells A1,\n   A2, A3, A4, A5, A6, A7 and A8 in slot 4, which already held master mix (this line did it\n   8 times). The addition was 20% of the well, nothing mixed the well afterwards, and the\n   run ended with them that way. Two liquids layered in a small well do not mix on their\n   own, so what the well holds is not at the concentration you calculated. A PCR plate is\n   usually vortexed and spun down before cycling; if this one will not be, mix it.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4 after line 58: `mix_after=(5,\n   20)` on the transfer, or `pipette.mix(5, 20, well)`, with the volume about 80% of what\n   the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [a5cee3cb7f8e]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 57,
+   "title": "A used tip went into a stock: 7 stocks",
+   "explanation": "At line 57 the tip went into sample 2 (tube A3 in slot 3), sample 3 (tube A4 in slot 3), sample 4 (tube A5 in slot 3), sample 5 (tube A6 in slot 3) and 3 more while it still carried master mix (tube A1 in slot 3), sample 1 (tube A2 in slot 3), sample 2 (tube A3 in slot 3), sample 3 (tube A4 in slot 3) and 4 more from an earlier step (this line did it 7 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 7 other wells: wells A2, A3, A4, A5, A6, A7 and A8 in slot 4.",
+   "fix": "Pick up a fresh tip before line 57 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 51,
+   "title": "No no-template control: 8 wells of master mix with a sample",
+   "explanation": "At line 51 the robot starts putting master mix into Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 4), and 8 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.",
+   "fix": "Add one well (three for qPCR) with 20 ul of master mix and 5 ul of water in place of the template, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 58,
+   "title": "8 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 4 more went in (20% of the well)",
+   "explanation": "At line 58 the robot added sample 1, sample 2, sample 3, sample 4 and 4 more to wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4, which already held master mix (this line did it 8 times). The addition was 20% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4 after line 58: `mix_after=(5, 20)` on the transfer, or `pipette.mix(5, 20, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 4.8,
+ "draft": 6
+}

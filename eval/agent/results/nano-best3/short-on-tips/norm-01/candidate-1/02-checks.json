@@ -1,0 +1,2186 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map norm-01. 0 of 24 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 3). Reading of the request: 24\n    normalised samples.\n  well A1 (normalised): expected 5.88 ul sample_1, 44.12 ul water; found 44.12 ul water\n    (declared in this well, not delivered), 5.88 ul sample_1\n      - water is missing: the plate map says 44.12 ul, none arrives\n      - holds 44.12 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well B2 (normalised): expected 6.94 ul sample_14, 43.06 ul water; found 43.06 ul water\n    (declared in this well, not delivered), 6.94 ul sample_14\n      - water is missing: the plate map says 43.06 ul, none arrives\n      - holds 43.06 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well A2 (normalised): expected 4.17 ul sample_2, 45.83 ul water; found 45.83 ul water\n    (declared in this well, not delivered), 4.17 ul sample_2\n      - water is missing: the plate map says 45.83 ul, none arrives\n      - holds 45.83 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well B3 (normalised): expected 10.42 ul sample_15, 39.58 ul water; found 39.58 ul water\n    (declared in this well, not delivered), 10.42 ul sample_15\n      - water is missing: the plate map says 39.58 ul, none arrives\n      - holds 39.58 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well A3 (normalised): expected 11.36 ul sample_3, 38.64 ul water; found 38.64 ul water\n    (declared in this well, not delivered), 11.36 ul sample_3\n      - water is missing: the plate map says 38.64 ul, none arrives\n      - holds 38.64 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well B4 (normalised): expected 3.85 ul sample_16, 46.15 ul water; found 46.15 ul water\n    (declared in this well, not delivered), 3.85 ul sample_16\n      - water is missing: the plate map says 46.15 ul, none arrives\n      - holds 46.15 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well A4 (normalised): expected 7.46 ul sample_4, 42.54 ul water; found 42.54 ul water\n    (declared in this well, not delivered), 7.46 ul sample_4\n      - water is missing: the plate map says 42.54 ul, none arrives\n      - holds 42.54 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well B5 (normalised): expected 5.68 ul sample_17, 44.32 ul water; found 44.32 ul water\n    (declared in this well, not delivered), 5.68 ul sample_17\n      - water is missing: the plate map says 44.32 ul, none arrives\n      - holds 44.32 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well B6 (normalised): expected 20 ul sample_18, 30 ul water; found 30 ul water (declared\n    in this well, not delivered), 20 ul sample_18\n      - water is missing: the plate map says 30 ul, none arrives\n      - holds 30 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well A6 (normalised): expected 5.26 ul sample_6, 44.74 ul water; found 44.74 ul water\n    (declared in this well, not delivered), 5.26 ul sample_6\n      - water is missing: the plate map says 44.74 ul, none arrives\n      - holds 44.74 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well B7 (normalised): expected 7.81 ul sample_19, 42.19 ul water; found 42.19 ul water\n    (declared in this well, not delivered), 7.81 ul sample_19\n      - water is missing: the plate map says 42.19 ul, none arrives\n      - holds 42.19 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  well A7 (normalised): expected 15.15 ul sample_7, 34.85 ul water; found 34.85 ul water\n    (declared in this well, not delivered), 15.15 ul sample_7\n      - water is missing: the plate map says 34.85 ul, none arrives\n      - holds 34.85 ul of water (declared in this well, not delivered), which the plate map\n        does not list for this well\n  ... and 12 more wells that do not match.\n\nLabware for the technique (Normalization): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  sample 1                                5.9       5.9       0.0       0.0     0.0\n  sample 2                                4.2       4.2       0.0       0.0     0.0\n  sample 3                               11.4      11.4       0.0       0.0     0.0\n  sample 4                                7.5       7.5       0.0       0.0     0.0\n  sample 5                                2.4       0.0       2.4       0.0     0.0\n  sample 6                                5.3       5.3       0.0       0.0     0.0\n  sample 7                               15.2      15.2       0.0       0.0     0.0\n  sample 8                                3.3       3.3       0.0       0.0     0.0\n  sample 9                                6.4       6.4       0.0       0.0     0.0\n  sample 10                               8.3       8.3       0.0       0.0     0.0\n  sample 11                               5.0       5.0       0.0       0.0     0.0\n  sample 12                               9.1       9.1       0.0       0.0     0.0\n  sample 13                               2.6       0.0       2.6       0.0     0.0\n  sample 14                               6.9       6.9       0.0       0.0     0.0\n  sample 15                              10.4      10.4       0.0       0.0     0.0\n  sample 16                               3.9       3.9       0.0       0.0     0.0\n  sample 17                               5.7       5.7       0.0       0.0     0.0\n  sample 18                              20.0      20.0       0.0       0.0     0.0\n  sample 19                               7.8       7.8       0.0       0.0     0.0\n  sample 20                               4.5       4.5       0.0       0.0     0.0\n  sample 21                              12.8      12.8       0.0       0.0     0.0\n  sample 22                               2.9       0.0       2.9       0.0     0.0\n  sample 23                               5.4       5.4       0.0       0.0     0.0\n  sample 24                               8.6       8.6       0.0       0.0     0.0\n  water                                1024.6       0.0    1024.6       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A1    sample 1                               5.9       5.9  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B1    sample 13                              2.6       2.6  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A2    sample 2                               4.2       4.2  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B2    sample 14                              6.9       6.9  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A3    sample 3                              11.4      11.4  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B3    sample 15                             10.4      10.4  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A4    sample 4                               7.5       7.5  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B4    sample 16                              3.9       3.9  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A5    sample 5                               2.4       2.4  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B5    sample 17                              5.7       5.7  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A6    sample 6                               5.3       5.3  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B6    sample 18                             20.0      20.0  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A7    sample 7                              15.2      15.2  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B7    sample 19                              7.8       7.8  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A8    sample 8                               3.3       3.3  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B8    sample 20                              4.5       4.5  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A9    sample 9                               6.4       6.4  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B9    sample 21                             12.8      12.8  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A10   sample 10                              8.3       8.3  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B10   sample 22                              2.9       2.9  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A11   sample 11                              5.0       5.0  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B11   sample 23                              5.4       5.4  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A12   sample 12                              9.1       9.1  <-- NO MARGIN\n  2    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B12   sample 24                              8.6       8.6  <-- NO MARGIN\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A1    water                                  0.0      44.1  already in the plate: 44.12 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B1    water                                  0.0      47.4  already in the plate: 47.37 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A2    water                                  0.0      45.8  already in the plate: 45.83 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B2    water                                  0.0      43.1  already in the plate: 43.06 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A3    water                                  0.0      38.6  already in the plate: 38.64 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B3    water                                  0.0      39.6  already in the plate: 39.58 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A4    water                                  0.0      42.5  already in the plate: 42.54 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B4    water                                  0.0      46.1  already in the plate: 46.15 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A5    water                                  0.0      47.6  already in the plate: 47.62 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B5    water                                  0.0      44.3  already in the plate: 44.32 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A6    water                                  0.0      44.7  already in the plate: 44.74 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B6    water                                  0.0      30.0  already in the plate: 30 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A7    water                                  0.0      34.9  already in the plate: 34.85 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B7    water                                  0.0      42.2  already in the plate: 42.19 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A8    water                                  0.0      46.7  already in the plate: 46.67 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B8    water                                  0.0      45.5  already in the plate: 45.45 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A9    water                                  0.0      43.6  already in the plate: 43.59 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B9    water                                  0.0      37.2  already in the plate: 37.18 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A10   water                                  0.0      41.7  already in the plate: 41.67 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B10   water                                  0.0      47.1  already in the plate: 47.14 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A11   water                                  0.0      45.0  already in the plate: 45.05 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B11   water                                  0.0      44.6  already in the plate: 44.57 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A12   water                                  0.0      40.9  already in the plate: 40.91 ul declared, nothing drawn\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B12   water                                  0.0      41.4  already in the plate: 41.38 ul declared, nothing drawn\n  FLAG: sample 1 in A1, slot 2 has no margin: the robot draws 5.88 ul of the 5.88 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 55.88 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 13 in B1, slot 2 has no margin: the robot draws 2.63 ul of the 2.63 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 52.63 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 2 in A2, slot 2 has no margin: the robot draws 4.17 ul of the 4.17 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 54.17 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 14 in B2, slot 2 has no margin: the robot draws 6.94 ul of the 6.94 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 56.94 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 3 in A3, slot 2 has no margin: the robot draws 11.36 ul of the 11.36 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 61.36 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 15 in B3, slot 2 has no margin: the robot draws 10.42 ul of the 10.42 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 60.42 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 4 in A4, slot 2 has no margin: the robot draws 7.46 ul of the 7.46 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 57.46 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 16 in B4, slot 2 has no margin: the robot draws 3.85 ul of the 3.85 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 53.85 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 5 in A5, slot 2 has no margin: the robot draws 2.38 ul of the 2.38 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 52.38 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 17 in B5, slot 2 has no margin: the robot draws 5.68 ul of the 5.68 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 55.68 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 6 in A6, slot 2 has no margin: the robot draws 5.26 ul of the 5.26 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 55.26 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 18 in B6, slot 2 has no margin: the robot draws 20 ul of the 20 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 70 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 7 in A7, slot 2 has no margin: the robot draws 15.15 ul of the 15.15 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 65.15 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 19 in B7, slot 2 has no margin: the robot draws 7.81 ul of the 7.81 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 57.81 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 8 in A8, slot 2 has no margin: the robot draws 3.33 ul of the 3.33 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 53.33 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 20 in B8, slot 2 has no margin: the robot draws 4.55 ul of the 4.55 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 54.55 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 9 in A9, slot 2 has no margin: the robot draws 6.41 ul of the 6.41 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 56.41 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 21 in B9, slot 2 has no margin: the robot draws 12.82 ul of the 12.82 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 62.82 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 10 in A10, slot 2 has no margin: the robot draws 8.33 ul of the 8.33 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 58.33 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 22 in B10, slot 2 has no margin: the robot draws 2.86 ul of the 2.86 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 52.86 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 11 in A11, slot 2 has no margin: the robot draws 4.95 ul of the 4.95 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 54.95 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 23 in B11, slot 2 has no margin: the robot draws 5.43 ul of the 5.43 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 55.43 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 12 in A12, slot 2 has no margin: the robot draws 9.09 ul of the 9.09 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 59.09 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: sample 24 in B12, slot 2 has no margin: the robot draws 8.62 ul of the 8.62 ul\n    declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 58.62 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "norm-01",
+  "technique": "Normalization",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_200ul_flat",
+   "variant": "24 normalised samples",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "normalised",
+     "expected": {
+      "sample_1": 5.8824,
+      "water": 44.1176
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 44.12,
+      "sample_1": 5.88
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 44.1176,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 44.12,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "normalised",
+     "expected": {
+      "sample_14": 6.9444,
+      "water": 43.0556
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 43.06,
+      "sample_14": 6.94
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 43.0556,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 43.06,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "normalised",
+     "expected": {
+      "sample_2": 4.1667,
+      "water": 45.8333
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 45.83,
+      "sample_2": 4.17
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 45.8333,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 45.83,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "normalised",
+     "expected": {
+      "sample_15": 10.4167,
+      "water": 39.5833
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 39.58,
+      "sample_15": 10.42
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 39.5833,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 39.58,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "normalised",
+     "expected": {
+      "sample_3": 11.3636,
+      "water": 38.6364
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 38.64,
+      "sample_3": 11.36
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 38.6364,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 38.64,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "normalised",
+     "expected": {
+      "sample_16": 3.8462,
+      "water": 46.1538
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 46.15,
+      "sample_16": 3.85
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 46.1538,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 46.15,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "normalised",
+     "expected": {
+      "sample_4": 7.4627,
+      "water": 42.5373
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 42.54,
+      "sample_4": 7.46
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.5373,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 42.54,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "normalised",
+     "expected": {
+      "sample_17": 5.6818,
+      "water": 44.3182
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 44.32,
+      "sample_17": 5.68
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 44.3182,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 44.32,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": "normalised",
+     "expected": {
+      "sample_18": 20.0,
+      "water": 30.0
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 30.0,
+      "sample_18": 20.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 30.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 30.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "normalised",
+     "expected": {
+      "sample_6": 5.2632,
+      "water": 44.7368
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 44.74,
+      "sample_6": 5.26
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 44.7368,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 44.74,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": "normalised",
+     "expected": {
+      "sample_19": 7.8125,
+      "water": 42.1875
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 42.19,
+      "sample_19": 7.81
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.1875,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 42.19,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "normalised",
+     "expected": {
+      "sample_7": 15.1515,
+      "water": 34.8485
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 34.85,
+      "sample_7": 15.15
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 34.8485,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 34.85,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B8",
+     "group": "normalised",
+     "expected": {
+      "sample_20": 4.5455,
+      "water": 45.4545
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 45.45,
+      "sample_20": 4.55
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 45.4545,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 45.45,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "normalised",
+     "expected": {
+      "sample_8": 3.3333,
+      "water": 46.6667
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 46.67,
+      "sample_8": 3.33
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 46.6667,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 46.67,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B9",
+     "group": "normalised",
+     "expected": {
+      "sample_21": 12.8205,
+      "water": 37.1795
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 37.18,
+      "sample_21": 12.82
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 37.1795,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 37.18,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": "normalised",
+     "expected": {
+      "sample_9": 6.4103,
+      "water": 43.5897
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 43.59,
+      "sample_9": 6.41
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 43.5897,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 43.59,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": "normalised",
+     "expected": {
+      "sample_10": 8.3333,
+      "water": 41.6667
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 41.67,
+      "sample_10": 8.33
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 41.6667,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 41.67,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": "normalised",
+     "expected": {
+      "sample_23": 5.4348,
+      "water": 44.5652
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 44.57,
+      "sample_23": 5.43
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 44.5652,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 44.57,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": "normalised",
+     "expected": {
+      "sample_11": 4.9505,
+      "water": 45.0495
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 45.05,
+      "sample_11": 4.95
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 45.0495,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 45.05,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": "normalised",
+     "expected": {
+      "sample_24": 8.6207,
+      "water": 41.3793
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 41.38,
+      "sample_24": 8.62
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 41.3793,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 41.38,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": "normalised",
+     "expected": {
+      "sample_12": 9.0909,
+      "water": 40.9091
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 40.91,
+      "sample_12": 9.09
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 40.9091,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 40.91,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "normalised",
+     "expected": {
+      "sample_5": 2.381,
+      "water": 47.619
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "normalised",
+     "expected": {
+      "sample_13": 2.6316,
+      "water": 47.3684
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "normalised",
+     "expected": {
+      "sample_22": 2.8571,
+      "water": 47.1429
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A1",
+     "group": "normalised",
+     "expected": {
+      "sample_1": 5.8824,
+      "water": 44.1176
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 44.12,
+      "sample_1": 5.88
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 44.1176,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 44.12,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "normalised",
+     "expected": {
+      "sample_14": 6.9444,
+      "water": 43.0556
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 43.06,
+      "sample_14": 6.94
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 43.0556,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 43.06,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "normalised",
+     "expected": {
+      "sample_2": 4.1667,
+      "water": 45.8333
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 45.83,
+      "sample_2": 4.17
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 45.8333,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 45.83,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "normalised",
+     "expected": {
+      "sample_15": 10.4167,
+      "water": 39.5833
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 39.58,
+      "sample_15": 10.42
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 39.5833,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 39.58,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "normalised",
+     "expected": {
+      "sample_3": 11.3636,
+      "water": 38.6364
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 38.64,
+      "sample_3": 11.36
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 38.6364,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 38.64,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "normalised",
+     "expected": {
+      "sample_16": 3.8462,
+      "water": 46.1538
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 46.15,
+      "sample_16": 3.85
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 46.1538,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 46.15,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "normalised",
+     "expected": {
+      "sample_4": 7.4627,
+      "water": 42.5373
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 42.54,
+      "sample_4": 7.46
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.5373,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 42.54,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "normalised",
+     "expected": {
+      "sample_17": 5.6818,
+      "water": 44.3182
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 44.32,
+      "sample_17": 5.68
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 44.3182,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 44.32,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": "normalised",
+     "expected": {
+      "sample_18": 20.0,
+      "water": 30.0
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 30.0,
+      "sample_18": 20.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 30.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 30.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "normalised",
+     "expected": {
+      "sample_6": 5.2632,
+      "water": 44.7368
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 44.74,
+      "sample_6": 5.26
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 44.7368,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 44.74,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": "normalised",
+     "expected": {
+      "sample_19": 7.8125,
+      "water": 42.1875
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 42.19,
+      "sample_19": 7.81
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 42.1875,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 42.19,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "normalised",
+     "expected": {
+      "sample_7": 15.1515,
+      "water": 34.8485
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 34.85,
+      "sample_7": 15.15
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 34.8485,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 34.85,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B8",
+     "group": "normalised",
+     "expected": {
+      "sample_20": 4.5455,
+      "water": 45.4545
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 45.45,
+      "sample_20": 4.55
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 45.4545,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 45.45,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "normalised",
+     "expected": {
+      "sample_8": 3.3333,
+      "water": 46.6667
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 46.67,
+      "sample_8": 3.33
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 46.6667,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 46.67,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B9",
+     "group": "normalised",
+     "expected": {
+      "sample_21": 12.8205,
+      "water": 37.1795
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 37.18,
+      "sample_21": 12.82
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 37.1795,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 37.18,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": "normalised",
+     "expected": {
+      "sample_9": 6.4103,
+      "water": 43.5897
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 43.59,
+      "sample_9": 6.41
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 43.5897,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 43.59,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": "normalised",
+     "expected": {
+      "sample_10": 8.3333,
+      "water": 41.6667
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 41.67,
+      "sample_10": 8.33
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 41.6667,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 41.67,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": "normalised",
+     "expected": {
+      "sample_23": 5.4348,
+      "water": 44.5652
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 44.57,
+      "sample_23": 5.43
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 44.5652,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 44.57,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": "normalised",
+     "expected": {
+      "sample_11": 4.9505,
+      "water": 45.0495
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 45.05,
+      "sample_11": 4.95
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 45.0495,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 45.05,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": "normalised",
+     "expected": {
+      "sample_24": 8.6207,
+      "water": 41.3793
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 41.38,
+      "sample_24": 8.62
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 41.3793,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 41.38,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": "normalised",
+     "expected": {
+      "sample_12": 9.0909,
+      "water": 40.9091
+     },
+     "found": {
+      "water (declared in this well, not delivered)": 40.91,
+      "sample_12": 9.09
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 40.9091,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "water (declared in this well, not delivered)",
+       "expected_ul": null,
+       "found_ul": 40.91,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "normalised",
+     "expected": {
+      "sample_5": 2.381,
+      "water": 47.619
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "normalised",
+     "expected": {
+      "sample_13": 2.6316,
+      "water": 47.3684
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "normalised",
+     "expected": {
+      "sample_22": 2.8571,
+      "water": 47.1429
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 5.88,
+    "delivered_ul": 5.88,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 4.17,
+    "delivered_ul": 4.17,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 11.36,
+    "delivered_ul": 11.36,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 7.46,
+    "delivered_ul": 7.46,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 2.38,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.38,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 5.26,
+    "delivered_ul": 5.26,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 15.15,
+    "delivered_ul": 15.15,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 3.33,
+    "delivered_ul": 3.33,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 6.41,
+    "delivered_ul": 6.41,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 8.33,
+    "delivered_ul": 8.33,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 4.95,
+    "delivered_ul": 4.95,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 9.09,
+    "delivered_ul": 9.09,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 13",
+    "logical": "sample_13",
+    "role": "sample",
+    "declared_ul": 2.63,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.63,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 14",
+    "logical": "sample_14",
+    "role": "sample",
+    "declared_ul": 6.94,
+    "delivered_ul": 6.94,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 15",
+    "logical": "sample_15",
+    "role": "sample",
+    "declared_ul": 10.42,
+    "delivered_ul": 10.42,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 16",
+    "logical": "sample_16",
+    "role": "sample",
+    "declared_ul": 3.85,
+    "delivered_ul": 3.85,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 17",
+    "logical": "sample_17",
+    "role": "sample",
+    "declared_ul": 5.68,
+    "delivered_ul": 5.68,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 18",
+    "logical": "sample_18",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 20.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 19",
+    "logical": "sample_19",
+    "role": "sample",
+    "declared_ul": 7.81,
+    "delivered_ul": 7.81,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 20",
+    "logical": "sample_20",
+    "role": "sample",
+    "declared_ul": 4.55,
+    "delivered_ul": 4.55,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 21",
+    "logical": "sample_21",
+    "role": "sample",
+    "declared_ul": 12.82,
+    "delivered_ul": 12.82,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 22",
+    "logical": "sample_22",
+    "role": "sample",
+    "declared_ul": 2.86,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.86,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 23",
+    "logical": "sample_23",
+    "role": "sample",
+    "declared_ul": 5.43,
+    "delivered_ul": 5.43,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 24",
+    "logical": "sample_24",
+    "role": "sample",
+    "declared_ul": 8.62,
+    "delivered_ul": 8.62,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 1024.62,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 1024.62,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 5.88,
+     "needed_ul": 5.88,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B1",
+     "liquid": "sample 13",
+     "declared_ul": 2.63,
+     "needed_ul": 2.63,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A2",
+     "liquid": "sample 2",
+     "declared_ul": 4.17,
+     "needed_ul": 4.17,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B2",
+     "liquid": "sample 14",
+     "declared_ul": 6.94,
+     "needed_ul": 6.94,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A3",
+     "liquid": "sample 3",
+     "declared_ul": 11.36,
+     "needed_ul": 11.36,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B3",
+     "liquid": "sample 15",
+     "declared_ul": 10.42,
+     "needed_ul": 10.42,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A4",
+     "liquid": "sample 4",
+     "declared_ul": 7.46,
+     "needed_ul": 7.46,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B4",
+     "liquid": "sample 16",
+     "declared_ul": 3.85,
+     "needed_ul": 3.85,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A5",
+     "liquid": "sample 5",
+     "declared_ul": 2.38,
+     "needed_ul": 2.38,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B5",
+     "liquid": "sample 17",
+     "declared_ul": 5.68,
+     "needed_ul": 5.68,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A6",
+     "liquid": "sample 6",
+     "declared_ul": 5.26,
+     "needed_ul": 5.26,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B6",
+     "liquid": "sample 18",
+     "declared_ul": 20.0,
+     "needed_ul": 20.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A7",
+     "liquid": "sample 7",
+     "declared_ul": 15.15,
+     "needed_ul": 15.15,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B7",
+     "liquid": "sample 19",
+     "declared_ul": 7.81,
+     "needed_ul": 7.81,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A8",
+     "liquid": "sample 8",
+     "declared_ul": 3.33,
+     "needed_ul": 3.33,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B8",
+     "liquid": "sample 20",
+     "declared_ul": 4.55,
+     "needed_ul": 4.55,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A9",
+     "liquid": "sample 9",
+     "declared_ul": 6.41,
+     "needed_ul": 6.41,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B9",
+     "liquid": "sample 21",
+     "declared_ul": 12.82,
+     "needed_ul": 12.82,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A10",
+     "liquid": "sample 10",
+     "declared_ul": 8.33,
+     "needed_ul": 8.33,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B10",
+     "liquid": "sample 22",
+     "declared_ul": 2.86,
+     "needed_ul": 2.86,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A11",
+     "liquid": "sample 11",
+     "declared_ul": 4.95,
+     "needed_ul": 4.95,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B11",
+     "liquid": "sample 23",
+     "declared_ul": 5.43,
+     "needed_ul": 5.43,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A12",
+     "liquid": "sample 12",
+     "declared_ul": 9.09,
+     "needed_ul": 9.09,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B12",
+     "liquid": "sample 24",
+     "declared_ul": 8.62,
+     "needed_ul": 8.62,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 44.12,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "water",
+     "declared_ul": 47.37,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "water",
+     "declared_ul": 45.83,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "water",
+     "declared_ul": 43.06,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "water",
+     "declared_ul": 38.64,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "water",
+     "declared_ul": 39.58,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "water",
+     "declared_ul": 42.54,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B4",
+     "liquid": "water",
+     "declared_ul": 46.15,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "water",
+     "declared_ul": 47.62,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B5",
+     "liquid": "water",
+     "declared_ul": 44.32,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "water",
+     "declared_ul": 44.74,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B6",
+     "liquid": "water",
+     "declared_ul": 30.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "water",
+     "declared_ul": 34.85,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B7",
+     "liquid": "water",
+     "declared_ul": 42.19,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "water",
+     "declared_ul": 46.67,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B8",
+     "liquid": "water",
+     "declared_ul": 45.45,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A9",
+     "liquid": "water",
+     "declared_ul": 43.59,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B9",
+     "liquid": "water",
+     "declared_ul": 37.18,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A10",
+     "liquid": "water",
+     "declared_ul": 41.67,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B10",
+     "liquid": "water",
+     "declared_ul": 47.14,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "water",
+     "declared_ul": 45.05,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B11",
+     "liquid": "water",
+     "declared_ul": 44.57,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "water",
+     "declared_ul": 40.91,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B12",
+     "liquid": "water",
+     "declared_ul": 41.38,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (1 error, 2 warnings).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: 20 stocks\n   line 36:  p20.aspirate(sample_volumes[i], source_plate[well_name])\n   At line 36 the tip went into sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2),\n   sample 4 (well A4 in slot 2), sample 6 (well A6 in slot 2) and 16 more while it still\n   carried sample 1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in\n   slot 2), sample 4 (well A4 in slot 2) and 39 more from an earlier step (this line did it\n   20 times). A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches, so these stocks now hold material that does not belong there. Liquid drawn from\n   them then took the unwanted material along into 20 other wells: wells A2, A3, A4, A6, A7,\n   A8, A9, A10 and 12 more in slot 3.\n   Affected: wells A2, A3, A4, A6, A7, A8, A9, A10 and 12 more in slot 2.\n   Also reached 20 other wells: wells A2, A3, A4, A6, A7, A8, A9, A10 and 12 more in slot 3.\n   Fix: Pick up a fresh tip before line 36 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [3e1e31507258]\n\n2. WARNING CONTAM-WELL: A used tip carried sample 1 (well A1 in slot 2), sample 2 (well A2\nin slot 2), sample 3 (well A3 in slot 2), sample 4 (well A4 in slot 2) and 15 more into 3\nwells it was never meant for\n   line 37:  p20.dispense(sample_volumes[i], dest_plate[well_name])\n   At line 37 the tip touched the liquid in wells A5, B1 and B10 in slot 3 while it still\n   carried sample 1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in\n   slot 2), sample 4 (well A4 in slot 2) and 15 more from an earlier step (this line did it\n   3 times). A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches. The protocol never transfers that liquid into these wells on purpose, so it was\n   not meant to be there. If the wells hold different samples, each now holds a little of\n   another.\n   Affected: wells A5, B1 and B10 in slot 3.\n   Fix: Use a fresh tip for each well at line 37. If one tip must serve many wells, dispense\n   from above the liquid (for example `well.top()`) so that the tip never touches what is\n   already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [e57386d7903b]\n\n3. WARNING UNMIXED-AT-END: 19 wells never mixed after sample 1, sample 2, sample 3, sample 4\nand 15 more went in (7 to 26% of the well)\n   line 37:  p20.dispense(sample_volumes[i], dest_plate[well_name])\n   At line 37 the robot added sample 1, sample 2, sample 3, sample 4 and 15 more to wells\n   A1, A2, A3, A4, A6, A8, A9, A10 and 11 more in slot 3, which already held water (this\n   line did it 19 times). The addition was 7 to 26% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   The liquid added last is a sample, so nothing else in the workflow will mix it: a\n   normalisation or a pool left like this is not what it says it is.\n   Affected: wells A1, A2, A3, A4, A6, A8, A9, A10 and 11 more in slot 3.\n   Fix: Mix wells A1, A2, A3, A4, A6, A8, A9, A10 and 11 more in slot 3 after line 37:\n   `mix_after=(5, 40)` on the transfer, or `pipette.mix(5, 40, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [733ba85f6f37]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 36,
+   "title": "A used tip went into a stock: 20 stocks",
+   "explanation": "At line 36 the tip went into sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4 (well A4 in slot 2), sample 6 (well A6 in slot 2) and 16 more while it still carried sample 1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4 (well A4 in slot 2) and 39 more from an earlier step (this line did it 20 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 20 other wells: wells A2, A3, A4, A6, A7, A8, A9, A10 and 12 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 36 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 37,
+   "title": "A used tip carried sample 1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4 (well A4 in slot 2) and 15 more into 3 wells it was never meant for",
+   "explanation": "At line 37 the tip touched the liquid in wells A5, B1 and B10 in slot 3 while it still carried sample 1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4 (well A4 in slot 2) and 15 more from an earlier step (this line did it 3 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 37. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "warning",
+   "certain": true,
+   "line": 37,
+   "title": "19 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 15 more went in (7 to 26% of the well)",
+   "explanation": "At line 37 the robot added sample 1, sample 2, sample 3, sample 4 and 15 more to wells A1, A2, A3, A4, A6, A8, A9, A10 and 11 more in slot 3, which already held water (this line did it 19 times). The addition was 7 to 26% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. The liquid added last is a sample, so nothing else in the workflow will mix it: a normalisation or a pool left like this is not what it says it is.",
+   "fix": "Mix wells A1, A2, A3, A4, A6, A8, A9, A10 and 11 more in slot 3 after line 37: `mix_after=(5, 40)` on the transfer, or `pipette.mix(5, 40, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 4.7,
+ "draft": 2
+}

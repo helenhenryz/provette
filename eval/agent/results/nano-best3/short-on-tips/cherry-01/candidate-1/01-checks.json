@@ -1,0 +1,567 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map cherry-01. 10 of 10 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 3). Reading of the request: down the\n    column (A1, B1, ...).\n\nLabware for the technique (Cherrypicking): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  B3                                    100.0      10.0      90.0       0.0     0.0\n  C7                                    100.0      10.0      90.0       0.0     0.0\n  D1                                    100.0      10.0      90.0       0.0     0.0\n  A12                                   100.0      10.0      90.0       0.0     0.0\n  H6                                    100.0      10.0      90.0       0.0     0.0\n  E5                                    100.0      10.0      90.0       0.0     0.0\n  F9                                    100.0      10.0      90.0       0.0     0.0\n  G2                                    100.0      10.0      90.0       0.0     0.0\n  B11                                   100.0      10.0      90.0       0.0     0.0\n  C4                                    100.0      10.0      90.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 96 Well Plate 200 \u00b5L Flat        D1    D1                                    10.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        G2    G2                                    10.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B3    B3                                    10.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C4    C4                                    10.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        E5    E5                                    10.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        H6    H6                                    10.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        C7    C7                                    10.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        F9    F9                                    10.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        B11   B11                                   10.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A12   A12                                   10.0     100.0\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.\n\nI do not know what 'B3' is (declared at line 30): tell me whether it is a sample, a reagent,\n  a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\n  what was carried will use it.\n\nI do not know what 'C7' is (declared at line 31): tell me whether it is a sample, a reagent,\n  a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\n  what was carried will use it.\n\nI do not know what 'D1' is (declared at line 32): tell me whether it is a sample, a reagent,\n  a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\n  what was carried will use it.\n\nI do not know what 'A12' is (declared at line 33): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'H6' is (declared at line 34): tell me whether it is a sample, a reagent,\n  a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\n  what was carried will use it.\n\nI do not know what 'E5' is (declared at line 35): tell me whether it is a sample, a reagent,\n  a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\n  what was carried will use it.\n\nI do not know what 'F9' is (declared at line 36): tell me whether it is a sample, a reagent,\n  a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\n  what was carried will use it.\n\nI do not know what 'G2' is (declared at line 37): tell me whether it is a sample, a reagent,\n  a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\n  what was carried will use it.\n\nI do not know what 'B11' is (declared at line 38): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'C4' is (declared at line 39): tell me whether it is a sample, a reagent,\n  a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\n  what was carried will use it.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "cherry-01",
+  "technique": "Cherrypicking",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [
+   {
+    "name": "B3",
+    "description": "Source well B3",
+    "wells": [
+     "B3 in slot 2"
+    ],
+    "line": 30,
+    "sentence": "I do not know what 'B3' is (declared at line 30): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "C7",
+    "description": "Source well C7",
+    "wells": [
+     "C7 in slot 2"
+    ],
+    "line": 31,
+    "sentence": "I do not know what 'C7' is (declared at line 31): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "D1",
+    "description": "Source well D1",
+    "wells": [
+     "D1 in slot 2"
+    ],
+    "line": 32,
+    "sentence": "I do not know what 'D1' is (declared at line 32): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "A12",
+    "description": "Source well A12",
+    "wells": [
+     "A12 in slot 2"
+    ],
+    "line": 33,
+    "sentence": "I do not know what 'A12' is (declared at line 33): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "H6",
+    "description": "Source well H6",
+    "wells": [
+     "H6 in slot 2"
+    ],
+    "line": 34,
+    "sentence": "I do not know what 'H6' is (declared at line 34): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "E5",
+    "description": "Source well E5",
+    "wells": [
+     "E5 in slot 2"
+    ],
+    "line": 35,
+    "sentence": "I do not know what 'E5' is (declared at line 35): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "F9",
+    "description": "Source well F9",
+    "wells": [
+     "F9 in slot 2"
+    ],
+    "line": 36,
+    "sentence": "I do not know what 'F9' is (declared at line 36): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "G2",
+    "description": "Source well G2",
+    "wells": [
+     "G2 in slot 2"
+    ],
+    "line": 37,
+    "sentence": "I do not know what 'G2' is (declared at line 37): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "B11",
+    "description": "Source well B11",
+    "wells": [
+     "B11 in slot 2"
+    ],
+    "line": 38,
+    "sentence": "I do not know what 'B11' is (declared at line 38): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "C4",
+    "description": "Source well C4",
+    "wells": [
+     "C4 in slot 2"
+    ],
+    "line": 39,
+    "sentence": "I do not know what 'C4' is (declared at line 39): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   }
+  ],
+  "intent": {
+   "status": "verified",
+   "destination": "3:nest_96_wellplate_200ul_flat",
+   "variant": "down the column (A1, B1, ...)",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 10,
+   "wells_total": 10,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "source@B3": 10.0
+     },
+     "found": {
+      "source@B3": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "source@C7": 10.0
+     },
+     "found": {
+      "source@C7": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "source@D1": 10.0
+     },
+     "found": {
+      "source@D1": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "source@A12": 10.0
+     },
+     "found": {
+      "source@A12": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {
+      "source@H6": 10.0
+     },
+     "found": {
+      "source@H6": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {
+      "source@E5": 10.0
+     },
+     "found": {
+      "source@E5": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {
+      "source@F9": 10.0
+     },
+     "found": {
+      "source@F9": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {
+      "source@G2": 10.0
+     },
+     "found": {
+      "source@G2": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "source@B11": 10.0
+     },
+     "found": {
+      "source@B11": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "source@C4": 10.0
+     },
+     "found": {
+      "source@C4": 10.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "B3",
+    "logical": "source@B3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "C7",
+    "logical": "source@C7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "D1",
+    "logical": "source@D1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "A12",
+    "logical": "source@A12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "H6",
+    "logical": "source@H6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "E5",
+    "logical": "source@E5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "F9",
+    "logical": "source@F9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "G2",
+    "logical": "source@G2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "B11",
+    "logical": "source@B11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "C4",
+    "logical": "source@C4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 90.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "D1",
+     "liquid": "D1",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "G2",
+     "liquid": "G2",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "B3",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C4",
+     "liquid": "C4",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "E5",
+     "liquid": "E5",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "H6",
+     "liquid": "H6",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "C7",
+     "liquid": "C7",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "F9",
+     "liquid": "F9",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B11",
+     "liquid": "B11",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "A12",
+     "declared_ul": 100.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 9 biology problems (9 errors).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: C7 (well C7 in slot 2)\n   line 47:  p20.aspirate(10, source_plate[\"C7\"])\n   At line 47 the tip went into C7 (well C7 in slot 2) while it still carried B3 (well B3 in\n   slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in\n   the next liquid it touches, so this stock now holds material that does not belong there.\n   Liquid drawn from it then took the unwanted material along into 9 other wells: wells A2,\n   B1, B2, C1, D1, E1, F1, G1 and 1 more in slot 3.\n   Affected: well C7 in slot 2.\n   Also reached 9 other wells: wells A2, B1, B2, C1, D1, E1, F1, G1 and 1 more in slot 3.\n   Fix: Pick up a fresh tip before line 47 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [51863569e9c8]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: D1 (well D1 in slot 2)\n   line 50:  p20.aspirate(10, source_plate[\"D1\"])\n   At line 50 the tip went into D1 (well D1 in slot 2) while it still carried B3 (well B3 in\n   slot 2) and C7 (well C7 in slot 2) from an earlier step. A tip that has touched one\n   liquid leaves a little of it in the next liquid it touches, so this stock now holds\n   material that does not belong there. Liquid drawn from it then took the unwanted material\n   along into 8 other wells: wells A2, B2, C1, D1, E1, F1, G1 and H1 in slot 3.\n   Affected: well D1 in slot 2.\n   Also reached 8 other wells: wells A2, B2, C1, D1, E1, F1, G1 and H1 in slot 3.\n   Fix: Pick up a fresh tip before line 50 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [af8006f3d63b]\n\n3. ERROR CONTAM-STOCK: A used tip went into a stock: A12 (well A12 in slot 2)\n   line 53:  p20.aspirate(10, source_plate[\"A12\"])\n   At line 53 the tip went into A12 (well A12 in slot 2) while it still carried B3 (well B3\n   in slot 2), C7 (well C7 in slot 2) and D1 (well D1 in slot 2) from an earlier step. A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, so this\n   stock now holds material that does not belong there. Liquid drawn from it then took the\n   unwanted material along into 7 other wells: wells A2, B2, D1, E1, F1, G1 and H1 in slot\n   3.\n   Affected: well A12 in slot 2.\n   Also reached 7 other wells: wells A2, B2, D1, E1, F1, G1 and H1 in slot 3.\n   Fix: Pick up a fresh tip before line 53 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [1f8299b0ae4c]\n\n4. ERROR CONTAM-STOCK: A used tip went into a stock: H6 (well H6 in slot 2)\n   line 56:  p20.aspirate(10, source_plate[\"H6\"])\n   At line 56 the tip went into H6 (well H6 in slot 2) while it still carried A12 (well A12\n   in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2) and D1 (well D1 in slot 2)\n   from an earlier step. A tip that has touched one liquid leaves a little of it in the next\n   liquid it touches, so this stock now holds material that does not belong there. Liquid\n   drawn from it then took the unwanted material along into 6 other wells: wells A2, B2, E1,\n   F1, G1 and H1 in slot 3.\n   Affected: well H6 in slot 2.\n   Also reached 6 other wells: wells A2, B2, E1, F1, G1 and H1 in slot 3.\n   Fix: Pick up a fresh tip before line 56 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [ba1cd2f62000]\n\n5. ERROR CONTAM-STOCK: A used tip went into a stock: E5 (well E5 in slot 2)\n   line 59:  p20.aspirate(10, source_plate[\"E5\"])\n   At line 59 the tip went into E5 (well E5 in slot 2) while it still carried A12 (well A12\n   in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2), D1 (well D1 in slot 2) and 1\n   more from an earlier step. A tip that has touched one liquid leaves a little of it in the\n   next liquid it touches, so this stock now holds material that does not belong there.\n   Liquid drawn from it then took the unwanted material along into 5 other wells: wells A2,\n   B2, F1, G1 and H1 in slot 3.\n   Affected: well E5 in slot 2.\n   Also reached 5 other wells: wells A2, B2, F1, G1 and H1 in slot 3.\n   Fix: Pick up a fresh tip before line 59 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [a85068e91c85]\n\n6. ERROR CONTAM-STOCK: A used tip went into a stock: F9 (well F9 in slot 2)\n   line 62:  p20.aspirate(10, source_plate[\"F9\"])\n   At line 62 the tip went into F9 (well F9 in slot 2) while it still carried A12 (well A12\n   in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2), D1 (well D1 in slot 2) and 2\n   more from an earlier step. A tip that has touched one liquid leaves a little of it in the\n   next liquid it touches, so this stock now holds material that does not belong there.\n   Liquid drawn from it then took the unwanted material along into 4 other wells: wells A2,\n   B2, G1 and H1 in slot 3.\n   Affected: well F9 in slot 2.\n   Also reached 4 other wells: wells A2, B2, G1 and H1 in slot 3.\n   Fix: Pick up a fresh tip before line 62 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [c4fd55bb9389]\n\n7. ERROR CONTAM-STOCK: A used tip went into a stock: G2 (well G2 in slot 2)\n   line 65:  p20.aspirate(10, source_plate[\"G2\"])\n   At line 65 the tip went into G2 (well G2 in slot 2) while it still carried A12 (well A12\n   in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2), D1 (well D1 in slot 2) and 3\n   more from an earlier step. A tip that has touched one liquid leaves a little of it in the\n   next liquid it touches, so this stock now holds material that does not belong there.\n   Liquid drawn from it then took the unwanted material along into 3 other wells: wells A2,\n   B2 and H1 in slot 3.\n   Affected: well G2 in slot 2.\n   Also reached 3 other wells: wells A2, B2 and H1 in slot 3.\n   Fix: Pick up a fresh tip before line 65 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [93927af0ed40]\n\n8. ERROR CONTAM-STOCK: A used tip went into a stock: B11 (well B11 in slot 2)\n   line 68:  p20.aspirate(10, source_plate[\"B11\"])\n   At line 68 the tip went into B11 (well B11 in slot 2) while it still carried A12 (well\n   A12 in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2), D1 (well D1 in slot 2)\n   and 4 more from an earlier step. A tip that has touched one liquid leaves a little of it\n   in the next liquid it touches, so this stock now holds material that does not belong\n   there. Liquid drawn from it then took the unwanted material along into 2 other wells:\n   wells A2 and B2 in slot 3.\n   Affected: well B11 in slot 2.\n   Also reached 2 other wells: wells A2 and B2 in slot 3.\n   Fix: Pick up a fresh tip before line 68 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [06c5c8062a53]\n\n9. ERROR CONTAM-STOCK: A used tip went into a stock: C4 (well C4 in slot 2)\n   line 71:  p20.aspirate(10, source_plate[\"C4\"])\n   At line 71 the tip went into C4 (well C4 in slot 2) while it still carried A12 (well A12\n   in slot 2), B3 (well B3 in slot 2), B11 (well B11 in slot 2), C7 (well C7 in slot 2) and\n   5 more from an earlier step. A tip that has touched one liquid leaves a little of it in\n   the next liquid it touches, so this stock now holds material that does not belong there.\n   Liquid drawn from it then took the unwanted material along into 1 other well: well B2 in\n   slot 3.\n   Affected: well C4 in slot 2.\n   Also reached 1 other well: well B2 in slot 3.\n   Fix: Pick up a fresh tip before line 71 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [f75d08e91aed]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\n\nI do not know what 'B3' is (declared at line 30): tell me whether it is a sample, a reagent,\na carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\nwhat was carried will use it.\n\nI do not know what 'C7' is (declared at line 31): tell me whether it is a sample, a reagent,\na carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\nwhat was carried will use it.\n\nI do not know what 'D1' is (declared at line 32): tell me whether it is a sample, a reagent,\na carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\nwhat was carried will use it.\n\nI do not know what 'A12' is (declared at line 33): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'H6' is (declared at line 34): tell me whether it is a sample, a reagent,\na carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\nwhat was carried will use it.\n\nI do not know what 'E5' is (declared at line 35): tell me whether it is a sample, a reagent,\na carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\nwhat was carried will use it.\n\nI do not know what 'F9' is (declared at line 36): tell me whether it is a sample, a reagent,\na carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\nwhat was carried will use it.\n\nI do not know what 'G2' is (declared at line 37): tell me whether it is a sample, a reagent,\na carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\nwhat was carried will use it.\n\nI do not know what 'B11' is (declared at line 38): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'C4' is (declared at line 39): tell me whether it is a sample, a reagent,\na carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by\nwhat was carried will use it.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 47,
+   "title": "A used tip went into a stock: C7 (well C7 in slot 2)",
+   "explanation": "At line 47 the tip went into C7 (well C7 in slot 2) while it still carried B3 (well B3 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 9 other wells: wells A2, B1, B2, C1, D1, E1, F1, G1 and 1 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 47 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 50,
+   "title": "A used tip went into a stock: D1 (well D1 in slot 2)",
+   "explanation": "At line 50 the tip went into D1 (well D1 in slot 2) while it still carried B3 (well B3 in slot 2) and C7 (well C7 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 8 other wells: wells A2, B2, C1, D1, E1, F1, G1 and H1 in slot 3.",
+   "fix": "Pick up a fresh tip before line 50 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 53,
+   "title": "A used tip went into a stock: A12 (well A12 in slot 2)",
+   "explanation": "At line 53 the tip went into A12 (well A12 in slot 2) while it still carried B3 (well B3 in slot 2), C7 (well C7 in slot 2) and D1 (well D1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 7 other wells: wells A2, B2, D1, E1, F1, G1 and H1 in slot 3.",
+   "fix": "Pick up a fresh tip before line 53 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 56,
+   "title": "A used tip went into a stock: H6 (well H6 in slot 2)",
+   "explanation": "At line 56 the tip went into H6 (well H6 in slot 2) while it still carried A12 (well A12 in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2) and D1 (well D1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 6 other wells: wells A2, B2, E1, F1, G1 and H1 in slot 3.",
+   "fix": "Pick up a fresh tip before line 56 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 59,
+   "title": "A used tip went into a stock: E5 (well E5 in slot 2)",
+   "explanation": "At line 59 the tip went into E5 (well E5 in slot 2) while it still carried A12 (well A12 in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2), D1 (well D1 in slot 2) and 1 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 5 other wells: wells A2, B2, F1, G1 and H1 in slot 3.",
+   "fix": "Pick up a fresh tip before line 59 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 62,
+   "title": "A used tip went into a stock: F9 (well F9 in slot 2)",
+   "explanation": "At line 62 the tip went into F9 (well F9 in slot 2) while it still carried A12 (well A12 in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2), D1 (well D1 in slot 2) and 2 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 4 other wells: wells A2, B2, G1 and H1 in slot 3.",
+   "fix": "Pick up a fresh tip before line 62 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 65,
+   "title": "A used tip went into a stock: G2 (well G2 in slot 2)",
+   "explanation": "At line 65 the tip went into G2 (well G2 in slot 2) while it still carried A12 (well A12 in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2), D1 (well D1 in slot 2) and 3 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 3 other wells: wells A2, B2 and H1 in slot 3.",
+   "fix": "Pick up a fresh tip before line 65 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 68,
+   "title": "A used tip went into a stock: B11 (well B11 in slot 2)",
+   "explanation": "At line 68 the tip went into B11 (well B11 in slot 2) while it still carried A12 (well A12 in slot 2), B3 (well B3 in slot 2), C7 (well C7 in slot 2), D1 (well D1 in slot 2) and 4 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 2 other wells: wells A2 and B2 in slot 3.",
+   "fix": "Pick up a fresh tip before line 68 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 71,
+   "title": "A used tip went into a stock: C4 (well C4 in slot 2)",
+   "explanation": "At line 71 the tip went into C4 (well C4 in slot 2) while it still carried A12 (well A12 in slot 2), B3 (well B3 in slot 2), B11 (well B11 in slot 2), C7 (well C7 in slot 2) and 5 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 1 other well: well B2 in slot 3.",
+   "fix": "Pick up a fresh tip before line 71 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  }
+ ],
+ "seconds": 4.4,
+ "draft": 1
+}

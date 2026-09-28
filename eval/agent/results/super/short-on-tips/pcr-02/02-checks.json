@@ -1,0 +1,4327 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map pcr-02. 0 of 60 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 7). Reading of the request: 24\n    reactions.\n  well H1 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_20; found\n    11.5 ul master_mix, 11.5 ul water, 12.5 ul [undeclared liquid from D1 in slot 3], 10.5\n    ul [undeclared liquid from D1 in slot 4], 2 ul sample_20\n      - wrong amount of master_mix: the plate map says 12.5 ul, the protocol delivers 11.5\n        ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 11.5 ul\n      - holds 12.5 ul of [undeclared liquid from D1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from D1 in slot 4], which the plate map does not\n        list for this well\n  well F1 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_8; found 11.5\n    ul master_mix, 11.5 ul water, 12.5 ul [undeclared liquid from C1 in slot 3], 10.5 ul\n    [undeclared liquid from C1 in slot 4], 2 ul sample_8\n      - wrong amount of master_mix: the plate map says 12.5 ul, the protocol delivers 11.5\n        ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 11.5 ul\n      - holds 12.5 ul of [undeclared liquid from C1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from C1 in slot 4], which the plate map does not\n        list for this well\n  well D1 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_19; found\n    11.5 ul master_mix, 11.5 ul water, 12.5 ul [undeclared liquid from B1 in slot 3], 10.5\n    ul [undeclared liquid from B1 in slot 4], 2 ul sample_19\n      - wrong amount of master_mix: the plate map says 12.5 ul, the protocol delivers 11.5\n        ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 11.5 ul\n      - holds 12.5 ul of [undeclared liquid from B1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from B1 in slot 4], which the plate map does not\n        list for this well\n  well B1 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_7; found 11.5\n    ul master_mix, 11.5 ul water, 2 ul sample_7\n      - wrong amount of master_mix: the plate map says 12.5 ul, the protocol delivers 11.5\n        ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 11.5 ul\n  well A1 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_1; found 11.5\n    ul master_mix, 11.5 ul water, 2 ul sample_1\n      - wrong amount of master_mix: the plate map says 12.5 ul, the protocol delivers 11.5\n        ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 11.5 ul\n  well H2 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_22; found\n    11.5 ul master_mix, 11.5 ul water, 12.5 ul [undeclared liquid from B1 in slot 3], 10.5\n    ul [undeclared liquid from B1 in slot 4], 2 ul sample_22\n      - wrong amount of master_mix: the plate map says 12.5 ul, the protocol delivers 11.5\n        ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 11.5 ul\n      - holds 12.5 ul of [undeclared liquid from B1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from B1 in slot 4], which the plate map does not\n        list for this well\n  well F2 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_10; found\n    11.5 ul master_mix, 11.5 ul water, 12.5 ul [undeclared liquid from C1 in slot 3], 10.5\n    ul [undeclared liquid from C1 in slot 4], 12.5 ul [undeclared liquid from D1 in slot 3],\n    10.5 ul [undeclared liquid from D1 in slot 4], 2 ul sample_10\n      - wrong amount of master_mix: the plate map says 12.5 ul, the protocol delivers 11.5\n        ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 11.5 ul\n      - holds 12.5 ul of [undeclared liquid from C1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from C1 in slot 4], which the plate map does not\n        list for this well\n      - holds 12.5 ul of [undeclared liquid from D1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from D1 in slot 4], which the plate map does not\n        list for this well\n  well E2 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_4; found 34.5\n    ul master_mix, 34.5 ul water, 12.5 ul [undeclared liquid from C1 in slot 3], 10.5 ul\n    [undeclared liquid from C1 in slot 4], 12.5 ul [undeclared liquid from D1 in slot 3],\n    10.5 ul [undeclared liquid from D1 in slot 4], 2 ul sample_4\n      - wrong amount of master_mix: the plate map says 12.5 ul, the protocol delivers 34.5\n        ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 34.5 ul\n      - holds 12.5 ul of [undeclared liquid from C1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from C1 in slot 4], which the plate map does not\n        list for this well\n      - holds 12.5 ul of [undeclared liquid from D1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from D1 in slot 4], which the plate map does not\n        list for this well\n  well G1 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_14; found\n    12.5 ul [undeclared liquid from D1 in slot 3], 10.5 ul [undeclared liquid from D1 in\n    slot 4], 12.5 ul [undeclared liquid from C1 in slot 3], 10.5 ul [undeclared liquid from\n    C1 in slot 4], 2 ul sample_14\n      - master_mix is missing: the plate map says 12.5 ul, none arrives\n      - water is missing: the plate map says 10.5 ul, none arrives\n      - holds 12.5 ul of [undeclared liquid from D1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from D1 in slot 4], which the plate map does not\n        list for this well\n      - holds 12.5 ul of [undeclared liquid from C1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from C1 in slot 4], which the plate map does not\n        list for this well\n  well E1 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_2; found 12.5\n    ul [undeclared liquid from C1 in slot 3], 10.5 ul [undeclared liquid from C1 in slot 4],\n    12.5 ul [undeclared liquid from B1 in slot 3], 10.5 ul [undeclared liquid from B1 in\n    slot 4], 2 ul sample_2\n      - master_mix is missing: the plate map says 12.5 ul, none arrives\n      - water is missing: the plate map says 10.5 ul, none arrives\n      - holds 12.5 ul of [undeclared liquid from C1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from C1 in slot 4], which the plate map does not\n        list for this well\n      - holds 12.5 ul of [undeclared liquid from B1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from B1 in slot 4], which the plate map does not\n        list for this well\n  well C1 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_13; found\n    12.5 ul [undeclared liquid from B1 in slot 3], 10.5 ul [undeclared liquid from B1 in\n    slot 4], 12.5 ul [undeclared liquid from D1 in slot 3], 10.5 ul [undeclared liquid from\n    D1 in slot 4], 2 ul sample_13\n      - master_mix is missing: the plate map says 12.5 ul, none arrives\n      - water is missing: the plate map says 10.5 ul, none arrives\n      - holds 12.5 ul of [undeclared liquid from B1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from B1 in slot 4], which the plate map does not\n        list for this well\n      - holds 12.5 ul of [undeclared liquid from D1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from D1 in slot 4], which the plate map does not\n        list for this well\n  well G2 (reactions): expected 12.5 ul master_mix, 10.5 ul water, 2 ul sample_16; found 25\n    ul [undeclared liquid from B1 in slot 3], 21 ul [undeclared liquid from B1 in slot 4],\n    12.5 ul [undeclared liquid from C1 in slot 3], 10.5 ul [undeclared liquid from C1 in\n    slot 4], 12.5 ul [undeclared liquid from D1 in slot 3], 10.5 ul [undeclared liquid from\n    D1 in slot 4], 2 ul sample_16\n      - master_mix is missing: the plate map says 12.5 ul, none arrives\n      - water is missing: the plate map says 10.5 ul, none arrives\n      - holds 25 ul of [undeclared liquid from B1 in slot 3], which the plate map does not\n        list for this well\n      - holds 21 ul of [undeclared liquid from B1 in slot 4], which the plate map does not\n        list for this well\n      - holds 12.5 ul of [undeclared liquid from C1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from C1 in slot 4], which the plate map does not\n        list for this well\n      - holds 12.5 ul of [undeclared liquid from D1 in slot 3], which the plate map does not\n        list for this well\n      - holds 10.5 ul of [undeclared liquid from D1 in slot 4], which the plate map does not\n        list for this well\n  ... and 48 more wells that do not match.\n  Note: The reactions are all there, but not in the order of their numbers when the plate is\n    read along rows or down columns. The request does not fix the order, so this is a note:\n    check that your plate layout sheet matches the protocol, not the numbering.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  master mix                            500.0     115.0       0.0     385.0     0.0\n  water                                 500.0     115.0       0.0     385.0     0.0\n  sample 1                               50.0       2.0      48.0       0.0     0.0\n  sample 2                               50.0       2.0      48.0       0.0     0.0\n  sample 3                               50.0       2.0      48.0       0.0     0.0\n  sample 4                               50.0       2.0      48.0       0.0     0.0\n  sample 5                               50.0       2.0      48.0       0.0     0.0\n  sample 6                               50.0       2.0      48.0       0.0     0.0\n  sample 7                               50.0       2.0      48.0       0.0     0.0\n  sample 8                               50.0       2.0      48.0       0.0     0.0\n  sample 9                               50.0       2.0      48.0       0.0     0.0\n  sample 10                              50.0       2.0      48.0       0.0     0.0\n  sample 11                              50.0       2.0      48.0       0.0     0.0\n  sample 12                              50.0       2.0      48.0       0.0     0.0\n  sample 13                              50.0       2.0      48.0       0.0     0.0\n  sample 14                              50.0       2.0      48.0       0.0     0.0\n  sample 15                              50.0       2.0      48.0       0.0     0.0\n  sample 16                              50.0       2.0      48.0       0.0     0.0\n  sample 17                              50.0       2.0      48.0       0.0     0.0\n  sample 18                              50.0       2.0      48.0       0.0     0.0\n  sample 19                              50.0       2.0      48.0       0.0     0.0\n  sample 20                              50.0       2.0      48.0       0.0     0.0\n  sample 21                              50.0       2.0      48.0       0.0     0.0\n  sample 22                              50.0       2.0      48.0       0.0     0.0\n  sample 23                              50.0       2.0      48.0       0.0     0.0\n  sample 24                              50.0       2.0      48.0       0.0     0.0\n  Note: master mix ends in wells the plate map does not list for it: A10 in slot 7 (11.5\n    ul), A4 in slot 7 (11.5 ul), A7 in slot 7 (11.5 ul), B10 in slot 7 (23.0 ul), B4 in slot\n    7 (11.5 ul), B7 in slot 7 (17.0 ul) and 18 more.\n  Note: water ends in wells the plate map does not list for it: A10 in slot 7 (11.5 ul), A4\n    in slot 7 (11.5 ul), A7 in slot 7 (11.5 ul), B10 in slot 7 (23.0 ul), B4 in slot 7 (11.5\n    ul), B7 in slot 7 (17.0 ul) and 18 more.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    master mix                          1650.0     500.0  <-- WOULD RUN DRY\n  4    Opentrons 24 Tube Rack with NEST 1.5  A1    water                               1386.0     500.0  <-- WOULD RUN DRY\n  5    Opentrons 24 Tube Rack with NEST 1.5  A1    sample 1                               2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  B1    sample 7                               2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  C1    sample 13                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  D1    sample 19                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A2    sample 2                               2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  B2    sample 8                               2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  C2    sample 14                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  D2    sample 20                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A3    sample 3                               2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  B3    sample 9                               2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  C3    sample 15                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  D3    sample 21                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A4    sample 4                               2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  B4    sample 10                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  C4    sample 16                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  D4    sample 22                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A5    sample 5                               2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  B5    sample 11                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  C5    sample 17                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  D5    sample 23                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A6    sample 6                               2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  B6    sample 12                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  C6    sample 18                              2.0      50.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  D6    sample 24                              2.0      50.0\n  6    Opentrons 24 Tube Rack with NEST 1.5  A1                                        1760.0         -  <-- DRAWS AIR\n  FLAG: master mix in A1, slot 3 would run dry: the robot draws 1650 ul from it and the\n    protocol declares 500 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 1815 ul in this well, or draw less.\n  FLAG: water in A1, slot 4 would run dry: the robot draws 1386 ul from it and the protocol\n    declares 500 ul. The simulator passes it; the robot would pipette air. Fix: declare and\n    load at least 1524.6 ul in this well, or draw less.\n  FLAG: well in A1, slot 6 is asked for 1760 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  Tips: 24 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  Tips: 48 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-02",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "7:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "24 reactions",
+   "problems": [],
+   "notes": [
+    "The reactions are all there, but not in the order of their numbers when the plate is read along rows or down columns. The request does not fix the order, so this is a note: check that your plate layout sheet matches the protocol, not the numbering."
+   ],
+   "wells_ok": 0,
+   "wells_total": 60,
+   "wells": [
+    {
+     "well": "H1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_20": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_20": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "sample_8": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_19": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998,
+      "sample_19": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "sample_7": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "sample_1": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_22": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998,
+      "sample_22": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_10": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 34.5,
+      "water": 34.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_4": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 34.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 34.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_14": 2.0
+     },
+     "found": {
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "sample_14": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "found": {
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998,
+      "sample_2": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_13": 2.0
+     },
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_13": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_16": 2.0
+     },
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 24.999999999999993,
+      "[undeclared liquid from B1 in slot 4]": 20.999999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_16": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 24.999999999999993,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 20.999999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999995,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999995,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_21": 2.0
+     },
+     "found": {
+      "sample_21": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_15": 2.0
+     },
+     "found": {
+      "sample_15": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "found": {
+      "sample_9": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "found": {
+      "sample_3": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_24": 2.0
+     },
+     "found": {
+      "sample_24": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_18": 2.0
+     },
+     "found": {
+      "sample_18": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "sample_12": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "found": {
+      "sample_6": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_23": 2.0
+     },
+     "found": {
+      "sample_23": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_17": 2.0
+     },
+     "found": {
+      "sample_17": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "found": {
+      "sample_11": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "found": {
+      "sample_5": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 34.5,
+      "water": 34.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 24.999999999999993,
+      "[undeclared liquid from B1 in slot 4]": 20.999999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 17.0,
+      "water": 17.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 34.5,
+      "water": 34.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 23.0,
+      "water": 23.0,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 24.99999999999999,
+      "[undeclared liquid from B1 in slot 4]": 20.999999999999993,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 23.0,
+      "water": 23.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 34.5,
+      "water": 34.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 23.0,
+      "water": 23.0,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 24.999999999999993,
+      "[undeclared liquid from B1 in slot 4]": 20.999999999999993,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "H1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_20": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_20": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "sample_8": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_19": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998,
+      "sample_19": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "sample_7": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "sample_1": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_22": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998,
+      "sample_22": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_10": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 34.5,
+      "water": 34.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_4": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 34.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 34.5,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_14": 2.0
+     },
+     "found": {
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "sample_14": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "found": {
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998,
+      "sample_2": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_13": 2.0
+     },
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_13": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_16": 2.0
+     },
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 24.999999999999993,
+      "[undeclared liquid from B1 in slot 4]": 20.999999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998,
+      "sample_16": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 24.999999999999993,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from B1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 20.999999999999996,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999995,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from C1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 3]",
+       "expected_ul": null,
+       "found_ul": 12.499999999999995,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from D1 in slot 4]",
+       "expected_ul": null,
+       "found_ul": 10.499999999999998,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_21": 2.0
+     },
+     "found": {
+      "sample_21": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_15": 2.0
+     },
+     "found": {
+      "sample_15": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "found": {
+      "sample_9": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "found": {
+      "sample_3": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_24": 2.0
+     },
+     "found": {
+      "sample_24": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_18": 2.0
+     },
+     "found": {
+      "sample_18": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "sample_12": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "found": {
+      "sample_6": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_23": 2.0
+     },
+     "found": {
+      "sample_23": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_17": 2.0
+     },
+     "found": {
+      "sample_17": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "found": {
+      "sample_11": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "found": {
+      "sample_5": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "master_mix",
+       "expected_ul": 12.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 34.5,
+      "water": 34.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 24.999999999999993,
+      "[undeclared liquid from B1 in slot 4]": 20.999999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999998,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999998
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999998,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999998
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 17.0,
+      "water": 17.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 34.5,
+      "water": 34.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 23.0,
+      "water": 23.0,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 24.99999999999999,
+      "[undeclared liquid from B1 in slot 4]": 20.999999999999993,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999995,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 23.0,
+      "water": 23.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 34.5,
+      "water": 34.5,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 23.0,
+      "water": 23.0,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from B1 in slot 3]": 24.999999999999993,
+      "[undeclared liquid from B1 in slot 4]": 20.999999999999993,
+      "[undeclared liquid from C1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from C1 in slot 4]": 10.499999999999996,
+      "[undeclared liquid from D1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from D1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 11.5,
+      "water": 11.5,
+      "[undeclared liquid from B1 in slot 3]": 12.499999999999996,
+      "[undeclared liquid from B1 in slot 4]": 10.499999999999996
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "master mix",
+    "logical": "master_mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 115.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[A10]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[A4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[A7]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[B10]",
+      "ul": 23.0
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[B4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[B7]",
+      "ul": 17.0
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[D10]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[D4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[D7]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[E11]",
+      "ul": 34.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[E5]",
+      "ul": 34.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[E8]",
+      "ul": 34.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F10]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F11]",
+      "ul": 23.0
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F5]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F7]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F8]",
+      "ul": 23.0
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H10]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H11]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H5]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H7]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H8]",
+      "ul": 11.5
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "master mix ends in wells the plate map does not list for it: A10 in slot 7 (11.5 ul), A4 in slot 7 (11.5 ul), A7 in slot 7 (11.5 ul), B10 in slot 7 (23.0 ul), B4 in slot 7 (11.5 ul), B7 in slot 7 (17.0 ul) and 18 more."
+    ]
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 115.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[A10]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[A4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[A7]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[B10]",
+      "ul": 23.0
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[B4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[B7]",
+      "ul": 17.0
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[D10]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[D4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[D7]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[E11]",
+      "ul": 34.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[E5]",
+      "ul": 34.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[E8]",
+      "ul": 34.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F10]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F11]",
+      "ul": 23.0
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F5]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F7]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[F8]",
+      "ul": 23.0
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H10]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H11]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H4]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H5]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H7]",
+      "ul": 11.5
+     },
+     {
+      "well": "7:nest_96_wellplate_100ul_pcr_full_skirt[H8]",
+      "ul": 11.5
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "water ends in wells the plate map does not list for it: A10 in slot 7 (11.5 ul), A4 in slot 7 (11.5 ul), A7 in slot 7 (11.5 ul), B10 in slot 7 (23.0 ul), B4 in slot 7 (11.5 ul), B7 in slot 7 (17.0 ul) and 18 more."
+    ]
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 13",
+    "logical": "sample_13",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 14",
+    "logical": "sample_14",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 15",
+    "logical": "sample_15",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 16",
+    "logical": "sample_16",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 17",
+    "logical": "sample_17",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 18",
+    "logical": "sample_18",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 19",
+    "logical": "sample_19",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 20",
+    "logical": "sample_20",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 21",
+    "logical": "sample_21",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 22",
+    "logical": "sample_22",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 23",
+    "logical": "sample_23",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 24",
+    "logical": "sample_24",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 48.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "master mix",
+     "declared_ul": 500.0,
+     "needed_ul": 1650.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 500.0,
+     "needed_ul": 1386.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 7",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "sample 13",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D1",
+     "liquid": "sample 19",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "sample 2",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 8",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "sample 14",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D2",
+     "liquid": "sample 20",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "sample 3",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 9",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "sample 15",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D3",
+     "liquid": "sample 21",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "sample 4",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "sample 10",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C4",
+     "liquid": "sample 16",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D4",
+     "liquid": "sample 22",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "sample 5",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "sample 11",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C5",
+     "liquid": "sample 17",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D5",
+     "liquid": "sample 23",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 6",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "sample 12",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C6",
+     "liquid": "sample 18",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D6",
+     "liquid": "sample 24",
+     "declared_ul": 50.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "6",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 1760.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 24
+    },
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 48
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 4 biology problems (3 warnings, 1 note).\n\n1. WARNING CONTAM-WELL: A used tip carried master mix (tube A1 in slot 3), the liquid from\ntube B1 in slot 3, the liquid from tube C1 in slot 3, the liquid from tube D1 in slot 3 and\n4 more into 25 wells it was never meant for\n   line 68:  p300_multi.dispense(23, well)\n   At line 68 the tip touched the liquid in wells B4, B7, B10, C1, C4, C7, C10, E1 and 17\n   more in slot 7 while it still carried master mix (tube A1 in slot 3), the liquid from\n   tube B1 in slot 3, the liquid from tube C1 in slot 3, the liquid from tube D1 in slot 3\n   and 4 more from an earlier step (this line did it 14 times). A tip that has touched one\n   liquid leaves a little of it in the next liquid it touches. The protocol never transfers\n   that liquid into these wells on purpose, so it was not meant to be there. If the wells\n   hold different samples, each now holds a little of another.\n   Affected: wells B4, B7, B10, C1, C4, C7, C10, E1 and 17 more in slot 7.\n   Fix: Use a fresh tip for each well at line 68. If one tip must serve many wells, dispense\n   from above the liquid (for example `well.top()`) so that the tip never touches what is\n   already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [8ed93ba51a90]\n\n2. WARNING WELL-CAPACITY: More liquid than the well is rated for: 117 ul against 100 ul, 4\nwells\n   line 68:  p300_multi.dispense(23, well)\n   At line 68 the robot filled wells E2, E5, E8 and E11 in slot 7 past the 100 ul the maker\n   states for it (this line did it 4 times), reaching 117 ul, under the 217 ul the well\n   holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal,\n   a tip going in displaces it over the edge, and the volumes still add up on paper, so the\n   plate map does not see it and the simulator says nothing. Wells: wells E2, E5, E8 and E11\n   in slot 7.\n   Affected: wells E2, E5, E8 and E11 in slot 7.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [40090fe73652]\n\n3. WARNING UNMIXED-AT-END: 12 wells never mixed after sample 1, sample 7, sample 13, sample\n19 and 8 more went in (2 to 8% of the well)\n   line 77:  p20_single.dispense(2, dst_well)\n   At line 77 the robot added sample 1, sample 7, sample 13, sample 19 and 8 more to wells\n   A1, B1, C1, D1, E1, E2, F1, F2 and 4 more in slot 7, which already held master mix,\n   water, the liquid from tube B1 in slot 3, the liquid from tube B1 in slot 4 and 4 more\n   (this line did it 12 times). The addition was 2 to 8% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   The liquid added last is a sample, so nothing else in the workflow will mix it: a\n   normalisation or a pool left like this is not what it says it is.\n   Affected: wells A1, B1, C1, D1, E1, E2, F1, F2 and 4 more in slot 7.\n   Fix: Mix wells A1, B1, C1, D1, E1, E2, F1, F2 and 4 more in slot 7 after line 77:\n   `mix_after=(5, 20 to 94)` on the transfer, or `pipette.mix(5, 20 to 94, well)`, with the\n   volume about 80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [ed249b9f83b6]\n\n4. NOTE UNMIXED-AT-END: 5 wells never mixed after the liquid from tube C1 in slot 3, the\nliquid from tube C1 in slot 4, the liquid from tube D1 in slot 3 and the liquid from tube D1\nin slot 4 went in (25% of the well)\n   line 68:  p300_multi.dispense(23, well)\n   At line 68 the robot added the liquid from tube C1 in slot 3, the liquid from tube C1 in\n   slot 4, the liquid from tube D1 in slot 3 and the liquid from tube D1 in slot 4 to wells\n   F8, F11, G5, G8 and G11 in slot 7, which already held master mix, water, the liquid from\n   tube B1 in slot 3 and the liquid from tube B1 in slot 4 (this line did it 5 times). The\n   addition was 25% of the well, nothing mixed the well afterwards, and the run ended with\n   them that way. Two liquids layered in a small well do not mix on their own, so what the\n   well holds is not at the concentration you calculated. If the plate is vortexed and spun\n   down before it is used, nothing is wrong; if it goes straight to the instrument, the\n   wells are not what the protocol says they are.\n   Affected: wells F8, F11, G5, G8 and G11 in slot 7.\n   Fix: Mix wells F8, F11, G5, G8 and G11 in slot 7 after line 68: `mix_after=(5, 74)` on\n   the transfer, or `pipette.mix(5, 74, well)`, with the volume about 80% of what the well\n   holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [fa8194183403]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 68,
+   "title": "A used tip carried master mix (tube A1 in slot 3), the liquid from tube B1 in slot 3, the liquid from tube C1 in slot 3, the liquid from tube D1 in slot 3 and 4 more into 25 wells it was never meant for",
+   "explanation": "At line 68 the tip touched the liquid in wells B4, B7, B10, C1, C4, C7, C10, E1 and 17 more in slot 7 while it still carried master mix (tube A1 in slot 3), the liquid from tube B1 in slot 3, the liquid from tube C1 in slot 3, the liquid from tube D1 in slot 3 and 4 more from an earlier step (this line did it 14 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 68. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 68,
+   "title": "More liquid than the well is rated for: 117 ul against 100 ul, 4 wells",
+   "explanation": "At line 68 the robot filled wells E2, E5, E8 and E11 in slot 7 past the 100 ul the maker states for it (this line did it 4 times), reaching 117 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells E2, E5, E8 and E11 in slot 7.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "warning",
+   "certain": true,
+   "line": 77,
+   "title": "12 wells never mixed after sample 1, sample 7, sample 13, sample 19 and 8 more went in (2 to 8% of the well)",
+   "explanation": "At line 77 the robot added sample 1, sample 7, sample 13, sample 19 and 8 more to wells A1, B1, C1, D1, E1, E2, F1, F2 and 4 more in slot 7, which already held master mix, water, the liquid from tube B1 in slot 3, the liquid from tube B1 in slot 4 and 4 more (this line did it 12 times). The addition was 2 to 8% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. The liquid added last is a sample, so nothing else in the workflow will mix it: a normalisation or a pool left like this is not what it says it is.",
+   "fix": "Mix wells A1, B1, C1, D1, E1, E2, F1, F2 and 4 more in slot 7 after line 77: `mix_after=(5, 20 to 94)` on the transfer, or `pipette.mix(5, 20 to 94, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 68,
+   "title": "5 wells never mixed after the liquid from tube C1 in slot 3, the liquid from tube C1 in slot 4, the liquid from tube D1 in slot 3 and the liquid from tube D1 in slot 4 went in (25% of the well)",
+   "explanation": "At line 68 the robot added the liquid from tube C1 in slot 3, the liquid from tube C1 in slot 4, the liquid from tube D1 in slot 3 and the liquid from tube D1 in slot 4 to wells F8, F11, G5, G8 and G11 in slot 7, which already held master mix, water, the liquid from tube B1 in slot 3 and the liquid from tube B1 in slot 4 (this line did it 5 times). The addition was 25% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes straight to the instrument, the wells are not what the protocol says they are.",
+   "fix": "Mix wells F8, F11, G5, G8 and G11 in slot 7 after line 68: `mix_after=(5, 74)` on the transfer, or `pipette.mix(5, 74, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 5.0,
+ "draft": 2
+}

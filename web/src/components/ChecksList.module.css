@@ -1,0 +1,343 @@
+/* The checks card: a summary line and bar, one row per check, the Not-checked fold as its foot. */
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-3) var(--s-2);
+}
+.summaryWord {
+  font-size: var(--t-2);
+  font-weight: 600;
+}
+.bar {
+  display: flex;
+  gap: 3px;
+  height: 4px;
+}
+.segment {
+  flex: 1;
+  border-radius: 2px;
+  background: var(--border);
+}
+.seg_ok {
+  background: var(--verified);
+}
+.seg_bad {
+  background: var(--error);
+}
+.seg_warn {
+  background: var(--warning);
+}
+.seg_skip {
+  background: var(--border);
+}
+.seg_muted {
+  background: var(--border);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.4;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .seg_muted {
+    animation: none;
+  }
+}
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.item {
+  border-top: 1px solid var(--border);
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  width: 100%;
+  padding: var(--s-2) var(--s-2) var(--s-2) var(--s-3);
+  text-align: left;
+}
+.rowButton {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  width: 100%;
+  padding: var(--s-2) var(--s-2) var(--s-2) var(--s-3);
+  cursor: pointer;
+}
+.rowButton:hover {
+  background: var(--surface-2);
+}
+.rowButton:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+/* the row's way in: a chevron, turned down while the row is open */
+.more {
+  flex: none;
+  width: 12px;
+  text-align: center;
+  color: var(--faint);
+  transition: transform 0.15s;
+}
+.rowButton:hover .more {
+  color: var(--muted);
+}
+.moreOpen {
+  transform: rotate(90deg);
+}
+
+/* what a row holds, open */
+.detail {
+  padding: 0 var(--s-3) var(--s-3) calc(var(--s-3) + 22px + var(--s-3));
+  font-size: var(--t-1);
+}
+.detailHead {
+  margin: 0 0 var(--s-2);
+  color: var(--muted);
+  max-width: none;
+}
+.rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+.rule {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+}
+.ruleMark {
+  flex: none;
+  width: 1em;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.ruleText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+.ruleId {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+.ruleWords {
+  color: var(--muted);
+}
+.ruleHit {
+  all: unset;
+  flex: none;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+button.ruleHit {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+button.ruleHit:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--s-1) var(--s-3);
+  margin: 0;
+}
+.facts dt {
+  color: var(--muted);
+}
+.facts dd {
+  margin: 0;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.badge {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge_ok {
+  background: var(--verified-bg);
+  color: var(--verified);
+}
+.badge_bad {
+  background: var(--error-bg);
+  color: var(--error);
+}
+.badge_warn {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+.badge_skip,
+.badge_muted {
+  background: var(--surface-2);
+  color: var(--muted);
+}
+.text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+.label {
+  font-size: var(--t-2);
+  font-weight: 500;
+  color: var(--text);
+}
+.caption {
+  font-size: var(--t-1);
+  color: var(--muted);
+}
+.value {
+  flex: none;
+  max-width: 50%;
+  text-align: right;
+  font-size: var(--t-2);
+  font-variant-numeric: tabular-nums;
+}
+.tone_ok {
+  color: var(--verified);
+}
+.tone_bad {
+  color: var(--error);
+}
+.tone_warn {
+  color: var(--warning);
+}
+.tone_note {
+  color: var(--note);
+}
+.tone_skip,
+.tone_muted {
+  color: var(--muted);
+}
+
+/* the foot: what was not checked */
+.fold,
+.foot {
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
+}
+.foot,
+.foldSummary {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-2) var(--s-3);
+  font-size: var(--t-2);
+}
+.foldSummary {
+  cursor: pointer;
+  list-style: none;
+}
+.foldSummary::-webkit-details-marker {
+  display: none;
+}
+.foldSummary:hover .foldLabel {
+  color: var(--text);
+}
+.chevron {
+  width: 22px;
+  text-align: center;
+  color: var(--muted);
+  transition: transform 0.15s;
+}
+.fold[open] .chevron {
+  transform: rotate(90deg);
+}
+.foldLabel {
+  color: var(--muted);
+  font-weight: 500;
+}
+.foldCount {
+  margin-left: auto;
+  color: var(--muted);
+}
+.foldBody {
+  padding: 0 var(--s-3) var(--s-3) calc(var(--s-3) + 22px + var(--s-2));
+}
+.verdict {
+  margin: 0 0 var(--s-2);
+  font-size: var(--t-2);
+  color: var(--text);
+  max-width: none;
+}
+.items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.items li {
+  display: flex;
+  gap: var(--s-2);
+  align-items: baseline;
+  padding-left: 1.2em;
+  position: relative;
+}
+.items li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--warning);
+}
+.general::before {
+  content: "·" !important;
+  color: var(--faint) !important;
+}
+.write {
+  all: unset;
+  cursor: pointer;
+  color: var(--link);
+  font-size: var(--t-1);
+  white-space: nowrap;
+  margin-top: var(--s-2);
+  display: block;
+}
+.write:hover {
+  text-decoration: underline;
+}
+.write:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.physics {
+  margin-top: var(--s-2);
+  font-size: var(--t-1);
+  color: var(--muted);
+  max-width: none;
+}

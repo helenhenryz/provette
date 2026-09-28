@@ -1,0 +1,40 @@
+{
+ "id": "fill-01",
+ "condition": "short-on-tips",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "MIX-TOO-WEAK",
+    "severity": "warning",
+    "certain": true,
+    "line": 48,
+    "title": "A pipette too small to mix 94 wells: 20 ul at most in 505 ul"
+   }
+  ],
+  "draft": 6,
+  "rounds": 6
+ },
+ "tool_calls": 11,
+ "turns": 11,
+ "drafts": 7,
+ "checks": 7,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 734198,
+ "tokens_out": 100251,
+ "seconds": 894.4
+}

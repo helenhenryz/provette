@@ -1,0 +1,35 @@
+.code {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--raised);
+  overflow-y: auto;
+  padding: var(--s-2) 0;
+  font-family: var(--mono);
+  font-size: var(--t-2);
+  line-height: 1.5;
+}
+.table {
+  width: 100%;
+  table-layout: fixed;
+}
+.table td {
+  border: 0;
+  padding: 0 var(--s-3);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+.n {
+  color: var(--faint);
+  text-align: right;
+  user-select: none;
+  width: 3.5em;
+  white-space: nowrap;
+}
+.hit td {
+  background: var(--warning-bg);
+}
+.hit .n {
+  color: var(--warning);
+  font-weight: 600;
+}

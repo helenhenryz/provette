@@ -1,0 +1,21 @@
+# What the product image gets (docker/api.Dockerfile). BuildKit reads this file because it sits
+# next to the Dockerfile; the root .dockerignore belongs to the sandbox image (docker/Dockerfile).
+*
+!pyproject.toml
+!uv.lock
+!README.md
+!LICENSE
+!provette/
+!api/
+!web/
+web/node_modules/
+web/dist/
+!eval/
+!docs/
+!tests/fixtures/protocols/pcr_buggy.py
+!deploy/entrypoint.sh
+eval/checks/protocols/
+eval/**/*.html
+**/__pycache__/
+**/*.pyc
+**/replay.html

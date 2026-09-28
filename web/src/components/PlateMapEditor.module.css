@@ -1,0 +1,80 @@
+.notes {
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  font-size: var(--t-2);
+}
+.notesTitle {
+  font-weight: 600;
+  margin-bottom: var(--s-1);
+}
+.notes ul {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+}
+.tables {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+.amount {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  color: var(--muted);
+}
+.number {
+  width: 6em;
+  padding: 2px var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  font-variant-numeric: tabular-nums;
+}
+.declared {
+  color: var(--faint);
+}
+.linkButton {
+  all: unset;
+  cursor: pointer;
+  color: var(--link);
+  font-size: var(--t-2);
+}
+.linkButton:hover {
+  text-decoration: underline;
+}
+.jsonBox {
+  width: 100%;
+}
+.json {
+  width: 100%;
+  font-family: var(--mono);
+  font-size: var(--t-2);
+  padding: var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.error {
+  color: var(--error);
+  font-size: var(--t-2);
+}
+.button {
+  padding: var(--s-1) var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  cursor: pointer;
+}
+.sums summary {
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: var(--s-2);
+}

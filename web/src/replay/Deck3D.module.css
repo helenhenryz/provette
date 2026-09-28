@@ -1,0 +1,39 @@
+.wrap {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+.canvas {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 260px;
+  display: block;
+  touch-action: none;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-2) var(--s-3);
+  border-top: 1px solid var(--border);
+  font-size: var(--t-1);
+  color: var(--faint);
+}
+.reset {
+  font-size: var(--t-2);
+  padding: var(--s-1) var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  cursor: pointer;
+}
+.reset:hover {
+  background: var(--surface-2);
+}
+.hint {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

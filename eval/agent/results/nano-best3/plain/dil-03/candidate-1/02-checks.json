@@ -1,0 +1,224 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map dil-03. 8 of 8 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: 8 standards;\n    excess removed from the last well.\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  bsa                                  1000.0      99.6     900.4       0.0     0.0\n  water                                2000.0     300.4    1699.6       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    bsa                                   99.6    1000.0\n  3    NEST 12 Well Reservoir 15 mL          A1    water                                300.4    2000.0\n  Tips: 9 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  Tips: 6 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 5.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "dil-03",
+  "technique": "Serial dilution",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "8 standards; excess removed from the last well",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 8,
+   "wells_total": 8,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "standards",
+     "expected": {
+      "bsa": 50.0
+     },
+     "found": {
+      "bsa": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "standards",
+     "expected": {
+      "bsa": 25.0,
+      "water": 25.0
+     },
+     "found": {
+      "bsa": 25.0,
+      "water": 25.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "standards",
+     "expected": {
+      "bsa": 12.5,
+      "water": 37.5
+     },
+     "found": {
+      "bsa": 12.5,
+      "water": 37.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "standards",
+     "expected": {
+      "bsa": 6.25,
+      "water": 43.75
+     },
+     "found": {
+      "bsa": 6.25,
+      "water": 43.75
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "standards",
+     "expected": {
+      "bsa": 3.125,
+      "water": 46.875
+     },
+     "found": {
+      "bsa": 3.12,
+      "water": 46.88
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "standards",
+     "expected": {
+      "bsa": 1.5625,
+      "water": 48.4375
+     },
+     "found": {
+      "bsa": 1.56,
+      "water": 48.44
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.7812,
+      "water": 49.2188
+     },
+     "found": {
+      "bsa": 0.78,
+      "water": 49.22
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.3906,
+      "water": 49.6094
+     },
+     "found": {
+      "bsa": 0.39,
+      "water": 49.61
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "bsa",
+    "logical": "bsa",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 99.6,
+    "left_in_source_ul": 900.4,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 2000.0,
+    "delivered_ul": 300.4,
+    "left_in_source_ul": 1699.6,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "bsa",
+     "declared_ul": 1000.0,
+     "needed_ul": 99.6,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 2000.0,
+     "needed_ul": 300.4,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 9
+    },
+    {
+     "slot": "5",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 6
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 2 biology problems (1 error, 1 note).\n\n1. ERROR PIPETTE-RANGE: 0.39 ul and 0.78 ul are below what the p20_single_gen2 can measure\n(1 ul at least)\n   line 44:  aspirator.aspirate(bsa_vol, tubes[\"A1\"])\n   At line 44 the p20_single_gen2 is asked to draw 0.39 ul and 0.78 ul, below its minimum of\n   1 ul (this line did it twice). A pipette cannot measure less than its minimum: it draws\n   the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The\n   simulator passes the move. Wells: tube A1 in slot 2.\n   Affected: tube A1 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [ead9f389266b]\n\n2. NOTE NO-NEGATIVE-CONTROL: No blank on a dilution series: 8 wells of bsa\n   line 45:  aspirator.dispense(bsa_vol, dest)\n   At line 45 the robot starts a dilution series of bsa in NEST 96 Well Plate 200 \u00b5L Flat\n   (slot 4): 8 wells at 8 concentrations, each level about 2 times weaker than the one\n   before. No well on this plate holds water with no sample, so there is no blank: the curve\n   has no zero to read against, and a signal from the diluent or the plastic cannot be told\n   from the lowest point. Wells: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.\n   Fix: Add a well of water alone, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [27f3a6f51f41]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 44,
+   "title": "0.39 ul and 0.78 ul are below what the p20_single_gen2 can measure (1 ul at least)",
+   "explanation": "At line 44 the p20_single_gen2 is asked to draw 0.39 ul and 0.78 ul, below its minimum of 1 ul (this line did it twice). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A1 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 45,
+   "title": "No blank on a dilution series: 8 wells of bsa",
+   "explanation": "At line 45 the robot starts a dilution series of bsa in NEST 96 Well Plate 200 \u00b5L Flat (slot 4): 8 wells at 8 concentrations, each level about 2 times weaker than the one before. No well on this plate holds water with no sample, so there is no blank: the curve has no zero to read against, and a signal from the diluent or the plastic cannot be told from the lowest point. Wells: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.",
+   "fix": "Add a well of water alone, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 4.6,
+ "draft": 2
+}

@@ -1,0 +1,49 @@
+.loader {
+  aspect-ratio: 4 / 3;
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.overlay {
+  /* over the canvas (4:3, the top of the 3D view) until its first frame is drawn */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+  border-radius: 0;
+  z-index: 1;
+}
+.deck {
+  display: grid;
+  grid-template-columns: repeat(3, 22px);
+  gap: 5px;
+  transform: perspective(300px) rotateX(35deg) rotateZ(-20deg);
+}
+.slot {
+  height: 16px;
+  border-radius: 3px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  animation: wave 1.4s ease-in-out infinite;
+}
+@keyframes wave {
+  0%,
+  60%,
+  100% {
+    background: var(--surface-2);
+    border-color: var(--border);
+  }
+  25% {
+    background: var(--verified-bg);
+    border-color: var(--verified);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slot {
+    animation: none;
+  }
+}

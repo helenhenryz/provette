@@ -1,0 +1,336 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map dil-03. 7 of 8 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: 8 standards;\n    excess removed from the last well.\n  nowhere (standards): expected 0.39 ul bsa, 49.61 ul water; found nothing\n      - no well on the plate holds this\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  bsa                                  1000.0      99.2     900.4       0.0     0.4\n  water                                2000.0     250.8    1699.6       0.0    49.6\n  Note: 0.4 ul of bsa is lost: it left the deck inside a tip that was thrown away.\n  Note: 49.6 ul of water is lost: it left the deck inside a tip that was thrown away.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    bsa                                   99.6    1000.0\n  3    NEST 12 Well Reservoir 15 mL          A1    water                                300.4    2000.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A1                                         150.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A2                                         150.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A3                                         150.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A4                                         150.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A5                                         150.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A6                                         150.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A7                                         150.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A8                                         150.0         -  <-- DRAWS AIR\n  FLAG: well in A1, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in A2, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in A3, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in A4, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in A5, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in A6, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in A7, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in A8, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  Tips: 56 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "dil-03",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "8 standards; excess removed from the last well",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 7,
+   "wells_total": 8,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "standards",
+     "expected": {
+      "bsa": 50.0
+     },
+     "found": {
+      "bsa": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "standards",
+     "expected": {
+      "bsa": 25.0,
+      "water": 25.0
+     },
+     "found": {
+      "water": 25.0,
+      "bsa": 25.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "standards",
+     "expected": {
+      "bsa": 12.5,
+      "water": 37.5
+     },
+     "found": {
+      "water": 37.5,
+      "bsa": 12.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "standards",
+     "expected": {
+      "bsa": 6.25,
+      "water": 43.75
+     },
+     "found": {
+      "water": 43.75,
+      "bsa": 6.25
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "standards",
+     "expected": {
+      "bsa": 3.125,
+      "water": 46.875
+     },
+     "found": {
+      "water": 46.88,
+      "bsa": 3.12
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "standards",
+     "expected": {
+      "bsa": 1.5625,
+      "water": 48.4375
+     },
+     "found": {
+      "water": 48.44,
+      "bsa": 1.56
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.7812,
+      "water": 49.2188
+     },
+     "found": {
+      "water": 49.22,
+      "bsa": 0.78
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "bsa": 0.3906,
+      "water": 49.6094
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "bsa": 0.3906,
+      "water": 49.6094
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "bsa",
+    "logical": "bsa",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 99.21,
+    "left_in_source_ul": 900.4,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.39,
+    "flags": [],
+    "notes": [
+     "0.4 ul of bsa is lost: it left the deck inside a tip that was thrown away."
+    ]
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 2000.0,
+    "delivered_ul": 250.79,
+    "left_in_source_ul": 1699.6,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 49.61,
+    "flags": [],
+    "notes": [
+     "49.6 ul of water is lost: it left the deck inside a tip that was thrown away."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "bsa",
+     "declared_ul": 1000.0,
+     "needed_ul": 99.6,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 2000.0,
+     "needed_ul": 300.4,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 56
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (1 error, 1 warning, 1 note).\n\n1. ERROR PIPETTE-RANGE: 0.39 ul, 0.78 ul, 1.56 ul, 3.12 ul and 2 more are below what the\np300_single_gen2 can measure (20 ul at least)\n   line 45:  p300.aspirate(bsa_vol, tubes[\"A1\"])\n   At line 45 the p300_single_gen2 is asked to draw 0.39 ul, 0.78 ul, 1.56 ul, 3.12 ul and 2\n   more, below its minimum of 20 ul (this line did it 6 times). A pipette cannot measure\n   less than its minimum: it draws the wrong amount, or nothing, and the volumes in this\n   protocol only add up on paper. The simulator passes the move. Wells: tube A1 in slot 2.\n   Affected: tube A1 in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [c498805d5d70]\n\n2. WARNING MIX-TOO-WEAK: Mixing too weak to stir 7 wells: 1 \u00d7 80 ul in 50 ul\n   line 53:  p300.aspirate(mix_volume, dest)\n   At line 53 the tip mixes wells A2, A3, A4, A5, A6, A7 and A8 in slot 4 with 1 stroke of\n   80 ul in a well holding 50 ul (this line did it 35 times). 1 stroke of 80 ul move 1.6 of\n   the well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Fewer\n   than 3 strokes do not mix a well. A stroke of the whole well draws air at the bottom and\n   foams the liquid. Integra draws over 80% of the well five times; three mixes gave 11.8%\n   CV where twenty gave 1.7%. What the well holds is not at the concentration you\n   calculated, and in a dilution series every later step inherits the error.\n   Affected: wells A2, A3, A4, A5, A6, A7 and A8 in slot 4.\n   Fix: Mix the well with about 80% of its volume (40 ul) at least 5 times: `mix(5, 40,\n   well)`. A stroke of the whole well draws air; use no more than 90%.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [32f98f7767bb]\n\n3. NOTE NO-NEGATIVE-CONTROL: No blank on a dilution series: 7 wells of bsa\n   line 46:  p300.dispense(bsa_vol, dest)\n   At line 46 the robot starts a dilution series of bsa in NEST 96 Well Plate 200 \u00b5L Flat\n   (slot 4): 7 wells at 7 concentrations, each level about 2 times weaker than the one\n   before. No well on this plate holds water with no sample, so there is no blank: the curve\n   has no zero to read against, and a signal from the diluent or the plastic cannot be told\n   from the lowest point. Wells: wells A1, A2, A3, A4, A5, A6 and A7 in slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6 and A7 in slot 4.\n   Fix: Add a well of water alone, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [bee4fdff2156]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 45,
+   "title": "0.39 ul, 0.78 ul, 1.56 ul, 3.12 ul and 2 more are below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 45 the p300_single_gen2 is asked to draw 0.39 ul, 0.78 ul, 1.56 ul, 3.12 ul and 2 more, below its minimum of 20 ul (this line did it 6 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A1 in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 53,
+   "title": "Mixing too weak to stir 7 wells: 1 \u00d7 80 ul in 50 ul",
+   "explanation": "At line 53 the tip mixes wells A2, A3, A4, A5, A6, A7 and A8 in slot 4 with 1 stroke of 80 ul in a well holding 50 ul (this line did it 35 times). 1 stroke of 80 ul move 1.6 of the well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Fewer than 3 strokes do not mix a well. A stroke of the whole well draws air at the bottom and foams the liquid. Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix the well with about 80% of its volume (40 ul) at least 5 times: `mix(5, 40, well)`. A stroke of the whole well draws air; use no more than 90%."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 46,
+   "title": "No blank on a dilution series: 7 wells of bsa",
+   "explanation": "At line 46 the robot starts a dilution series of bsa in NEST 96 Well Plate 200 \u00b5L Flat (slot 4): 7 wells at 7 concentrations, each level about 2 times weaker than the one before. No well on this plate holds water with no sample, so there is no blank: the curve has no zero to read against, and a signal from the diluent or the plastic cannot be told from the lowest point. Wells: wells A1, A2, A3, A4, A5, A6 and A7 in slot 4.",
+   "fix": "Add a well of water alone, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 5.5,
+ "draft": 5
+}

@@ -1,0 +1,485 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map cherry-01. 10 of 10 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 3). Reading of the request: down the\n    column (A1, B1, ...).\n\nLabware for the technique (Cherrypicking): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  src_B3                                500.0      10.0     490.0       0.0     0.0\n  src_C7                                500.0      10.0     490.0       0.0     0.0\n  src_D1                                500.0      10.0     490.0       0.0     0.0\n  src_A12                               500.0      10.0     490.0       0.0     0.0\n  src_H6                                500.0      10.0     490.0       0.0     0.0\n  src_E5                                500.0      10.0     490.0       0.0     0.0\n  src_F9                                500.0      10.0     490.0       0.0     0.0\n  src_G2                                500.0      10.0     490.0       0.0     0.0\n  src_B11                               500.0      10.0     490.0       0.0     0.0\n  src_C4                                500.0      10.0     490.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 96 Deep Well Plate 2mL           D1    src_D1                                10.0     500.0\n  2    NEST 96 Deep Well Plate 2mL           G2    src_G2                                10.0     500.0\n  2    NEST 96 Deep Well Plate 2mL           B3    src_B3                                10.0     500.0\n  2    NEST 96 Deep Well Plate 2mL           C4    src_C4                                10.0     500.0\n  2    NEST 96 Deep Well Plate 2mL           E5    src_E5                                10.0     500.0\n  2    NEST 96 Deep Well Plate 2mL           H6    src_H6                                10.0     500.0\n  2    NEST 96 Deep Well Plate 2mL           C7    src_C7                                10.0     500.0\n  2    NEST 96 Deep Well Plate 2mL           F9    src_F9                                10.0     500.0\n  2    NEST 96 Deep Well Plate 2mL           B11   src_B11                               10.0     500.0\n  2    NEST 96 Deep Well Plate 2mL           A12   src_A12                               10.0     500.0\n  Tips: 10 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.\n\nI do not know what 'src_B3' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'src_C7' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'src_D1' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'src_A12' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'src_H6' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'src_E5' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'src_F9' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'src_G2' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'src_B11' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.\n\nI do not know what 'src_C4' is (declared at line 19): tell me whether it is a sample, a\n  reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\n  grade by what was carried will use it.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "cherry-01",
+  "technique": "Cherrypicking",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [
+   {
+    "name": "src_B3",
+    "description": "Source B3",
+    "wells": [
+     "B3 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_B3' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "src_C7",
+    "description": "Source C7",
+    "wells": [
+     "C7 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_C7' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "src_D1",
+    "description": "Source D1",
+    "wells": [
+     "D1 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_D1' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "src_A12",
+    "description": "Source A12",
+    "wells": [
+     "A12 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_A12' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "src_H6",
+    "description": "Source H6",
+    "wells": [
+     "H6 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_H6' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "src_E5",
+    "description": "Source E5",
+    "wells": [
+     "E5 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_E5' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "src_F9",
+    "description": "Source F9",
+    "wells": [
+     "F9 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_F9' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "src_G2",
+    "description": "Source G2",
+    "wells": [
+     "G2 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_G2' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "src_B11",
+    "description": "Source B11",
+    "wells": [
+     "B11 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_B11' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   },
+   {
+    "name": "src_C4",
+    "description": "Source C4",
+    "wells": [
+     "C4 in slot 2"
+    ],
+    "line": 19,
+    "sentence": "I do not know what 'src_C4' is (declared at line 19): tell me whether it is a sample, a reagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that grade by what was carried will use it."
+   }
+  ],
+  "intent": {
+   "status": "verified",
+   "destination": "3:nest_96_wellplate_200ul_flat",
+   "variant": "down the column (A1, B1, ...)",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 10,
+   "wells_total": 10,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "source@B3": 10.0
+     },
+     "found": {
+      "source@B3": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "source@C7": 10.0
+     },
+     "found": {
+      "source@C7": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "source@D1": 10.0
+     },
+     "found": {
+      "source@D1": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "source@A12": 10.0
+     },
+     "found": {
+      "source@A12": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {
+      "source@H6": 10.0
+     },
+     "found": {
+      "source@H6": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {
+      "source@E5": 10.0
+     },
+     "found": {
+      "source@E5": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {
+      "source@F9": 10.0
+     },
+     "found": {
+      "source@F9": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {
+      "source@G2": 10.0
+     },
+     "found": {
+      "source@G2": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "source@B11": 10.0
+     },
+     "found": {
+      "source@B11": 10.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "source@C4": 10.0
+     },
+     "found": {
+      "source@C4": 10.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "src_B3",
+    "logical": "source@B3",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_C7",
+    "logical": "source@C7",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_D1",
+    "logical": "source@D1",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_A12",
+    "logical": "source@A12",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_H6",
+    "logical": "source@H6",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_E5",
+    "logical": "source@E5",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_F9",
+    "logical": "source@F9",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_G2",
+    "logical": "source@G2",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_B11",
+    "logical": "source@B11",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "src_C4",
+    "logical": "source@C4",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "D1",
+     "liquid": "src_D1",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "G2",
+     "liquid": "src_G2",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B3",
+     "liquid": "src_B3",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C4",
+     "liquid": "src_C4",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "E5",
+     "liquid": "src_E5",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "H6",
+     "liquid": "src_H6",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "C7",
+     "liquid": "src_C7",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "F9",
+     "liquid": "src_F9",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "B11",
+     "liquid": "src_B11",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Deep Well Plate 2mL",
+     "well": "A12",
+     "liquid": "src_A12",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 10
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: no biology problems found.\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\nA clean report is not a promise that the experiment will work.\n\nI do not know what 'src_B3' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'src_C7' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'src_D1' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'src_A12' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'src_H6' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'src_E5' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'src_F9' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'src_G2' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'src_B11' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.\n\nI do not know what 'src_C4' is (declared at line 19): tell me whether it is a sample, a\nreagent, a carrier, an enzyme to add last, or a diluent to add first, and the checks that\ngrade by what was carried will use it.",
+ "findings": [],
+ "seconds": 4.2,
+ "draft": 2
+}

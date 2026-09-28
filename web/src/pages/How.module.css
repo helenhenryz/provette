@@ -1,0 +1,90 @@
+.answer {
+  font-size: var(--t-4);
+  line-height: 1.5;
+  max-width: var(--measure);
+}
+.how {
+  font-size: var(--t-2);
+  color: var(--muted);
+  max-width: var(--measure);
+}
+.howLabel {
+  font-weight: 600;
+  color: var(--text);
+}
+.total td {
+  font-weight: 600;
+  border-top: 1px solid var(--border);
+}
+/* margin-bottom and the sides only: the section's stack sets the gap above (base.css .stack) */
+.terms {
+  margin-bottom: 0;
+  margin-inline: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--s-3) var(--s-5);
+  max-width: var(--measure);
+}
+.terms dt {
+  font-weight: 600;
+}
+.terms dd {
+  margin: 0;
+  color: var(--muted);
+}
+@media (max-width: 560px) {
+  .terms {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .terms dd {
+    margin-bottom: var(--s-2);
+  }
+}
+.notChecked {
+  margin-bottom: 0;
+  margin-inline: 0;
+  padding-left: 1.3em;
+  display: grid;
+  gap: var(--s-2);
+  max-width: var(--measure);
+}
+.source {
+  font-size: var(--t-1);
+  color: var(--faint);
+  font-family: var(--mono);
+  max-width: none;
+}
+.history {
+  font-size: var(--t-2);
+  color: var(--muted);
+  max-width: var(--measure);
+}
+.sources {
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.sources summary {
+  cursor: pointer;
+}
+.sources ul {
+  margin: var(--s-2) 0 0;
+  padding-left: 1.2em;
+  font-size: var(--t-1);
+  color: var(--faint);
+}
+
+/* How the checks work: four numbered steps, each a line or two */
+.steps {
+  /* margin-bottom and the sides only, as .terms: the section's stack sets the gap above */
+  margin-bottom: 0;
+  margin-inline: 0;
+  padding-left: 1.4em;
+  display: grid;
+  gap: var(--s-3);
+  max-width: var(--measure);
+}
+.steps li::marker {
+  color: var(--muted);
+  font-weight: 600;
+}

@@ -1,0 +1,32 @@
+{
+ "id": "norm-01",
+ "condition": "short-on-tips",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 3,
+  "check_exit": 0,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 0,
+  "findings": [],
+  "draft": 10,
+  "rounds": 10
+ },
+ "tool_calls": 16,
+ "turns": 16,
+ "drafts": 11,
+ "checks": 11,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 995902,
+ "tokens_out": 101557,
+ "seconds": 1162.7
+}

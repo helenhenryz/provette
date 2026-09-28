@@ -1,0 +1,624 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: VERIFIED against plate map clone-01. 12 of 12 wells hold what the plate map\n  says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 2). Reading of the request: 12\n    digests.\n\nLabware for the technique (Cloning): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  buffer                                 30.0      24.0       6.0       0.0     0.0\n  enzyme                                 20.0      12.0       8.0       0.0     0.0\n  water                                 150.0     144.0       6.0       0.0     0.0\n  plasmid 1                              10.0       5.0       5.0       0.0     0.0\n  plasmid 2                              10.0       5.0       5.0       0.0     0.0\n  plasmid 3                              10.0       5.0       5.0       0.0     0.0\n  plasmid 4                              10.0       5.0       5.0       0.0     0.0\n  plasmid 5                              10.0       5.0       5.0       0.0     0.0\n  plasmid 6                              10.0       5.0       5.0       0.0     0.0\n  plasmid 7                              10.0       5.0       5.0       0.0     0.0\n  plasmid 8                              10.0       5.0       5.0       0.0     0.0\n  plasmid 9                              10.0       5.0       5.0       0.0     0.0\n  plasmid 10                             10.0       5.0       5.0       0.0     0.0\n  plasmid 11                             10.0       5.0       5.0       0.0     0.0\n  plasmid 12                             10.0       5.0       5.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  1    Opentrons 24 Well Aluminum Block with A1    buffer                                24.0      30.0\n  1    Opentrons 24 Well Aluminum Block with B1    plasmid 4                              5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with C1    plasmid 10                             5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with A2    enzyme                                12.0      20.0\n  1    Opentrons 24 Well Aluminum Block with B2    plasmid 5                              5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with C2    plasmid 11                             5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with A3    water                                144.0     150.0  <-- NO MARGIN\n  1    Opentrons 24 Well Aluminum Block with B3    plasmid 6                              5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with C3    plasmid 12                             5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with A4    plasmid 1                              5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with B4    plasmid 7                              5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with A5    plasmid 2                              5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with B5    plasmid 8                              5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with A6    plasmid 3                              5.0      10.0\n  1    Opentrons 24 Well Aluminum Block with B6    plasmid 9                              5.0      10.0\n  FLAG: water in A3, slot 1 has no margin: the robot draws 144 ul of the 150 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 194 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  Tips: 48 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 3.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "clone-01",
+  "technique": "Cloning",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "2:biorad_96_wellplate_200ul_pcr",
+   "variant": "12 digests",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 12,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_1": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_1": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_2": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_2": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_3": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_3": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_4": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_4": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_5": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_5": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_6": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_6": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_7": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_7": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_8": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_8": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_9": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_9": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_10": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_10": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_11": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_11": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_12": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_12": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 30.0,
+    "delivered_ul": 24.0,
+    "left_in_source_ul": 6.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "enzyme",
+    "logical": "enzyme",
+    "role": "reagent",
+    "declared_ul": 20.0,
+    "delivered_ul": 12.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 150.0,
+    "delivered_ul": 144.0,
+    "left_in_source_ul": 6.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 1",
+    "logical": "plasmid_1",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 2",
+    "logical": "plasmid_2",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 3",
+    "logical": "plasmid_3",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 4",
+    "logical": "plasmid_4",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 5",
+    "logical": "plasmid_5",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 6",
+    "logical": "plasmid_6",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 7",
+    "logical": "plasmid_7",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 8",
+    "logical": "plasmid_8",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 9",
+    "logical": "plasmid_9",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 10",
+    "logical": "plasmid_10",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 11",
+    "logical": "plasmid_11",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 12",
+    "logical": "plasmid_12",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "buffer",
+     "declared_ul": 30.0,
+     "needed_ul": 24.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "plasmid 4",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "plasmid 10",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "enzyme",
+     "declared_ul": 20.0,
+     "needed_ul": 12.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "plasmid 5",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "plasmid 11",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "water",
+     "declared_ul": 150.0,
+     "needed_ul": 144.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "plasmid 6",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "plasmid 12",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "plasmid 1",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "plasmid 7",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "plasmid 2",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "plasmid 8",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "plasmid 3",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "plasmid 9",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "3",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 48
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 2 biology problems (2 warnings).\n\n1. WARNING COLD-MODULE-NEVER-SET: A temperature module was loaded but never set\n   line 44:  p20.aspirate(2, block[\"A1\"])\n   At line 44 the robot draws from wells A1, A2, A3, A4, A5, A6, B1, B2 and 7 more in slot\n   1, on a temperature module that the protocol never sets. A temperature module stays at\n   room temperature until `set_temperature` is called, so buffer (carrier), enzyme\n   (reagent), plasmid 1 (sample), plasmid 10 (sample) and 11 more sat on a block that was\n   never cold; the robot pipetted there 48 times over the run. The person setting up the\n   deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2\n   and 7 more in slot 1.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 7 more in slot 1.\n   Fix: Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 24\n   Well Aluminum Block with NEST 1.5 mL Snapcap in slot 1, and `temp_module.deactivate()` at\n   the end.\n   Source: Opentrons, temperature module: at room temperature until set_temperature, which\n   blocks\n           https://docs.opentrons.com/v2/modules/temperature_module.html\n   Source: Thermo Fisher T4 ligase manual: keep on ice, use within minutes\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/t4dnaligase_1U_man.pdf\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   [61a9a24a7061]\n\n2. WARNING ENZYME-BEFORE-DILUENT: An enzyme was added before the water: enzyme\n   line 51:  p20.dispense(1, plate[f\"A{i}\"])\n   At line 51 the robot put enzyme into wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in\n   slot 2 (this line did it 12 times). Take well A1 in slot 2: at that moment it held only 2\n   ul, all of it neat buffer, and the water came afterwards, at line 63, to make the 14 ul\n   of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is\n   meant to be the last thing into a reaction, after the water and the buffer have brought\n   the well to the right dilution. Dropped into neat buffer or a dry well it meets many\n   times the salt it should: a restriction enzyme then cuts at the wrong places (star\n   activity) and a polymerase starts on mis-primed template.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 2.\n   Fix: Reorder the additions to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 2:\n   water and buffer first, then the sample, then enzyme last. Or make a master mix of water,\n   buffer and enzyme in one tube, mix it, and hand it out.\n   Source: Thermo Fisher: restriction enzyme key considerations (the enzyme is the final\n   component)\n           https://www.thermofisher.com/us/en/home/life-science/cloning/cloning-learning-center/invitrogen-school-of-molecular-biology/molecular-cloning/restriction-enzymes/restriction-enzyme-key-considerations.html\n   Source: Promega: restriction enzyme resource (add the enzyme last; glycerol and star\n   activity)\n           https://www.promega.com/resources/guides/nucleic-acid-analysis/restriction-enzyme-resource/\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   Source: Qiagen: critical factors for successful real-time PCR (order of addition)\n           https://www.gene-quantification.de/qiagen-qpcr-sample-assay-tech-guide-2010.pdf\n   [2803879ba210]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "COLD-MODULE-NEVER-SET",
+   "severity": "warning",
+   "certain": true,
+   "line": 44,
+   "title": "A temperature module was loaded but never set",
+   "explanation": "At line 44 the robot draws from wells A1, A2, A3, A4, A5, A6, B1, B2 and 7 more in slot 1, on a temperature module that the protocol never sets. A temperature module stays at room temperature until `set_temperature` is called, so buffer (carrier), enzyme (reagent), plasmid 1 (sample), plasmid 10 (sample) and 11 more sat on a block that was never cold; the robot pipetted there 48 times over the run. The person setting up the deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 7 more in slot 1.",
+   "fix": "Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap in slot 1, and `temp_module.deactivate()` at the end."
+  },
+  {
+   "rule_id": "ENZYME-BEFORE-DILUENT",
+   "severity": "warning",
+   "certain": true,
+   "line": 51,
+   "title": "An enzyme was added before the water: enzyme",
+   "explanation": "At line 51 the robot put enzyme into wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 2 (this line did it 12 times). Take well A1 in slot 2: at that moment it held only 2 ul, all of it neat buffer, and the water came afterwards, at line 63, to make the 14 ul of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction, after the water and the buffer have brought the well to the right dilution. Dropped into neat buffer or a dry well it meets many times the salt it should: a restriction enzyme then cuts at the wrong places (star activity) and a polymerase starts on mis-primed template.",
+   "fix": "Reorder the additions to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 2: water and buffer first, then the sample, then enzyme last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and hand it out."
+  }
+ ],
+ "seconds": 5.2,
+ "draft": 0
+}

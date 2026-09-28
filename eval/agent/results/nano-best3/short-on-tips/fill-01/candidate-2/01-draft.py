@@ -1,0 +1,54 @@
+from opentrons import protocol_api
+
+metadata = {
+    "protocolName": "Fill and inoculate 96-well deep well plate",
+    "apiLevel": "2.19"
+}
+
+def run(protocol: protocol_api.ProtocolContext):
+    # Load labware
+    reservoir = protocol.load_labware("nest_1_reservoir_195ml", 1)
+    deep_well_plate = protocol.load_labware("nest_96_wellplate_2ml_deep", 2)
+    glycerol_plate = protocol.load_labware("nest_96_wellplate_100ul_pcr_full_skirt", 3)
+    p1000_tiprack = protocol.load_labware("opentrons_96_tiprack_1000ul", 4)
+    p20_tiprack = protocol.load_labware("opentrons_96_tiprack_20ul", 5)
+    
+    p1000 = protocol.load_instrument("p1000_single_gen2", "right", tip_racks=[p1000_tiprack])
+    p20 = protocol.load_instrument("p20_single_gen2", "left", tip_racks=[p20_tiprack])
+    
+    # Define LB liquid
+    lb = protocol.define_liquid(
+        name="lb",
+        description="LB medium",
+        display_color="#0000FF"
+    )
+    # Load LB into reservoir well A1
+    reservoir["A1"].load_liquid(liquid=lb, volume=48000)
+    
+    # Define source liquids for each well of glycerol plate and load them
+    for well_name in glycerol_plate.well_names():
+        well = glycerol_plate[well_name]
+        # Define a unique liquid for each well
+        liquid_name = f"source_{well_name}"
+        src_liquid = protocol.define_liquid(
+            name=liquid_name,
+            description=f"Glycerol stock {well_name}",
+            display_color="#000000"
+        )
+        # Load a realistic starting volume, e.g., 100 µL
+        well.load_liquid(liquid=src_liquid, volume=100)
+    
+    # Fill deep well plate with 500 µL LB per well
+    p1000.pick_up_tip()
+    for well in deep_well_plate.wells():
+        p1000.aspirate(500, reservoir["A1"])
+        p1000.dispense(500, well)
+    p1000.drop_tip()
+    
+    # Inoculate each well with 5 µL from matching well of glycerol plate
+    p20.pick_up_tip()
+    for well_name, dest_well in zip(glycerol_plate.well_names(), deep_well_plate.wells()):
+        src_well = glycerol_plate[well_name]
+        p20.aspirate(5, src_well)
+        p20.dispense(5, dest_well)
+    p20.drop_tip()

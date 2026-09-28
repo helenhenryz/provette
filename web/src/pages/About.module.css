@@ -1,0 +1,31 @@
+/* About: the one page of paragraphs, on the same centred column as Write */
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: var(--s-4);
+}
+.page h2 {
+  font-size: var(--t-4);
+}
+.page p {
+  color: var(--text);
+  line-height: 1.65;
+}
+.more {
+  display: grid;
+  max-width: var(--measure);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--s-3);
+}
+.does {
+  margin-bottom: 0;
+  margin-inline: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: var(--s-3);
+  max-width: var(--measure);
+  line-height: 1.65;
+}
+.does strong {
+  font-weight: 600;
+}

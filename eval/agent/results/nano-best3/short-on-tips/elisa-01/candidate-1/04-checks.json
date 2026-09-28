@@ -1,0 +1,1782 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 3,
+ "verify_text": "protocol.py: CANNOT CHECK against plate map elisa-01.\n  The plate map speaks of 'serum_37', but no liquid the protocol declares matches it\n    (pattern (?i)(?:serum|sample)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2, serum 3, serum\n    4, serum 5, serum 6, serum 7, serum 8 and 35 more.\n  The plate map speaks of 'serum_38', but no liquid the protocol declares matches it\n    (pattern (?i)(?:serum|sample)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2, serum 3, serum\n    4, serum 5, serum 6, serum 7, serum 8 and 35 more.\n  The plate map speaks of 'serum_39', but no liquid the protocol declares matches it\n    (pattern (?i)(?:serum|sample)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2, serum 3, serum\n    4, serum 5, serum 6, serum 7, serum 8 and 35 more.\n  The plate map speaks of 'serum_40', but no liquid the protocol declares matches it\n    (pattern (?i)(?:serum|sample)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2, serum 3, serum\n    4, serum 5, serum 6, serum 7, serum 8 and 35 more.\n  The plate map speaks of 'standard_8', but no liquid the protocol declares matches it\n    (pattern (?i)(?:standard|std|calibrator)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2,\n    serum 3, serum 4, serum 5, serum 6, serum 7, serum 8 and 35 more.\n  Nothing was verified. This is not a pass.\n  Note: The declared 'serum' liquids carry no usable number; they are taken in the order the\n    protocol declares them. Every one is treated alike by this plate map, so which is which\n    does not change what is expected.\n\nLabware for the technique (ELISA): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  serum 1                               150.0       0.0      50.0     100.0     0.0  <-- FLAG\n  serum 2                               150.0       0.0      50.0     100.0     0.0  <-- FLAG\n  serum 3                               150.0       0.0      50.0     100.0     0.0  <-- FLAG\n  serum 4                               150.0       0.0      50.0     100.0     0.0  <-- FLAG\n  serum 5                               150.0       0.0      50.0     100.0     0.0  <-- FLAG\n  serum 6                               150.0       0.0      50.0     100.0     0.0  <-- FLAG\n  serum 7                               150.0       0.0      50.0     100.0     0.0  <-- FLAG\n  serum 8                               150.0       0.0      50.0     100.0     0.0  <-- FLAG\n  serum 9                               150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 10                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 11                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 12                              300.0       0.0       0.0     300.0     0.0  <-- FLAG\n  serum 13                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 13 + serum 14                   300.0       0.0       0.0     300.0     0.0  <-- FLAG\n  serum 14                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 15                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 16                              300.0       0.0       0.0     300.0     0.0  <-- FLAG\n  serum 17                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 18                              300.0       0.0       0.0     300.0     0.0  <-- FLAG\n  serum 19                              300.0       0.0       0.0     300.0     0.0  <-- FLAG\n  serum 20                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 21                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 22                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 23                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 24                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 25                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 26                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 27                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 28                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 29                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 30                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 31                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 32                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 33                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 34                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  serum 35                              150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  standard 1                            150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  standard 2                            150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  standard 3                            150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  standard 4                            300.0       0.0       0.0     300.0     0.0  <-- FLAG\n  standard 5                            150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  standard 6                            150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  standard 7                            150.0       0.0       0.0     150.0     0.0  <-- FLAG\n  FLAG: serum 1 ends in wells the plate map does not list for it: A1 in slot 4 (100.0 ul).\n  FLAG: serum 2 ends in wells the plate map does not list for it: A2 in slot 4 (100.0 ul).\n  FLAG: serum 3 ends in wells the plate map does not list for it: A3 in slot 4 (100.0 ul).\n  FLAG: serum 4 ends in wells the plate map does not list for it: A4 in slot 4 (100.0 ul).\n  FLAG: serum 5 ends in wells the plate map does not list for it: A5 in slot 4 (100.0 ul).\n  FLAG: serum 6 ends in wells the plate map does not list for it: A6 in slot 4 (100.0 ul).\n  FLAG: serum 7 ends in wells the plate map does not list for it: A7 in slot 4 (100.0 ul).\n  FLAG: serum 8 ends in wells the plate map does not list for it: A8 in slot 4 (100.0 ul).\n  FLAG: serum 9 ends in wells the plate map does not list for it: B1 in slot 4 (150.0 ul).\n  FLAG: serum 10 ends in wells the plate map does not list for it: B2 in slot 4 (150.0 ul).\n  FLAG: serum 11 ends in wells the plate map does not list for it: B3 in slot 4 (150.0 ul).\n  FLAG: serum 12 ends in wells the plate map does not list for it: B4 in slot 4 (150.0 ul),\n    B5 in slot 4 (150.0 ul).\n  FLAG: serum 13 ends in wells the plate map does not list for it: B6 in slot 4 (150.0 ul).\n  FLAG: serum 13 + serum 14 ends in wells the plate map does not list for it: B7 in slot 4\n    (300.0 ul).\n  FLAG: serum 14 ends in wells the plate map does not list for it: B8 in slot 4 (150.0 ul).\n  FLAG: serum 15 ends in wells the plate map does not list for it: C1 in slot 4 (150.0 ul).\n  FLAG: serum 16 ends in wells the plate map does not list for it: C2 in slot 4 (150.0 ul),\n    C3 in slot 4 (150.0 ul).\n  FLAG: serum 17 ends in wells the plate map does not list for it: C4 in slot 4 (150.0 ul).\n  FLAG: serum 18 ends in wells the plate map does not list for it: C5 in slot 4 (150.0 ul),\n    C6 in slot 4 (150.0 ul).\n  FLAG: serum 19 ends in wells the plate map does not list for it: C7 in slot 4 (150.0 ul),\n    C8 in slot 4 (150.0 ul).\n  FLAG: serum 20 ends in wells the plate map does not list for it: D1 in slot 4 (150.0 ul).\n  FLAG: serum 21 ends in wells the plate map does not list for it: D2 in slot 4 (150.0 ul).\n  FLAG: serum 22 ends in wells the plate map does not list for it: D3 in slot 4 (150.0 ul).\n  FLAG: serum 23 ends in wells the plate map does not list for it: D4 in slot 4 (150.0 ul).\n  FLAG: serum 24 ends in wells the plate map does not list for it: D5 in slot 4 (150.0 ul).\n  FLAG: serum 25 ends in wells the plate map does not list for it: D6 in slot 4 (150.0 ul).\n  FLAG: serum 26 ends in wells the plate map does not list for it: D7 in slot 4 (150.0 ul).\n  FLAG: serum 27 ends in wells the plate map does not list for it: D8 in slot 4 (150.0 ul).\n  FLAG: serum 28 ends in wells the plate map does not list for it: E1 in slot 4 (150.0 ul).\n  FLAG: serum 29 ends in wells the plate map does not list for it: E2 in slot 4 (150.0 ul).\n  FLAG: serum 30 ends in wells the plate map does not list for it: E3 in slot 4 (150.0 ul).\n  FLAG: serum 31 ends in wells the plate map does not list for it: E4 in slot 4 (150.0 ul).\n  FLAG: serum 32 ends in wells the plate map does not list for it: E5 in slot 4 (150.0 ul).\n  FLAG: serum 33 ends in wells the plate map does not list for it: E6 in slot 4 (150.0 ul).\n  FLAG: serum 34 ends in wells the plate map does not list for it: E7 in slot 4 (150.0 ul).\n  FLAG: serum 35 ends in wells the plate map does not list for it: E8 in slot 4 (150.0 ul).\n  FLAG: standard 1 ends in wells the plate map does not list for it: A12 in slot 4 (100.0\n    ul), B12 in slot 4 (50.0 ul).\n  FLAG: standard 2 ends in wells the plate map does not list for it: B12 in slot 4 (50.0\n    ul), C12 in slot 4 (100.0 ul).\n  FLAG: standard 3 ends in wells the plate map does not list for it: D12 in slot 4 (50.0\n    ul), E12 in slot 4 (100.0 ul).\n  FLAG: standard 4 ends in wells the plate map does not list for it: E12 in slot 4 (100.0\n    ul), F12 in slot 4 (100.0 ul), G12 in slot 4 (100.0 ul).\n  FLAG: standard 5 ends in wells the plate map does not list for it: F12 in slot 4 (50.0\n    ul), G12 in slot 4 (100.0 ul).\n  FLAG: standard 6 ends in wells the plate map does not list for it: E12 in slot 4 (100.0\n    ul), H12 in slot 4 (50.0 ul).\n  FLAG: standard 7 ends in wells the plate map does not list for it: E12 in slot 4 (100.0\n    ul), F12 in slot 4 (50.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    standard 1                           500.0     150.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  B1    standard 2                           700.0     150.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  C1    standard 3                           900.0     150.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  D1    standard 4                          1100.0     150.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    standard 4                           500.0     150.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  B2    standard 5                           700.0     150.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  C2    standard 6                           900.0     150.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Tube Rack with NEST 1.5  D2    standard 7                          1100.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A1    serum 1                              100.0     150.0\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B1    serum 9                              300.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      C1    serum 15                             500.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      D1    serum 20                             700.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      E1    serum 28                             900.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A2    serum 2                              100.0     150.0\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B2    serum 10                             300.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      C2    serum 16                             500.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      D2    serum 21                             700.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      E2    serum 29                             900.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A3    serum 3                              100.0     150.0\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B3    serum 11                             300.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      C3    serum 16                             500.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      D3    serum 22                             700.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      E3    serum 30                             900.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A4    serum 4                              100.0     150.0\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B4    serum 12                             300.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      C4    serum 17                             500.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      D4    serum 23                             700.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      E4    serum 31                             900.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A5    serum 5                              100.0     150.0\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B5    serum 12                             300.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      C5    serum 18                             500.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      D5    serum 24                             700.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      E5    serum 32                             900.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A6    serum 6                              100.0     150.0\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B6    serum 13                             300.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      C6    serum 18                             500.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      D6    serum 25                             700.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      E6    serum 33                             900.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A7    serum 7                              100.0     150.0\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B7    serum 13 + serum 14                  300.0     300.0  <-- NO MARGIN\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      C7    serum 19                             500.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      D7    serum 26                             700.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      E7    serum 34                             900.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      A8    serum 8                              100.0     150.0\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      B8    serum 14                             300.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      C8    serum 19                             500.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      D8    serum 27                             700.0     150.0  <-- WOULD RUN DRY\n  3    Bio-Rad 96 Well Plate 200 \u00b5L PCR      E8    serum 35                             900.0     150.0  <-- WOULD RUN DRY\n  FLAG: standard 1 in A1, slot 2 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: standard 2 in B1, slot 2 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: standard 3 in C1, slot 2 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  FLAG: standard 4 in D1, slot 2 would run dry: the robot draws 1100 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 1210 ul in this well, or draw less.\n  FLAG: standard 4 in A2, slot 2 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: standard 5 in B2, slot 2 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: standard 6 in C2, slot 2 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  FLAG: standard 7 in D2, slot 2 would run dry: the robot draws 1100 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 1210 ul in this well, or draw less.\n  FLAG: serum 9 in B1, slot 3 would run dry: the robot draws 300 ul from it and the protocol\n    declares 150 ul. The simulator passes it; the robot would pipette air. Fix: declare and\n    load at least 350 ul in this well, or draw less.\n  FLAG: serum 15 in C1, slot 3 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: serum 20 in D1, slot 3 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: serum 28 in E1, slot 3 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  FLAG: serum 10 in B2, slot 3 would run dry: the robot draws 300 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 350 ul in this well, or draw less.\n  FLAG: serum 16 in C2, slot 3 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: serum 21 in D2, slot 3 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: serum 29 in E2, slot 3 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  FLAG: serum 11 in B3, slot 3 would run dry: the robot draws 300 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 350 ul in this well, or draw less.\n  FLAG: serum 16 in C3, slot 3 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: serum 22 in D3, slot 3 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: serum 30 in E3, slot 3 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  FLAG: serum 12 in B4, slot 3 would run dry: the robot draws 300 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 350 ul in this well, or draw less.\n  FLAG: serum 17 in C4, slot 3 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: serum 23 in D4, slot 3 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: serum 31 in E4, slot 3 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  FLAG: serum 12 in B5, slot 3 would run dry: the robot draws 300 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 350 ul in this well, or draw less.\n  FLAG: serum 18 in C5, slot 3 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: serum 24 in D5, slot 3 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: serum 32 in E5, slot 3 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  FLAG: serum 13 in B6, slot 3 would run dry: the robot draws 300 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 350 ul in this well, or draw less.\n  FLAG: serum 18 in C6, slot 3 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: serum 25 in D6, slot 3 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: serum 33 in E6, slot 3 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  FLAG: serum 13 + serum 14 in B7, slot 3 has no margin: the robot draws 300 ul of the 300\n    ul declared, and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for\n    this well, declare at least 350 ul (10% or 50 ul more than is drawn, whichever is\n    larger), and load that much.\n  FLAG: serum 19 in C7, slot 3 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: serum 26 in D7, slot 3 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: serum 34 in E7, slot 3 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  FLAG: serum 14 in B8, slot 3 would run dry: the robot draws 300 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 350 ul in this well, or draw less.\n  FLAG: serum 19 in C8, slot 3 would run dry: the robot draws 500 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 550 ul in this well, or draw less.\n  FLAG: serum 27 in D8, slot 3 would run dry: the robot draws 700 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 770 ul in this well, or draw less.\n  FLAG: serum 35 in E8, slot 3 would run dry: the robot draws 900 ul from it and the\n    protocol declares 150 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 990 ul in this well, or draw less.\n  Tips: 48 from Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "elisa-01",
+  "technique": "ELISA",
+  "exit_code": 3,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "cannot_check",
+   "destination": null,
+   "variant": null,
+   "problems": [
+    "The plate map speaks of 'serum_37', but no liquid the protocol declares matches it (pattern (?i)(?:serum|sample)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2, serum 3, serum 4, serum 5, serum 6, serum 7, serum 8 and 35 more.",
+    "The plate map speaks of 'serum_38', but no liquid the protocol declares matches it (pattern (?i)(?:serum|sample)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2, serum 3, serum 4, serum 5, serum 6, serum 7, serum 8 and 35 more.",
+    "The plate map speaks of 'serum_39', but no liquid the protocol declares matches it (pattern (?i)(?:serum|sample)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2, serum 3, serum 4, serum 5, serum 6, serum 7, serum 8 and 35 more.",
+    "The plate map speaks of 'serum_40', but no liquid the protocol declares matches it (pattern (?i)(?:serum|sample)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2, serum 3, serum 4, serum 5, serum 6, serum 7, serum 8 and 35 more.",
+    "The plate map speaks of 'standard_8', but no liquid the protocol declares matches it (pattern (?i)(?:standard|std|calibrator)\\D{0,12}?(\\d+)). Declared: serum 1, serum 2, serum 3, serum 4, serum 5, serum 6, serum 7, serum 8 and 35 more."
+   ],
+   "notes": [
+    "The declared 'serum' liquids carry no usable number; they are taken in the order the protocol declares them. Every one is treated alike by this plate map, so which is which does not change what is expected."
+   ],
+   "wells_ok": 0,
+   "wells_total": 0,
+   "wells": [],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "serum 1",
+    "logical": "serum_1",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[A1]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 1 ends in wells the plate map does not list for it: A1 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 2",
+    "logical": "serum_2",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[A2]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 2 ends in wells the plate map does not list for it: A2 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 3",
+    "logical": "serum_3",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[A3]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 3 ends in wells the plate map does not list for it: A3 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 4",
+    "logical": "serum_4",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[A4]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 4 ends in wells the plate map does not list for it: A4 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 5",
+    "logical": "serum_5",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[A5]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 5 ends in wells the plate map does not list for it: A5 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 6",
+    "logical": "serum_6",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[A6]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 6 ends in wells the plate map does not list for it: A6 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 7",
+    "logical": "serum_7",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[A7]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 7 ends in wells the plate map does not list for it: A7 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 8",
+    "logical": "serum_8",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[A8]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 8 ends in wells the plate map does not list for it: A8 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 9",
+    "logical": "serum_9",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B1]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 9 ends in wells the plate map does not list for it: B1 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 10",
+    "logical": "serum_10",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B2]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 10 ends in wells the plate map does not list for it: B2 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 11",
+    "logical": "serum_11",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B3]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 11 ends in wells the plate map does not list for it: B3 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 12",
+    "logical": "serum_12",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B4]",
+      "ul": 150.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B5]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 12 ends in wells the plate map does not list for it: B4 in slot 4 (150.0 ul), B5 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 13",
+    "logical": "serum_13",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B6]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 13 ends in wells the plate map does not list for it: B6 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 13 + serum 14",
+    "logical": "serum_14",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B7]",
+      "ul": 300.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 13 + serum 14 ends in wells the plate map does not list for it: B7 in slot 4 (300.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 14",
+    "logical": "serum_15",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B8]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 14 ends in wells the plate map does not list for it: B8 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 15",
+    "logical": "serum_16",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[C1]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 15 ends in wells the plate map does not list for it: C1 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 16",
+    "logical": "serum_17",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[C2]",
+      "ul": 150.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[C3]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 16 ends in wells the plate map does not list for it: C2 in slot 4 (150.0 ul), C3 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 17",
+    "logical": "serum_18",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[C4]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 17 ends in wells the plate map does not list for it: C4 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 18",
+    "logical": "serum_19",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[C5]",
+      "ul": 150.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[C6]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 18 ends in wells the plate map does not list for it: C5 in slot 4 (150.0 ul), C6 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 19",
+    "logical": "serum_20",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[C7]",
+      "ul": 150.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[C8]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 19 ends in wells the plate map does not list for it: C7 in slot 4 (150.0 ul), C8 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 20",
+    "logical": "serum_21",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[D1]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 20 ends in wells the plate map does not list for it: D1 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 21",
+    "logical": "serum_22",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[D2]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 21 ends in wells the plate map does not list for it: D2 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 22",
+    "logical": "serum_23",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[D3]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 22 ends in wells the plate map does not list for it: D3 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 23",
+    "logical": "serum_24",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[D4]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 23 ends in wells the plate map does not list for it: D4 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 24",
+    "logical": "serum_25",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[D5]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 24 ends in wells the plate map does not list for it: D5 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 25",
+    "logical": "serum_26",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[D6]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 25 ends in wells the plate map does not list for it: D6 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 26",
+    "logical": "serum_27",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[D7]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 26 ends in wells the plate map does not list for it: D7 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 27",
+    "logical": "serum_28",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[D8]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 27 ends in wells the plate map does not list for it: D8 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 28",
+    "logical": "serum_29",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E1]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 28 ends in wells the plate map does not list for it: E1 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 29",
+    "logical": "serum_30",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E2]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 29 ends in wells the plate map does not list for it: E2 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 30",
+    "logical": "serum_31",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E3]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 30 ends in wells the plate map does not list for it: E3 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 31",
+    "logical": "serum_32",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E4]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 31 ends in wells the plate map does not list for it: E4 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 32",
+    "logical": "serum_33",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E5]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 32 ends in wells the plate map does not list for it: E5 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 33",
+    "logical": "serum_34",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E6]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 33 ends in wells the plate map does not list for it: E6 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 34",
+    "logical": "serum_35",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E7]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 34 ends in wells the plate map does not list for it: E7 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "serum 35",
+    "logical": "serum_36",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E8]",
+      "ul": 150.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "serum 35 ends in wells the plate map does not list for it: E8 in slot 4 (150.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "standard 1",
+    "logical": "standard_1",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[A12]",
+      "ul": 100.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B12]",
+      "ul": 50.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "standard 1 ends in wells the plate map does not list for it: A12 in slot 4 (100.0 ul), B12 in slot 4 (50.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "standard 2",
+    "logical": "standard_2",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[B12]",
+      "ul": 50.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[C12]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "standard 2 ends in wells the plate map does not list for it: B12 in slot 4 (50.0 ul), C12 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "standard 3",
+    "logical": "standard_3",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[D12]",
+      "ul": 50.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E12]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "standard 3 ends in wells the plate map does not list for it: D12 in slot 4 (50.0 ul), E12 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "standard 4",
+    "logical": "standard_4",
+    "role": "sample",
+    "declared_ul": 300.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E12]",
+      "ul": 100.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[F12]",
+      "ul": 100.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[G12]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "standard 4 ends in wells the plate map does not list for it: E12 in slot 4 (100.0 ul), F12 in slot 4 (100.0 ul), G12 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "standard 5",
+    "logical": "standard_5",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[F12]",
+      "ul": 50.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[G12]",
+      "ul": 100.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "standard 5 ends in wells the plate map does not list for it: F12 in slot 4 (50.0 ul), G12 in slot 4 (100.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "standard 6",
+    "logical": "standard_6",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E12]",
+      "ul": 100.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[H12]",
+      "ul": 50.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "standard 6 ends in wells the plate map does not list for it: E12 in slot 4 (100.0 ul), H12 in slot 4 (50.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "standard 7",
+    "logical": "standard_7",
+    "role": "sample",
+    "declared_ul": 150.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[E12]",
+      "ul": 100.0
+     },
+     {
+      "well": "4:nest_96_wellplate_100ul_pcr_full_skirt[F12]",
+      "ul": 50.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "standard 7 ends in wells the plate map does not list for it: E12 in slot 4 (100.0 ul), F12 in slot 4 (50.0 ul)."
+    ],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "standard 1",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "standard 2",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "standard 3",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D1",
+     "liquid": "standard 4",
+     "declared_ul": 150.0,
+     "needed_ul": 1100.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "standard 4",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "standard 5",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "standard 6",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D2",
+     "liquid": "standard 7",
+     "declared_ul": 150.0,
+     "needed_ul": 1100.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A1",
+     "liquid": "serum 1",
+     "declared_ul": 150.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B1",
+     "liquid": "serum 9",
+     "declared_ul": 150.0,
+     "needed_ul": 300.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "C1",
+     "liquid": "serum 15",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "D1",
+     "liquid": "serum 20",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "E1",
+     "liquid": "serum 28",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A2",
+     "liquid": "serum 2",
+     "declared_ul": 150.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B2",
+     "liquid": "serum 10",
+     "declared_ul": 150.0,
+     "needed_ul": 300.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "C2",
+     "liquid": "serum 16",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "D2",
+     "liquid": "serum 21",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "E2",
+     "liquid": "serum 29",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A3",
+     "liquid": "serum 3",
+     "declared_ul": 150.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B3",
+     "liquid": "serum 11",
+     "declared_ul": 150.0,
+     "needed_ul": 300.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "C3",
+     "liquid": "serum 16",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "D3",
+     "liquid": "serum 22",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "E3",
+     "liquid": "serum 30",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A4",
+     "liquid": "serum 4",
+     "declared_ul": 150.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B4",
+     "liquid": "serum 12",
+     "declared_ul": 150.0,
+     "needed_ul": 300.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "C4",
+     "liquid": "serum 17",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "D4",
+     "liquid": "serum 23",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "E4",
+     "liquid": "serum 31",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A5",
+     "liquid": "serum 5",
+     "declared_ul": 150.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B5",
+     "liquid": "serum 12",
+     "declared_ul": 150.0,
+     "needed_ul": 300.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "C5",
+     "liquid": "serum 18",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "D5",
+     "liquid": "serum 24",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "E5",
+     "liquid": "serum 32",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A6",
+     "liquid": "serum 6",
+     "declared_ul": 150.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B6",
+     "liquid": "serum 13",
+     "declared_ul": 150.0,
+     "needed_ul": 300.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "C6",
+     "liquid": "serum 18",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "D6",
+     "liquid": "serum 25",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "E6",
+     "liquid": "serum 33",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A7",
+     "liquid": "serum 7",
+     "declared_ul": 150.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B7",
+     "liquid": "serum 13 + serum 14",
+     "declared_ul": 300.0,
+     "needed_ul": 300.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "C7",
+     "liquid": "serum 19",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "D7",
+     "liquid": "serum 26",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "E7",
+     "liquid": "serum 34",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "A8",
+     "liquid": "serum 8",
+     "declared_ul": 150.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "B8",
+     "liquid": "serum 14",
+     "declared_ul": 150.0,
+     "needed_ul": 300.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "C8",
+     "liquid": "serum 19",
+     "declared_ul": 150.0,
+     "needed_ul": 500.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "D8",
+     "liquid": "serum 27",
+     "declared_ul": 150.0,
+     "needed_ul": 700.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Bio-Rad 96 Well Plate 200 \u00b5L PCR",
+     "well": "E8",
+     "liquid": "serum 35",
+     "declared_ul": 150.0,
+     "needed_ul": 900.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L",
+     "tips": 48
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 38 biology problems (20 errors, 17 warnings, 1 note).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: 3 stocks\n   line 122:  p300_multi.aspirate(100, tuberack[\"B1\"])\n   At line 122 the tip went into standard 2 (tube B1 in slot 2), standard 3 (tube C1 in slot\n   2) and standard 4 (tube D1 in slot 2) while it still carried standard 1 (tube A1 in slot\n   2), standard 2 (tube B1 in slot 2), standard 3 (tube C1 in slot 2) and standard 4 (tube\n   D1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of\n   it in the next liquid it touches, so these stocks now hold material that does not belong\n   there. Liquid drawn from them then took the unwanted material along into 7 other wells:\n   tubes B2, C2 and D2 in slot 2; wells B12, D12, F12 and H12 in slot 4.\n   Affected: tubes B1, C1 and D1 in slot 2.\n   Also reached 7 other wells: tubes B2, C2 and D2 in slot 2; wells B12, D12, F12 and H12 in\n   slot 4.\n   Fix: Pick up a fresh tip before line 122 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [bf3801956a12]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: 4 stocks\n   line 128:  p300_multi.aspirate(100, tuberack[\"A2\"])\n   At line 128 the tip went into standard 4 (tube A2 in slot 2), standard 5 (tube B2 in slot\n   2), standard 6 (tube C2 in slot 2) and standard 7 (tube D2 in slot 2) while it still\n   carried standard 1 (tube A1 in slot 2), standard 2 (tube B1 in slot 2), standard 3 (tube\n   C1 in slot 2) and standard 4 (tube D1 in slot 2) from an earlier step. A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so these stocks\n   now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 1 other well: well H12 in slot 4.\n   Affected: tubes A2, B2, C2 and D2 in slot 2.\n   Also reached 1 other well: well H12 in slot 4.\n   Fix: Pick up a fresh tip before line 128 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [53a83e95e5dc]\n\n3. ERROR WELL-CAPACITY: More liquid than the well can hold: 400 ul in a 217 ul well, 1 well\n   line 129:  p300_multi.dispense(100, plate[\"E12\"])\n   At line 129 the robot filled well E12 in slot 4 past the rim (217 ul to the rim by the\n   labware definition's shape; the maker states 100 ul), reaching 400 ul. The liquid runs\n   into the neighbouring wells and onto the deck; the volumes still add up on paper, so the\n   plate map does not see it, and the simulator says nothing. Wells: well E12 in slot 4.\n   Affected: well E12 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [f10de295a3bf]\n\n4. ERROR CONTAM-STOCK: A used tip went into a stock: 3 stocks\n   line 130:  p300_multi.aspirate(100, tuberack[\"B2\"])\n   At line 130 the tip went into standard 5 (tube B2 in slot 2), standard 6 (tube C2 in slot\n   2) and standard 7 (tube D2 in slot 2) while it still carried standard 4 (tube A2 in slot\n   2), standard 5 (tube B2 in slot 2), standard 6 (tube C2 in slot 2) and standard 7 (tube\n   D2 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of\n   it in the next liquid it touches, so these stocks now hold material that does not belong\n   there. Liquid drawn from them then took the unwanted material along into 2 other wells:\n   wells F12 and H12 in slot 4.\n   Affected: tubes B2, C2 and D2 in slot 2.\n   Also reached 2 other wells: wells F12 and H12 in slot 4.\n   Fix: Pick up a fresh tip before line 130 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [c128240c29ab]\n\n5. ERROR CONTAM-STOCK: A used tip went into a stock: 8 stocks\n   line 142:  p300_multi.aspirate(100, source_plate[\"A2\"])\n   At line 142 the tip went into serum 2 (well A2 in slot 3), serum 10 (well B2 in slot 3),\n   serum 16 (well C2 in slot 3), serum 21 (well D2 in slot 3) and 4 more while it still\n   carried serum 1 (well A1 in slot 3), serum 9 (well B1 in slot 3), serum 15 (well C1 in\n   slot 3), serum 20 (well D1 in slot 3) and 4 more from an earlier step. A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so these stocks\n   now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 56 other wells: wells A2, A3, A4, A5, A6, A7, A8, B2 and 48\n   more in slot 4.\n   Affected: wells A2, B2, C2, D2, E2, F2, G2 and H2 in slot 3.\n   Also reached 56 other wells: wells A2, A3, A4, A5, A6, A7, A8, B2 and 48 more in slot 4.\n   Fix: Pick up a fresh tip before line 142 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [249dee1e72a4]\n\n6. ERROR CONTAM-STOCK: A used tip went into a stock: 8 stocks\n   line 144:  p300_multi.aspirate(100, source_plate[\"A3\"])\n   At line 144 the tip went into serum 3 (well A3 in slot 3), serum 11 (well B3 in slot 3),\n   serum 16 (well C3 in slot 3), serum 22 (well D3 in slot 3) and 4 more while it still\n   carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 9 (well B1 in\n   slot 3), serum 10 (well B2 in slot 3) and 11 more from an earlier step. A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so these stocks\n   now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 48 other wells: wells A3, A4, A5, A6, A7, A8, B3, B4 and 40\n   more in slot 4.\n   Affected: wells A3, B3, C3, D3, E3, F3, G3 and H3 in slot 3.\n   Also reached 48 other wells: wells A3, A4, A5, A6, A7, A8, B3, B4 and 40 more in slot 4.\n   Fix: Pick up a fresh tip before line 144 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [2f80c98019b2]\n\n7. ERROR CONTAM-STOCK: A used tip went into a stock: 8 stocks\n   line 146:  p300_multi.aspirate(100, source_plate[\"A4\"])\n   At line 146 the tip went into serum 4 (well A4 in slot 3), serum 12 (well B4 in slot 3),\n   serum 17 (well C4 in slot 3), serum 23 (well D4 in slot 3) and 4 more while it still\n   carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well A3 in\n   slot 3), serum 9 (well B1 in slot 3) and 20 more from an earlier step. A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so these stocks\n   now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 40 other wells: wells A4, A5, A6, A7, A8, B4, B5, B6 and 32\n   more in slot 4.\n   Affected: wells A4, B4, C4, D4, E4, F4, G4 and H4 in slot 3.\n   Also reached 40 other wells: wells A4, A5, A6, A7, A8, B4, B5, B6 and 32 more in slot 4.\n   Fix: Pick up a fresh tip before line 146 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [a95b712e2b0f]\n\n8. ERROR CONTAM-STOCK: A used tip went into a stock: 8 stocks\n   line 148:  p300_multi.aspirate(100, source_plate[\"A5\"])\n   At line 148 the tip went into serum 5 (well A5 in slot 3), serum 12 (well B5 in slot 3),\n   serum 18 (well C5 in slot 3), serum 24 (well D5 in slot 3) and 4 more while it still\n   carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well A3 in\n   slot 3), serum 4 (well A4 in slot 3) and 27 more from an earlier step. A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so these stocks\n   now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 32 other wells: wells A5, A6, A7, A8, B5, B6, B7, B8 and 24\n   more in slot 4.\n   Affected: wells A5, B5, C5, D5, E5, F5, G5 and H5 in slot 3.\n   Also reached 32 other wells: wells A5, A6, A7, A8, B5, B6, B7, B8 and 24 more in slot 4.\n   Fix: Pick up a fresh tip before line 148 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [dfe7afc9fc72]\n\n9. ERROR CONTAM-STOCK: A used tip went into a stock: 8 stocks\n   line 150:  p300_multi.aspirate(100, source_plate[\"A6\"])\n   At line 150 the tip went into serum 6 (well A6 in slot 3), serum 13 (well B6 in slot 3),\n   serum 18 (well C6 in slot 3), serum 25 (well D6 in slot 3) and 4 more while it still\n   carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well A3 in\n   slot 3), serum 4 (well A4 in slot 3) and 35 more from an earlier step. A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so these stocks\n   now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 24 other wells: wells A6, A7, A8, B6, B7, B8, C6, C7 and 16\n   more in slot 4.\n   Affected: wells A6, B6, C6, D6, E6, F6, G6 and H6 in slot 3.\n   Also reached 24 other wells: wells A6, A7, A8, B6, B7, B8, C6, C7 and 16 more in slot 4.\n   Fix: Pick up a fresh tip before line 150 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [7dd49f0ad64a]\n\n10. ERROR CONTAM-STOCK: A used tip went into a stock: 8 stocks\n   line 152:  p300_multi.aspirate(100, source_plate[\"A7\"])\n   At line 152 the tip went into serum 7 (well A7 in slot 3), serum 13 + serum 14 (well B7\n   in slot 3), serum 19 (well C7 in slot 3), serum 26 (well D7 in slot 3) and 4 more while\n   it still carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well\n   A3 in slot 3), serum 4 (well A4 in slot 3) and 44 more from an earlier step. A tip that\n   has touched one liquid leaves a little of it in the next liquid it touches, so these\n   stocks now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 16 other wells: wells A7, A8, B7, B8, C7, C8, D7, D8 and 8\n   more in slot 4.\n   Affected: wells A7, B7, C7, D7, E7, F7, G7 and H7 in slot 3.\n   Also reached 16 other wells: wells A7, A8, B7, B8, C7, C8, D7, D8 and 8 more in slot 4.\n   Fix: Pick up a fresh tip before line 152 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [c964703e0c13]\n\n11. ERROR CONTAM-STOCK: A used tip went into a stock: 8 stocks\n   line 154:  p300_multi.aspirate(100, source_plate[\"A8\"])\n   At line 154 the tip went into serum 8 (well A8 in slot 3), serum 14 (well B8 in slot 3),\n   serum 19 (well C8 in slot 3), serum 27 (well D8 in slot 3) and 4 more while it still\n   carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well A3 in\n   slot 3), serum 4 (well A4 in slot 3) and 51 more from an earlier step. A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so these stocks\n   now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 8 other wells: wells A8, B8, C8, D8, E8, F8, G8 and H8 in\n   slot 4.\n   Affected: wells A8, B8, C8, D8, E8, F8, G8 and H8 in slot 3.\n   Also reached 8 other wells: wells A8, B8, C8, D8, E8, F8, G8 and H8 in slot 4.\n   Fix: Pick up a fresh tip before line 154 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [9dccb8622f97]\n\n12. ERROR WELL-CAPACITY: More liquid than the well can hold: 300 ul in a 217 ul well, 1 well\n   line 173:  p300_multi.dispense(100, plate[\"B7\"])\n   At line 173 the robot filled well B7 in slot 4 past the rim (217 ul to the rim by the\n   labware definition's shape; the maker states 100 ul), reaching 300 ul. The liquid runs\n   into the neighbouring wells and onto the deck; the volumes still add up on paper, so the\n   plate map does not see it, and the simulator says nothing. Wells: well B7 in slot 4.\n   Affected: well B7 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [408f51d2f373]\n\n13. ERROR WELL-CAPACITY: More liquid than the well can hold: 500 ul in a 217 ul well, 3\nwells\n   line 181:  p300_multi.dispense(100, plate[\"C1\"])\n   At line 181 the robot filled wells F1, G1 and H1 in slot 4 past the rim (217 ul to the\n   rim by the labware definition's shape; the maker states 100 ul) (this line did it 3\n   times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck;\n   the volumes still add up on paper, so the plate map does not see it, and the simulator\n   says nothing. Wells: wells F1, G1 and H1 in slot 4.\n   Affected: wells F1, G1 and H1 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [0a706e60500f]\n\n14. ERROR WELL-CAPACITY: More liquid than the well can hold: 500 ul in a 217 ul well, 3\nwells\n   line 183:  p300_multi.dispense(100, plate[\"C2\"])\n   At line 183 the robot filled wells F2, G2 and H2 in slot 4 past the rim (217 ul to the\n   rim by the labware definition's shape; the maker states 100 ul) (this line did it 3\n   times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck;\n   the volumes still add up on paper, so the plate map does not see it, and the simulator\n   says nothing. Wells: wells F2, G2 and H2 in slot 4.\n   Affected: wells F2, G2 and H2 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [cc573f4a0299]\n\n15. ERROR WELL-CAPACITY: More liquid than the well can hold: 500 ul in a 217 ul well, 3\nwells\n   line 185:  p300_multi.dispense(100, plate[\"C3\"])\n   At line 185 the robot filled wells F3, G3 and H3 in slot 4 past the rim (217 ul to the\n   rim by the labware definition's shape; the maker states 100 ul) (this line did it 3\n   times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck;\n   the volumes still add up on paper, so the plate map does not see it, and the simulator\n   says nothing. Wells: wells F3, G3 and H3 in slot 4.\n   Affected: wells F3, G3 and H3 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [df7b3636e136]\n\n16. ERROR WELL-CAPACITY: More liquid than the well can hold: 500 ul in a 217 ul well, 3\nwells\n   line 187:  p300_multi.dispense(100, plate[\"C4\"])\n   At line 187 the robot filled wells F4, G4 and H4 in slot 4 past the rim (217 ul to the\n   rim by the labware definition's shape; the maker states 100 ul) (this line did it 3\n   times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck;\n   the volumes still add up on paper, so the plate map does not see it, and the simulator\n   says nothing. Wells: wells F4, G4 and H4 in slot 4.\n   Affected: wells F4, G4 and H4 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [63c43341a93a]\n\n17. ERROR WELL-CAPACITY: More liquid than the well can hold: 500 ul in a 217 ul well, 3\nwells\n   line 189:  p300_multi.dispense(100, plate[\"C5\"])\n   At line 189 the robot filled wells F5, G5 and H5 in slot 4 past the rim (217 ul to the\n   rim by the labware definition's shape; the maker states 100 ul) (this line did it 3\n   times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck;\n   the volumes still add up on paper, so the plate map does not see it, and the simulator\n   says nothing. Wells: wells F5, G5 and H5 in slot 4.\n   Affected: wells F5, G5 and H5 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [d8d68dbe43ad]\n\n18. ERROR WELL-CAPACITY: More liquid than the well can hold: 500 ul in a 217 ul well, 3\nwells\n   line 191:  p300_multi.dispense(100, plate[\"C6\"])\n   At line 191 the robot filled wells F6, G6 and H6 in slot 4 past the rim (217 ul to the\n   rim by the labware definition's shape; the maker states 100 ul) (this line did it 3\n   times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck;\n   the volumes still add up on paper, so the plate map does not see it, and the simulator\n   says nothing. Wells: wells F6, G6 and H6 in slot 4.\n   Affected: wells F6, G6 and H6 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [4fca1e0fcde4]\n\n19. ERROR WELL-CAPACITY: More liquid than the well can hold: 500 ul in a 217 ul well, 3\nwells\n   line 193:  p300_multi.dispense(100, plate[\"C7\"])\n   At line 193 the robot filled wells F7, G7 and H7 in slot 4 past the rim (217 ul to the\n   rim by the labware definition's shape; the maker states 100 ul) (this line did it 3\n   times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck;\n   the volumes still add up on paper, so the plate map does not see it, and the simulator\n   says nothing. Wells: wells F7, G7 and H7 in slot 4.\n   Affected: wells F7, G7 and H7 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [97597c27d3b6]\n\n20. ERROR WELL-CAPACITY: More liquid than the well can hold: 500 ul in a 217 ul well, 3\nwells\n   line 195:  p300_multi.dispense(100, plate[\"C8\"])\n   At line 195 the robot filled wells F8, G8 and H8 in slot 4 past the rim (217 ul to the\n   rim by the labware definition's shape; the maker states 100 ul) (this line did it 3\n   times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck;\n   the volumes still add up on paper, so the plate map does not see it, and the simulator\n   says nothing. Wells: wells F8, G8 and H8 in slot 4.\n   Affected: wells F8, G8 and H8 in slot 4.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [06632ee9e6b6]\n\n21. WARNING CONTAM-WELL: A used tip carried standard 1 (tube A1 in slot 2) and standard 2\n(tube B1 in slot 2) into 3 wells it was never meant for\n   line 123:  p300_multi.dispense(100, plate[\"B12\"])\n   At line 123 the tip touched the liquid in wells C12, E12 and G12 in slot 4 while it still\n   carried standard 1 (tube A1 in slot 2) and standard 2 (tube B1 in slot 2) from an earlier\n   step. A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches. The protocol never transfers that liquid into these wells on purpose, so it was\n   not meant to be there. If the wells hold different samples, each now holds a little of\n   another.\n   Affected: wells C12, E12 and G12 in slot 4.\n   Fix: Use a fresh tip for each well at line 123. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [3fdee206a5e7]\n\n22. WARNING CONTAM-WELL: A used tip carried standard 1 (tube A1 in slot 2), standard 2 (tube\nB1 in slot 2), standard 3 (tube C1 in slot 2) and standard 4 (tube D1 in slot 2) into 4\nwells it was never meant for\n   line 125:  p300_multi.dispense(100, plate[\"C12\"])\n   At line 125 the tip touched the liquid in wells C12, D12, F12 and G12 in slot 4 while it\n   still carried standard 1 (tube A1 in slot 2), standard 2 (tube B1 in slot 2), standard 3\n   (tube C1 in slot 2) and standard 4 (tube D1 in slot 2) from an earlier step. A tip that\n   has touched one liquid leaves a little of it in the next liquid it touches. The protocol\n   never transfers that liquid into these wells on purpose, so it was not meant to be there.\n   If the wells hold different samples, each now holds a little of another.\n   Affected: wells C12, D12, F12 and G12 in slot 4.\n   Fix: Use a fresh tip for each well at line 125. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [4c4c3da8e0c1]\n\n23. WARNING CONTAM-WELL: A used tip carried standard 4 (tube D1 in slot 2) into well D12 in\nslot 4 it was never meant for\n   line 127:  p300_multi.dispense(100, plate[\"D12\"])\n   At line 127 the tip touched the liquid in well D12 in slot 4 while it still carried\n   standard 4 (tube D1 in slot 2) from an earlier step. A tip that has touched one liquid\n   leaves a little of it in the next liquid it touches. The protocol never transfers that\n   liquid into this well on purpose, so it was not meant to be there. If the wells hold\n   different samples, each now holds a little of another.\n   Affected: well D12 in slot 4.\n   Fix: Use a fresh tip for each well at line 127. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [8dd0e0351094]\n\n24. WARNING UNMIXED-AT-END: Well E12 in slot 4 never mixed after standard 4, standard 6 and\nstandard 7 went in (25% of the well)\n   line 129:  p300_multi.dispense(100, plate[\"E12\"])\n   At line 129 the robot added standard 4, standard 6 and standard 7 to well E12 in slot 4,\n   which already held standard 3. The addition was 25% of the well, nothing mixed the well\n   afterwards, and the run ended with it that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   The liquid added last is a sample, so nothing else in the workflow will mix it: a\n   normalisation or a pool left like this is not what it says it is.\n   Affected: well E12 in slot 4.\n   Fix: Mix well E12 in slot 4 after line 129: `mix_after=(5, 320)` on the transfer, or\n   `pipette.mix(5, 320, well)`, with the volume about 80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [7c776df752e4]\n\n25. WARNING WELL-CAPACITY: More liquid than the well is rated for: 200 ul against 100 ul, 1\nwell\n   line 129:  p300_multi.dispense(100, plate[\"E12\"])\n   At line 129 the robot filled well G12 in slot 4 past the 100 ul the maker states for it,\n   reaching 200 ul, under the 217 ul the well holds to its rim. Above the stated maximum the\n   liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and\n   the volumes still add up on paper, so the plate map does not see it and the simulator\n   says nothing. Wells: well G12 in slot 4.\n   Affected: well G12 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [218ed24d9a07]\n\n26. WARNING UNMIXED-AT-END: Well F12 in slot 4 never mixed after standard 5 and standard 7\nwent in (25% of the well)\n   line 131:  p300_multi.dispense(100, plate[\"F12\"])\n   At line 131 the robot added standard 5 and standard 7 to well F12 in slot 4, which\n   already held standard 4. The addition was 25% of the well, nothing mixed the well\n   afterwards, and the run ended with it that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   The liquid added last is a sample, so nothing else in the workflow will mix it: a\n   normalisation or a pool left like this is not what it says it is.\n   Affected: well F12 in slot 4.\n   Fix: Mix well F12 in slot 4 after line 131: `mix_after=(5, 160)` on the transfer, or\n   `pipette.mix(5, 160, well)`, with the volume about 80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [75564b79f58b]\n\n27. WARNING WELL-CAPACITY: More liquid than the well is rated for: 200 ul against 100 ul, 1\nwell\n   line 131:  p300_multi.dispense(100, plate[\"F12\"])\n   At line 131 the robot filled well F12 in slot 4 past the 100 ul the maker states for it,\n   reaching 200 ul, under the 217 ul the well holds to its rim. Above the stated maximum the\n   liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and\n   the volumes still add up on paper, so the plate map does not see it and the simulator\n   says nothing. Wells: well F12 in slot 4.\n   Affected: well F12 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [947f62de89c4]\n\n28. WARNING CONTAM-WELL: A used tip carried standard 4 (tube A2 in slot 2), standard 6 (tube\nC2 in slot 2) and standard 7 (tube D2 in slot 2) into 2 wells it was never meant for\n   line 133:  p300_multi.dispense(100, plate[\"G12\"])\n   At line 133 the tip touched the liquid in wells G12 and H12 in slot 4 while it still\n   carried standard 4 (tube A2 in slot 2), standard 6 (tube C2 in slot 2) and standard 7\n   (tube D2 in slot 2) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   these wells on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another.\n   Affected: wells G12 and H12 in slot 4.\n   Fix: Use a fresh tip for each well at line 133. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [340603515952]\n\n29. WARNING CONTAM-WELL: A used tip carried standard 7 (tube D2 in slot 2) into well H12 in\nslot 4 it was never meant for\n   line 135:  p300_multi.dispense(100, plate[\"H12\"])\n   At line 135 the tip touched the liquid in well H12 in slot 4 while it still carried\n   standard 7 (tube D2 in slot 2) from an earlier step. A tip that has touched one liquid\n   leaves a little of it in the next liquid it touches. The protocol never transfers that\n   liquid into this well on purpose, so it was not meant to be there. If the wells hold\n   different samples, each now holds a little of another.\n   Affected: well H12 in slot 4.\n   Fix: Use a fresh tip for each well at line 135. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [008693bf60fb]\n\n30. WARNING WELL-CAPACITY: More liquid than the well is rated for: 150 ul against 100 ul, 4\nwells\n   line 161:  p300_multi.dispense(100, plate[\"B1\"])\n   At line 161 the robot filled wells B1, C1, D1 and E1 in slot 4 past the 100 ul the maker\n   states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well\n   holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal,\n   a tip going in displaces it over the edge, and the volumes still add up on paper, so the\n   plate map does not see it and the simulator says nothing. Wells: wells B1, C1, D1 and E1\n   in slot 4.\n   Affected: wells B1, C1, D1 and E1 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [119922791a6f]\n\n31. WARNING WELL-CAPACITY: More liquid than the well is rated for: 150 ul against 100 ul, 4\nwells\n   line 163:  p300_multi.dispense(100, plate[\"B2\"])\n   At line 163 the robot filled wells B2, C2, D2 and E2 in slot 4 past the 100 ul the maker\n   states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well\n   holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal,\n   a tip going in displaces it over the edge, and the volumes still add up on paper, so the\n   plate map does not see it and the simulator says nothing. Wells: wells B2, C2, D2 and E2\n   in slot 4.\n   Affected: wells B2, C2, D2 and E2 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [cbd398b43c0f]\n\n32. WARNING WELL-CAPACITY: More liquid than the well is rated for: 150 ul against 100 ul, 4\nwells\n   line 165:  p300_multi.dispense(100, plate[\"B3\"])\n   At line 165 the robot filled wells B3, C3, D3 and E3 in slot 4 past the 100 ul the maker\n   states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well\n   holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal,\n   a tip going in displaces it over the edge, and the volumes still add up on paper, so the\n   plate map does not see it and the simulator says nothing. Wells: wells B3, C3, D3 and E3\n   in slot 4.\n   Affected: wells B3, C3, D3 and E3 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [832aeb18d6d3]\n\n33. WARNING WELL-CAPACITY: More liquid than the well is rated for: 150 ul against 100 ul, 4\nwells\n   line 167:  p300_multi.dispense(100, plate[\"B4\"])\n   At line 167 the robot filled wells B4, C4, D4 and E4 in slot 4 past the 100 ul the maker\n   states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well\n   holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal,\n   a tip going in displaces it over the edge, and the volumes still add up on paper, so the\n   plate map does not see it and the simulator says nothing. Wells: wells B4, C4, D4 and E4\n   in slot 4.\n   Affected: wells B4, C4, D4 and E4 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [a9fecc60a647]\n\n34. WARNING WELL-CAPACITY: More liquid than the well is rated for: 150 ul against 100 ul, 4\nwells\n   line 169:  p300_multi.dispense(100, plate[\"B5\"])\n   At line 169 the robot filled wells B5, C5, D5 and E5 in slot 4 past the 100 ul the maker\n   states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well\n   holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal,\n   a tip going in displaces it over the edge, and the volumes still add up on paper, so the\n   plate map does not see it and the simulator says nothing. Wells: wells B5, C5, D5 and E5\n   in slot 4.\n   Affected: wells B5, C5, D5 and E5 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [7152a76a4021]\n\n35. WARNING WELL-CAPACITY: More liquid than the well is rated for: 150 ul against 100 ul, 4\nwells\n   line 171:  p300_multi.dispense(100, plate[\"B6\"])\n   At line 171 the robot filled wells B6, C6, D6 and E6 in slot 4 past the 100 ul the maker\n   states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well\n   holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal,\n   a tip going in displaces it over the edge, and the volumes still add up on paper, so the\n   plate map does not see it and the simulator says nothing. Wells: wells B6, C6, D6 and E6\n   in slot 4.\n   Affected: wells B6, C6, D6 and E6 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [e9a28f55afec]\n\n36. WARNING WELL-CAPACITY: More liquid than the well is rated for: 150 ul against 100 ul, 3\nwells\n   line 173:  p300_multi.dispense(100, plate[\"B7\"])\n   At line 173 the robot filled wells C7, D7 and E7 in slot 4 past the 100 ul the maker\n   states for it (this line did it 3 times), reaching 150 ul, under the 217 ul the well\n   holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal,\n   a tip going in displaces it over the edge, and the volumes still add up on paper, so the\n   plate map does not see it and the simulator says nothing. Wells: wells C7, D7 and E7 in\n   slot 4.\n   Affected: wells C7, D7 and E7 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [cd3fd47a003c]\n\n37. WARNING WELL-CAPACITY: More liquid than the well is rated for: 150 ul against 100 ul, 4\nwells\n   line 175:  p300_multi.dispense(100, plate[\"B8\"])\n   At line 175 the robot filled wells B8, C8, D8 and E8 in slot 4 past the 100 ul the maker\n   states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well\n   holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal,\n   a tip going in displaces it over the edge, and the volumes still add up on paper, so the\n   plate map does not see it and the simulator says nothing. Wells: wells B8, C8, D8 and E8\n   in slot 4.\n   Affected: wells B8, C8, D8 and E8 in slot 4.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [5c6774fc4bfc]\n\n38. NOTE WELL-CAPACITY: Declared more than the well holds: 300 ul in a 231 ul well, 1 well\n   line 152:  p300_multi.aspirate(100, source_plate[\"A7\"])\n   At line 152 the robot draws from well B7 in slot 3, which the protocol declares (line 81)\n   to hold 300 ul; the well holds 230.918 ul. The prep sheet cannot be followed as written.\n   Wells: well B7 in slot 3.\n   Affected: well B7 in slot 3.\n   Fix: Declare what the well can really hold, or use a bigger container.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [7cf43e9ce8b2]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 122,
+   "title": "A used tip went into a stock: 3 stocks",
+   "explanation": "At line 122 the tip went into standard 2 (tube B1 in slot 2), standard 3 (tube C1 in slot 2) and standard 4 (tube D1 in slot 2) while it still carried standard 1 (tube A1 in slot 2), standard 2 (tube B1 in slot 2), standard 3 (tube C1 in slot 2) and standard 4 (tube D1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 7 other wells: tubes B2, C2 and D2 in slot 2; wells B12, D12, F12 and H12 in slot 4.",
+   "fix": "Pick up a fresh tip before line 122 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 128,
+   "title": "A used tip went into a stock: 4 stocks",
+   "explanation": "At line 128 the tip went into standard 4 (tube A2 in slot 2), standard 5 (tube B2 in slot 2), standard 6 (tube C2 in slot 2) and standard 7 (tube D2 in slot 2) while it still carried standard 1 (tube A1 in slot 2), standard 2 (tube B1 in slot 2), standard 3 (tube C1 in slot 2) and standard 4 (tube D1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 1 other well: well H12 in slot 4.",
+   "fix": "Pick up a fresh tip before line 128 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 129,
+   "title": "More liquid than the well can hold: 400 ul in a 217 ul well, 1 well",
+   "explanation": "At line 129 the robot filled well E12 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul), reaching 400 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: well E12 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 130,
+   "title": "A used tip went into a stock: 3 stocks",
+   "explanation": "At line 130 the tip went into standard 5 (tube B2 in slot 2), standard 6 (tube C2 in slot 2) and standard 7 (tube D2 in slot 2) while it still carried standard 4 (tube A2 in slot 2), standard 5 (tube B2 in slot 2), standard 6 (tube C2 in slot 2) and standard 7 (tube D2 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 2 other wells: wells F12 and H12 in slot 4.",
+   "fix": "Pick up a fresh tip before line 130 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 142,
+   "title": "A used tip went into a stock: 8 stocks",
+   "explanation": "At line 142 the tip went into serum 2 (well A2 in slot 3), serum 10 (well B2 in slot 3), serum 16 (well C2 in slot 3), serum 21 (well D2 in slot 3) and 4 more while it still carried serum 1 (well A1 in slot 3), serum 9 (well B1 in slot 3), serum 15 (well C1 in slot 3), serum 20 (well D1 in slot 3) and 4 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 56 other wells: wells A2, A3, A4, A5, A6, A7, A8, B2 and 48 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 142 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 144,
+   "title": "A used tip went into a stock: 8 stocks",
+   "explanation": "At line 144 the tip went into serum 3 (well A3 in slot 3), serum 11 (well B3 in slot 3), serum 16 (well C3 in slot 3), serum 22 (well D3 in slot 3) and 4 more while it still carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 9 (well B1 in slot 3), serum 10 (well B2 in slot 3) and 11 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 48 other wells: wells A3, A4, A5, A6, A7, A8, B3, B4 and 40 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 144 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 146,
+   "title": "A used tip went into a stock: 8 stocks",
+   "explanation": "At line 146 the tip went into serum 4 (well A4 in slot 3), serum 12 (well B4 in slot 3), serum 17 (well C4 in slot 3), serum 23 (well D4 in slot 3) and 4 more while it still carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well A3 in slot 3), serum 9 (well B1 in slot 3) and 20 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 40 other wells: wells A4, A5, A6, A7, A8, B4, B5, B6 and 32 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 146 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 148,
+   "title": "A used tip went into a stock: 8 stocks",
+   "explanation": "At line 148 the tip went into serum 5 (well A5 in slot 3), serum 12 (well B5 in slot 3), serum 18 (well C5 in slot 3), serum 24 (well D5 in slot 3) and 4 more while it still carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well A3 in slot 3), serum 4 (well A4 in slot 3) and 27 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 32 other wells: wells A5, A6, A7, A8, B5, B6, B7, B8 and 24 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 148 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 150,
+   "title": "A used tip went into a stock: 8 stocks",
+   "explanation": "At line 150 the tip went into serum 6 (well A6 in slot 3), serum 13 (well B6 in slot 3), serum 18 (well C6 in slot 3), serum 25 (well D6 in slot 3) and 4 more while it still carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well A3 in slot 3), serum 4 (well A4 in slot 3) and 35 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 24 other wells: wells A6, A7, A8, B6, B7, B8, C6, C7 and 16 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 150 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 152,
+   "title": "A used tip went into a stock: 8 stocks",
+   "explanation": "At line 152 the tip went into serum 7 (well A7 in slot 3), serum 13 + serum 14 (well B7 in slot 3), serum 19 (well C7 in slot 3), serum 26 (well D7 in slot 3) and 4 more while it still carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well A3 in slot 3), serum 4 (well A4 in slot 3) and 44 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 16 other wells: wells A7, A8, B7, B8, C7, C8, D7, D8 and 8 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 152 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 154,
+   "title": "A used tip went into a stock: 8 stocks",
+   "explanation": "At line 154 the tip went into serum 8 (well A8 in slot 3), serum 14 (well B8 in slot 3), serum 19 (well C8 in slot 3), serum 27 (well D8 in slot 3) and 4 more while it still carried serum 1 (well A1 in slot 3), serum 2 (well A2 in slot 3), serum 3 (well A3 in slot 3), serum 4 (well A4 in slot 3) and 51 more from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 8 other wells: wells A8, B8, C8, D8, E8, F8, G8 and H8 in slot 4.",
+   "fix": "Pick up a fresh tip before line 154 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 173,
+   "title": "More liquid than the well can hold: 300 ul in a 217 ul well, 1 well",
+   "explanation": "At line 173 the robot filled well B7 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul), reaching 300 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: well B7 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 181,
+   "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells",
+   "explanation": "At line 181 the robot filled wells F1, G1 and H1 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul) (this line did it 3 times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells F1, G1 and H1 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 183,
+   "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells",
+   "explanation": "At line 183 the robot filled wells F2, G2 and H2 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul) (this line did it 3 times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells F2, G2 and H2 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 185,
+   "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells",
+   "explanation": "At line 185 the robot filled wells F3, G3 and H3 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul) (this line did it 3 times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells F3, G3 and H3 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 187,
+   "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells",
+   "explanation": "At line 187 the robot filled wells F4, G4 and H4 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul) (this line did it 3 times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells F4, G4 and H4 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 189,
+   "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells",
+   "explanation": "At line 189 the robot filled wells F5, G5 and H5 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul) (this line did it 3 times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells F5, G5 and H5 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 191,
+   "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells",
+   "explanation": "At line 191 the robot filled wells F6, G6 and H6 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul) (this line did it 3 times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells F6, G6 and H6 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 193,
+   "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells",
+   "explanation": "At line 193 the robot filled wells F7, G7 and H7 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul) (this line did it 3 times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells F7, G7 and H7 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 195,
+   "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells",
+   "explanation": "At line 195 the robot filled wells F8, G8 and H8 in slot 4 past the rim (217 ul to the rim by the labware definition's shape; the maker states 100 ul) (this line did it 3 times), reaching 500 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells F8, G8 and H8 in slot 4.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 123,
+   "title": "A used tip carried standard 1 (tube A1 in slot 2) and standard 2 (tube B1 in slot 2) into 3 wells it was never meant for",
+   "explanation": "At line 123 the tip touched the liquid in wells C12, E12 and G12 in slot 4 while it still carried standard 1 (tube A1 in slot 2) and standard 2 (tube B1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 123. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 125,
+   "title": "A used tip carried standard 1 (tube A1 in slot 2), standard 2 (tube B1 in slot 2), standard 3 (tube C1 in slot 2) and standard 4 (tube D1 in slot 2) into 4 wells it was never meant for",
+   "explanation": "At line 125 the tip touched the liquid in wells C12, D12, F12 and G12 in slot 4 while it still carried standard 1 (tube A1 in slot 2), standard 2 (tube B1 in slot 2), standard 3 (tube C1 in slot 2) and standard 4 (tube D1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 125. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 127,
+   "title": "A used tip carried standard 4 (tube D1 in slot 2) into well D12 in slot 4 it was never meant for",
+   "explanation": "At line 127 the tip touched the liquid in well D12 in slot 4 while it still carried standard 4 (tube D1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 127. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "warning",
+   "certain": true,
+   "line": 129,
+   "title": "Well E12 in slot 4 never mixed after standard 4, standard 6 and standard 7 went in (25% of the well)",
+   "explanation": "At line 129 the robot added standard 4, standard 6 and standard 7 to well E12 in slot 4, which already held standard 3. The addition was 25% of the well, nothing mixed the well afterwards, and the run ended with it that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. The liquid added last is a sample, so nothing else in the workflow will mix it: a normalisation or a pool left like this is not what it says it is.",
+   "fix": "Mix well E12 in slot 4 after line 129: `mix_after=(5, 320)` on the transfer, or `pipette.mix(5, 320, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 129,
+   "title": "More liquid than the well is rated for: 200 ul against 100 ul, 1 well",
+   "explanation": "At line 129 the robot filled well G12 in slot 4 past the 100 ul the maker states for it, reaching 200 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: well G12 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "warning",
+   "certain": true,
+   "line": 131,
+   "title": "Well F12 in slot 4 never mixed after standard 5 and standard 7 went in (25% of the well)",
+   "explanation": "At line 131 the robot added standard 5 and standard 7 to well F12 in slot 4, which already held standard 4. The addition was 25% of the well, nothing mixed the well afterwards, and the run ended with it that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. The liquid added last is a sample, so nothing else in the workflow will mix it: a normalisation or a pool left like this is not what it says it is.",
+   "fix": "Mix well F12 in slot 4 after line 131: `mix_after=(5, 160)` on the transfer, or `pipette.mix(5, 160, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 131,
+   "title": "More liquid than the well is rated for: 200 ul against 100 ul, 1 well",
+   "explanation": "At line 131 the robot filled well F12 in slot 4 past the 100 ul the maker states for it, reaching 200 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: well F12 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 133,
+   "title": "A used tip carried standard 4 (tube A2 in slot 2), standard 6 (tube C2 in slot 2) and standard 7 (tube D2 in slot 2) into 2 wells it was never meant for",
+   "explanation": "At line 133 the tip touched the liquid in wells G12 and H12 in slot 4 while it still carried standard 4 (tube A2 in slot 2), standard 6 (tube C2 in slot 2) and standard 7 (tube D2 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 133. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 135,
+   "title": "A used tip carried standard 7 (tube D2 in slot 2) into well H12 in slot 4 it was never meant for",
+   "explanation": "At line 135 the tip touched the liquid in well H12 in slot 4 while it still carried standard 7 (tube D2 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 135. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 161,
+   "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells",
+   "explanation": "At line 161 the robot filled wells B1, C1, D1 and E1 in slot 4 past the 100 ul the maker states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells B1, C1, D1 and E1 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 163,
+   "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells",
+   "explanation": "At line 163 the robot filled wells B2, C2, D2 and E2 in slot 4 past the 100 ul the maker states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells B2, C2, D2 and E2 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 165,
+   "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells",
+   "explanation": "At line 165 the robot filled wells B3, C3, D3 and E3 in slot 4 past the 100 ul the maker states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells B3, C3, D3 and E3 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 167,
+   "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells",
+   "explanation": "At line 167 the robot filled wells B4, C4, D4 and E4 in slot 4 past the 100 ul the maker states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells B4, C4, D4 and E4 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 169,
+   "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells",
+   "explanation": "At line 169 the robot filled wells B5, C5, D5 and E5 in slot 4 past the 100 ul the maker states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells B5, C5, D5 and E5 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 171,
+   "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells",
+   "explanation": "At line 171 the robot filled wells B6, C6, D6 and E6 in slot 4 past the 100 ul the maker states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells B6, C6, D6 and E6 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 173,
+   "title": "More liquid than the well is rated for: 150 ul against 100 ul, 3 wells",
+   "explanation": "At line 173 the robot filled wells C7, D7 and E7 in slot 4 past the 100 ul the maker states for it (this line did it 3 times), reaching 150 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells C7, D7 and E7 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 175,
+   "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells",
+   "explanation": "At line 175 the robot filled wells B8, C8, D8 and E8 in slot 4 past the 100 ul the maker states for it (this line did it 4 times), reaching 150 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells B8, C8, D8 and E8 in slot 4.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "note",
+   "certain": true,
+   "line": 152,
+   "title": "Declared more than the well holds: 300 ul in a 231 ul well, 1 well",
+   "explanation": "At line 152 the robot draws from well B7 in slot 3, which the protocol declares (line 81) to hold 300 ul; the well holds 230.918 ul. The prep sheet cannot be followed as written. Wells: well B7 in slot 3.",
+   "fix": "Declare what the well can really hold, or use a bigger container."
+  }
+ ],
+ "seconds": 5.6,
+ "draft": 4
+}

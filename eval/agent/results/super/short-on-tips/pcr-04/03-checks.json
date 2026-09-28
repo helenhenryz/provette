@@ -1,0 +1,1256 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map pcr-04. 0 of 18 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 5). Reading of the request: 6\n    samples x 3.\n  well H1 (reactions): expected 8 ul master_mix, 2 ul sample_3; found 8.55 ul master_mix,\n    1.45 ul sample_3\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 8.55 ul\n      - wrong amount of sample_3: the plate map says 2 ul, the protocol delivers 1.45 ul\n  well G1 (reactions): expected 8 ul master_mix, 2 ul sample_3; found 5.74 ul master_mix,\n    4.26 ul sample_3\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 5.74 ul\n      - wrong amount of sample_3: the plate map says 2 ul, the protocol delivers 4.26 ul\n  well F1 (reactions): expected 8 ul master_mix, 2 ul sample_2; found 9.71 ul master_mix,\n    0.29 ul sample_2\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 9.71 ul\n      - wrong amount of sample_2: the plate map says 2 ul, the protocol delivers 0.29 ul\n  well E1 (reactions): expected 8 ul master_mix, 2 ul sample_2; found 8.55 ul master_mix,\n    1.45 ul sample_2\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 8.55 ul\n      - wrong amount of sample_2: the plate map says 2 ul, the protocol delivers 1.45 ul\n  well D1 (reactions): expected 8 ul master_mix, 2 ul sample_2; found 5.74 ul master_mix,\n    4.26 ul sample_2\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 5.74 ul\n      - wrong amount of sample_2: the plate map says 2 ul, the protocol delivers 4.26 ul\n  well C1 (reactions): expected 8 ul master_mix, 2 ul sample_1; found 9.71 ul master_mix,\n    0.29 ul sample_1\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 9.71 ul\n      - wrong amount of sample_1: the plate map says 2 ul, the protocol delivers 0.29 ul\n  well B1 (reactions): expected 8 ul master_mix, 2 ul sample_1; found 8.55 ul master_mix,\n    1.45 ul sample_1\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 8.55 ul\n      - wrong amount of sample_1: the plate map says 2 ul, the protocol delivers 1.45 ul\n  well A1 (reactions): expected 8 ul master_mix, 2 ul sample_1; found 5.74 ul master_mix,\n    4.26 ul sample_1\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 5.74 ul\n      - wrong amount of sample_1: the plate map says 2 ul, the protocol delivers 4.26 ul\n  well H2 (reactions): expected 8 ul master_mix, 2 ul sample_6; found 5.74 ul master_mix,\n    4.26 ul sample_6\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 5.74 ul\n      - wrong amount of sample_6: the plate map says 2 ul, the protocol delivers 4.26 ul\n  well G2 (reactions): expected 8 ul master_mix, 2 ul sample_5; found 9.71 ul master_mix,\n    0.29 ul sample_5\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 9.71 ul\n      - wrong amount of sample_5: the plate map says 2 ul, the protocol delivers 0.29 ul\n  well F2 (reactions): expected 8 ul master_mix, 2 ul sample_5; found 8.55 ul master_mix,\n    1.45 ul sample_5\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 8.55 ul\n      - wrong amount of sample_5: the plate map says 2 ul, the protocol delivers 1.45 ul\n  well E2 (reactions): expected 8 ul master_mix, 2 ul sample_5; found 5.74 ul master_mix,\n    4.26 ul sample_5\n      - wrong amount of master_mix: the plate map says 8 ul, the protocol delivers 5.74 ul\n      - wrong amount of sample_5: the plate map says 2 ul, the protocol delivers 4.26 ul\n  ... and 6 more wells that do not match.\n\nLabware for the technique (qPCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  master mix                            500.0     144.0     356.0       0.0     0.0\n  sample 1                              100.0       6.0      94.0       0.0     0.0\n  sample 2                              100.0       6.0      94.0       0.0     0.0\n  sample 3                              100.0       6.0      94.0       0.0     0.0\n  sample 4                              100.0       6.0      94.0       0.0     0.0\n  sample 5                              100.0       6.0      94.0       0.0     0.0\n  sample 6                              100.0       6.0      94.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    Opentrons 24 Tube Rack with NEST 2 mL A1    master mix                           144.0     500.0\n  4    Opentrons 96 Well Aluminum Block with A1    sample 1                               6.0     100.0\n  4    Opentrons 96 Well Aluminum Block with B1    sample 2                               6.0     100.0\n  4    Opentrons 96 Well Aluminum Block with C1    sample 3                               6.0     100.0\n  4    Opentrons 96 Well Aluminum Block with D1    sample 4                               6.0     100.0\n  4    Opentrons 96 Well Aluminum Block with E1    sample 5                               6.0     100.0\n  4    Opentrons 96 Well Aluminum Block with F1    sample 6                               6.0     100.0\n  Tips: 6 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-04",
+  "technique": "qPCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "5:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "6 samples x 3",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 18,
+   "wells": [
+    {
+     "well": "H1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_3": 1.4477838166424708
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_3",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_3": 4.260631001371742
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_3",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_2": 0.29158518198578665
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_2",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_2": 1.4477838166424708
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_2",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_2": 4.260631001371742
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_2",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_1": 0.29158518198578665
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_1",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_1": 1.4477838166424708
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_1",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_1": 4.260631001371742
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_1",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_6": 4.260631001371742
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_5": 0.29158518198578665
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_5",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_5": 1.4477838166424708
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_5",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_5": 4.260631001371742
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_5",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_4": 0.29158518198578665
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_4",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_4": 1.4477838166424708
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_4",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_4": 4.260631001371742
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_4",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_3": 0.29158518198578665
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_3",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_6": 0.29158518198578665
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_6": 1.4477838166424708
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "H1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_3": 1.4477838166424708
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_3",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_3": 4.260631001371742
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_3",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_2": 0.29158518198578665
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_2",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_2": 1.4477838166424708
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_2",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_2": 4.260631001371742
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_2",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_1": 0.29158518198578665
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_1",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_1": 1.4477838166424708
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_1",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_1": 4.260631001371742
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_1",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_6": 4.260631001371742
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_5": 0.29158518198578665
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_5",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_5": 1.4477838166424708
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_5",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_5": 4.260631001371742
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_5",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_4": 0.29158518198578665
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_4",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_4": 1.4477838166424708
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_4",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 5.739368998628258,
+      "sample_4": 4.260631001371742
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 5.739368998628258,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_4",
+       "expected_ul": 2.0,
+       "found_ul": 4.260631001371742,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_3": 0.29158518198578665
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_3",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 9.708414818014212,
+      "sample_6": 0.29158518198578665
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 9.708414818014212,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 0.29158518198578665,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 8.55221618335753,
+      "sample_6": 1.4477838166424708
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 8.0,
+       "found_ul": 8.55221618335753,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 1.4477838166424708,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "master mix",
+    "logical": "master_mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 144.0,
+    "left_in_source_ul": 356.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 94.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 94.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 94.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 94.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 94.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 94.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 2 mL Snapcap",
+     "well": "A1",
+     "liquid": "master mix",
+     "declared_ul": 500.0,
+     "needed_ul": 144.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 100.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "B1",
+     "liquid": "sample 2",
+     "declared_ul": 100.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "C1",
+     "liquid": "sample 3",
+     "declared_ul": 100.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "D1",
+     "liquid": "sample 4",
+     "declared_ul": 100.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "E1",
+     "liquid": "sample 5",
+     "declared_ul": 100.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "F1",
+     "liquid": "sample 6",
+     "declared_ul": 100.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 6
+    },
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 2 biology problems (1 warning, 1 note).\n\n1. WARNING MIX-TOO-WEAK: Mixing too weak to stir 18 wells: 3 \u00d7 5 ul in 10 ul\n   line 55:  p20.mix(3, 5, well)\n   At line 55 the tip mixes wells A1, A2, A3, B1, B2, B3, C1, C2 and 10 more in slot 5 with\n   3 strokes of 5 ul in a well holding 10 ul (this line did it 18 times). 3 strokes of 5 ul\n   move 1.5 of the well in all; it takes about 2 wells' worth of strokes to mix (the mixing\n   work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV where\n   twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in\n   a dilution series every later step inherits the error.\n   Affected: wells A1, A2, A3, B1, B2, B3, C1, C2 and 10 more in slot 5.\n   Fix: Mix the well with about 80% of its volume (8 ul) at least 5 times: `mix(5, 8,\n   well)`. A stroke of the whole well draws air; use no more than 90%.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [97cc652bcdea]\n\n2. NOTE NO-NEGATIVE-CONTROL: No no-template control: 18 wells of master mix with a sample\n   line 45:  p300.dispense(8, well)\n   At line 45 the robot starts putting master mix into NEST 96 Well Plate 100 \u00b5L PCR Full\n   Skirt (slot 5), and 18 wells end holding it together with a sample. No well on this plate\n   holds the mix without a sample, so there is no no-template control. If a reagent is\n   contaminated, or the primers pair with each other, every well gives a signal and nothing\n   on the plate can tell that from a real one. Wells: wells A1, A2, A3, B1, B2, B3, C1, C2\n   and 10 more in slot 5.\n   Affected: wells A1, A2, A3, B1, B2, B3, C1, C2 and 10 more in slot 5.\n   Fix: Add one well (three for qPCR) with 5.73937 ul of master mix and 4.26063 ul of water\n   in place of the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [867f85456f23]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 55,
+   "title": "Mixing too weak to stir 18 wells: 3 \u00d7 5 ul in 10 ul",
+   "explanation": "At line 55 the tip mixes wells A1, A2, A3, B1, B2, B3, C1, C2 and 10 more in slot 5 with 3 strokes of 5 ul in a well holding 10 ul (this line did it 18 times). 3 strokes of 5 ul move 1.5 of the well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix the well with about 80% of its volume (8 ul) at least 5 times: `mix(5, 8, well)`. A stroke of the whole well draws air; use no more than 90%."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 45,
+   "title": "No no-template control: 18 wells of master mix with a sample",
+   "explanation": "At line 45 the robot starts putting master mix into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 5), and 18 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, B1, B2, B3, C1, C2 and 10 more in slot 5.",
+   "fix": "Add one well (three for qPCR) with 5.73937 ul of master mix and 4.26063 ul of water in place of the template, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 4.9,
+ "draft": 3
+}

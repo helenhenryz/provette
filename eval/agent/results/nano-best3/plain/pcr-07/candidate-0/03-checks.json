@@ -1,0 +1,765 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map pcr-07. 11 of 12 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3). Reading of the request: 12\n    reactions.\n  well A12 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_12; found 10 ul buffer, 2 ul sample_12, 1 ul\n    fwd_primer, 1 ul rev_primer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  buffer                                150.0     120.0      30.0       0.0     0.0\n  polymerase                             15.0       5.5       4.0       0.0     5.5\n  fwd primer                             20.0      12.0       8.0       0.0     0.0\n  rev primer                             20.0      12.0       8.0       0.0     0.0\n  water                                 200.0     126.0      74.0       0.0     0.0\n  sample 1                               10.0       2.0       8.0       0.0     0.0\n  sample 2                               10.0       2.0       8.0       0.0     0.0\n  sample 3                               10.0       2.0       8.0       0.0     0.0\n  sample 4                               10.0       2.0       8.0       0.0     0.0\n  sample 5                               10.0       2.0       8.0       0.0     0.0\n  sample 6                               10.0       2.0       8.0       0.0     0.0\n  sample 7                               10.0       2.0       8.0       0.0     0.0\n  sample 8                               10.0       2.0       8.0       0.0     0.0\n  sample 9                               10.0       2.0       8.0       0.0     0.0\n  sample 10                              10.0       2.0       8.0       0.0     0.0\n  sample 11                              10.0       2.0       8.0       0.0     0.0\n  sample 12                              10.0       2.0       8.0       0.0     0.0\n  Note: 5.5 ul of polymerase is lost: it left the deck inside a tip that was thrown away.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    buffer                               120.0     150.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B1    sample 2                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C1    sample 8                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    polymerase                            12.0      15.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B2    sample 3                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C2    sample 9                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A3    fwd primer                            12.0      20.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B3    sample 4                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C3    sample 10                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A4    rev primer                            12.0      20.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B4    sample 5                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C4    sample 11                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A5    water                                126.0     200.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B5    sample 6                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C5    sample 12                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A6    sample 1                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B6    sample 7                               2.0      10.0\n  Tips: 72 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-07",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "12 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 11,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_1": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_2": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_3": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_4": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_5": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.499999999999998,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_6": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_7": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_8": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_9": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_10": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_11": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "polymerase": 0.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_12": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "sample_12": 2.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 150.0,
+    "delivered_ul": 120.0,
+    "left_in_source_ul": 30.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "polymerase",
+    "logical": "polymerase",
+    "role": "reagent",
+    "declared_ul": 15.0,
+    "delivered_ul": 5.5,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 5.5,
+    "flags": [],
+    "notes": [
+     "5.5 ul of polymerase is lost: it left the deck inside a tip that was thrown away."
+    ]
+   },
+   {
+    "liquid": "fwd primer",
+    "logical": "fwd_primer",
+    "role": "reagent",
+    "declared_ul": 20.0,
+    "delivered_ul": 12.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rev primer",
+    "logical": "rev_primer",
+    "role": "reagent",
+    "declared_ul": 20.0,
+    "delivered_ul": 12.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 126.0,
+    "left_in_source_ul": 74.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "buffer",
+     "declared_ul": 150.0,
+     "needed_ul": 120.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 2",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "sample 8",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "polymerase",
+     "declared_ul": 15.0,
+     "needed_ul": 12.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 3",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "sample 9",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "fwd primer",
+     "declared_ul": 20.0,
+     "needed_ul": 12.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 4",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "sample 10",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "rev primer",
+     "declared_ul": 20.0,
+     "needed_ul": 12.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "sample 5",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C4",
+     "liquid": "sample 11",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "water",
+     "declared_ul": 200.0,
+     "needed_ul": 126.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "sample 6",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C5",
+     "liquid": "sample 12",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 1",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "sample 7",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 72
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (1 error, 2 notes).\n\n1. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from tube A2 in slot 2: the liquid is\nbelow the tip\n   line 67:  p20.aspirate(1, tubes[\"A2\"])\n   At line 67 the p20_single_gen2 draws 1 ul from polymerase (tube A2 in slot 2) with its\n   tip 1 mm above the bottom of the well. By then the well holds 4 ul, which in this\n   Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap reaches only 0.89 mm up: the tip is above\n   the liquid and draws air (this line did it once, after 11 times in the liquid; 1 ul of\n   air in all). The simulator does not notice: it does not follow the liquid. The 1 well\n   filled from these draws got air instead of liquid.\n   Affected: tube A2 in slot 2.\n   Also reached 1 other well: well A12 in slot 3.\n   Fix: Keep the liquid above the tip. This well needs about 6 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [b08b478441fd]\n\n2. NOTE NO-NEGATIVE-CONTROL: No no-template control: 11 wells of polymerase with a sample\n   line 68:  p20.dispense(0.5, plate[f\"A{i}\"])\n   At line 68 the robot starts putting polymerase into NEST 96 Well Plate 100 \u00b5L PCR Full\n   Skirt (slot 3), and 11 wells end holding it together with a sample. No well on this plate\n   holds the mix without a sample, so there is no no-template control. If a reagent is\n   contaminated, or the primers pair with each other, every well gives a signal and nothing\n   on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8\n   and 3 more in slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 3 more in slot 3.\n   Fix: Add one well (three for qPCR) with 0.5 ul of polymerase and 2 ul of water in place\n   of the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [deaf5fecf614]\n\n3. NOTE UNMIXED-AT-END: 11 wells never mixed after polymerase went in (2% of the well)\n   line 68:  p20.dispense(0.5, plate[f\"A{i}\"])\n   At line 68 the robot added polymerase to wells A1, A2, A3, A4, A5, A6, A7, A8 and 3 more\n   in slot 3, which already held buffer, sample 1, fwd primer, rev primer and 11 more (this\n   line did it 11 times). The addition was 2% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   A PCR plate is usually vortexed and spun down before cycling; if this one will not be,\n   mix it.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 3 more in slot 3.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 3 more in slot 3 after line 68:\n   `mix_after=(5, 20)` on the transfer, or `pipette.mix(5, 20, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [99777fd60071]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 67,
+   "title": "The pipette draws air from tube A2 in slot 2: the liquid is below the tip",
+   "explanation": "At line 67 the p20_single_gen2 draws 1 ul from polymerase (tube A2 in slot 2) with its tip 1 mm above the bottom of the well. By then the well holds 4 ul, which in this Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap reaches only 0.89 mm up: the tip is above the liquid and draws air (this line did it once, after 11 times in the liquid; 1 ul of air in all). The simulator does not notice: it does not follow the liquid. The 1 well filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 6 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 68,
+   "title": "No no-template control: 11 wells of polymerase with a sample",
+   "explanation": "At line 68 the robot starts putting polymerase into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3), and 11 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 3 more in slot 3.",
+   "fix": "Add one well (three for qPCR) with 0.5 ul of polymerase and 2 ul of water in place of the template, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 68,
+   "title": "11 wells never mixed after polymerase went in (2% of the well)",
+   "explanation": "At line 68 the robot added polymerase to wells A1, A2, A3, A4, A5, A6, A7, A8 and 3 more in slot 3, which already held buffer, sample 1, fwd primer, rev primer and 11 more (this line did it 11 times). The addition was 2% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 3 more in slot 3 after line 68: `mix_after=(5, 20)` on the transfer, or `pipette.mix(5, 20, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 5.3,
+ "draft": 3
+}

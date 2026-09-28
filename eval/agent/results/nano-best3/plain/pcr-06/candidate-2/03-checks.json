@@ -1,0 +1,683 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map pcr-06. 16 of 16 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 2). Reading of the request: 16\n    reactions.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  pcr mix                               500.0     320.0     180.0       0.0     0.0\n  colony 1                               50.0       1.0      49.0       0.0     0.0\n  colony 2                               50.0       1.0      49.0       0.0     0.0\n  colony 3                               50.0       1.0      49.0       0.0     0.0\n  colony 4                               50.0       1.0      49.0       0.0     0.0\n  colony 5                               50.0       1.0      49.0       0.0     0.0\n  colony 6                               50.0       1.0      49.0       0.0     0.0\n  colony 7                               50.0       1.0      49.0       0.0     0.0\n  colony 8                               50.0       1.0      49.0       0.0     0.0\n  colony 9                               50.0       1.0      49.0       0.0     0.0\n  colony 10                              50.0       1.0      49.0       0.0     0.0\n  colony 11                              50.0       1.0      49.0       0.0     0.0\n  colony 12                              50.0       1.0      49.0       0.0     0.0\n  colony 13                              50.0       1.0      49.0       0.0     0.0\n  colony 14                              50.0       1.0      49.0       0.0     0.0\n  colony 15                              50.0       1.0      49.0       0.0     0.0\n  colony 16                              50.0       1.0      49.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A1    colony 1                               1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B1    colony 2                               1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C1    colony 3                               1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D1    colony 4                               1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E1    colony 5                               1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F1    colony 6                               1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G1    colony 7                               1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H1    colony 8                               1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A2    colony 9                               1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B2    colony 10                              1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C2    colony 11                              1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D2    colony 12                              1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E2    colony 13                              1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F2    colony 14                              1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G2    colony 15                              1.0      50.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H2    colony 16                              1.0      50.0\n  4    NEST 12 Well Reservoir 15 mL          A1    pcr mix                              320.0     500.0\n  Tips: 16 from Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L in slot 1.\n  Tips: 16 from Opentrons OT-2 96 Tip Rack 10 \u00b5L in slot 5.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-06",
+  "technique": "PCR setup",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "2:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "16 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 16,
+   "wells_total": 16,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_1": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_1": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_2": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_2": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_3": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_3": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_4": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_4": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_5": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_5": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_6": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_6": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_7": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_7": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_8": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_8": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_9": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_9": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_10": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_10": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_11": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_11": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_12": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_12": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_13": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_13": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_14": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_14": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_15": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_15": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_16": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_16": 1.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "pcr mix",
+    "logical": "pcr_mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 320.0,
+    "left_in_source_ul": 180.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 1",
+    "logical": "colony_1",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 2",
+    "logical": "colony_2",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 3",
+    "logical": "colony_3",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 4",
+    "logical": "colony_4",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 5",
+    "logical": "colony_5",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 6",
+    "logical": "colony_6",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 7",
+    "logical": "colony_7",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 8",
+    "logical": "colony_8",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 9",
+    "logical": "colony_9",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 10",
+    "logical": "colony_10",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 11",
+    "logical": "colony_11",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 12",
+    "logical": "colony_12",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 13",
+    "logical": "colony_13",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 14",
+    "logical": "colony_14",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 15",
+    "logical": "colony_15",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 16",
+    "logical": "colony_16",
+    "role": "sample",
+    "declared_ul": 50.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 49.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A1",
+     "liquid": "colony 1",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B1",
+     "liquid": "colony 2",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C1",
+     "liquid": "colony 3",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D1",
+     "liquid": "colony 4",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E1",
+     "liquid": "colony 5",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F1",
+     "liquid": "colony 6",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G1",
+     "liquid": "colony 7",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H1",
+     "liquid": "colony 8",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A2",
+     "liquid": "colony 9",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B2",
+     "liquid": "colony 10",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C2",
+     "liquid": "colony 11",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D2",
+     "liquid": "colony 12",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E2",
+     "liquid": "colony 13",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F2",
+     "liquid": "colony 14",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G2",
+     "liquid": "colony 15",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H2",
+     "liquid": "colony 16",
+     "declared_ul": 50.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "pcr mix",
+     "declared_ul": 500.0,
+     "needed_ul": 320.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L",
+     "tips": 16
+    },
+    {
+     "slot": "5",
+     "rack": "Opentrons OT-2 96 Tip Rack 10 \u00b5L",
+     "tips": 16
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: 2 biology problems (2 notes).\n\n1. NOTE NO-NEGATIVE-CONTROL: No no-template control: 16 wells of pcr mix with a sample\n   line 39:  p300.dispense(20, dest_well)\n   At line 39 the robot starts putting pcr mix into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt\n   (slot 2), and 16 wells end holding it together with a sample. No well on this plate holds\n   the mix without a sample, so there is no no-template control. If a reagent is\n   contaminated, or the primers pair with each other, every well gives a signal and nothing\n   on the plate can tell that from a real one. Wells: wells A1, A2, B1, B2, C1, C2, D1, D2\n   and 8 more in slot 2.\n   Affected: wells A1, A2, B1, B2, C1, C2, D1, D2 and 8 more in slot 2.\n   Fix: Add one well (three for qPCR) with 20 ul of pcr mix and 1 ul of water in place of\n   the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [58f857969391]\n\n2. NOTE UNMIXED-AT-END: 16 wells never mixed after colony 1, colony 2, colony 3, colony 4\nand 12 more went in (5% of the well)\n   line 46:  p20.dispense(1, dest_well)\n   At line 46 the robot added colony 1, colony 2, colony 3, colony 4 and 12 more to wells\n   A1, A2, B1, B2, C1, C2, D1, D2 and 8 more in slot 2, which already held pcr mix (this\n   line did it 16 times). The addition was 5% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   A PCR plate is usually vortexed and spun down before cycling; if this one will not be,\n   mix it.\n   Affected: wells A1, A2, B1, B2, C1, C2, D1, D2 and 8 more in slot 2.\n   Fix: Mix wells A1, A2, B1, B2, C1, C2, D1, D2 and 8 more in slot 2 after line 46:\n   `mix_after=(5, 17)` on the transfer, or `pipette.mix(5, 17, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [6f367204aff6]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 39,
+   "title": "No no-template control: 16 wells of pcr mix with a sample",
+   "explanation": "At line 39 the robot starts putting pcr mix into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 2), and 16 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, B1, B2, C1, C2, D1, D2 and 8 more in slot 2.",
+   "fix": "Add one well (three for qPCR) with 20 ul of pcr mix and 1 ul of water in place of the template, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 46,
+   "title": "16 wells never mixed after colony 1, colony 2, colony 3, colony 4 and 12 more went in (5% of the well)",
+   "explanation": "At line 46 the robot added colony 1, colony 2, colony 3, colony 4 and 12 more to wells A1, A2, B1, B2, C1, C2, D1, D2 and 8 more in slot 2, which already held pcr mix (this line did it 16 times). The addition was 5% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, B1, B2, C1, C2, D1, D2 and 8 more in slot 2 after line 46: `mix_after=(5, 17)` on the transfer, or `pipette.mix(5, 17, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 4.6,
+ "draft": 3
+}

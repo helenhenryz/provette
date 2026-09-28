@@ -1,0 +1,1517 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map pcr-07. 0 of 12 wells hold what the plate map says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 3). Reading of the request: 12\n    reactions.\n  well A1 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_1; found 10 ul buffer, 1 ul polymerase, 0.99 ul\n    fwd_primer, 0.98 ul rev_primer, 10.02 ul water\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1 ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 10.02 ul\n      - sample_1 is missing: the plate map says 2 ul, none arrives\n  well A2 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_2; found 0.99 ul polymerase, 9.99 ul buffer, 0.98\n    ul fwd_primer, 0.97 ul rev_primer, 10.06 ul water\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 0.99 ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 10.06 ul\n      - sample_2 is missing: the plate map says 2 ul, none arrives\n  well A3 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_3; found 0.01 ul polymerase, 9.1 ul buffer, 1.02\n    ul fwd_primer, 1.04 ul rev_primer, 11.33 ul water\n      - wrong amount of buffer: the plate map says 10 ul, the protocol delivers 9.1 ul\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 0.01 ul\n      - wrong amount of water: the plate map says 10.5 ul, the protocol delivers 11.33 ul\n      - sample_3 is missing: the plate map says 2 ul, none arrives\n  well A4 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_4; found 10 ul buffer, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n      - sample_4 is missing: the plate map says 2 ul, none arrives\n  well A5 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_5; found 10 ul buffer, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n      - sample_5 is missing: the plate map says 2 ul, none arrives\n  well A6 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_6; found 10 ul buffer, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n      - sample_6 is missing: the plate map says 2 ul, none arrives\n  well A7 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_7; found 10 ul buffer, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n      - sample_7 is missing: the plate map says 2 ul, none arrives\n  well A8 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_8; found 10 ul buffer, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n      - sample_8 is missing: the plate map says 2 ul, none arrives\n  well A9 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_9; found 10 ul buffer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n      - fwd_primer is missing: the plate map says 1 ul, none arrives\n      - rev_primer is missing: the plate map says 1 ul, none arrives\n      - sample_9 is missing: the plate map says 2 ul, none arrives\n  well A10 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_10; found 10 ul buffer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n      - fwd_primer is missing: the plate map says 1 ul, none arrives\n      - rev_primer is missing: the plate map says 1 ul, none arrives\n      - sample_10 is missing: the plate map says 2 ul, none arrives\n  well A11 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_11; found 10 ul buffer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n      - fwd_primer is missing: the plate map says 1 ul, none arrives\n      - rev_primer is missing: the plate map says 1 ul, none arrives\n      - sample_11 is missing: the plate map says 2 ul, none arrives\n  well A12 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_12; found 10 ul buffer, 10.5 ul water\n      - polymerase is missing: the plate map says 0.5 ul, none arrives\n      - fwd_primer is missing: the plate map says 1 ul, none arrives\n      - rev_primer is missing: the plate map says 1 ul, none arrives\n      - sample_12 is missing: the plate map says 2 ul, none arrives\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  buffer                                120.0     119.1       0.0       0.0     0.9\n  polymerase                              6.0       2.0       4.0       0.0     0.0\n  fwd primer                             12.0       8.0       4.0       0.0     0.0\n  rev primer                             12.0       8.0       4.0       0.0     0.0\n  water                                 126.0     125.9       0.0       0.0     0.1\n  sample 1                                2.0       0.0       2.0       0.0     0.0\n  sample 2                                2.0       0.0       2.0       0.0     0.0\n  sample 3                                2.0       0.0       2.0       0.0     0.0\n  sample 4                                2.0       0.0       2.0       0.0     0.0\n  sample 5                                2.0       0.0       2.0       0.0     0.0\n  sample 6                                2.0       0.0       2.0       0.0     0.0\n  sample 7                                2.0       0.0       2.0       0.0     0.0\n  sample 8                                2.0       0.0       2.0       0.0     0.0\n  sample 9                                2.0       0.0       2.0       0.0     0.0\n  sample 10                               2.0       0.0       2.0       0.0     0.0\n  sample 11                               2.0       0.0       2.0       0.0     0.0\n  sample 12                               2.0       0.0       2.0       0.0     0.0\n  Note: 0.9 ul of buffer is lost: it left the deck inside a tip that was thrown away. That\n    is less than one well's worth: a spare volume, if it was meant.\n  Note: 0.1 ul of water is lost: it left the deck inside a tip that was thrown away. That is\n    less than one well's worth: a spare volume, if it was meant.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Well Aluminum Block with A1    sample 1                               2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with B1    sample 7                               2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with C1    buffer                               120.0     120.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with A2    sample 2                               2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with B2    sample 8                               2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with C2    polymerase                            12.0       6.0  <-- WOULD RUN DRY\n  2    Opentrons 24 Well Aluminum Block with A3    sample 3                               2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with B3    sample 9                               2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with C3    fwd primer                            12.0      12.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with A4    sample 4                               2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with B4    sample 10                              2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with C4    rev primer                            12.0      12.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with A5    sample 5                               2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with B5    sample 11                              2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with C5    water                                126.0     126.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with A6    sample 6                               2.0       2.0  <-- NO MARGIN\n  2    Opentrons 24 Well Aluminum Block with B6    sample 12                              2.0       2.0  <-- NO MARGIN\n  FLAG: sample 1 in A1, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared, and\n    a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 7 in B1, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared, and\n    a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: buffer in C1, slot 2 has no margin: the robot draws 120 ul of the 120 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 170 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 2 in A2, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared, and\n    a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 8 in B2, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared, and\n    a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: polymerase in C2, slot 2 would run dry: the robot draws 12 ul from it and the\n    protocol declares 6 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 62 ul in this well, or draw less.\n  FLAG: sample 3 in A3, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared, and\n    a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 9 in B3, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared, and\n    a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: fwd primer in C3, slot 2 has no margin: the robot draws 12 ul of the 12 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 62 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 4 in A4, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared, and\n    a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 10 in B4, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: rev primer in C4, slot 2 has no margin: the robot draws 12 ul of the 12 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 62 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 5 in A5, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared, and\n    a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 11 in B5, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: water in C5, slot 2 has no margin: the robot draws 126 ul of the 126 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 176 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 6 in A6, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared, and\n    a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: sample 12 in B6, slot 2 has no margin: the robot draws 2 ul of the 2 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-07",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:biorad_96_wellplate_200ul_pcr",
+   "variant": "12 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.9974747474747475,
+      "fwd_primer": 0.9949494949494949,
+      "rev_primer": 0.9848484848484849,
+      "water": 10.022727272727273
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.9974747474747475,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 10.022727272727273,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_1",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "found": {
+      "polymerase": 0.9880307561466982,
+      "buffer": 9.99309868875086,
+      "fwd_primer": 0.9833078891049905,
+      "rev_primer": 0.9716627977497541,
+      "water": 10.063899868247693
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.9880307561466982,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 10.063899868247693,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_2",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "found": {
+      "polymerase": 0.013176814889594863,
+      "buffer": 9.09718301022649,
+      "fwd_primer": 1.0197660144959222,
+      "rev_primer": 1.0395351976379645,
+      "water": 11.33033896275003
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 10.0,
+       "found_ul": 9.09718301022649,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.013176814889594863,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.33033896275003,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_3",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_4",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_5",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_7",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_8",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_9",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_10",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_11",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "water": 10.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_12",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.9974747474747475,
+      "fwd_primer": 0.9949494949494949,
+      "rev_primer": 0.9848484848484849,
+      "water": 10.022727272727273
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.9974747474747475,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 10.022727272727273,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_1",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "found": {
+      "polymerase": 0.9880307561466982,
+      "buffer": 9.99309868875086,
+      "fwd_primer": 0.9833078891049905,
+      "rev_primer": 0.9716627977497541,
+      "water": 10.063899868247693
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.9880307561466982,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 10.063899868247693,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_2",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "found": {
+      "polymerase": 0.013176814889594863,
+      "buffer": 9.09718301022649,
+      "fwd_primer": 1.0197660144959222,
+      "rev_primer": 1.0395351976379645,
+      "water": 11.33033896275003
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "buffer",
+       "expected_ul": 10.0,
+       "found_ul": 9.09718301022649,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.013176814889594863,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 10.5,
+       "found_ul": 11.33033896275003,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_3",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_4",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_5",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_7",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_8",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_9",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_10",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_11",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "water": 10.5
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_12",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 120.0,
+    "delivered_ul": 119.0903,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.9097,
+    "flags": [],
+    "notes": [
+     "0.9 ul of buffer is lost: it left the deck inside a tip that was thrown away. That is less than one well's worth: a spare volume, if it was meant."
+    ]
+   },
+   {
+    "liquid": "polymerase",
+    "logical": "polymerase",
+    "role": "reagent",
+    "declared_ul": 6.0,
+    "delivered_ul": 1.9987,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0013,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "fwd primer",
+    "logical": "fwd_primer",
+    "role": "reagent",
+    "declared_ul": 12.0,
+    "delivered_ul": 7.998,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.002,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rev primer",
+    "logical": "rev_primer",
+    "role": "reagent",
+    "declared_ul": 12.0,
+    "delivered_ul": 7.996,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.004,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 126.0,
+    "delivered_ul": 125.917,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.083,
+    "flags": [],
+    "notes": [
+     "0.1 ul of water is lost: it left the deck inside a tip that was thrown away. That is less than one well's worth: a spare volume, if it was meant."
+    ]
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 2.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 2.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 7",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "buffer",
+     "declared_ul": 120.0,
+     "needed_ul": 120.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "sample 2",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 8",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "polymerase",
+     "declared_ul": 6.0,
+     "needed_ul": 12.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "sample 3",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 9",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "fwd primer",
+     "declared_ul": 12.0,
+     "needed_ul": 12.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "sample 4",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "sample 10",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C4",
+     "liquid": "rev primer",
+     "declared_ul": 12.0,
+     "needed_ul": 12.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "sample 5",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "sample 11",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C5",
+     "liquid": "water",
+     "declared_ul": 126.0,
+     "needed_ul": 126.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 6",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "sample 12",
+     "declared_ul": 2.0,
+     "needed_ul": 2.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 10 biology problems (3 errors, 7 warnings).\n\n1. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well C2 in slot 2: the liquid is\nbelow the tip\n   line 61:  p20.aspirate(1, polymerase_well)\n   At line 61 the p20_single_gen2 draws 1 ul from polymerase (well C2 in slot 2) with its\n   tip 1 mm above the bottom of the well. By then the well holds 4 ul, which in this\n   Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap reaches only 0.89 mm up: the\n   tip is above the liquid and draws air (this line did it 10 times, after twice in the\n   liquid; 10 ul of air in all). The simulator does not notice: it does not follow the\n   liquid. The 10 wells filled from these draws got air instead of liquid.\n   Affected: well C2 in slot 2.\n   Also reached 10 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 2 more in slot 3.\n   Fix: Keep the liquid above the tip. This well needs about 6 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [03b69647486a]\n\n2. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well C3 in slot 2: the liquid is\nbelow the tip\n   line 64:  p20.aspirate(1, fwd_primer_well)\n   At line 64 the p20_single_gen2 draws 1 ul from fwd primer (well C3 in slot 2) with its\n   tip 1 mm above the bottom of the well. By then the well holds 4 ul, which in this\n   Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap reaches only 0.89 mm up: the\n   tip is above the liquid and draws air (this line did it 4 times, after 8 times in the\n   liquid; 4 ul of air in all). The simulator does not notice: it does not follow the\n   liquid. The 4 wells filled from these draws got air instead of liquid.\n   Affected: well C3 in slot 2.\n   Also reached 4 other wells: wells A9, A10, A11 and A12 in slot 3.\n   Fix: Keep the liquid above the tip. This well needs about 6 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [1b0ae0ba0e4e]\n\n3. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well C4 in slot 2: the liquid is\nbelow the tip\n   line 67:  p20.aspirate(1, rev_primer_well)\n   At line 67 the p20_single_gen2 draws 1 ul from rev primer (well C4 in slot 2) with its\n   tip 1 mm above the bottom of the well. By then the well holds 4 ul, which in this\n   Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap reaches only 0.89 mm up: the\n   tip is above the liquid and draws air (this line did it 4 times, after 8 times in the\n   liquid; 4 ul of air in all). The simulator does not notice: it does not follow the\n   liquid. The 4 wells filled from these draws got air instead of liquid.\n   Affected: well C4 in slot 2.\n   Also reached 4 other wells: wells A9, A10, A11 and A12 in slot 3.\n   Fix: Keep the liquid above the tip. This well needs about 6 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [197b7a6f6088]\n\n4. WARNING COLD-MODULE-NEVER-SET: A temperature module was loaded but never set\n   line 58:  p20.aspirate(10, buffer_well)\n   At line 58 the robot draws from wells A1, A2, A3, A4, A5, A6, B1, B2 and 9 more in slot\n   2, on a temperature module that the protocol never sets. A temperature module stays at\n   room temperature until `set_temperature` is called, so buffer (carrier), fwd primer\n   (reagent), polymerase (reagent), rev primer (reagent) and 13 more sat on a block that was\n   never cold; the robot pipetted there 72 times over the run. The person setting up the\n   deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2\n   and 9 more in slot 2.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 9 more in slot 2.\n   Fix: Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 24\n   Well Aluminum Block with NEST 1.5 mL Snapcap in slot 2, and `temp_module.deactivate()` at\n   the end.\n   Source: Opentrons, temperature module: at room temperature until set_temperature, which\n   blocks\n           https://docs.opentrons.com/v2/modules/temperature_module.html\n   Source: Thermo Fisher T4 ligase manual: keep on ice, use within minutes\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/t4dnaligase_1U_man.pdf\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   [d8dbe3dddd9d]\n\n5. WARNING CONTAM-STOCK: A used tip went into a stock: buffer (well C1 in slot 2)\n   line 58:  p20.aspirate(10, buffer_well)\n   At line 58 the tip went into buffer (well C1 in slot 2) while it still carried polymerase\n   (well C2 in slot 2), fwd primer (well C3 in slot 2), rev primer (well C4 in slot 2) and\n   water (well C5 in slot 2) from an earlier step. A tip that has touched one liquid leaves\n   a little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. Liquid drawn from it then took the unwanted material along into 9 other\n   wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.\n   Affected: well C1 in slot 2.\n   Also reached 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.\n   Fix: Pick up a fresh tip before line 58 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [4fc95eb0484c]\n\n6. WARNING CONTAM-STOCK: A used tip went into a stock: polymerase (well C2 in slot 2)\n   line 61:  p20.aspirate(1, polymerase_well)\n   At line 61 the tip went into polymerase (well C2 in slot 2) while it still carried buffer\n   (well C1 in slot 2), fwd primer (well C3 in slot 2), rev primer (well C4 in slot 2) and\n   water (well C5 in slot 2) from an earlier step (this line did it twice). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so this stock now\n   holds material that does not belong there. Liquid drawn from it then took the unwanted\n   material along into 4 other wells: wells A9, A10, A11 and A12 in slot 3.\n   Affected: well C2 in slot 2.\n   Also reached 4 other wells: wells A9, A10, A11 and A12 in slot 3.\n   Fix: Pick up a fresh tip before line 61 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [e8799d4f1534]\n\n7. WARNING ENZYME-BEFORE-DILUENT: An enzyme was added before the water: polymerase\n   line 62:  p20.dispense(0.5, target_well)\n   At line 62 the robot put polymerase into well A1 in slot 3. Take well A1 in slot 3: at\n   that moment it held only 10 ul, all of it neat buffer, and the water came afterwards, at\n   line 71, to make the 20.0227 ul of water or buffer the reaction is built on. An enzyme is\n   shipped in 50% glycerol and is meant to be the last thing into a reaction, after the\n   water and the buffer have brought the well to the right dilution. Dropped into neat\n   buffer or a dry well it meets many times the salt it should: a restriction enzyme then\n   cuts at the wrong places (star activity) and a polymerase starts on mis-primed template.\n   Affected: well A1 in slot 3.\n   Fix: Reorder the additions to well A1 in slot 3: water and buffer first, then the sample,\n   then polymerase last. Or make a master mix of water, buffer and enzyme in one tube, mix\n   it, and hand it out.\n   Source: Thermo Fisher: restriction enzyme key considerations (the enzyme is the final\n   component)\n           https://www.thermofisher.com/us/en/home/life-science/cloning/cloning-learning-center/invitrogen-school-of-molecular-biology/molecular-cloning/restriction-enzymes/restriction-enzyme-key-considerations.html\n   Source: Promega: restriction enzyme resource (add the enzyme last; glycerol and star\n   activity)\n           https://www.promega.com/resources/guides/nucleic-acid-analysis/restriction-enzyme-resource/\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   Source: Qiagen: critical factors for successful real-time PCR (order of addition)\n           https://www.gene-quantification.de/qiagen-qpcr-sample-assay-tech-guide-2010.pdf\n   [61a6534086eb]\n\n8. WARNING CONTAM-STOCK: A used tip went into a stock: fwd primer (well C3 in slot 2)\n   line 64:  p20.aspirate(1, fwd_primer_well)\n   At line 64 the tip went into fwd primer (well C3 in slot 2) while it still carried buffer\n   (well C1 in slot 2), polymerase (well C2 in slot 2), rev primer (well C4 in slot 2) and\n   water (well C5 in slot 2) from an earlier step (this line did it twice). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so this stock now\n   holds material that does not belong there. Liquid drawn from it then took the unwanted\n   material along into 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in\n   slot 3.\n   Affected: well C3 in slot 2.\n   Also reached 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.\n   Fix: Pick up a fresh tip before line 64 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [eeb951d6e6c8]\n\n9. WARNING CONTAM-STOCK: A used tip went into a stock: rev primer (well C4 in slot 2)\n   line 67:  p20.aspirate(1, rev_primer_well)\n   At line 67 the tip went into rev primer (well C4 in slot 2) while it still carried buffer\n   (well C1 in slot 2), polymerase (well C2 in slot 2), fwd primer (well C3 in slot 2) and\n   water (well C5 in slot 2) from an earlier step (this line did it twice). A tip that has\n   touched one liquid leaves a little of it in the next liquid it touches, so this stock now\n   holds material that does not belong there. Liquid drawn from it then took the unwanted\n   material along into 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in\n   slot 3.\n   Affected: well C4 in slot 2.\n   Also reached 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.\n   Fix: Pick up a fresh tip before line 67 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [7fc3adf9dba4]\n\n10. WARNING CONTAM-STOCK: A used tip went into a stock: water (well C5 in slot 2)\n   line 70:  p20.aspirate(10.5, water_well)\n   At line 70 the tip went into water (well C5 in slot 2) while it still carried buffer\n   (well C1 in slot 2), polymerase (well C2 in slot 2), fwd primer (well C3 in slot 2) and\n   rev primer (well C4 in slot 2) from an earlier step. A tip that has touched one liquid\n   leaves a little of it in the next liquid it touches, so this stock now holds material\n   that does not belong there. Liquid drawn from it then took the unwanted material along\n   into 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.\n   Affected: well C5 in slot 2.\n   Also reached 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.\n   Fix: Pick up a fresh tip before line 70 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [c66e3debba13]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 61,
+   "title": "The pipette draws air from well C2 in slot 2: the liquid is below the tip",
+   "explanation": "At line 61 the p20_single_gen2 draws 1 ul from polymerase (well C2 in slot 2) with its tip 1 mm above the bottom of the well. By then the well holds 4 ul, which in this Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap reaches only 0.89 mm up: the tip is above the liquid and draws air (this line did it 10 times, after twice in the liquid; 10 ul of air in all). The simulator does not notice: it does not follow the liquid. The 10 wells filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 6 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 64,
+   "title": "The pipette draws air from well C3 in slot 2: the liquid is below the tip",
+   "explanation": "At line 64 the p20_single_gen2 draws 1 ul from fwd primer (well C3 in slot 2) with its tip 1 mm above the bottom of the well. By then the well holds 4 ul, which in this Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap reaches only 0.89 mm up: the tip is above the liquid and draws air (this line did it 4 times, after 8 times in the liquid; 4 ul of air in all). The simulator does not notice: it does not follow the liquid. The 4 wells filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 6 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 67,
+   "title": "The pipette draws air from well C4 in slot 2: the liquid is below the tip",
+   "explanation": "At line 67 the p20_single_gen2 draws 1 ul from rev primer (well C4 in slot 2) with its tip 1 mm above the bottom of the well. By then the well holds 4 ul, which in this Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap reaches only 0.89 mm up: the tip is above the liquid and draws air (this line did it 4 times, after 8 times in the liquid; 4 ul of air in all). The simulator does not notice: it does not follow the liquid. The 4 wells filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 6 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "COLD-MODULE-NEVER-SET",
+   "severity": "warning",
+   "certain": true,
+   "line": 58,
+   "title": "A temperature module was loaded but never set",
+   "explanation": "At line 58 the robot draws from wells A1, A2, A3, A4, A5, A6, B1, B2 and 9 more in slot 2, on a temperature module that the protocol never sets. A temperature module stays at room temperature until `set_temperature` is called, so buffer (carrier), fwd primer (reagent), polymerase (reagent), rev primer (reagent) and 13 more sat on a block that was never cold; the robot pipetted there 72 times over the run. The person setting up the deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 9 more in slot 2.",
+   "fix": "Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap in slot 2, and `temp_module.deactivate()` at the end."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 58,
+   "title": "A used tip went into a stock: buffer (well C1 in slot 2)",
+   "explanation": "At line 58 the tip went into buffer (well C1 in slot 2) while it still carried polymerase (well C2 in slot 2), fwd primer (well C3 in slot 2), rev primer (well C4 in slot 2) and water (well C5 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 58 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 61,
+   "title": "A used tip went into a stock: polymerase (well C2 in slot 2)",
+   "explanation": "At line 61 the tip went into polymerase (well C2 in slot 2) while it still carried buffer (well C1 in slot 2), fwd primer (well C3 in slot 2), rev primer (well C4 in slot 2) and water (well C5 in slot 2) from an earlier step (this line did it twice). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 4 other wells: wells A9, A10, A11 and A12 in slot 3.",
+   "fix": "Pick up a fresh tip before line 61 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "ENZYME-BEFORE-DILUENT",
+   "severity": "warning",
+   "certain": true,
+   "line": 62,
+   "title": "An enzyme was added before the water: polymerase",
+   "explanation": "At line 62 the robot put polymerase into well A1 in slot 3. Take well A1 in slot 3: at that moment it held only 10 ul, all of it neat buffer, and the water came afterwards, at line 71, to make the 20.0227 ul of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction, after the water and the buffer have brought the well to the right dilution. Dropped into neat buffer or a dry well it meets many times the salt it should: a restriction enzyme then cuts at the wrong places (star activity) and a polymerase starts on mis-primed template.",
+   "fix": "Reorder the additions to well A1 in slot 3: water and buffer first, then the sample, then polymerase last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and hand it out."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 64,
+   "title": "A used tip went into a stock: fwd primer (well C3 in slot 2)",
+   "explanation": "At line 64 the tip went into fwd primer (well C3 in slot 2) while it still carried buffer (well C1 in slot 2), polymerase (well C2 in slot 2), rev primer (well C4 in slot 2) and water (well C5 in slot 2) from an earlier step (this line did it twice). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 64 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 67,
+   "title": "A used tip went into a stock: rev primer (well C4 in slot 2)",
+   "explanation": "At line 67 the tip went into rev primer (well C4 in slot 2) while it still carried buffer (well C1 in slot 2), polymerase (well C2 in slot 2), fwd primer (well C3 in slot 2) and water (well C5 in slot 2) from an earlier step (this line did it twice). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 67 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 70,
+   "title": "A used tip went into a stock: water (well C5 in slot 2)",
+   "explanation": "At line 70 the tip went into water (well C5 in slot 2) while it still carried buffer (well C1 in slot 2), polymerase (well C2 in slot 2), fwd primer (well C3 in slot 2) and rev primer (well C4 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 9 other wells: wells A4, A5, A6, A7, A8, A9, A10, A11 and 1 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 70 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  }
+ ],
+ "seconds": 4.8,
+ "draft": 6
+}

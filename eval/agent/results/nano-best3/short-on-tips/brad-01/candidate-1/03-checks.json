@@ -1,0 +1,563 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 3,
+ "verify_text": "protocol.py: CANNOT CHECK against plate map brad-01.\n  The plate map speaks of 'sample_1', but no liquid the protocol declares matches it\n    (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2,\n    standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.\n  The plate map speaks of 'sample_2', but no liquid the protocol declares matches it\n    (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2,\n    standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.\n  The plate map speaks of 'sample_3', but no liquid the protocol declares matches it\n    (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2,\n    standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.\n  The plate map speaks of 'sample_4', but no liquid the protocol declares matches it\n    (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2,\n    standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.\n  The plate map speaks of 'sample_5', but no liquid the protocol declares matches it\n    (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2,\n    standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.\n  The plate map speaks of 'sample_6', but no liquid the protocol declares matches it\n    (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2,\n    standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.\n  ... and 14 more binding problems.\n  Nothing was verified. This is not a pass.\n\nLabware for the technique (Bradford assay): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  standard 1                            100.0       0.0     100.0       0.0     0.0\n  standard 2                            100.0       0.0     100.0       0.0     0.0\n  standard 3                            100.0       0.0     100.0       0.0     0.0\n  standard 4                            100.0       0.0     100.0       0.0     0.0\n  standard 5                            100.0       0.0     100.0       0.0     0.0\n  standard 6                            100.0       0.0     100.0       0.0     0.0\n  standard 7                            100.0       0.0     100.0       0.0     0.0\n  standard 8                            100.0       0.0     100.0       0.0     0.0\n  bradford                            15000.0       0.0    1000.0   14000.0     0.0\n  Note: bradford ends in wells the plate map does not list for it: A1 in slot 4 (250.0 ul),\n    A2 in slot 4 (250.0 ul), A3 in slot 4 (250.0 ul), A4 in slot 4 (250.0 ul), A5 in slot 4\n    (250.0 ul), A6 in slot 4 (250.0 ul) and 50 more.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  4    Corning 96 Well Plate 360 \u00b5L Flat     A1    standard 1                             0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  4    Corning 96 Well Plate 360 \u00b5L Flat     A2    standard 2                             0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  4    Corning 96 Well Plate 360 \u00b5L Flat     A3    standard 3                             0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  4    Corning 96 Well Plate 360 \u00b5L Flat     A4    standard 4                             0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  4    Corning 96 Well Plate 360 \u00b5L Flat     A5    standard 5                             0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  4    Corning 96 Well Plate 360 \u00b5L Flat     A6    standard 6                             0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  4    Corning 96 Well Plate 360 \u00b5L Flat     A7    standard 7                             0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  4    Corning 96 Well Plate 360 \u00b5L Flat     A8    standard 8                             0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  5    NEST 1 Well Reservoir 195 mL          A1    bradford                           96000.0   15000.0  <-- WOULD RUN DRY\n  FLAG: bradford in A1, slot 5 would run dry: the robot draws 96000 ul from it and the\n    protocol declares 15000 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 105600 ul in this well, or draw less.\n  Tips: 24 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  Tips: 8 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "brad-01",
+  "technique": "Bradford assay",
+  "exit_code": 3,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "cannot_check",
+   "destination": null,
+   "variant": null,
+   "problems": [
+    "The plate map speaks of 'sample_1', but no liquid the protocol declares matches it (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2, standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.",
+    "The plate map speaks of 'sample_2', but no liquid the protocol declares matches it (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2, standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.",
+    "The plate map speaks of 'sample_3', but no liquid the protocol declares matches it (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2, standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.",
+    "The plate map speaks of 'sample_4', but no liquid the protocol declares matches it (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2, standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.",
+    "The plate map speaks of 'sample_5', but no liquid the protocol declares matches it (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2, standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.",
+    "The plate map speaks of 'sample_6', but no liquid the protocol declares matches it (pattern (?i)(?:sample|protein)\\D{0,12}?(\\d+)). Declared: standard 1, standard 2, standard 3, standard 4, standard 5, standard 6, standard 7, standard 8 and 1 more.",
+    "... and 14 more binding problems."
+   ],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 0,
+   "wells": [],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "standard 1",
+    "logical": "standard_1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 2",
+    "logical": "standard_2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 3",
+    "logical": "standard_3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 4",
+    "logical": "standard_4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 5",
+    "logical": "standard_5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 6",
+    "logical": "standard_6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 7",
+    "logical": "standard_7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 8",
+    "logical": "standard_8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "bradford",
+    "logical": "bradford",
+    "role": "reagent",
+    "declared_ul": 15000.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 1000.0,
+    "elsewhere": [
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[A1]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[A2]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[A3]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[A4]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[A5]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[A6]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[A7]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[B1]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[B2]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[B3]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[B4]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[B5]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[B6]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[B7]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[C1]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[C2]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[C3]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[C4]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[C5]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[C6]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[C7]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[D1]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[D2]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[D3]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[D4]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[D5]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[D6]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[D7]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[E1]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[E2]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[E3]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[E4]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[E5]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[E6]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[E7]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[F1]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[F2]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[F3]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[F4]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[F5]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[F6]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[F7]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[G1]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[G2]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[G3]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[G4]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[G5]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[G6]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[G7]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[H1]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[H2]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[H3]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[H4]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[H5]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[H6]",
+      "ul": 250.0
+     },
+     {
+      "well": "4:corning_96_wellplate_360ul_flat[H7]",
+      "ul": 250.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "bradford ends in wells the plate map does not list for it: A1 in slot 4 (250.0 ul), A2 in slot 4 (250.0 ul), A3 in slot 4 (250.0 ul), A4 in slot 4 (250.0 ul), A5 in slot 4 (250.0 ul), A6 in slot 4 (250.0 ul) and 50 more."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "4",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "standard 1",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "standard 2",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "standard 3",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "standard 4",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "standard 5",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "standard 6",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "standard 7",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "standard 8",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "5",
+     "labware": "NEST 1 Well Reservoir 195 mL",
+     "well": "A1",
+     "liquid": "bradford",
+     "declared_ul": 15000.0,
+     "needed_ul": 96000.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 24
+    },
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 8
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 8 biology problems (3 errors, 1 warning, 4 notes).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: 23 stocks\n   line 94:  p20_multi.aspirate(5, tuberack[info[\"source\"]])\n   At line 94 the tip went into tube A2 in slot 3, tube A3 in slot 3, tube A4 in slot 3,\n   tube A5 in slot 3 and 19 more while it still carried the liquid from tube A1 in slot 3,\n   the liquid from tube A2 in slot 3, the liquid from tube A3 in slot 3, the liquid from\n   tube A4 in slot 3 and 20 more from an earlier step (this line did it 13 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, so these\n   stocks now hold material that does not belong there. Liquid drawn from them then took the\n   unwanted material along into 97 other wells: tubes B2, C1, C2, C3, C4, C5, C6, D1 and 3\n   more in slot 3; wells A11, A12, B1, B2, B3, B4, B5, B6 and 78 more in slot 4.\n   Affected: tubes A2, A3, A4, A5, A6, B1, B2, B3 and 15 more in slot 3.\n   Also reached 97 other wells: tubes B2, C1, C2, C3, C4, C5, C6, D1 and 3 more in slot 3;\n   wells A11, A12, B1, B2, B3, B4, B5, B6 and 78 more in slot 4.\n   Fix: Pick up a fresh tip before line 94 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [7889c8a5214a]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: 4 stocks\n   line 97:  p20_multi.aspirate(5, tuberack[info[\"source\"]])\n   At line 97 the tip went into tube C5 in slot 3, tube C6 in slot 3, tube D1 in slot 3 and\n   tube D2 in slot 3 while it still carried the liquid from tube A1 in slot 3, the liquid\n   from tube A2 in slot 3, the liquid from tube B5 in slot 3 and the liquid from tube B6 in\n   slot 3 from an earlier step (this line did it 4 times). A tip that has touched one liquid\n   leaves a little of it in the next liquid it touches, so these stocks now hold material\n   that does not belong there. Liquid drawn from them then took the unwanted material along\n   into 10 other wells: wells E6, E7, E8, E9, E10, E11, E12, G6 and 2 more in slot 4.\n   Affected: tubes C5, C6, D1 and D2 in slot 3.\n   Also reached 10 other wells: wells E6, E7, E8, E9, E10, E11, E12, G6 and 2 more in slot\n   4.\n   Fix: Pick up a fresh tip before line 97 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [6a1718fed46f]\n\n3. ERROR CONTAM-STOCK: A used tip went into a stock: bradford (well A1 in slot 5)\n   line 110:  p300_multi.aspirate(250, bradford_reservoir[\"A1\"])\n   At line 110 the tip went into bradford (well A1 in slot 5) while it still carried the\n   liquid from tube A3 in slot 3, the liquid from tube A4 in slot 3, the liquid from tube A5\n   in slot 3, the liquid from tube B3 in slot 3 and 7 more from an earlier step (this line\n   did it 6 times). A tip that has touched one liquid leaves a little of it in the next\n   liquid it touches, so this stock now holds material that does not belong there. Liquid\n   drawn from it then took the unwanted material along into 61 other wells: wells A2, A3,\n   A4, A5, A6, A7, A8, B1 and 53 more in slot 4.\n   Affected: well A1 in slot 5.\n   Also reached 61 other wells: wells A2, A3, A4, A5, A6, A7, A8, B1 and 53 more in slot 4.\n   Fix: Pick up a fresh tip before line 110 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [325461f25319]\n\n4. WARNING CONTAM-WELL: A used tip carried the liquid from tube A3 in slot 3, the liquid\nfrom tube A4 in slot 3, the liquid from tube A5 in slot 3, the liquid from tube A6 in slot 3\nand 12 more into 53 wells it was never meant for\n   line 111:  p300_multi.dispense(250, plate[well])\n   At line 111 the tip touched the liquid in wells A8, B1, B2, B3, B4, B5, B6, B7 and 45\n   more in slot 4 while it still carried the liquid from tube A3 in slot 3, the liquid from\n   tube A4 in slot 3, the liquid from tube A5 in slot 3, the liquid from tube A6 in slot 3\n   and 12 more from an earlier step (this line did it 36 times). A tip that has touched one\n   liquid leaves a little of it in the next liquid it touches. The protocol never transfers\n   that liquid into these wells on purpose, so it was not meant to be there. If the wells\n   hold different samples, each now holds a little of another.\n   Affected: wells A8, B1, B2, B3, B4, B5, B6, B7 and 45 more in slot 4.\n   Fix: Use a fresh tip for each well at line 111. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [f48ebf09efa6]\n\n5. NOTE UNMIXED-AT-END: 6 wells never mixed after the liquid from tube C1 in slot 3, the\nliquid from tube C2 in slot 3, the liquid from tube D1 in slot 3 and the liquid from tube D2\nin slot 3 went in (14 to 25% of the well)\n   line 95:  p20_multi.dispense(5, plate[info[\"dest1\"]])\n   At line 95 the robot added the liquid from tube C1 in slot 3, the liquid from tube C2 in\n   slot 3, the liquid from tube D1 in slot 3 and the liquid from tube D2 in slot 3 to wells\n   C9, C11, D9, D11, H9 and H11 in slot 4, which already held the liquid from tube B1 in\n   slot 3, the liquid from tube B2 in slot 3, the liquid from tube A1 in slot 3, the liquid\n   from tube C1 in slot 3 and 2 more (this line did it 4 times). The addition was 14 to 25%\n   of the well, nothing mixed the well afterwards, and the run ended with them that way. Two\n   liquids layered in a small well do not mix on their own, so what the well holds is not at\n   the concentration you calculated. If the plate is vortexed and spun down before it is\n   used, nothing is wrong; if it goes straight to the instrument, the wells are not what the\n   protocol says they are.\n   Affected: wells C9, C11, D9, D11, H9 and H11 in slot 4.\n   Fix: Mix wells C9, C11, D9, D11, H9 and H11 in slot 4 after line 95: `mix_after=(5, 16 to\n   28)` on the transfer, or `pipette.mix(5, 16 to 28, well)`, with the volume about 80% of\n   what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [a8d4279f001c]\n\n6. NOTE UNMIXED-AT-END: 8 wells never mixed after the liquid from tube B6 in slot 3, the\nliquid from tube C1 in slot 3, the liquid from tube C2 in slot 3, the liquid from tube C6 in\nslot 3 and 2 more went in (14 to 25% of the well)\n   line 98:  p20_multi.dispense(5, plate[info[\"dest2\"]])\n   At line 98 the robot added the liquid from tube B6 in slot 3, the liquid from tube C1 in\n   slot 3, the liquid from tube C2 in slot 3, the liquid from tube C6 in slot 3 and 2 more\n   to wells C8, C10, C12, D8, D10, D12, H10 and H12 in slot 4, which already held the liquid\n   from tube A6 in slot 3, the liquid from tube B1 in slot 3, the liquid from tube B2 in\n   slot 3, the liquid from tube B6 in slot 3 and 4 more (this line did it 6 times). The\n   addition was 14 to 25% of the well, nothing mixed the well afterwards, and the run ended\n   with them that way. Two liquids layered in a small well do not mix on their own, so what\n   the well holds is not at the concentration you calculated. If the plate is vortexed and\n   spun down before it is used, nothing is wrong; if it goes straight to the instrument, the\n   wells are not what the protocol says they are.\n   Affected: wells C8, C10, C12, D8, D10, D12, H10 and H12 in slot 4.\n   Fix: Mix wells C8, C10, C12, D8, D10, D12, H10 and H12 in slot 4 after line 98:\n   `mix_after=(5, 16 to 28)` on the transfer, or `pipette.mix(5, 16 to 28, well)`, with the\n   volume about 80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [478dd8c149f6]\n\n7. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 110:  p300_multi.aspirate(250, bradford_reservoir[\"A1\"])\n   At line 110 the tip touched the liquid in well A1 in slot 5 while it still carried\n   standard 1 (well A1 in slot 4), standard 2 (well A2 in slot 4), standard 3 (well A3 in\n   slot 4), standard 4 (well A4 in slot 4) and 2 more from an earlier step (this line did it\n   6 times). A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches, and the protocol never transfers that liquid into this well on purpose. A\n   reagent is shared: the master mix, the enzyme or the primer in that well goes into every\n   reaction on the plate. A tip that has been in one sample leaves a little of it in the\n   next liquid it touches, so a sample carried into a reagent well turns up in every well\n   that reagent reaches, and a no-template control can no longer be trusted. Liquid was\n   later taken out of the affected wells, and the unwanted material went along into 59 other\n   wells: wells A2, A3, A4, A5, A6, A7, B2, B3 and 51 more in slot 4.\n   Affected: well A1 in slot 5.\n   Also reached 59 other wells: wells A2, A3, A4, A5, A6, A7, B2, B3 and 51 more in slot 4.\n   Fix: Use a fresh tip for each sample at line 110, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [b0eaf63162a6]\n\n8. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 111:  p300_multi.dispense(250, plate[well])\n   At line 111 the tip touched the liquid in wells B1, B2, B3, B4, B5, B6, B7, C1 and 13\n   more in slot 4 while it still carried standard 1 (well A1 in slot 4), standard 2 (well A2\n   in slot 4), standard 3 (well A3 in slot 4), standard 4 (well A4 in slot 4) and 4 more\n   from an earlier step (this line did it 21 times). A tip that has touched one liquid\n   leaves a little of it in the next liquid it touches, and the protocol never transfers\n   that liquid into these wells on purpose. A reagent is shared: the master mix, the enzyme\n   or the primer in that well goes into every reaction on the plate. A tip that has been in\n   one sample leaves a little of it in the next liquid it touches, so a sample carried into\n   a reagent well turns up in every well that reagent reaches, and a no-template control can\n   no longer be trusted. This is only a note, because one and the same line of the protocol\n   sends this tip into all of these wells, which is what an author does with one reagent\n   split over several wells. If they hold the same liquid, nothing is wrong. If they hold\n   different samples, it is a mix-up. The protocol does not declare its liquids, so Provette\n   cannot tell which.\n   Affected: wells B1, B2, B3, B4, B5, B6, B7, C1 and 13 more in slot 4.\n   Fix: Use a fresh tip for each sample at line 111, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [052f2f5cf556]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 94,
+   "title": "A used tip went into a stock: 23 stocks",
+   "explanation": "At line 94 the tip went into tube A2 in slot 3, tube A3 in slot 3, tube A4 in slot 3, tube A5 in slot 3 and 19 more while it still carried the liquid from tube A1 in slot 3, the liquid from tube A2 in slot 3, the liquid from tube A3 in slot 3, the liquid from tube A4 in slot 3 and 20 more from an earlier step (this line did it 13 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 97 other wells: tubes B2, C1, C2, C3, C4, C5, C6, D1 and 3 more in slot 3; wells A11, A12, B1, B2, B3, B4, B5, B6 and 78 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 94 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 97,
+   "title": "A used tip went into a stock: 4 stocks",
+   "explanation": "At line 97 the tip went into tube C5 in slot 3, tube C6 in slot 3, tube D1 in slot 3 and tube D2 in slot 3 while it still carried the liquid from tube A1 in slot 3, the liquid from tube A2 in slot 3, the liquid from tube B5 in slot 3 and the liquid from tube B6 in slot 3 from an earlier step (this line did it 4 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 10 other wells: wells E6, E7, E8, E9, E10, E11, E12, G6 and 2 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 97 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 110,
+   "title": "A used tip went into a stock: bradford (well A1 in slot 5)",
+   "explanation": "At line 110 the tip went into bradford (well A1 in slot 5) while it still carried the liquid from tube A3 in slot 3, the liquid from tube A4 in slot 3, the liquid from tube A5 in slot 3, the liquid from tube B3 in slot 3 and 7 more from an earlier step (this line did it 6 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 61 other wells: wells A2, A3, A4, A5, A6, A7, A8, B1 and 53 more in slot 4.",
+   "fix": "Pick up a fresh tip before line 110 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 111,
+   "title": "A used tip carried the liquid from tube A3 in slot 3, the liquid from tube A4 in slot 3, the liquid from tube A5 in slot 3, the liquid from tube A6 in slot 3 and 12 more into 53 wells it was never meant for",
+   "explanation": "At line 111 the tip touched the liquid in wells A8, B1, B2, B3, B4, B5, B6, B7 and 45 more in slot 4 while it still carried the liquid from tube A3 in slot 3, the liquid from tube A4 in slot 3, the liquid from tube A5 in slot 3, the liquid from tube A6 in slot 3 and 12 more from an earlier step (this line did it 36 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into these wells on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 111. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 95,
+   "title": "6 wells never mixed after the liquid from tube C1 in slot 3, the liquid from tube C2 in slot 3, the liquid from tube D1 in slot 3 and the liquid from tube D2 in slot 3 went in (14 to 25% of the well)",
+   "explanation": "At line 95 the robot added the liquid from tube C1 in slot 3, the liquid from tube C2 in slot 3, the liquid from tube D1 in slot 3 and the liquid from tube D2 in slot 3 to wells C9, C11, D9, D11, H9 and H11 in slot 4, which already held the liquid from tube B1 in slot 3, the liquid from tube B2 in slot 3, the liquid from tube A1 in slot 3, the liquid from tube C1 in slot 3 and 2 more (this line did it 4 times). The addition was 14 to 25% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes straight to the instrument, the wells are not what the protocol says they are.",
+   "fix": "Mix wells C9, C11, D9, D11, H9 and H11 in slot 4 after line 95: `mix_after=(5, 16 to 28)` on the transfer, or `pipette.mix(5, 16 to 28, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 98,
+   "title": "8 wells never mixed after the liquid from tube B6 in slot 3, the liquid from tube C1 in slot 3, the liquid from tube C2 in slot 3, the liquid from tube C6 in slot 3 and 2 more went in (14 to 25% of the well)",
+   "explanation": "At line 98 the robot added the liquid from tube B6 in slot 3, the liquid from tube C1 in slot 3, the liquid from tube C2 in slot 3, the liquid from tube C6 in slot 3 and 2 more to wells C8, C10, C12, D8, D10, D12, H10 and H12 in slot 4, which already held the liquid from tube A6 in slot 3, the liquid from tube B1 in slot 3, the liquid from tube B2 in slot 3, the liquid from tube B6 in slot 3 and 4 more (this line did it 6 times). The addition was 14 to 25% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes straight to the instrument, the wells are not what the protocol says they are.",
+   "fix": "Mix wells C8, C10, C12, D8, D10, D12, H10 and H12 in slot 4 after line 98: `mix_after=(5, 16 to 28)` on the transfer, or `pipette.mix(5, 16 to 28, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 110,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 110 the tip touched the liquid in well A1 in slot 5 while it still carried standard 1 (well A1 in slot 4), standard 2 (well A2 in slot 4), standard 3 (well A3 in slot 4), standard 4 (well A4 in slot 4) and 2 more from an earlier step (this line did it 6 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted. Liquid was later taken out of the affected wells, and the unwanted material went along into 59 other wells: wells A2, A3, A4, A5, A6, A7, B2, B3 and 51 more in slot 4.",
+   "fix": "Use a fresh tip for each sample at line 110, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 111,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 111 the tip touched the liquid in wells B1, B2, B3, B4, B5, B6, B7, C1 and 13 more in slot 4 while it still carried standard 1 (well A1 in slot 4), standard 2 (well A2 in slot 4), standard 3 (well A3 in slot 4), standard 4 (well A4 in slot 4) and 4 more from an earlier step (this line did it 21 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into these wells on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted. This is only a note, because one and the same line of the protocol sends this tip into all of these wells, which is what an author does with one reagent split over several wells. If they hold the same liquid, nothing is wrong. If they hold different samples, it is a mix-up. The protocol does not declare its liquids, so Provette cannot tell which.",
+   "fix": "Use a fresh tip for each sample at line 111, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  }
+ ],
+ "seconds": 6.2,
+ "draft": 3
+}

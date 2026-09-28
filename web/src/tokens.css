@@ -1,0 +1,141 @@
+/* The design tokens. Every colour, space and size on every page comes from here; nothing is
+   styled inline. Light and dark share the same names (docs/ui-brief.md, "Visual direction"). */
+
+:root {
+  color-scheme: light dark;
+
+  /* type: one family, one monospace for code and numbers */
+  --font:
+    "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  --mono:
+    "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+  --t-1: 0.75rem; /* 12px  small print */
+  --t-2: 0.8125rem; /* 13px  meta, table */
+  --t-3: 0.9375rem; /* 15px  body */
+  --t-4: 1.0625rem; /* 17px  lead */
+  --t-5: 1.375rem; /* 22px  h2 */
+  --t-6: 1.75rem; /* 28px  h1 */
+  --t-7: 2.25rem; /* 36px  display */
+
+  /* space */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+
+  --radius: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+
+  /* controls: every input, select and button is one of two heights */
+  --control: 2.25rem; /* 36px */
+  --control-lg: 2.75rem; /* 44px, the page's one primary action */
+  --measure: 68ch;
+  --page: 1120px;
+
+  /* colour, light */
+  --bg: #ffffff;
+  --surface: #f6f7f8;
+  --raised: #ffffff; /* a card that sits above the page */
+  --surface-2: #eceef1;
+  --border: #dfe3e8;
+  --text: #1a1d21;
+  --muted: #5b6470;
+  --faint: #737c88;
+  --link: #1f5fbf;
+
+  --verified: #0f8a5f; /* the one accent: verified */
+  --on-accent: #ffffff; /* text on a filled --verified button */
+  --verified-bg: #e6f5ee;
+  --error: #c7382f; /* the replay's severity colours */
+  --error-bg: #fbe9e7;
+  --warning: #a85a08; /* 4.6:1 on --warning-bg, so a 12 px lozenge reads */
+  --warning-bg: #fdf1e2;
+  --note: #2f6fd6;
+  --note-bg: #e8f0fc;
+
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.1);
+  /* code */
+  --code-comment: #6e7781;
+  --code-string: #0a7d4f;
+  --code-keyword: #8250df;
+  --code-number: #b35900;
+  --code-function: #0550ae;
+  --code-builtin: #953800;
+  --code-punctuation: #57606a;
+  --focus: 0 0 0 3px rgba(31, 95, 191, 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1115;
+    --surface: #171a20;
+    --raised: #161920;
+    --surface-2: #1f232b;
+    --border: #2a2f38;
+    --text: #e8eaee;
+    --muted: #9aa3b0;
+    --faint: #6c7581;
+    --link: #7fb0ff;
+    --verified: #3ecf8e;
+    --on-accent: #0f1115;
+    --verified-bg: #10291f;
+    --error: #ff7b72;
+    --error-bg: #3a1a18;
+    --warning: #f0a44a;
+    --warning-bg: #3a2a12;
+    --note: #7fb0ff;
+    --note-bg: #16233a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --code-comment: #7d8590;
+    --code-string: #7ee2a8;
+    --code-keyword: #d2a8ff;
+    --code-number: #ffb86b;
+    --code-function: #79c0ff;
+    --code-builtin: #ffa657;
+    --code-punctuation: #9aa3b0;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1115;
+  --surface: #171a20;
+  --raised: #161920;
+  --surface-2: #1f232b;
+  --border: #2a2f38;
+  --text: #e8eaee;
+  --muted: #9aa3b0;
+  --faint: #6c7581;
+  --link: #7fb0ff;
+  --verified: #3ecf8e;
+  --on-accent: #0f1115;
+  --verified-bg: #10291f;
+  --error: #ff7b72;
+  --error-bg: #3a1a18;
+  --warning: #f0a44a;
+  --warning-bg: #3a2a12;
+  --note: #7fb0ff;
+  --note-bg: #16233a;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --code-comment: #7d8590;
+  --code-string: #7ee2a8;
+  --code-keyword: #d2a8ff;
+  --code-number: #ffb86b;
+  --code-function: #79c0ff;
+  --code-builtin: #ffa657;
+  --code-punctuation: #9aa3b0;
+}
+
+/* Native controls (radios, selects, scrollbars) follow the chosen theme, not only the system's. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}

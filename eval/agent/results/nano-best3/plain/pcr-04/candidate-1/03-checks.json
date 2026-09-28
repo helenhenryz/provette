@@ -1,0 +1,531 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map pcr-04. 17 of 18 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3). Reading of the request: 6\n    samples x 3.\n  well B6 (reactions): expected 8 ul master_mix, 2 ul sample_6; found 8 ul master_mix, 2 ul\n    [water]\n      - sample_6 is missing: the plate map says 2 ul, none arrives\n      - holds 2 ul of [water], which the plate map does not list for this well\n\nLabware for the technique (qPCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  master mix                           1000.0     144.0     856.0       0.0     0.0\n  sample 1                              200.0       6.0     194.0       0.0     0.0\n  sample 2                              200.0       6.0     194.0       0.0     0.0\n  sample 3                              200.0       6.0     194.0       0.0     0.0\n  sample 4                              200.0       6.0     194.0       0.0     0.0\n  sample 5                              200.0       6.0     194.0       0.0     0.0\n  sample 6                              200.0       4.0     196.0       0.0     0.0\n  water                                1000.0       0.0     998.0       2.0     0.0\n  Note: water ends in wells the plate map does not list for it: B6 in slot 3 (2.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 2 mL A1    master mix                           144.0    1000.0\n  4    Opentrons 96 Well Aluminum Block with A1    sample 1                               6.0     200.0\n  4    Opentrons 96 Well Aluminum Block with A2    sample 2                               6.0     200.0\n  4    Opentrons 96 Well Aluminum Block with A3    sample 3                               6.0     200.0\n  4    Opentrons 96 Well Aluminum Block with A4    sample 4                               6.0     200.0\n  4    Opentrons 96 Well Aluminum Block with A5    sample 5                               6.0     200.0\n  4    Opentrons 96 Well Aluminum Block with A6    sample 6                               4.0     200.0\n  5    NEST 12 Well Reservoir 15 mL          A1    water                                  2.0    1000.0\n  Tips: 36 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-04",
+  "technique": "qPCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "6 samples x 3",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 17,
+   "wells_total": 18,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_1": 1.9999999999999998
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_2": 1.9999999999999998
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_3": 1.9999999999999998
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_4": 1.9999999999999998
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_5": 1.9999999999999998
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "[water]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[water]",
+       "expected_ul": null,
+       "found_ul": 2.0,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "B6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 8.0,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 8.0,
+      "[water]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_6",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[water]",
+       "expected_ul": null,
+       "found_ul": 2.0,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "master mix",
+    "logical": "master_mix",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 144.0,
+    "left_in_source_ul": 856.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 194.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 194.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 194.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 194.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 194.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 200.0,
+    "delivered_ul": 4.0,
+    "left_in_source_ul": 196.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 1000.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 998.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_100ul_pcr_full_skirt[B6]",
+      "ul": 2.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "water ends in wells the plate map does not list for it: B6 in slot 3 (2.0 ul)."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 2 mL Snapcap",
+     "well": "A1",
+     "liquid": "master mix",
+     "declared_ul": 1000.0,
+     "needed_ul": 144.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 200.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A2",
+     "liquid": "sample 2",
+     "declared_ul": 200.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A3",
+     "liquid": "sample 3",
+     "declared_ul": 200.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A4",
+     "liquid": "sample 4",
+     "declared_ul": 200.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A5",
+     "liquid": "sample 5",
+     "declared_ul": 200.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A6",
+     "liquid": "sample 6",
+     "declared_ul": 200.0,
+     "needed_ul": 4.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 1000.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 36
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: no biology problems found.\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\nA clean report is not a promise that the experiment will work.",
+ "findings": [],
+ "seconds": 5.2,
+ "draft": 3
+}

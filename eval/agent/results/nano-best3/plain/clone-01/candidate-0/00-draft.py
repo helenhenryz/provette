@@ -1,0 +1,75 @@
+from opentrons import protocol_api
+
+metadata = {
+    'protocolName': 'restriction_digest_12',
+    'apiLevel': '2.19'
+}
+
+def run(protocol: protocol_api.ProtocolContext):
+    # Load temperature module on slot 0
+    temp_module = protocol.load_module('temperature module gen2', 0)
+    # Load aluminium block onto the temperature module
+    source_block = temp_module.load_labware('opentrons_24_aluminumblock_nest_1.5ml_snapcap')
+    # Load PCR plate on slot 1
+    plate = protocol.load_labware('biorad_96_wellplate_200ul_pcr', 1)
+    # Load tip rack on slot 2
+    tips = protocol.load_labware('opentrons_96_filtertiprack_200ul', 2)
+    # Load p300 single gen2 on the right mount, using the tip rack
+    p300 = protocol.load_instrument('p300_single_gen2', 'right', tip_racks=[tips])
+
+    # Define liquids
+    buffer = protocol.define_liquid(name='buffer', description='10x restriction enzyme buffer', display_color='#0000FF')
+    enzyme = protocol.define_liquid(name='enzyme', description='Restriction enzyme', display_color='#FF0000')
+    water = protocol.define_liquid(name='water', description='Molecular biology grade water', display_color='#00FFFF')
+    plasmid_1 = protocol.define_liquid(name='plasmid 1', description='Plasmid 1', display_color='#FFFFFF')
+    plasmid_2 = protocol.define_liquid(name='plasmid 2', description='Plasmid 2', display_color='#FFFFFF')
+    plasmid_3 = protocol.define_liquid(name='plasmid 3', description='Plasmid 3', display_color='#FFFFFF')
+    plasmid_4 = protocol.define_liquid(name='plasmid 4', description='Plasmid 4', display_color='#FFFFFF')
+    plasmid_5 = protocol.define_liquid(name='plasmid 5', description='Plasmid 5', display_color='#FFFFFF')
+    plasmid_6 = protocol.define_liquid(name='plasmid 6', description='Plasmid 6', display_color='#FFFFFF')
+    plasmid_7 = protocol.define_liquid(name='plasmid 7', description='Plasmid 7', display_color='#FFFFFF')
+    plasmid_8 = protocol.define_liquid(name='plasmid 8', description='Plasmid 8', display_color='#FFFFFF')
+    plasmid_9 = protocol.define_liquid(name='plasmid 9', description='Plasmid 9', display_color='#FFFFFF')
+    plasmid_10 = protocol.define_liquid(name='plasmid 10', description='Plasmid 10', display_color='#FFFFFF')
+    plasmid_11 = protocol.define_liquid(name='plasmid 11', description='Plasmid 11', display_color='#FFFFFF')
+    plasmid_12 = protocol.define_liquid(name='plasmid 12', description='Plasmid 12', display_color='#FFFFFF')
+
+    # Load liquids into source block wells
+    source_block['A1'].load_liquid(liquid=buffer, volume=200)
+    source_block['A2'].load_liquid(liquid=enzyme, volume=200)
+    source_block['A3'].load_liquid(liquid=water, volume=500)
+    source_block['A4'].load_liquid(liquid=plasmid_1, volume=100)
+    source_block['A5'].load_liquid(liquid=plasmid_2, volume=100)
+    source_block['A6'].load_liquid(liquid=plasmid_3, volume=100)
+    source_block['A7'].load_liquid(liquid=plasmid_4, volume=100)
+    source_block['A8'].load_liquid(liquid=plasmid_5, volume=100)
+    source_block['A9'].load_liquid(liquid=plasmid_6, volume=100)
+    source_block['A10'].load_liquid(liquid=plasmid_7, volume=100)
+    source_block['A11'].load_liquid(liquid=plasmid_8, volume=100)
+    source_block['A12'].load_liquid(liquid=plasmid_9, volume=100)
+    source_block['A13'].load_liquid(liquid=plasmid_10, volume=100)
+    source_block['A14'].load_liquid(liquid=plasmid_11, volume=100)
+    source_block['A15'].load_liquid(liquid=plasmid_12, volume=100)
+
+    # Get the first 12 wells of the plate
+    dest_wells = plate.wells()[:12]
+
+    # Perform the digests
+    for i, dest_well in enumerate(dest_wells):
+        p300.pick_up_tip()
+        # 2 ul buffer
+        p300.aspirate(2, source_block['A1'])
+        p300.dispense(2, dest_well)
+        # 1 ul enzyme
+        p300.aspirate(1, source_block['A2'])
+        p300.dispense(1, dest_well)
+        # 5 ul plasmid i+1
+        plasmid_well = source_block['A' + str(4 + i)]
+        p300.aspirate(5, plasmid_well)
+        p300.dispense(5, dest_well)
+        # 12 ul water
+        p300.aspirate(12, source_block['A3'])
+        p300.dispense(12, dest_well)
+        # Mix the well
+        p300.mix(5, 10, dest_well)
+        p300.drop_tip()

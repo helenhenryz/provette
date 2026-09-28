@@ -1,0 +1,251 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map dil-03. 8 of 8 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: 8 standards;\n    excess removed from the last well.\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  bsa                                  1000.0      99.6     900.0       0.4     0.0\n  water                                1000.0     300.4     650.0      49.6     0.0\n  Note: bsa ends in wells the plate map does not list for it: A1 in slot 5 (0.4 ul).\n  Note: water ends in wells the plate map does not list for it: A1 in slot 5 (49.6 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 15 Tube Rack with Falcon 15 A1    bsa                                  100.0    1000.0\n  3    NEST 12 Well Reservoir 15 mL          A1    water                                350.0    1000.0\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "dil-03",
+  "technique": "Serial dilution",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "8 standards; excess removed from the last well",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 8,
+   "wells_total": 8,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "standards",
+     "expected": {
+      "bsa": 50.0
+     },
+     "found": {
+      "bsa": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "standards",
+     "expected": {
+      "bsa": 25.0,
+      "water": 25.0
+     },
+     "found": {
+      "water": 25.0,
+      "bsa": 25.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "standards",
+     "expected": {
+      "bsa": 12.5,
+      "water": 37.5
+     },
+     "found": {
+      "water": 37.5,
+      "bsa": 12.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "standards",
+     "expected": {
+      "bsa": 6.25,
+      "water": 43.75
+     },
+     "found": {
+      "water": 43.75,
+      "bsa": 6.25
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "standards",
+     "expected": {
+      "bsa": 3.125,
+      "water": 46.875
+     },
+     "found": {
+      "water": 46.875,
+      "bsa": 3.125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "standards",
+     "expected": {
+      "bsa": 1.5625,
+      "water": 48.4375
+     },
+     "found": {
+      "water": 48.4375,
+      "bsa": 1.5625
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.7812,
+      "water": 49.2188
+     },
+     "found": {
+      "water": 49.21875,
+      "bsa": 0.78125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.3906,
+      "water": 49.6094
+     },
+     "found": {
+      "water": 49.609375,
+      "bsa": 0.390625
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "bsa",
+    "logical": "bsa",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 99.6094,
+    "left_in_source_ul": 900.0,
+    "elsewhere": [
+     {
+      "well": "5:nest_12_reservoir_15ml[A1]",
+      "ul": 0.3906
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "bsa ends in wells the plate map does not list for it: A1 in slot 5 (0.4 ul)."
+    ]
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 300.3906,
+    "left_in_source_ul": 650.0,
+    "elsewhere": [
+     {
+      "well": "5:nest_12_reservoir_15ml[A1]",
+      "ul": 49.6094
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "water ends in wells the plate map does not list for it: A1 in slot 5 (49.6 ul)."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 15 Tube Rack with Falcon 15 mL Conical",
+     "well": "A1",
+     "liquid": "bsa",
+     "declared_ul": 1000.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 1000.0,
+     "needed_ul": 350.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 4 biology problems (2 warnings, 2 notes).\n\n1. WARNING CONTAM-STOCK: A used tip went into a stock: water (well A1 in slot 3)\n   line 41:  p300.aspirate(add_diluent_vol, water_reservoir[\"A1\"])\n   At line 41 the tip went into water (well A1 in slot 3) while it still carried bsa (tube\n   A1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of\n   it in the next liquid it touches, so this stock now holds material that does not belong\n   there. The protocol drew from it again afterwards, but only into wells that were given\n   that material on purpose anyway, so this run is not harmed. What is left in the stock is\n   no longer clean for the next run.\n   Affected: well A1 in slot 3.\n   Fix: Pick up a fresh tip before line 41 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [8ba9c438801e]\n\n2. WARNING MIX-TOO-WEAK: Mixing too weak to stir 6 wells: 1 \u00d7 100 ul in 100 ul\n   line 49:  p300.mix(volume=transfer_vol + add_diluent_vol)\n   At line 49 the tip mixes wells A2, A3, A4, A5, A6 and A7 in slot 4 with 1 stroke of 100\n   ul in a well holding 100 ul (this line did it 6 times). 1 stroke of 100 ul move 1 of the\n   well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Fewer\n   than 3 strokes do not mix a well. A stroke of the whole well draws air at the bottom and\n   foams the liquid. Integra draws over 80% of the well five times; three mixes gave 11.8%\n   CV where twenty gave 1.7%. What the well holds is not at the concentration you\n   calculated, and in a dilution series every later step inherits the error.\n   Affected: wells A2, A3, A4, A5, A6 and A7 in slot 4.\n   Fix: Mix the well with about 80% of its volume (80 ul) at least 5 times: `mix(5, 80,\n   well)`. A stroke of the whole well draws air; use no more than 90%.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [99f71df5c065]\n\n3. NOTE CONTAM-WELL: A used tip carried water (well A1 in slot 3) into well A1 in slot 4 it\nwas never meant for\n   line 45:  p300.aspirate(transfer_vol, source)\n   At line 45 the tip touched the liquid in well A1 in slot 4 while it still carried water\n   (well A1 in slot 3) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   this well on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another.\n   Affected: well A1 in slot 4.\n   Fix: Use a fresh tip for each well at line 45. If one tip must serve many wells, dispense\n   from above the liquid (for example `well.top()`) so that the tip never touches what is\n   already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [23901b2ec9b2]\n\n4. NOTE NO-NEGATIVE-CONTROL: No blank on a dilution series: 8 wells of bsa\n   line 46:  p300.dispense(transfer_vol, plate[well])\n   At line 46 the robot starts a dilution series of bsa in NEST 96 Well Plate 200 \u00b5L Flat\n   (slot 4): 8 wells at 8 concentrations, each level about 2 times weaker than the one\n   before. No well on this plate holds water with no sample, so there is no blank: the curve\n   has no zero to read against, and a signal from the diluent or the plastic cannot be told\n   from the lowest point. Wells: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.\n   Fix: Add a well of water alone, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [cdef25e50c47]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 41,
+   "title": "A used tip went into a stock: water (well A1 in slot 3)",
+   "explanation": "At line 41 the tip went into water (well A1 in slot 3) while it still carried bsa (tube A1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 41 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 49,
+   "title": "Mixing too weak to stir 6 wells: 1 \u00d7 100 ul in 100 ul",
+   "explanation": "At line 49 the tip mixes wells A2, A3, A4, A5, A6 and A7 in slot 4 with 1 stroke of 100 ul in a well holding 100 ul (this line did it 6 times). 1 stroke of 100 ul move 1 of the well in all; it takes about 2 wells' worth of strokes to mix (the mixing work). Fewer than 3 strokes do not mix a well. A stroke of the whole well draws air at the bottom and foams the liquid. Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix the well with about 80% of its volume (80 ul) at least 5 times: `mix(5, 80, well)`. A stroke of the whole well draws air; use no more than 90%."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 45,
+   "title": "A used tip carried water (well A1 in slot 3) into well A1 in slot 4 it was never meant for",
+   "explanation": "At line 45 the tip touched the liquid in well A1 in slot 4 while it still carried water (well A1 in slot 3) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 45. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 46,
+   "title": "No blank on a dilution series: 8 wells of bsa",
+   "explanation": "At line 46 the robot starts a dilution series of bsa in NEST 96 Well Plate 200 \u00b5L Flat (slot 4): 8 wells at 8 concentrations, each level about 2 times weaker than the one before. No well on this plate holds water with no sample, so there is no blank: the curve has no zero to read against, and a signal from the diluent or the plastic cannot be told from the lowest point. Wells: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.",
+   "fix": "Add a well of water alone, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 4.5,
+ "draft": 4
+}

@@ -1,0 +1,251 @@
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  min-height: 0;
+}
+.empty {
+  padding: 0 var(--s-2);
+  font-size: var(--t-2);
+  color: var(--faint);
+}
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.groupLabel {
+  padding: 0 var(--s-3) var(--s-2);
+  font-size: var(--t-1);
+  color: var(--faint);
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 32px;
+  padding: 0 var(--s-3);
+  border-radius: var(--radius-lg);
+  color: var(--text);
+  text-decoration: none;
+}
+.item:hover {
+  background: var(--surface-2);
+  text-decoration: none;
+}
+.itemOn,
+.itemOn:hover {
+  background: var(--surface-2);
+}
+/* the row's mark: one 14px slot, in the state's colour (a run's dot, a check's page, a plan's plate) */
+.mark {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--faint);
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.mark_ok {
+  color: var(--verified);
+}
+.mark_bad {
+  color: var(--error);
+}
+.mark_running {
+  color: var(--note);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+.mark_muted {
+  color: var(--faint);
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.title {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--t-2);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meta {
+  font-size: var(--t-1);
+  color: var(--faint);
+}
+.empty {
+  padding: 0 var(--s-3);
+}
+
+/* a row: the link, and a "⋯" button that shows on hover (always on touch screens) */
+.row {
+  position: relative;
+}
+.more {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 100ms ease;
+}
+.row:hover .more,
+.rowOpen .more,
+.more:focus-visible {
+  opacity: 1;
+}
+.more:hover,
+.rowOpen .more {
+  color: var(--text);
+  background: var(--raised, var(--surface-2));
+}
+/* the title stops short of the button rather than running under it */
+.row:hover .item,
+.rowOpen .item,
+.row:focus-within .item {
+  padding-right: 34px;
+}
+.rowOpen .item {
+  background: var(--surface-2);
+}
+@media (hover: none) {
+  .more {
+    opacity: 0.8;
+  }
+  .kind {
+    display: none;
+  }
+  .row .item {
+    padding-right: 34px;
+  }
+}
+
+.menu {
+  position: fixed;
+  z-index: 60;
+  width: 180px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+}
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 32px;
+  padding: 0 var(--s-2);
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: var(--t-2);
+  text-align: left;
+  cursor: pointer;
+}
+.menuItem:hover,
+.menuItem:focus-visible {
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+  outline: none;
+}
+.menuDanger {
+  color: var(--error);
+}
+.menuRule {
+  height: 1px;
+  margin: 4px 6px;
+  background: var(--border);
+}
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-4);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+.dialog {
+  width: min(440px, 100%);
+  padding: var(--s-5, 20px) var(--s-5, 20px) var(--s-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+.dialogTitle {
+  margin: 0 0 var(--s-2);
+  font-size: var(--t-3);
+  font-weight: 600;
+}
+.dialogWords {
+  margin: 0;
+  font-size: var(--t-2);
+  color: var(--muted);
+  line-height: 1.5;
+}
+.dialogProblem {
+  margin: var(--s-3) 0 0;
+  font-size: var(--t-2);
+  color: var(--error);
+}
+.dialogButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--s-2);
+  margin-top: var(--s-4);
+}
+.danger {
+  background: #d23c3c;
+  border-color: #d23c3c;
+  color: #fff;
+}
+.danger:hover {
+  background: #bb3030;
+  border-color: #bb3030;
+}

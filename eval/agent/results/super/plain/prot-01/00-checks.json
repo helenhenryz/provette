@@ -1,0 +1,557 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map prot-01. 12 of 12 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3). Reading of the request: 12\n    gel samples.\n\nLabware for the technique (Protein): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  sample 1                              100.0      15.0      85.0       0.0     0.0\n  sample 2                              100.0      15.0      85.0       0.0     0.0\n  sample 3                              100.0      15.0      85.0       0.0     0.0\n  sample 4                              100.0      15.0      85.0       0.0     0.0\n  sample 5                              100.0      15.0      85.0       0.0     0.0\n  sample 6                              100.0      15.0      85.0       0.0     0.0\n  sample 7                              100.0      15.0      85.0       0.0     0.0\n  sample 8                              100.0      15.0      85.0       0.0     0.0\n  sample 9                              100.0      15.0      85.0       0.0     0.0\n  sample 10                             100.0      15.0      85.0       0.0     0.0\n  sample 11                             100.0      15.0      85.0       0.0     0.0\n  sample 12                             100.0      15.0      85.0       0.0     0.0\n  dye                                   500.0      60.0     440.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A1    sample 1                              15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A2    sample 2                              15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A3    sample 3                              15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A4    sample 4                              15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A5    sample 5                              15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A6    sample 6                              15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A7    sample 7                              15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A8    sample 8                              15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A9    sample 9                              15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A10   sample 10                             15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A11   sample 11                             15.0     100.0\n  2    NEST 96 Well Plate 200 \u00b5L Flat        A12   sample 12                             15.0     100.0\n  4    Opentrons 24 Tube Rack with NEST 1.5  A1    dye                                   60.0     500.0\n  Tips: 12 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "prot-01",
+  "technique": "Protein",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "3:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "12 gel samples",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 12,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "gel samples",
+     "expected": {
+      "sample_1": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_1": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "gel samples",
+     "expected": {
+      "sample_2": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_2": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "gel samples",
+     "expected": {
+      "sample_3": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_3": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "gel samples",
+     "expected": {
+      "sample_4": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_4": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "gel samples",
+     "expected": {
+      "sample_5": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_5": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "gel samples",
+     "expected": {
+      "sample_6": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_6": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "gel samples",
+     "expected": {
+      "sample_7": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_7": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "gel samples",
+     "expected": {
+      "sample_8": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_8": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "gel samples",
+     "expected": {
+      "sample_9": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_9": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "gel samples",
+     "expected": {
+      "sample_10": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_10": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "gel samples",
+     "expected": {
+      "sample_11": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_11": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "gel samples",
+     "expected": {
+      "sample_12": 15.0,
+      "dye": 5.0
+     },
+     "found": {
+      "sample_12": 15.0,
+      "dye": 5.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 15.0,
+    "left_in_source_ul": 85.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "dye",
+    "logical": "dye",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 60.0,
+    "left_in_source_ul": 440.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "sample 2",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "sample 3",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "sample 4",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "sample 5",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "sample 6",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "sample 7",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "sample 8",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A9",
+     "liquid": "sample 9",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A10",
+     "liquid": "sample 10",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "sample 11",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "sample 12",
+     "declared_ul": 100.0,
+     "needed_ul": 15.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "dye",
+     "declared_ul": 500.0,
+     "needed_ul": 60.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 12
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 5 biology problems (3 errors, 2 notes).\n\n1. ERROR PIPETTE-RANGE: 15 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 34:  p300.aspirate(15, src)\n   At line 34 the p300_single_gen2 is asked to draw 15 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 2.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [fbbb8a57a466]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: dye (tube A1 in slot 4)\n   line 37:  p300.aspirate(5, dye_well)\n   At line 37 the tip went into dye (tube A1 in slot 4) while it still carried sample 1\n   (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4\n   (well A4 in slot 2) and 8 more from an earlier step (this line did it 12 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, so this\n   stock now holds material that does not belong there. Liquid drawn from it then took the\n   unwanted material along into 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3\n   more in slot 3.\n   Affected: tube A1 in slot 4.\n   Also reached 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 3.\n   Fix: Pick up a fresh tip before line 37 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [ff154f29d3c0]\n\n3. ERROR PIPETTE-RANGE: 5 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 37:  p300.aspirate(5, dye_well)\n   At line 37 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: tube A1 in slot 4.\n   Affected: tube A1 in slot 4.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [35b59f6d09ab]\n\n4. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 37:  p300.aspirate(5, dye_well)\n   At line 37 the tip touched the liquid in tube A1 in slot 4 while it still carried sample\n   1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample\n   4 (well A4 in slot 2) and 8 more from an earlier step (this line did it 12 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, and the\n   protocol never transfers that liquid into this well on purpose. A reagent is shared: the\n   master mix, the enzyme or the primer in that well goes into every reaction on the plate.\n   A tip that has been in one sample leaves a little of it in the next liquid it touches, so\n   a sample carried into a reagent well turns up in every well that reagent reaches, and a\n   no-template control can no longer be trusted. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 11 other wells: wells A2, A3, A4, A5,\n   A6, A7, A8, A9 and 3 more in slot 3.\n   Affected: tube A1 in slot 4.\n   Also reached 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 3.\n   Fix: Use a fresh tip for each sample at line 37, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [b16e6f9ce895]\n\n5. NOTE UNMIXED-AT-END: 12 wells never mixed after dye went in (25% of the well)\n   line 38:  p300.dispense(5, dst)\n   At line 38 the robot added dye to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot\n   3, which already held sample 1, sample 2, sample 3, sample 4 and 8 more (this line did it\n   12 times). The addition was 25% of the well, nothing mixed the well afterwards, and the\n   run ended with them that way. Two liquids layered in a small well do not mix on their\n   own, so what the well holds is not at the concentration you calculated. If the plate is\n   vortexed and spun down before it is used, nothing is wrong; if it goes straight to the\n   instrument, the wells are not what the protocol says they are.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3 after line 38:\n   `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [4764324ab7cf]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 34,
+   "title": "15 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 34 the p300_single_gen2 is asked to draw 15 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 37,
+   "title": "A used tip went into a stock: dye (tube A1 in slot 4)",
+   "explanation": "At line 37 the tip went into dye (tube A1 in slot 4) while it still carried sample 1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4 (well A4 in slot 2) and 8 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 37 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 37,
+   "title": "5 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 37 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: tube A1 in slot 4.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 37,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 37 the tip touched the liquid in tube A1 in slot 4 while it still carried sample 1 (well A1 in slot 2), sample 2 (well A2 in slot 2), sample 3 (well A3 in slot 2), sample 4 (well A4 in slot 2) and 8 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted. Liquid was later taken out of the affected wells, and the unwanted material went along into 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 3.",
+   "fix": "Use a fresh tip for each sample at line 37, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 38,
+   "title": "12 wells never mixed after dye went in (25% of the well)",
+   "explanation": "At line 38 the robot added dye to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3, which already held sample 1, sample 2, sample 3, sample 4 and 8 more (this line did it 12 times). The addition was 25% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes straight to the instrument, the wells are not what the protocol says they are.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3 after line 38: `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 4.6,
+ "draft": 0
+}

@@ -1,0 +1,282 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map dil-01. 12 of 12 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: row A; first\n    point is 1:2; excess removed from the last well.\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  pbs                                  1600.0    1100.0     400.0     100.0     0.0\n  drug                                  200.0     100.0     100.0       0.0     0.0\n  Note: pbs ends in wells the plate map does not list for it: A12 in slot 2 (100.0 ul).\n  Note: drug ends in wells the plate map does not list for it: A12 in slot 2 (0.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 12 Well Reservoir 15 mL          A1    pbs                                 1200.0    1500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    drug                                 100.0     200.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B1    pbs                                    0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  Tips: 25 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "dil-01",
+  "technique": "Serial dilution",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "row A; first point is 1:2; excess removed from the last well",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 12,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "drug": 50.0,
+      "pbs": 50.0
+     },
+     "found": {
+      "pbs": 50.0,
+      "drug": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "drug": 25.0,
+      "pbs": 75.0
+     },
+     "found": {
+      "pbs": 75.0,
+      "drug": 25.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "drug": 12.5,
+      "pbs": 87.5
+     },
+     "found": {
+      "pbs": 87.5,
+      "drug": 12.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "drug": 6.25,
+      "pbs": 93.75
+     },
+     "found": {
+      "pbs": 93.75,
+      "drug": 6.25
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "drug": 3.125,
+      "pbs": 96.875
+     },
+     "found": {
+      "pbs": 96.875,
+      "drug": 3.125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "drug": 1.5625,
+      "pbs": 98.4375
+     },
+     "found": {
+      "pbs": 98.4375,
+      "drug": 1.5625
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "drug": 0.7812,
+      "pbs": 99.2188
+     },
+     "found": {
+      "pbs": 99.21875,
+      "drug": 0.78125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "drug": 0.3906,
+      "pbs": 99.6094
+     },
+     "found": {
+      "pbs": 99.609375,
+      "drug": 0.390625
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "drug": 0.1953,
+      "pbs": 99.8047
+     },
+     "found": {
+      "pbs": 99.8046875,
+      "drug": 0.1953125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "drug": 0.0977,
+      "pbs": 99.9023
+     },
+     "found": {
+      "pbs": 99.90234375,
+      "drug": 0.09765625
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "drug": 0.0488,
+      "pbs": 99.9512
+     },
+     "found": {
+      "pbs": 99.951171875,
+      "drug": 0.048828125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "drug": 0.0244,
+      "pbs": 99.9756
+     },
+     "found": {
+      "pbs": 99.9755859375,
+      "drug": 0.0244140625
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "pbs",
+    "logical": "pbs",
+    "role": "reagent",
+    "declared_ul": 1600.0,
+    "delivered_ul": 1100.0244,
+    "left_in_source_ul": 400.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_12_reservoir_15ml[A12]",
+      "ul": 99.9756
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "pbs ends in wells the plate map does not list for it: A12 in slot 2 (100.0 ul)."
+    ]
+   },
+   {
+    "liquid": "drug",
+    "logical": "drug",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 99.9756,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_12_reservoir_15ml[A12]",
+      "ul": 0.0244
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "drug ends in wells the plate map does not list for it: A12 in slot 2 (0.0 ul)."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "pbs",
+     "declared_ul": 1500.0,
+     "needed_ul": 1200.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "drug",
+     "declared_ul": 200.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "pbs",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 25
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: no biology problems found.\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\nA clean report is not a promise that the experiment will work.",
+ "findings": [],
+ "seconds": 5.8,
+ "draft": 3
+}

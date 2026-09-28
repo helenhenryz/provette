@@ -1,0 +1,40 @@
+{
+ "id": "fill-01",
+ "condition": "plain",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "MIX-TOO-WEAK",
+    "severity": "warning",
+    "certain": true,
+    "line": 46,
+    "title": "A pipette too small to mix 96 wells: 20 ul at most in 505 ul"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [],
+  "draft": 5,
+  "rounds": 5
+ },
+ "tool_calls": 10,
+ "turns": 10,
+ "drafts": 6,
+ "checks": 6,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 82727,
+ "tokens_out": 6485,
+ "seconds": 112.0
+}

@@ -1,0 +1,714 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map pcr-06. 16 of 16 wells hold what the plate map says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 3). Reading of the request: 16\n    reactions.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  pcr mix                               500.0     320.0     180.0       0.0     0.0\n  colony 1                              100.0       1.0      99.0       0.0     0.0\n  colony 2                              100.0       1.0      99.0       0.0     0.0\n  colony 3                              100.0       1.0      99.0       0.0     0.0\n  colony 4                              100.0       1.0      99.0       0.0     0.0\n  colony 5                              100.0       1.0      99.0       0.0     0.0\n  colony 6                              100.0       1.0      99.0       0.0     0.0\n  colony 7                              100.0       1.0      99.0       0.0     0.0\n  colony 8                              100.0       1.0      99.0       0.0     0.0\n  colony 9                              100.0       1.0      99.0       0.0     0.0\n  colony 10                             100.0       1.0      99.0       0.0     0.0\n  colony 11                             100.0       1.0      99.0       0.0     0.0\n  colony 12                             100.0       1.0      99.0       0.0     0.0\n  colony 13                             100.0       1.0      99.0       0.0     0.0\n  colony 14                             100.0       1.0      99.0       0.0     0.0\n  colony 15                             100.0       1.0      99.0       0.0     0.0\n  colony 16                             100.0       1.0      99.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 12 Well Reservoir 15 mL          A1    pcr mix                              320.0     500.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A1    colony 1                               1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B1    colony 13                              1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A2    colony 2                               1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B2    colony 14                              1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A3    colony 3                               1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B3    colony 15                              1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A4    colony 4                               1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B4    colony 16                              1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A5    colony 5                               1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A6    colony 6                               1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A7    colony 7                               1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A8    colony 8                               1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A9    colony 9                               1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A10   colony 10                              1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A11   colony 11                              1.0     100.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A12   colony 12                              1.0     100.0\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-06",
+  "technique": "PCR setup",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "3:biorad_96_wellplate_200ul_pcr",
+   "variant": "16 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 16,
+   "wells_total": 16,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_1": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_1": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_2": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_2": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_3": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_3": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_4": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_4": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_5": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_5": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_6": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_6": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_7": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_7": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_8": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_8": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_9": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_9": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_10": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_10": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_11": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_11": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_12": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_12": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_13": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_13": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_14": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_14": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_15": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_15": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_16": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_16": 1.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "pcr mix",
+    "logical": "pcr_mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 320.0,
+    "left_in_source_ul": 180.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 1",
+    "logical": "colony_1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 2",
+    "logical": "colony_2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 3",
+    "logical": "colony_3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 4",
+    "logical": "colony_4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 5",
+    "logical": "colony_5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 6",
+    "logical": "colony_6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 7",
+    "logical": "colony_7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 8",
+    "logical": "colony_8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 9",
+    "logical": "colony_9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 10",
+    "logical": "colony_10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 11",
+    "logical": "colony_11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 12",
+    "logical": "colony_12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 13",
+    "logical": "colony_13",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 14",
+    "logical": "colony_14",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 15",
+    "logical": "colony_15",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 16",
+    "logical": "colony_16",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "pcr mix",
+     "declared_ul": 500.0,
+     "needed_ul": 320.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "colony 1",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "colony 13",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "colony 2",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "colony 14",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "colony 3",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "colony 15",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "colony 4",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B4",
+     "liquid": "colony 16",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "colony 5",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "colony 6",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "colony 7",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "colony 8",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A9",
+     "liquid": "colony 9",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A10",
+     "liquid": "colony 10",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "colony 11",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "colony 12",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 6 biology problems (3 errors, 3 notes).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: pcr mix (well A1 in slot 2)\n   line 28:  p300.aspirate(20, pcr_reservoir[\"A1\"])\n   At line 28 the tip went into pcr mix (well A1 in slot 2) while it still carried colony 1\n   (well A1 in slot 4), colony 2 (well A2 in slot 4), colony 3 (well A3 in slot 4), colony 4\n   (well A4 in slot 4) and 11 more from an earlier step (this line did it 15 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, so this\n   stock now holds material that does not belong there. Liquid drawn from it then took the\n   unwanted material along into 15 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 7\n   more in slot 3.\n   Affected: well A1 in slot 2.\n   Also reached 15 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 7 more in slot 3.\n   Fix: Pick up a fresh tip before line 28 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [5bae3dd5431a]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: 16 stocks\n   line 32:  p300.aspirate(1, colony_plate[well_name])\n   At line 32 the tip went into colony 1 (well A1 in slot 4), colony 2 (well A2 in slot 4),\n   colony 3 (well A3 in slot 4), colony 4 (well A4 in slot 4) and 12 more while it still\n   carried pcr mix (well A1 in slot 2), colony 1 (well A1 in slot 4), colony 2 (well A2 in\n   slot 4), colony 3 (well A3 in slot 4) and 12 more from an earlier step (this line did it\n   16 times). A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches, so these stocks now hold material that does not belong there. Liquid drawn from\n   them then took the unwanted material along into 14 other wells: wells A3, A4, A5, A6, A7,\n   A8, A9, A10 and 6 more in slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 4.\n   Also reached 14 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 6 more in slot 3.\n   Fix: Pick up a fresh tip before line 32 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [3e35d99c2ec9]\n\n3. ERROR PIPETTE-RANGE: 1 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 32:  p300.aspirate(1, colony_plate[well_name])\n   At line 32 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this\n   line did it 16 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 4.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [64c34912ee27]\n\n4. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 28:  p300.aspirate(20, pcr_reservoir[\"A1\"])\n   At line 28 the tip touched the liquid in well A1 in slot 2 while it still carried colony\n   1 (well A1 in slot 4), colony 2 (well A2 in slot 4), colony 3 (well A3 in slot 4), colony\n   4 (well A4 in slot 4) and 11 more from an earlier step (this line did it 15 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, and the\n   protocol never transfers that liquid into this well on purpose. A reagent is shared: the\n   master mix, the enzyme or the primer in that well goes into every reaction on the plate.\n   A tip that has been in one sample leaves a little of it in the next liquid it touches, so\n   a sample carried into a reagent well turns up in every well that reagent reaches, and a\n   no-template control can no longer be trusted. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 15 other wells: wells A2, A3, A4, A5,\n   A6, A7, A8, A9 and 7 more in slot 3.\n   Affected: well A1 in slot 2.\n   Also reached 15 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 7 more in slot 3.\n   Fix: Use a fresh tip for each sample at line 28, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [e32dafb2ca4c]\n\n5. NOTE NO-NEGATIVE-CONTROL: No no-template control: 16 wells of pcr mix with a sample\n   line 30:  p300.dispense(20, pcr_plate[well_name])\n   At line 30 the robot starts putting pcr mix into Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot\n   3), and 16 wells end holding it together with a sample. No well on this plate holds the\n   mix without a sample, so there is no no-template control. If a reagent is contaminated,\n   or the primers pair with each other, every well gives a signal and nothing on the plate\n   can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in\n   slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 3.\n   Fix: Add one well (three for qPCR) with 20 ul of pcr mix and 1 ul of water in place of\n   the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [d5449c825d2e]\n\n6. NOTE UNMIXED-AT-END: 16 wells never mixed after colony 1, colony 2, colony 3, colony 4\nand 12 more went in (5% of the well)\n   line 34:  p300.dispense(1, pcr_plate[well_name])\n   At line 34 the robot added colony 1, colony 2, colony 3, colony 4 and 12 more to wells\n   A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 3, which already held pcr mix (this\n   line did it 16 times). The addition was 5% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   A PCR plate is usually vortexed and spun down before cycling; if this one will not be,\n   mix it.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 3.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 3 after line 34:\n   `mix_after=(5, 17)` on the transfer, or `pipette.mix(5, 17, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [997d5953c5fd]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 28,
+   "title": "A used tip went into a stock: pcr mix (well A1 in slot 2)",
+   "explanation": "At line 28 the tip went into pcr mix (well A1 in slot 2) while it still carried colony 1 (well A1 in slot 4), colony 2 (well A2 in slot 4), colony 3 (well A3 in slot 4), colony 4 (well A4 in slot 4) and 11 more from an earlier step (this line did it 15 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 15 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 7 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 28 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 32,
+   "title": "A used tip went into a stock: 16 stocks",
+   "explanation": "At line 32 the tip went into colony 1 (well A1 in slot 4), colony 2 (well A2 in slot 4), colony 3 (well A3 in slot 4), colony 4 (well A4 in slot 4) and 12 more while it still carried pcr mix (well A1 in slot 2), colony 1 (well A1 in slot 4), colony 2 (well A2 in slot 4), colony 3 (well A3 in slot 4) and 12 more from an earlier step (this line did it 16 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 14 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 6 more in slot 3.",
+   "fix": "Pick up a fresh tip before line 32 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 32,
+   "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 32 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this line did it 16 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 4.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 28,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 28 the tip touched the liquid in well A1 in slot 2 while it still carried colony 1 (well A1 in slot 4), colony 2 (well A2 in slot 4), colony 3 (well A3 in slot 4), colony 4 (well A4 in slot 4) and 11 more from an earlier step (this line did it 15 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted. Liquid was later taken out of the affected wells, and the unwanted material went along into 15 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 7 more in slot 3.",
+   "fix": "Use a fresh tip for each sample at line 28, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 30,
+   "title": "No no-template control: 16 wells of pcr mix with a sample",
+   "explanation": "At line 30 the robot starts putting pcr mix into Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 3), and 16 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 3.",
+   "fix": "Add one well (three for qPCR) with 20 ul of pcr mix and 1 ul of water in place of the template, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 34,
+   "title": "16 wells never mixed after colony 1, colony 2, colony 3, colony 4 and 12 more went in (5% of the well)",
+   "explanation": "At line 34 the robot added colony 1, colony 2, colony 3, colony 4 and 12 more to wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 3, which already held pcr mix (this line did it 16 times). The addition was 5% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 8 more in slot 3 after line 34: `mix_after=(5, 17)` on the transfer, or `pipette.mix(5, 17, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 5.5,
+ "draft": 1
+}

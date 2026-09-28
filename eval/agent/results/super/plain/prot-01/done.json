@@ -1,0 +1,68 @@
+{
+ "id": "prot-01",
+ "condition": "plain",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 34,
+    "title": "15 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 37,
+    "title": "A used tip went into a stock: dye (tube A1 in slot 4)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 37,
+    "title": "5 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 37,
+    "title": "(proposed) A tip that had been in a sample went into a reagent"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 38,
+    "title": "12 wells never mixed after dye went in (25% of the well)"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [],
+  "draft": 2,
+  "rounds": 2
+ },
+ "tool_calls": 8,
+ "turns": 8,
+ "drafts": 3,
+ "checks": 3,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 53110,
+ "tokens_out": 3288,
+ "seconds": 43.9
+}

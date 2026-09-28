@@ -1,0 +1,40 @@
+{
+ "id": "norm-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "warning",
+    "certain": true,
+    "line": 82,
+    "title": "22 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 18 more went in (5 to 26% of the well)"
+   }
+  ],
+  "draft": 16,
+  "rounds": 16
+ },
+ "tool_calls": 22,
+ "turns": 22,
+ "drafts": 17,
+ "checks": 17,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 1470216,
+ "tokens_out": 103955,
+ "seconds": 963.2
+}

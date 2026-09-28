@@ -1,0 +1,17 @@
+Tokenizer files of NVIDIA-Nemotron-3-Nano-30B-A3B, fetched unchanged on 2026-09-23 with curl from
+
+  https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/raw/main/chat_template.jinja
+  https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/raw/main/tokenizer_config.json
+
+The model card's licence line (README.md of the same repository, "License/Terms of Use"):
+  "Governing Terms: Use of this model is governed by the NVIDIA Nemotron Open Model License"
+  https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-nemotron-open-model-license/
+  (front matter: license_name: nvidia-nemotron-open-model-license)
+
+Why they are here: provette/agent/budget.py renders the chat template by hand, for the message
+shapes our loop sends, so that a turn cut in mid-reasoning can be continued through
+/v1/completions. chat_template.jinja is the reference the hand-written renderer is checked
+against (tests/agent/test_budget.py, when jinja2 is importable); tokenizer_config.json carries
+the same template under its "chat_template" key, plus the token facts the renderer relies on:
+eos_token is <|im_end|>, add_bos_token is false, <think> is token 12 and </think> token 13.
+Nothing in this directory is imported at run time.

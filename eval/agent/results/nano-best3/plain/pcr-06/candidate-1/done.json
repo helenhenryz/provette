@@ -1,0 +1,47 @@
+{
+ "id": "pcr-06",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 35,
+    "title": "No no-template control: 16 wells of pcr mix with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 42,
+    "title": "16 wells never mixed after colony 1, colony 2, colony 3, colony 4 and 12 more went in (5% of the well)"
+   }
+  ],
+  "draft": 2,
+  "rounds": 2
+ },
+ "tool_calls": 8,
+ "turns": 8,
+ "drafts": 3,
+ "checks": 3,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 318470,
+ "tokens_out": 62698,
+ "seconds": 590.4
+}

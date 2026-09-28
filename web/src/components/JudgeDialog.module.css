@@ -1,0 +1,189 @@
+/* The judge password dialog: a card over a dimmed page; a sheet from the bottom on a phone. */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: var(--s-4);
+  background: rgb(0 0 0 / 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  animation: fade 0.15s ease-out;
+}
+.card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--raised, var(--surface));
+  box-shadow: var(--shadow);
+  animation: rise 0.18s ease-out;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--verified-bg);
+  color: var(--verified);
+  margin-bottom: var(--s-1);
+}
+.title {
+  margin: 0;
+  font-size: var(--t-4);
+  font-weight: 600;
+  color: var(--text);
+}
+.words {
+  margin: 0 0 var(--s-2);
+  font-size: var(--t-2);
+  color: var(--muted);
+  max-width: none;
+}
+.field {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  transition:
+    border-color 0.12s,
+    box-shadow 0.12s;
+}
+.field:focus-within {
+  border-color: var(--verified);
+  box-shadow: 0 0 0 3px var(--verified-bg);
+}
+.fieldBad,
+.fieldBad:focus-within {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px var(--error-bg);
+}
+.field input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 var(--s-3);
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  /* 16px: iOS zooms the page into any smaller input on focus */
+  font-size: 16px;
+  font-family: var(--font);
+}
+/* the field draws the focus ring (:focus-within above), so the input draws none of its own */
+.field input:focus,
+.field input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.reveal {
+  all: unset;
+  cursor: pointer;
+  padding: 0 var(--s-3);
+  height: 44px;
+  font-size: var(--t-1);
+  font-weight: 500;
+  color: var(--muted);
+}
+.reveal:hover {
+  color: var(--text);
+}
+.reveal:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -4px;
+  border-radius: var(--radius);
+}
+.message {
+  min-height: 1.4em;
+  margin: 0;
+  font-size: var(--t-1);
+  color: var(--error);
+  max-width: none;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--s-2);
+}
+.primary,
+.secondary {
+  height: 40px;
+  padding: 0 var(--s-4);
+  border-radius: var(--radius);
+  font-size: var(--t-2);
+  font-weight: 600;
+  cursor: pointer;
+}
+.primary {
+  border: 1px solid var(--verified);
+  background: var(--verified);
+  color: var(--on-accent);
+}
+.primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.secondary {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+.secondary:hover {
+  background: var(--surface-2);
+}
+.primary:focus-visible,
+.secondary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* a phone: a sheet from the bottom, full width, clear of the home bar */
+@media (max-width: 560px) {
+  .backdrop {
+    place-items: end stretch;
+    padding: 0;
+  }
+  .card {
+    max-width: none;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    border-bottom: 0;
+    padding: var(--s-5) var(--s-4)
+      calc(var(--s-4) + env(safe-area-inset-bottom));
+    animation: sheet 0.22s ease-out;
+  }
+  .actions > * {
+    flex: 1;
+    height: 44px;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+@keyframes sheet {
+  from {
+    transform: translateY(100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .card {
+    animation: none;
+  }
+}

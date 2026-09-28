@@ -1,0 +1,631 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map clone-01. 12 of 12 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 2). Reading of the request: 12\n    digests.\n\nLabware for the technique (Cloning): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  plasmid 1                             100.0       5.0      95.0       0.0     0.0\n  plasmid 2                             100.0       5.0      95.0       0.0     0.0\n  plasmid 3                             100.0       5.0      95.0       0.0     0.0\n  plasmid 4                             100.0       5.0      95.0       0.0     0.0\n  plasmid 5                             100.0       5.0      95.0       0.0     0.0\n  plasmid 6                             100.0       5.0      95.0       0.0     0.0\n  plasmid 7                             100.0       5.0      95.0       0.0     0.0\n  plasmid 8                             100.0       5.0      95.0       0.0     0.0\n  plasmid 9                             100.0       5.0      95.0       0.0     0.0\n  plasmid 10                            100.0       5.0      95.0       0.0     0.0\n  plasmid 11                            100.0       5.0      95.0       0.0     0.0\n  plasmid 12                            100.0       5.0      95.0       0.0     0.0\n  water                                 500.0     144.0     341.6      14.4     0.0\n  buffer                                500.0      24.0     473.6       2.4     0.0\n  enzyme                                200.0      12.0     186.8       1.2     0.0\n  Note: water ends in wells the plate map does not list for it: D6 in slot 1 (14.4 ul).\n  Note: buffer ends in wells the plate map does not list for it: D6 in slot 1 (2.4 ul).\n  Note: enzyme ends in wells the plate map does not list for it: D6 in slot 1 (1.2 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  1    Opentrons 24 Tube Rack with NEST 1.5  A1    plasmid 1                              5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  B1    plasmid 7                              5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  C1    water                                158.4     500.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  A2    plasmid 2                              5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  B2    plasmid 8                              5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  C2    buffer                                26.4     500.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  A3    plasmid 3                              5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  B3    plasmid 9                              5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  C3    enzyme                                13.2     200.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  A4    plasmid 4                              5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  B4    plasmid 10                             5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  A5    plasmid 5                              5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  B5    plasmid 11                             5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  A6    plasmid 6                              5.0     100.0\n  1    Opentrons 24 Tube Rack with NEST 1.5  B6    plasmid 12                             5.0     100.0\n  Tips: 14 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 3.\n  Tips: 3 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 4.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "clone-01",
+  "technique": "Cloning",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "2:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "12 digests",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 12,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_1": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.0,
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_1": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_2": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.0,
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_2": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_3": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.0,
+      "buffer": 2.0000000000000004,
+      "enzyme": 1.0000000000000002,
+      "plasmid_3": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_4": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.0,
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_4": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_5": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.0,
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_5": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_6": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.0,
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_6": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_7": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.000000000000002,
+      "buffer": 2.0000000000000004,
+      "enzyme": 1.0000000000000002,
+      "plasmid_7": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_8": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.0,
+      "buffer": 2.0000000000000004,
+      "enzyme": 1.0000000000000002,
+      "plasmid_8": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_9": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.000000000000002,
+      "buffer": 2.0000000000000004,
+      "enzyme": 1.0000000000000002,
+      "plasmid_9": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_10": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.0,
+      "buffer": 2.0000000000000004,
+      "enzyme": 1.0000000000000002,
+      "plasmid_10": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_11": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.000000000000002,
+      "buffer": 2.000000000000001,
+      "enzyme": 1.0000000000000004,
+      "plasmid_11": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_12": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "water": 12.000000000000002,
+      "buffer": 2.0000000000000004,
+      "enzyme": 1.0000000000000002,
+      "plasmid_12": 5.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "plasmid 1",
+    "logical": "plasmid_1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 2",
+    "logical": "plasmid_2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 3",
+    "logical": "plasmid_3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 4",
+    "logical": "plasmid_4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 5",
+    "logical": "plasmid_5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 6",
+    "logical": "plasmid_6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 7",
+    "logical": "plasmid_7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 8",
+    "logical": "plasmid_8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 9",
+    "logical": "plasmid_9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 10",
+    "logical": "plasmid_10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 11",
+    "logical": "plasmid_11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 12",
+    "logical": "plasmid_12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 144.0,
+    "left_in_source_ul": 341.6,
+    "elsewhere": [
+     {
+      "well": "1:opentrons_24_tuberack_nest_1.5ml_snapcap[D6]",
+      "ul": 14.4
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "water ends in wells the plate map does not list for it: D6 in slot 1 (14.4 ul)."
+    ]
+   },
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 24.0,
+    "left_in_source_ul": 473.6,
+    "elsewhere": [
+     {
+      "well": "1:opentrons_24_tuberack_nest_1.5ml_snapcap[D6]",
+      "ul": 2.4
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "buffer ends in wells the plate map does not list for it: D6 in slot 1 (2.4 ul)."
+    ]
+   },
+   {
+    "liquid": "enzyme",
+    "logical": "enzyme",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 12.0,
+    "left_in_source_ul": 186.8,
+    "elsewhere": [
+     {
+      "well": "1:opentrons_24_tuberack_nest_1.5ml_snapcap[D6]",
+      "ul": 1.2
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "enzyme ends in wells the plate map does not list for it: D6 in slot 1 (1.2 ul)."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "plasmid 1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "plasmid 7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "water",
+     "declared_ul": 500.0,
+     "needed_ul": 158.4,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "plasmid 2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "plasmid 8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "buffer",
+     "declared_ul": 500.0,
+     "needed_ul": 26.4,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "plasmid 3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "plasmid 9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "enzyme",
+     "declared_ul": 200.0,
+     "needed_ul": 13.2,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "plasmid 4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "plasmid 10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "plasmid 5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "plasmid 11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "plasmid 6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "plasmid 12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "3",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 14
+    },
+    {
+     "slot": "4",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 3
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: no biology problems found.\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\nA clean report is not a promise that the experiment will work.",
+ "findings": [],
+ "seconds": 5.7,
+ "draft": 2
+}

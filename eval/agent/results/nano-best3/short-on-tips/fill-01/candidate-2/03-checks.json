@@ -1,0 +1,3357 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 3,
+ "verify_text": "protocol.py: CANNOT CHECK against plate map fill-01.\n  The plate map takes 'stock' from wells A1, A10, A11, A12, A2, A3, A4, A5 and 88 more of a\n    source plate, but no labware declares a liquid in every one of those wells.\n  The plate map speaks of 'stock@A1', but no liquid the protocol declares matches it\n    (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2,\n    source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.\n  The plate map speaks of 'stock@A2', but no liquid the protocol declares matches it\n    (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2,\n    source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.\n  The plate map speaks of 'stock@A3', but no liquid the protocol declares matches it\n    (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2,\n    source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.\n  The plate map speaks of 'stock@A4', but no liquid the protocol declares matches it\n    (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2,\n    source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.\n  The plate map speaks of 'stock@A5', but no liquid the protocol declares matches it\n    (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2,\n    source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.\n  ... and 91 more binding problems.\n  Nothing was verified. This is not a pass.\n\nLabware for the technique (Plate filling): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  lb                                  48000.0       0.0    1000.0   47000.0     0.0\n  source_A1                             100.0       0.0      95.0       5.0     0.0\n  source_A2                             100.0       0.0      95.0       5.0     0.0\n  source_A3                             100.0       0.0      95.0       5.0     0.0\n  source_A4                             100.0       0.0      95.0       5.0     0.0\n  source_A5                             100.0       0.0      95.0       5.0     0.0\n  source_A6                             100.0       0.0      95.0       5.0     0.0\n  source_A7                             100.0       0.0      95.0       5.0     0.0\n  source_A8                             100.0       0.0      95.0       5.0     0.0\n  source_A9                             100.0       0.0      95.0       5.0     0.0\n  source_A10                            100.0       0.0      95.0       5.0     0.0\n  source_A11                            100.0       0.0      95.0       5.0     0.0\n  source_A12                            100.0       0.0      95.0       5.0     0.0\n  source_B1                             100.0       0.0      95.0       5.0     0.0\n  source_B2                             100.0       0.0      95.0       5.0     0.0\n  source_B3                             100.0       0.0      95.0       5.0     0.0\n  source_B4                             100.0       0.0      95.0       5.0     0.0\n  source_B5                             100.0       0.0      95.0       5.0     0.0\n  source_B6                             100.0       0.0      95.0       5.0     0.0\n  source_B7                             100.0       0.0      95.0       5.0     0.0\n  source_B8                             100.0       0.0      95.0       5.0     0.0\n  source_B9                             100.0       0.0      95.0       5.0     0.0\n  source_B10                            100.0       0.0      95.0       5.0     0.0\n  source_B11                            100.0       0.0      95.0       5.0     0.0\n  source_B12                            100.0       0.0      95.0       5.0     0.0\n  source_C1                             100.0       0.0      95.0       5.0     0.0\n  source_C2                             100.0       0.0      95.0       5.0     0.0\n  source_C3                             100.0       0.0      95.0       5.0     0.0\n  source_C4                             100.0       0.0      95.0       5.0     0.0\n  source_C5                             100.0       0.0      95.0       5.0     0.0\n  source_C6                             100.0       0.0      95.0       5.0     0.0\n  source_C7                             100.0       0.0      95.0       5.0     0.0\n  source_C8                             100.0       0.0      95.0       5.0     0.0\n  source_C9                             100.0       0.0      95.0       5.0     0.0\n  source_C10                            100.0       0.0      95.0       5.0     0.0\n  source_C11                            100.0       0.0      95.0       5.0     0.0\n  source_C12                            100.0       0.0      95.0       5.0     0.0\n  source_D1                             100.0       0.0      95.0       5.0     0.0\n  source_D2                             100.0       0.0      95.0       5.0     0.0\n  source_D3                             100.0       0.0      95.0       5.0     0.0\n  source_D4                             100.0       0.0      95.0       5.0     0.0\n  source_D5                             100.0       0.0      95.0       5.0     0.0\n  source_D6                             100.0       0.0      95.0       5.0     0.0\n  source_D7                             100.0       0.0      95.0       5.0     0.0\n  source_D8                             100.0       0.0      95.0       5.0     0.0\n  source_D9                             100.0       0.0      95.0       5.0     0.0\n  source_D10                            100.0       0.0      95.0       5.0     0.0\n  source_D11                            100.0       0.0      95.0       5.0     0.0\n  source_D12                            100.0       0.0      95.0       5.0     0.0\n  source_E1                             100.0       0.0      95.0       5.0     0.0\n  source_E2                             100.0       0.0      95.0       5.0     0.0\n  source_E3                             100.0       0.0      95.0       5.0     0.0\n  source_E4                             100.0       0.0      95.0       5.0     0.0\n  source_E5                             100.0       0.0      95.0       5.0     0.0\n  source_E6                             100.0       0.0      95.0       5.0     0.0\n  source_E7                             100.0       0.0      95.0       5.0     0.0\n  source_E8                             100.0       0.0      95.0       5.0     0.0\n  source_E9                             100.0       0.0      95.0       5.0     0.0\n  source_E10                            100.0       0.0      95.0       5.0     0.0\n  source_E11                            100.0       0.0      95.0       5.0     0.0\n  source_E12                            100.0       0.0      95.0       5.0     0.0\n  source_F1                             100.0       0.0      95.0       5.0     0.0\n  source_F2                             100.0       0.0      95.0       5.0     0.0\n  source_F3                             100.0       0.0      95.0       5.0     0.0\n  source_F4                             100.0       0.0      95.0       5.0     0.0\n  source_F5                             100.0       0.0      95.0       5.0     0.0\n  source_F6                             100.0       0.0      95.0       5.0     0.0\n  source_F7                             100.0       0.0      95.0       5.0     0.0\n  source_F8                             100.0       0.0      95.0       5.0     0.0\n  source_F9                             100.0       0.0      95.0       5.0     0.0\n  source_F10                            100.0       0.0      95.0       5.0     0.0\n  source_F11                            100.0       0.0      95.0       5.0     0.0\n  source_F12                            100.0       0.0      95.0       5.0     0.0\n  source_G1                             100.0       0.0      95.0       5.0     0.0\n  source_G2                             100.0       0.0      95.0       5.0     0.0\n  source_G3                             100.0       0.0      95.0       5.0     0.0\n  source_G4                             100.0       0.0      95.0       5.0     0.0\n  source_G5                             100.0       0.0      95.0       5.0     0.0\n  source_G6                             100.0       0.0      95.0       5.0     0.0\n  source_G7                             100.0       0.0      95.0       5.0     0.0\n  source_G8                             100.0       0.0      95.0       5.0     0.0\n  source_G9                             100.0       0.0      95.0       5.0     0.0\n  source_G10                            100.0       0.0      95.0       5.0     0.0\n  source_G11                            100.0       0.0      95.0       5.0     0.0\n  source_G12                            100.0       0.0      95.0       5.0     0.0\n  source_H1                             100.0       0.0      95.0       5.0     0.0\n  source_H2                             100.0       0.0      95.0       5.0     0.0\n  source_H3                             100.0       0.0      95.0       5.0     0.0\n  source_H4                             100.0       0.0      95.0       5.0     0.0\n  source_H5                             100.0       0.0      95.0       5.0     0.0\n  source_H6                             100.0       0.0      95.0       5.0     0.0\n  source_H7                             100.0       0.0      95.0       5.0     0.0\n  source_H8                             100.0       0.0      95.0       5.0     0.0\n  source_H9                             100.0       0.0      95.0       5.0     0.0\n  source_H10                            100.0       0.0      95.0       5.0     0.0\n  source_H11                            100.0       0.0      95.0       5.0     0.0\n  source_H12                            100.0       0.0      95.0       5.0     0.0\n  Note: lb ends in wells the plate map does not list for it: A1 in slot 2 (500.0 ul), A10 in\n    slot 2 (500.0 ul), A11 in slot 2 (500.0 ul), A12 in slot 2 (500.0 ul), A2 in slot 2\n    (500.0 ul), A3 in slot 2 (500.0 ul) and 88 more.\n  Note: source_A1 ends in wells the plate map does not list for it: A1 in slot 2 (5.0 ul).\n  Note: source_A2 ends in wells the plate map does not list for it: B1 in slot 2 (5.0 ul).\n  Note: source_A3 ends in wells the plate map does not list for it: C1 in slot 2 (5.0 ul).\n  Note: source_A4 ends in wells the plate map does not list for it: D1 in slot 2 (5.0 ul).\n  Note: source_A5 ends in wells the plate map does not list for it: E1 in slot 2 (5.0 ul).\n  Note: source_A6 ends in wells the plate map does not list for it: F1 in slot 2 (5.0 ul).\n  Note: source_A7 ends in wells the plate map does not list for it: G1 in slot 2 (5.0 ul).\n  Note: source_A8 ends in wells the plate map does not list for it: H1 in slot 2 (5.0 ul).\n  Note: source_A9 ends in wells the plate map does not list for it: A2 in slot 2 (5.0 ul).\n  Note: source_A10 ends in wells the plate map does not list for it: B2 in slot 2 (5.0 ul).\n  Note: source_A11 ends in wells the plate map does not list for it: C2 in slot 2 (5.0 ul).\n  Note: source_A12 ends in wells the plate map does not list for it: D2 in slot 2 (5.0 ul).\n  Note: source_B1 ends in wells the plate map does not list for it: E2 in slot 2 (5.0 ul).\n  Note: source_B2 ends in wells the plate map does not list for it: F2 in slot 2 (5.0 ul).\n  Note: source_B3 ends in wells the plate map does not list for it: G2 in slot 2 (5.0 ul).\n  Note: source_B4 ends in wells the plate map does not list for it: H2 in slot 2 (5.0 ul).\n  Note: source_B5 ends in wells the plate map does not list for it: A3 in slot 2 (5.0 ul).\n  Note: source_B6 ends in wells the plate map does not list for it: B3 in slot 2 (5.0 ul).\n  Note: source_B7 ends in wells the plate map does not list for it: C3 in slot 2 (5.0 ul).\n  Note: source_B8 ends in wells the plate map does not list for it: D3 in slot 2 (5.0 ul).\n  Note: source_B9 ends in wells the plate map does not list for it: E3 in slot 2 (5.0 ul).\n  Note: source_B10 ends in wells the plate map does not list for it: F3 in slot 2 (5.0 ul).\n  Note: source_B11 ends in wells the plate map does not list for it: G3 in slot 2 (5.0 ul).\n  Note: source_B12 ends in wells the plate map does not list for it: H3 in slot 2 (5.0 ul).\n  Note: source_C1 ends in wells the plate map does not list for it: A4 in slot 2 (5.0 ul).\n  Note: source_C2 ends in wells the plate map does not list for it: B4 in slot 2 (5.0 ul).\n  Note: source_C3 ends in wells the plate map does not list for it: C4 in slot 2 (5.0 ul).\n  Note: source_C4 ends in wells the plate map does not list for it: D4 in slot 2 (5.0 ul).\n  Note: source_C5 ends in wells the plate map does not list for it: E4 in slot 2 (5.0 ul).\n  Note: source_C6 ends in wells the plate map does not list for it: F4 in slot 2 (5.0 ul).\n  Note: source_C7 ends in wells the plate map does not list for it: G4 in slot 2 (5.0 ul).\n  Note: source_C8 ends in wells the plate map does not list for it: H4 in slot 2 (5.0 ul).\n  Note: source_C9 ends in wells the plate map does not list for it: A5 in slot 2 (5.0 ul).\n  Note: source_C10 ends in wells the plate map does not list for it: B5 in slot 2 (5.0 ul).\n  Note: source_C11 ends in wells the plate map does not list for it: C5 in slot 2 (5.0 ul).\n  Note: source_C12 ends in wells the plate map does not list for it: D5 in slot 2 (5.0 ul).\n  Note: source_D1 ends in wells the plate map does not list for it: E5 in slot 2 (5.0 ul).\n  Note: source_D2 ends in wells the plate map does not list for it: F5 in slot 2 (5.0 ul).\n  Note: source_D3 ends in wells the plate map does not list for it: G5 in slot 2 (5.0 ul).\n  Note: source_D4 ends in wells the plate map does not list for it: H5 in slot 2 (5.0 ul).\n  Note: source_D5 ends in wells the plate map does not list for it: A6 in slot 2 (5.0 ul).\n  Note: source_D6 ends in wells the plate map does not list for it: B6 in slot 2 (5.0 ul).\n  Note: source_D7 ends in wells the plate map does not list for it: C6 in slot 2 (5.0 ul).\n  Note: source_D8 ends in wells the plate map does not list for it: D6 in slot 2 (5.0 ul).\n  Note: source_D9 ends in wells the plate map does not list for it: E6 in slot 2 (5.0 ul).\n  Note: source_D10 ends in wells the plate map does not list for it: F6 in slot 2 (5.0 ul).\n  Note: source_D11 ends in wells the plate map does not list for it: G6 in slot 2 (5.0 ul).\n  Note: source_D12 ends in wells the plate map does not list for it: H6 in slot 2 (5.0 ul).\n  Note: source_E1 ends in wells the plate map does not list for it: A7 in slot 2 (5.0 ul).\n  Note: source_E2 ends in wells the plate map does not list for it: B7 in slot 2 (5.0 ul).\n  Note: source_E3 ends in wells the plate map does not list for it: C7 in slot 2 (5.0 ul).\n  Note: source_E4 ends in wells the plate map does not list for it: D7 in slot 2 (5.0 ul).\n  Note: source_E5 ends in wells the plate map does not list for it: E7 in slot 2 (5.0 ul).\n  Note: source_E6 ends in wells the plate map does not list for it: F7 in slot 2 (5.0 ul).\n  Note: source_E7 ends in wells the plate map does not list for it: G7 in slot 2 (5.0 ul).\n  Note: source_E8 ends in wells the plate map does not list for it: H7 in slot 2 (5.0 ul).\n  Note: source_E9 ends in wells the plate map does not list for it: A8 in slot 2 (5.0 ul).\n  Note: source_E10 ends in wells the plate map does not list for it: B8 in slot 2 (5.0 ul).\n  Note: source_E11 ends in wells the plate map does not list for it: C8 in slot 2 (5.0 ul).\n  Note: source_E12 ends in wells the plate map does not list for it: D8 in slot 2 (5.0 ul).\n  Note: source_F1 ends in wells the plate map does not list for it: E8 in slot 2 (5.0 ul).\n  Note: source_F2 ends in wells the plate map does not list for it: F8 in slot 2 (5.0 ul).\n  Note: source_F3 ends in wells the plate map does not list for it: G8 in slot 2 (5.0 ul).\n  Note: source_F4 ends in wells the plate map does not list for it: H8 in slot 2 (5.0 ul).\n  Note: source_F5 ends in wells the plate map does not list for it: A9 in slot 2 (5.0 ul).\n  Note: source_F6 ends in wells the plate map does not list for it: B9 in slot 2 (5.0 ul).\n  Note: source_F7 ends in wells the plate map does not list for it: C9 in slot 2 (5.0 ul).\n  Note: source_F8 ends in wells the plate map does not list for it: D9 in slot 2 (5.0 ul).\n  Note: source_F9 ends in wells the plate map does not list for it: E9 in slot 2 (5.0 ul).\n  Note: source_F10 ends in wells the plate map does not list for it: F9 in slot 2 (5.0 ul).\n  Note: source_F11 ends in wells the plate map does not list for it: G9 in slot 2 (5.0 ul).\n  Note: source_F12 ends in wells the plate map does not list for it: H9 in slot 2 (5.0 ul).\n  Note: source_G1 ends in wells the plate map does not list for it: A10 in slot 2 (5.0 ul).\n  Note: source_G2 ends in wells the plate map does not list for it: B10 in slot 2 (5.0 ul).\n  Note: source_G3 ends in wells the plate map does not list for it: C10 in slot 2 (5.0 ul).\n  Note: source_G4 ends in wells the plate map does not list for it: D10 in slot 2 (5.0 ul).\n  Note: source_G5 ends in wells the plate map does not list for it: E10 in slot 2 (5.0 ul).\n  Note: source_G6 ends in wells the plate map does not list for it: F10 in slot 2 (5.0 ul).\n  Note: source_G7 ends in wells the plate map does not list for it: G10 in slot 2 (5.0 ul).\n  Note: source_G8 ends in wells the plate map does not list for it: H10 in slot 2 (5.0 ul).\n  Note: source_G9 ends in wells the plate map does not list for it: A11 in slot 2 (5.0 ul).\n  Note: source_G10 ends in wells the plate map does not list for it: B11 in slot 2 (5.0 ul).\n  Note: source_G11 ends in wells the plate map does not list for it: C11 in slot 2 (5.0 ul).\n  Note: source_G12 ends in wells the plate map does not list for it: D11 in slot 2 (5.0 ul).\n  Note: source_H1 ends in wells the plate map does not list for it: E11 in slot 2 (5.0 ul).\n  Note: source_H2 ends in wells the plate map does not list for it: F11 in slot 2 (5.0 ul).\n  Note: source_H3 ends in wells the plate map does not list for it: G11 in slot 2 (5.0 ul).\n  Note: source_H4 ends in wells the plate map does not list for it: H11 in slot 2 (5.0 ul).\n  Note: source_H5 ends in wells the plate map does not list for it: A12 in slot 2 (5.0 ul).\n  Note: source_H6 ends in wells the plate map does not list for it: B12 in slot 2 (5.0 ul).\n  Note: source_H7 ends in wells the plate map does not list for it: C12 in slot 2 (5.0 ul).\n  Note: source_H8 ends in wells the plate map does not list for it: D12 in slot 2 (5.0 ul).\n  Note: source_H9 ends in wells the plate map does not list for it: E12 in slot 2 (5.0 ul).\n  Note: source_H10 ends in wells the plate map does not list for it: F12 in slot 2 (5.0 ul).\n  Note: source_H11 ends in wells the plate map does not list for it: G12 in slot 2 (5.0 ul).\n  Note: source_H12 ends in wells the plate map does not list for it: H12 in slot 2 (5.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  1    NEST 1 Well Reservoir 195 mL          A1    lb                                 48000.0   48000.0  <-- NO MARGIN\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A1    source_A1                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B1    source_B1                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C1    source_C1                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D1    source_D1                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E1    source_E1                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F1    source_F1                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G1    source_G1                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H1    source_H1                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A2    source_A2                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B2    source_B2                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C2    source_C2                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D2    source_D2                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E2    source_E2                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F2    source_F2                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G2    source_G2                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H2    source_H2                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A3    source_A3                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B3    source_B3                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C3    source_C3                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D3    source_D3                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E3    source_E3                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F3    source_F3                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G3    source_G3                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H3    source_H3                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A4    source_A4                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B4    source_B4                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C4    source_C4                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D4    source_D4                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E4    source_E4                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F4    source_F4                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G4    source_G4                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H4    source_H4                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A5    source_A5                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B5    source_B5                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C5    source_C5                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D5    source_D5                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E5    source_E5                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F5    source_F5                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G5    source_G5                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H5    source_H5                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A6    source_A6                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B6    source_B6                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C6    source_C6                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D6    source_D6                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E6    source_E6                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F6    source_F6                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G6    source_G6                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H6    source_H6                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A7    source_A7                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B7    source_B7                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C7    source_C7                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D7    source_D7                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E7    source_E7                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F7    source_F7                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G7    source_G7                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H7    source_H7                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A8    source_A8                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B8    source_B8                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C8    source_C8                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D8    source_D8                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E8    source_E8                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F8    source_F8                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G8    source_G8                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H8    source_H8                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A9    source_A9                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B9    source_B9                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C9    source_C9                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D9    source_D9                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E9    source_E9                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F9    source_F9                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G9    source_G9                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H9    source_H9                              5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A10   source_A10                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B10   source_B10                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C10   source_C10                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D10   source_D10                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E10   source_E10                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F10   source_F10                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G10   source_G10                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H10   source_H10                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A11   source_A11                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B11   source_B11                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C11   source_C11                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D11   source_D11                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E11   source_E11                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F11   source_F11                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G11   source_G11                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H11   source_H11                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A12   source_A12                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B12   source_B12                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C12   source_C12                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D12   source_D12                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E12   source_E12                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F12   source_F12                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G12   source_G12                             5.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H12   source_H12                             5.0     100.0\n  FLAG: lb in A1, slot 1 has no margin: the robot draws 48000 ul of the 48000 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 52800 ul (10% or 50 ul more than is drawn, whichever is larger), and\n    load that much.\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 1000 \u00b5L in slot 4.\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 5.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "fill-01",
+  "technique": "Plate filling",
+  "exit_code": 3,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "cannot_check",
+   "destination": null,
+   "variant": null,
+   "problems": [
+    "The plate map takes 'stock' from wells A1, A10, A11, A12, A2, A3, A4, A5 and 88 more of a source plate, but no labware declares a liquid in every one of those wells.",
+    "The plate map speaks of 'stock@A1', but no liquid the protocol declares matches it (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2, source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.",
+    "The plate map speaks of 'stock@A2', but no liquid the protocol declares matches it (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2, source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.",
+    "The plate map speaks of 'stock@A3', but no liquid the protocol declares matches it (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2, source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.",
+    "The plate map speaks of 'stock@A4', but no liquid the protocol declares matches it (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2, source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.",
+    "The plate map speaks of 'stock@A5', but no liquid the protocol declares matches it (pattern (?i)glycerol|stock|strain|clone). Declared: lb, source_A1, source_A2, source_A3, source_A4, source_A5, source_A6, source_A7 and 89 more.",
+    "... and 91 more binding problems."
+   ],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 0,
+   "wells": [],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "lb",
+    "logical": "lb",
+    "role": "reagent",
+    "declared_ul": 48000.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 1000.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A1]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A10]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A11]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A12]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A2]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A3]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A4]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A5]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A6]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A7]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A8]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A9]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B1]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B10]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B11]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B12]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B2]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B3]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B4]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B5]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B6]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B7]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B8]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B9]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C1]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C10]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C11]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C12]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C2]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C3]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C4]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C5]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C6]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C7]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C8]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C9]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D1]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D10]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D11]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D12]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D2]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D3]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D4]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D5]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D6]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D7]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D8]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D9]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E1]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E10]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E11]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E12]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E2]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E3]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E4]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E5]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E6]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E7]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E8]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E9]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F1]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F10]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F11]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F12]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F2]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F3]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F4]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F5]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F6]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F7]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F8]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F9]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G1]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G10]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G11]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G2]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G3]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G4]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G5]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G6]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G7]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G8]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G9]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H1]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H10]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H11]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H2]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H3]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H4]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H5]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H6]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H7]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H8]",
+      "ul": 500.0
+     },
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H9]",
+      "ul": 500.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "lb ends in wells the plate map does not list for it: A1 in slot 2 (500.0 ul), A10 in slot 2 (500.0 ul), A11 in slot 2 (500.0 ul), A12 in slot 2 (500.0 ul), A2 in slot 2 (500.0 ul), A3 in slot 2 (500.0 ul) and 88 more."
+    ]
+   },
+   {
+    "liquid": "source_A1",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A1 ends in wells the plate map does not list for it: A1 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A2",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A2 ends in wells the plate map does not list for it: B1 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A3",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A3 ends in wells the plate map does not list for it: C1 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A4",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A4 ends in wells the plate map does not list for it: D1 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A5",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A5 ends in wells the plate map does not list for it: E1 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A6",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A6 ends in wells the plate map does not list for it: F1 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A7",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A7 ends in wells the plate map does not list for it: G1 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A8",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A8 ends in wells the plate map does not list for it: H1 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A9",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A2]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A9 ends in wells the plate map does not list for it: A2 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A10",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B2]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A10 ends in wells the plate map does not list for it: B2 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A11",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C2]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A11 ends in wells the plate map does not list for it: C2 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_A12",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D2]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_A12 ends in wells the plate map does not list for it: D2 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B1",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E2]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B1 ends in wells the plate map does not list for it: E2 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B2",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F2]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B2 ends in wells the plate map does not list for it: F2 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B3",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G2]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B3 ends in wells the plate map does not list for it: G2 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B4",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H2]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B4 ends in wells the plate map does not list for it: H2 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B5",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A3]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B5 ends in wells the plate map does not list for it: A3 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B6",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B3]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B6 ends in wells the plate map does not list for it: B3 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B7",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C3]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B7 ends in wells the plate map does not list for it: C3 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B8",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D3]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B8 ends in wells the plate map does not list for it: D3 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B9",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E3]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B9 ends in wells the plate map does not list for it: E3 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B10",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F3]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B10 ends in wells the plate map does not list for it: F3 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B11",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G3]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B11 ends in wells the plate map does not list for it: G3 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_B12",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H3]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_B12 ends in wells the plate map does not list for it: H3 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C1",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A4]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C1 ends in wells the plate map does not list for it: A4 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C2",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B4]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C2 ends in wells the plate map does not list for it: B4 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C3",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C4]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C3 ends in wells the plate map does not list for it: C4 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C4",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D4]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C4 ends in wells the plate map does not list for it: D4 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C5",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E4]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C5 ends in wells the plate map does not list for it: E4 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C6",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F4]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C6 ends in wells the plate map does not list for it: F4 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C7",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G4]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C7 ends in wells the plate map does not list for it: G4 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C8",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H4]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C8 ends in wells the plate map does not list for it: H4 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C9",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A5]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C9 ends in wells the plate map does not list for it: A5 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C10",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B5]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C10 ends in wells the plate map does not list for it: B5 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C11",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C5]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C11 ends in wells the plate map does not list for it: C5 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_C12",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D5]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_C12 ends in wells the plate map does not list for it: D5 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D1",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E5]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D1 ends in wells the plate map does not list for it: E5 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D2",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F5]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D2 ends in wells the plate map does not list for it: F5 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D3",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G5]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D3 ends in wells the plate map does not list for it: G5 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D4",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H5]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D4 ends in wells the plate map does not list for it: H5 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D5",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A6]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D5 ends in wells the plate map does not list for it: A6 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D6",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B6]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D6 ends in wells the plate map does not list for it: B6 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D7",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C6]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D7 ends in wells the plate map does not list for it: C6 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D8",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D6]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D8 ends in wells the plate map does not list for it: D6 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D9",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E6]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D9 ends in wells the plate map does not list for it: E6 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D10",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F6]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D10 ends in wells the plate map does not list for it: F6 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D11",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G6]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D11 ends in wells the plate map does not list for it: G6 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_D12",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H6]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_D12 ends in wells the plate map does not list for it: H6 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E1",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A7]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E1 ends in wells the plate map does not list for it: A7 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E2",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B7]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E2 ends in wells the plate map does not list for it: B7 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E3",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C7]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E3 ends in wells the plate map does not list for it: C7 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E4",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D7]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E4 ends in wells the plate map does not list for it: D7 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E5",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E7]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E5 ends in wells the plate map does not list for it: E7 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E6",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F7]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E6 ends in wells the plate map does not list for it: F7 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E7",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G7]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E7 ends in wells the plate map does not list for it: G7 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E8",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H7]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E8 ends in wells the plate map does not list for it: H7 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E9",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A8]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E9 ends in wells the plate map does not list for it: A8 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E10",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B8]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E10 ends in wells the plate map does not list for it: B8 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E11",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C8]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E11 ends in wells the plate map does not list for it: C8 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_E12",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D8]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_E12 ends in wells the plate map does not list for it: D8 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F1",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E8]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F1 ends in wells the plate map does not list for it: E8 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F2",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F8]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F2 ends in wells the plate map does not list for it: F8 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F3",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G8]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F3 ends in wells the plate map does not list for it: G8 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F4",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H8]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F4 ends in wells the plate map does not list for it: H8 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F5",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A9]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F5 ends in wells the plate map does not list for it: A9 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F6",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B9]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F6 ends in wells the plate map does not list for it: B9 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F7",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C9]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F7 ends in wells the plate map does not list for it: C9 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F8",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D9]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F8 ends in wells the plate map does not list for it: D9 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F9",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E9]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F9 ends in wells the plate map does not list for it: E9 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F10",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F9]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F10 ends in wells the plate map does not list for it: F9 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F11",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G9]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F11 ends in wells the plate map does not list for it: G9 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_F12",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H9]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_F12 ends in wells the plate map does not list for it: H9 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G1",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A10]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G1 ends in wells the plate map does not list for it: A10 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G2",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B10]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G2 ends in wells the plate map does not list for it: B10 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G3",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C10]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G3 ends in wells the plate map does not list for it: C10 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G4",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D10]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G4 ends in wells the plate map does not list for it: D10 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G5",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E10]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G5 ends in wells the plate map does not list for it: E10 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G6",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F10]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G6 ends in wells the plate map does not list for it: F10 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G7",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G10]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G7 ends in wells the plate map does not list for it: G10 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G8",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H10]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G8 ends in wells the plate map does not list for it: H10 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G9",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A11]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G9 ends in wells the plate map does not list for it: A11 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G10",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B11]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G10 ends in wells the plate map does not list for it: B11 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G11",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C11]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G11 ends in wells the plate map does not list for it: C11 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_G12",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D11]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_G12 ends in wells the plate map does not list for it: D11 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H1",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E11]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H1 ends in wells the plate map does not list for it: E11 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H2",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F11]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H2 ends in wells the plate map does not list for it: F11 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H3",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G11]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H3 ends in wells the plate map does not list for it: G11 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H4",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H11]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H4 ends in wells the plate map does not list for it: H11 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H5",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[A12]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H5 ends in wells the plate map does not list for it: A12 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H6",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[B12]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H6 ends in wells the plate map does not list for it: B12 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H7",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[C12]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H7 ends in wells the plate map does not list for it: C12 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H8",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[D12]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H8 ends in wells the plate map does not list for it: D12 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H9",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[E12]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H9 ends in wells the plate map does not list for it: E12 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H10",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[F12]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H10 ends in wells the plate map does not list for it: F12 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H11",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[G12]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H11 ends in wells the plate map does not list for it: G12 in slot 2 (5.0 ul)."
+    ]
+   },
+   {
+    "liquid": "source_H12",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_2ml_deep[H12]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "source_H12 ends in wells the plate map does not list for it: H12 in slot 2 (5.0 ul)."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "1",
+     "labware": "NEST 1 Well Reservoir 195 mL",
+     "well": "A1",
+     "liquid": "lb",
+     "declared_ul": 48000.0,
+     "needed_ul": 48000.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A1",
+     "liquid": "source_A1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B1",
+     "liquid": "source_B1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C1",
+     "liquid": "source_C1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D1",
+     "liquid": "source_D1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E1",
+     "liquid": "source_E1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F1",
+     "liquid": "source_F1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G1",
+     "liquid": "source_G1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H1",
+     "liquid": "source_H1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A2",
+     "liquid": "source_A2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B2",
+     "liquid": "source_B2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C2",
+     "liquid": "source_C2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D2",
+     "liquid": "source_D2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E2",
+     "liquid": "source_E2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F2",
+     "liquid": "source_F2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G2",
+     "liquid": "source_G2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H2",
+     "liquid": "source_H2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A3",
+     "liquid": "source_A3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B3",
+     "liquid": "source_B3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C3",
+     "liquid": "source_C3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D3",
+     "liquid": "source_D3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E3",
+     "liquid": "source_E3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F3",
+     "liquid": "source_F3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G3",
+     "liquid": "source_G3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H3",
+     "liquid": "source_H3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A4",
+     "liquid": "source_A4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B4",
+     "liquid": "source_B4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C4",
+     "liquid": "source_C4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D4",
+     "liquid": "source_D4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E4",
+     "liquid": "source_E4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F4",
+     "liquid": "source_F4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G4",
+     "liquid": "source_G4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H4",
+     "liquid": "source_H4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A5",
+     "liquid": "source_A5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B5",
+     "liquid": "source_B5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C5",
+     "liquid": "source_C5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D5",
+     "liquid": "source_D5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E5",
+     "liquid": "source_E5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F5",
+     "liquid": "source_F5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G5",
+     "liquid": "source_G5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H5",
+     "liquid": "source_H5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A6",
+     "liquid": "source_A6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B6",
+     "liquid": "source_B6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C6",
+     "liquid": "source_C6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D6",
+     "liquid": "source_D6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E6",
+     "liquid": "source_E6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F6",
+     "liquid": "source_F6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G6",
+     "liquid": "source_G6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H6",
+     "liquid": "source_H6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A7",
+     "liquid": "source_A7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B7",
+     "liquid": "source_B7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C7",
+     "liquid": "source_C7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D7",
+     "liquid": "source_D7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E7",
+     "liquid": "source_E7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F7",
+     "liquid": "source_F7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G7",
+     "liquid": "source_G7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H7",
+     "liquid": "source_H7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A8",
+     "liquid": "source_A8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B8",
+     "liquid": "source_B8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C8",
+     "liquid": "source_C8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D8",
+     "liquid": "source_D8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E8",
+     "liquid": "source_E8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F8",
+     "liquid": "source_F8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G8",
+     "liquid": "source_G8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H8",
+     "liquid": "source_H8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A9",
+     "liquid": "source_A9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B9",
+     "liquid": "source_B9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C9",
+     "liquid": "source_C9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D9",
+     "liquid": "source_D9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E9",
+     "liquid": "source_E9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F9",
+     "liquid": "source_F9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G9",
+     "liquid": "source_G9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H9",
+     "liquid": "source_H9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A10",
+     "liquid": "source_A10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B10",
+     "liquid": "source_B10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C10",
+     "liquid": "source_C10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D10",
+     "liquid": "source_D10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E10",
+     "liquid": "source_E10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F10",
+     "liquid": "source_F10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G10",
+     "liquid": "source_G10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H10",
+     "liquid": "source_H10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A11",
+     "liquid": "source_A11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B11",
+     "liquid": "source_B11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C11",
+     "liquid": "source_C11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D11",
+     "liquid": "source_D11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E11",
+     "liquid": "source_E11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F11",
+     "liquid": "source_F11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G11",
+     "liquid": "source_G11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H11",
+     "liquid": "source_H11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A12",
+     "liquid": "source_A12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B12",
+     "liquid": "source_B12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C12",
+     "liquid": "source_C12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D12",
+     "liquid": "source_D12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E12",
+     "liquid": "source_E12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F12",
+     "liquid": "source_F12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G12",
+     "liquid": "source_G12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H12",
+     "liquid": "source_H12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "4",
+     "rack": "Opentrons OT-2 96 Tip Rack 1000 \u00b5L",
+     "tips": 1
+    },
+    {
+     "slot": "5",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: 2 biology problems (2 notes).\n\n1. NOTE CONTAM-STOCK: A used tip went into a stock: 95 stocks\n   line 59:  p20.aspirate(5, src_well)\n   At line 59 the tip went into source_A2 (well A2 in slot 3), source_A3 (well A3 in slot\n   3), source_A4 (well A4 in slot 3), source_A5 (well A5 in slot 3) and 91 more while it\n   still carried lb (well A1 in slot 1), source_A1 (well A1 in slot 3), source_A2 (well A2\n   in slot 3), source_A3 (well A3 in slot 3) and 92 more from an earlier step (this line did\n   it 95 times). A tip that has touched one liquid leaves a little of it in the next liquid\n   it touches, so these stocks now hold material that does not belong there. Liquid drawn\n   from them then took the unwanted material along into 95 other wells: wells A2, A3, A4,\n   A5, A6, A7, A8, A9 and 87 more in slot 2.\n   Affected: wells A2, A3, A4, A5, A6, A7, A8, A9 and 87 more in slot 3.\n   Also reached 95 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 87 more in slot 2.\n   Fix: Pick up a fresh tip before line 59 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [7bb53da31b6d]\n\n2. NOTE UNMIXED-AT-END: 94 wells never mixed after source_A1, source_A2, source_A3,\nsource_A4 and 90 more went in (1% of the well)\n   line 60:  p20.dispense(5, dest_well)\n   At line 60 the robot added source_A1, source_A2, source_A3, source_A4 and 90 more to\n   wells A1, A2, A3, A4, A5, A6, A7, A8 and 86 more in slot 2, which already held lb (this\n   line did it 94 times). The addition was 1% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes\n   straight to the instrument, the wells are not what the protocol says they are.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 86 more in slot 2.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 86 more in slot 2 after line 60:\n   `mix_after=(5, 404)` on the transfer, or `pipette.mix(5, 404, well)`, with the volume\n   about 80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [be2f9bcb250c]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "note",
+   "certain": true,
+   "line": 59,
+   "title": "A used tip went into a stock: 95 stocks",
+   "explanation": "At line 59 the tip went into source_A2 (well A2 in slot 3), source_A3 (well A3 in slot 3), source_A4 (well A4 in slot 3), source_A5 (well A5 in slot 3) and 91 more while it still carried lb (well A1 in slot 1), source_A1 (well A1 in slot 3), source_A2 (well A2 in slot 3), source_A3 (well A3 in slot 3) and 92 more from an earlier step (this line did it 95 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 95 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 87 more in slot 2.",
+   "fix": "Pick up a fresh tip before line 59 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 60,
+   "title": "94 wells never mixed after source_A1, source_A2, source_A3, source_A4 and 90 more went in (1% of the well)",
+   "explanation": "At line 60 the robot added source_A1, source_A2, source_A3, source_A4 and 90 more to wells A1, A2, A3, A4, A5, A6, A7, A8 and 86 more in slot 2, which already held lb (this line did it 94 times). The addition was 1% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes straight to the instrument, the wells are not what the protocol says they are.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 86 more in slot 2 after line 60: `mix_after=(5, 404)` on the transfer, or `pipette.mix(5, 404, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 6.4,
+ "draft": 3
+}

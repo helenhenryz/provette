@@ -1,0 +1,266 @@
+/* The base: reset, typography, and the handful of shared utility classes. Components own
+   their own .module.css; pages compose components and these classes. */
+
+@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource-variable/jetbrains-mono/wght.css";
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* the page's scrollbar room is kept too, so a page that grows past the window never shifts */
+  scrollbar-gutter: stable;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01", "ss03";
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-size: var(--t-3);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--t-6);
+  letter-spacing: -0.025em;
+}
+h2 {
+  font-size: var(--t-5);
+  letter-spacing: -0.02em;
+}
+h3 {
+  font-size: var(--t-4);
+}
+h4 {
+  font-size: var(--t-3);
+}
+
+p {
+  margin: 0;
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+code,
+pre,
+kbd,
+.mono {
+  font-family: var(--mono);
+  font-size: 0.92em;
+}
+
+pre {
+  margin: 0;
+  overflow: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: var(--radius);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--t-2);
+}
+th,
+td {
+  text-align: left;
+  padding: var(--s-2) var(--s-3);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-weight: 500;
+}
+td.num,
+th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* shared utilities */
+.muted {
+  color: var(--muted);
+}
+.faint {
+  color: var(--faint);
+}
+.small {
+  font-size: var(--t-2);
+}
+.lead {
+  font-size: var(--t-4);
+  color: var(--muted);
+}
+.stack > * + * {
+  margin-top: var(--s-4);
+}
+.stack-lg > * + * {
+  margin-top: var(--s-6);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  align-items: center;
+}
+.between {
+  justify-content: space-between;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--s-5);
+}
+.section {
+  padding-top: var(--s-6);
+}
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+.section-title .n {
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--t-2);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* A table wider than a phone scrolls inside its box instead of the page. */
+.table-wrap {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Numbers line up wherever they are read against each other. */
+.num,
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* The shared controls. A page's one primary action is .btn.primary (.lg for the composers);
+   everything else is .btn (quiet) or .btn.ghost. Inputs and selects are .field. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  height: var(--control);
+  padding: 0 var(--s-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--t-2);
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+.btn:hover {
+  background: var(--surface-2);
+  text-decoration: none;
+}
+.btn.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--muted);
+}
+.btn.ghost:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+.btn.primary {
+  background: var(--verified);
+  border-color: var(--verified);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+.btn.primary:hover {
+  filter: brightness(1.06);
+  background: var(--verified);
+}
+.btn.lg {
+  height: var(--control-lg);
+  padding: 0 var(--s-5);
+  font-size: var(--t-3);
+  border-radius: var(--radius-lg);
+}
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  cursor: not-allowed;
+  background: var(--surface-2);
+  border-color: var(--border);
+  color: var(--faint);
+  filter: none;
+}
+.field {
+  height: var(--control);
+  padding: 0 var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  font-size: var(--t-2);
+}
+.field:focus {
+  outline: none;
+  border-color: var(--link);
+  box-shadow: var(--focus);
+}
+select.field {
+  padding-right: var(--s-6);
+}

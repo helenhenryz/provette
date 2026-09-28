@@ -1,0 +1,40 @@
+{
+ "id": "dil-01",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "note",
+    "certain": true,
+    "line": 37,
+    "title": "A used tip went into a stock: drug (tube A1 in slot 2)"
+   }
+  ],
+  "draft": 6,
+  "rounds": 6
+ },
+ "tool_calls": 13,
+ "turns": 13,
+ "drafts": 7,
+ "checks": 7,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 910659,
+ "tokens_out": 124190,
+ "seconds": 1210.4
+}

@@ -1,0 +1,696 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map clone-01. 12 of 12 wells hold what the plate map\n  says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 2). Reading of the request: 12\n    digests.\n\nLabware for the technique (Cloning): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  buffer                                200.0      24.0     176.0       0.0     0.0\n  enzyme                                200.0      12.0     188.0       0.0     0.0\n  water                                 500.0     144.0     356.0       0.0     0.0\n  plasmid 1                             100.0       5.0      95.0       0.0     0.0\n  plasmid 2                             100.0       5.0      95.0       0.0     0.0\n  plasmid 3                             100.0       5.0      95.0       0.0     0.0\n  plasmid 4                             100.0       5.0      95.0       0.0     0.0\n  plasmid 5                             100.0       5.0      95.0       0.0     0.0\n  plasmid 6                             100.0       5.0      95.0       0.0     0.0\n  plasmid 7                             100.0       5.0      95.0       0.0     0.0\n  plasmid 8                             100.0       5.0      95.0       0.0     0.0\n  plasmid 9                             100.0       5.0      95.0       0.0     0.0\n  plasmid 10                            100.0       5.0      95.0       0.0     0.0\n  plasmid 11                            100.0       5.0      95.0       0.0     0.0\n  plasmid 12                            100.0       5.0      95.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  1    Opentrons 24 Well Aluminum Block with A1    buffer                                24.0     200.0\n  1    Opentrons 24 Well Aluminum Block with B1    plasmid 4                              5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with C1    plasmid 10                             5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with A2    enzyme                                12.0     200.0\n  1    Opentrons 24 Well Aluminum Block with B2    plasmid 5                              5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with C2    plasmid 11                             5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with A3    water                                144.0     500.0\n  1    Opentrons 24 Well Aluminum Block with B3    plasmid 6                              5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with C3    plasmid 12                             5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with A4    plasmid 1                              5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with B4    plasmid 7                              5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with A5    plasmid 2                              5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with B5    plasmid 8                              5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with A6    plasmid 3                              5.0     100.0\n  1    Opentrons 24 Well Aluminum Block with B6    plasmid 9                              5.0     100.0\n  Tips: 12 from Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L in slot 3.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "clone-01",
+  "technique": "Cloning",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "2:biorad_96_wellplate_200ul_pcr",
+   "variant": "12 digests",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 12,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_1": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_1": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_2": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_2": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_3": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 1.9999999999999998,
+      "enzyme": 1.0,
+      "plasmid_3": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_4": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 0.9999999999999999,
+      "plasmid_4": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_5": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 0.9999999999999999,
+      "plasmid_5": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_6": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_6": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_7": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_7": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_8": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_8": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_9": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_9": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_10": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_10": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_11": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_11": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_12": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_12": 5.0,
+      "water": 12.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 24.0,
+    "left_in_source_ul": 176.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "enzyme",
+    "logical": "enzyme",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 12.0,
+    "left_in_source_ul": 188.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 144.0,
+    "left_in_source_ul": 356.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 1",
+    "logical": "plasmid_1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 2",
+    "logical": "plasmid_2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 3",
+    "logical": "plasmid_3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 4",
+    "logical": "plasmid_4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 5",
+    "logical": "plasmid_5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 6",
+    "logical": "plasmid_6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 7",
+    "logical": "plasmid_7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 8",
+    "logical": "plasmid_8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 9",
+    "logical": "plasmid_9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 10",
+    "logical": "plasmid_10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 11",
+    "logical": "plasmid_11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 12",
+    "logical": "plasmid_12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 95.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "buffer",
+     "declared_ul": 200.0,
+     "needed_ul": 24.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "plasmid 4",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "plasmid 10",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "enzyme",
+     "declared_ul": 200.0,
+     "needed_ul": 12.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "plasmid 5",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "plasmid 11",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "water",
+     "declared_ul": 500.0,
+     "needed_ul": 144.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "plasmid 6",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "plasmid 12",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "plasmid 1",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "plasmid 7",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "plasmid 2",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "plasmid 8",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "plasmid 3",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "plasmid 9",
+     "declared_ul": 100.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "3",
+     "rack": "Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L",
+     "tips": 12
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 10 biology problems (6 errors, 3 warnings, 1 note).\n\n1. ERROR PIPETTE-RANGE: 2 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 63:  p300.aspirate(2, source_block['A1'])\n   At line 63 the p300_single_gen2 is asked to draw 2 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: well A1 in slot 1.\n   Affected: well A1 in slot 1.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [392a2a023788]\n\n2. ERROR PIPETTE-RANGE: 1 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 66:  p300.aspirate(1, source_block['A2'])\n   At line 66 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: well A2 in slot 1.\n   Affected: well A2 in slot 1.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [6fb910e21f82]\n\n3. ERROR PIPETTE-RANGE: 5 ul is below what the p300_single_gen2 can measure (20 ul at least)\n   line 70:  p300.aspirate(5, plasmid_well)\n   At line 70 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: wells A4, A5, A6, B1, B2, B3, B4, B5 and 4 more in slot 1.\n   Affected: wells A4, A5, A6, B1, B2, B3, B4, B5 and 4 more in slot 1.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [c8504d9aba8f]\n\n4. ERROR CONTAM-STOCK: A used tip went into a stock: water (well A3 in slot 1)\n   line 73:  p300.aspirate(12, source_block['A3'])\n   At line 73 the tip went into water (well A3 in slot 1) while it still carried buffer\n   (well A1 in slot 1), enzyme (well A2 in slot 1), plasmid 1 (well A4 in slot 1), plasmid 2\n   (well A5 in slot 1) and 10 more from an earlier step (this line did it 12 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, so this\n   stock now holds material that does not belong there. Liquid drawn from it then took the\n   unwanted material along into 11 other wells: wells A2, B1, B2, C1, C2, D1, D2, E1 and 3\n   more in slot 2.\n   Affected: well A3 in slot 1.\n   Also reached 11 other wells: wells A2, B1, B2, C1, C2, D1, D2, E1 and 3 more in slot 2.\n   Fix: Pick up a fresh tip before line 73 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [7a7fb904dcbb]\n\n5. ERROR PIPETTE-RANGE: 12 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 73:  p300.aspirate(12, source_block['A3'])\n   At line 73 the p300_single_gen2 is asked to draw 12 ul, below its minimum of 20 ul (this\n   line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: well A3 in slot 1.\n   Affected: well A3 in slot 1.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [f5f729be0a82]\n\n6. ERROR PIPETTE-RANGE: 10 ul is below what the p300_single_gen2 can measure (20 ul at\nleast)\n   line 76:  p300.mix(5, 10, dest_well)\n   At line 76 the p300_single_gen2 is asked to draw 10 ul, below its minimum of 20 ul (this\n   line did it 60 times). A pipette cannot measure less than its minimum: it draws the wrong\n   amount, or nothing, and the volumes in this protocol only add up on paper. The simulator\n   passes the move. Wells: wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 2.\n   Affected: wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 2.\n   Fix: Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the\n   reaction so every volume is at least the pipette's minimum.\n   Source: Opentrons: pipette characteristics (volume ranges)\n           https://docs.opentrons.com/v2/pipettes/characteristics.html\n   Source: Integra: pipetting tips (work at 35 to 100% of nominal volume)\n           https://www.integra-biosciences.com/united-states/en/pipetting-tips\n   [0eda1fe2fa9b]\n\n7. WARNING COLD-MODULE-NEVER-SET: A temperature module was loaded but never set\n   line 63:  p300.aspirate(2, source_block['A1'])\n   At line 63 the robot draws from wells A1, A2, A3, A4, A5, A6, B1, B2 and 7 more in slot\n   1, on a temperature module that the protocol never sets. A temperature module stays at\n   room temperature until `set_temperature` is called, so buffer (carrier), enzyme\n   (reagent), plasmid 1 (sample), plasmid 10 (sample) and 11 more sat on a block that was\n   never cold; the robot pipetted there 48 times over the run. The person setting up the\n   deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2\n   and 7 more in slot 1.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 7 more in slot 1.\n   Fix: Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 24\n   Well Aluminum Block with NEST 1.5 mL Snapcap in slot 1, and `temp_module.deactivate()` at\n   the end.\n   Source: Opentrons, temperature module: at room temperature until set_temperature, which\n   blocks\n           https://docs.opentrons.com/v2/modules/temperature_module.html\n   Source: Thermo Fisher T4 ligase manual: keep on ice, use within minutes\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/t4dnaligase_1U_man.pdf\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   [4543fa886e32]\n\n8. WARNING ENZYME-BEFORE-DILUENT: An enzyme was added before the water: enzyme\n   line 67:  p300.dispense(1, dest_well)\n   At line 67 the robot put enzyme into wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in\n   slot 2 (this line did it 12 times). Take well A1 in slot 2: at that moment it held only 2\n   ul, all of it neat buffer, and the water came afterwards, at line 74, to make the 14 ul\n   of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is\n   meant to be the last thing into a reaction, after the water and the buffer have brought\n   the well to the right dilution. Dropped into neat buffer or a dry well it meets many\n   times the salt it should: a restriction enzyme then cuts at the wrong places (star\n   activity) and a polymerase starts on mis-primed template.\n   Affected: wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 2.\n   Fix: Reorder the additions to wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 2:\n   water and buffer first, then the sample, then enzyme last. Or make a master mix of water,\n   buffer and enzyme in one tube, mix it, and hand it out.\n   Source: Thermo Fisher: restriction enzyme key considerations (the enzyme is the final\n   component)\n           https://www.thermofisher.com/us/en/home/life-science/cloning/cloning-learning-center/invitrogen-school-of-molecular-biology/molecular-cloning/restriction-enzymes/restriction-enzyme-key-considerations.html\n   Source: Promega: restriction enzyme resource (add the enzyme last; glycerol and star\n   activity)\n           https://www.promega.com/resources/guides/nucleic-acid-analysis/restriction-enzyme-resource/\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   Source: Qiagen: critical factors for successful real-time PCR (order of addition)\n           https://www.gene-quantification.de/qiagen-qpcr-sample-assay-tech-guide-2010.pdf\n   [5dae9c6c4656]\n\n9. WARNING CONTAM-STOCK: A used tip went into a stock: 12 stocks\n   line 70:  p300.aspirate(5, plasmid_well)\n   At line 70 the tip went into plasmid 1 (well A4 in slot 1), plasmid 2 (well A5 in slot\n   1), plasmid 3 (well A6 in slot 1), plasmid 4 (well B1 in slot 1) and 8 more while it\n   still carried buffer (well A1 in slot 1) and enzyme (well A2 in slot 1) from an earlier\n   step (this line did it 12 times). A tip that has touched one liquid leaves a little of it\n   in the next liquid it touches, so these stocks now hold material that does not belong\n   there. The protocol does not draw from them again, so this run is not harmed, but what is\n   left in the stock is no longer clean for the next run.\n   Affected: wells A4, A5, A6, B1, B2, B3, B4, B5 and 4 more in slot 1.\n   Fix: Pick up a fresh tip before line 70 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [10305fc86484]\n\n10. NOTE CONTAM-STOCK: A used tip went into a stock: enzyme (well A2 in slot 1)\n   line 66:  p300.aspirate(1, source_block['A2'])\n   At line 66 the tip went into enzyme (well A2 in slot 1) while it still carried buffer\n   (well A1 in slot 1) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. The protocol drew from it again afterwards, but only into wells that\n   were given that material on purpose anyway, so this run is not harmed. What is left in\n   the stock is no longer clean for the next run.\n   Affected: well A2 in slot 1.\n   Fix: Pick up a fresh tip before line 66 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [261b8bc34095]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 63,
+   "title": "2 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 63 the p300_single_gen2 is asked to draw 2 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: well A1 in slot 1.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 66,
+   "title": "1 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 66 the p300_single_gen2 is asked to draw 1 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: well A2 in slot 1.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 70,
+   "title": "5 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 70 the p300_single_gen2 is asked to draw 5 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A4, A5, A6, B1, B2, B3, B4, B5 and 4 more in slot 1.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 73,
+   "title": "A used tip went into a stock: water (well A3 in slot 1)",
+   "explanation": "At line 73 the tip went into water (well A3 in slot 1) while it still carried buffer (well A1 in slot 1), enzyme (well A2 in slot 1), plasmid 1 (well A4 in slot 1), plasmid 2 (well A5 in slot 1) and 10 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 11 other wells: wells A2, B1, B2, C1, C2, D1, D2, E1 and 3 more in slot 2.",
+   "fix": "Pick up a fresh tip before line 73 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 73,
+   "title": "12 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 73 the p300_single_gen2 is asked to draw 12 ul, below its minimum of 20 ul (this line did it 12 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: well A3 in slot 1.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "PIPETTE-RANGE",
+   "severity": "error",
+   "certain": true,
+   "line": 76,
+   "title": "10 ul is below what the p300_single_gen2 can measure (20 ul at least)",
+   "explanation": "At line 76 the p300_single_gen2 is asked to draw 10 ul, below its minimum of 20 ul (this line did it 60 times). A pipette cannot measure less than its minimum: it draws the wrong amount, or nothing, and the volumes in this protocol only add up on paper. The simulator passes the move. Wells: wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 2.",
+   "fix": "Use a pipette whose range covers the volume (a p20 for 1 to 20 ul), or scale the reaction so every volume is at least the pipette's minimum."
+  },
+  {
+   "rule_id": "COLD-MODULE-NEVER-SET",
+   "severity": "warning",
+   "certain": true,
+   "line": 63,
+   "title": "A temperature module was loaded but never set",
+   "explanation": "At line 63 the robot draws from wells A1, A2, A3, A4, A5, A6, B1, B2 and 7 more in slot 1, on a temperature module that the protocol never sets. A temperature module stays at room temperature until `set_temperature` is called, so buffer (carrier), enzyme (reagent), plasmid 1 (sample), plasmid 10 (sample) and 11 more sat on a block that was never cold; the robot pipetted there 48 times over the run. The person setting up the deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 7 more in slot 1.",
+   "fix": "Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap in slot 1, and `temp_module.deactivate()` at the end."
+  },
+  {
+   "rule_id": "ENZYME-BEFORE-DILUENT",
+   "severity": "warning",
+   "certain": true,
+   "line": 67,
+   "title": "An enzyme was added before the water: enzyme",
+   "explanation": "At line 67 the robot put enzyme into wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 2 (this line did it 12 times). Take well A1 in slot 2: at that moment it held only 2 ul, all of it neat buffer, and the water came afterwards, at line 74, to make the 14 ul of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction, after the water and the buffer have brought the well to the right dilution. Dropped into neat buffer or a dry well it meets many times the salt it should: a restriction enzyme then cuts at the wrong places (star activity) and a polymerase starts on mis-primed template.",
+   "fix": "Reorder the additions to wells A1, A2, B1, B2, C1, C2, D1, D2 and 4 more in slot 2: water and buffer first, then the sample, then enzyme last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and hand it out."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 70,
+   "title": "A used tip went into a stock: 12 stocks",
+   "explanation": "At line 70 the tip went into plasmid 1 (well A4 in slot 1), plasmid 2 (well A5 in slot 1), plasmid 3 (well A6 in slot 1), plasmid 4 (well B1 in slot 1) and 8 more while it still carried buffer (well A1 in slot 1) and enzyme (well A2 in slot 1) from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. The protocol does not draw from them again, so this run is not harmed, but what is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 70 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "note",
+   "certain": true,
+   "line": 66,
+   "title": "A used tip went into a stock: enzyme (well A2 in slot 1)",
+   "explanation": "At line 66 the tip went into enzyme (well A2 in slot 1) while it still carried buffer (well A1 in slot 1) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 66 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  }
+ ],
+ "seconds": 5.1,
+ "draft": 2
+}

@@ -1,0 +1,57 @@
+import opentrons
+from opentrons import protocol_api
+
+metadata = {"protocolName": "PCR setup 8 samples", "apiLevel": "2.19"}
+
+def run(protocol: protocol_api.ProtocolContext):
+    # Load labware
+    tiprack = protocol.load_labware("opentrons_96_tiprack_300ul", 1)
+    tuberack = protocol.load_labware("opentrons_24_tuberack_nest_1.5ml_snapcap", 2)
+    plate = protocol.load_labware("nest_96_wellplate_200ul_flat", 3)
+
+    # Pipettes
+    p300_multi = protocol.load_instrument("p300_multi_gen2", "left", tip_racks=[tiprack])
+    p20_single = protocol.load_instrument("p20_single_gen2", "right", tip_racks=[tiprack])
+
+    # Define liquids
+    master_mix = protocol.define_liquid(
+        name="master mix",
+        description="PCR master mix",
+        display_color="#FF0000"
+    )
+    samples = {}
+    for i in range(1, 9):
+        liq = protocol.define_liquid(
+            name=f"sample {i}",
+            description=f"DNA sample {i}",
+            display_color="#00FF00"
+        )
+        samples[f"sample {i}"] = liq
+
+    # Load liquids into sources
+    tuberack["A1"].load_liquid(liquid=master_mix, volume=1500)  # master mix tube
+    # Place samples in tubes B1 through H1
+    sample_positions = ["B1", "C1", "D1", "E1", "F1", "G1", "H1"]
+    for i, pos in enumerate(sample_positions, start=1):
+        tuberack[pos].load_liquid(liquid=samples[f"sample {i}"], volume=500)
+    # Eighth sample in B2
+    tuberack["B2"].load_liquid(liquid=samples["sample 8"], volume=500)
+
+    # Distribute master mix 20 ul to column 1 (A1-H1) using multi-channel
+    p300_multi.pick_up_tip()
+    # Aspirate master mix from tube A1
+    p300_multi.aspirate(20*8 + 20, tuberack["A1"])  # extra for safety
+    # Dispense to each well in column 1
+    for letter in ["A","B","C","D","E","F","G","H"]:
+        well = f"{letter}1"
+        p300_multi.dispense(20, plate[well])
+    p300_multi.drop_tip()
+
+    # Add samples 5 ul each using single channel, new tip per sample
+    sample_locations = ["B1","C1","D1","E1","F1","G1","H1","B2"]
+    dest_wells = ["A1","B1","C1","D1","E1","F1","G1","H1"]
+    for src, dst in zip(sample_locations, dest_wells):
+        p20_single.pick_up_tip()
+        p20_single.aspirate(5, tuberack[src])
+        p20_single.dispense(5, plate[dst])
+        p20_single.drop_tip()

@@ -1,0 +1,83 @@
+{
+ "id": "dil-03",
+ "condition": "short-on-tips",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 53,
+    "title": "10 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 37,
+    "title": "A used tip went into a stock: water (well A1 in slot 4)"
+   },
+   {
+    "rule_id": "MIX-TOO-WEAK",
+    "severity": "warning",
+    "certain": true,
+    "line": 53,
+    "title": "Mixing too weak to stir 6 wells: 1 \u00d7 10 ul in 100 ul"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 49,
+    "title": "A used tip carried water (well A1 in slot 4) into well A1 in slot 3 it was never meant for"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 50,
+    "title": "No blank on a dilution series: 9 wells of bsa"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 48,
+    "title": "A used tip carried water (well A1 in slot 4) into well A1 in slot 3 it was never meant for"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 49,
+    "title": "No blank on a dilution series: 8 wells of bsa"
+   }
+  ],
+  "draft": 4,
+  "rounds": 4
+ },
+ "tool_calls": 12,
+ "turns": 13,
+ "drafts": 5,
+ "checks": 5,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 528905,
+ "tokens_out": 83865,
+ "seconds": 721.0
+}

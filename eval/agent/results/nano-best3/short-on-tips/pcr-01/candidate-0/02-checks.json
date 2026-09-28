@@ -1,0 +1,462 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map pcr-01. 8 of 9 wells hold what the plate map says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 4). Reading of the request: 8\n    reactions.\n  well A9: expected nothing; found 20 ul master_mix, 5 ul [water]\n      - the plate map says nothing about this well, but it holds liquid\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  master mix                            200.0     160.0      20.0      20.0     0.0\n  sample 1                               20.0       5.0      15.0       0.0     0.0\n  sample 2                               20.0       5.0      15.0       0.0     0.0\n  sample 3                               20.0       5.0      15.0       0.0     0.0\n  sample 4                               20.0       5.0      15.0       0.0     0.0\n  sample 5                               20.0       5.0      15.0       0.0     0.0\n  sample 6                               20.0       5.0      15.0       0.0     0.0\n  sample 7                               20.0       5.0      15.0       0.0     0.0\n  sample 8                               20.0       5.0      15.0       0.0     0.0\n  water                                  20.0       0.0      15.0       5.0     0.0\n  Note: master mix ends in wells the plate map does not list for it: A9 in slot 4 (20.0 ul).\n  Note: water ends in wells the plate map does not list for it: A9 in slot 4 (5.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    master mix                           180.0     200.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B1    sample 6                               5.0      20.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A2    sample 1                               5.0      20.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B2    sample 7                               5.0      20.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A3    sample 2                               5.0      20.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B3    sample 8                               5.0      20.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A4    sample 3                               5.0      20.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B4    water                                  5.0      20.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A5    sample 4                               5.0      20.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A6    sample 5                               5.0      20.0\n  Tips: 2 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  Tips: 9 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-01",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "4:biorad_96_wellplate_200ul_pcr",
+   "variant": "8 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 8,
+   "wells_total": 9,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_1": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_1": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_2": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_2": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_3": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_3": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_4": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_4": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_5": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_5": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_6": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_6": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_7": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_7": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_8": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_8": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 20.0,
+      "[water]": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "master_mix": 20.0,
+      "[water]": 5.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "master mix",
+    "logical": "master_mix",
+    "role": "reagent",
+    "declared_ul": 200.0,
+    "delivered_ul": 160.0,
+    "left_in_source_ul": 20.0,
+    "elsewhere": [
+     {
+      "well": "4:biorad_96_wellplate_200ul_pcr[A9]",
+      "ul": 20.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "master mix ends in wells the plate map does not list for it: A9 in slot 4 (20.0 ul)."
+    ]
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 15.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 15.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 15.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 15.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 15.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 15.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 15.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 20.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 15.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 20.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 15.0,
+    "elsewhere": [
+     {
+      "well": "4:biorad_96_wellplate_200ul_pcr[A9]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "water ends in wells the plate map does not list for it: A9 in slot 4 (5.0 ul)."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "master mix",
+     "declared_ul": 200.0,
+     "needed_ul": 180.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 6",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "sample 1",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 7",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "sample 2",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 8",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "sample 3",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "water",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "sample 4",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 5",
+     "declared_ul": 20.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 2
+    },
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 9
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 2 biology problems (2 warnings).\n\n1. WARNING MIX-TOO-WEAK: Mixing too weak to stir 8 wells: 20 \u00d7 1 ul in 25 ul\n   line 63:  p20.mix(20, 1, plate[f\"A{i}\"])\n   At line 63 the tip mixes wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4 with 20\n   strokes of 1 ul in a well holding 25 ul (this line did it 8 times). The well holds more\n   than the p20_single_gen2 can draw, so the stroke is judged against the pipette's 20 ul.\n   20 strokes of 1 ul move 1 of the pipette's 20 ul in all; it takes about 2 pipette-fulls\n   of strokes to mix (the mixing work). Integra draws over 80% of the well five times; three\n   mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the\n   concentration you calculated, and in a dilution series every later step inherits the\n   error.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4.\n   Fix: Mix with the pipette's full volume (20 ul) at least 5 times: `mix(5, 20, well)`, or\n   use a bigger pipette.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [3b26781db0c3]\n\n2. WARNING MIX-TOO-WEAK: Mixing too weak to stir well A9 in slot 4: 20 \u00d7 1 ul in 25 ul\n   line 73:  p20.mix(20, 1, plate[\"A9\"])\n   At line 73 the tip mixes well A9 in slot 4 with 20 strokes of 1 ul in a well holding 25\n   ul. The well holds more than the p20_single_gen2 can draw, so the stroke is judged\n   against the pipette's 20 ul. 20 strokes of 1 ul move 1 of the pipette's 20 ul in all; it\n   takes about 2 pipette-fulls of strokes to mix (the mixing work). Integra draws over 80%\n   of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well\n   holds is not at the concentration you calculated, and in a dilution series every later\n   step inherits the error.\n   Affected: well A9 in slot 4.\n   Fix: Mix with the pipette's full volume (20 ul) at least 5 times: `mix(5, 20, well)`, or\n   use a bigger pipette.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [726acfec8f40]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 63,
+   "title": "Mixing too weak to stir 8 wells: 20 \u00d7 1 ul in 25 ul",
+   "explanation": "At line 63 the tip mixes wells A1, A2, A3, A4, A5, A6, A7 and A8 in slot 4 with 20 strokes of 1 ul in a well holding 25 ul (this line did it 8 times). The well holds more than the p20_single_gen2 can draw, so the stroke is judged against the pipette's 20 ul. 20 strokes of 1 ul move 1 of the pipette's 20 ul in all; it takes about 2 pipette-fulls of strokes to mix (the mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix with the pipette's full volume (20 ul) at least 5 times: `mix(5, 20, well)`, or use a bigger pipette."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 73,
+   "title": "Mixing too weak to stir well A9 in slot 4: 20 \u00d7 1 ul in 25 ul",
+   "explanation": "At line 73 the tip mixes well A9 in slot 4 with 20 strokes of 1 ul in a well holding 25 ul. The well holds more than the p20_single_gen2 can draw, so the stroke is judged against the pipette's 20 ul. 20 strokes of 1 ul move 1 of the pipette's 20 ul in all; it takes about 2 pipette-fulls of strokes to mix (the mixing work). Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix with the pipette's full volume (20 ul) at least 5 times: `mix(5, 20, well)`, or use a bigger pipette."
+  }
+ ],
+ "seconds": 6.4,
+ "draft": 2
+}

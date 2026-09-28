@@ -1,0 +1,766 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map dil-01. 1 of 12 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: row A; first\n    point is 1:2; last well keeps 200 ul.\n  well A2: expected 25 ul drug, 75 ul pbs; found 12.5 ul drug, 37.5 ul pbs\n      - wrong amount of drug: the plate map says 25 ul, the protocol delivers 12.5 ul\n      - wrong amount of pbs: the plate map says 75 ul, the protocol delivers 37.5 ul\n  well A3: expected 12.5 ul drug, 87.5 ul pbs; found 6.25 ul drug, 43.75 ul pbs\n      - wrong amount of drug: the plate map says 12.5 ul, the protocol delivers 6.25 ul\n      - wrong amount of pbs: the plate map says 87.5 ul, the protocol delivers 43.75 ul\n  well A4: expected 6.25 ul drug, 93.75 ul pbs; found 3.12 ul drug, 46.88 ul pbs\n      - wrong amount of drug: the plate map says 6.25 ul, the protocol delivers 3.12 ul\n      - wrong amount of pbs: the plate map says 93.75 ul, the protocol delivers 46.88 ul\n  well A5: expected 3.12 ul drug, 96.88 ul pbs; found 1.56 ul drug, 48.44 ul pbs\n      - wrong amount of drug: the plate map says 3.12 ul, the protocol delivers 1.56 ul\n      - wrong amount of pbs: the plate map says 96.88 ul, the protocol delivers 48.44 ul\n  well A6: expected 1.56 ul drug, 98.44 ul pbs; found 0.78 ul drug, 49.22 ul pbs\n      - wrong amount of drug: the plate map says 1.56 ul, the protocol delivers 0.78 ul\n      - wrong amount of pbs: the plate map says 98.44 ul, the protocol delivers 49.22 ul\n  well A7: expected 0.78 ul drug, 99.22 ul pbs; found 0.39 ul drug, 49.61 ul pbs\n      - wrong amount of drug: the plate map says 0.78 ul, the protocol delivers 0.39 ul\n      - wrong amount of pbs: the plate map says 99.22 ul, the protocol delivers 49.61 ul\n  well A8: expected 0.39 ul drug, 99.61 ul pbs; found 0.2 ul drug, 49.8 ul pbs\n      - wrong amount of drug: the plate map says 0.39 ul, the protocol delivers 0.2 ul\n      - wrong amount of pbs: the plate map says 99.61 ul, the protocol delivers 49.8 ul\n  well A9: expected 0.2 ul drug, 99.8 ul pbs; found 0.1 ul drug, 49.9 ul pbs\n      - wrong amount of drug: the plate map says 0.2 ul, the protocol delivers 0.1 ul\n      - wrong amount of pbs: the plate map says 99.8 ul, the protocol delivers 49.9 ul\n  well A10: expected 0.1 ul drug, 99.9 ul pbs; found 0.05 ul drug, 49.95 ul pbs\n      - wrong amount of drug: the plate map says 0.1 ul, the protocol delivers 0.05 ul\n      - wrong amount of pbs: the plate map says 99.9 ul, the protocol delivers 49.95 ul\n  well A11: expected 0.05 ul drug, 99.95 ul pbs; found nothing\n      - the well is empty at the end\n  well A12: expected 0.05 ul drug, 199.95 ul pbs; found 0.05 ul drug, 49.95 ul pbs\n      - wrong amount of pbs: the plate map says 199.95 ul, the protocol delivers 49.95 ul\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  drug                                  125.0      75.0      50.0       0.0     0.0\n  pbs / pbs_blank                       800.0     525.0     275.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    drug                                  75.0     125.0\n  3    NEST 12 Well Reservoir 15 mL          A1    pbs                                  625.0     700.0\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A1                                          25.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        B1    pbs_blank                              0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A11                                        150.0         -  <-- DRAWS AIR\n  4    NEST 96 Well Plate 200 \u00b5L Flat        A12                                        150.0         -  <-- DRAWS AIR\n  FLAG: well in A1, slot 4 is asked for 25 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in A11, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  FLAG: well in A12, slot 4 is asked for 150 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "dil-01",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "row A; first point is 1:2; last well keeps 200 ul",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 1,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "drug": 50.0,
+      "pbs": 50.0
+     },
+     "found": {
+      "drug": 50.0,
+      "pbs": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "drug": 25.0,
+      "pbs": 75.0
+     },
+     "found": {
+      "drug": 12.5,
+      "pbs": 37.5
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 25.0,
+       "found_ul": 12.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 75.0,
+       "found_ul": 37.5,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "drug": 12.5,
+      "pbs": 87.5
+     },
+     "found": {
+      "drug": 6.25,
+      "pbs": 43.75
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 12.5,
+       "found_ul": 6.25,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 87.5,
+       "found_ul": 43.75,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "drug": 6.25,
+      "pbs": 93.75
+     },
+     "found": {
+      "drug": 3.125,
+      "pbs": 46.875
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 6.25,
+       "found_ul": 3.125,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 93.75,
+       "found_ul": 46.875,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "drug": 3.125,
+      "pbs": 96.875
+     },
+     "found": {
+      "drug": 1.5625,
+      "pbs": 48.4375
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 3.125,
+       "found_ul": 1.5625,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 96.875,
+       "found_ul": 48.4375,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "drug": 1.5625,
+      "pbs": 98.4375
+     },
+     "found": {
+      "drug": 0.78125,
+      "pbs": 49.21875
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 1.5625,
+       "found_ul": 0.78125,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 98.4375,
+       "found_ul": 49.21875,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "drug": 0.7812,
+      "pbs": 99.2188
+     },
+     "found": {
+      "drug": 0.390625,
+      "pbs": 49.609375
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 0.7812,
+       "found_ul": 0.390625,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 99.2188,
+       "found_ul": 49.609375,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "drug": 0.3906,
+      "pbs": 99.6094
+     },
+     "found": {
+      "drug": 0.1953125,
+      "pbs": 49.8046875
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 0.3906,
+       "found_ul": 0.1953125,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 99.6094,
+       "found_ul": 49.8046875,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "drug": 0.1953,
+      "pbs": 99.8047
+     },
+     "found": {
+      "drug": 0.09765625,
+      "pbs": 49.90234375
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 0.1953,
+       "found_ul": 0.09765625,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 99.8047,
+       "found_ul": 49.90234375,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "drug": 0.0977,
+      "pbs": 99.9023
+     },
+     "found": {
+      "drug": 0.048828125,
+      "pbs": 49.951171875
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 0.0977,
+       "found_ul": 0.048828125,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 99.9023,
+       "found_ul": 49.951171875,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "drug": 0.0488,
+      "pbs": 99.9512
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "well_empty",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "drug": 0.0488,
+      "pbs": 199.9512
+     },
+     "found": {
+      "drug": 0.048828125,
+      "pbs": 49.951171875
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 199.9512,
+       "found_ul": 49.951171875,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "drug": 25.0,
+      "pbs": 75.0
+     },
+     "found": {
+      "drug": 12.5,
+      "pbs": 37.5
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 25.0,
+       "found_ul": 12.5,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 75.0,
+       "found_ul": 37.5,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "drug": 12.5,
+      "pbs": 87.5
+     },
+     "found": {
+      "drug": 6.25,
+      "pbs": 43.75
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 12.5,
+       "found_ul": 6.25,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 87.5,
+       "found_ul": 43.75,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "drug": 6.25,
+      "pbs": 93.75
+     },
+     "found": {
+      "drug": 3.125,
+      "pbs": 46.875
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 6.25,
+       "found_ul": 3.125,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 93.75,
+       "found_ul": 46.875,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "drug": 3.125,
+      "pbs": 96.875
+     },
+     "found": {
+      "drug": 1.5625,
+      "pbs": 48.4375
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 3.125,
+       "found_ul": 1.5625,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 96.875,
+       "found_ul": 48.4375,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "drug": 1.5625,
+      "pbs": 98.4375
+     },
+     "found": {
+      "drug": 0.78125,
+      "pbs": 49.21875
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 1.5625,
+       "found_ul": 0.78125,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 98.4375,
+       "found_ul": 49.21875,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "drug": 0.7812,
+      "pbs": 99.2188
+     },
+     "found": {
+      "drug": 0.390625,
+      "pbs": 49.609375
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 0.7812,
+       "found_ul": 0.390625,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 99.2188,
+       "found_ul": 49.609375,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "drug": 0.3906,
+      "pbs": 99.6094
+     },
+     "found": {
+      "drug": 0.1953125,
+      "pbs": 49.8046875
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 0.3906,
+       "found_ul": 0.1953125,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 99.6094,
+       "found_ul": 49.8046875,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "drug": 0.1953,
+      "pbs": 99.8047
+     },
+     "found": {
+      "drug": 0.09765625,
+      "pbs": 49.90234375
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 0.1953,
+       "found_ul": 0.09765625,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 99.8047,
+       "found_ul": 49.90234375,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "drug": 0.0977,
+      "pbs": 99.9023
+     },
+     "found": {
+      "drug": 0.048828125,
+      "pbs": 49.951171875
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "drug",
+       "expected_ul": 0.0977,
+       "found_ul": 0.048828125,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 99.9023,
+       "found_ul": 49.951171875,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "drug": 0.0488,
+      "pbs": 99.9512
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "well_empty",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "drug": 0.0488,
+      "pbs": 199.9512
+     },
+     "found": {
+      "drug": 0.048828125,
+      "pbs": 49.951171875
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "pbs",
+       "expected_ul": 199.9512,
+       "found_ul": 49.951171875,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "drug",
+    "logical": "drug",
+    "role": "reagent",
+    "declared_ul": 125.0,
+    "delivered_ul": 75.0,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "pbs / pbs_blank",
+    "logical": "pbs",
+    "role": "reagent",
+    "declared_ul": 800.0,
+    "delivered_ul": 525.0,
+    "left_in_source_ul": 275.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "drug",
+     "declared_ul": 125.0,
+     "needed_ul": 75.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "pbs",
+     "declared_ul": 700.0,
+     "needed_ul": 625.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 25.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "pbs_blank",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 150.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (1 error, 2 warnings).\n\n1. ERROR SOURCE-TOO-SHALLOW: The pipette draws air from well A1 in slot 3: the liquid is\nbelow the tip\n   line 41:  p300.aspirate(50, reservoir[\"A1\"])\n   At line 41 the p300_single_gen2 draws 50 ul from pbs (well A1 in slot 3) with its tip 1\n   mm above the bottom of the well. By then the well holds 175 ul, which in this NEST 12\n   Well Reservoir 15 mL reaches only 0.84 mm up: the tip is above the liquid and draws air\n   (this line did it twice, after 9 times in the liquid; 100 ul of air in all). The\n   simulator does not notice: it does not follow the liquid. The 2 wells filled from these\n   draws got air instead of liquid.\n   Affected: well A1 in slot 3.\n   Also reached 2 other wells: wells A11 and A12 in slot 4.\n   Fix: Keep the liquid above the tip. This well needs about 258 ul in it for the surface to\n   reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube\n   lifts the liquid); or aspirate lower with `well.bottom(0.5)`.\n   Source: Opentrons: liquid control (aspirates 1 mm above the bottom of the well by\n   default)\n           https://docs.opentrons.com/v2/basic_commands/liquids.html\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Gilson guide to pipetting (immersion depth 2 to 3 mm for 1 to 100 ul)\n           https://solutions.pipette.com/wp-content/uploads/Gilson-Guide-to-Pipetting.pdf\n   Source: labautomation.io 7592: negative controls positive after aspirating air\n           https://labautomation.io/t/aspiration-dispense-liquid-class-incompatibity/7592\n   Source: Integra: 260 ul dead volume in a standard reservoir\n           https://www.integra-biosciences.com/global/en/applications/minimizing-dead-volume-during-qpcr-set-divided-reservoir-assist-plus-pipetting-robot\n   [36189843acfb]\n\n2. WARNING CONTAM-STOCK: A used tip went into a stock: pbs (well A1 in slot 3)\n   line 31:  p300.aspirate(75, reservoir[\"A1\"])\n   At line 31 the tip went into pbs (well A1 in slot 3) while it still carried drug (tube A1\n   in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it\n   in the next liquid it touches, so this stock now holds material that does not belong\n   there. The protocol drew from it again afterwards, but only into wells that were given\n   that material on purpose anyway, so this run is not harmed. What is left in the stock is\n   no longer clean for the next run.\n   Affected: well A1 in slot 3.\n   Fix: Pick up a fresh tip before line 31 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [7eddb5c65cbb]\n\n3. WARNING MIX-TOO-WEAK: A mix stroke as big as the well, 2 wells: 80 ul in 50 ul\n   line 44:  p300.mix(5, 80)\n   At line 44 the tip mixes wells A11 and A12 in slot 4 with 5 strokes of 80 ul in a well\n   holding 50 ul (this line did it twice). A stroke of the whole well draws air at the\n   bottom and foams the liquid. Integra draws over 80% of the well five times; three mixes\n   gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you\n   calculated, and in a dilution series every later step inherits the error.\n   Affected: wells A11 and A12 in slot 4.\n   Fix: Mix the well with about 80% of its volume (40 ul) at least 5 times: `mix(5, 40,\n   well)`. A stroke of the whole well draws air; use no more than 90%.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Integra: three serial-dilution protocols (over 80% of the volume, five times)\n           https://www.integra-biosciences.com/global/en/applications/3-simple-and-proven-automation-protocols-serial-dilutions-assist-plus-pipetting-robot\n   Source: Beckman AMPure XP instructions (mix with a tip volume just below the well volume)\n           https://research.fredhutch.org/content/dam/research/hahn/methods/Agencourt%20AMPure%20XP.pdf\n   Source: Esca Automation: serial dilution, a classic technique\n           https://escaautomation.substack.com/p/serial-dilution-a-classic-technique\n   Source: labautomation.io 3654: how to mix a bacteria sample enough\n           https://labautomation.io/t/how-to-mix-bacteria-sample-enough/3654\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   [436f8a07debe]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "SOURCE-TOO-SHALLOW",
+   "severity": "error",
+   "certain": true,
+   "line": 41,
+   "title": "The pipette draws air from well A1 in slot 3: the liquid is below the tip",
+   "explanation": "At line 41 the p300_single_gen2 draws 50 ul from pbs (well A1 in slot 3) with its tip 1 mm above the bottom of the well. By then the well holds 175 ul, which in this NEST 12 Well Reservoir 15 mL reaches only 0.84 mm up: the tip is above the liquid and draws air (this line did it twice, after 9 times in the liquid; 100 ul of air in all). The simulator does not notice: it does not follow the liquid. The 2 wells filled from these draws got air instead of liquid.",
+   "fix": "Keep the liquid above the tip. This well needs about 258 ul in it for the surface to reach 1 mm. Load that much more than the run draws; or draw from a smaller vessel (a tube lifts the liquid); or aspirate lower with `well.bottom(0.5)`."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 31,
+   "title": "A used tip went into a stock: pbs (well A1 in slot 3)",
+   "explanation": "At line 31 the tip went into pbs (well A1 in slot 3) while it still carried drug (tube A1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 31 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "MIX-TOO-WEAK",
+   "severity": "warning",
+   "certain": true,
+   "line": 44,
+   "title": "A mix stroke as big as the well, 2 wells: 80 ul in 50 ul",
+   "explanation": "At line 44 the tip mixes wells A11 and A12 in slot 4 with 5 strokes of 80 ul in a well holding 50 ul (this line did it twice). A stroke of the whole well draws air at the bottom and foams the liquid. Integra draws over 80% of the well five times; three mixes gave 11.8% CV where twenty gave 1.7%. What the well holds is not at the concentration you calculated, and in a dilution series every later step inherits the error.",
+   "fix": "Mix the well with about 80% of its volume (40 ul) at least 5 times: `mix(5, 40, well)`. A stroke of the whole well draws air; use no more than 90%."
+  }
+ ],
+ "seconds": 6.8,
+ "draft": 3
+}

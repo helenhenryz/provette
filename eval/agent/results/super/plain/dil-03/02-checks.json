@@ -1,0 +1,253 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map dil-03. 8 of 9 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 1). Reading of the request: 8 standards;\n    last well keeps 100 ul.\n  well A9: expected nothing; found 50 ul water\n      - the plate map says nothing about this well, but it holds liquid\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  bsa                                   500.0     100.0     400.0       0.0     0.0\n  water                                 500.0     350.0     100.0      50.0     0.0\n  Note: water ends in wells the plate map does not list for it: A9 in slot 1 (50.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    bsa                                  100.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A2    water                                400.0     500.0\n  Tips: 16 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "dil-03",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "1:nest_96_wellplate_200ul_flat",
+   "variant": "8 standards; last well keeps 100 ul",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 8,
+   "wells_total": 9,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "standards",
+     "expected": {
+      "bsa": 50.0
+     },
+     "found": {
+      "bsa": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "standards",
+     "expected": {
+      "bsa": 25.0,
+      "water": 25.0
+     },
+     "found": {
+      "water": 25.0,
+      "bsa": 25.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "standards",
+     "expected": {
+      "bsa": 12.5,
+      "water": 37.5
+     },
+     "found": {
+      "water": 37.5,
+      "bsa": 12.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "standards",
+     "expected": {
+      "bsa": 6.25,
+      "water": 43.75
+     },
+     "found": {
+      "water": 43.75,
+      "bsa": 6.25
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "standards",
+     "expected": {
+      "bsa": 3.125,
+      "water": 46.875
+     },
+     "found": {
+      "water": 46.875,
+      "bsa": 3.125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "standards",
+     "expected": {
+      "bsa": 1.5625,
+      "water": 48.4375
+     },
+     "found": {
+      "water": 48.4375,
+      "bsa": 1.5625
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.7812,
+      "water": 49.2188
+     },
+     "found": {
+      "water": 49.21875,
+      "bsa": 0.78125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.7812,
+      "water": 99.2188
+     },
+     "found": {
+      "water": 99.21875,
+      "bsa": 0.78125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 50.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 50.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "bsa",
+    "logical": "bsa",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 100.0,
+    "left_in_source_ul": 400.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 350.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [
+     {
+      "well": "1:nest_96_wellplate_200ul_flat[A9]",
+      "ul": 50.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "water ends in wells the plate map does not list for it: A9 in slot 1 (50.0 ul)."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "bsa",
+     "declared_ul": 500.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "water",
+     "declared_ul": 500.0,
+     "needed_ul": 400.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 16
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: 1 biology problem (1 note).\n\n1. NOTE CONTAM-WELL: A used tip carried water (tube A2 in slot 3) into well A1 in slot 1 it\nwas never meant for\n   line 43:  p20.transfer(50, plate[std_wells[i-1]], dest, new_tip='never')\n   At line 43 the tip touched the liquid in well A1 in slot 1 while it still carried water\n   (tube A2 in slot 3) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches. The protocol never transfers that liquid into\n   this well on purpose, so it was not meant to be there. If the wells hold different\n   samples, each now holds a little of another.\n   Affected: well A1 in slot 1.\n   Fix: Use a fresh tip for each well at line 43. If one tip must serve many wells, dispense\n   from above the liquid (for example `well.top()`) so that the tip never touches what is\n   already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [d13d77d7d1fc]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 43,
+   "title": "A used tip carried water (tube A2 in slot 3) into well A1 in slot 1 it was never meant for",
+   "explanation": "At line 43 the tip touched the liquid in well A1 in slot 1 while it still carried water (tube A2 in slot 3) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another.",
+   "fix": "Use a fresh tip for each well at line 43. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  }
+ ],
+ "seconds": 6.8,
+ "draft": 2
+}

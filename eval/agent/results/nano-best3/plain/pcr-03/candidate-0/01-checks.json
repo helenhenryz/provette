@@ -1,0 +1,4362 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: VERIFIED against plate map pcr-03. 96 of 96 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: full plate.\n\nLabware for the technique (PCR setup): 1 finding.\n1. WARNING LABWARE-FOR-TECHNIQUE: The wrong kind of plate: NEST 96 Well Plate 200 \u00b5L Flat is\n  a flat plate, and PCR setup needs a PCR plate or PCR strips\n   line 39:  p20.dispense(2, pcr_plate[name])\n   The plate map says the technique is PCR setup, which needs a PCR plate or PCR strips as\n     its destination. The protocol delivers into NEST 96 Well Plate 200 \u00b5L Flat (slot 4,\n     load name nest_96_wellplate_200ul_flat), which is a flat plate. A thermocycler block is\n     drilled for thin-walled 0.2 ml PCR wells; a flat plate does not fit in it, so the\n     reaction can never be run. Every well still holds what the plate map asks for, so the\n     map verifies; the plate is the problem.\n   Affected: wells A1, A10, A11, A12, A2, A3, A4, A5 and 88 more in slot 4.\n   Fix: Load nest_96_wellplate_100ul_pcr_full_skirt (or the 200 ul PCR plate, or PCR strips\n     on the aluminium block) as the destination; a flat plate cannot go in a thermocycler.\n   Source: Opentrons, module setup: no error for an unusual labware and module combination\n           https://docs.opentrons.com/v2/modules/setup.html\n   Source: Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate\n           https://docs.opentrons.com/v2/modules/thermocycler.html\n   Source: ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error\n           https://arxiv.org/html/2606.11150v1\n   [6e7561607460]\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  master mix                          10000.0    1728.0    8272.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n  template                              100.0       2.0      98.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 12 Well Reservoir 15 mL          A1    master mix                          1728.0   10000.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A1    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B1    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C1    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D1    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E1    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F1    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G1    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H1    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A2    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B2    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C2    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D2    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E2    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F2    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G2    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H2    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A3    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B3    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C3    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D3    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E3    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F3    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G3    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H3    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A4    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B4    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C4    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D4    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E4    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F4    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G4    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H4    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A5    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B5    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C5    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D5    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E5    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F5    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G5    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H5    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A6    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B6    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C6    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D6    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E6    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F6    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G6    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H6    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A7    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B7    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C7    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D7    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E7    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F7    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G7    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H7    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A8    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B8    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C8    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D8    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E8    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F8    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G8    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H8    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A9    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B9    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C9    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D9    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E9    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F9    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G9    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H9    template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A10   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B10   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C10   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D10   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E10   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F10   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G10   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H10   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A11   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B11   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C11   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D11   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E11   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F11   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G11   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H11   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk A12   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B12   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk C12   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk D12   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk E12   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk F12   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk G12   template                               2.0     100.0\n  3    NEST 96 Well Plate 100 \u00b5L PCR Full Sk H12   template                               2.0     100.0\n  Tips: 96 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-03",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [
+   {
+    "rule_id": "LABWARE-FOR-TECHNIQUE",
+    "family": 10,
+    "tier": "structural",
+    "severity": "warning",
+    "certain": true,
+    "roles_basis": "none",
+    "title": "The wrong kind of plate: NEST 96 Well Plate 200 \u00b5L Flat is a flat plate, and PCR setup needs a PCR plate or PCR strips",
+    "explanation": "The plate map says the technique is PCR setup, which needs a PCR plate or PCR strips as its destination. The protocol delivers into NEST 96 Well Plate 200 \u00b5L Flat (slot 4, load name nest_96_wellplate_200ul_flat), which is a flat plate. A thermocycler block is drilled for thin-walled 0.2 ml PCR wells; a flat plate does not fit in it, so the reaction can never be run. Every well still holds what the plate map asks for, so the map verifies; the plate is the problem.",
+    "fix": "Load nest_96_wellplate_100ul_pcr_full_skirt (or the 200 ul PCR plate, or PCR strips on the aluminium block) as the destination; a flat plate cannot go in a thermocycler.",
+    "line": 39,
+    "stack": [
+     "run:39"
+    ],
+    "occurrences": [
+     {
+      "event_index": 2,
+      "line": 39
+     }
+    ],
+    "wells": [
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "A9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "B9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "C9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "D9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "E9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "F9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "G9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H1",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H10",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H11",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H12",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H2",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H3",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H4",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H5",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H6",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H7",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H8",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "4:nest_96_wellplate_200ul_flat",
+      "well": "H9",
+      "slot": "4",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     }
+    ],
+    "downstream": {
+     "count": 0,
+     "wells": []
+    },
+    "sources": [
+     {
+      "name": "Opentrons, module setup: no error for an unusual labware and module combination",
+      "url": "https://docs.opentrons.com/v2/modules/setup.html"
+     },
+     {
+      "name": "Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate",
+      "url": "https://docs.opentrons.com/v2/modules/thermocycler.html"
+     },
+     {
+      "name": "ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error",
+      "url": "https://arxiv.org/html/2606.11150v1"
+     }
+    ],
+    "fingerprint": "6e7561607460"
+   }
+  ],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "full plate",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 96,
+   "wells_total": 96,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A1": 2.0
+     },
+     "found": {
+      "template@A1": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B1": 2.0
+     },
+     "found": {
+      "template@B1": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C1": 2.0
+     },
+     "found": {
+      "template@C1": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D1": 2.0
+     },
+     "found": {
+      "template@D1": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E1": 2.0
+     },
+     "found": {
+      "template@E1": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F1": 2.0
+     },
+     "found": {
+      "template@F1": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G1": 2.0
+     },
+     "found": {
+      "template@G1": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H1": 2.0
+     },
+     "found": {
+      "template@H1": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A2": 2.0
+     },
+     "found": {
+      "template@A2": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B2": 2.0
+     },
+     "found": {
+      "template@B2": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C2": 2.0
+     },
+     "found": {
+      "template@C2": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D2": 2.0
+     },
+     "found": {
+      "template@D2": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E2",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E2": 2.0
+     },
+     "found": {
+      "template@E2": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F2",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F2": 2.0
+     },
+     "found": {
+      "template@F2": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G2",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G2": 2.0
+     },
+     "found": {
+      "template@G2": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H2",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H2": 2.0
+     },
+     "found": {
+      "template@H2": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A3": 2.0
+     },
+     "found": {
+      "template@A3": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B3": 2.0
+     },
+     "found": {
+      "template@B3": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C3": 2.0
+     },
+     "found": {
+      "template@C3": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D3": 2.0
+     },
+     "found": {
+      "template@D3": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E3",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E3": 2.0
+     },
+     "found": {
+      "template@E3": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F3",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F3": 2.0
+     },
+     "found": {
+      "template@F3": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G3",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G3": 2.0
+     },
+     "found": {
+      "template@G3": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H3",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H3": 2.0
+     },
+     "found": {
+      "template@H3": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A4": 2.0
+     },
+     "found": {
+      "template@A4": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B4": 2.0
+     },
+     "found": {
+      "template@B4": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C4": 2.0
+     },
+     "found": {
+      "template@C4": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D4": 2.0
+     },
+     "found": {
+      "template@D4": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E4",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E4": 2.0
+     },
+     "found": {
+      "template@E4": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F4",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F4": 2.0
+     },
+     "found": {
+      "template@F4": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G4",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G4": 2.0
+     },
+     "found": {
+      "template@G4": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H4",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H4": 2.0
+     },
+     "found": {
+      "template@H4": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A5": 2.0
+     },
+     "found": {
+      "template@A5": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B5": 2.0
+     },
+     "found": {
+      "template@B5": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C5": 2.0
+     },
+     "found": {
+      "template@C5": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D5": 2.0
+     },
+     "found": {
+      "template@D5": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E5",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E5": 2.0
+     },
+     "found": {
+      "template@E5": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F5",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F5": 2.0
+     },
+     "found": {
+      "template@F5": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G5",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G5": 2.0
+     },
+     "found": {
+      "template@G5": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H5",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H5": 2.0
+     },
+     "found": {
+      "template@H5": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A6": 2.0
+     },
+     "found": {
+      "template@A6": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B6": 2.0
+     },
+     "found": {
+      "template@B6": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C6": 2.0
+     },
+     "found": {
+      "template@C6": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D6": 2.0
+     },
+     "found": {
+      "template@D6": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E6",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E6": 2.0
+     },
+     "found": {
+      "template@E6": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F6",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F6": 2.0
+     },
+     "found": {
+      "template@F6": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G6",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G6": 2.0
+     },
+     "found": {
+      "template@G6": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H6",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H6": 2.0
+     },
+     "found": {
+      "template@H6": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A7": 2.0
+     },
+     "found": {
+      "template@A7": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B7",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B7": 2.0
+     },
+     "found": {
+      "template@B7": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C7",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C7": 2.0
+     },
+     "found": {
+      "template@C7": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D7",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D7": 2.0
+     },
+     "found": {
+      "template@D7": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E7",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E7": 2.0
+     },
+     "found": {
+      "template@E7": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F7",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F7": 2.0
+     },
+     "found": {
+      "template@F7": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G7",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G7": 2.0
+     },
+     "found": {
+      "template@G7": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H7",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H7": 2.0
+     },
+     "found": {
+      "template@H7": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A8": 2.0
+     },
+     "found": {
+      "template@A8": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B8",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B8": 2.0
+     },
+     "found": {
+      "template@B8": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C8",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C8": 2.0
+     },
+     "found": {
+      "template@C8": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D8",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D8": 2.0
+     },
+     "found": {
+      "template@D8": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E8",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E8": 2.0
+     },
+     "found": {
+      "template@E8": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F8",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F8": 2.0
+     },
+     "found": {
+      "template@F8": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G8",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G8": 2.0
+     },
+     "found": {
+      "template@G8": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H8",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H8": 2.0
+     },
+     "found": {
+      "template@H8": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A9": 2.0
+     },
+     "found": {
+      "template@A9": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B9",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B9": 2.0
+     },
+     "found": {
+      "template@B9": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C9",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C9": 2.0
+     },
+     "found": {
+      "template@C9": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D9",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D9": 2.0
+     },
+     "found": {
+      "template@D9": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E9",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E9": 2.0
+     },
+     "found": {
+      "template@E9": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F9",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F9": 2.0
+     },
+     "found": {
+      "template@F9": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G9",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G9": 2.0
+     },
+     "found": {
+      "template@G9": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H9",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H9": 2.0
+     },
+     "found": {
+      "template@H9": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A10": 2.0
+     },
+     "found": {
+      "template@A10": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B10": 2.0
+     },
+     "found": {
+      "template@B10": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C10",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C10": 2.0
+     },
+     "found": {
+      "template@C10": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D10",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D10": 2.0
+     },
+     "found": {
+      "template@D10": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E10",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E10": 2.0
+     },
+     "found": {
+      "template@E10": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F10",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F10": 2.0
+     },
+     "found": {
+      "template@F10": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G10",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G10": 2.0
+     },
+     "found": {
+      "template@G10": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H10",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H10": 2.0
+     },
+     "found": {
+      "template@H10": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A11": 2.0
+     },
+     "found": {
+      "template@A11": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B11": 2.0
+     },
+     "found": {
+      "template@B11": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C11",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C11": 2.0
+     },
+     "found": {
+      "template@C11": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D11",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D11": 2.0
+     },
+     "found": {
+      "template@D11": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E11",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E11": 2.0
+     },
+     "found": {
+      "template@E11": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F11",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F11": 2.0
+     },
+     "found": {
+      "template@F11": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G11",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G11": 2.0
+     },
+     "found": {
+      "template@G11": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H11",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H11": 2.0
+     },
+     "found": {
+      "template@H11": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@A12": 2.0
+     },
+     "found": {
+      "template@A12": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@B12": 2.0
+     },
+     "found": {
+      "template@B12": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C12",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@C12": 2.0
+     },
+     "found": {
+      "template@C12": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D12",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@D12": 2.0
+     },
+     "found": {
+      "template@D12": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E12",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@E12": 2.0
+     },
+     "found": {
+      "template@E12": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F12",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@F12": 2.0
+     },
+     "found": {
+      "template@F12": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G12",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@G12": 2.0
+     },
+     "found": {
+      "template@G12": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H12",
+     "group": null,
+     "expected": {
+      "master_mix": 18.0,
+      "template@H12": 2.0
+     },
+     "found": {
+      "template@H12": 2.0,
+      "master_mix": 18.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "master mix",
+    "logical": "master_mix",
+    "role": "reagent",
+    "declared_ul": 10000.0,
+    "delivered_ul": 1728.0,
+    "left_in_source_ul": 8272.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@A12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@B12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@C12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@D12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@E12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@F12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@G12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "template",
+    "logical": "template@H12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "master mix",
+     "declared_ul": 10000.0,
+     "needed_ul": 1728.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A1",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B1",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C1",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D1",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E1",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F1",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G1",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H1",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A2",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B2",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C2",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D2",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E2",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F2",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G2",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H2",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A3",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B3",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C3",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D3",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E3",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F3",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G3",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H3",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A4",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B4",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C4",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D4",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E4",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F4",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G4",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H4",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A5",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B5",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C5",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D5",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E5",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F5",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G5",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H5",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A6",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B6",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C6",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D6",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E6",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F6",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G6",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H6",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A7",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B7",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C7",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D7",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E7",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F7",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G7",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H7",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A8",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B8",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C8",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D8",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E8",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F8",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G8",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H8",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A9",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B9",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C9",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D9",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E9",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F9",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G9",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H9",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A10",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B10",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C10",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D10",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E10",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F10",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G10",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H10",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A11",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B11",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C11",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D11",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E11",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F11",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G11",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H11",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "A12",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B12",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "C12",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "D12",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "E12",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "F12",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "G12",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "H12",
+     "liquid": "template",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 96
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (1 warning, 2 notes).\n\n1. WARNING CONTAM-STOCK: A used tip went into a stock: master mix (well A1 in slot 2)\n   line 41:  p20.aspirate(18, reservoir[\"A1\"])\n   At line 41 the tip went into master mix (well A1 in slot 2) while it still carried\n   template (well A1 in slot 3), template (well A2 in slot 3), template (well A3 in slot 3),\n   template (well A4 in slot 3) and 92 more from an earlier step (this line did it 96\n   times). A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches, so this stock now holds material that does not belong there. The protocol drew\n   from it again afterwards, but only into wells that were given that material on purpose\n   anyway, so this run is not harmed. What is left in the stock is no longer clean for the\n   next run.\n   Affected: well A1 in slot 2.\n   Fix: Pick up a fresh tip before line 41 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [33f56091bf75]\n\n2. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 41:  p20.aspirate(18, reservoir[\"A1\"])\n   At line 41 the tip touched the liquid in well A1 in slot 2 while it still carried\n   template (well A1 in slot 3), template (well A2 in slot 3), template (well A3 in slot 3),\n   template (well A4 in slot 3) and 92 more from an earlier step (this line did it 96\n   times). A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches, and the protocol never transfers that liquid into this well on purpose. A\n   reagent is shared: the master mix, the enzyme or the primer in that well goes into every\n   reaction on the plate. A tip that has been in one sample leaves a little of it in the\n   next liquid it touches, so a sample carried into a reagent well turns up in every well\n   that reagent reaches, and a no-template control can no longer be trusted.\n   Affected: well A1 in slot 2.\n   Fix: Use a fresh tip for each sample at line 41, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [bcc462bcd716]\n\n3. NOTE NO-NEGATIVE-CONTROL: No no-template control: 96 wells of master mix with a sample\n   line 43:  p20.dispense(18, pcr_plate[name])\n   At line 43 the robot starts putting master mix into NEST 96 Well Plate 200 \u00b5L Flat (slot\n   4), and 96 wells end holding it together with a sample. No well on this plate holds the\n   mix without a sample, so there is no no-template control. If a reagent is contaminated,\n   or the primers pair with each other, every well gives a signal and nothing on the plate\n   can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 88 more in\n   slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 88 more in slot 4.\n   Fix: Add one well (three for qPCR) with 18 ul of master mix and 2 ul of water in place of\n   the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [0189b83d7114]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 41,
+   "title": "A used tip went into a stock: master mix (well A1 in slot 2)",
+   "explanation": "At line 41 the tip went into master mix (well A1 in slot 2) while it still carried template (well A1 in slot 3), template (well A2 in slot 3), template (well A3 in slot 3), template (well A4 in slot 3) and 92 more from an earlier step (this line did it 96 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 41 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 41,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 41 the tip touched the liquid in well A1 in slot 2 while it still carried template (well A1 in slot 3), template (well A2 in slot 3), template (well A3 in slot 3), template (well A4 in slot 3) and 92 more from an earlier step (this line did it 96 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted.",
+   "fix": "Use a fresh tip for each sample at line 41, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 43,
+   "title": "No no-template control: 96 wells of master mix with a sample",
+   "explanation": "At line 43 the robot starts putting master mix into NEST 96 Well Plate 200 \u00b5L Flat (slot 4), and 96 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 88 more in slot 4.",
+   "fix": "Add one well (three for qPCR) with 18 ul of master mix and 2 ul of water in place of the template, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 6.4,
+ "draft": 1
+}

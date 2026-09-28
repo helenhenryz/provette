@@ -1,0 +1,93 @@
+{
+ "id": "pcr-04",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "COLD-MODULE-NEVER-SET",
+    "severity": "warning",
+    "certain": true,
+    "line": 43,
+    "title": "A temperature module was loaded but never set"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 43,
+    "title": "A used tip went into a stock: 6 stocks"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 38,
+    "title": "No no-template control: 18 wells of master mix with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 44,
+    "title": "18 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 2 more went in (20% of the well)"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 0,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 41,
+    "title": "No no-template control: 18 wells of master mix with a sample"
+   }
+  ],
+  "draft": 2,
+  "rounds": 2
+ },
+ "tool_calls": 10,
+ "turns": 10,
+ "drafts": 3,
+ "checks": 3,
+ "submitted": true,
+ "submitted_clean": true,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 1356626,
+ "tokens_out": 264116,
+ "seconds": 571.2,
+ "candidates": [
+  {
+   "dir": "candidate-0",
+   "verified": false,
+   "stop_reason": "token budget",
+   "tokens_in": 677539,
+   "tokens_out": 118016
+  },
+  {
+   "dir": "candidate-1",
+   "verified": false,
+   "stop_reason": "submitted",
+   "tokens_in": 270273,
+   "tokens_out": 71865
+  },
+  {
+   "dir": "candidate-2",
+   "verified": true,
+   "stop_reason": "submitted",
+   "tokens_in": 408814,
+   "tokens_out": 74235
+  }
+ ],
+ "chosen": "candidate-2"
+}

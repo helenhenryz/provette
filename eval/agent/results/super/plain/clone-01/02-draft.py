@@ -1,0 +1,82 @@
+import json
+from opentrons import protocol_api
+
+metadata = {"protocolName": "Restriction Digests Setup", "apiLevel": "2.19"}
+
+def run(protocol: protocol_api.ProtocolContext):
+    # Labware
+    tube_rack = protocol.load_labware('opentrons_24_tuberack_nest_1.5ml_snapcap', 1)
+    plate = protocol.load_labware('nest_96_wellplate_100ul_pcr_full_skirt', 2)
+    tiprack_20 = protocol.load_labware('opentrons_96_tiprack_20ul', 3)
+    tiprack_300 = protocol.load_labware('opentrons_96_tiprack_300ul', 4)
+    
+    # Pipettes
+    p20 = protocol.load_instrument('p20_single_gen2', 'right', tip_racks=[tiprack_20])
+    p300 = protocol.load_instrument('p300_single_gen2', 'left', tip_racks=[tiprack_300])
+    
+    # Define liquids
+    plasmids = [f'plasmid {i}' for i in range(1, 13)]
+    liquid_names = plasmids + ['water', 'buffer', 'enzyme']
+    liquids = {}
+    for name in liquid_names:
+        liquids[name] = protocol.define_liquid(
+            name=name,
+            description=f'{name} stock',
+            display_color='#FFFFFF' if name.startswith('plasmid') else ('#0000FF' if name=='water' else '#FF0000' if name=='buffer' else '#00FF00')
+        )
+    
+    # Load liquids into tubes (assign positions)
+    positions = [
+        'A1','A2','A3','A4','A5','A6','B1','B2','B3','B4','B5','B6',
+        'C1','C2','C3','C4','C5','C6','D1','D2','D3','D4','D5','D6'
+    ]
+    for i, name in enumerate(plasmids):
+        tube_rack[positions[i]].load_liquid(liquids[name], volume=100)  # ul
+    tube_rack[positions[12]].load_liquid(liquids['water'], volume=500)
+    tube_rack[positions[13]].load_liquid(liquids['buffer'], volume=500)
+    tube_rack[positions[14]].load_liquid(liquids['enzyme'], volume=200)
+    
+    # Master mix pooling (buffer 2ul, enzyme 1ul, water 12ul per reaction, 12 reactions +10%)
+    vol_buffer = 2.0 * 12 * 1.1   # 26.4 ul
+    vol_enzyme = 1.0 * 12 * 1.1   # 13.2 ul
+    vol_water  = 12.0 * 12 * 1.1  # 158.4 ul
+    
+    mix_tube = tube_rack['D6']  # tube for master mix
+    
+    # Pool components: water first, then buffer, then enzyme last (enzyme added last)
+    # Water
+    p300.pick_up_tip()
+    p300.aspirate(vol_water, tube_rack[positions[12]])   # water tube
+    p300.dispense(vol_water, mix_tube)
+    p300.drop_tip()
+    # Buffer
+    p300.pick_up_tip()
+    p300.aspirate(vol_buffer, tube_rack[positions[13]])  # buffer tube
+    p300.dispense(vol_buffer, mix_tube)
+    p300.drop_tip()
+    # Enzyme (use p20 as volume <20)
+    p20.pick_up_tip()
+    p20.aspirate(vol_enzyme, tube_rack[positions[14]])  # enzyme tube
+    p20.dispense(vol_enzyme, mix_tube)
+    p20.drop_tip()
+    # Mix master mix thoroughly
+    p300.pick_up_tip()
+    p300.mix(5, 150, mix_tube)
+    p300.drop_tip()
+    
+    # Distribute master mix to each well (15 ul per well) using p20
+    well_order = [f'{row}{col}' for col in range(1,13) for row in ['A','B','C','D','E','F','G','H']][:12]
+    p20.pick_up_tip()
+    for well in well_order:
+        p20.aspirate(15.0, mix_tube)
+        p20.dispense(15.0, plate[well])
+        p20.mix(5, 12, plate[well])  # 80% of 15ul =12ul, 5 repetitions
+    p20.drop_tip()
+    
+    # Add plasmids (5 ul each) to corresponding wells
+    for i, (name, well) in enumerate(zip(plasmids, well_order)):
+        p20.pick_up_tip()
+        p20.aspirate(5.0, tube_rack[positions[i]])  # plasmid tube
+        p20.dispense(5.0, plate[well])
+        p20.mix(5, 12, plate[well])  # mix after addition
+        p20.drop_tip()

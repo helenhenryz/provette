@@ -1,0 +1,133 @@
+.wrap {
+  display: grid;
+  grid-template-columns: minmax(280px, 3fr) minmax(220px, 2fr);
+  gap: var(--s-5);
+  align-items: start;
+}
+@media (max-width: 720px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.plate {
+  min-width: 0;
+}
+.title {
+  font-size: var(--t-2);
+  color: var(--muted);
+  margin-bottom: var(--s-2);
+}
+
+.readout {
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.readout:not(:empty) {
+  margin-top: var(--s-2);
+}
+.good {
+  color: var(--verified);
+}
+.bad {
+  color: var(--error);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  font-size: var(--t-2);
+}
+.dest {
+  font-weight: 600;
+  color: var(--text);
+}
+.group {
+  padding: var(--s-2) var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.groupTitle {
+  color: var(--text);
+  margin-bottom: var(--s-1);
+}
+.members {
+  margin: 0;
+  padding-left: 1.1em;
+  color: var(--muted);
+}
+.legend,
+.key {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+}
+.legend li,
+.key li {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.keyDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: inline-block;
+}
+.keyDot.mismatch {
+  border-color: var(--error);
+}
+.legendFold summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  color: var(--muted);
+}
+.legendFold[open] summary {
+  margin-bottom: var(--s-2);
+}
+.bar {
+  display: inline-flex;
+  height: 12px;
+  width: 96px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.bar span {
+  flex: 1;
+}
+.keyDot.proposedDot {
+  border-color: var(--note);
+  border-style: dashed;
+}
+.muted {
+  color: var(--muted);
+}
+.replayPlate {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: var(--s-2);
+}
+.stacked {
+  grid-template-columns: 1fr;
+  gap: var(--s-3);
+}
+/* in a rail the hover readout takes no room until there is something to read */
+.stacked .readout {
+  min-height: 0;
+  margin-top: 0;
+}
+.stacked .readout:not(:empty) {
+  margin-top: var(--s-2);
+}

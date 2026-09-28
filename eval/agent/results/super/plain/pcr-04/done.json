@@ -1,0 +1,61 @@
+{
+ "id": "pcr-04",
+ "condition": "plain",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 66,
+    "title": "8 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 74,
+    "title": "2 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "COLD-MODULE-NEVER-SET",
+    "severity": "warning",
+    "certain": true,
+    "line": 74,
+    "title": "A temperature module was loaded but never set"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 75,
+    "title": "18 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 14 more went in (20% of the well)"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 0,
+  "findings": [],
+  "draft": 2,
+  "rounds": 2
+ },
+ "tool_calls": 9,
+ "turns": 9,
+ "drafts": 3,
+ "checks": 3,
+ "submitted": true,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 64665,
+ "tokens_out": 7799,
+ "seconds": 76.0
+}

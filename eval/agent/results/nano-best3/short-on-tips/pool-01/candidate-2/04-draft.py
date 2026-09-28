@@ -1,0 +1,43 @@
+from opentrons import protocol_api
+
+metadata = {"protocolName": "Pool_48_libraries", "apiLevel": "2.19"}
+
+def run(protocol: protocol_api.ProtocolContext):
+    # Load labware
+    plate = protocol.load_labware("nest_96_wellplate_200ul_flat", 1)
+    tubes = protocol.load_labware("opentrons_24_tuberack_nest_1.5ml_snapcap", 2)
+    tiprack = protocol.load_labware("opentrons_96_tiprack_20ul", 3)
+    tiprack300 = protocol.load_labware("opentrons_96_tiprack_300ul", 4)
+    
+    # Load pipettes
+    p20 = protocol.load_instrument("p20_single_gen2", "right", tip_racks=[tiprack])
+    p300 = protocol.load_instrument("p300_single_gen2", "left", tip_racks=[tiprack300])
+    
+    # Load each library liquid into a well of the plate
+    # Use the first 48 wells: columns A-F, rows 1-8
+    well_names = []
+    for col in ["A", "B", "C", "D", "E", "F"]:
+        for row in range(1, 9):
+            well_names.append(col + str(row))
+    for i, well_name in enumerate(well_names):
+        lib_obj = protocol.define_liquid(
+            name=f"library {i+1}",
+            description=f"Sequencing library {i+1}",
+            display_color="#FF0000"
+        )
+        well = plate[well_name]
+        well.load_liquid(liquid=lib_obj, volume=100)  # 100 ul per library
+    
+    # Pool 5 ul from each library into a single tube
+    dest_tube = tubes["A1"]
+    # Loop over each well, using a fresh tip each time
+    for i, well_name in enumerate(well_names):
+        p20.pick_up_tip()
+        p20.aspirate(5, plate[well_name])
+        p20.dispense(5, dest_tube)
+        # After the final transfer, mix the destination tube with a p300
+        if i == len(well_names) - 1:
+            p300.pick_up_tip()
+            p300.mix(5, 192, dest_tube)  # 5 strokes of 192 ul
+            p300.drop_tip()
+        p20.drop_tip()

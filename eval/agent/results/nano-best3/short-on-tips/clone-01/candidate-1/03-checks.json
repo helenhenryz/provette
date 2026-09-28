@@ -1,0 +1,4955 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map clone-01. 0 of 85 wells hold what the plate map\n  says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 3). Reading of the request: 12 digests.\n  well A9 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_9, 12 ul water; found 2\n    ul buffer, 12 ul water, 5 ul plasmid_9\n      - enzyme is missing: the plate map says 1 ul, none arrives\n  well A10 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_10, 12 ul water; found\n    2 ul buffer, 12 ul water, 5 ul plasmid_10\n      - enzyme is missing: the plate map says 1 ul, none arrives\n  well A11 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_11, 12 ul water; found\n    2 ul buffer, 12 ul water, 5 ul plasmid_11\n      - enzyme is missing: the plate map says 1 ul, none arrives\n  well A12 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_12, 12 ul water; found\n    2 ul buffer, 12 ul water, 5 ul plasmid_12\n      - enzyme is missing: the plate map says 1 ul, none arrives\n  well B1 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_1, 12 ul water; found 2\n    ul enzyme, 1 ul water, 12 ul [undeclared liquid from E1 in slot 1]\n      - buffer is missing: the plate map says 2 ul, none arrives\n      - wrong amount of enzyme: the plate map says 1 ul, the protocol delivers 2 ul\n      - plasmid_1 is missing: the plate map says 5 ul, none arrives\n      - wrong amount of water: the plate map says 12 ul, the protocol delivers 1 ul\n      - holds 12 ul of [undeclared liquid from E1 in slot 1], which the plate map does not\n        list for this well\n  well B2 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_2, 12 ul water; found 2\n    ul enzyme, 1 ul water, 12 ul [undeclared liquid from E1 in slot 1]\n      - buffer is missing: the plate map says 2 ul, none arrives\n      - wrong amount of enzyme: the plate map says 1 ul, the protocol delivers 2 ul\n      - plasmid_2 is missing: the plate map says 5 ul, none arrives\n      - wrong amount of water: the plate map says 12 ul, the protocol delivers 1 ul\n      - holds 12 ul of [undeclared liquid from E1 in slot 1], which the plate map does not\n        list for this well\n  well B3 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_3, 12 ul water; found 2\n    ul enzyme, 1 ul water, 12 ul [undeclared liquid from E1 in slot 1]\n      - buffer is missing: the plate map says 2 ul, none arrives\n      - wrong amount of enzyme: the plate map says 1 ul, the protocol delivers 2 ul\n      - plasmid_3 is missing: the plate map says 5 ul, none arrives\n      - wrong amount of water: the plate map says 12 ul, the protocol delivers 1 ul\n      - holds 12 ul of [undeclared liquid from E1 in slot 1], which the plate map does not\n        list for this well\n  well B4 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_4, 12 ul water; found 2\n    ul enzyme, 1 ul water, 12 ul [undeclared liquid from E1 in slot 1]\n      - buffer is missing: the plate map says 2 ul, none arrives\n      - wrong amount of enzyme: the plate map says 1 ul, the protocol delivers 2 ul\n      - plasmid_4 is missing: the plate map says 5 ul, none arrives\n      - wrong amount of water: the plate map says 12 ul, the protocol delivers 1 ul\n      - holds 12 ul of [undeclared liquid from E1 in slot 1], which the plate map does not\n        list for this well\n  well B5 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_5, 12 ul water; found 2\n    ul enzyme, 1 ul water, 12 ul [undeclared liquid from E1 in slot 1]\n      - buffer is missing: the plate map says 2 ul, none arrives\n      - wrong amount of enzyme: the plate map says 1 ul, the protocol delivers 2 ul\n      - plasmid_5 is missing: the plate map says 5 ul, none arrives\n      - wrong amount of water: the plate map says 12 ul, the protocol delivers 1 ul\n      - holds 12 ul of [undeclared liquid from E1 in slot 1], which the plate map does not\n        list for this well\n  well B6 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_6, 12 ul water; found 2\n    ul enzyme, 1 ul water, 12 ul [undeclared liquid from E1 in slot 1]\n      - buffer is missing: the plate map says 2 ul, none arrives\n      - wrong amount of enzyme: the plate map says 1 ul, the protocol delivers 2 ul\n      - plasmid_6 is missing: the plate map says 5 ul, none arrives\n      - wrong amount of water: the plate map says 12 ul, the protocol delivers 1 ul\n      - holds 12 ul of [undeclared liquid from E1 in slot 1], which the plate map does not\n        list for this well\n  well A6 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_7, 12 ul water; found 2\n    ul buffer, 12 ul water\n      - enzyme is missing: the plate map says 1 ul, none arrives\n      - plasmid_7 is missing: the plate map says 5 ul, none arrives\n  well B7 (digests): expected 2 ul buffer, 1 ul enzyme, 5 ul plasmid_8, 12 ul water; found 2\n    ul enzyme, 1 ul water, 12 ul [undeclared liquid from E1 in slot 1]\n      - buffer is missing: the plate map says 2 ul, none arrives\n      - wrong amount of enzyme: the plate map says 1 ul, the protocol delivers 2 ul\n      - plasmid_8 is missing: the plate map says 5 ul, none arrives\n      - wrong amount of water: the plate map says 12 ul, the protocol delivers 1 ul\n      - holds 12 ul of [undeclared liquid from E1 in slot 1], which the plate map does not\n        list for this well\n  ... and 73 more wells that do not match.\n  Note: The digests are all there, but not in the order of their numbers when the plate is\n    read along rows or down columns. The request does not fix the order, so this is a note:\n    check that your plate layout sheet matches the protocol, not the numbering.\n\nLabware for the technique (Cloning): 1 finding.\n1. WARNING LABWARE-FOR-TECHNIQUE: The wrong kind of plate: NEST 96 Well Plate 200 \u00b5L Flat is\n  a flat plate, and Cloning needs a PCR plate or PCR strips\n   line 47:  p300_multi.dispense(2, plate[f\"A{i}\"])\n   The plate map says the technique is Cloning, which needs a PCR plate or PCR strips as its\n     destination. The protocol delivers into NEST 96 Well Plate 200 \u00b5L Flat (slot 3, load\n     name nest_96_wellplate_200ul_flat), which is a flat plate. A thermocycler block is\n     drilled for thin-walled 0.2 ml PCR wells; a flat plate does not fit in it, so the\n     reaction can never be run. The plate map checks what each well holds, not what plate it\n     is.\n   Affected: wells A1, A10, A11, A12, A2, A3, A4, A5 and 77 more in slot 3.\n   Fix: Load nest_96_wellplate_100ul_pcr_full_skirt (or the 200 ul PCR plate, or PCR strips\n     on the aluminium block) as the destination; a flat plate cannot go in a thermocycler.\n   Source: Opentrons, module setup: no error for an unusual labware and module combination\n           https://docs.opentrons.com/v2/modules/setup.html\n   Source: Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate\n           https://docs.opentrons.com/v2/modules/thermocycler.html\n   Source: ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error\n           https://arxiv.org/html/2606.11150v1\n   [2be2e96ca3a7]\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  plasmid 1                              10.0       0.0       0.0       0.0    10.0  <-- FLAG\n  plasmid 2                              10.0       0.0      10.0       0.0     0.0\n  plasmid 3                              10.0       0.0      10.0       0.0     0.0\n  plasmid 4                              10.0       0.0      10.0       0.0     0.0\n  plasmid 5                              10.0       0.0      10.0       0.0     0.0\n  plasmid 6                              10.0       0.0      10.0       0.0     0.0\n  plasmid 7                              10.0       0.0      10.0       0.0     0.0\n  plasmid 8                              10.0       0.0      10.0       0.0     0.0\n  plasmid 9                              10.0       5.0       5.0       0.0     0.0\n  plasmid 10                             10.0       5.0       5.0       0.0     0.0\n  plasmid 11                             10.0       5.0       5.0       0.0     0.0\n  plasmid 12                             10.0       5.0       5.0       0.0     0.0\n  buffer                                 30.0      10.0       0.0      14.0     6.0\n  enzyme                                 30.0      14.0       0.0      10.0     6.0\n  water                                 150.0      67.0       0.0      53.0    30.0\n  FLAG: 10.0 ul of plasmid 1 is lost: it left the deck inside a tip that was thrown away.\n  Note: 6.0 ul of buffer is lost: it left the deck inside a tip that was thrown away.\n  Note: buffer ends in wells the plate map does not list for it: A1 in slot 3 (2.0 ul), A2\n    in slot 3 (2.0 ul), A3 in slot 3 (2.0 ul), A4 in slot 3 (2.0 ul), A5 in slot 3 (2.0 ul),\n    A7 in slot 3 (2.0 ul) and 1 more.\n  Note: 6.0 ul of enzyme is lost: it left the deck inside a tip that was thrown away.\n  Note: enzyme ends in wells the plate map does not list for it: B10 in slot 3 (2.0 ul), B11\n    in slot 3 (2.0 ul), B12 in slot 3 (2.0 ul), B8 in slot 3 (2.0 ul), B9 in slot 3 (2.0\n    ul).\n  Note: 30.0 ul of water is lost: it left the deck inside a tip that was thrown away.\n  Note: water ends in wells the plate map does not list for it: A7 in slot 3 (12.0 ul), A8\n    in slot 3 (12.0 ul), B10 in slot 3 (1.0 ul), B11 in slot 3 (1.0 ul), B12 in slot 3 (1.0\n    ul), B8 in slot 3 (1.0 ul) and 13 more.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  1    Opentrons 96 Well Aluminum Block with A1    plasmid 1                             20.0      10.0  <-- WOULD RUN DRY\n  1    Opentrons 96 Well Aluminum Block with B1    buffer                                80.0      30.0  <-- WOULD RUN DRY\n  1    Opentrons 96 Well Aluminum Block with C1    enzyme                               140.0      30.0  <-- WOULD RUN DRY\n  1    Opentrons 96 Well Aluminum Block with D1    water                                680.0     150.0  <-- WOULD RUN DRY\n  1    Opentrons 96 Well Aluminum Block with A2    plasmid 2                              0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  1    Opentrons 96 Well Aluminum Block with A3    plasmid 3                              0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  1    Opentrons 96 Well Aluminum Block with A4    plasmid 4                              0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  1    Opentrons 96 Well Aluminum Block with A5    plasmid 5                              0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  1    Opentrons 96 Well Aluminum Block with A6    plasmid 6                              0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  1    Opentrons 96 Well Aluminum Block with A7    plasmid 7                              0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  1    Opentrons 96 Well Aluminum Block with A8    plasmid 8                              0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  1    Opentrons 96 Well Aluminum Block with A9    plasmid 9                              5.0      10.0\n  1    Opentrons 96 Well Aluminum Block with A10   plasmid 10                             5.0      10.0\n  1    Opentrons 96 Well Aluminum Block with A11   plasmid 11                             5.0      10.0\n  1    Opentrons 96 Well Aluminum Block with A12   plasmid 12                             5.0      10.0\n  FLAG: plasmid 1 in A1, slot 1 would run dry: the robot draws 20 ul from it and the\n    protocol declares 10 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 70 ul in this well, or draw less.\n  FLAG: buffer in B1, slot 1 would run dry: the robot draws 80 ul from it and the protocol\n    declares 30 ul. The simulator passes it; the robot would pipette air. Fix: declare and\n    load at least 130 ul in this well, or draw less.\n  FLAG: enzyme in C1, slot 1 would run dry: the robot draws 140 ul from it and the protocol\n    declares 30 ul. The simulator passes it; the robot would pipette air. Fix: declare and\n    load at least 190 ul in this well, or draw less.\n  FLAG: water in D1, slot 1 would run dry: the robot draws 680 ul from it and the protocol\n    declares 150 ul. The simulator passes it; the robot would pipette air. Fix: declare and\n    load at least 748 ul in this well, or draw less.\n  Tips: 32 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 2.\n  Tips: 4 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 4.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "clone-01",
+  "technique": "Cloning",
+  "exit_code": 1,
+  "labware": [
+   {
+    "rule_id": "LABWARE-FOR-TECHNIQUE",
+    "family": 10,
+    "tier": "structural",
+    "severity": "warning",
+    "certain": true,
+    "roles_basis": "none",
+    "title": "The wrong kind of plate: NEST 96 Well Plate 200 \u00b5L Flat is a flat plate, and Cloning needs a PCR plate or PCR strips",
+    "explanation": "The plate map says the technique is Cloning, which needs a PCR plate or PCR strips as its destination. The protocol delivers into NEST 96 Well Plate 200 \u00b5L Flat (slot 3, load name nest_96_wellplate_200ul_flat), which is a flat plate. A thermocycler block is drilled for thin-walled 0.2 ml PCR wells; a flat plate does not fit in it, so the reaction can never be run. The plate map checks what each well holds, not what plate it is.",
+    "fix": "Load nest_96_wellplate_100ul_pcr_full_skirt (or the 200 ul PCR plate, or PCR strips on the aluminium block) as the destination; a flat plate cannot go in a thermocycler.",
+    "line": 47,
+    "stack": [
+     "run:47"
+    ],
+    "occurrences": [
+     {
+      "event_index": 2,
+      "line": 47
+     }
+    ],
+    "wells": [
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A1",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A10",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A11",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A12",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A2",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A3",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A4",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A5",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A6",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A7",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A8",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "A9",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B1",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B10",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B11",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B12",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B2",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B3",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B4",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B5",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B6",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B7",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B8",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "B9",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C1",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C10",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C11",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C12",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C2",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C3",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C4",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C5",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C6",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C7",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C8",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "C9",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D1",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D10",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D11",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D12",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D2",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D3",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D4",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D5",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D6",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D7",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D8",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "D9",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E1",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E10",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E11",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E12",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E2",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E3",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E4",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E5",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E6",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E7",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E8",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "E9",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F1",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F10",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F11",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F12",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F2",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F3",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F4",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F5",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F6",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F7",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F8",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "F9",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G1",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G10",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G11",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G12",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G2",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G3",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G4",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G5",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G6",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G7",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G8",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "G9",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     },
+     {
+      "labware_id": "3:nest_96_wellplate_200ul_flat",
+      "well": "H1",
+      "slot": "3",
+      "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+      "liquid": null
+     }
+    ],
+    "downstream": {
+     "count": 0,
+     "wells": []
+    },
+    "sources": [
+     {
+      "name": "Opentrons, module setup: no error for an unusual labware and module combination",
+      "url": "https://docs.opentrons.com/v2/modules/setup.html"
+     },
+     {
+      "name": "Opentrons, thermocycler: takes the 200 ul full-skirt PCR plate",
+      "url": "https://docs.opentrons.com/v2/modules/thermocycler.html"
+     },
+     {
+      "name": "ABC-Bench (Liu et al. 2026): wrong labware identifiers, the commonest LLM error",
+      "url": "https://arxiv.org/html/2606.11150v1"
+     }
+    ],
+    "fingerprint": "2be2e96ca3a7"
+   }
+  ],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_200ul_flat",
+   "variant": "12 digests",
+   "problems": [],
+   "notes": [
+    "The digests are all there, but not in the order of their numbers when the plate is read along rows or down columns. The request does not fix the order, so this is a note: check that your plate layout sheet matches the protocol, not the numbering."
+   ],
+   "wells_ok": 0,
+   "wells_total": 85,
+   "wells": [
+    {
+     "well": "A9",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_9": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0,
+      "plasmid_9": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_10": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0,
+      "plasmid_10": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_11": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0,
+      "plasmid_11": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_12": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0,
+      "plasmid_12": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_1": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_2": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_3": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_4": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_5": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_6": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_7": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_8": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0,
+      "[undeclared liquid from E1 in slot 1]": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A9",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_9": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0,
+      "plasmid_9": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A10",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_10": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0,
+      "plasmid_10": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A11",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_11": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0,
+      "plasmid_11": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A12",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_12": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0,
+      "plasmid_12": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_1": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_1",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_2": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_2",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_3": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_3",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_4": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_4",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_5": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B6",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_6": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_6",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_7": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_7",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B7",
+     "group": "digests",
+     "expected": {
+      "buffer": 2.0,
+      "enzyme": 1.0,
+      "plasmid_8": 5.0,
+      "water": 12.0
+     },
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "buffer",
+       "expected_ul": 2.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "enzyme",
+       "expected_ul": 1.0,
+       "found_ul": 2.0,
+       "detail": ""
+      },
+      {
+       "kind": "missing_liquid",
+       "liquid": "plasmid_8",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "water",
+       "expected_ul": 12.0,
+       "found_ul": 1.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "[undeclared liquid from E1 in slot 1]",
+       "expected_ul": null,
+       "found_ul": 12.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0,
+      "[undeclared liquid from E1 in slot 1]": 5.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 5.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 5.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H1",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 5.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G6",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G7",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "buffer": 2.0,
+      "water": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G8",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G9",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G10",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G11",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "enzyme": 2.0,
+      "water": 1.0,
+      "[undeclared liquid from E1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 2.0,
+      "[undeclared liquid from E1 in slot 1]": 1.0,
+      "[undeclared liquid from F1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from E1 in slot 1]": 2.0,
+      "[undeclared liquid from F1 in slot 1]": 1.0,
+      "[undeclared liquid from G1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from F1 in slot 1]": 2.0,
+      "[undeclared liquid from G1 in slot 1]": 1.0,
+      "[undeclared liquid from H1 in slot 1]": 12.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from G1 in slot 1]": 2.0,
+      "[undeclared liquid from H1 in slot 1]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[undeclared liquid from H1 in slot 1]": 2.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "plasmid 1",
+    "logical": "plasmid_1",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 10.0,
+    "flags": [
+     "10.0 ul of plasmid 1 is lost: it left the deck inside a tip that was thrown away."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 2",
+    "logical": "plasmid_2",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 3",
+    "logical": "plasmid_3",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 4",
+    "logical": "plasmid_4",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 5",
+    "logical": "plasmid_5",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 6",
+    "logical": "plasmid_6",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 7",
+    "logical": "plasmid_7",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 8",
+    "logical": "plasmid_8",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 9",
+    "logical": "plasmid_9",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 10",
+    "logical": "plasmid_10",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 11",
+    "logical": "plasmid_11",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "plasmid 12",
+    "logical": "plasmid_12",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 5.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 30.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A1]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A2]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A3]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A4]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A5]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A7]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A8]",
+      "ul": 2.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 6.0,
+    "flags": [],
+    "notes": [
+     "6.0 ul of buffer is lost: it left the deck inside a tip that was thrown away.",
+     "buffer ends in wells the plate map does not list for it: A1 in slot 3 (2.0 ul), A2 in slot 3 (2.0 ul), A3 in slot 3 (2.0 ul), A4 in slot 3 (2.0 ul), A5 in slot 3 (2.0 ul), A7 in slot 3 (2.0 ul) and 1 more."
+    ]
+   },
+   {
+    "liquid": "enzyme",
+    "logical": "enzyme",
+    "role": "reagent",
+    "declared_ul": 30.0,
+    "delivered_ul": 14.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B10]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B11]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B12]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B8]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B9]",
+      "ul": 2.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 6.0,
+    "flags": [],
+    "notes": [
+     "6.0 ul of enzyme is lost: it left the deck inside a tip that was thrown away.",
+     "enzyme ends in wells the plate map does not list for it: B10 in slot 3 (2.0 ul), B11 in slot 3 (2.0 ul), B12 in slot 3 (2.0 ul), B8 in slot 3 (2.0 ul), B9 in slot 3 (2.0 ul)."
+    ]
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 150.0,
+    "delivered_ul": 67.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A7]",
+      "ul": 12.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A8]",
+      "ul": 12.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B10]",
+      "ul": 1.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B11]",
+      "ul": 1.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B12]",
+      "ul": 1.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B8]",
+      "ul": 1.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B9]",
+      "ul": 1.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C10]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C11]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C12]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C2]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C3]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C4]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C5]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C6]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C7]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C8]",
+      "ul": 2.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C9]",
+      "ul": 2.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 30.0,
+    "flags": [],
+    "notes": [
+     "30.0 ul of water is lost: it left the deck inside a tip that was thrown away.",
+     "water ends in wells the plate map does not list for it: A7 in slot 3 (12.0 ul), A8 in slot 3 (12.0 ul), B10 in slot 3 (1.0 ul), B11 in slot 3 (1.0 ul), B12 in slot 3 (1.0 ul), B8 in slot 3 (1.0 ul) and 13 more."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A1",
+     "liquid": "plasmid 1",
+     "declared_ul": 10.0,
+     "needed_ul": 20.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "B1",
+     "liquid": "buffer",
+     "declared_ul": 30.0,
+     "needed_ul": 80.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "C1",
+     "liquid": "enzyme",
+     "declared_ul": 30.0,
+     "needed_ul": 140.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "D1",
+     "liquid": "water",
+     "declared_ul": 150.0,
+     "needed_ul": 680.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A2",
+     "liquid": "plasmid 2",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A3",
+     "liquid": "plasmid 3",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A4",
+     "liquid": "plasmid 4",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A5",
+     "liquid": "plasmid 5",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A6",
+     "liquid": "plasmid 6",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A7",
+     "liquid": "plasmid 7",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A8",
+     "liquid": "plasmid 8",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A9",
+     "liquid": "plasmid 9",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A10",
+     "liquid": "plasmid 10",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A11",
+     "liquid": "plasmid 11",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L",
+     "well": "A12",
+     "liquid": "plasmid 12",
+     "declared_ul": 10.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 32
+    },
+    {
+     "slot": "4",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 4
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 4 biology problems (3 warnings, 1 note).\n\n1. WARNING COLD-MODULE-NEVER-SET: A temperature module was loaded but never set\n   line 45:  p300_multi.aspirate(30, block[\"B1\"])  # aspirate 30 \u00b5L buffer\n   At line 45 the robot draws from wells A1, A9, A10, A11, A12, B1, C1, D1 and 4 more in\n   slot 1, on a temperature module that the protocol never sets. A temperature module stays\n   at room temperature until `set_temperature` is called, so buffer (carrier), enzyme\n   (reagent), plasmid 1 (sample), plasmid 10 (sample) and 11 more sat on a block that was\n   never cold; the robot pipetted there 8 times over the run. The person setting up the deck\n   sees a module and assumes it is cold. Wells: wells A1, A9, A10, A11, A12, B1, C1, D1 and\n   4 more in slot 1.\n   Affected: wells A1, A9, A10, A11, A12, B1, C1, D1 and 4 more in slot 1.\n   Fix: Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 96\n   Well Aluminum Block with Generic PCR Strip 200 \u00b5L in slot 1, and\n   `temp_module.deactivate()` at the end.\n   Source: Opentrons, temperature module: at room temperature until set_temperature, which\n   blocks\n           https://docs.opentrons.com/v2/modules/temperature_module.html\n   Source: Thermo Fisher T4 ligase manual: keep on ice, use within minutes\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/t4dnaligase_1U_man.pdf\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   [a0386b497d7d]\n\n2. WARNING ENZYME-BEFORE-DILUENT: An enzyme was added before the water: enzyme\n   line 47:  p300_multi.dispense(2, plate[f\"A{i}\"])\n   At line 47 the robot put enzyme into wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in\n   slot 3 (this line did it 12 times). Take well B1 in slot 3: at that moment it was dry,\n   and the water came afterwards, at line 54, to make the 1 ul of water or buffer the\n   reaction is built on. An enzyme is shipped in 50% glycerol and is meant to be the last\n   thing into a reaction, after the water and the buffer have brought the well to the right\n   dilution. Dropped into neat buffer or a dry well it meets many times the salt it should:\n   a restriction enzyme then cuts at the wrong places (star activity) and a polymerase\n   starts on mis-primed template.\n   Affected: wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in slot 3.\n   Fix: Reorder the additions to wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in slot 3:\n   water and buffer first, then the sample, then enzyme last. Or make a master mix of water,\n   buffer and enzyme in one tube, mix it, and hand it out.\n   Source: Thermo Fisher: restriction enzyme key considerations (the enzyme is the final\n   component)\n           https://www.thermofisher.com/us/en/home/life-science/cloning/cloning-learning-center/invitrogen-school-of-molecular-biology/molecular-cloning/restriction-enzymes/restriction-enzyme-key-considerations.html\n   Source: Promega: restriction enzyme resource (add the enzyme last; glycerol and star\n   activity)\n           https://www.promega.com/resources/guides/nucleic-acid-analysis/restriction-enzyme-resource/\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   Source: Qiagen: critical factors for successful real-time PCR (order of addition)\n           https://www.gene-quantification.de/qiagen-qpcr-sample-assay-tech-guide-2010.pdf\n   [eb59089b76ec]\n\n3. WARNING UNMIXED-AT-END: 4 wells never mixed after plasmid 9, plasmid 10, plasmid 11 and\nplasmid 12 went in (26% of the well)\n   line 74:  p20_single.dispense(5, plate[f\"A{i}\"])  # dispense 5 \u00b5L into destination well\n   At line 74 the robot added plasmid 9, plasmid 10, plasmid 11 and plasmid 12 to wells A9,\n   A10, A11 and A12 in slot 3, which already held buffer and water (this line did it 4\n   times). The addition was 26% of the well, nothing mixed the well afterwards, and the run\n   ended with them that way. Two liquids layered in a small well do not mix on their own, so\n   what the well holds is not at the concentration you calculated. The liquid added last is\n   a sample, so nothing else in the workflow will mix it: a normalisation or a pool left\n   like this is not what it says it is.\n   Affected: wells A9, A10, A11 and A12 in slot 3.\n   Fix: Mix wells A9, A10, A11 and A12 in slot 3 after line 74: `mix_after=(5, 15)` on the\n   transfer, or `pipette.mix(5, 15, well)`, with the volume about 80% of what the well\n   holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [4b55f2ce87cd]\n\n4. NOTE UNMIXED-AT-END: Well E1 in slot 3 never mixed after the liquid from well E1 in slot\n1 went in (25% of the well)\n   line 67:  p300_multi.dispense(5, plate[\"A1\"])  # dispense into the 2x4 block of destination wells\n   At line 67 the robot added the liquid from well E1 in slot 1 to well E1 in slot 3, which\n   already held the liquid from well F1 in slot 1, the liquid from well G1 in slot 1 and the\n   liquid from well H1 in slot 1. The addition was 25% of the well, nothing mixed the well\n   afterwards, and the run ended with it that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes\n   straight to the instrument, the wells are not what the protocol says they are.\n   Affected: well E1 in slot 3.\n   Fix: Mix well E1 in slot 3 after line 67: `mix_after=(5, 16)` on the transfer, or\n   `pipette.mix(5, 16, well)`, with the volume about 80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [3c76fd391c22]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "COLD-MODULE-NEVER-SET",
+   "severity": "warning",
+   "certain": true,
+   "line": 45,
+   "title": "A temperature module was loaded but never set",
+   "explanation": "At line 45 the robot draws from wells A1, A9, A10, A11, A12, B1, C1, D1 and 4 more in slot 1, on a temperature module that the protocol never sets. A temperature module stays at room temperature until `set_temperature` is called, so buffer (carrier), enzyme (reagent), plasmid 1 (sample), plasmid 10 (sample) and 11 more sat on a block that was never cold; the robot pipetted there 8 times over the run. The person setting up the deck sees a module and assumes it is cold. Wells: wells A1, A9, A10, A11, A12, B1, C1, D1 and 4 more in slot 1.",
+   "fix": "Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 \u00b5L in slot 1, and `temp_module.deactivate()` at the end."
+  },
+  {
+   "rule_id": "ENZYME-BEFORE-DILUENT",
+   "severity": "warning",
+   "certain": true,
+   "line": 47,
+   "title": "An enzyme was added before the water: enzyme",
+   "explanation": "At line 47 the robot put enzyme into wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in slot 3 (this line did it 12 times). Take well B1 in slot 3: at that moment it was dry, and the water came afterwards, at line 54, to make the 1 ul of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction, after the water and the buffer have brought the well to the right dilution. Dropped into neat buffer or a dry well it meets many times the salt it should: a restriction enzyme then cuts at the wrong places (star activity) and a polymerase starts on mis-primed template.",
+   "fix": "Reorder the additions to wells B1, B2, B3, B4, B5, B6, B7, B8 and 4 more in slot 3: water and buffer first, then the sample, then enzyme last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and hand it out."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "warning",
+   "certain": true,
+   "line": 74,
+   "title": "4 wells never mixed after plasmid 9, plasmid 10, plasmid 11 and plasmid 12 went in (26% of the well)",
+   "explanation": "At line 74 the robot added plasmid 9, plasmid 10, plasmid 11 and plasmid 12 to wells A9, A10, A11 and A12 in slot 3, which already held buffer and water (this line did it 4 times). The addition was 26% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. The liquid added last is a sample, so nothing else in the workflow will mix it: a normalisation or a pool left like this is not what it says it is.",
+   "fix": "Mix wells A9, A10, A11 and A12 in slot 3 after line 74: `mix_after=(5, 15)` on the transfer, or `pipette.mix(5, 15, well)`, with the volume about 80% of what the well holds."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 67,
+   "title": "Well E1 in slot 3 never mixed after the liquid from well E1 in slot 1 went in (25% of the well)",
+   "explanation": "At line 67 the robot added the liquid from well E1 in slot 1 to well E1 in slot 3, which already held the liquid from well F1 in slot 1, the liquid from well G1 in slot 1 and the liquid from well H1 in slot 1. The addition was 25% of the well, nothing mixed the well afterwards, and the run ended with it that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. If the plate is vortexed and spun down before it is used, nothing is wrong; if it goes straight to the instrument, the wells are not what the protocol says they are.",
+   "fix": "Mix well E1 in slot 3 after line 67: `mix_after=(5, 16)` on the transfer, or `pipette.mix(5, 16, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 4.6,
+ "draft": 3
+}

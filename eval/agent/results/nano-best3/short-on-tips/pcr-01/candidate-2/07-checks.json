@@ -1,0 +1,513 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map pcr-01. 5 of 8 wells hold what the plate map says.\n  Destination: Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 4). Reading of the request: 8\n    reactions.\n  well A6 (reactions): expected 20 ul master_mix, 5 ul sample_6; found 40 ul master_mix, 5\n    ul sample_6, 5 ul sample_7\n      - wrong amount of master_mix: the plate map says 20 ul, the protocol delivers 40 ul\n      - holds 5 ul of sample_7, which the plate map does not list for this well\n  well A5 (reactions): expected 20 ul master_mix, 5 ul sample_5; found 20 ul master_mix, 5\n    ul sample_4\n      - sample_5 is missing: the plate map says 5 ul, none arrives\n      - holds 5 ul of sample_4, which the plate map does not list for this well\n  nowhere (reactions): expected 20 ul master_mix, 5 ul sample_7; found nothing\n      - no well on the plate holds this\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  master mix                           1000.0     160.0     840.0       0.0     0.0\n  sample 1                              500.0       5.0     495.0       0.0     0.0\n  sample 2                              500.0       5.0     495.0       0.0     0.0\n  sample 3                              500.0       5.0     495.0       0.0     0.0\n  sample 4                              500.0       5.0     490.0       5.0     0.0  <-- FLAG\n  sample 5                              500.0       0.0     500.0       0.0     0.0\n  sample 6                              500.0       5.0     495.0       0.0     0.0\n  sample 7                              500.0       0.0     495.0       5.0     0.0  <-- FLAG\n  sample 8                              500.0       5.0     495.0       0.0     0.0\n  FLAG: sample 4 ends in wells the plate map does not list for it: A5 in slot 4 (5.0 ul).\n  FLAG: sample 7 ends in wells the plate map does not list for it: A6 in slot 4 (5.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    master mix                           160.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B1    sample 6                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A2    sample 1                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B2    sample 7                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A3    sample 2                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B3    sample 8                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A4    sample 3                               5.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A5    sample 4                              10.0     500.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A6    sample 5                               0.0     500.0  already in the plate: 500 ul declared, nothing drawn\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  Tips: 8 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 2.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-01",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "4:biorad_96_wellplate_200ul_pcr",
+   "variant": "8 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 5,
+   "wells_total": 8,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_1": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_1": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_2": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_2": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_3": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_3": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_4": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_4": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_8": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_8": 5.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_6": 5.0
+     },
+     "found": {
+      "master_mix": 40.0,
+      "sample_6": 5.0,
+      "sample_7": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 20.0,
+       "found_ul": 40.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "sample_7",
+       "expected_ul": null,
+       "found_ul": 5.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_5": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_4": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "sample_4",
+       "expected_ul": null,
+       "found_ul": 5.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_7": 5.0
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_6": 5.0
+     },
+     "found": {
+      "master_mix": 40.0,
+      "sample_6": 5.0,
+      "sample_7": 5.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "master_mix",
+       "expected_ul": 20.0,
+       "found_ul": 40.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "sample_7",
+       "expected_ul": null,
+       "found_ul": 5.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_5": 5.0
+     },
+     "found": {
+      "master_mix": 20.0,
+      "sample_4": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "sample_5",
+       "expected_ul": 5.0,
+       "found_ul": 0.0,
+       "detail": ""
+      },
+      {
+       "kind": "unexpected_liquid",
+       "liquid": "sample_4",
+       "expected_ul": null,
+       "found_ul": 5.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "reactions",
+     "expected": {
+      "master_mix": 20.0,
+      "sample_7": 5.0
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "master mix",
+    "logical": "master_mix",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 160.0,
+    "left_in_source_ul": 840.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 490.0,
+    "elsewhere": [
+     {
+      "well": "4:biorad_96_wellplate_200ul_pcr[A5]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "sample 4 ends in wells the plate map does not list for it: A5 in slot 4 (5.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 500.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [
+     {
+      "well": "4:biorad_96_wellplate_200ul_pcr[A6]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "sample 7 ends in wells the plate map does not list for it: A6 in slot 4 (5.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 5.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "master mix",
+     "declared_ul": 1000.0,
+     "needed_ul": 160.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 6",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "sample 1",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 7",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "sample 2",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 8",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "sample 3",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "sample 4",
+     "declared_ul": 500.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 5",
+     "declared_ul": 500.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 1
+    },
+    {
+     "slot": "2",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 8
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: 2 biology problems (2 notes).\n\n1. NOTE NO-NEGATIVE-CONTROL: No no-template control: 7 wells of master mix with a sample\n   line 51:  p300_single.dispense(20, well)\n   At line 51 the robot starts putting master mix into Bio-Rad 96 Well Plate 200 \u00b5L PCR\n   (slot 4), and 7 wells end holding it together with a sample. No well on this plate holds\n   the mix without a sample, so there is no no-template control. If a reagent is\n   contaminated, or the primers pair with each other, every well gives a signal and nothing\n   on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6 and A7 in\n   slot 4.\n   Affected: wells A1, A2, A3, A4, A5, A6 and A7 in slot 4.\n   Fix: Add one well (three for qPCR) with 20 ul of master mix and 5 ul of water in place of\n   the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [930a75653857]\n\n2. NOTE UNMIXED-AT-END: 7 wells never mixed after sample 1, sample 2, sample 3, sample 4 and\n2 more went in (10 to 20% of the well)\n   line 58:  p20_single.dispense(5, dest_wells[i])\n   At line 58 the robot added sample 1, sample 2, sample 3, sample 4 and 2 more to wells A1,\n   A2, A3, A4, A5, A6 and A7 in slot 4, which already held master mix and sample 6 (this\n   line did it 7 times). The addition was 10 to 20% of the well, nothing mixed the well\n   afterwards, and the run ended with them that way. Two liquids layered in a small well do\n   not mix on their own, so what the well holds is not at the concentration you calculated.\n   A PCR plate is usually vortexed and spun down before cycling; if this one will not be,\n   mix it.\n   Affected: wells A1, A2, A3, A4, A5, A6 and A7 in slot 4.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6 and A7 in slot 4 after line 58: `mix_after=(5, 20\n   to 40)` on the transfer, or `pipette.mix(5, 20 to 40, well)`, with the volume about 80%\n   of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [abb1245df84e]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 51,
+   "title": "No no-template control: 7 wells of master mix with a sample",
+   "explanation": "At line 51 the robot starts putting master mix into Bio-Rad 96 Well Plate 200 \u00b5L PCR (slot 4), and 7 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6 and A7 in slot 4.",
+   "fix": "Add one well (three for qPCR) with 20 ul of master mix and 5 ul of water in place of the template, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 58,
+   "title": "7 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 2 more went in (10 to 20% of the well)",
+   "explanation": "At line 58 the robot added sample 1, sample 2, sample 3, sample 4 and 2 more to wells A1, A2, A3, A4, A5, A6 and A7 in slot 4, which already held master mix and sample 6 (this line did it 7 times). The addition was 10 to 20% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6 and A7 in slot 4 after line 58: `mix_after=(5, 20 to 40)` on the transfer, or `pipette.mix(5, 20 to 40, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 5.0,
+ "draft": 7
+}

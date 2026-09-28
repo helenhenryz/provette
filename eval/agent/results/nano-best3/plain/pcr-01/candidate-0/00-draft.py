@@ -1,0 +1,57 @@
+from opentrons import protocol_api
+
+metadata = {
+    "protocolName": "PCR setup for 8 samples",
+    "apiLevel": "2.19"
+}
+
+def run(protocol: protocol_api.ProtocolContext):
+    # Load labware
+    tips = protocol.load_labware("opentrons_96_tiprack_20ul", 1)
+    tubes = protocol.load_labware("opentrons_24_tuberack_nest_1.5ml_snapcap", 2)
+    plate = protocol.load_labware("nest_96_wellplate_100ul_pcr_full_skirt", 3)
+    p20 = protocol.load_instrument("p20_single_gen2", "right", tip_racks=[tips])
+
+    # Define liquids
+    master_mix = protocol.define_liquid(
+        name="master mix",
+        description="PCR master mix",
+        display_color="#FF0000"
+    )
+    for i in range(1, 9):
+        protocol.define_liquid(
+            name=f"sample {i}",
+            description=f"Sample {i}",
+            display_color=f"#{i*100:03X}"
+        )
+
+    # Load liquids into source wells
+    tubes["A1"].load_liquid(master_mix, volume=200)
+    tubes["A2"].load_liquid(liquid="sample 1", volume=10)
+    tubes["A3"].load_liquid(liquid="sample 2", volume=10)
+    tubes["A4"].load_liquid(liquid="sample 3", volume=10)
+    tubes["A5"].load_liquid(liquid="sample 4", volume=10)
+    tubes["B1"].load_liquid(liquid="sample 5", volume=10)
+    tubes["B2"].load_liquid(liquid="sample 6", volume=10)
+    tubes["B3"].load_liquid(liquid="sample 7", volume=10)
+    tubes["B4"].load_liquid(liquid="sample 8", volume=10)
+
+    # Source wells for samples in order
+    sample_source_wells = ["A2", "A3", "A4", "A5", "B1", "B2", "B3", "B4"]
+
+    # Perform transfers for each of the 8 samples
+    for i in range(1, 9):
+        p20.pick_up_tip()
+        # Aspirate 20 ul master mix
+        p20.aspirate(20, tubes["A1"])
+        # Destination well
+        dest_well = plate[f"A{i}"]
+        # Dispense 20 ul master mix
+        p20.dispense(20, dest_well)
+        # Aspirate 5 ul sample
+        source_well_name = sample_source_wells[i-1]
+        p20.aspirate(5, tubes[source_well_name])
+        # Dispense 5 ul sample
+        p20.dispense(5, dest_well)
+        # Drop tip
+        p20.drop_tip()

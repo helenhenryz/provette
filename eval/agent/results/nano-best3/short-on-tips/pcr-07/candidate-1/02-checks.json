@@ -1,0 +1,799 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map pcr-07. 12 of 12 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 2). Reading of the request: 12\n    reactions.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  sample 1                              100.0       2.0      98.0       0.0     0.0\n  sample 2                              100.0       2.0      98.0       0.0     0.0\n  sample 3                              100.0       2.0      98.0       0.0     0.0\n  sample 4                              100.0       2.0      98.0       0.0     0.0\n  sample 5                              100.0       2.0      98.0       0.0     0.0\n  sample 6                              100.0       2.0      98.0       0.0     0.0\n  sample 7                              100.0       2.0      98.0       0.0     0.0\n  sample 8                              100.0       2.0      98.0       0.0     0.0\n  sample 9                              100.0       2.0      98.0       0.0     0.0\n  sample 10                             100.0       2.0      98.0       0.0     0.0\n  sample 11                             100.0       2.0      98.0       0.0     0.0\n  sample 12                             100.0       2.0      98.0       0.0     0.0\n  buffer                                500.0     120.0     380.0       0.0     0.0\n  polymerase                             10.0       6.0       4.0       0.0     0.0\n  fwd primer                             50.0      12.0      38.0       0.0     0.0\n  rev primer                             50.0      12.0      38.0       0.0     0.0\n  water                                 500.0     126.0     374.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  1    Opentrons 24 Well Aluminum Block with A1    sample 1                               2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with B1    sample 7                               2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with C1    buffer                               120.0     500.0\n  1    Opentrons 24 Well Aluminum Block with A2    sample 2                               2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with B2    sample 8                               2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with C2    polymerase                             6.0      10.0\n  1    Opentrons 24 Well Aluminum Block with A3    sample 3                               2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with B3    sample 9                               2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with C3    fwd primer                            12.0      50.0\n  1    Opentrons 24 Well Aluminum Block with A4    sample 4                               2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with B4    sample 10                              2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with C4    rev primer                            12.0      50.0\n  1    Opentrons 24 Well Aluminum Block with A5    sample 5                               2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with B5    sample 11                              2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with C5    water                                126.0     500.0\n  1    Opentrons 24 Well Aluminum Block with A6    sample 6                               2.0     100.0\n  1    Opentrons 24 Well Aluminum Block with B6    sample 12                              2.0     100.0\n  Tips: 1 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 3.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-07",
+  "technique": "PCR setup",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "2:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "12 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 12,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 98.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 120.0,
+    "left_in_source_ul": 380.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "polymerase",
+    "logical": "polymerase",
+    "role": "reagent",
+    "declared_ul": 10.0,
+    "delivered_ul": 6.0,
+    "left_in_source_ul": 4.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "fwd primer",
+    "logical": "fwd_primer",
+    "role": "reagent",
+    "declared_ul": 50.0,
+    "delivered_ul": 12.0,
+    "left_in_source_ul": 38.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "rev primer",
+    "logical": "rev_primer",
+    "role": "reagent",
+    "declared_ul": 50.0,
+    "delivered_ul": 12.0,
+    "left_in_source_ul": 38.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 126.0,
+    "left_in_source_ul": 374.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 7",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "buffer",
+     "declared_ul": 500.0,
+     "needed_ul": 120.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "sample 2",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 8",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "polymerase",
+     "declared_ul": 10.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "sample 3",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 9",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "fwd primer",
+     "declared_ul": 50.0,
+     "needed_ul": 12.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "sample 4",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "sample 10",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C4",
+     "liquid": "rev primer",
+     "declared_ul": 50.0,
+     "needed_ul": 12.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "sample 5",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "sample 11",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "C5",
+     "liquid": "water",
+     "declared_ul": 500.0,
+     "needed_ul": 126.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 6",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "1",
+     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "sample 12",
+     "declared_ul": 100.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "3",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 1
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 11 biology problems (2 errors, 7 warnings, 2 notes).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: buffer (well C1 in slot 1)\n   line 105:  p20.aspirate(10, buffer_well)\n   At line 105 the tip went into buffer (well C1 in slot 1) while it still carried sample 1\n   (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in slot 1), sample 4\n   (well A4 in slot 1) and 11 more from an earlier step (this line did it 12 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, so this\n   stock now holds material that does not belong there. Liquid drawn from it then took the\n   unwanted material along into 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3\n   more in slot 2.\n   Affected: well C1 in slot 1.\n   Also reached 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 2.\n   Fix: Pick up a fresh tip before line 105 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [994c338eeb5f]\n\n2. ERROR CONTAM-STOCK: A used tip went into a stock: 12 stocks\n   line 113:  p20.aspirate(2, sample_source_well)\n   At line 113 the tip went into sample 1 (well A1 in slot 1), sample 2 (well A2 in slot 1),\n   sample 3 (well A3 in slot 1), sample 4 (well A4 in slot 1) and 8 more while it still\n   carried sample 1 (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in\n   slot 1), sample 4 (well A4 in slot 1) and 12 more from an earlier step (this line did it\n   12 times). A tip that has touched one liquid leaves a little of it in the next liquid it\n   touches, so these stocks now hold material that does not belong there. Liquid drawn from\n   them then took the unwanted material along into 10 other wells: wells A3, A4, A5, A6, A7,\n   A8, A9, A10 and 2 more in slot 2.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 4 more in slot 1.\n   Also reached 10 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 2 more in slot 2.\n   Fix: Pick up a fresh tip before line 113 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [5816f09dfc30]\n\n3. WARNING COLD-MODULE-NEVER-SET: A temperature module was loaded but never set\n   line 83:  p20.aspirate(6, polymerase_well)\n   At line 83 the robot draws from wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot\n   1, on a temperature module that the protocol never sets. A temperature module stays at\n   room temperature until `set_temperature` is called, so buffer (carrier), fwd primer\n   (reagent), polymerase (reagent), rev primer (reagent) and 13 more sat on a block that was\n   never cold; the robot pipetted there 56 times over the run. The person setting up the\n   deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2\n   and 10 more in slot 1.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 1.\n   Fix: Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 24\n   Well Aluminum Block with NEST 1.5 mL Snapcap in slot 1, and `temp_module.deactivate()` at\n   the end.\n   Source: Opentrons, temperature module: at room temperature until set_temperature, which\n   blocks\n           https://docs.opentrons.com/v2/modules/temperature_module.html\n   Source: Thermo Fisher T4 ligase manual: keep on ice, use within minutes\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/t4dnaligase_1U_man.pdf\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   [cdabc5df4e83]\n\n4. WARNING ENZYME-BEFORE-DILUENT: An enzyme was added before the water: polymerase\n   line 84:  p20.dispense(6, master_mix_well)\n   At line 84 the robot put polymerase into well D1 in slot 1. Take well D1 in slot 1: at\n   that moment it was dry, and the water came afterwards, at line 97, to make the 126 ul of\n   water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is\n   meant to be the last thing into a reaction, after the water and the buffer have brought\n   the well to the right dilution. Dropped into neat buffer or a dry well it meets many\n   times the salt it should: a restriction enzyme then cuts at the wrong places (star\n   activity) and a polymerase starts on mis-primed template.\n   Affected: well D1 in slot 1.\n   Fix: Reorder the additions to well D1 in slot 1: water and buffer first, then the sample,\n   then polymerase last. Or make a master mix of water, buffer and enzyme in one tube, mix\n   it, and hand it out.\n   Source: Thermo Fisher: restriction enzyme key considerations (the enzyme is the final\n   component)\n           https://www.thermofisher.com/us/en/home/life-science/cloning/cloning-learning-center/invitrogen-school-of-molecular-biology/molecular-cloning/restriction-enzymes/restriction-enzyme-key-considerations.html\n   Source: Promega: restriction enzyme resource (add the enzyme last; glycerol and star\n   activity)\n           https://www.promega.com/resources/guides/nucleic-acid-analysis/restriction-enzyme-resource/\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   Source: Qiagen: critical factors for successful real-time PCR (order of addition)\n           https://www.gene-quantification.de/qiagen-qpcr-sample-assay-tech-guide-2010.pdf\n   [6f51cb7828a2]\n\n5. WARNING CONTAM-STOCK: A used tip went into a stock: fwd primer (well C3 in slot 1)\n   line 87:  p20.aspirate(12, fwd_primer_well)\n   At line 87 the tip went into fwd primer (well C3 in slot 1) while it still carried\n   polymerase (well C2 in slot 1) from an earlier step. A tip that has touched one liquid\n   leaves a little of it in the next liquid it touches, so this stock now holds material\n   that does not belong there. The protocol does not draw from it again, so this run is not\n   harmed, but what is left in the stock is no longer clean for the next run.\n   Affected: well C3 in slot 1.\n   Fix: Pick up a fresh tip before line 87 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [7e17ee591b47]\n\n6. WARNING CONTAM-STOCK: A used tip went into a stock: rev primer (well C4 in slot 1)\n   line 91:  p20.aspirate(12, rev_primer_well)\n   At line 91 the tip went into rev primer (well C4 in slot 1) while it still carried\n   polymerase (well C2 in slot 1) and fwd primer (well C3 in slot 1) from an earlier step. A\n   tip that has touched one liquid leaves a little of it in the next liquid it touches, so\n   this stock now holds material that does not belong there. The protocol does not draw from\n   it again, so this run is not harmed, but what is left in the stock is no longer clean for\n   the next run.\n   Affected: well C4 in slot 1.\n   Fix: Pick up a fresh tip before line 91 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [511ca40bae40]\n\n7. WARNING CONTAM-STOCK: A used tip went into a stock: water (well C5 in slot 1)\n   line 96:  p20.aspirate(vol, water_well)\n   At line 96 the tip went into water (well C5 in slot 1) while it still carried polymerase\n   (well C2 in slot 1), fwd primer (well C3 in slot 1) and rev primer (well C4 in slot 1)\n   from an earlier step. A tip that has touched one liquid leaves a little of it in the next\n   liquid it touches, so this stock now holds material that does not belong there. The\n   protocol drew from it again afterwards, but only into wells that were given that material\n   on purpose anyway, so this run is not harmed. What is left in the stock is no longer\n   clean for the next run.\n   Affected: well C5 in slot 1.\n   Fix: Pick up a fresh tip before line 96 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [57914d90b9bb]\n\n8. WARNING MIX-BEFORE-DRAW: Liquid drawn from well D1 in slot 1 before it was mixed: added\nat line 97, drawn at line 117\n   line 97:  p20.dispense(vol, master_mix_well)\n   At line 97 liquid was added to well D1 in slot 1, which already held a different liquid.\n   At line 117 liquid was drawn out of it again, and the well was never mixed in between.\n   Two liquids layered in a small well do not mix on their own, so what the tip drew is not\n   at the concentration you calculated. In a dilution series every later step inherits the\n   error.\n   Affected: well D1 in slot 1.\n   Also reached 11 other wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 3 more in slot 2.\n   Fix: Mix the well after the addition at line 97: `mix_after=(5, volume)` in a transfer,\n   or `pipette.mix(5, volume, well)`. Integra suggests about 5 cycles at about 80% of the\n   volume in the well.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Svec et al. 2015: how good is a PCR efficiency estimate\n           https://pmc.ncbi.nlm.nih.gov/articles/PMC4822216/\n   [848ed30bdaa1]\n\n9. WARNING CONTAM-WELL: A used tip carried sample 1 (well A1 in slot 1), sample 2 (well A2\nin slot 1), sample 3 (well A3 in slot 1), sample 4 (well A4 in slot 1) and 9 more into well\nD1 in slot 1 it was never meant for\n   line 117:  p20.aspirate(13, master_mix_well)\n   At line 117 the tip touched the liquid in well D1 in slot 1 while it still carried sample\n   1 (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in slot 1), sample\n   4 (well A4 in slot 1) and 9 more from an earlier step (this line did it 12 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches. The\n   protocol never transfers that liquid into this well on purpose, so it was not meant to be\n   there. If the wells hold different samples, each now holds a little of another. Liquid\n   was later taken out of the affected wells, and the unwanted material went along into 11\n   other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 2.\n   Affected: well D1 in slot 1.\n   Also reached 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 2.\n   Fix: Use a fresh tip for each well at line 117. If one tip must serve many wells,\n   dispense from above the liquid (for example `well.top()`) so that the tip never touches\n   what is already in the well.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   [637c47add42b]\n\n10. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 117:  p20.aspirate(13, master_mix_well)\n   At line 117 the tip touched the liquid in well D1 in slot 1 while it still carried sample\n   1 (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in slot 1), sample\n   4 (well A4 in slot 1) and 8 more from an earlier step (this line did it 12 times). A tip\n   that has touched one liquid leaves a little of it in the next liquid it touches, and the\n   protocol never transfers that liquid into this well on purpose. A reagent is shared: the\n   master mix, the enzyme or the primer in that well goes into every reaction on the plate.\n   A tip that has been in one sample leaves a little of it in the next liquid it touches, so\n   a sample carried into a reagent well turns up in every well that reagent reaches, and a\n   no-template control can no longer be trusted. Liquid was later taken out of the affected\n   wells, and the unwanted material went along into 11 other wells: wells A2, A3, A4, A5,\n   A6, A7, A8, A9 and 3 more in slot 2.\n   Affected: well D1 in slot 1.\n   Also reached 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 2.\n   Fix: Use a fresh tip for each sample at line 117, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [e4f4cfcc02e3]\n\n11. NOTE NO-NEGATIVE-CONTROL: No no-template control: 12 wells of polymerase with a sample\n   line 118:  p20.dispense(13, dest_well)\n   At line 118 the robot starts putting polymerase into NEST 96 Well Plate 100 \u00b5L PCR Full\n   Skirt (slot 2), and 12 wells end holding it together with a sample. No well on this plate\n   holds the mix without a sample, so there is no no-template control. If a reagent is\n   contaminated, or the primers pair with each other, every well gives a signal and nothing\n   on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8\n   and 4 more in slot 2.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 2.\n   Fix: Add one well (three for qPCR) with 0.5 ul of polymerase and 2 ul of water in place\n   of the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [ad3c8eef2fd7]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 105,
+   "title": "A used tip went into a stock: buffer (well C1 in slot 1)",
+   "explanation": "At line 105 the tip went into buffer (well C1 in slot 1) while it still carried sample 1 (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in slot 1), sample 4 (well A4 in slot 1) and 11 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 2.",
+   "fix": "Pick up a fresh tip before line 105 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 113,
+   "title": "A used tip went into a stock: 12 stocks",
+   "explanation": "At line 113 the tip went into sample 1 (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in slot 1), sample 4 (well A4 in slot 1) and 8 more while it still carried sample 1 (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in slot 1), sample 4 (well A4 in slot 1) and 12 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. Liquid drawn from them then took the unwanted material along into 10 other wells: wells A3, A4, A5, A6, A7, A8, A9, A10 and 2 more in slot 2.",
+   "fix": "Pick up a fresh tip before line 113 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "COLD-MODULE-NEVER-SET",
+   "severity": "warning",
+   "certain": true,
+   "line": 83,
+   "title": "A temperature module was loaded but never set",
+   "explanation": "At line 83 the robot draws from wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 1, on a temperature module that the protocol never sets. A temperature module stays at room temperature until `set_temperature` is called, so buffer (carrier), fwd primer (reagent), polymerase (reagent), rev primer (reagent) and 13 more sat on a block that was never cold; the robot pipetted there 56 times over the run. The person setting up the deck sees a module and assumes it is cold. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 10 more in slot 1.",
+   "fix": "Call `temp_module.set_temperature(4)` before the first transfer from Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap in slot 1, and `temp_module.deactivate()` at the end."
+  },
+  {
+   "rule_id": "ENZYME-BEFORE-DILUENT",
+   "severity": "warning",
+   "certain": true,
+   "line": 84,
+   "title": "An enzyme was added before the water: polymerase",
+   "explanation": "At line 84 the robot put polymerase into well D1 in slot 1. Take well D1 in slot 1: at that moment it was dry, and the water came afterwards, at line 97, to make the 126 ul of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction, after the water and the buffer have brought the well to the right dilution. Dropped into neat buffer or a dry well it meets many times the salt it should: a restriction enzyme then cuts at the wrong places (star activity) and a polymerase starts on mis-primed template.",
+   "fix": "Reorder the additions to well D1 in slot 1: water and buffer first, then the sample, then polymerase last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and hand it out."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 87,
+   "title": "A used tip went into a stock: fwd primer (well C3 in slot 1)",
+   "explanation": "At line 87 the tip went into fwd primer (well C3 in slot 1) while it still carried polymerase (well C2 in slot 1) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol does not draw from it again, so this run is not harmed, but what is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 87 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 91,
+   "title": "A used tip went into a stock: rev primer (well C4 in slot 1)",
+   "explanation": "At line 91 the tip went into rev primer (well C4 in slot 1) while it still carried polymerase (well C2 in slot 1) and fwd primer (well C3 in slot 1) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol does not draw from it again, so this run is not harmed, but what is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 91 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 96,
+   "title": "A used tip went into a stock: water (well C5 in slot 1)",
+   "explanation": "At line 96 the tip went into water (well C5 in slot 1) while it still carried polymerase (well C2 in slot 1), fwd primer (well C3 in slot 1) and rev primer (well C4 in slot 1) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 96 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "MIX-BEFORE-DRAW",
+   "severity": "warning",
+   "certain": true,
+   "line": 97,
+   "title": "Liquid drawn from well D1 in slot 1 before it was mixed: added at line 97, drawn at line 117",
+   "explanation": "At line 97 liquid was added to well D1 in slot 1, which already held a different liquid. At line 117 liquid was drawn out of it again, and the well was never mixed in between. Two liquids layered in a small well do not mix on their own, so what the tip drew is not at the concentration you calculated. In a dilution series every later step inherits the error.",
+   "fix": "Mix the well after the addition at line 97: `mix_after=(5, volume)` in a transfer, or `pipette.mix(5, volume, well)`. Integra suggests about 5 cycles at about 80% of the volume in the well."
+  },
+  {
+   "rule_id": "CONTAM-WELL",
+   "severity": "warning",
+   "certain": true,
+   "line": 117,
+   "title": "A used tip carried sample 1 (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in slot 1), sample 4 (well A4 in slot 1) and 9 more into well D1 in slot 1 it was never meant for",
+   "explanation": "At line 117 the tip touched the liquid in well D1 in slot 1 while it still carried sample 1 (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in slot 1), sample 4 (well A4 in slot 1) and 9 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches. The protocol never transfers that liquid into this well on purpose, so it was not meant to be there. If the wells hold different samples, each now holds a little of another. Liquid was later taken out of the affected wells, and the unwanted material went along into 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 2.",
+   "fix": "Use a fresh tip for each well at line 117. If one tip must serve many wells, dispense from above the liquid (for example `well.top()`) so that the tip never touches what is already in the well."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 117,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 117 the tip touched the liquid in well D1 in slot 1 while it still carried sample 1 (well A1 in slot 1), sample 2 (well A2 in slot 1), sample 3 (well A3 in slot 1), sample 4 (well A4 in slot 1) and 8 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted. Liquid was later taken out of the affected wells, and the unwanted material went along into 11 other wells: wells A2, A3, A4, A5, A6, A7, A8, A9 and 3 more in slot 2.",
+   "fix": "Use a fresh tip for each sample at line 117, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 118,
+   "title": "No no-template control: 12 wells of polymerase with a sample",
+   "explanation": "At line 118 the robot starts putting polymerase into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 2), and 12 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 2.",
+   "fix": "Add one well (three for qPCR) with 0.5 ul of polymerase and 2 ul of water in place of the template, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 4.6,
+ "draft": 2
+}

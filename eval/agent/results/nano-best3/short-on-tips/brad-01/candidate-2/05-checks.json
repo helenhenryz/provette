@@ -1,0 +1,2668 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map brad-01. 1 of 48 wells hold what the plate map says.\n  Destination: Corning 96 Well Plate 360 \u00b5L Flat (slot 2). Reading of the request: 40 sample\n    wells + 8 standard wells.\n  well H1 (samples): expected 5 ul sample_4, 250 ul bradford; found 5 ul sample_4, 2750 ul\n    bradford\n      - wrong amount of bradford: the plate map says 250 ul, the protocol delivers 2750 ul\n  well G1 (samples): expected 5 ul sample_4, 250 ul bradford; found 5 ul sample_4, 3250 ul\n    bradford\n      - wrong amount of bradford: the plate map says 250 ul, the protocol delivers 3250 ul\n  well F1 (samples): expected 5 ul sample_3, 250 ul bradford; found 5 ul sample_3, 2750 ul\n    bradford\n      - wrong amount of bradford: the plate map says 250 ul, the protocol delivers 2750 ul\n  well E1 (samples): expected 5 ul sample_3, 250 ul bradford; found 5 ul sample_3, 2250 ul\n    bradford\n      - wrong amount of bradford: the plate map says 250 ul, the protocol delivers 2250 ul\n  well D1 (samples): expected 5 ul sample_2, 250 ul bradford; found 5 ul sample_2, 1750 ul\n    bradford\n      - wrong amount of bradford: the plate map says 250 ul, the protocol delivers 1750 ul\n  well C1 (samples): expected 5 ul sample_2, 250 ul bradford; found 5 ul sample_2, 1250 ul\n    bradford\n      - wrong amount of bradford: the plate map says 250 ul, the protocol delivers 1250 ul\n  well B1 (samples): expected 5 ul sample_1, 250 ul bradford; found 5 ul sample_1, 750 ul\n    bradford\n      - wrong amount of bradford: the plate map says 250 ul, the protocol delivers 750 ul\n  well H2 (samples): expected 5 ul sample_8, 250 ul bradford; found 5 ul sample_8\n      - bradford is missing: the plate map says 250 ul, none arrives\n  well G2 (samples): expected 5 ul sample_8, 250 ul bradford; found 5 ul sample_8\n      - bradford is missing: the plate map says 250 ul, none arrives\n  well F2 (samples): expected 5 ul sample_7, 250 ul bradford; found 5 ul sample_7\n      - bradford is missing: the plate map says 250 ul, none arrives\n  well E2 (samples): expected 5 ul sample_7, 250 ul bradford; found 5 ul sample_7\n      - bradford is missing: the plate map says 250 ul, none arrives\n  well D2 (samples): expected 5 ul sample_6, 250 ul bradford; found 5 ul sample_6\n      - bradford is missing: the plate map says 250 ul, none arrives\n  ... and 35 more wells that do not match.\n\nLabware for the technique (Bradford assay): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  standard 1                             10.0       0.0      10.0       0.0     0.0\n  standard 2                             10.0       0.0      10.0       0.0     0.0\n  standard 3                             10.0       0.0      10.0       0.0     0.0\n  standard 4                             10.0       0.0      10.0       0.0     0.0\n  standard 5                             10.0       0.0      10.0       0.0     0.0\n  standard 6                             10.0       0.0      10.0       0.0     0.0\n  standard 7                             10.0       0.0      10.0       0.0     0.0\n  standard 8                             10.0       0.0      10.0       0.0     0.0\n  sample 1                             1000.0      10.0     990.0       0.0     0.0\n  sample 2                             1000.0      10.0     990.0       0.0     0.0\n  sample 3                             1000.0      10.0     990.0       0.0     0.0\n  sample 4                             1000.0      10.0     990.0       0.0     0.0\n  sample 5                             1000.0      10.0     990.0       0.0     0.0\n  sample 6                             1000.0      10.0     990.0       0.0     0.0\n  sample 7                             1000.0      10.0     990.0       0.0     0.0\n  sample 8                             1000.0      10.0     990.0       0.0     0.0\n  sample 9                             1000.0      10.0     990.0       0.0     0.0\n  sample 10                            1000.0      10.0     990.0       0.0     0.0\n  sample 11                            1000.0      10.0     990.0       0.0     0.0\n  sample 12                            1000.0      10.0     990.0       0.0     0.0\n  sample 13                            1000.0      10.0     990.0       0.0     0.0\n  sample 14                            1000.0      10.0     990.0       0.0     0.0\n  sample 15                            1000.0      10.0     990.0       0.0     0.0\n  sample 16                            1000.0      10.0     990.0       0.0     0.0\n  sample 17                            1000.0      10.0     990.0       0.0     0.0\n  sample 18                            1000.0      10.0     990.0       0.0     0.0\n  sample 19                            1000.0      10.0     990.0       0.0     0.0\n  sample 20                            1000.0      10.0     990.0       0.0     0.0\n  bradford                            15000.0   15000.0       0.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Corning 96 Well Plate 360 \u00b5L Flat     A6    standard 1                             0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  2    Corning 96 Well Plate 360 \u00b5L Flat     B6    standard 2                             0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  2    Corning 96 Well Plate 360 \u00b5L Flat     C6    standard 3                             0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  2    Corning 96 Well Plate 360 \u00b5L Flat     D6    standard 4                             0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  2    Corning 96 Well Plate 360 \u00b5L Flat     E6    standard 5                             0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  2    Corning 96 Well Plate 360 \u00b5L Flat     F6    standard 6                             0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  2    Corning 96 Well Plate 360 \u00b5L Flat     G6    standard 7                             0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  2    Corning 96 Well Plate 360 \u00b5L Flat     H6    standard 8                             0.0      10.0  already in the plate: 10 ul declared, nothing drawn\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    sample 1                              10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B1    sample 7                              10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  C1    sample 13                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  D1    sample 19                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A2    sample 2                              10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B2    sample 8                              10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  C2    sample 14                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  D2    sample 20                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A3    sample 3                              10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B3    sample 9                              10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  C3    sample 15                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A4    sample 4                              10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B4    sample 10                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  C4    sample 16                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A5    sample 5                              10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B5    sample 11                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  C5    sample 17                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A6    sample 6                              10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  B6    sample 12                             10.0    1000.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  C6    sample 18                             10.0    1000.0\n  4    NEST 12 Well Reservoir 15 mL          A1    bradford                           96000.0   15000.0  <-- WOULD RUN DRY\n  FLAG: bradford in A1, slot 4 would run dry: the robot draws 96000 ul from it and the\n    protocol declares 15000 ul. The simulator passes it; the robot would pipette air. Fix:\n    declare and load at least 105600 ul in this well, or draw less.\n  Tips: 40 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  Tips: 8 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 5.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "brad-01",
+  "technique": "Bradford assay",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "2:corning_96_wellplate_360ul_flat",
+   "variant": "40 sample wells + 8 standard wells",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 1,
+   "wells_total": 48,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "samples",
+     "expected": {
+      "sample_1": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_1": 5.0,
+      "bradford": 250.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "samples",
+     "expected": {
+      "sample_4": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_4": 5.0,
+      "bradford": 2750.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 2750.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "samples",
+     "expected": {
+      "sample_4": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_4": 5.0,
+      "bradford": 3250.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 3250.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "samples",
+     "expected": {
+      "sample_3": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_3": 5.0,
+      "bradford": 2750.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 2750.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "samples",
+     "expected": {
+      "sample_3": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_3": 5.0,
+      "bradford": 2250.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 2250.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "samples",
+     "expected": {
+      "sample_2": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_2": 5.0,
+      "bradford": 1750.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 1750.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "samples",
+     "expected": {
+      "sample_2": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_2": 5.0,
+      "bradford": 1250.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 1250.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "samples",
+     "expected": {
+      "sample_1": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_1": 5.0,
+      "bradford": 750.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 750.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": "samples",
+     "expected": {
+      "sample_8": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_8": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": "samples",
+     "expected": {
+      "sample_8": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_8": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": "samples",
+     "expected": {
+      "sample_7": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_7": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": "samples",
+     "expected": {
+      "sample_7": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_7": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": "samples",
+     "expected": {
+      "sample_6": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_6": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": "samples",
+     "expected": {
+      "sample_6": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_6": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "samples",
+     "expected": {
+      "sample_5": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_5": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "samples",
+     "expected": {
+      "sample_5": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_5": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H3",
+     "group": "samples",
+     "expected": {
+      "sample_12": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_12": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": "samples",
+     "expected": {
+      "sample_12": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_12": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": "samples",
+     "expected": {
+      "sample_11": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_11": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": "samples",
+     "expected": {
+      "sample_11": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_11": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": "samples",
+     "expected": {
+      "sample_10": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_10": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": "samples",
+     "expected": {
+      "sample_10": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_10": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "samples",
+     "expected": {
+      "sample_9": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_9": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "samples",
+     "expected": {
+      "sample_9": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_9": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": "samples",
+     "expected": {
+      "sample_16": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_16": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": "samples",
+     "expected": {
+      "sample_16": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_16": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": "samples",
+     "expected": {
+      "sample_15": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_15": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": "samples",
+     "expected": {
+      "sample_15": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_15": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": "samples",
+     "expected": {
+      "sample_14": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_14": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": "samples",
+     "expected": {
+      "sample_14": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_14": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "samples",
+     "expected": {
+      "sample_13": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_13": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "samples",
+     "expected": {
+      "sample_13": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_13": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H5",
+     "group": "samples",
+     "expected": {
+      "sample_20": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_20": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": "samples",
+     "expected": {
+      "sample_20": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_20": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": "samples",
+     "expected": {
+      "sample_19": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_19": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": "samples",
+     "expected": {
+      "sample_19": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_19": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": "samples",
+     "expected": {
+      "sample_18": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_18": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": "samples",
+     "expected": {
+      "sample_18": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_18": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "samples",
+     "expected": {
+      "sample_17": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_17": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "samples",
+     "expected": {
+      "sample_17": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_17": 5.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_1": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_2": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_3": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_4": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_5": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_6": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_7": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_8": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "ok": false,
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "H1",
+     "group": "samples",
+     "expected": {
+      "sample_4": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_4": 5.0,
+      "bradford": 2750.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 2750.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G1",
+     "group": "samples",
+     "expected": {
+      "sample_4": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_4": 5.0,
+      "bradford": 3250.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 3250.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F1",
+     "group": "samples",
+     "expected": {
+      "sample_3": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_3": 5.0,
+      "bradford": 2750.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 2750.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E1",
+     "group": "samples",
+     "expected": {
+      "sample_3": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_3": 5.0,
+      "bradford": 2250.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 2250.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D1",
+     "group": "samples",
+     "expected": {
+      "sample_2": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_2": 5.0,
+      "bradford": 1750.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 1750.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C1",
+     "group": "samples",
+     "expected": {
+      "sample_2": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_2": 5.0,
+      "bradford": 1250.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 1250.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B1",
+     "group": "samples",
+     "expected": {
+      "sample_1": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_1": 5.0,
+      "bradford": 750.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 750.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H2",
+     "group": "samples",
+     "expected": {
+      "sample_8": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_8": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G2",
+     "group": "samples",
+     "expected": {
+      "sample_8": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_8": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F2",
+     "group": "samples",
+     "expected": {
+      "sample_7": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_7": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E2",
+     "group": "samples",
+     "expected": {
+      "sample_7": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_7": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D2",
+     "group": "samples",
+     "expected": {
+      "sample_6": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_6": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C2",
+     "group": "samples",
+     "expected": {
+      "sample_6": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_6": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "samples",
+     "expected": {
+      "sample_5": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_5": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "samples",
+     "expected": {
+      "sample_5": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_5": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H3",
+     "group": "samples",
+     "expected": {
+      "sample_12": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_12": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G3",
+     "group": "samples",
+     "expected": {
+      "sample_12": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_12": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F3",
+     "group": "samples",
+     "expected": {
+      "sample_11": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_11": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E3",
+     "group": "samples",
+     "expected": {
+      "sample_11": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_11": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D3",
+     "group": "samples",
+     "expected": {
+      "sample_10": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_10": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C3",
+     "group": "samples",
+     "expected": {
+      "sample_10": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_10": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "samples",
+     "expected": {
+      "sample_9": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_9": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "samples",
+     "expected": {
+      "sample_9": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_9": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H4",
+     "group": "samples",
+     "expected": {
+      "sample_16": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_16": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G4",
+     "group": "samples",
+     "expected": {
+      "sample_16": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_16": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F4",
+     "group": "samples",
+     "expected": {
+      "sample_15": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_15": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E4",
+     "group": "samples",
+     "expected": {
+      "sample_15": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_15": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D4",
+     "group": "samples",
+     "expected": {
+      "sample_14": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_14": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C4",
+     "group": "samples",
+     "expected": {
+      "sample_14": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_14": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "samples",
+     "expected": {
+      "sample_13": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_13": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "samples",
+     "expected": {
+      "sample_13": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_13": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "H5",
+     "group": "samples",
+     "expected": {
+      "sample_20": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_20": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "G5",
+     "group": "samples",
+     "expected": {
+      "sample_20": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_20": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "F5",
+     "group": "samples",
+     "expected": {
+      "sample_19": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_19": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "E5",
+     "group": "samples",
+     "expected": {
+      "sample_19": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_19": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "D5",
+     "group": "samples",
+     "expected": {
+      "sample_18": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_18": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "C5",
+     "group": "samples",
+     "expected": {
+      "sample_18": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_18": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B5",
+     "group": "samples",
+     "expected": {
+      "sample_17": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_17": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "samples",
+     "expected": {
+      "sample_17": 5.0,
+      "bradford": 250.0
+     },
+     "found": {
+      "sample_17": 5.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "bradford",
+       "expected_ul": 250.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_1": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_2": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_3": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_4": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_5": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_6": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_7": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": null,
+     "group": "standards",
+     "expected": {
+      "standard_8": 0.0,
+      "bradford": 250.0
+     },
+     "found": {},
+     "issues": [
+      {
+       "kind": "no_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "standard 1",
+    "logical": "standard_1",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 2",
+    "logical": "standard_2",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 3",
+    "logical": "standard_3",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 4",
+    "logical": "standard_4",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 5",
+    "logical": "standard_5",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 6",
+    "logical": "standard_6",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 7",
+    "logical": "standard_7",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "standard 8",
+    "logical": "standard_8",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 10.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 13",
+    "logical": "sample_13",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 14",
+    "logical": "sample_14",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 15",
+    "logical": "sample_15",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 16",
+    "logical": "sample_16",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 17",
+    "logical": "sample_17",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 18",
+    "logical": "sample_18",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 19",
+    "logical": "sample_19",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 20",
+    "logical": "sample_20",
+    "role": "sample",
+    "declared_ul": 1000.0,
+    "delivered_ul": 10.0,
+    "left_in_source_ul": 990.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "bradford",
+    "logical": "bradford",
+    "role": "reagent",
+    "declared_ul": 15000.0,
+    "delivered_ul": 15000.0,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "standard 1",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "B6",
+     "liquid": "standard 2",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "C6",
+     "liquid": "standard 3",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "D6",
+     "liquid": "standard 4",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "E6",
+     "liquid": "standard 5",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "F6",
+     "liquid": "standard 6",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "G6",
+     "liquid": "standard 7",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "2",
+     "labware": "Corning 96 Well Plate 360 \u00b5L Flat",
+     "well": "H6",
+     "liquid": "standard 8",
+     "declared_ul": 10.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 7",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "sample 13",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D1",
+     "liquid": "sample 19",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "sample 2",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 8",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "sample 14",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D2",
+     "liquid": "sample 20",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "sample 3",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 9",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "sample 15",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "sample 4",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "sample 10",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C4",
+     "liquid": "sample 16",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "sample 5",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "sample 11",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C5",
+     "liquid": "sample 17",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 6",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "sample 12",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C6",
+     "liquid": "sample 18",
+     "declared_ul": 1000.0,
+     "needed_ul": 10.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "bradford",
+     "declared_ul": 15000.0,
+     "needed_ul": 96000.0,
+     "flag": "would_run_dry",
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 40
+    },
+    {
+     "slot": "5",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 8
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 3 biology problems (2 errors, 1 note).\n\n1. ERROR CONTAM-STOCK: A used tip went into a stock: bradford (well A1 in slot 4)\n   line 80:  p300_multi.aspirate(250, reservoir[\"A1\"])\n   At line 80 the tip went into bradford (well A1 in slot 4) while it still carried sample 1\n   (tube A1 in slot 3), sample 2 (tube A2 in slot 3), sample 3 (tube A3 in slot 3) and\n   sample 4 (tube A4 in slot 3) from an earlier step. A tip that has touched one liquid\n   leaves a little of it in the next liquid it touches, so this stock now holds material\n   that does not belong there. Liquid drawn from it then took the unwanted material along\n   into 7 other wells: wells B1, C1, D1, E1, F1, G1 and H1 in slot 2.\n   Affected: well A1 in slot 4.\n   Also reached 7 other wells: wells B1, C1, D1, E1, F1, G1 and H1 in slot 2.\n   Fix: Pick up a fresh tip before line 80 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [ef8a01be708c]\n\n2. ERROR WELL-CAPACITY: More liquid than the well can hold: 3255 ul in a 366 ul well, 7\nwells\n   line 81:  p300_multi.dispense(250, well)\n   At line 81 the robot filled wells B1, C1, D1, E1, F1, G1 and H1 in slot 2 past the rim\n   (366 ul to the rim by the labware definition's shape; the maker states 360 ul) (this line\n   did it 7 times), reaching 3255 ul. The liquid runs into the neighbouring wells and onto\n   the deck; the volumes still add up on paper, so the plate map does not see it, and the\n   simulator says nothing. Wells: wells B1, C1, D1, E1, F1, G1 and H1 in slot 2.\n   Affected: wells B1, C1, D1, E1, F1, G1 and H1 in slot 2.\n   Fix: Use labware with bigger wells, or scale every volume down so the fullest well stays\n   under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [b3fe53d0e48a]\n\n3. NOTE NO-SAMPLE-INTO-REAGENT-WELL: (proposed) A tip that had been in a sample went into a\nreagent\n   line 80:  p300_multi.aspirate(250, reservoir[\"A1\"])\n   At line 80 the tip touched the liquid in well A1 in slot 4 while it still carried sample\n   1 (tube A1 in slot 3), sample 2 (tube A2 in slot 3), sample 3 (tube A3 in slot 3) and\n   sample 4 (tube A4 in slot 3) from an earlier step. A tip that has touched one liquid\n   leaves a little of it in the next liquid it touches, and the protocol never transfers\n   that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or\n   the primer in that well goes into every reaction on the plate. A tip that has been in one\n   sample leaves a little of it in the next liquid it touches, so a sample carried into a\n   reagent well turns up in every well that reagent reaches, and a no-template control can\n   no longer be trusted. Liquid was later taken out of the affected wells, and the unwanted\n   material went along into 7 other wells: wells B1, C1, D1, E1, F1, G1 and H1 in slot 2.\n   Affected: well A1 in slot 4.\n   Also reached 7 other wells: wells B1, C1, D1, E1, F1, G1 and H1 in slot 2.\n   Fix: Use a fresh tip for each sample at line 80, or add the reagent to the wells first,\n   while the tip is clean, and the samples afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [40c4011f4be7]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "error",
+   "certain": true,
+   "line": 80,
+   "title": "A used tip went into a stock: bradford (well A1 in slot 4)",
+   "explanation": "At line 80 the tip went into bradford (well A1 in slot 4) while it still carried sample 1 (tube A1 in slot 3), sample 2 (tube A2 in slot 3), sample 3 (tube A3 in slot 3) and sample 4 (tube A4 in slot 3) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. Liquid drawn from it then took the unwanted material along into 7 other wells: wells B1, C1, D1, E1, F1, G1 and H1 in slot 2.",
+   "fix": "Pick up a fresh tip before line 80 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "error",
+   "certain": true,
+   "line": 81,
+   "title": "More liquid than the well can hold: 3255 ul in a 366 ul well, 7 wells",
+   "explanation": "At line 81 the robot filled wells B1, C1, D1, E1, F1, G1 and H1 in slot 2 past the rim (366 ul to the rim by the labware definition's shape; the maker states 360 ul) (this line did it 7 times), reaching 3255 ul. The liquid runs into the neighbouring wells and onto the deck; the volumes still add up on paper, so the plate map does not see it, and the simulator says nothing. Wells: wells B1, C1, D1, E1, F1, G1 and H1 in slot 2.",
+   "fix": "Use labware with bigger wells, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+   "severity": "note",
+   "certain": true,
+   "line": 80,
+   "title": "(proposed) A tip that had been in a sample went into a reagent",
+   "explanation": "At line 80 the tip touched the liquid in well A1 in slot 4 while it still carried sample 1 (tube A1 in slot 3), sample 2 (tube A2 in slot 3), sample 3 (tube A3 in slot 3) and sample 4 (tube A4 in slot 3) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, and the protocol never transfers that liquid into this well on purpose. A reagent is shared: the master mix, the enzyme or the primer in that well goes into every reaction on the plate. A tip that has been in one sample leaves a little of it in the next liquid it touches, so a sample carried into a reagent well turns up in every well that reagent reaches, and a no-template control can no longer be trusted. Liquid was later taken out of the affected wells, and the unwanted material went along into 7 other wells: wells B1, C1, D1, E1, F1, G1 and H1 in slot 2.",
+   "fix": "Use a fresh tip for each sample at line 80, or add the reagent to the wells first, while the tip is clean, and the samples afterwards with a fresh tip each."
+  }
+ ],
+ "seconds": 5.6,
+ "draft": 5
+}

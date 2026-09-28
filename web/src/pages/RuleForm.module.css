@@ -1,0 +1,331 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  max-width: 80ch;
+}
+.fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--s-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.fieldset legend {
+  padding: 0 var(--s-2);
+  font-weight: 600;
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+.radio input,
+.check input,
+.inline input {
+  accent-color: var(--verified);
+}
+.sentence {
+  font-size: var(--t-4);
+  line-height: 2;
+  max-width: none;
+}
+.inline {
+  font-size: var(--t-3);
+}
+.pick,
+.num {
+  font: inherit;
+  padding: 2px var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.num {
+  width: 5em;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.input {
+  font: inherit;
+  color: var(--text);
+  padding: var(--s-2) var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  max-width: 100%;
+}
+.sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--s-1) var(--s-3);
+  font-size: var(--t-2);
+}
+.check {
+  display: flex;
+  gap: var(--s-2);
+  align-items: baseline;
+}
+.preview {
+  margin-top: var(--s-2);
+}
+.password {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.password input {
+  padding: var(--s-1) var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  width: 12em;
+}
+.primary {
+  padding: var(--s-2) var(--s-5);
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--verified);
+  color: var(--on-accent);
+  font-weight: 500;
+  cursor: pointer;
+}
+.primary:disabled {
+  opacity: 0.5;
+}
+.quiet {
+  padding: var(--s-2) var(--s-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  cursor: pointer;
+}
+.fieldset {
+  min-width: 0;
+}
+.pick,
+.input {
+  max-width: 100%;
+}
+.sentence {
+  line-height: 1.7;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s-3);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  padding: var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
+.cardOn {
+  border-color: var(--verified);
+  background: var(--verified-bg);
+}
+.card input {
+  accent-color: var(--verified);
+}
+.cardWords {
+  font-weight: 600;
+}
+.cardExample {
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.addSource {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+}
+.error {
+  color: var(--error);
+  font-size: var(--t-2);
+}
+.page {
+  max-width: 760px;
+}
+.sentenceBox {
+  background: var(--surface);
+}
+.sentenceBox .sentence {
+  font-size: var(--t-4);
+}
+.severityRow {
+  margin-top: var(--s-2);
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.shapes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  align-items: center;
+  margin-top: var(--s-3);
+  font-size: var(--t-2);
+}
+.shapeLabel {
+  color: var(--muted);
+}
+.shapeChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 2px var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--muted);
+  background: var(--bg);
+}
+.shapeChip input {
+  accent-color: var(--verified);
+}
+.shapeOn {
+  color: var(--text);
+  border-color: var(--verified);
+  background: var(--verified-bg);
+}
+
+/* ---- polish: one centred column of cards, the save bar pinned to the bottom ---- */
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.form {
+  max-width: none;
+  gap: var(--s-4);
+}
+.fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--raised);
+  padding: var(--s-5);
+  gap: var(--s-4);
+  box-shadow: var(--shadow);
+}
+/* the legend sits inside the card as its title, not on its border */
+.fieldset legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: var(--s-1);
+  font-size: var(--t-1);
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.fieldset legend + * {
+  clear: both;
+}
+.sentenceBox {
+  background: var(--raised);
+}
+.sentenceBox .sentence {
+  font-size: 1.1875rem;
+  line-height: 2.1;
+  font-weight: 500;
+}
+.pick,
+.num {
+  height: 2.125rem;
+  padding: 0 var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-weight: 500;
+  vertical-align: baseline;
+}
+.pick:focus,
+.num:focus,
+.input:focus {
+  outline: none;
+  border-color: var(--link);
+  box-shadow: var(--focus);
+}
+.field {
+  gap: 6px;
+  font-weight: 500;
+  color: var(--text);
+}
+input.input,
+select.input {
+  height: var(--control);
+  padding: 0 var(--s-3);
+  font-size: var(--t-2);
+}
+textarea.input {
+  padding: var(--s-2) var(--s-3);
+  font-size: var(--t-2);
+  line-height: 1.5;
+}
+.input {
+  background: var(--bg);
+}
+.primary,
+.quiet {
+  display: inline-flex;
+  align-items: center;
+  height: var(--control);
+  padding: 0 var(--s-4);
+  border-radius: var(--radius);
+  font-size: var(--t-2);
+  font-weight: 500;
+  cursor: pointer;
+}
+.primary {
+  border: 1px solid var(--verified);
+  background: var(--verified);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+.primary:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+  background: var(--surface-2);
+  border-color: var(--border);
+  color: var(--faint);
+}
+.quiet {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+.quiet:hover {
+  background: var(--surface-2);
+}
+.shapeChip {
+  height: 2rem;
+  background: var(--surface);
+}
+.saveBar {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+  margin: 0 calc(-1 * var(--s-2));
+  padding: var(--s-3) var(--s-2);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--border);
+}

@@ -1,0 +1,246 @@
+/* the app shell: one sidebar that holds everything, and the page */
+.shell {
+  --sidebar: 260px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--sidebar) minmax(0, 1fr);
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-2) var(--s-2);
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  z-index: 30;
+}
+.sideTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--s-1);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  height: 32px;
+  padding: 0 var(--s-1);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  font-size: var(--t-4);
+}
+.brand:hover {
+  text-decoration: none;
+}
+.close {
+  display: none;
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 34px;
+  padding: 0 var(--s-3);
+  border-radius: var(--radius-lg);
+  color: var(--text);
+  font-size: var(--t-2);
+  font-weight: 450;
+}
+.action svg {
+  flex: none;
+  color: var(--muted);
+}
+.action:hover {
+  background: var(--surface-2);
+  text-decoration: none;
+}
+.actionOn {
+  background: var(--surface-2);
+  font-weight: 550;
+}
+/* a new run is the sidebar's first line, drawn as a button, as a chat app's "New" */
+.newRun {
+  margin-bottom: var(--s-2);
+  background: var(--surface-2);
+  font-weight: 550;
+}
+.newRun svg {
+  color: var(--text);
+}
+.historyWrap {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--s-2) 0 0;
+  scrollbar-width: thin;
+}
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2);
+  padding: var(--s-2) var(--s-2) 0 var(--s-3);
+  border-top: 1px solid var(--border);
+}
+.version {
+  font-size: var(--t-1);
+  color: var(--faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tools {
+  display: flex;
+  align-items: center;
+  gap: var(--s-1);
+}
+.theme {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.theme:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+.column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.phoneBar {
+  display: none;
+}
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: var(--s-6) var(--s-6) var(--s-8);
+}
+.scrim {
+  display: none;
+}
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+.iconButton:hover {
+  background: var(--surface-2);
+}
+
+/* phones and narrow windows: the sidebar is a drawer; a slim bar carries the menu, the name
+   and a new run */
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    width: min(320px, 88vw);
+    transform: translateX(-100%);
+    transition: transform 200ms ease;
+    box-shadow: 0 0 48px rgba(0, 0, 0, 0.35);
+  }
+  .drawerOpen .sidebar {
+    transform: none;
+  }
+  .sideTop {
+    justify-content: flex-start;
+    gap: var(--s-1);
+  }
+  .close {
+    order: -1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: var(--radius);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 25;
+    border: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
+  .drawerOpen .scrim {
+    display: block;
+  }
+  .phoneBar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    padding: 0 var(--s-2);
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .main {
+    padding: var(--s-4) var(--s-4) var(--s-7);
+  }
+}
+
+.key {
+  position: relative;
+}
+.keyButton {
+  border: 0;
+  background: transparent;
+  border-radius: var(--radius);
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.keyButton:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+.keySet {
+  border-color: var(--verified);
+  color: var(--verified);
+}

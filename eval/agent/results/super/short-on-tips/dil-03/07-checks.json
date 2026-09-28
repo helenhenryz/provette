@@ -1,0 +1,246 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map dil-03. 8 of 9 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 200 \u00b5L Flat (slot 4). Reading of the request: 8 standards;\n    excess removed from the last well.\n  well H12: expected nothing; found 50 ul water\n      - the plate map says nothing about this well, but it holds liquid\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  bsa                                  1000.0      99.6     900.0       0.0     0.4\n  water                                1000.0     300.4     600.0      50.0    49.6\n  Note: 0.4 ul of bsa is lost: it left the deck inside a tip that was thrown away.\n  Note: 49.6 ul of water is lost: it left the deck inside a tip that was thrown away.\n  Note: water ends in wells the plate map does not list for it: H12 in slot 4 (50.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    bsa                                  100.0    1000.0\n  3    NEST 12 Well Reservoir 15 mL          A1    water                                400.0    1000.0\n  Tips: 18 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "dil-03",
+  "technique": "Serial dilution",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "4:nest_96_wellplate_200ul_flat",
+   "variant": "8 standards; excess removed from the last well",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 8,
+   "wells_total": 9,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "standards",
+     "expected": {
+      "bsa": 50.0
+     },
+     "found": {
+      "bsa": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "standards",
+     "expected": {
+      "bsa": 25.0,
+      "water": 25.0
+     },
+     "found": {
+      "bsa": 25.0,
+      "water": 25.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "standards",
+     "expected": {
+      "bsa": 12.5,
+      "water": 37.5
+     },
+     "found": {
+      "bsa": 12.5,
+      "water": 37.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "standards",
+     "expected": {
+      "bsa": 6.25,
+      "water": 43.75
+     },
+     "found": {
+      "bsa": 6.25,
+      "water": 43.75
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "E1",
+     "group": "standards",
+     "expected": {
+      "bsa": 3.125,
+      "water": 46.875
+     },
+     "found": {
+      "bsa": 3.125,
+      "water": 46.875
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "F1",
+     "group": "standards",
+     "expected": {
+      "bsa": 1.5625,
+      "water": 48.4375
+     },
+     "found": {
+      "bsa": 1.5625,
+      "water": 48.4375
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "G1",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.7812,
+      "water": 49.2188
+     },
+     "found": {
+      "bsa": 0.78125,
+      "water": 49.21875
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H1",
+     "group": "standards",
+     "expected": {
+      "bsa": 0.3906,
+      "water": 49.6094
+     },
+     "found": {
+      "bsa": 0.390625,
+      "water": 49.609375
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "H12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 50.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "H12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "water": 50.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "bsa",
+    "logical": "bsa",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 99.6094,
+    "left_in_source_ul": 900.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.3906,
+    "flags": [],
+    "notes": [
+     "0.4 ul of bsa is lost: it left the deck inside a tip that was thrown away."
+    ]
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 1000.0,
+    "delivered_ul": 300.3906,
+    "left_in_source_ul": 600.0,
+    "elsewhere": [
+     {
+      "well": "4:nest_96_wellplate_200ul_flat[H12]",
+      "ul": 50.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 49.6094,
+    "flags": [],
+    "notes": [
+     "49.6 ul of water is lost: it left the deck inside a tip that was thrown away.",
+     "water ends in wells the plate map does not list for it: H12 in slot 4 (50.0 ul)."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "bsa",
+     "declared_ul": 1000.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 1000.0,
+     "needed_ul": 400.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 18
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: no biology problems found.\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\nA clean report is not a promise that the experiment will work.",
+ "findings": [],
+ "seconds": 4.7,
+ "draft": 7
+}

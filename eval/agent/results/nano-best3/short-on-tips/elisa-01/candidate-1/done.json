@@ -1,0 +1,299 @@
+{
+ "id": "elisa-01",
+ "condition": "short-on-tips",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 3,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 122,
+    "title": "A used tip went into a stock: 3 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 128,
+    "title": "A used tip went into a stock: 4 stocks"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 129,
+    "title": "More liquid than the well can hold: 400 ul in a 217 ul well, 1 well"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 130,
+    "title": "A used tip went into a stock: 3 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 142,
+    "title": "A used tip went into a stock: 8 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 144,
+    "title": "A used tip went into a stock: 8 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 146,
+    "title": "A used tip went into a stock: 8 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 148,
+    "title": "A used tip went into a stock: 8 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 150,
+    "title": "A used tip went into a stock: 8 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 152,
+    "title": "A used tip went into a stock: 8 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 154,
+    "title": "A used tip went into a stock: 8 stocks"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 173,
+    "title": "More liquid than the well can hold: 300 ul in a 217 ul well, 1 well"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 181,
+    "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 183,
+    "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 185,
+    "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 187,
+    "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 189,
+    "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 191,
+    "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 193,
+    "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "error",
+    "certain": true,
+    "line": 195,
+    "title": "More liquid than the well can hold: 500 ul in a 217 ul well, 3 wells"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "warning",
+    "certain": true,
+    "line": 123,
+    "title": "A used tip carried standard 1 (tube A1 in slot 2) and standard 2 (tube B1 in slot 2) into 3 wells it was never meant for"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "warning",
+    "certain": true,
+    "line": 125,
+    "title": "A used tip carried standard 1 (tube A1 in slot 2), standard 2 (tube B1 in slot 2), standard 3 (tube C1 in slot 2) and standard 4 (tube D1 in slot 2) into 4 wells it was never meant for"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "warning",
+    "certain": true,
+    "line": 127,
+    "title": "A used tip carried standard 4 (tube D1 in slot 2) into well D12 in slot 4 it was never meant for"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "warning",
+    "certain": true,
+    "line": 129,
+    "title": "Well E12 in slot 4 never mixed after standard 4, standard 6 and standard 7 went in (25% of the well)"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 129,
+    "title": "More liquid than the well is rated for: 200 ul against 100 ul, 1 well"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "warning",
+    "certain": true,
+    "line": 131,
+    "title": "Well F12 in slot 4 never mixed after standard 5 and standard 7 went in (25% of the well)"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 131,
+    "title": "More liquid than the well is rated for: 200 ul against 100 ul, 1 well"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "warning",
+    "certain": true,
+    "line": 133,
+    "title": "A used tip carried standard 4 (tube A2 in slot 2), standard 6 (tube C2 in slot 2) and standard 7 (tube D2 in slot 2) into 2 wells it was never meant for"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "warning",
+    "certain": true,
+    "line": 135,
+    "title": "A used tip carried standard 7 (tube D2 in slot 2) into well H12 in slot 4 it was never meant for"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 161,
+    "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 163,
+    "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 165,
+    "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 167,
+    "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 169,
+    "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 171,
+    "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 173,
+    "title": "More liquid than the well is rated for: 150 ul against 100 ul, 3 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "warning",
+    "certain": true,
+    "line": 175,
+    "title": "More liquid than the well is rated for: 150 ul against 100 ul, 4 wells"
+   },
+   {
+    "rule_id": "WELL-CAPACITY",
+    "severity": "note",
+    "certain": true,
+    "line": 152,
+    "title": "Declared more than the well holds: 300 ul in a 231 ul well, 1 well"
+   }
+  ],
+  "draft": 4,
+  "rounds": 4
+ },
+ "tool_calls": 9,
+ "turns": 9,
+ "drafts": 5,
+ "checks": 5,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 594352,
+ "tokens_out": 105071,
+ "seconds": 1183.0
+}

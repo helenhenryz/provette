@@ -1,0 +1,146 @@
+{
+ "id": "pcr-07",
+ "condition": "plain",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 59,
+    "title": "12 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 64,
+    "title": "12 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 75,
+    "title": "10 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 78,
+    "title": "2.5 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 81,
+    "title": "10.5 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "PIPETTE-RANGE",
+    "severity": "error",
+    "certain": true,
+    "line": 84,
+    "title": "2 ul is below what the p300_single_gen2 can measure (20 ul at least)"
+   },
+   {
+    "rule_id": "MIX-BEFORE-DRAW",
+    "severity": "warning",
+    "certain": true,
+    "line": 65,
+    "title": "Liquid drawn from tube A2 in slot 2 before it was mixed: added at line 65, drawn at line 78"
+   },
+   {
+    "rule_id": "ENZYME-BEFORE-DILUENT",
+    "severity": "warning",
+    "certain": true,
+    "line": 79,
+    "title": "An enzyme was added before the water: polymerase"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 81,
+    "title": "A used tip went into a stock: water (tube A5 in slot 2)"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "warning",
+    "certain": true,
+    "line": 84,
+    "title": "A used tip went into a stock: 12 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "note",
+    "certain": true,
+    "line": 78,
+    "title": "A used tip went into a stock: polymerase (tube A2 in slot 2)"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 79,
+    "title": "No no-template control: 11 wells of polymerase with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 85,
+    "title": "12 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 8 more went in (8 to 9% of the well)"
+   }
+  ],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 1,
+  "check_exit": 0,
+  "findings": [
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 85,
+    "title": "Well B4 in slot 3 never mixed after sample 12 went in (9% of the well)"
+   },
+   {
+    "rule_id": "NO-NEGATIVE-CONTROL",
+    "severity": "note",
+    "certain": true,
+    "line": 90,
+    "title": "No no-template control: 11 wells of polymerase with a sample"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 90,
+    "title": "11 wells never mixed after polymerase, fwd primer and rev primer went in (10% of the well)"
+   }
+  ],
+  "draft": 4,
+  "rounds": 3
+ },
+ "tool_calls": 10,
+ "turns": 11,
+ "drafts": 5,
+ "checks": 4,
+ "submitted": true,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "submitted",
+ "tokens_in": 387294,
+ "tokens_out": 94199,
+ "seconds": 734.1
+}

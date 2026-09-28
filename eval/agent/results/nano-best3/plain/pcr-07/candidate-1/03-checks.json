@@ -1,0 +1,1549 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map pcr-07. 0 of 12 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3). Reading of the request: 12\n    reactions.\n  well B1 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_9; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_9\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well A1 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_1; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_1\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well B2 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_10; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_10\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well A2 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_2; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_2\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well B3 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_11; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_11\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well A3 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_3; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_3\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well B4 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_12; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_12\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well A4 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_4; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_4\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well A5 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_5; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_5\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well A6 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_6; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_6\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well A7 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_7; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_7\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n  well A8 (reactions): expected 10 ul buffer, 0.5 ul polymerase, 1 ul fwd_primer, 1 ul\n    rev_primer, 10.5 ul water, 2 ul sample_8; found 10 ul buffer, 1.79 ul polymerase, 0.36\n    ul fwd_primer, 0.36 ul rev_primer, 10.5 ul water, 2 ul sample_8\n      - wrong amount of polymerase: the plate map says 0.5 ul, the protocol delivers 1.79 ul\n      - wrong amount of fwd_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n      - wrong amount of rev_primer: the plate map says 1 ul, the protocol delivers 0.36 ul\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  buffer                                150.0     120.0      30.0       0.0     0.0\n  polymerase                             60.0      21.4      38.6       0.0     0.0\n  fwd primer                             12.0       4.3       0.0       7.7     0.0\n  rev primer                             12.0       4.3       0.0       7.7     0.0\n  water                                 150.0     126.0      24.0       0.0     0.0\n  sample 1                               10.0       2.0       8.0       0.0     0.0\n  sample 2                               10.0       2.0       8.0       0.0     0.0\n  sample 3                               10.0       2.0       8.0       0.0     0.0\n  sample 4                               10.0       2.0       8.0       0.0     0.0\n  sample 5                               10.0       2.0       8.0       0.0     0.0\n  sample 6                               10.0       2.0       8.0       0.0     0.0\n  sample 7                               10.0       2.0       8.0       0.0     0.0\n  sample 8                               10.0       2.0       8.0       0.0     0.0\n  sample 9                               10.0       2.0       8.0       0.0     0.0\n  sample 10                              10.0       2.0       8.0       0.0     0.0\n  sample 11                              10.0       2.0       8.0       0.0     0.0\n  sample 12                              10.0       2.0       8.0       0.0     0.0\n  Note: fwd primer ends in wells the plate map does not list for it: A2 in slot 2 (7.7 ul).\n  Note: rev primer ends in wells the plate map does not list for it: A2 in slot 2 (7.7 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    buffer                               120.0     150.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B1    sample 2                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C1    sample 6                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D1    sample 10                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    polymerase                             6.0      60.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B2    sample 3                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C2    sample 7                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D2    sample 11                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A3    fwd primer                            12.0      12.0  <-- NO MARGIN\n  2    Opentrons 24 Tube Rack with NEST 1.5  B3    sample 4                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C3    sample 8                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D3    sample 12                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A4    rev primer                            12.0      12.0  <-- NO MARGIN\n  2    Opentrons 24 Tube Rack with NEST 1.5  B4    sample 5                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C4    sample 9                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A5    water                                126.0     150.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A6    sample 1                               2.0      10.0\n  FLAG: fwd primer in A3, slot 2 has no margin: the robot draws 12 ul of the 12 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 62 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  FLAG: rev primer in A4, slot 2 has no margin: the robot draws 12 ul of the 12 ul declared,\n    and a pipette cannot empty a tube to the last drop. Fix: in load_liquid for this well,\n    declare at least 62 ul (10% or 50 ul more than is drawn, whichever is larger), and load\n    that much.\n  Tips: 15 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-07",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "3:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "12 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.357142857142857,
+      "rev_primer": 0.357142857142857,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.357142857142857,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.357142857142857,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142856,
+      "fwd_primer": 0.3571428571428571,
+      "rev_primer": 0.3571428571428571,
+      "water": 10.500000000000002,
+      "sample_1": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142856,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.35714285714285693,
+      "rev_primer": 0.35714285714285693,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285693,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285693,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142858,
+      "fwd_primer": 0.35714285714285715,
+      "rev_primer": 0.35714285714285715,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142858,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285715,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285715,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.35714285714285693,
+      "rev_primer": 0.35714285714285693,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285693,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285693,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142858,
+      "fwd_primer": 0.35714285714285715,
+      "rev_primer": 0.35714285714285715,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142858,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285715,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285715,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142863,
+      "fwd_primer": 0.3571428571428569,
+      "rev_primer": 0.3571428571428569,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142863,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428569,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428569,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142858,
+      "fwd_primer": 0.3571428571428571,
+      "rev_primer": 0.3571428571428571,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142858,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.3571428571428571,
+      "rev_primer": 0.3571428571428571,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.3571428571428571,
+      "rev_primer": 0.3571428571428571,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.35714285714285704,
+      "rev_primer": 0.35714285714285704,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285704,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285704,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142858,
+      "fwd_primer": 0.357142857142857,
+      "rev_primer": 0.357142857142857,
+      "water": 10.500000000000002,
+      "sample_8": 2.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142858,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.357142857142857,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.357142857142857,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.357142857142857,
+      "rev_primer": 0.357142857142857,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.357142857142857,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.357142857142857,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142856,
+      "fwd_primer": 0.3571428571428571,
+      "rev_primer": 0.3571428571428571,
+      "water": 10.500000000000002,
+      "sample_1": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142856,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.35714285714285693,
+      "rev_primer": 0.35714285714285693,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285693,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285693,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142858,
+      "fwd_primer": 0.35714285714285715,
+      "rev_primer": 0.35714285714285715,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142858,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285715,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285715,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.35714285714285693,
+      "rev_primer": 0.35714285714285693,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285693,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285693,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142858,
+      "fwd_primer": 0.35714285714285715,
+      "rev_primer": 0.35714285714285715,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142858,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285715,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285715,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B4",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142863,
+      "fwd_primer": 0.3571428571428569,
+      "rev_primer": 0.3571428571428569,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142863,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428569,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428569,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142858,
+      "fwd_primer": 0.3571428571428571,
+      "rev_primer": 0.3571428571428571,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142858,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.3571428571428571,
+      "rev_primer": 0.3571428571428571,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.3571428571428571,
+      "rev_primer": 0.3571428571428571,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.3571428571428571,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.785714285714286,
+      "fwd_primer": 0.35714285714285704,
+      "rev_primer": 0.35714285714285704,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.785714285714286,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285704,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.35714285714285704,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "buffer": 10.0,
+      "polymerase": 0.5,
+      "fwd_primer": 1.0,
+      "rev_primer": 1.0,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "found": {
+      "buffer": 10.0,
+      "polymerase": 1.7857142857142858,
+      "fwd_primer": 0.357142857142857,
+      "rev_primer": 0.357142857142857,
+      "water": 10.500000000000002,
+      "sample_8": 2.0
+     },
+     "issues": [
+      {
+       "kind": "wrong_amount",
+       "liquid": "polymerase",
+       "expected_ul": 0.5,
+       "found_ul": 1.7857142857142858,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "fwd_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.357142857142857,
+       "detail": ""
+      },
+      {
+       "kind": "wrong_amount",
+       "liquid": "rev_primer",
+       "expected_ul": 1.0,
+       "found_ul": 0.357142857142857,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "buffer",
+    "logical": "buffer",
+    "role": "reagent",
+    "declared_ul": 150.0,
+    "delivered_ul": 120.0,
+    "left_in_source_ul": 30.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "polymerase",
+    "logical": "polymerase",
+    "role": "reagent",
+    "declared_ul": 60.0,
+    "delivered_ul": 21.4286,
+    "left_in_source_ul": 38.5714,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "fwd primer",
+    "logical": "fwd_primer",
+    "role": "reagent",
+    "declared_ul": 12.0,
+    "delivered_ul": 4.2857,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "2:opentrons_24_tuberack_nest_1.5ml_snapcap[A2]",
+      "ul": 7.7143
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "fwd primer ends in wells the plate map does not list for it: A2 in slot 2 (7.7 ul)."
+    ]
+   },
+   {
+    "liquid": "rev primer",
+    "logical": "rev_primer",
+    "role": "reagent",
+    "declared_ul": 12.0,
+    "delivered_ul": 4.2857,
+    "left_in_source_ul": 0.0,
+    "elsewhere": [
+     {
+      "well": "2:opentrons_24_tuberack_nest_1.5ml_snapcap[A2]",
+      "ul": 7.7143
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "rev primer ends in wells the plate map does not list for it: A2 in slot 2 (7.7 ul)."
+    ]
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 150.0,
+    "delivered_ul": 126.0,
+    "left_in_source_ul": 24.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "buffer",
+     "declared_ul": 150.0,
+     "needed_ul": 120.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 2",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "sample 6",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D1",
+     "liquid": "sample 10",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "polymerase",
+     "declared_ul": 60.0,
+     "needed_ul": 6.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 3",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "sample 7",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D2",
+     "liquid": "sample 11",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "fwd primer",
+     "declared_ul": 12.0,
+     "needed_ul": 12.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 4",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "sample 8",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D3",
+     "liquid": "sample 12",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "rev primer",
+     "declared_ul": 12.0,
+     "needed_ul": 12.0,
+     "flag": "no_margin",
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "sample 5",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C4",
+     "liquid": "sample 9",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "water",
+     "declared_ul": 150.0,
+     "needed_ul": 126.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 1",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 15
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 6 biology problems (3 warnings, 3 notes).\n\n1. WARNING ENZYME-BEFORE-DILUENT: An enzyme was added before the water: polymerase\n   line 78:  p20.dispense(2.5, plate[sample_well_names[i]])\n   At line 78 the robot put polymerase into wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more\n   in slot 3 (this line did it 12 times). Take well A1 in slot 3: at that moment it held\n   only 10 ul, all of it neat buffer, and the water came afterwards, at line 81, to make the\n   20.5 ul of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol\n   and is meant to be the last thing into a reaction, after the water and the buffer have\n   brought the well to the right dilution. Dropped into neat buffer or a dry well it meets\n   many times the salt it should: a restriction enzyme then cuts at the wrong places (star\n   activity) and a polymerase starts on mis-primed template.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Fix: Reorder the additions to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3:\n   water and buffer first, then the sample, then polymerase last. Or make a master mix of\n   water, buffer and enzyme in one tube, mix it, and hand it out.\n   Source: Thermo Fisher: restriction enzyme key considerations (the enzyme is the final\n   component)\n           https://www.thermofisher.com/us/en/home/life-science/cloning/cloning-learning-center/invitrogen-school-of-molecular-biology/molecular-cloning/restriction-enzymes/restriction-enzyme-key-considerations.html\n   Source: Promega: restriction enzyme resource (add the enzyme last; glycerol and star\n   activity)\n           https://www.promega.com/resources/guides/nucleic-acid-analysis/restriction-enzyme-resource/\n   Source: NEB: Q5 High-Fidelity PCR kit manual (add the polymerase last)\n           https://www.neb.com/-/media/nebus/files/manuals/manuale0555.pdf\n   Source: Qiagen: critical factors for successful real-time PCR (order of addition)\n           https://www.gene-quantification.de/qiagen-qpcr-sample-assay-tech-guide-2010.pdf\n   [997f8e94d9e0]\n\n2. WARNING CONTAM-STOCK: A used tip went into a stock: water (tube A5 in slot 2)\n   line 80:  p20.aspirate(10.5, tuberack[\"A5\"])\n   At line 80 the tip went into water (tube A5 in slot 2) while it still carried buffer\n   (tube A1 in slot 2), polymerase (tube A2 in slot 2), fwd primer (tube A3 in slot 2) and\n   rev primer (tube A4 in slot 2) from an earlier step. A tip that has touched one liquid\n   leaves a little of it in the next liquid it touches, so this stock now holds material\n   that does not belong there. The protocol drew from it again afterwards, but only into\n   wells that were given that material on purpose anyway, so this run is not harmed. What is\n   left in the stock is no longer clean for the next run.\n   Affected: tube A5 in slot 2.\n   Fix: Pick up a fresh tip before line 80 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [5b9f7e9d888d]\n\n3. WARNING CONTAM-STOCK: A used tip went into a stock: 12 stocks\n   line 83:  p20.aspirate(2, tuberack[sample_tuberack_wells[i]])\n   At line 83 the tip went into sample 1 (tube A6 in slot 2), sample 2 (tube B1 in slot 2),\n   sample 3 (tube B2 in slot 2), sample 4 (tube B3 in slot 2) and 8 more while it still\n   carried buffer (tube A1 in slot 2), polymerase (tube A2 in slot 2), fwd primer (tube A3\n   in slot 2), rev primer (tube A4 in slot 2) and 1 more from an earlier step (this line did\n   it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid\n   it touches, so these stocks now hold material that does not belong there. The protocol\n   does not draw from them again, so this run is not harmed, but what is left in the stock\n   is no longer clean for the next run.\n   Affected: tubes A6, B1, B2, B3, B4, C1, C2, C3 and 4 more in slot 2.\n   Fix: Pick up a fresh tip before line 83 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [37e328e6c7b2]\n\n4. NOTE CONTAM-STOCK: A used tip went into a stock: polymerase (tube A2 in slot 2)\n   line 77:  p20.aspirate(2.5, tuberack[\"A2\"])\n   At line 77 the tip went into polymerase (tube A2 in slot 2) while it still carried buffer\n   (tube A1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a\n   little of it in the next liquid it touches, so this stock now holds material that does\n   not belong there. The protocol drew from it again afterwards, but only into wells that\n   were given that material on purpose anyway, so this run is not harmed. What is left in\n   the stock is no longer clean for the next run.\n   Affected: tube A2 in slot 2.\n   Fix: Pick up a fresh tip before line 77 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [15fd325e2185]\n\n5. NOTE NO-NEGATIVE-CONTROL: No no-template control: 12 wells of polymerase with a sample\n   line 78:  p20.dispense(2.5, plate[sample_well_names[i]])\n   At line 78 the robot starts putting polymerase into NEST 96 Well Plate 100 \u00b5L PCR Full\n   Skirt (slot 3), and 12 wells end holding it together with a sample. No well on this plate\n   holds the mix without a sample, so there is no no-template control. If a reagent is\n   contaminated, or the primers pair with each other, every well gives a signal and nothing\n   on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8\n   and 4 more in slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Fix: Add one well (three for qPCR) with 1.78571 ul of polymerase and 2 ul of water in\n   place of the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [4b40c4bc5675]\n\n6. NOTE UNMIXED-AT-END: 12 wells never mixed after sample 1, sample 2, sample 3, sample 4\nand 8 more went in (8% of the well)\n   line 84:  p20.dispense(2, plate[sample_well_names[i]])\n   At line 84 the robot added sample 1, sample 2, sample 3, sample 4 and 8 more to wells A1,\n   A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3, which already held buffer, polymerase,\n   fwd primer, rev primer and 1 more (this line did it 12 times). The addition was 8% of the\n   well, nothing mixed the well afterwards, and the run ended with them that way. Two\n   liquids layered in a small well do not mix on their own, so what the well holds is not at\n   the concentration you calculated. A PCR plate is usually vortexed and spun down before\n   cycling; if this one will not be, mix it.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Fix: Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3 after line 84:\n   `mix_after=(5, 20)` on the transfer, or `pipette.mix(5, 20, well)`, with the volume about\n   80% of what the well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [dcdceaf78c23]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "ENZYME-BEFORE-DILUENT",
+   "severity": "warning",
+   "certain": true,
+   "line": 78,
+   "title": "An enzyme was added before the water: polymerase",
+   "explanation": "At line 78 the robot put polymerase into wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3 (this line did it 12 times). Take well A1 in slot 3: at that moment it held only 10 ul, all of it neat buffer, and the water came afterwards, at line 81, to make the 20.5 ul of water or buffer the reaction is built on. An enzyme is shipped in 50% glycerol and is meant to be the last thing into a reaction, after the water and the buffer have brought the well to the right dilution. Dropped into neat buffer or a dry well it meets many times the salt it should: a restriction enzyme then cuts at the wrong places (star activity) and a polymerase starts on mis-primed template.",
+   "fix": "Reorder the additions to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3: water and buffer first, then the sample, then polymerase last. Or make a master mix of water, buffer and enzyme in one tube, mix it, and hand it out."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 80,
+   "title": "A used tip went into a stock: water (tube A5 in slot 2)",
+   "explanation": "At line 80 the tip went into water (tube A5 in slot 2) while it still carried buffer (tube A1 in slot 2), polymerase (tube A2 in slot 2), fwd primer (tube A3 in slot 2) and rev primer (tube A4 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 80 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "warning",
+   "certain": true,
+   "line": 83,
+   "title": "A used tip went into a stock: 12 stocks",
+   "explanation": "At line 83 the tip went into sample 1 (tube A6 in slot 2), sample 2 (tube B1 in slot 2), sample 3 (tube B2 in slot 2), sample 4 (tube B3 in slot 2) and 8 more while it still carried buffer (tube A1 in slot 2), polymerase (tube A2 in slot 2), fwd primer (tube A3 in slot 2), rev primer (tube A4 in slot 2) and 1 more from an earlier step (this line did it 12 times). A tip that has touched one liquid leaves a little of it in the next liquid it touches, so these stocks now hold material that does not belong there. The protocol does not draw from them again, so this run is not harmed, but what is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 83 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "note",
+   "certain": true,
+   "line": 77,
+   "title": "A used tip went into a stock: polymerase (tube A2 in slot 2)",
+   "explanation": "At line 77 the tip went into polymerase (tube A2 in slot 2) while it still carried buffer (tube A1 in slot 2) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol drew from it again afterwards, but only into wells that were given that material on purpose anyway, so this run is not harmed. What is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 77 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 78,
+   "title": "No no-template control: 12 wells of polymerase with a sample",
+   "explanation": "At line 78 the robot starts putting polymerase into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3), and 12 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.",
+   "fix": "Add one well (three for qPCR) with 1.78571 ul of polymerase and 2 ul of water in place of the template, and tell the plate map where it is."
+  },
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 84,
+   "title": "12 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 8 more went in (8% of the well)",
+   "explanation": "At line 84 the robot added sample 1, sample 2, sample 3, sample 4 and 8 more to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3, which already held buffer, polymerase, fwd primer, rev primer and 1 more (this line did it 12 times). The addition was 8% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3 after line 84: `mix_after=(5, 20)` on the transfer, or `pipette.mix(5, 20, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 4.8,
+ "draft": 3
+}

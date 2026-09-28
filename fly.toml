@@ -1,0 +1,64 @@
+# The product on Fly.io: one always-on Machine, one volume. docs/deploy.md says why and what
+# it costs ($6.07 a month at list prices); deploy/README.md lists every setting and where
+# it is set; `deploy/fly-up.sh` does the first deployment and every one after it.
+#
+# Checked against docs.fly.io/reference/configuration/: every key and value here
+# is in that reference (auto_stop_machines "off", restart policy "always", strategy "immediate",
+# mounts initial_size, vm memory as "1gb").
+
+app = "provette"
+primary_region = "ams"
+# Swap for the moment two simulator subprocesses and two live runs overlap (deploy/README.md,
+# "Memory"); a stopped Machine with a volume is pinned to its host, so there is one Machine.
+swap_size_mb = 512
+# Seconds between the stop signal and the kill on a deploy or restart. uvicorn stops taking
+# requests at once and finishes the ones in flight; a check is a few seconds.
+kill_timeout = 15
+
+[build]
+  dockerfile = "docker/api.Dockerfile"
+  ignorefile = "docker/api.Dockerfile.dockerignore"
+
+# Only what depends on the machine goes here; the paths inside the image are the Dockerfile's ENV.
+[env]
+  PORT = "8000"
+  # Where a live draft's checks run: "local" (a subprocess in this container, about 6 s a check)
+  # or "nebius", a Token Factory Sandbox (about 14 s a check, needs the key's project to allow
+  # sandboxes). `PROVETTE_RUNNER=nebius deploy/fly-up.sh` overrides it for one deploy; edit here
+  # to switch for good. The pages say which ran.
+  PROVETTE_RUNNER = "local"
+  # Simulator subprocesses at once, process-wide: each peaks at about 140 MB on the largest
+  # episode; two beside two live runs fit the 1 GB Machine (deploy/README.md, "Memory").
+  PROVETTE_ANALYSES_AT_ONCE = "2"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "off"
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    interval = "15s"
+    timeout = "5s"
+    grace_period = "30s"
+    method = "GET"
+    path = "/health"
+
+[mounts]
+  source = "provette_data"
+  destination = "/data"
+  initial_size = "1gb"
+
+# performance-2x for the judging: a shared CPU is throttled under sustained checks (DECISIONS
+# D-36). After it, `deploy/fly-size.sh shared-cpu-1x`, and set this back to shared, 1, "1gb".
+[[vm]]
+  cpu_kind = "performance"
+  cpus = 2
+  memory = "4gb"
+
+[[restart]]
+  policy = "always"
+
+[deploy]
+  strategy = "immediate"

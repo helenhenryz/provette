@@ -1,0 +1,227 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+}
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+}
+.sub {
+  color: var(--muted);
+  font-size: var(--t-2);
+}
+
+/* two columns: the editor, and the panel with the map and the one action */
+.form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: var(--s-5);
+  align-items: start;
+  border-radius: var(--radius-xl);
+  outline: 2px dashed transparent;
+  outline-offset: 6px;
+  transition: outline-color 120ms;
+}
+.over {
+  outline-color: var(--link);
+}
+@media (max-width: 860px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--raised);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  min-width: 0;
+}
+.editorBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding: var(--s-2) var(--s-2) var(--s-2) var(--s-4);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-wrap: wrap;
+}
+.editorLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: var(--t-2);
+  font-weight: 600;
+}
+.editorActions {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+.dropHint {
+  font-size: var(--t-2);
+  color: var(--faint);
+}
+.over .dropHint {
+  color: var(--link);
+}
+.dropNote {
+  margin: 0;
+  padding: var(--s-2) var(--s-4);
+  font-size: var(--t-2);
+  color: var(--warning);
+  border-bottom: 1px solid var(--border);
+}
+.code {
+  width: 100%;
+  font-family: var(--mono) !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.6 !important;
+  tab-size: 4;
+  min-height: 420px;
+}
+.code textarea {
+  outline: none;
+}
+.code textarea::placeholder {
+  color: var(--faint);
+}
+.code:focus {
+  outline: none;
+  box-shadow: none;
+}
+.code::placeholder {
+  color: var(--faint);
+}
+.mapCode {
+  min-height: 160px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--raised);
+  padding: var(--s-3);
+}
+.mapCode:focus {
+  border-color: var(--link);
+}
+
+.panel {
+  position: sticky;
+  top: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  padding: var(--s-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--raised);
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.field legend {
+  padding: 0;
+  margin-bottom: var(--s-2);
+  font-size: var(--t-2);
+  font-weight: 600;
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.choices label {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-2) var(--s-3);
+  font-size: var(--t-2);
+  cursor: pointer;
+}
+.choices label + label {
+  border-top: 1px solid var(--border);
+}
+.choices label:hover {
+  background: var(--surface);
+}
+.choiceOn {
+  background: var(--surface);
+  font-weight: 500;
+}
+.choices input {
+  accent-color: var(--verified);
+  margin: 0;
+}
+.submit {
+  width: 100%;
+}
+.fileChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  padding: 1px var(--s-1) 1px var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: var(--t-1);
+  font-weight: 400;
+  color: var(--muted);
+  background: var(--raised);
+}
+.fileChip button {
+  all: unset;
+  cursor: pointer;
+  padding: 0 var(--s-1);
+  color: var(--faint);
+}
+.fileChip button:hover {
+  color: var(--text);
+}
+.thinking {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  color: var(--muted);
+  font-size: var(--t-2);
+}
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--verified);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (max-width: 640px) {
+  .dropHint {
+    display: none;
+  }
+  .code {
+    min-height: 260px;
+  }
+  .editorBar {
+    padding-left: var(--s-3);
+  }
+}

@@ -1,0 +1,92 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-4) 0 0;
+  border-top: 1px solid var(--border);
+  max-width: var(--measure);
+}
+.question {
+  font-size: var(--t-2);
+  font-weight: 600;
+}
+.recorded {
+  color: var(--muted);
+  font-size: var(--t-2);
+  max-width: none;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  align-items: flex-start;
+}
+.choice {
+  height: 2rem;
+  padding: 0 var(--s-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: var(--t-2);
+  font-weight: 500;
+  cursor: pointer;
+}
+.choice:hover {
+  background: var(--surface-2);
+}
+.chosen {
+  border-color: var(--verified);
+  background: var(--verified-bg);
+}
+.note {
+  width: 100%;
+  font: inherit;
+  padding: var(--s-2) var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  resize: vertical;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  align-items: center;
+  width: 100%;
+}
+.password {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.password input {
+  padding: var(--s-1) var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  width: 12em;
+}
+.save {
+  padding: var(--s-1) var(--s-4);
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--verified);
+  color: var(--on-accent);
+  font-weight: 500;
+  cursor: pointer;
+}
+.save:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.link {
+  all: unset;
+  cursor: pointer;
+  color: var(--link);
+}
+.error {
+  color: var(--error);
+  font-size: var(--t-2);
+}

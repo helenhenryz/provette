@@ -1,0 +1,120 @@
+.doc {
+  max-width: 78ch;
+}
+.crumbs {
+  font-size: var(--t-2);
+  display: flex;
+  gap: var(--s-2);
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: var(--s-5);
+  max-width: none;
+}
+.source {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: var(--t-1);
+  color: var(--faint);
+}
+
+/* the rendered Markdown: the base typography, plus what Markdown produces */
+.body h1 {
+  font-size: var(--t-6);
+  margin-bottom: var(--s-4);
+}
+.body h2 {
+  font-size: var(--t-5);
+  margin: var(--s-7) 0 var(--s-3);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--border);
+}
+.body h3 {
+  font-size: var(--t-4);
+  margin: var(--s-5) 0 var(--s-2);
+}
+.body p,
+.body ul,
+.body ol {
+  margin: 0 0 var(--s-4);
+  max-width: none;
+}
+.body li {
+  margin-bottom: var(--s-1);
+}
+.body table {
+  margin: var(--s-4) 0;
+  display: block;
+  overflow-x: auto;
+}
+.body code {
+  background: var(--surface);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+.body pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--s-3);
+  margin: 0 0 var(--s-4);
+  font-size: var(--t-2);
+}
+.body pre code {
+  background: none;
+  padding: 0;
+}
+.body blockquote {
+  margin: 0 0 var(--s-4);
+  padding-left: var(--s-4);
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+}
+.body hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: var(--s-5) 0;
+}
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 78ch) 1fr;
+  gap: var(--s-6);
+  align-items: start;
+}
+.tocSide {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .tocSide {
+    display: block;
+    position: sticky;
+    top: 68px;
+    max-height: calc(100vh - 84px);
+    overflow-y: auto;
+    font-size: var(--t-2);
+  }
+  .tocFold {
+    display: none;
+  }
+}
+.tocTitle {
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: var(--s-2);
+}
+.toc {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  color: var(--muted);
+  display: grid;
+  gap: var(--s-1);
+}
+.tocFold {
+  margin-bottom: var(--s-5);
+  font-size: var(--t-2);
+}
+.tocFold summary {
+  cursor: pointer;
+  color: var(--muted);
+  margin-bottom: var(--s-2);
+}

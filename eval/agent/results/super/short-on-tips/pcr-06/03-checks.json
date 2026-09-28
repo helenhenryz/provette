@@ -1,0 +1,762 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 1,
+ "verify_text": "protocol.py: MISMATCH against plate map pcr-06. 15 of 17 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 2). Reading of the request: 16\n    reactions.\n  well A12 (reactions): expected 20 ul pcr_mix, 1 ul colony_12; found 20 ul pcr_mix\n      - colony_12 is missing: the plate map says 1 ul, none arrives\n  well B12: expected nothing; found 1 ul [water]\n      - the plate map says nothing about this well, but it holds liquid\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  pcr mix                               500.0     320.0     180.0       0.0     0.0\n  water                                 500.0       0.0     499.0       1.0     0.0\n  colony 1                              100.0       1.0      99.0       0.0     0.0\n  colony 2                              100.0       1.0      99.0       0.0     0.0\n  colony 3                              100.0       1.0      99.0       0.0     0.0\n  colony 4                              100.0       1.0      99.0       0.0     0.0\n  colony 5                              100.0       1.0      99.0       0.0     0.0\n  colony 6                              100.0       1.0      99.0       0.0     0.0\n  colony 7                              100.0       1.0      99.0       0.0     0.0\n  colony 8                              100.0       1.0      99.0       0.0     0.0\n  colony 9                              100.0       1.0      99.0       0.0     0.0\n  colony 10                             100.0       1.0      99.0       0.0     0.0\n  colony 11                             100.0       1.0      99.0       0.0     0.0\n  colony 12                             100.0       0.0     100.0       0.0     0.0\n  colony 13                             100.0       1.0      99.0       0.0     0.0\n  colony 14                             100.0       1.0      99.0       0.0     0.0\n  colony 15                             100.0       1.0      99.0       0.0     0.0\n  colony 16                             100.0       1.0      99.0       0.0     0.0\n  Note: water ends in wells the plate map does not list for it: B12 in slot 2 (1.0 ul).\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    NEST 96 Well Plate 100 \u00b5L PCR Full Sk B12                                         80.0         -  <-- DRAWS AIR\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A1    colony 1                               1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B1    colony 13                              1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A2    colony 2                               1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B2    colony 14                              1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A3    colony 3                               1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B3    colony 15                              1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A4    colony 4                               1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        B4    colony 16                              1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A5    colony 5                               1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A6    colony 6                               1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A7    colony 7                               1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A8    colony 8                               1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A9    colony 9                               1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A10   colony 10                              1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A11   colony 11                              1.0     100.0\n  3    NEST 96 Well Plate 200 \u00b5L Flat        A12   colony 12                              0.0     100.0  already in the plate: 100 ul declared, nothing drawn\n  4    Opentrons 24 Tube Rack with NEST 1.5  A1    pcr mix                              320.0     500.0\n  5    Opentrons 24 Tube Rack with NEST 1.5  A1    water                                  1.0     500.0\n  FLAG: well in B12, slot 2 is asked for 80 ul more than the robot had put into it at that\n    point, so the pipette draws air.\n  Tips: 17 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n  A well 'already in the plate' is declared to hold liquid before the run and the robot only\n    adds to it: put in what is declared.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-06",
+  "technique": "PCR setup",
+  "exit_code": 1,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "mismatch",
+   "destination": "2:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "16 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 15,
+   "wells_total": 17,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_1": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_1": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_2": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_2": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_3": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_3": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_4": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_4": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_5": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_5": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_6": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_6": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_7": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_7": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_8": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_8": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_9": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_9": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_10": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_10": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_11": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_11": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_13": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_13": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_14": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_14": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_15": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_15": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_16": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0,
+      "colony_16": 1.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_12": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "colony_12",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[water]": 1.0
+     },
+     "ok": false,
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "mismatches": [
+    {
+     "well": "A12",
+     "group": "reactions",
+     "expected": {
+      "pcr_mix": 20.0,
+      "colony_12": 1.0
+     },
+     "found": {
+      "pcr_mix": 20.0
+     },
+     "issues": [
+      {
+       "kind": "missing_liquid",
+       "liquid": "colony_12",
+       "expected_ul": 1.0,
+       "found_ul": 0.0,
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "well": "B12",
+     "group": null,
+     "expected": {},
+     "found": {
+      "[water]": 1.0
+     },
+     "issues": [
+      {
+       "kind": "unexpected_well",
+       "liquid": null,
+       "expected_ul": null,
+       "found_ul": null,
+       "detail": ""
+      }
+     ]
+    }
+   ]
+  },
+  "accounting": [
+   {
+    "liquid": "pcr mix",
+    "logical": "pcr_mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 320.0,
+    "left_in_source_ul": 180.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": null,
+    "role": "unbound",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 499.0,
+    "elsewhere": [
+     {
+      "well": "2:nest_96_wellplate_100ul_pcr_full_skirt[B12]",
+      "ul": 1.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "water ends in wells the plate map does not list for it: B12 in slot 2 (1.0 ul)."
+    ]
+   },
+   {
+    "liquid": "colony 1",
+    "logical": "colony_1",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 2",
+    "logical": "colony_2",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 3",
+    "logical": "colony_3",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 4",
+    "logical": "colony_4",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 5",
+    "logical": "colony_5",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 6",
+    "logical": "colony_6",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 7",
+    "logical": "colony_7",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 8",
+    "logical": "colony_8",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 9",
+    "logical": "colony_9",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 10",
+    "logical": "colony_10",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 11",
+    "logical": "colony_11",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 12",
+    "logical": "colony_12",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 100.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 13",
+    "logical": "colony_13",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 14",
+    "logical": "colony_14",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 15",
+    "logical": "colony_15",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "colony 16",
+    "logical": "colony_16",
+    "role": "sample",
+    "declared_ul": 100.0,
+    "delivered_ul": 1.0,
+    "left_in_source_ul": 99.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt",
+     "well": "B12",
+     "liquid": "",
+     "declared_ul": null,
+     "needed_ul": 80.0,
+     "flag": "draws_air",
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A1",
+     "liquid": "colony 1",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B1",
+     "liquid": "colony 13",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A2",
+     "liquid": "colony 2",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B2",
+     "liquid": "colony 14",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A3",
+     "liquid": "colony 3",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B3",
+     "liquid": "colony 15",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A4",
+     "liquid": "colony 4",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "B4",
+     "liquid": "colony 16",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A5",
+     "liquid": "colony 5",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A6",
+     "liquid": "colony 6",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A7",
+     "liquid": "colony 7",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A8",
+     "liquid": "colony 8",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A9",
+     "liquid": "colony 9",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A10",
+     "liquid": "colony 10",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A11",
+     "liquid": "colony 11",
+     "declared_ul": 100.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "NEST 96 Well Plate 200 \u00b5L Flat",
+     "well": "A12",
+     "liquid": "colony 12",
+     "declared_ul": 100.0,
+     "needed_ul": 0.0,
+     "flag": null,
+     "already_in_plate": true
+    },
+    {
+     "slot": "4",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "pcr mix",
+     "declared_ul": 500.0,
+     "needed_ul": 320.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "5",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 500.0,
+     "needed_ul": 1.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 17
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: no biology problems found.\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.\nA clean report is not a promise that the experiment will work.",
+ "findings": [],
+ "seconds": 5.1,
+ "draft": 3
+}

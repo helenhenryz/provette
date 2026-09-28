@@ -1,0 +1,280 @@
+.wrap {
+  display: grid;
+  grid-template-columns: minmax(200px, 2fr) minmax(240px, 3fr);
+  gap: var(--s-4);
+  align-items: start;
+}
+@media (max-width: 720px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* the deck overview */
+.deck {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.slotBox {
+  fill: var(--surface-2);
+  stroke: var(--border);
+  stroke-width: 0.6;
+}
+.slotNumber {
+  font-size: 18px;
+  font-family: var(--mono);
+  fill: var(--border);
+  font-weight: 600;
+}
+.mini {
+  cursor: pointer;
+  outline: none;
+}
+.miniBody {
+  fill: var(--bg);
+  stroke: var(--faint);
+  stroke-width: 0.6;
+}
+.miniSelected .miniBody {
+  stroke: var(--link);
+  stroke-width: 1.4;
+}
+.mini:focus-visible .miniBody {
+  stroke: var(--link);
+  stroke-width: 1.4;
+}
+.trash .miniBody {
+  fill: var(--surface-2);
+  stroke-dasharray: 2 1.2;
+}
+.miniWell {
+  fill: var(--surface-2);
+  stroke: var(--border);
+  stroke-width: 0.25;
+}
+.miniTip {
+  fill: var(--surface-2);
+  stroke: var(--border);
+  stroke-width: 0.25;
+}
+.miniLabel {
+  fill: var(--text);
+  font-family: var(--font);
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.pipetteMark {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.2;
+}
+.activeOutline {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 0.8;
+  stroke-dasharray: 2 1.5;
+  pointer-events: none;
+}
+
+/* the close-up */
+.closeup {
+  min-width: 0;
+}
+.title {
+  font-size: var(--t-2);
+  color: var(--text);
+  margin-bottom: var(--s-2);
+  /* one line, so a long labware name never pushes the close-up down */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* the close-up's frame: one shape for every labware (a plate, a trough, a tube rack, the
+   trash), the labware fitted inside it, so what is under it stays put as the pipette moves */
+.stage {
+  aspect-ratio: 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slot {
+  font-family: var(--mono);
+  color: var(--muted);
+}
+.note {
+  color: var(--warning);
+}
+.svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.body {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 0.4;
+}
+.axis {
+  font-size: 3.2px;
+  fill: var(--faint);
+  font-family: var(--mono);
+}
+.well {
+  cursor: pointer;
+  outline: none;
+}
+.wellBg {
+  fill: var(--bg);
+}
+.ring {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 0.35;
+}
+.well:hover .ring,
+.well:focus-visible .ring {
+  stroke: var(--text);
+  stroke-width: 0.6;
+}
+.acted .ring {
+  stroke: var(--text);
+  stroke-width: 0.8;
+}
+.marked .ring {
+  stroke: var(--error);
+  stroke-width: 0.9;
+}
+.reached .ring {
+  stroke: var(--warning);
+  stroke-width: 0.7;
+  stroke-dasharray: 1 0.7;
+}
+.held .ring {
+  stroke-width: 0.7;
+}
+.proposed .ring {
+  stroke: var(--note);
+  stroke-width: 0.6;
+  stroke-dasharray: 0.9 0.6;
+}
+.proposed .wellBg {
+  fill: var(--note-bg);
+}
+.carry {
+  fill: none;
+  stroke: var(--warning);
+  stroke-width: 0.35;
+  stroke-dasharray: 0.6 0.6;
+}
+.unknownVolume {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 0.3;
+  stroke-dasharray: 0.5 0.5;
+}
+
+/* tips in a rack */
+.tip_fresh {
+  fill: var(--text);
+  opacity: 0.75;
+}
+.tip_parked {
+  /* the stripes are a pattern; the stripe colour is below */
+}
+.tip_in_use,
+.tip_gone {
+  fill: var(--surface-2);
+}
+.parkedStripe {
+  fill: var(--warning);
+}
+
+/* the pipette */
+.tipBody {
+  fill: var(--bg);
+}
+.tipEdge {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 0.35;
+}
+.tipLabel {
+  fill: var(--text);
+  font-family: var(--mono);
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+}
+
+/* what the tip or the hovered well holds; no room kept when there is nothing to say */
+.readout {
+  font-size: var(--t-2);
+  color: var(--muted);
+  margin-top: var(--s-2);
+  /* always two lines tall, empty or not, so nothing under it moves */
+  line-height: 1.5;
+  height: 3em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+/* the gantry on the overview */
+.beam {
+  stroke: var(--faint);
+  stroke-width: 1.2;
+  opacity: 0.55;
+}
+.pipetteMarkTip {
+  fill: var(--text);
+  stroke: var(--bg);
+  stroke-width: 0.6;
+}
+.binCount {
+  fill: var(--muted);
+  font-family: var(--mono);
+  pointer-events: none;
+}
+.nozzle {
+  fill: var(--muted);
+}
+
+/* the bin's close-up */
+.droppedTip {
+  fill: var(--surface-2);
+  stroke: var(--muted);
+  stroke-width: 0.3;
+}
+.mixMark path {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 0.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: swirl 0.9s linear infinite;
+  transform-origin: 0 0;
+}
+@keyframes swirl {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mixMark path {
+    animation: none;
+  }
+}

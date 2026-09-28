@@ -1,0 +1,89 @@
+{
+ "id": "pcr-02",
+ "condition": "short-on-tips",
+ "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+ "runner": "local",
+ "one_shot": {
+  "simulator": "rejected",
+  "verify_exit": 2,
+  "check_exit": null,
+  "findings": [],
+  "draft": 0
+ },
+ "loop": {
+  "simulator": "passed",
+  "verify_exit": 3,
+  "check_exit": 1,
+  "findings": [
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 64,
+    "title": "The pipette draws air from well A2 in slot 2: the liquid is below the tip"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 86,
+    "title": "A used tip went into a stock: 23 stocks"
+   },
+   {
+    "rule_id": "CONTAM-STOCK",
+    "severity": "error",
+    "certain": true,
+    "line": 93,
+    "title": "A used tip went into a stock: 10 stocks"
+   },
+   {
+    "rule_id": "SOURCE-TOO-SHALLOW",
+    "severity": "error",
+    "certain": true,
+    "line": 93,
+    "title": "The pipette draws air from tube D1 in slot 3: the liquid is below the tip"
+   },
+   {
+    "rule_id": "CONTAM-WELL",
+    "severity": "warning",
+    "certain": true,
+    "line": 94,
+    "title": "A used tip carried sample 13 (tube C1 in slot 3), sample 14 (tube C2 in slot 3), sample 15 (tube C3 in slot 3), sample 16 (tube C4 in slot 3) and 2 more into 6 wells it was never meant for"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 87,
+    "title": "17 wells never mixed after sample 2, sample 3, sample 4, sample 5 and 7 more went in (8 to 14% of the well)"
+   },
+   {
+    "rule_id": "NO-SAMPLE-INTO-REAGENT-WELL",
+    "severity": "note",
+    "certain": true,
+    "line": 94,
+    "title": "(proposed) A tip that had been in a sample went into a reagent"
+   },
+   {
+    "rule_id": "UNMIXED-AT-END",
+    "severity": "note",
+    "certain": true,
+    "line": 94,
+    "title": "6 wells never mixed after sample 13, sample 14, sample 15, sample 16 and 2 more went in (12% of the well)"
+   }
+  ],
+  "draft": 18,
+  "rounds": 18
+ },
+ "tool_calls": 24,
+ "turns": 24,
+ "drafts": 19,
+ "checks": 19,
+ "submitted": false,
+ "submitted_clean": false,
+ "final_draft_checked_by_harness": false,
+ "stop_reason": "token budget",
+ "tokens_in": 1397385,
+ "tokens_out": 107225,
+ "seconds": 912.2
+}

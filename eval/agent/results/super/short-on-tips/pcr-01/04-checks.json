@@ -1,0 +1,323 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 3,
+ "verify_text": "protocol.py: CANNOT CHECK against plate map pcr-01.\n  The plate map speaks of 'sample_8', but no liquid the protocol declares matches it\n    (pattern (?i)(?:sample|dna|template)\\D{0,12}?(\\d+)). Declared: master mix, sample 1,\n    sample 2, sample 3, sample 4, sample 5, sample 6, sample 7.\n  Nothing was verified. This is not a pass.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  master mix                           1500.0       0.0    1340.0     160.0     0.0\n  sample 1                              500.0       0.0     495.0       5.0     0.0  <-- FLAG\n  sample 2                              500.0       0.0     495.0       5.0     0.0  <-- FLAG\n  sample 3                              500.0       0.0     495.0       5.0     0.0  <-- FLAG\n  sample 4                              500.0       0.0     495.0       5.0     0.0  <-- FLAG\n  sample 5                              500.0       0.0     495.0       5.0     0.0  <-- FLAG\n  sample 6                              500.0       0.0     495.0       5.0     0.0  <-- FLAG\n  sample 7                              500.0       0.0     495.0       5.0     0.0  <-- FLAG\n  FLAG: sample 1 ends in wells the plate map does not list for it: A1 in slot 3 (5.0 ul).\n  FLAG: sample 2 ends in wells the plate map does not list for it: B1 in slot 3 (5.0 ul).\n  FLAG: sample 3 ends in wells the plate map does not list for it: C1 in slot 3 (5.0 ul).\n  FLAG: sample 4 ends in wells the plate map does not list for it: D1 in slot 3 (5.0 ul).\n  FLAG: sample 5 ends in wells the plate map does not list for it: E1 in slot 3 (5.0 ul).\n  FLAG: sample 6 ends in wells the plate map does not list for it: F1 in slot 3 (5.0 ul).\n  FLAG: sample 7 ends in wells the plate map does not list for it: G1 in slot 3 (5.0 ul).\n  Note: master mix ends in wells the plate map does not list for it: A1 in slot 3 (20.0 ul),\n    B1 in slot 3 (20.0 ul), C1 in slot 3 (20.0 ul), D1 in slot 3 (20.0 ul), E1 in slot 3\n    (20.0 ul), F1 in slot 3 (20.0 ul) and 2 more.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    master mix                           160.0    1500.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B1    sample 1                               5.0     500.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C1    sample 2                               5.0     500.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D1    sample 3                               5.0     500.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    sample 4                               5.0     500.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B2    sample 5                               5.0     500.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C2    sample 6                               5.0     500.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D2    sample 7                               5.0     500.0\n  Tips: 8 from Opentrons OT-2 96 Tip Rack 300 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-01",
+  "technique": "PCR setup",
+  "exit_code": 3,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "cannot_check",
+   "destination": null,
+   "variant": null,
+   "problems": [
+    "The plate map speaks of 'sample_8', but no liquid the protocol declares matches it (pattern (?i)(?:sample|dna|template)\\D{0,12}?(\\d+)). Declared: master mix, sample 1, sample 2, sample 3, sample 4, sample 5, sample 6, sample 7."
+   ],
+   "notes": [],
+   "wells_ok": 0,
+   "wells_total": 0,
+   "wells": [],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "master mix",
+    "logical": "master_mix",
+    "role": "reagent",
+    "declared_ul": 1500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 1340.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A1]",
+      "ul": 20.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 20.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 20.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 20.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[E1]",
+      "ul": 20.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[F1]",
+      "ul": 20.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[G1]",
+      "ul": 20.0
+     },
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[H1]",
+      "ul": 20.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": [
+     "master mix ends in wells the plate map does not list for it: A1 in slot 3 (20.0 ul), B1 in slot 3 (20.0 ul), C1 in slot 3 (20.0 ul), D1 in slot 3 (20.0 ul), E1 in slot 3 (20.0 ul), F1 in slot 3 (20.0 ul) and 2 more."
+    ]
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[A1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "sample 1 ends in wells the plate map does not list for it: A1 in slot 3 (5.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[B1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "sample 2 ends in wells the plate map does not list for it: B1 in slot 3 (5.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[C1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "sample 3 ends in wells the plate map does not list for it: C1 in slot 3 (5.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[D1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "sample 4 ends in wells the plate map does not list for it: D1 in slot 3 (5.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[E1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "sample 5 ends in wells the plate map does not list for it: E1 in slot 3 (5.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[F1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "sample 6 ends in wells the plate map does not list for it: F1 in slot 3 (5.0 ul)."
+    ],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 500.0,
+    "delivered_ul": 0.0,
+    "left_in_source_ul": 495.0,
+    "elsewhere": [
+     {
+      "well": "3:nest_96_wellplate_200ul_flat[G1]",
+      "ul": 5.0
+     }
+    ],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [
+     "sample 7 ends in wells the plate map does not list for it: G1 in slot 3 (5.0 ul)."
+    ],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "master mix",
+     "declared_ul": 1500.0,
+     "needed_ul": 160.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 1",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "sample 2",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D1",
+     "liquid": "sample 3",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "sample 4",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 5",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "sample 6",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D2",
+     "liquid": "sample 7",
+     "declared_ul": 500.0,
+     "needed_ul": 5.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+     "tips": 8
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: 1 biology problem (1 note).\n\n1. NOTE UNMIXED-AT-END: 7 wells never mixed after sample 1, sample 2, sample 3, sample 4 and\n3 more went in (20% of the well)\n   line 53:  p20.dispense(5, plate[dst])\n   At line 53 the robot added sample 1, sample 2, sample 3, sample 4 and 3 more to wells A1,\n   B1, C1, D1, E1, F1 and G1 in slot 3, which already held master mix (this line did it 7\n   times). The addition was 20% of the well, nothing mixed the well afterwards, and the run\n   ended with them that way. Two liquids layered in a small well do not mix on their own, so\n   what the well holds is not at the concentration you calculated. A PCR plate is usually\n   vortexed and spun down before cycling; if this one will not be, mix it.\n   Affected: wells A1, B1, C1, D1, E1, F1 and G1 in slot 3.\n   Fix: Mix wells A1, B1, C1, D1, E1, F1 and G1 in slot 3 after line 53: `mix_after=(5, 20)`\n   on the transfer, or `pipette.mix(5, 20, well)`, with the volume about 80% of what the\n   well holds.\n   Source: Artel: automated liquid handlers as sources of error\n           https://www.bioprocessintl.com/assays/automated-liquid-handlers-as-sources-of-error\n   Source: Illumina: normalising library concentrations (pipette up and down 10 times to\n   mix)\n           https://support.illumina.com/ko-kr/bulletins/2017/03/best-practices-for-manually-normalizing-library-concentrations.html\n   Source: Thermo PowerTrack user guide (a reaction plate not mixed well gives variable\n   replicates)\n           https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0018825_PowerTrackSYBRGreenMasterMix_UG.pdf\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   [9a4a1ff5745c]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "UNMIXED-AT-END",
+   "severity": "note",
+   "certain": true,
+   "line": 53,
+   "title": "7 wells never mixed after sample 1, sample 2, sample 3, sample 4 and 3 more went in (20% of the well)",
+   "explanation": "At line 53 the robot added sample 1, sample 2, sample 3, sample 4 and 3 more to wells A1, B1, C1, D1, E1, F1 and G1 in slot 3, which already held master mix (this line did it 7 times). The addition was 20% of the well, nothing mixed the well afterwards, and the run ended with them that way. Two liquids layered in a small well do not mix on their own, so what the well holds is not at the concentration you calculated. A PCR plate is usually vortexed and spun down before cycling; if this one will not be, mix it.",
+   "fix": "Mix wells A1, B1, C1, D1, E1, F1 and G1 in slot 3 after line 53: `mix_after=(5, 20)` on the transfer, or `pipette.mix(5, 20, well)`, with the volume about 80% of what the well holds."
+  }
+ ],
+ "seconds": 4.5,
+ "draft": 4
+}

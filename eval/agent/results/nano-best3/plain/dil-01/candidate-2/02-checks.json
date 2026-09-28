@@ -1,0 +1,297 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map dil-01. 12 of 12 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3). Reading of the request:\n    row A; first point is 1:2; excess removed from the last well.\n\nLabware for the technique (Serial dilution): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  drug                                  150.0     100.0      50.0       0.0     0.0\n  pbs                                  1500.0    1100.0     300.0       0.0   100.0\n  Note: 100.0 ul of pbs is lost: it left the deck inside a tip that was thrown away.\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    drug                                 100.0     150.0\n  4    NEST 12 Well Reservoir 15 mL          A1    pbs                                 1200.0    1500.0\n  Tips: 12 from Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L in slot 1.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "dil-01",
+  "technique": "Serial dilution",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "3:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "row A; first point is 1:2; excess removed from the last well",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 12,
+   "wells_total": 12,
+   "wells": [
+    {
+     "well": "A1",
+     "group": null,
+     "expected": {
+      "drug": 50.0,
+      "pbs": 50.0
+     },
+     "found": {
+      "pbs": 50.0,
+      "drug": 50.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": null,
+     "expected": {
+      "drug": 25.0,
+      "pbs": 75.0
+     },
+     "found": {
+      "pbs": 75.0,
+      "drug": 25.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": null,
+     "expected": {
+      "drug": 12.5,
+      "pbs": 87.5
+     },
+     "found": {
+      "pbs": 87.5,
+      "drug": 12.5
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": null,
+     "expected": {
+      "drug": 6.25,
+      "pbs": 93.75
+     },
+     "found": {
+      "pbs": 93.75,
+      "drug": 6.25
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": null,
+     "expected": {
+      "drug": 3.125,
+      "pbs": 96.875
+     },
+     "found": {
+      "pbs": 96.875,
+      "drug": 3.125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": null,
+     "expected": {
+      "drug": 1.5625,
+      "pbs": 98.4375
+     },
+     "found": {
+      "pbs": 98.4375,
+      "drug": 1.5625
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A7",
+     "group": null,
+     "expected": {
+      "drug": 0.7812,
+      "pbs": 99.2188
+     },
+     "found": {
+      "pbs": 99.21875,
+      "drug": 0.78125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A8",
+     "group": null,
+     "expected": {
+      "drug": 0.3906,
+      "pbs": 99.6094
+     },
+     "found": {
+      "pbs": 99.609375,
+      "drug": 0.390625
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A9",
+     "group": null,
+     "expected": {
+      "drug": 0.1953,
+      "pbs": 99.8047
+     },
+     "found": {
+      "pbs": 99.8046875,
+      "drug": 0.1953125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A10",
+     "group": null,
+     "expected": {
+      "drug": 0.0977,
+      "pbs": 99.9023
+     },
+     "found": {
+      "pbs": 99.90234375,
+      "drug": 0.09765625
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A11",
+     "group": null,
+     "expected": {
+      "drug": 0.0488,
+      "pbs": 99.9512
+     },
+     "found": {
+      "pbs": 99.951171875,
+      "drug": 0.048828125
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A12",
+     "group": null,
+     "expected": {
+      "drug": 0.0244,
+      "pbs": 99.9756
+     },
+     "found": {
+      "pbs": 99.9755859375,
+      "drug": 0.0244140625
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "drug",
+    "logical": "drug",
+    "role": "reagent",
+    "declared_ul": 150.0,
+    "delivered_ul": 99.9756,
+    "left_in_source_ul": 50.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0244,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "pbs",
+    "logical": "pbs",
+    "role": "reagent",
+    "declared_ul": 1500.0,
+    "delivered_ul": 1100.0244,
+    "left_in_source_ul": 300.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 99.9756,
+    "flags": [],
+    "notes": [
+     "100.0 ul of pbs is lost: it left the deck inside a tip that was thrown away."
+    ]
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "drug",
+     "declared_ul": 150.0,
+     "needed_ul": 100.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "pbs",
+     "declared_ul": 1500.0,
+     "needed_ul": 1200.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "1",
+     "rack": "Opentrons OT-2 96 Filter Tip Rack 200 \u00b5L",
+     "tips": 12
+    }
+   ]
+  }
+ },
+ "check_exit": 1,
+ "check_text": "protocol.py: 4 biology problems (2 warnings, 2 notes).\n\n1. WARNING MIX-BEFORE-DRAW: Liquid drawn from 12 wells before it was mixed: added at line\n37, drawn at line 36 and line 40\n   line 37:  p300.dispense(100, plate[well_name])\n   At line 37 liquid was added to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3,\n   which already held a different liquid (this line did it 12 times). At line 36 and line 40\n   liquid was drawn out of them again, and the well was never mixed in between. Two liquids\n   layered in a small well do not mix on their own, so what the tip drew is not at the\n   concentration you calculated. In a dilution series every later step inherits the error.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Fix: Mix the well after the addition at line 37: `mix_after=(5, volume)` in a transfer,\n   or `pipette.mix(5, volume, well)`. Integra suggests about 5 cycles at about 80% of the\n   volume in the well.\n   Source: Integra: how to perform serial dilutions\n           https://www.integra-biosciences.com/global/en/applicationguide/master-art-pipetting-and-learn-how-perform-serial-dilutions-our-comprehensive-guide\n   Source: Svec et al. 2015: how good is a PCR efficiency estimate\n           https://pmc.ncbi.nlm.nih.gov/articles/PMC4822216/\n   [dd292e6833ef]\n\n2. WARNING WELL-CAPACITY: More liquid than the well is rated for: 200 ul against 100 ul, 12\nwells\n   line 37:  p300.dispense(100, plate[well_name])\n   At line 37 the robot filled wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3\n   past the 100 ul the maker states for it (this line did it 12 times), reaching 200 ul,\n   under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs\n   the wall and wets the seal, a tip going in displaces it over the edge, and the volumes\n   still add up on paper, so the plate map does not see it and the simulator says nothing.\n   Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Fix: Use labware rated for the volume, or scale every volume down so the fullest well\n   stays under the stated maximum with room to mix.\n   Source: Opentrons labware schema 2: totalLiquidVolume, the total well volume in\n   microlitres\n           https://raw.githubusercontent.com/Opentrons/opentrons/edge/shared-data/labware/schemas/2.json\n   Source: Bartley et al. 2023, LabOP: a protocol never adds more liquid than its container\n   holds\n           https://jakebeal.github.io/Publications/JETC23-LabOP.pdf\n   [bd687286062f]\n\n3. NOTE CONTAM-STOCK: A used tip went into a stock: drug (tube A1 in slot 2)\n   line 36:  p300.aspirate(100, source)\n   At line 36 the tip went into drug (tube A1 in slot 2) while it still carried pbs (well A1\n   in slot 4) from an earlier step. A tip that has touched one liquid leaves a little of it\n   in the next liquid it touches, so this stock now holds material that does not belong\n   there. The protocol does not draw from it again, so this run is not harmed, but what is\n   left in the stock is no longer clean for the next run.\n   Affected: tube A1 in slot 2.\n   Fix: Pick up a fresh tip before line 36 goes into the stock. Or change the order: hand\n   out the shared liquid first, while the tip is still clean, and add the other liquids\n   afterwards with a fresh tip each.\n   Source: Lab Manager: minimizing cross-contamination in automated liquid handling\n           https://www.labmanager.com/minimizing-cross-contamination-in-automated-liquid-handling-workflows-35194\n   Source: WHO: dos and don'ts for molecular testing\n           https://www.who.int/teams/global-malaria-programme/case-management/diagnosis/nucleic-acid-amplification-based-diagnostics/dos-and-don-ts-for-molecular-testing\n   [77fef177cc47]\n\n4. NOTE NO-NEGATIVE-CONTROL: No blank on a dilution series: 12 wells of drug\n   line 37:  p300.dispense(100, plate[well_name])\n   At line 37 the robot starts a dilution series of drug in NEST 96 Well Plate 100 \u00b5L PCR\n   Full Skirt (slot 3): 12 wells at 12 concentrations, each level about 2 times weaker than\n   the one before. No well on this plate holds pbs with no sample, so there is no blank: the\n   curve has no zero to read against, and a signal from the diluent or the plastic cannot be\n   told from the lowest point. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in\n   slot 3.\n   Affected: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.\n   Fix: Add a well of pbs alone, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [17b4a4d492ae]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "MIX-BEFORE-DRAW",
+   "severity": "warning",
+   "certain": true,
+   "line": 37,
+   "title": "Liquid drawn from 12 wells before it was mixed: added at line 37, drawn at line 36 and line 40",
+   "explanation": "At line 37 liquid was added to wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3, which already held a different liquid (this line did it 12 times). At line 36 and line 40 liquid was drawn out of them again, and the well was never mixed in between. Two liquids layered in a small well do not mix on their own, so what the tip drew is not at the concentration you calculated. In a dilution series every later step inherits the error.",
+   "fix": "Mix the well after the addition at line 37: `mix_after=(5, volume)` in a transfer, or `pipette.mix(5, volume, well)`. Integra suggests about 5 cycles at about 80% of the volume in the well."
+  },
+  {
+   "rule_id": "WELL-CAPACITY",
+   "severity": "warning",
+   "certain": true,
+   "line": 37,
+   "title": "More liquid than the well is rated for: 200 ul against 100 ul, 12 wells",
+   "explanation": "At line 37 the robot filled wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3 past the 100 ul the maker states for it (this line did it 12 times), reaching 200 ul, under the 217 ul the well holds to its rim. Above the stated maximum the liquid climbs the wall and wets the seal, a tip going in displaces it over the edge, and the volumes still add up on paper, so the plate map does not see it and the simulator says nothing. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.",
+   "fix": "Use labware rated for the volume, or scale every volume down so the fullest well stays under the stated maximum with room to mix."
+  },
+  {
+   "rule_id": "CONTAM-STOCK",
+   "severity": "note",
+   "certain": true,
+   "line": 36,
+   "title": "A used tip went into a stock: drug (tube A1 in slot 2)",
+   "explanation": "At line 36 the tip went into drug (tube A1 in slot 2) while it still carried pbs (well A1 in slot 4) from an earlier step. A tip that has touched one liquid leaves a little of it in the next liquid it touches, so this stock now holds material that does not belong there. The protocol does not draw from it again, so this run is not harmed, but what is left in the stock is no longer clean for the next run.",
+   "fix": "Pick up a fresh tip before line 36 goes into the stock. Or change the order: hand out the shared liquid first, while the tip is still clean, and add the other liquids afterwards with a fresh tip each."
+  },
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 37,
+   "title": "No blank on a dilution series: 12 wells of drug",
+   "explanation": "At line 37 the robot starts a dilution series of drug in NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 3): 12 wells at 12 concentrations, each level about 2 times weaker than the one before. No well on this plate holds pbs with no sample, so there is no blank: the curve has no zero to read against, and a signal from the diluent or the plastic cannot be told from the lowest point. Wells: wells A1, A2, A3, A4, A5, A6, A7, A8 and 4 more in slot 3.",
+   "fix": "Add a well of pbs alone, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 4.6,
+ "draft": 2
+}

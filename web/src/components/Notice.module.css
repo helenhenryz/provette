@@ -1,0 +1,139 @@
+/* A notice: the tone's mark, the words, and a × when it can be closed. A tinted fill and a
+   faint border in the tone, so it reads as a status, not an alarm. */
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-3) var(--s-3) var(--s-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  max-width: var(--measure);
+  font-size: var(--t-2);
+  line-height: 1.5;
+}
+.mark {
+  flex: none;
+  display: inline-flex;
+  margin-top: 2px;
+  color: var(--muted);
+}
+.body {
+  flex: 1;
+  min-width: 0;
+}
+.title {
+  font-weight: 600;
+  color: var(--text);
+}
+.words {
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.title + .words {
+  color: var(--muted);
+}
+.dismiss {
+  all: unset;
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin: -2px -2px 0 0;
+  border-radius: var(--radius);
+  color: var(--muted);
+  cursor: pointer;
+}
+.dismiss:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+.dismiss:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+.ok {
+  border-color: color-mix(in srgb, var(--verified) 35%, transparent);
+  background: var(--verified-bg);
+}
+.ok .mark {
+  color: var(--verified);
+}
+.warning {
+  border-color: color-mix(in srgb, var(--warning) 35%, transparent);
+  background: var(--warning-bg);
+}
+.warning .mark {
+  color: var(--warning);
+}
+.error {
+  border-color: color-mix(in srgb, var(--error) 35%, transparent);
+  background: var(--error-bg);
+}
+.error .mark {
+  color: var(--error);
+}
+.info .mark {
+  color: var(--note);
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  max-width: var(--measure);
+}
+.boneTitle,
+.boneLine,
+.boneLineShort,
+.boneBlock {
+  border-radius: var(--radius);
+  background: linear-gradient(
+    90deg,
+    var(--surface) 25%,
+    var(--surface-2) 50%,
+    var(--surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+.boneTitle {
+  height: 28px;
+  width: 60%;
+}
+.boneLine {
+  height: 14px;
+}
+.boneLineShort {
+  height: 14px;
+  width: 40%;
+}
+.boneBlock {
+  height: 160px;
+}
+.loadingWords {
+  color: var(--muted);
+  font-size: var(--t-2);
+}
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .boneTitle,
+  .boneLine,
+  .boneLineShort,
+  .boneBlock {
+    animation: none;
+  }
+}

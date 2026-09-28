@@ -1,0 +1,131 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.finding {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--s-3) var(--s-4);
+  background: var(--bg);
+}
+.head {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.rule {
+  font-family: var(--mono);
+}
+.line {
+  color: var(--faint);
+}
+.title {
+  margin-top: var(--s-1);
+  font-weight: 600;
+}
+.titleButton {
+  all: unset;
+  cursor: pointer;
+  font-weight: 600;
+}
+.titleButton:hover {
+  text-decoration: underline;
+}
+.text {
+  margin-top: var(--s-2);
+  color: var(--text);
+  max-width: none;
+}
+.fix {
+  margin-top: var(--s-2);
+  color: var(--muted);
+  max-width: none;
+}
+.fixLabel {
+  font-weight: 600;
+  color: var(--text);
+}
+.empty {
+  color: var(--verified);
+}
+
+.chip {
+  display: inline-block;
+  padding: 1px var(--s-2);
+  border-radius: 999px;
+  font-size: var(--t-1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--surface-2);
+  color: var(--muted);
+}
+.error {
+  background: var(--error-bg);
+  color: var(--error);
+}
+.warning {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+.note {
+  background: var(--note-bg);
+  color: var(--note);
+}
+.origin {
+  margin-left: auto;
+  font-size: var(--t-1);
+  color: var(--faint);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0 var(--s-2);
+}
+.lineLink {
+  all: unset;
+  cursor: pointer;
+  color: var(--link);
+  font-size: var(--t-2);
+}
+.lineLink:hover {
+  text-decoration: underline;
+}
+.wells {
+  margin-top: var(--s-1);
+  font-size: var(--t-2);
+  color: var(--text);
+}
+.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.more {
+  all: unset;
+  cursor: pointer;
+  color: var(--link);
+  font-size: var(--t-2);
+}
+.sources {
+  margin-top: var(--s-3);
+}
+.proposed {
+  font-size: var(--t-1);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+  border-radius: 999px;
+  padding: 0 var(--s-2);
+}
+.also {
+  margin: var(--s-2) 0 0;
+  padding-left: var(--s-4);
+  font-size: var(--t-2);
+  color: var(--muted);
+  list-style: none;
+}

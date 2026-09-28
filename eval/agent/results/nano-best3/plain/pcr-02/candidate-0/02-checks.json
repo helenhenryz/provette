@@ -1,0 +1,1036 @@
+{
+ "simulator": "passed",
+ "simulator_error": "",
+ "verify_exit": 0,
+ "verify_text": "protocol.py: VERIFIED against plate map pcr-02. 24 of 24 wells hold what the plate map says.\n  Destination: NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 1). Reading of the request: 24\n    reactions.\n\nLabware for the technique (PCR setup): nothing to flag.\n\nWhere every liquid ended up (ul):\n  liquid                             declared delivered in source elsewhere    lost\n  master mix                            500.0     300.0     200.0       0.0     0.0\n  water                                 600.0     252.0     348.0       0.0     0.0\n  sample 1                               10.0       2.0       8.0       0.0     0.0\n  sample 2                               10.0       2.0       8.0       0.0     0.0\n  sample 3                               10.0       2.0       8.0       0.0     0.0\n  sample 4                               10.0       2.0       8.0       0.0     0.0\n  sample 5                               10.0       2.0       8.0       0.0     0.0\n  sample 6                               10.0       2.0       8.0       0.0     0.0\n  sample 7                               10.0       2.0       8.0       0.0     0.0\n  sample 8                               10.0       2.0       8.0       0.0     0.0\n  sample 9                               10.0       2.0       8.0       0.0     0.0\n  sample 10                              10.0       2.0       8.0       0.0     0.0\n  sample 11                              10.0       2.0       8.0       0.0     0.0\n  sample 12                              10.0       2.0       8.0       0.0     0.0\n  sample 13                              10.0       2.0       8.0       0.0     0.0\n  sample 14                              10.0       2.0       8.0       0.0     0.0\n  sample 15                              10.0       2.0       8.0       0.0     0.0\n  sample 16                              10.0       2.0       8.0       0.0     0.0\n  sample 17                              10.0       2.0       8.0       0.0     0.0\n  sample 18                              10.0       2.0       8.0       0.0     0.0\n  sample 19                              10.0       2.0       8.0       0.0     0.0\n  sample 20                              10.0       2.0       8.0       0.0     0.0\n  sample 21                              10.0       2.0       8.0       0.0     0.0\n  sample 22                              10.0       2.0       8.0       0.0     0.0\n  sample 23                              10.0       2.0       8.0       0.0     0.0\n  sample 24                              10.0       2.0       8.0       0.0     0.0\n\nPrep sheet: what to put on the deck before the run.\n  slot labware                               well  liquid                       load at least  declared\n  2    Opentrons 24 Tube Rack with NEST 1.5  A1    sample 1                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B1    sample 7                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C1    sample 13                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D1    sample 19                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A2    sample 2                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B2    sample 8                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C2    sample 14                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D2    sample 20                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A3    sample 3                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B3    sample 9                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C3    sample 15                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D3    sample 21                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A4    sample 4                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B4    sample 10                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C4    sample 16                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D4    sample 22                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A5    sample 5                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B5    sample 11                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C5    sample 17                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D5    sample 23                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  A6    sample 6                               2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  B6    sample 12                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  C6    sample 18                              2.0      10.0\n  2    Opentrons 24 Tube Rack with NEST 1.5  D6    sample 24                              2.0      10.0\n  3    Opentrons 24 Tube Rack with NEST 1.5  A1    master mix                           300.0     500.0\n  4    NEST 12 Well Reservoir 15 mL          A1    water                                252.0     600.0\n  Tips: 72 from Opentrons OT-2 96 Tip Rack 20 \u00b5L in slot 5.\n  'Load at least' is what the robot draws. Add the dead volume of your tube or reservoir.\n\nThis checks the logic of the protocol: what goes where, and how much. It does not check the\n  physics: whether a viscous liquid is pipetted accurately, or a drop stays on a tip.",
+ "verify": {
+  "protocol": "protocol.py",
+  "platemap": "pcr-02",
+  "technique": "PCR setup",
+  "exit_code": 0,
+  "labware": [],
+  "unplaced_liquids": [],
+  "intent": {
+   "status": "verified",
+   "destination": "1:nest_96_wellplate_100ul_pcr_full_skirt",
+   "variant": "24 reactions",
+   "problems": [],
+   "notes": [],
+   "wells_ok": 24,
+   "wells_total": 24,
+   "wells": [
+    {
+     "well": "A1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_1": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.500000000000002,
+      "sample_1": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_2": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_3": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A4",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_4": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_5": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "A6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_6": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_7": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_8": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_9": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B4",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_10": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_11": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "B6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_12": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_13": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_13": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_14": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_14": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_15": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_15": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C4",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_16": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_16": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_17": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_17": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "C6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_18": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_18": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D1",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_19": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_19": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D2",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_20": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_20": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D3",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_21": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_21": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D4",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_22": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_22": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D5",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_23": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_23": 2.0
+     },
+     "ok": true,
+     "issues": []
+    },
+    {
+     "well": "D6",
+     "group": "reactions",
+     "expected": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_24": 2.0
+     },
+     "found": {
+      "master_mix": 12.5,
+      "water": 10.5,
+      "sample_24": 2.0
+     },
+     "ok": true,
+     "issues": []
+    }
+   ],
+   "mismatches": []
+  },
+  "accounting": [
+   {
+    "liquid": "master mix",
+    "logical": "master_mix",
+    "role": "reagent",
+    "declared_ul": 500.0,
+    "delivered_ul": 300.0,
+    "left_in_source_ul": 200.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "water",
+    "logical": "water",
+    "role": "reagent",
+    "declared_ul": 600.0,
+    "delivered_ul": 252.0,
+    "left_in_source_ul": 348.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 1",
+    "logical": "sample_1",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 2",
+    "logical": "sample_2",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 3",
+    "logical": "sample_3",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 4",
+    "logical": "sample_4",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 5",
+    "logical": "sample_5",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 6",
+    "logical": "sample_6",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 7",
+    "logical": "sample_7",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 8",
+    "logical": "sample_8",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 9",
+    "logical": "sample_9",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 10",
+    "logical": "sample_10",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 11",
+    "logical": "sample_11",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 12",
+    "logical": "sample_12",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 13",
+    "logical": "sample_13",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 14",
+    "logical": "sample_14",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 15",
+    "logical": "sample_15",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 16",
+    "logical": "sample_16",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 17",
+    "logical": "sample_17",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 18",
+    "logical": "sample_18",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 19",
+    "logical": "sample_19",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 20",
+    "logical": "sample_20",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 21",
+    "logical": "sample_21",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 22",
+    "logical": "sample_22",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 23",
+    "logical": "sample_23",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   },
+   {
+    "liquid": "sample 24",
+    "logical": "sample_24",
+    "role": "sample",
+    "declared_ul": 10.0,
+    "delivered_ul": 2.0,
+    "left_in_source_ul": 8.0,
+    "elsewhere": [],
+    "trash_ul": 0.0,
+    "lost_ul": 0.0,
+    "flags": [],
+    "notes": []
+   }
+  ],
+  "prep": {
+   "lines": [
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "sample 1",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B1",
+     "liquid": "sample 7",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C1",
+     "liquid": "sample 13",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D1",
+     "liquid": "sample 19",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A2",
+     "liquid": "sample 2",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B2",
+     "liquid": "sample 8",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C2",
+     "liquid": "sample 14",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D2",
+     "liquid": "sample 20",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A3",
+     "liquid": "sample 3",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B3",
+     "liquid": "sample 9",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C3",
+     "liquid": "sample 15",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D3",
+     "liquid": "sample 21",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A4",
+     "liquid": "sample 4",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B4",
+     "liquid": "sample 10",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C4",
+     "liquid": "sample 16",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D4",
+     "liquid": "sample 22",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A5",
+     "liquid": "sample 5",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B5",
+     "liquid": "sample 11",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C5",
+     "liquid": "sample 17",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D5",
+     "liquid": "sample 23",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A6",
+     "liquid": "sample 6",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "B6",
+     "liquid": "sample 12",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "C6",
+     "liquid": "sample 18",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "2",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "D6",
+     "liquid": "sample 24",
+     "declared_ul": 10.0,
+     "needed_ul": 2.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "3",
+     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+     "well": "A1",
+     "liquid": "master mix",
+     "declared_ul": 500.0,
+     "needed_ul": 300.0,
+     "flag": null,
+     "already_in_plate": false
+    },
+    {
+     "slot": "4",
+     "labware": "NEST 12 Well Reservoir 15 mL",
+     "well": "A1",
+     "liquid": "water",
+     "declared_ul": 600.0,
+     "needed_ul": 252.0,
+     "flag": null,
+     "already_in_plate": false
+    }
+   ],
+   "tips": [
+    {
+     "slot": "5",
+     "rack": "Opentrons OT-2 96 Tip Rack 20 \u00b5L",
+     "tips": 72
+    }
+   ]
+  }
+ },
+ "check_exit": 0,
+ "check_text": "protocol.py: 1 biology problem (1 note).\n\n1. NOTE NO-NEGATIVE-CONTROL: No no-template control: 24 wells of master mix with a sample\n   line 77:  p20.dispense(12.5, target_well)\n   At line 77 the robot starts putting master mix into NEST 96 Well Plate 100 \u00b5L PCR Full\n   Skirt (slot 1), and 24 wells end holding it together with a sample. No well on this plate\n   holds the mix without a sample, so there is no no-template control. If a reagent is\n   contaminated, or the primers pair with each other, every well gives a signal and nothing\n   on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2\n   and 16 more in slot 1.\n   Affected: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 1.\n   Fix: Add one well (three for qPCR) with 12.5 ul of master mix and 2 ul of water in place\n   of the template, and tell the plate map where it is.\n   Source: MIQE 2009: a no-template control on every plate is essential\n           https://gene-quantification.com/miqe-bustin-et-al-clin-chem-2009.pdf\n   Source: MIQE 2.0 (2025): the no-template and no-RT controls, still essential\n           https://academic.oup.com/clinchem/article/71/6/634/8119148\n   Source: Bustin 2025: MIQE compliance remains patchy\n           https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12154065/fullTextXML\n   Source: Qiagen bench guide: PCR controls (no-template, no-RT, positive)\n           https://www.qiagen.com/en-us/knowledge-and-support/knowledge-hub/bench-guide/pcr/reference-genes-and-controls/pcr-controls\n   Source: Bio-Rad real-time PCR applications guide: controls in triplicate\n           https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_5279.pdf\n   Source: Thermo Maxima SYBR manual: the NTC contains all components except template DNA\n           https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0012933_Maxima_SYBR_Green_qPCR_Master_ROX_Sol__k0251_UG.pdf\n   [9533daa2cde5]\n\nThe Opentrons simulator (8.8.2) passed this protocol with no error: it checks that the robot\ncan make the moves, not what they do to the liquids.",
+ "findings": [
+  {
+   "rule_id": "NO-NEGATIVE-CONTROL",
+   "severity": "note",
+   "certain": true,
+   "line": 77,
+   "title": "No no-template control: 24 wells of master mix with a sample",
+   "explanation": "At line 77 the robot starts putting master mix into NEST 96 Well Plate 100 \u00b5L PCR Full Skirt (slot 1), and 24 wells end holding it together with a sample. No well on this plate holds the mix without a sample, so there is no no-template control. If a reagent is contaminated, or the primers pair with each other, every well gives a signal and nothing on the plate can tell that from a real one. Wells: wells A1, A2, A3, A4, A5, A6, B1, B2 and 16 more in slot 1.",
+   "fix": "Add one well (three for qPCR) with 12.5 ul of master mix and 2 ul of water in place of the template, and tell the plate map where it is."
+  }
+ ],
+ "seconds": 6.1,
+ "draft": 2
+}

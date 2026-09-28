@@ -1,0 +1,82 @@
+.prep {
+  overflow-x: auto;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-3);
+  margin-bottom: var(--s-2);
+}
+.print {
+  white-space: nowrap;
+}
+.print {
+  all: unset;
+  cursor: pointer;
+  color: var(--link);
+  font-size: var(--t-2);
+}
+.print:hover {
+  text-decoration: underline;
+}
+.table {
+  width: 100%;
+}
+.slotRow th {
+  padding-top: var(--s-3);
+  color: var(--text);
+  font-weight: 600;
+  background: var(--surface);
+}
+.flagged td {
+  background: var(--warning-bg);
+}
+.flag {
+  display: inline-block;
+  color: var(--warning);
+  font-weight: 500;
+  font-size: var(--t-1);
+  border: 1px solid var(--warning);
+  border-radius: 999px;
+  padding: 0 var(--s-2);
+  margin-right: var(--s-1);
+}
+.note {
+  display: inline-block;
+  color: var(--muted);
+  font-size: var(--t-1);
+}
+.tips {
+  margin-top: var(--s-3);
+  font-size: var(--t-2);
+  color: var(--muted);
+}
+.accounting {
+  margin-top: var(--s-4);
+  font-size: var(--t-2);
+}
+.accounting summary {
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: var(--s-2);
+}
+.scroll {
+  overflow-x: auto;
+}
+
+@media print {
+  :global(header),
+  :global(footer),
+  :global(nav) {
+    display: none !important;
+  }
+  .print {
+    display: none;
+  }
+  .prep {
+    overflow: visible;
+  }
+}
