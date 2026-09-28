@@ -935,6 +935,7 @@ export interface RoleLists {
   lists: Record<string, string[]>;
   list_names: string[];
   places?: Record<string, string>;
+  added_here?: Record<string, string[]>; // the words added on this deployment: only these can come out
 }
 export const roles = {
   get: () => getJson<RoleLists>("/api/roles"),
@@ -947,6 +948,12 @@ export const roles = {
       headers: withPassword(),
       body: JSON.stringify({ word }),
     }),
+  /* Take out a word added on this deployment; a shipped word is refused (403). */
+  remove: (list: string, word: string) =>
+    getJson<RoleLists & { removed: { list: string; word: string } }>(
+      `/api/roles/${list}?word=${encodeURIComponent(word)}`,
+      { method: "DELETE", headers: withPassword() },
+    ),
 };
 
 /* Declared rules (api/declared.py, provette/rules/declared.py) */
@@ -994,9 +1001,15 @@ export const declared = {
     ),
   list: () =>
     getJson<{
-      rules: (DeclaredRuleData & { file: string })[];
+      rules: (DeclaredRuleData & { file: string; removable?: boolean })[];
       shapes: ShapeRow[];
     }>("/api/rules/declared"),
+  /* Delete a rule added on this deployment and still proposed; a shipped or adopted one is 403. */
+  remove: (id: string) =>
+    getJson<{ deleted: string; rules_loaded: string[] }>(
+      `/api/rules/declared/${encodeURIComponent(id)}`,
+      { method: "DELETE", headers: withPassword() },
+    ),
   preview: (rule: Record<string, unknown>, episode: string) =>
     getJson<PreviewResult>("/api/rules/preview", {
       method: "POST",

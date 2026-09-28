@@ -74,6 +74,12 @@ export function KnowsPage() {
   const words = useFetch(roles.get, "roles");
   const files = useFetch(declared.list, "declared");
   const cover = useFetch(coverageTechniques, "coverage-techniques");
+  // rules deleted from this page: hidden at once (the server has reloaded its rules already)
+  const [gone, setGone] = useState<Set<string>>(() => new Set());
+  const removable = new Set(
+    (files.data?.rules ?? []).filter((r) => r.removable).map((r) => r.id),
+  );
+  const forget = (id: string) => setGone((g) => new Set(g).add(id));
   const { hash } = useLocation();
   const navigate = useNavigate();
   const fromHash = hash.replace(/^#/, "") as Tab;
@@ -140,14 +146,27 @@ export function KnowsPage() {
               {rules.error}
             </Notice>
           )}
+          <p className={styles.howRun}>
+            Every rule runs on every protocol; each speaks only when its
+            situation occurs.
+          </p>
           {rules.data && (
             <ol className={styles.rows}>
-              {rules.data.rules.map((rule) => (
-                <RuleRowItem key={rule.rule_id} rule={rule} />
-              ))}
+              {rules.data.rules
+                .filter((rule) => !gone.has(rule.rule_id))
+                .map((rule) => (
+                  <RuleRowItem
+                    key={rule.rule_id}
+                    rule={rule}
+                    removable={removable.has(rule.rule_id)}
+                    onDeleted={forget}
+                  />
+                ))}
               {(files.data?.rules ?? [])
                 .filter(
-                  (r) => !rules.data!.rules.some((x) => x.rule_id === r.id),
+                  (r) =>
+                    !gone.has(r.id) &&
+                    !rules.data!.rules.some((x) => x.rule_id === r.id),
                 )
                 .map((r) => (
                   <li key={r.id} className={styles.row}>
@@ -160,6 +179,11 @@ export function KnowsPage() {
                             <Tag
                               tone={
                                 r.status === "adopted" ? "verified" : "warning"
+                              }
+                              title={
+                                r.status === "adopted"
+                                  ? undefined
+                                  : "runs on every check; its findings are notes until adopted in the file"
                               }
                             >
                               {r.status === "adopted"
@@ -177,6 +201,9 @@ export function KnowsPage() {
                       <p className={`${styles.muted} mono`}>
                         provette/rules/declared/{r.file}
                       </p>
+                      {r.removable && (
+                        <DeleteRule id={r.id} onDeleted={forget} />
+                      )}
                     </Fold>
                   </li>
                 ))}
@@ -328,7 +355,15 @@ export function KnowsPage() {
 /* A rule of the checker: id, title, tier as a one-word tag with the sentence on hover. The rules
    route carries no severity (a rule picks it per finding), so no lozenge here; a declared rule
    has one and shows it. */
-function RuleRowItem({ rule }: { rule: RuleRow }) {
+function RuleRowItem({
+  rule,
+  removable = false,
+  onDeleted,
+}: {
+  rule: RuleRow;
+  removable?: boolean; // added on this deployment and still proposed
+  onDeleted?: (id: string) => void;
+}) {
   return (
     <li className={styles.row} id={rule.rule_id}>
       <Fold
@@ -340,7 +375,12 @@ function RuleRowItem({ rule }: { rule: RuleRow }) {
             </span>
             <span className={styles.tags}>
               {rule.status === "proposed" && (
-                <Tag tone="warning">proposed by {rule.proposed_by}</Tag>
+                <Tag
+                  tone="warning"
+                  title="runs on every check; its findings are notes until adopted in the file"
+                >
+                  proposed by {rule.proposed_by}
+                </Tag>
               )}
               <Tag title={TIER_WORDS[rule.tier] ?? `tier: ${rule.tier}`}>
                 {TIER_TAG[rule.tier] ?? rule.tier}
@@ -353,6 +393,9 @@ function RuleRowItem({ rule }: { rule: RuleRow }) {
         {rule.sources && rule.sources.length > 0 && (
           <SourceList sources={rule.sources} label="Rests on" />
         )}
+        {removable && onDeleted && (
+          <DeleteRule id={rule.rule_id} onDeleted={onDeleted} />
+        )}
       </Fold>
     </li>
   );
@@ -362,6 +405,10 @@ function RuleRowItem({ rule }: { rule: RuleRow }) {
    shown by its count, with the pattern itself in the tooltip. */
 function WordLists({ initial }: { initial: RoleLists }) {
   const [lists, setLists] = useState<Record<string, string[]>>(initial.lists);
+  // the words added on this site, by list: only these can be taken out
+  const [added, setAdded] = useState<Record<string, string[]>>(
+    initial.added_here ?? {},
+  );
   const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -378,7 +425,25 @@ function WordLists({ initial }: { initial: RoleLists }) {
       const r = await withJudge(() => roles.add(list, word));
       if (!r) return; // not run: the password dialog is open
       setLists(r.lists);
+      setAdded(
+        (r as { added_here?: Record<string, string[]> }).added_here ?? {},
+      );
       setDrafts((d) => ({ ...d, [list]: "" }));
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+    } finally {
+      setBusy(null);
+    }
+  }
+
+  async function takeOut(list: string, word: string) {
+    setError(null);
+    setBusy(list);
+    try {
+      const r = await withJudge(() => roles.remove(list, word));
+      if (!r) return; // not run: the password dialog is open
+      setLists(r.lists);
+      setAdded(r.added_here ?? {});
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     } finally {
@@ -415,7 +480,11 @@ function WordLists({ initial }: { initial: RoleLists }) {
             <span className={styles.muted}>· {LIST_WORDS[open] ?? ""}</span>
           </div>
           <p className={styles.text}>
-            {(lists[open] ?? []).filter((e) => !e.startsWith("/")).join(", ")}
+            {(lists[open] ?? [])
+              .filter(
+                (e) => !e.startsWith("/") && !(added[open] ?? []).includes(e),
+              )
+              .join(", ")}
             {(lists[open] ?? []).some((e) => e.startsWith("/")) && (
               <span
                 className={styles.muted}
@@ -431,6 +500,26 @@ function WordLists({ initial }: { initial: RoleLists }) {
               </span>
             )}
           </p>
+          {(added[open] ?? []).length > 0 && (
+            <div className={styles.addedRow}>
+              <span className={styles.muted}>added on this site</span>
+              {(added[open] ?? []).map((w) => (
+                <span key={w} className={styles.addedWord}>
+                  {w}
+                  <button
+                    type="button"
+                    className={styles.addedRemove}
+                    onClick={() => void takeOut(open, w)}
+                    disabled={busy === open}
+                    aria-label={`Take ${w} out of the ${open} list`}
+                    title="take it out"
+                  >
+                    ×
+                  </button>
+                </span>
+              ))}
+            </div>
+          )}
           <div className={styles.addRow}>
             <input
               value={drafts[open] ?? ""}
@@ -454,6 +543,64 @@ function WordLists({ initial }: { initial: RoleLists }) {
           {error && <p className={styles.error}>{error}</p>}
         </div>
       )}
+    </div>
+  );
+}
+
+/* Delete a rule added on this site (still proposed): asked once, in place, behind the password.
+   A shipped or adopted rule never shows this; it changes through the repository. */
+function DeleteRule({
+  id,
+  onDeleted,
+}: {
+  id: string;
+  onDeleted: (id: string) => void;
+}) {
+  const [asking, setAsking] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  async function remove() {
+    setBusy(true);
+    setError(null);
+    try {
+      const r = await withJudge(() => declared.remove(id));
+      if (r) onDeleted(id); // null: not run, the password dialog is open
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+    } finally {
+      setBusy(false);
+    }
+  }
+  if (!asking)
+    return (
+      <button
+        type="button"
+        className={styles.deleteLink}
+        onClick={() => setAsking(true)}
+      >
+        Delete this rule
+      </button>
+    );
+  return (
+    <div className={styles.confirm} role="group" aria-label={`Delete ${id}`}>
+      <span>
+        Delete <span className="mono">{id}</span>? It stops running from the
+        next check. This can't be undone.
+      </span>
+      <span className={styles.confirmButtons}>
+        <button type="button" className="btn" onClick={() => setAsking(false)}>
+          Cancel
+        </button>
+        <button
+          type="button"
+          className={`btn ${styles.danger}`}
+          onClick={() => void remove()}
+          disabled={busy}
+        >
+          {busy ? "Deleting…" : "Delete"}
+        </button>
+      </span>
+      {error && <p className={styles.error}>{error}</p>}
     </div>
   );
 }

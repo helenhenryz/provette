@@ -261,3 +261,83 @@
   flex: 1;
   min-width: 0;
 }
+
+/* how the rules are chosen, one muted line above the rows */
+.howRun {
+  margin: 0 0 var(--s-2);
+  font-size: var(--t-2);
+  color: var(--muted);
+  max-width: none;
+}
+/* deleting a rule added on this site: a quiet link, then an in-place question */
+.deleteLink {
+  all: unset;
+  cursor: pointer;
+  margin-top: var(--s-2);
+  font-size: var(--t-1);
+  color: var(--error);
+}
+.deleteLink:hover {
+  text-decoration: underline;
+}
+.deleteLink:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.confirm {
+  margin-top: var(--s-2);
+  padding: var(--s-3);
+  border: 1px solid color-mix(in srgb, var(--error) 35%, transparent);
+  border-radius: var(--radius);
+  background: var(--error-bg);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-3);
+  font-size: var(--t-2);
+}
+.confirmButtons {
+  display: flex;
+  gap: var(--s-2);
+}
+.danger {
+  border-color: var(--error);
+  background: var(--error);
+  color: #fff;
+}
+/* the words added on this site, each with a × */
+.addedRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+  margin: var(--s-2) 0;
+  font-size: var(--t-2);
+}
+.addedWord {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 1px 2px 1px var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-2);
+}
+.addedRemove {
+  all: unset;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--muted);
+}
+.addedRemove:hover {
+  color: var(--text);
+  background: var(--border);
+}
+.addedRemove:focus-visible {
+  outline: 2px solid var(--focus);
+}

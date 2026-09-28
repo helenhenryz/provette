@@ -58,7 +58,7 @@ def test_every_file_in_the_directory_loads_and_is_in_rules() -> None:
 
 def test_enzyme_before_diluent_is_declared_and_adopted() -> None:
     rule = next(r for r in RULES if r.rule_id == "ENZYME-BEFORE-DILUENT")
-    assert rule.status == "adopted" and rule.proposed_by == "the team"
+    assert rule.status == "adopted" and rule.proposed_by == "Helen Henry and Nyle Hussain"
     assert rule.tier == "role" and rule.family == 7
     assert len(rule.sources) == 4
 
