@@ -499,7 +499,7 @@ and `PROVETTE_JUDGE_PASSWORD`; without them the gallery and the checker work and
 `deploy/README.md`, "Every setting"; `.env.example`.
 
 **The image and the deployment** (`deploy/README.md`; `docs/deploy.md`): one image from `docker/api.Dockerfile` (the API, the
-built pages, `opentrons` 8.8.2, `eval/` read-only), one always-on Fly.io Machine with one volume at `/data` holding the live
+built pages, `opentrons` 8.8.2, `eval/` read-only), one Fly.io Machine that stops when idle and starts on the next request, with one volume at `/data` holding the live
 episodes, the checks, the cache, the spend ledger, the outcomes and the three files a person edits from the pages, seeded on first
 boot and never overwritten after (D-36, D-37). One command once three files exist: `deploy/fly-up.sh`, reading
 `~/.config/provette/fly.env`, `judge.env` and `token-factory.env`; `--dry-run` prints what it will do; `deploy/smoke.sh <url>` is the 31-route smoke test.

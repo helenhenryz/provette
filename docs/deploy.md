@@ -7,7 +7,7 @@ setting the deployment reads, what is in the image and what is on the volume are
 
 ## What the container needs
 
-One always-on Python process: FastAPI, `opentrons==8.8.2` and `provette`, serving
+One Python process: FastAPI, `opentrons==8.8.2` and `provette`, serving
 the pages and running the checks as subprocesses. Measured with `/usr/bin/time -v`
 on `provette verify` of the reference fixture:
 
@@ -25,16 +25,38 @@ step up if the memory alert ever fires. The disk holds the pre-run episodes
 (read-only, in the image) and the live ones (a small volume, under 1 GB for the
 whole competition at about 500 KB per episode).
 
-The other requirements: no sleep-on-idle (a demo that takes 30 s to wake is a bad
-demo), a domain with TLS, a health check that restarts the process, survival of
+The other requirements: a wake from idle short enough that a visitor does not
+notice it as a fault (measured: 4.4 s, below), a domain with TLS, a health check that restarts the process, survival of
 a host reboot, and outbound HTTPS to `api.tokenfactory.nebius.com`, up unattended
 through the judging.
 
 ## The choice: Fly.io, one Machine, one volume
 
-**Cost: $6.07 a month**, billed to a card on our Fly.io account. Egress at $0.02/GB is noise (a gallery page is under
-1 MB). If memory ever alerts, the 2 GB Machine is $11.11 a month; nothing else
-changes.
+**Cost: about $0.25 a month while nobody uses it, and about $0.09 for each hour
+it runs**, billed to a card on our Fly.io account. The Machine stops when Fly's
+proxy has seen no traffic for a few minutes and starts on the next request. Fly
+bills a Machine by the second and bills no CPU or memory while it is stopped;
+what is left is the 1 GB volume ($0.15 a month) and the stopped Machine's disk
+image ($0.15 a GB a month, ours is about 0.6 GB). Twenty hours of use in a month
+is about $2. Egress at $0.02/GB is noise (a gallery page is under 1 MB).
+
+It was always on until 2026-10-02, and on the two dedicated CPUs it needs (D-36)
+that was about $2 a day, about $64 a month, with nobody using it. Measured on
+the deployment after the change:
+
+| what | measured |
+|---|---|
+| idle time before the Machine stopped on its own | about 7 minutes |
+| the first request to the stopped Machine (start, boot, the page) | 4.4 s |
+| the next request | 0.5 s |
+| the Machine's state 45 s after stopping, with no request | still stopped |
+
+What it costs us: the first visitor after an idle spell waits about four
+seconds, once. And Fly's proxy counts only traffic it can see, so a live run
+whose page is open (the page streams the run) keeps the Machine up, and a run
+whose page was closed can be stopped part-way; its record then says it failed.
+For a day when nobody may wait, set `auto_stop_machines = "off"` and
+`min_machines_running = 1` in `fly.toml` and deploy; that day costs about $2.
 
 Why Fly over the cheaper-per-gigabyte Hetzner VM: the deployment is one file
 (`fly.toml`) and one command (`fly deploy`) from the same Dockerfile that builds
@@ -68,9 +90,9 @@ provette.fly.dev  ──TLS (Fly)──▶  Fly Machine, region ams (nearest to 
   copies the word lists, the sources and the declared rules from the image to
   `/data/rules/` (only files that are missing), so what a student teaches or
   saves from the pages survives every redeploy; then it runs uvicorn as PID 1.
-* `fly.toml`: `auto_stop_machines = "off"`, `min_machines_running = 1`, an HTTP
-  check on `/health` every 15 s, the volume mounted at `/data`, 1 GB of memory
-  and 512 MB of swap, one shared vCPU.
+* `fly.toml`: `auto_stop_machines = "stop"`, `min_machines_running = 0`, an HTTP
+  check on `/health` every 15 s while it runs, the volume mounted at `/data`,
+  two dedicated CPUs, 4 GB of memory and 512 MB of swap.
 * Secrets: `PROVETTE_API_KEY`, `PROVETTE_BASE_URL`, `PROVETTE_JUDGE_PASSWORD` and, if
   set, `PROVETTE_DAILY_CAP_USD` are Fly secrets, staged by `deploy/fly-up.sh` from
   `~/.config/provette/*.env` and never printed; never in the image or the repository.
@@ -128,27 +150,26 @@ provette.fly.dev  ──TLS (Fly)──▶  Fly Machine, region ams (nearest to 
    (`fly certs add`) or put it behind Cloudflare's free plan, and the doc gets a
    line.
 
-Expected bill: $6.07 a month, prorated by the hour, on the card.
+Expected bill: about $0.25 a month plus about $0.09 for each hour the Machine runs, on the card.
 
 ### Making it faster, for the judging
 
-The everyday Machine is one shared CPU with 1 GB. A live run is mostly checks, and a check
-replays the whole protocol in the simulator on one core, so on a shared CPU a run with several
-repairs takes minutes. A dedicated CPU is what makes each check faster; more cores help when
+A live run is mostly checks, and a check replays the whole protocol in the simulator on one
+core, so on a shared CPU a run with several repairs takes minutes. A dedicated CPU is what makes each check faster; more cores help when
 several people run at once. The size changes in place, with no redeploy and about a minute's
 restart, and Fly bills by the second, so the bigger Machine costs only while it is on:
 
 ```
-deploy/fly-size.sh performance-1x   # before the judging: one dedicated CPU, 2 GB
-deploy/fly-size.sh performance-2x   # if several judges run at once: two, 4 GB
-deploy/fly-size.sh shared-cpu-1x    # after: back to the everyday Machine
+deploy/fly-size.sh performance-1x   # one dedicated CPU, 2 GB
+deploy/fly-size.sh performance-2x   # two, 4 GB: what fly.toml names
+deploy/fly-size.sh shared-cpu-1x    # one shared CPU, 1 GB
 deploy/fly-size.sh --show           # the size it runs at now
 ```
 
-`fly.toml` names the size every deploy uses; for the judging it is `performance-2x` (D-36:
-on the shared CPU the host throttled sustained checks until they timed out). After the judging,
-run `fly-size.sh shared-cpu-1x` and set `fly.toml`'s `[[vm]]` back to `shared`, `1`, `"1gb"`, or
-the next deploy moves it up again. `fly platform vm-sizes` lists every size, and Fly's
+`fly.toml` names the size every deploy uses: `performance-2x` (D-36: on the shared CPU the host
+throttled sustained checks until they timed out). It stays at that size, because a Machine that
+stops when idle is billed only for the time it runs. A size set with `fly-size.sh` lasts until
+the next deploy, which moves it back to `fly.toml`'s. `fly platform vm-sizes` lists every size, and Fly's
 pricing page has what each costs.
 
 ### The checklist: from a token to a URL

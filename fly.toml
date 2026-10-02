@@ -1,9 +1,9 @@
-# The product on Fly.io: one always-on Machine, one volume. docs/deploy.md says why and what
-# it costs ($6.07 a month at list prices); deploy/README.md lists every setting and where
-# it is set; `deploy/fly-up.sh` does the first deployment and every one after it.
+# The product on Fly.io: one Machine that stops when nobody is using it and starts on the next
+# request, one volume. docs/deploy.md says why and what it costs (about $0.25 a month stopped,
+# about $0.09 for each hour it runs); deploy/README.md lists every setting and where it is set; `deploy/fly-up.sh` does the first deployment and every one after it.
 #
 # Checked against docs.fly.io/reference/configuration/: every key and value here
-# is in that reference (auto_stop_machines "off", restart policy "always", strategy "immediate",
+# is in that reference (auto_stop_machines "stop", restart policy "always", strategy "immediate",
 # mounts initial_size, vm memory as "1gb").
 
 app = "provette"
@@ -34,9 +34,12 @@ kill_timeout = 15
 [http_service]
   internal_port = 8000
   force_https = true
-  auto_stop_machines = "off"
+  # Stopped when Fly's proxy sees no traffic for a few minutes, started by the next request
+  # (D-36). A stopped Machine bills no CPU or memory. "suspend" would wake faster but needs
+  # 2 GB or less and no swap. For a day when nobody may wait: "off" and 1.
+  auto_stop_machines = "stop"
   auto_start_machines = true
-  min_machines_running = 1
+  min_machines_running = 0
 
   [[http_service.checks]]
     interval = "15s"
@@ -50,8 +53,9 @@ kill_timeout = 15
   destination = "/data"
   initial_size = "1gb"
 
-# performance-2x for the judging: a shared CPU is throttled under sustained checks (DECISIONS
-# D-36). After it, `deploy/fly-size.sh shared-cpu-1x`, and set this back to shared, 1, "1gb".
+# performance-2x: a shared CPU is throttled under sustained checks (DECISIONS D-36). It is
+# billed by the second and only while the Machine runs, so the size costs little once it stops
+# when idle.
 [[vm]]
   cpu_kind = "performance"
   cpus = 2

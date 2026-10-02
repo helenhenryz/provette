@@ -1,7 +1,7 @@
 # `deploy/` — the product as one container, and every setting in one place
 
 The product is one image (`docker/api.Dockerfile`: the API, the built pages, `opentrons` 8.8.2
-and `provette`) run as one always-on Machine on Fly.io with one volume. [`docs/deploy.md`](../docs/deploy.md)
+and `provette`) run as one Machine on Fly.io that stops when idle and starts on the next request, with one volume. [`docs/deploy.md`](../docs/deploy.md)
 says why Fly and what it costs, and holds the checklist the owner runs; this page is the
 reference: what is in the image, every setting, the secrets, what is kept where, and what the
 machine was sized from.
