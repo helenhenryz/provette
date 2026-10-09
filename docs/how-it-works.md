@@ -453,9 +453,10 @@ faint is uncertain; "not tracked" is a well the ledger has no state for, distinc
 (`Deck3D.tsx`): every labware at its real footprint, wells in the outline the height table gives them, the liquid cut off at the
 table's height for its volume, coloured by share; the lighting and the gloss are convention, and the file says so: "The shading is
 convention, like the choice of a lathe … A sheen says nothing about the liquid; a meniscus or a slosh would, so neither is drawn."
-*Not drawn*, with counts and why (`docs/replay-support.md`): module bodies and the thermocycler lid (the trace records a module only
-as the `module` of the labware on it), the thermocycler's programme, custom labware heights; every OT-2 protocol the tracer accepts
-exports (787 of the 788 it accepts; `docs/replay-support.md`).
+A module that holds labware stands under it at the height its definition gives, and the pipette goes down to it there (`export.py`,
+`_on_module`). *Not drawn*, with counts and why (`docs/replay-support.md`): the thermocycler lid, a module with nothing on it (the
+trace records a module only as the `module` of the labware on it), the thermocycler's programme, custom labware heights; every OT-2
+protocol the tracer accepts exports (787 of the 788 it accepts; `docs/replay-support.md`).
 
 ## 10. The evidence
 
@@ -509,8 +510,9 @@ check-all` for both; `make hooks` runs it before every push; there is no hosted 
 
 ## 12. The honest list
 
-* **Modules are not drawn**: the trace records a module only as the `module` of the labware on it; no body, no thermocycler lid, an
-  empty module not at all (`docs/replay-support.md`, "Modules"; `provette/state/README.md`, "What this module needs from the trace").
+* **Modules are drawn only under their labware**: the trace records a module only as the `module` of the labware on it; the 3D view
+  draws its body under the labware at the definition's height, but no thermocycler lid, and an empty module not at all
+  (`docs/replay-support.md`, "Modules"; `provette/state/README.md`, "What this module needs from the trace").
 * **Custom labware has no height table**: drawn as a straight column; the contact model's height there is a floor, so a low dispense
   we call dry may be wet (`docs/replay-support.md`; `state/README.md`, row 10).
 * **No labware upload on Check**: a protocol with its own definition is refused by the simulator there; `provette view --labware-dir`

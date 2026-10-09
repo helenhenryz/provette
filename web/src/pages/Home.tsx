@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Notice } from "../components/Notice";
 import { Chip } from "../components/vocabulary";
 import { ApiError, live } from "../lib/api";
@@ -14,6 +14,13 @@ import { withJudge } from "../lib/withJudge";
    the evaluation (eval/agent/README.md, run 3: pcr-02 in 2 and 4 drafts, brad-01 in 3 and 2, norm-01
    in 3 and 2), three techniques. A first click should show the loop landing, not a hard case. */
 const SHOWN_EXAMPLES = ["pcr-02", "brad-01", "norm-01"];
+
+/* One finished run to watch, for a visitor who has not got the key or the minute a live run takes:
+   a whole 96-well qPCR plate, the job every OT-2 user knows. Its drafts show the loop at work:
+   out of tips, a draw too shallow for the tip, master mix carried into the template stocks (which
+   the simulator passes), then verified with nothing left. tests/api/test_gallery.py keeps it in
+   the gallery and verified. */
+export const SHOWCASE = "super-hard/plain/hard-pcr-01";
 
 export function HomePage() {
   const navigate = useNavigate();
@@ -166,6 +173,12 @@ export function HomePage() {
           </Chip>
         ))}
       </div>
+      <p className={styles.showcase}>
+        <Link to={`/episodes/${SHOWCASE}`}>
+          Or watch a finished run: a 96-well qPCR plate
+          <span aria-hidden="true"> →</span>
+        </Link>
+      </p>
 
       {notARequest && (
         <Notice tone="warning" title="Not a lab request">
@@ -198,10 +211,10 @@ function Mark() {
   return (
     <svg className={styles.mark} viewBox="0 0 32 32" aria-hidden="true">
       <rect width="32" height="32" rx="8" fill="var(--verified)" />
-      <circle cx="11" cy="11" r="3.3" fill="#fff" />
-      <circle cx="21" cy="11" r="3.3" fill="#fff" opacity=".55" />
-      <circle cx="11" cy="21" r="3.3" fill="#fff" opacity=".55" />
-      <circle cx="21" cy="21" r="3.3" fill="#fff" />
+      <circle cx="11" cy="11" r="3.3" fill="var(--on-accent)" />
+      <circle cx="21" cy="11" r="3.3" fill="var(--on-accent)" opacity=".55" />
+      <circle cx="11" cy="21" r="3.3" fill="var(--on-accent)" opacity=".55" />
+      <circle cx="21" cy="21" r="3.3" fill="var(--on-accent)" />
     </svg>
   );
 }

@@ -33,9 +33,10 @@
   font-weight: 600;
 }
 .play[aria-pressed="true"] {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
+  background: var(--verified);
+  color: var(--on-accent);
+  border-color: var(--verified);
+  box-shadow: 0 4px 14px -6px var(--verified);
 }
 .count {
   font-size: var(--t-2);
@@ -46,7 +47,7 @@
 .slider {
   width: 100%;
   margin: 0;
-  accent-color: var(--text);
+  accent-color: var(--verified);
 }
 .line {
   font-size: var(--t-2);

@@ -301,6 +301,17 @@ export interface ReplayLabware {
   h: number;
   ox: number;
   oy: number;
+  /* schema 4: how high a module holds the labware (mm above the deck, 0 on the deck) and the
+     module's body, both from the module's definition; absent before schema 4 */
+  elevation?: number;
+  module_body?: {
+    x: number;
+    y: number;
+    w: number;
+    h: number;
+    height: number;
+    name: string;
+  } | null;
   wells: Record<string, ReplayWellGeometry>;
 }
 

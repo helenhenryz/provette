@@ -20,6 +20,8 @@ import {
   binTipEnds,
   columnOf,
   homeView,
+  PROFILE_POINTS,
+  fitProfile,
   labelHeight,
   labwareHeight,
   liquidColumns,
@@ -31,6 +33,7 @@ import {
   tipsInRack,
   unitProfile,
   type Column,
+  type Profile,
 } from "./scene";
 import {
   MIN_FILL,
@@ -369,5 +372,92 @@ describe("an 8-channel pipette's tips in the scene", () => {
     for (let k = 1; k < 8; k++)
       expect(zs[k] - zs[k - 1]).toBeCloseTo(NOZZLE_PITCH_MM); // the H tip towards the front (+z)
     for (const k of drawn) expect(f.x + f.ox[k]).toBeCloseTo(well.x);
+  });
+});
+
+describe("an outline longer than the shader holds", () => {
+  // An Eppendorf 1.5 ml tube's table gives 66 points; the 3D view's shader holds 32. Cutting the
+  // list kept its top half: the tube was drawn open at the bottom, its liquid a flat disc.
+  const long: Profile = Array.from({ length: 66 }, (_, i) => {
+    const y = i / 65;
+    return [y < 0.45 ? 0.07 + (0.93 * y) / 0.45 : 1, y];
+  });
+
+  it("keeps a short outline as it is", () => {
+    expect(fitProfile(STRAIGHT)).toBe(STRAIGHT);
+  });
+
+  it("keeps the whole of a long one, floor to rim, in at most PROFILE_POINTS points", () => {
+    const fit = fitProfile(long);
+    expect(fit.length).toBeLessThanOrEqual(PROFILE_POINTS);
+    expect(fit[0]).toEqual(long[0]);
+    expect(fit[fit.length - 1]).toEqual(long[long.length - 1]);
+    for (const y of [0.1, 0.3, 0.5, 0.8])
+      expect(radiusAt(fit, y)).toBeCloseTo(radiusAt(long, y), 1);
+  });
+
+  it("draws a tube with a 115-row table with its cone and its floor", () => {
+    const copy = structuredClone(data);
+    const id = "3:nest_96_wellplate_100ul_pcr_full_skirt";
+    const row = copy.deck.labware.find((l) => l.id === id)!;
+    const depth = 39.1;
+    const r = 4.4;
+    const table: [number, number][] = [[0, 0]];
+    for (let i = 1; i <= 115; i++) {
+      const h = (depth * i) / 115;
+      const rr = h < 17 ? (r * h) / 17 : r;
+      table.push([table[i - 1][0] + Math.PI * rr * rr * (depth / 115), h]);
+    }
+    for (const w of Object.values(row.wells)) {
+      w.height_at_ul = table;
+      w.depth = depth;
+      w.d = 2 * r;
+    }
+    const p = place(buildModel(copy)).find((q) => q.lw.row.id === id)!;
+    expect(p.profile.length).toBeLessThanOrEqual(PROFILE_POINTS);
+    expect(p.profile[0]).toEqual([0, 0]); // a V bottom: a point at the floor
+    expect(radiusAt(p.profile, 0.2)).toBeLessThan(0.6); // the cone is drawn
+    expect(radiusAt(p.profile, 0.9)).toBeCloseTo(1, 1);
+  });
+});
+
+describe("a labware on a module", () => {
+  const id = "3:nest_96_wellplate_100ul_pcr_full_skirt";
+  const copy = structuredClone(data);
+  const row = copy.deck.labware.find((l) => l.id === id)!;
+  row.module = "temperatureModuleV2";
+  row.elevation = 80.09;
+  row.module_body = {
+    x: row.slot_x,
+    y: row.slot_y,
+    w: row.w,
+    h: row.h,
+    height: 80.09,
+    name: "Temperature Module GEN2",
+  };
+  const raised = buildModel(copy);
+  const plate = place(raised).find((p) => p.lw.row.id === id)!;
+
+  it("stands at the module's height, and the camera frames it", () => {
+    expect(plate.elevation).toBeCloseTo(80.09);
+    expect(plate.height).toBeCloseTo(14.78 + BASE_MM); // its own height, from its base
+    expect(tallestLabware(raised)).toBeCloseTo(80.09 + plate.height);
+    expect(homeView(raised).target[1]).toBeGreaterThan(homeView(model).target[1]);
+  });
+
+  it("prints the other names at the deck's height, not over the module", () => {
+    expect(labelHeight(raised)).toBeCloseTo(labelHeight(model));
+  });
+
+  it("sends the pipette down to the raised wells, and the gantry over them", () => {
+    const t = buildTimeline(raised, new StateCache(copy));
+    const i = data.events.findIndex(
+      (e) =>
+        (e.op === "aspirate" || e.op === "dispense") &&
+        e.targets.some((x) => model.wells[x[1]]?.labware?.row.id === id),
+    );
+    expect(i).toBeGreaterThanOrEqual(0);
+    expect(t.th[i] - tl.th[i]).toBeCloseTo(80.09);
+    expect(t.travelHeight).toBeGreaterThan(80.09 + plate.height);
   });
 });

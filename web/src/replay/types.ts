@@ -81,6 +81,8 @@ export interface LabwareModel {
   /* the labware's front-left corner on the deck, mm */
   x: number;
   y: number;
+  /* how high it stands: 0 on the deck, a module's labware offset on a module (schema 4) */
+  elevation: number;
   /* the deepest well: the labware's height above the deck is this plus a base. The export
      carries no overall height, so nothing taller is drawn. */
   depth: number;

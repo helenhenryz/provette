@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 
 import pytest
 from fastapi.testclient import TestClient
@@ -114,3 +115,17 @@ def test_the_default_gallery_is_the_four_agent_runs_and_each_has_results() -> No
     assert settings.gallery_sets == ("super", "nano-best3", "super-hard", "nano-hard-best3")
     for name in settings.gallery_sets:
         assert any((settings.episodes_dir / name).glob("*/*/done.json")), name
+
+
+def test_the_home_pages_finished_run_is_in_the_gallery_and_verified(client: TestClient) -> None:
+    """The home page links one finished run to watch (web/src/pages/Home.tsx, SHOWCASE): it must
+    stay in the gallery the deployment shows, verified, with no finding left."""
+    home = (REPO / "web/src/pages/Home.tsx").read_text()
+    found = re.search(r'export const SHOWCASE = "([^"]+)";', home)
+    assert found, "Home.tsx no longer names its SHOWCASE episode"
+    card = next(
+        (e for e in client.get("/api/episodes").json()["episodes"] if e["id"] == found[1]), None
+    )
+    assert card is not None, f"{found[1]} is not in the gallery"
+    assert card["verified"] is True and not card["outcome"]["findings"]
+    assert card["technique"] == "qPCR setup" or "qPCR" in card["request"]

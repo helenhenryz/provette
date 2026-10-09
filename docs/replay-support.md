@@ -65,13 +65,16 @@ it: `load_liquid` in the protocol, or a plate map.
 
 **Modules** (238 magnetic, 237 temperature, 73 thermocycler, 9 heater-shaker; 25 more
 protocols run a module with nothing loaded on it). The trace records a module only as the
-`module` of the labware on it, and never records one with nothing on it. On the page: the
-labware sits in the slot's box like any plate; no module body, no thermocycler lid, and the
-three other slots the thermocycler covers look empty (`010526` shows it). A module with
-nothing on it is not there at all, and its events read as one line ("Engaging Magnetic
-Module", "set the temperature module to 4 °C"). To draw them: the trace would record every
-loaded module with its model and slot, and the page would carry a footprint per model. A
-design decision, not built here.
+`module` of the labware on it, and never records one with nothing on it. In the 3D view a
+module that holds labware is drawn: a box under the labware as tall as the module holds it
+(temperature 80.09 mm, magnetic 82.25, heater-shaker 68.28, thermocycler 108.96 from API 2.14
+and 98.26 below), the thermocycler's box over slots 7, 8, 10 and 11, the module's name on its
+front, and the pipette goes down to the raised wells. The numbers are the module definitions'
+own (`opentrons_shared_data`; the export's `elevation` and `module_body`, `provette/view/
+export.py`, `_on_module`). Not drawn: the thermocycler's lid, a magnet or a block inside the
+box, and a module with nothing on it, which is not there at all; its events read as one line
+("Engaging Magnetic Module", "set the temperature module to 4 °C"). The 2D view draws the
+labware in its slot's box, with no module.
 
 **The thermocycler's programme, the lid, and time at temperature.** A profile is one event
 ("run a thermocycler programme (its steps are not modelled)"); the lid's opening and closing

@@ -57,11 +57,11 @@ The order inside each section is by value, as far as we can judge it.
 
 ## The replay
 
-* **Modules are not drawn.** The trace records a module only as the `module` of the labware on
-  it: no body, no thermocycler lid, an empty module not at all, and the three slots a
-  thermocycler covers look empty. It would take the trace recording every loaded module with
-  its model and slot, and a footprint per model on the page (`docs/replay-support.md`,
-  "Modules"; `provette/state/README.md`).
+* **An empty module and the thermocycler lid are not drawn.** A module holding labware is
+  drawn in 3D under it, at its definition's height; the trace records a module only as the
+  `module` of the labware on it, so a module with nothing on it is not there at all, and the
+  lid is not drawn. It would take the trace recording every loaded module with its model and
+  slot (`docs/replay-support.md`, "Modules"; `provette/state/README.md`).
 * **Custom labware has no height table.** 513 library protocols load a definition with no
   inner geometry; the well is drawn as a straight column and the contact model's height is a
   floor there, so a low dispense called dry may be wet. It would take the shape declared or

@@ -26,6 +26,22 @@
   color: var(--verified);
   background: var(--verified-bg);
 }
+/* a toned badge or lozenge carries a hairline of its own colour */
+.badge_verified,
+.badge_checked,
+.badge_running,
+.badge_failed,
+.badge_stopped,
+.lozenge_error,
+.lozenge_warning,
+.lozenge_note {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, currentColor 26%, transparent);
+}
+.badgeLg.badge_verified {
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, currentColor 30%, transparent),
+    0 0 18px -4px var(--glow);
+}
 .badge_not_verified .badgeDot {
   background: transparent;
   box-shadow: inset 0 0 0 2px var(--error);
@@ -99,19 +115,26 @@
   color: var(--muted);
   min-height: 30px;
   white-space: nowrap;
+  transition:
+    color 120ms ease,
+    background 120ms ease,
+    border-color 120ms ease;
 }
 .chip:hover {
   color: var(--text);
   background: var(--surface);
+  border-color: var(--border-strong);
 }
 .chip:disabled {
   opacity: 0.5;
   cursor: default;
 }
-.chipOn {
+.chipOn,
+.chipOn:hover {
   color: var(--text);
   border-color: var(--verified);
   background: var(--verified-bg);
+  box-shadow: 0 0 14px -4px var(--glow);
 }
 .chipCount {
   color: var(--faint);
@@ -182,6 +205,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--raised);
+  box-shadow: inset 0 1px 0 var(--hairline);
 }
 .foldSummary:hover {
   background: var(--surface);
@@ -264,6 +288,7 @@
 .tabOn {
   color: var(--text);
   background: var(--surface-2);
+  box-shadow: inset 0 1px 0 var(--hairline);
   font-weight: 500;
 }
 .tabCount {
@@ -555,7 +580,8 @@ a.source .sourceWhat {
   padding: var(--s-3) var(--s-4);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: var(--surface);
+  background: linear-gradient(180deg, var(--raised), var(--surface));
+  box-shadow: inset 0 1px 0 var(--hairline);
   color: var(--text);
   text-decoration: none;
   transition:
@@ -564,7 +590,7 @@ a.source .sourceWhat {
 }
 .linkCard:hover {
   text-decoration: none;
-  border-color: color-mix(in srgb, var(--text) 25%, var(--border));
+  border-color: var(--border-strong);
   background: var(--surface-2);
 }
 .linkCardIcon {

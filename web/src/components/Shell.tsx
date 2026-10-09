@@ -305,10 +305,10 @@ function Mark() {
   return (
     <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
       <rect width="32" height="32" rx="7" fill="var(--verified)" />
-      <circle cx="11" cy="11" r="3.2" fill="#fff" />
-      <circle cx="21" cy="11" r="3.2" fill="#fff" opacity=".55" />
-      <circle cx="11" cy="21" r="3.2" fill="#fff" opacity=".55" />
-      <circle cx="21" cy="21" r="3.2" fill="#fff" />
+      <circle cx="11" cy="11" r="3.2" fill="var(--on-accent)" />
+      <circle cx="21" cy="11" r="3.2" fill="var(--on-accent)" opacity=".55" />
+      <circle cx="11" cy="21" r="3.2" fill="var(--on-accent)" opacity=".55" />
+      <circle cx="21" cy="21" r="3.2" fill="var(--on-accent)" />
     </svg>
   );
 }

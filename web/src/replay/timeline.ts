@@ -115,7 +115,8 @@ function actionHeight(
   if (!lw) return TRAVEL_CLEARANCE_MM;
   if (lw.row.is_trash) return TRASH_HEIGHT_MM + 10;
   const depth = info.geometry?.depth ?? lw.depth;
-  if (lw.row.is_tiprack) return BASE_MM + depth * (1 - TIP_FRACTION);
+  if (lw.row.is_tiprack)
+    return lw.elevation + BASE_MM + depth * (1 - TIP_FRACTION);
   const a = wellFill(
     model.data,
     before.wells.get(wellIndex),
@@ -131,7 +132,7 @@ function actionHeight(
       a?.bands.length ? a.fraction : 0,
       b?.bands.length ? b.fraction : 0,
     ) * depth;
-  return BASE_MM + Math.max(1, level);
+  return lw.elevation + BASE_MM + Math.max(1, level);
 }
 
 /* Where each channel's tip goes, as offsets from the first channel's well. A multichannel's
@@ -189,7 +190,10 @@ export function buildTimeline(model: ReplayModel, cache: StateCache): Timeline {
   const deck = data.deck;
   const tallest = model.labware.reduce(
     (h, lw) =>
-      Math.max(h, lw.row.is_trash ? TRASH_HEIGHT_MM : lw.depth + BASE_MM),
+      Math.max(
+        h,
+        lw.row.is_trash ? TRASH_HEIGHT_MM : lw.elevation + lw.depth + BASE_MM,
+      ),
     0,
   );
   const H = tallest + TRAVEL_CLEARANCE_MM;

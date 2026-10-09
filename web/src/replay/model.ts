@@ -27,6 +27,7 @@ export function buildModel(data: ReplayData): ReplayModel {
       row,
       x: row.slot_x + row.ox,
       y: row.slot_y + row.oy,
+      elevation: row.elevation ?? 0,
       depth: list.reduce((d, w) => Math.max(d, w.geometry.depth ?? 0), 0),
       wells: list,
     };

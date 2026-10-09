@@ -67,10 +67,21 @@ classes (`.btn`, `.btn.primary`, `.btn.ghost`, `.btn.lg`, `.field`, `.stack`, `.
 | radius | `--radius` 6 px · `--radius-lg` 10 px · `--radius-xl` 14 px |
 | controls | `--control` 36 px; `--control-lg` 44 px, the page's one primary action |
 | width | `--measure` 68 characters for prose; `--page` 1,120 px |
-| colour | `--bg`, `--surface`, `--surface-2`, `--raised`, `--border`, `--text`, `--muted`, `--faint`, `--link`, and the states `--verified`, `--error`, `--warning`, `--note`, each with its `-bg` |
+| colour | `--bg`, `--surface`, `--surface-2`, `--raised`, `--border`, `--border-strong`, `--text`, `--muted`, `--faint`, `--link`, and the states `--verified`, `--error`, `--warning`, `--note`, each with its `-bg` |
+| depth | `--shadow` (a card), `--shadow-lg` (the composer, a dialog), `--hairline` (the lit top edge of a raised surface), `--glow` and `--glow-2` (the accent's and the link's halo), `--stage-hi` and `--stage-lo` (the replay's stage, centre and edge; the 3D scene reads them too) |
 
 Inter for text and JetBrains Mono for code, both bundled (`@fontsource-variable`). Python in a code
 view is coloured by `lib/highlight.tsx` from the `--code-*` tokens.
+
+**Dark is the default.** It is built in layers: the page (`--bg`) is the darkest, a card or the
+sidebar (`--surface`, `--raised`) sits a step lighter with a hairline of light on its top edge,
+and a control on it (`--surface-2`) a step lighter again. The one accent is the green of
+`--verified`: the primary button, the page you are on in the sidebar, the play button, a chosen
+filter and the brand mark, each with a faint halo (`--glow`). Two halos at the top of every page
+and a field of wells behind the home page's greeting are decoration; they carry no word and no
+number. The 3D replay stands on a floor grid under a key light that casts shadows and a blue rim
+light from behind (`replay/Deck3D.tsx`, `Lights` and `Floor`): convention, like the rest of its
+shading, and nothing it shows is physics.
 
 ## The patterns every page reuses
 

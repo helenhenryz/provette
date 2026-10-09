@@ -166,7 +166,7 @@ function EvidenceSections({ data }: { data: Evidence }) {
             model can act on, not knowing the rule.
           </p>
         )}
-        <div className="table-wrap">
+        <div className={`table-wrap ${styles.data}`}>
           <table>
             <thead>
               <tr>
@@ -247,7 +247,7 @@ function EvidenceSections({ data }: { data: Evidence }) {
             {m.missed_layout_swaps} it misses are samples swapping wells, which
             a plate map that leaves positions free cannot see.
           </p>
-          <div className="table-wrap">
+          <div className={`table-wrap ${styles.data}`}>
             <table title="E1 to E3, the planted bugs">
               <thead>
                 <tr>
@@ -311,7 +311,7 @@ function EvidenceSections({ data }: { data: Evidence }) {
             {data.checks.control.verified} of {data.checks.control.protocols}{" "}
             verify against the wrong plate map.
           </p>
-          <div className="table-wrap">
+          <div className={`table-wrap ${styles.data}`}>
             <table>
               <thead>
                 <tr>
@@ -383,7 +383,7 @@ function EvidenceSections({ data }: { data: Evidence }) {
             events, and fully independently on {data.ledger.independent_agree}{" "}
             of {data.ledger.independent} (API 2.14 and later).
           </p>
-          <div className="table-wrap">
+          <div className={`table-wrap ${styles.data}`}>
             <table>
               <thead>
                 <tr>

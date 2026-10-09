@@ -2,6 +2,8 @@
    its controls inside, the examples under the composer. On a phone the composer is pinned to the
    bottom of the screen. */
 .page {
+  position: relative;
+  isolation: isolate;
   min-height: calc(100vh - var(--s-6) - var(--s-8));
   max-width: 740px;
   margin: 0 auto;
@@ -10,6 +12,31 @@
   justify-content: center;
   gap: var(--s-5);
   padding-bottom: 8vh;
+}
+/* behind the greeting: a field of wells at a plate's 9 mm pitch, scaled down, and the accent's
+   halo, both fading out from the middle. Decoration only: it says nothing. */
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(closest-side, var(--glow), transparent) 50% 40% / 80% 55%
+      no-repeat,
+    radial-gradient(circle, var(--border-strong) 1.5px, transparent 2.1px) 50%
+      50% / 24px 24px;
+  /* the mask's colour is only its opacity */
+  -webkit-mask-image: radial-gradient(
+    ellipse 58% 46% at 50% 42%,
+    #000 15%,
+    transparent 80%
+  );
+  mask-image: radial-gradient(
+    ellipse 58% 46% at 50% 42%,
+    #000 15%,
+    transparent 80%
+  );
 }
 .hero {
   display: flex;
@@ -29,6 +56,7 @@
   flex: none;
   width: 2rem;
   height: 2rem;
+  filter: drop-shadow(0 0 16px var(--glow));
 }
 
 .composer {
@@ -36,14 +64,22 @@
   flex-direction: column;
   border: 1px solid var(--border);
   border-radius: 1.25rem;
-  background: var(--raised);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  background: color-mix(in srgb, var(--raised) 88%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow:
+    inset 0 1px 0 var(--hairline),
+    var(--shadow-lg);
   transition:
-    border-color 120ms ease,
-    box-shadow 120ms ease;
+    border-color 160ms ease,
+    box-shadow 160ms ease;
 }
 .composer:focus-within {
-  border-color: color-mix(in srgb, var(--text) 30%, var(--border));
+  border-color: color-mix(in srgb, var(--verified) 45%, var(--border));
+  box-shadow:
+    inset 0 1px 0 var(--hairline),
+    0 0 0 4px var(--glow),
+    var(--shadow-lg);
 }
 .request {
   width: 100%;
@@ -103,20 +139,31 @@
   align-items: center;
   justify-content: center;
   border: 0;
-  background: var(--verified);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--verified) 88%, white),
+    var(--verified)
+  );
   color: var(--on-accent);
   font-weight: 600;
   cursor: pointer;
-  transition: filter 120ms ease;
+  box-shadow: 0 6px 18px -8px var(--verified);
+  transition:
+    filter 120ms ease,
+    box-shadow 160ms ease;
 }
 .send:hover {
   filter: brightness(1.06);
+  box-shadow:
+    0 0 0 4px var(--glow),
+    0 8px 22px -8px var(--verified);
 }
 .send:disabled {
   cursor: not-allowed;
   background: var(--surface-2);
   color: var(--faint);
   filter: none;
+  box-shadow: none;
 }
 .sendArrow {
   width: 2.25rem;
@@ -135,6 +182,21 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--s-2);
+}
+/* the finished run to watch: one quiet line under the chips */
+.showcase {
+  max-width: none;
+  margin-top: calc(-1 * var(--s-2));
+  text-align: center;
+  font-size: var(--t-2);
+}
+.showcase a {
+  color: var(--muted);
+  transition: color 120ms ease;
+}
+.showcase a:hover {
+  color: var(--verified);
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
@@ -155,7 +217,8 @@
     font-size: 1.625rem;
     gap: var(--s-3);
   }
-  .chips {
+  .chips,
+  .showcase {
     order: 2;
   }
   .composer {
@@ -163,7 +226,6 @@
     position: sticky;
     bottom: calc(var(--s-3) + env(safe-area-inset-bottom));
     margin-top: auto;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   }
   .request {
     min-height: 3.25rem;

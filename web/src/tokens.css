@@ -1,5 +1,5 @@
 /* The design tokens. Every colour, space and size on every page comes from here; nothing is
-   styled inline. Light and dark share the same names (docs/ui-brief.md, "Visual direction"). */
+   styled inline. Light and dark share the same names (docs/design.md, "The tokens"). */
 
 :root {
   color-scheme: light dark;
@@ -45,6 +45,7 @@
   --raised: #ffffff; /* a card that sits above the page */
   --surface-2: #eceef1;
   --border: #dfe3e8;
+  --border-strong: #c9cfd7;
   --text: #1a1d21;
   --muted: #5b6470;
   --faint: #737c88;
@@ -61,6 +62,14 @@
   --note-bg: #e8f0fc;
 
   --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.1);
+  --shadow-lg: 0 18px 48px -18px rgba(16, 24, 40, 0.16), 0 1px 3px rgba(16, 24, 40, 0.06);
+  /* the inner top edge of a raised surface, the accent's halo, and the replay's stage: its
+     centre and its edge (the 3D scene reads both) */
+  --hairline: rgba(255, 255, 255, 0.6);
+  --glow: rgba(15, 138, 95, 0.12);
+  --glow-2: rgba(31, 95, 191, 0.08);
+  --stage-hi: #ffffff;
+  --stage-lo: #e9edf2;
   /* code */
   --code-comment: #6e7781;
   --code-string: #0a7d4f;
@@ -74,62 +83,80 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0f1115;
-    --surface: #171a20;
-    --raised: #161920;
-    --surface-2: #1f232b;
-    --border: #2a2f38;
-    --text: #e8eaee;
-    --muted: #9aa3b0;
-    --faint: #6c7581;
-    --link: #7fb0ff;
-    --verified: #3ecf8e;
-    --on-accent: #0f1115;
-    --verified-bg: #10291f;
+    --bg: #0b0d12;
+    --surface: #11141b;
+    --raised: #141821;
+    --surface-2: #1b202a;
+    --border: #252b37;
+    --border-strong: #343c4b;
+    --text: #e8ecf2;
+    --muted: #9ba5b4;
+    --faint: #737e8e;
+    --link: #82b6ff;
+    --verified: #3fd99a;
+    --on-accent: #0b0d12;
+    --verified-bg: #0f2a20;
     --error: #ff7b72;
-    --error-bg: #3a1a18;
-    --warning: #f0a44a;
-    --warning-bg: #3a2a12;
-    --note: #7fb0ff;
-    --note-bg: #16233a;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --error-bg: #351816;
+    --warning: #f2a94e;
+    --warning-bg: #33240f;
+    --note: #82b6ff;
+    --note-bg: #142238;
+    --shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 1px 2px rgba(0, 0, 0, 0.5),
+      0 10px 28px -14px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 24px 64px -16px rgba(0, 0, 0, 0.75), 0 2px 6px rgba(0, 0, 0, 0.4);
+    --hairline: rgba(255, 255, 255, 0.04);
+    --glow: rgba(63, 217, 154, 0.16);
+    --glow-2: rgba(130, 182, 255, 0.1);
+    --stage-hi: #1a2130;
+    --stage-lo: #07090c;
     --code-comment: #7d8590;
     --code-string: #7ee2a8;
     --code-keyword: #d2a8ff;
     --code-number: #ffb86b;
     --code-function: #79c0ff;
     --code-builtin: #ffa657;
-    --code-punctuation: #9aa3b0;
+    --code-punctuation: #9ba5b4;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #0f1115;
-  --surface: #171a20;
-  --raised: #161920;
-  --surface-2: #1f232b;
-  --border: #2a2f38;
-  --text: #e8eaee;
-  --muted: #9aa3b0;
-  --faint: #6c7581;
-  --link: #7fb0ff;
-  --verified: #3ecf8e;
-  --on-accent: #0f1115;
-  --verified-bg: #10291f;
+  --bg: #0b0d12;
+  --surface: #11141b;
+  --raised: #141821;
+  --surface-2: #1b202a;
+  --border: #252b37;
+  --border-strong: #343c4b;
+  --text: #e8ecf2;
+  --muted: #9ba5b4;
+  --faint: #737e8e;
+  --link: #82b6ff;
+  --verified: #3fd99a;
+  --on-accent: #0b0d12;
+  --verified-bg: #0f2a20;
   --error: #ff7b72;
-  --error-bg: #3a1a18;
-  --warning: #f0a44a;
-  --warning-bg: #3a2a12;
-  --note: #7fb0ff;
-  --note-bg: #16233a;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --error-bg: #351816;
+  --warning: #f2a94e;
+  --warning-bg: #33240f;
+  --note: #82b6ff;
+  --note-bg: #142238;
+  --shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 1px 2px rgba(0, 0, 0, 0.5),
+    0 10px 28px -14px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 24px 64px -16px rgba(0, 0, 0, 0.75), 0 2px 6px rgba(0, 0, 0, 0.4);
+  --hairline: rgba(255, 255, 255, 0.04);
+  --glow: rgba(63, 217, 154, 0.16);
+  --glow-2: rgba(130, 182, 255, 0.1);
+  --stage-hi: #1a2130;
+  --stage-lo: #07090c;
   --code-comment: #7d8590;
   --code-string: #7ee2a8;
   --code-keyword: #d2a8ff;
   --code-number: #ffb86b;
   --code-function: #79c0ff;
   --code-builtin: #ffa657;
-  --code-punctuation: #9aa3b0;
+  --code-punctuation: #9ba5b4;
 }
 
 /* Native controls (radios, selects, scrollbars) follow the chosen theme, not only the system's. */

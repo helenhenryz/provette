@@ -24,8 +24,8 @@ from provette.model import WellKey
 from provette.rules import run_rules
 from provette.state import Run, replay
 from provette.view import export, render, replay_deltas
-from provette.view.export import describe
-from provette.view.geometry import grid
+from provette.view.export import _on_module, describe
+from provette.view.geometry import Slot, grid
 from tests.state.builder import ABOVE, FLAT, FLAT_ID, PCR, PLATE_ID, TraceBuilder, plate, tip, tube
 from tests.view.conftest import PLATEMAPS, PROTOCOLS
 
@@ -118,7 +118,7 @@ def hand_built() -> CheckResult:
 def test_schema_on_hand_built_trace() -> None:
     result = hand_built()
     data = export(result)
-    assert data["schema_version"] == 3
+    assert data["schema_version"] == 4
     assert data["protocol"] == "hand_built.py"
     assert len(data["events"]) == len(result.trace.events) == len(data["deltas"])
     assert [e["i"] for e in data["events"]] == list(range(len(result.trace.events)))
@@ -378,3 +378,40 @@ def test_the_fixed_trash_labware_is_the_bin() -> None:
     assert row["w"] > 100 and row["h"] > 80  # the slot's box, not the well's
     assert describe(trace.events[-1], trace.deck) == "blow out the tip into the trash, tip A1"
     assert_state_matches(data, run, None)
+
+
+@pytest.mark.sim
+def test_a_labware_on_a_module_stands_at_the_modules_height(
+    checked: Callable[[Path], CheckResult],
+) -> None:
+    """The module definitions' own numbers (opentrons_shared_data): where a module holds its
+    labware above the deck, and its body; a labware on the deck stands at 0 with no body."""
+    data = export(checked(PROTOCOLS / "modules.py"))
+    rows = {lw["slot"]: lw for lw in data["deck"]["labware"]}
+    cold = rows["6"]
+    assert cold["module"] == "temperatureModuleV2"
+    assert cold["elevation"] == pytest.approx(80.09)
+    assert cold["module_body"]["height"] == pytest.approx(80.09)
+    assert cold["module_body"]["name"] == "Temperature Module GEN2"
+    assert (cold["module_body"]["w"], cold["module_body"]["h"]) == (cold["w"], cold["h"])
+    cycler = rows["7"]  # API 2.27: the definition's offset; the plate in the middle of its body
+    assert cycler["elevation"] == pytest.approx(108.96)
+    assert cycler["oy"] == pytest.approx(68.8)
+    body = cycler["module_body"]
+    assert (body["w"], body["h"]) == (pytest.approx(172), pytest.approx(245.2))
+    assert body["x"] == pytest.approx(cycler["slot_x"] - 22.125)
+    assert rows["1"]["elevation"] == pytest.approx(68.275)  # the heater-shaker
+    assert rows["9"]["elevation"] == 0.0 and rows["9"]["module_body"] is None  # the tips
+
+
+def test_the_thermocycler_holds_its_plate_lower_below_api_2_14() -> None:
+    """Below API 2.14 the legacy core puts a thermocycler GEN2's plate at its older offset
+    (opentrons, protocol_api/core/legacy/module_geometry.py); from 2.14, the definition's."""
+    slot = Slot("7", 0.0, 181.0, 128.0, 86.0)
+    old = _on_module("thermocyclerModuleV2", slot, 127.76, 85.48, "2.13")
+    new = _on_module("thermocyclerModuleV2", slot, 127.76, 85.48, "2.14")
+    assert old is not None and new is not None
+    assert old["elevation"] == pytest.approx(98.26) and old["dy"] == pytest.approx(68.06)
+    assert new["elevation"] == pytest.approx(108.96) and new["dy"] == pytest.approx(68.8)
+    assert _on_module(None, slot, 127.76, 85.48, "2.19") is None
+    assert _on_module("noSuchModuleV9", slot, 127.76, 85.48, "2.19") is None

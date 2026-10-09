@@ -8,12 +8,16 @@ export interface SceneTokens {
   surface: string;
   surface2: string;
   border: string;
+  borderStrong: string;
   text: string;
   muted: string;
   faint: string;
   link: string;
   error: string;
   warning: string;
+  verified: string;
+  stageHi: string; // the stage's lit centre and its dark edge (Deck3D.module.css draws it)
+  stageLo: string;
   dark: boolean;
 }
 
@@ -22,12 +26,16 @@ const FALLBACK: SceneTokens = {
   surface: "#f6f7f8",
   surface2: "#eceef1",
   border: "#dfe3e8",
+  borderStrong: "#c9cfd7",
   text: "#1a1d21",
   muted: "#5b6470",
   faint: "#737c88",
   link: "#1f5fbf",
   error: "#c7382f",
   warning: "#d97a13",
+  verified: "#0f8a5f",
+  stageHi: "#ffffff",
+  stageLo: "#e9edf2",
   dark: false,
 };
 
@@ -45,12 +53,16 @@ export function readTokens(): SceneTokens {
     surface: read("--surface", FALLBACK.surface),
     surface2: read("--surface-2", FALLBACK.surface2),
     border: read("--border", FALLBACK.border),
+    borderStrong: read("--border-strong", FALLBACK.borderStrong),
     text: read("--text", FALLBACK.text),
     muted: read("--muted", FALLBACK.muted),
     faint: read("--faint", FALLBACK.faint),
     link: read("--link", FALLBACK.link),
     error: read("--error", FALLBACK.error),
     warning: read("--warning", FALLBACK.warning),
+    verified: read("--verified", FALLBACK.verified),
+    stageHi: read("--stage-hi", FALLBACK.stageHi),
+    stageLo: read("--stage-lo", FALLBACK.stageLo),
     dark: parseInt(bg.slice(1, 3), 16) < 128,
   };
 }

@@ -50,7 +50,8 @@ export interface LabwarePlacement {
   z: number;
   w: number; // along x
   d: number; // along z (the deck's y)
-  height: number; // above the deck
+  height: number; // its own height, from its base
+  elevation: number; // where its base is above the deck: a module's height, else 0
   wells: WellPlacement[];
   round: boolean; // the wells' shape (one geometry per labware)
   profile: Profile; // the wells' outline (one geometry per labware: the first well's with a table)
@@ -58,6 +59,11 @@ export interface LabwarePlacement {
 
 export function labwareHeight(lw: LabwareModel): number {
   return lw.row.is_trash ? TRASH_HEIGHT_MM : Math.max(lw.depth, 2) + BASE_MM;
+}
+
+/* Where a labware's top is above the deck: its own height on whatever holds it. */
+export function labwareTop(lw: LabwareModel): number {
+  return lw.elevation + labwareHeight(lw);
 }
 
 export function place(model: ReplayModel): LabwarePlacement[] {
@@ -85,11 +91,13 @@ export function place(model: ReplayModel): LabwarePlacement[] {
     });
     const shaped = wells.find((well) => well.shape);
     const profile = shaped
-      ? unitProfile(
-          shaped.shape!.table,
-          shaped.depth,
-          (shaped.round ? Math.PI : 4) * shaped.rx * shaped.rz,
-          shaped.bottom,
+      ? fitProfile(
+          unitProfile(
+            shaped.shape!.table,
+            shaped.depth,
+            (shaped.round ? Math.PI : 4) * shaped.rx * shaped.rz,
+            shaped.bottom,
+          ),
         )
       : STRAIGHT;
     return {
@@ -99,6 +107,7 @@ export function place(model: ReplayModel): LabwarePlacement[] {
       w,
       d: h,
       height,
+      elevation: lw.elevation,
       wells,
       round: wells.length ? wells[0].round : true,
       profile,
@@ -134,6 +143,24 @@ export function unitProfile(
   if (!points.length) return STRAIGHT;
   const floor = bottom === "u" || bottom === "v" ? 0 : points[0][0];
   return [[floor, 0], ...points, [points[points.length - 1][0], 1]];
+}
+
+/* An outline with at most `max` points, the floor and the rim kept: what the 3D view's liquid
+   shader can hold (Deck3D.tsx, PROFILE_MAX, one point left for the floor it may add). A long
+   table (an Eppendorf 2 ml tube's has 115 rows) is read again at evenly spaced heights, so the
+   whole well keeps its outline; cutting the list instead dropped the bottom of the well, and
+   a tube was drawn open at the bottom with its liquid flattened to a disc. */
+export const PROFILE_POINTS = 31;
+export function fitProfile(profile: Profile, max = PROFILE_POINTS): Profile {
+  if (profile.length <= max) return profile;
+  const out: Profile = [];
+  for (let i = 0; i < max; i++) {
+    const y = i / (max - 1);
+    out.push([radiusAt(profile, y), y]);
+  }
+  out[0] = profile[0]; // the floor exactly: a point for a "u" or "v" bottom
+  out[max - 1] = profile[profile.length - 1];
+  return out;
 }
 
 /* The outline's radius at a height (0..1 of the depth): a straight line between two points. */
@@ -321,21 +348,28 @@ export function binSpotUnit(n: number): { a: number; b: number; tilt: number } {
 }
 
 /* The tallest labware on the deck, the trash aside (it is a bin at the back corner, always
-   the same height, and nothing stands behind it). A tip rack counts: its tips stand as tall
-   as its wells are deep. */
+   the same height, and nothing stands behind it), on a module counted from the deck. A tip
+   rack counts: its tips stand as tall as its wells are deep. */
 export function tallestLabware(model: ReplayModel): number {
   return model.labware.reduce(
-    (h, lw) => (lw.row.is_trash ? h : Math.max(h, labwareHeight(lw))),
+    (h, lw) => (lw.row.is_trash ? h : Math.max(h, labwareTop(lw))),
     0,
   );
 }
 
-/* Where every labware's name is printed: one height for the whole deck, above the tallest
-   labware plus a margin, so no name prints across a taller neighbour's tips. The trash keeps
+/* Where every labware's name is printed: one height for the labware on the deck, above the
+   tallest of them plus a margin, so no name prints across a taller neighbour's tips. A labware
+   on a module prints its name on its own top (Deck3D takes the higher of the two), so a
+   thermocycler does not lift every name on the deck far above its labware. The trash keeps
    its name on its own rim. */
 export const LABEL_MARGIN_MM = 3;
 export function labelHeight(model: ReplayModel): number {
-  return tallestLabware(model) + LABEL_MARGIN_MM;
+  const onDeck = model.labware.reduce(
+    (h, lw) =>
+      lw.row.is_trash || lw.elevation > 0 ? h : Math.max(h, labwareHeight(lw)),
+    0,
+  );
+  return (onDeck || tallestLabware(model)) + LABEL_MARGIN_MM;
 }
 
 /* The home camera: the whole deck in the frame. The deck's box (width × height, and the
@@ -357,7 +391,7 @@ export function homeView(
   // gantry's frame over it), so the whole of it sits centred in the view
   const target: [number, number, number] = [
     width / 2,
-    labelHeight(model) * 0.6,
+    (tallestLabware(model) + LABEL_MARGIN_MM) * 0.6,
     -height / 2,
   ];
   const dir = tallestLabware(model) > TALL_MM ? VIEW_STEEP : VIEW_LOW;
@@ -367,7 +401,7 @@ export function homeView(
   const flat = Math.hypot(dir[0], dir[2]);
   const along = (Math.abs(width * dir[0]) + Math.abs(height * dir[2])) / flat;
   const across = (Math.abs(width * dir[2]) + Math.abs(height * dir[0])) / flat;
-  const top = labelHeight(model) + 10;
+  const top = tallestLabware(model) + LABEL_MARGIN_MM + 10;
   const half =
     Math.max(along * 0.95, (along * dir[1] + top * flat) / n, across / aspect) /
     2;

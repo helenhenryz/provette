@@ -7,7 +7,9 @@ The shape, in words:
   well, its outline (shape, diameter or sides, depth, rated maximum), the definition's word for
   its bottom (`bottom`: "flat", "u", "v" or null) and the ledger's own volume-to-height table
   (`height_at_ul`: [µl, mm] rows from [0, 0] to the brim, or null), so the page draws the
-  liquid at the height the state computes with (`provette.state.contact.surface_mm`).
+  liquid at the height the state computes with (`provette.state.contact.surface_mm`). A
+  labware on a module also carries how high the module holds it (`elevation`, mm above the
+  deck) and the module's body (`module_body`), from the module's own definition (`_on_module`).
 * `wells`: every well the page will ever name, as "labware_id[well]"; everything else refers to
   a well by its index in this list.
 * `origins`: every liquid, by the well it started in, with a colour and a plain name.
@@ -28,6 +30,7 @@ import colorsys
 import re
 from collections.abc import Sequence
 from dataclasses import asdict
+from functools import cache
 from pathlib import Path
 from typing import Any
 
@@ -40,7 +43,9 @@ from provette.state import Run
 from provette.state.types import Presence, WellState
 from provette.view.geometry import Slot, deck_slots, footprint
 
-SCHEMA_VERSION = 3  # 2: `bottom` and `height_at_ul` on every well row; 3: `mount` on every event
+# 2: `bottom` and `height_at_ul` on every well row; 3: `mount` on every event; 4: `elevation` and
+# `module_body` on every labware row
+SCHEMA_VERSION = 4
 CACHE_EVERY = 50  # the page keeps a full state every this many events, for fast seeking
 
 # Twelve colours a colour-blind reader can tell apart (Okabe-Ito, then Tableau); past twelve,
@@ -58,7 +63,7 @@ def export(
 ) -> dict[str, Any]:
     trace, run = result.trace, result.run
     index = _WellIndex()
-    deck = _deck(trace.deck, labware_dirs)
+    deck = _deck(trace.deck, labware_dirs, trace.deck.api_level)
     origins = _origins(run, trace.deck, index)
     events = [_event(event, trace.deck, index) for event in trace.events]
     initial = {
@@ -113,7 +118,7 @@ class _WellIndex:
         return [str(well) for well in self._index]
 
 
-def _deck(deck: Deck, labware_dirs: Sequence[Path]) -> dict[str, Any]:
+def _deck(deck: Deck, labware_dirs: Sequence[Path], api_level: str = "") -> dict[str, Any]:
     slots = deck_slots()
     by_id = {slot.id: slot for slot in slots}
     labware_rows = []
@@ -121,7 +126,7 @@ def _deck(deck: Deck, labware_dirs: Sequence[Path]) -> dict[str, Any]:
         # Labware off the deck, or in a place the deck definition does not name, is drawn at
         # the origin with the size of slot 1, and the page says so in its label.
         slot = by_id.get(labware.slot, Slot(labware.slot, 0, 0, slots[0].width, slots[0].height))
-        labware_rows.append(_labware_row(labware, slot, labware_dirs))
+        labware_rows.append(_labware_row(labware, slot, labware_dirs, api_level))
     return {
         "width": max(s.x + s.width for s in slots),
         "height": max(s.y + s.height for s in slots),
@@ -146,7 +151,9 @@ def is_trash(labware: Labware) -> bool:
     )
 
 
-def _labware_row(labware: Labware, slot: Slot, labware_dirs: Sequence[Path]) -> dict[str, Any]:
+def _labware_row(
+    labware: Labware, slot: Slot, labware_dirs: Sequence[Path], api_level: str = ""
+) -> dict[str, Any]:
     trash = is_trash(labware)
     if labware.wells and not trash:
         shape = footprint(labware, labware_dirs, slot)
@@ -171,9 +178,14 @@ def _labware_row(labware: Labware, slot: Slot, labware_dirs: Sequence[Path]) -> 
         }
         size = {"w": shape.width, "h": shape.height, "ox": shape.offset_x, "oy": shape.offset_y}
         measured = shape.measured
+        module = _on_module(labware.module, slot, shape.width, shape.height, api_level)
+        if module is not None:
+            size["ox"] += module["dx"]
+            size["oy"] += module["dy"]
     else:  # the bin: drawn as its slot's box, its one "well" (where tips land) has no place
         wells, measured = {}, True
         size = {"w": slot.width, "h": slot.height, "ox": 0.0, "oy": 0.0}
+        module = None
     return {
         "id": labware.labware_id,
         "slot": labware.slot,
@@ -187,8 +199,65 @@ def _labware_row(labware: Labware, slot: Slot, labware_dirs: Sequence[Path]) -> 
         "slot_x": slot.x,
         "slot_y": slot.y,
         **size,
+        "elevation": module["elevation"] if module else 0.0,
+        "module_body": module["body"] if module else None,
         "wells": wells,
     }
+
+
+# The thermocycler GEN2's labware offset before API 2.14: the legacy core uses it in place of
+# the definition's (opentrons, protocol_api/core/legacy/module_geometry.py, create_geometry).
+_LEGACY_TC_BELOW = (2, 14)
+
+
+@cache
+def _module_definition(model: str) -> dict[str, Any] | None:
+    from opentrons_shared_data.module import load_definition
+
+    try:
+        return dict(load_definition("3", model))
+    except Exception:  # a model this opentrons does not know: the labware stays on the deck
+        return None
+
+
+def _on_module(
+    model: str | None, slot: Slot, width: float, depth: float, api_level: str
+) -> dict[str, Any] | None:
+    """Where a module holds its labware and what its body is, from the module's own
+    definition (`opentrons_shared_data`): the labware's base is `labwareOffset` from the slot's
+    corner, `elevation` mm above the deck (`dx`, `dy` move the labware by the offset's x and y);
+    the body is a box under the labware's footprint as tall as the elevation, except the
+    thermocycler's, which is the definition's own box (`xDimension` by `yDimension` from its
+    `cornerOffsetFromSlot`, covering slots 7, 8, 10 and 11). The OT-2 slot transforms move the
+    labware by under a millimetre in the right-hand column and are left out."""
+    definition = _module_definition(model) if model else None
+    if definition is None or model is None:
+        return None
+    offset = definition["labwareOffset"]
+    if model == "thermocyclerModuleV2" and _version(api_level) < _LEGACY_TC_BELOW:
+        from opentrons_shared_data.module import OLD_TC_GEN2_LABWARE_OFFSET
+
+        offset = OLD_TC_GEN2_LABWARE_OFFSET
+    elevation = float(offset["z"])
+    dx, dy = float(offset["x"]), float(offset["y"])
+    if definition.get("moduleType") == "thermocyclerModuleType":
+        dims, corner = definition["dimensions"], definition["cornerOffsetFromSlot"]
+        body: dict[str, Any] = {
+            "x": slot.x + float(corner["x"]),
+            "y": slot.y + float(corner["y"]),
+            "w": float(dims["xDimension"]),
+            "h": float(dims["yDimension"]),
+        }
+    else:
+        body = {"x": slot.x + dx, "y": slot.y + dy, "w": width, "h": depth}
+    body["height"] = elevation
+    body["name"] = str(definition.get("displayName") or model)
+    return {"dx": dx, "dy": dy, "elevation": elevation, "body": body}
+
+
+def _version(api_level: str) -> tuple[int, int]:
+    match = re.match(r"^(\d+)\.(\d+)", api_level or "")
+    return (int(match[1]), int(match[2])) if match else (99, 99)
 
 
 def _kind(labware_id: str) -> str:

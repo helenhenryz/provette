@@ -4,7 +4,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it, vi } from "vitest";
-import { HomePage } from "./Home";
+import { HomePage, SHOWCASE } from "./Home";
 
 const lists = {
   plans: [
@@ -77,5 +77,15 @@ describe("HomePage", () => {
       screen.getByRole("button", { name: "Needs the key" }),
     ).toBeDisabled();
     expect(screen.queryByText(/Needs a Token Factory key/)).toBeNull();
+  });
+
+  it("links one finished run to watch, the gallery's 96-well qPCR plate", async () => {
+    render(
+      <MemoryRouter>
+        <HomePage />
+      </MemoryRouter>,
+    );
+    const link = await screen.findByRole("link", { name: /watch a finished run/i });
+    expect(link.getAttribute("href")).toBe(`/episodes/${SHOWCASE}`);
   });
 });

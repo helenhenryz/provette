@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { Grid, OrbitControls } from "@react-three/drei";
 import { DeckLoader } from "./DeckLoader";
 import {
   Canvas,
@@ -19,7 +19,9 @@ import {
   columnOf,
   homeView,
   labelHeight,
+  LABEL_MARGIN_MM,
   liquidColumns,
+  PROFILE_POINTS,
   place,
   racksOfFrame,
   radiusAt,
@@ -50,17 +52,23 @@ import type { Highlight, ReplayModel } from "./types";
    height that table gives its volume (else the volume over the well's rated maximum), never
    under the drawing floor (state.ts MIN_FILL), coloured by what it holds (the liquids'
    colours blended by share; the 2D view shows the stack). The pipette is a gantry that travels along its path to the well of the
-   current event, its tip filling and emptying as the ledger's volumes move; a rack loses its
-   tips as they are used and the bin gains them. Orbit to look around, scroll to zoom, the
-   button resets the view; Nothing here is physics: no
-   droplets, no meniscus, only the ledger's numbers, interpolated between two known states.
+   current event, its tip filling and emptying as the ledger's volumes move; a rack's tips are
+   drawn with a tip's outline (point, body, collar) standing in the holes of its top plate, and
+   a rack loses its tips as they are used and the bin gains them. A labware on a module stands
+   on the module's body at the height the module's definition gives (the export's `elevation`
+   and `module_body`), and the pipette goes down to it there. Orbit to look around, scroll to
+   zoom, the button resets the view. Nothing here is physics: no droplets, no meniscus, only
+   the ledger's numbers, interpolated between two known states.
 
    The shading is convention, like the choice of a lathe: the scene is lit by an environment
-   map built in memory (RoomLight), the liquid is a glossy physical material with a darker
-   floor, a brighter top and a rim (liquidShaderFor), each column has a lit surface disc and
-   each well is a thin clear tube. A sheen says nothing about the liquid; a meniscus or a
-   slosh would, so neither is drawn. Colours are not tone mapped (`flat`), so a token and a
-   liquid's colour reach the screen as given, and the lights are tuned per theme by screenshot.
+   map built in memory (RoomLight), a sky-and-floor fill, a key light from the front left that
+   casts the shadows and a rim light from behind in the link's blue (Lights); the deck stands
+   on a floor grid that fades into the stage (Floor). The liquid is a glossy physical material
+   with a darker floor, a brighter top and a rim (liquidShaderFor), each column has a lit
+   surface disc and each well is a thin clear tube. A sheen or a shadow says nothing about the
+   liquid; a meniscus or a slosh would, so neither is drawn. Colours are not tone mapped
+   (`flat`), so a token and a liquid's colour reach the screen as given, and the lights are
+   tuned per theme by screenshot.
 
    `frame` is one object the component mutates on every tick; `version` is its counter, so
    React renders when it changes while the meshes are updated in place in useFrame. */
@@ -108,6 +116,7 @@ export function Deck3D({
           far: 4000,
         }}
         flat
+        shadows={{ type: THREE.PCFShadowMap }}
         gl={{ antialias: true, alpha: true }}
         onCreated={() => requestAnimationFrame(() => setReady(true))} // after the first frame
       >
@@ -175,27 +184,47 @@ function Scene({
     [model],
   );
   const labelY = useMemo(() => labelHeight(model), [model]);
+  const reach = useMemo(() => {
+    const home = homeView(model);
+    return Math.hypot(
+      home.position[0] - home.target[0],
+      home.position[1] - home.target[1],
+      home.position[2] - home.target[2],
+    );
+  }, [model]);
   return (
     <>
-      <RoomLight intensity={tokens.dark ? 0.5 : 0.38} />
-      <directionalLight
-        position={[W * 0.3, 400, 200]}
-        intensity={tokens.dark ? 1.2 : 0.9}
-      />
-      {/* the deck */}
-      <mesh position={[W / 2, -1.5, -H / 2]} receiveShadow>
+      <Lights width={W} depth={H} tokens={tokens} />
+      <Floor width={W} depth={H} reach={reach} tokens={tokens} />
+      {/* the deck: a machined plate, a little metallic, so the room shows in it */}
+      <mesh position={[W / 2, -1.5, -H / 2]} receiveShadow castShadow>
         <boxGeometry args={[W + 12, 3, H + 12]} />
-        <meshStandardMaterial color={tokens.surface2} roughness={0.9} />
+        <meshStandardMaterial
+          color={tokens.surface2}
+          roughness={0.6}
+          metalness={tokens.dark ? 0.25 : 0.15}
+        />
       </mesh>
       {slots.map((s) => (
         <group
           key={s.id}
           position={[s.x + s.width / 2, 0, -(s.y + s.height / 2)]}
         >
-          <mesh position={[0, 0.3, 0]}>
+          <mesh position={[0, 0.3, 0]} receiveShadow>
             <boxGeometry args={[s.width, 0.6, s.height]} />
-            <meshStandardMaterial color={tokens.surface} roughness={0.8} />
+            <meshStandardMaterial
+              color={tokens.surface}
+              roughness={0.7}
+              metalness={tokens.dark ? 0.2 : 0}
+            />
           </mesh>
+          <Outline
+            width={s.width}
+            height={0.6}
+            depth={s.height}
+            y={0.3}
+            colour={tokens.borderStrong}
+          />
           {!occupied.has(s.id) && (
             <Label
               text={s.id}
@@ -208,6 +237,16 @@ function Scene({
           )}
         </group>
       ))}
+      {placements.map(
+        (p) =>
+          p.lw.row.module_body && (
+            <ModuleBody
+              key={`m${p.lw.row.id}`}
+              body={p.lw.row.module_body}
+              tokens={tokens}
+            />
+          ),
+      )}
       {placements.map((p) =>
         p.lw.row.is_trash ? (
           <TrashBin
@@ -318,15 +357,28 @@ function Labware3D({
       p.round ? new THREE.CircleGeometry(1, 20) : new THREE.PlaneGeometry(2, 2),
     [p.round],
   );
-  const cone = useMemo(() => new THREE.ConeGeometry(1, 1, 14), []);
+  const cone = useMemo(() => tipGeometry(), []); // a rack's tip: point, body, shoulder, collar
+  const hole = useMemo(() => new THREE.RingGeometry(0.78, 1, 24), []); // a rack's hole, flat
+  // a fresh tip: the muted grey lifted towards the text colour on the dark stage, so a rack
+  // reads as a rack of tips and not as a shadow
+  const fresh = useMemo(
+    () =>
+      new THREE.Color(tokens.muted).lerp(
+        new THREE.Color(tokens.text),
+        tokens.dark ? 0.3 : 0,
+      ),
+    [tokens],
+  );
   const shader = useMemo(
     () => liquidShaderFor(lathePoints(p.profile, p.round)),
     [p.profile, p.round],
   );
   useEffect(
     () => () =>
-      [geometry, column, filmGeometry, disc, cone].forEach((g) => g.dispose()),
-    [geometry, column, filmGeometry, disc, cone],
+      [geometry, column, filmGeometry, disc, cone, hole].forEach((g) =>
+        g.dispose(),
+      ),
+    [geometry, column, filmGeometry, disc, cone, hole],
   );
   const base = BASE_MM;
   const tiprack = p.lw.row.is_tiprack;
@@ -338,15 +390,22 @@ function Labware3D({
   });
 
   // The wells never move, and the liquid solid sits in the well at 0.9 of its width: their
-  // matrices are written once. The lathe's local y runs 0..1, floor to rim.
+  // matrices are written once. The lathe's local y runs 0..1, floor to rim. A tip rack has no
+  // wells to see, only the holes in its top plate the tips stand in.
   useLayoutEffect(() => {
     const { o } = buffers;
     const write = (mesh: THREE.InstancedMesh | null, k: number) => {
       if (!mesh) return;
       p.wells.forEach((w, i) => {
-        o.position.set(w.x, base, w.z);
-        o.scale.set(w.rx * k, w.depth, w.rz * k);
-        o.rotation.set(0, 0, 0);
+        if (tiprack) {
+          o.position.set(w.x, base + w.depth + 0.05, w.z);
+          o.scale.set(w.rx, w.rz, 1);
+          o.rotation.set(-Math.PI / 2, 0, 0);
+        } else {
+          o.position.set(w.x, base, w.z);
+          o.scale.set(w.rx * k, w.depth, w.rz * k);
+          o.rotation.set(0, 0, 0);
+        }
         o.updateMatrix();
         mesh.setMatrixAt(i, o.matrix);
       });
@@ -354,7 +413,7 @@ function Labware3D({
     };
     write(wells.current, 1);
     write(liquid.current, 0.9);
-  }, [p, buffers, base]);
+  }, [p, buffers, base, tiprack]);
 
   const writeColumn = (
     i: number,
@@ -409,16 +468,17 @@ function Labware3D({
       tipsInRack(racks, p, shown);
       p.wells.forEach((w, i) => {
         const on = shown[i];
-        o.position.set(w.x, base + w.depth / 2, w.z);
+        // the tip stands in its hole, its point down at the base and its collar at the top
+        o.position.set(w.x, base, w.z);
         o.scale.set(
-          on > 0 ? w.rx * 0.85 : 1e-4,
+          on > 0 ? w.rx : 1e-4,
           on > 0 ? w.depth : 1e-4,
-          on > 0 ? w.rz * 0.85 : 1e-4,
+          on > 0 ? w.rz : 1e-4,
         );
-        o.rotation.set(Math.PI, 0, 0);
+        o.rotation.set(0, 0, 0);
         o.updateMatrix();
         mesh.setMatrixAt(i, o.matrix);
-        mesh.setColorAt(i, c.set(on === 1 ? tokens.muted : tokens.warning));
+        mesh.setColorAt(i, on === 1 ? fresh : c.set(tokens.warning));
       });
       mesh.instanceMatrix.needsUpdate = true;
       if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
@@ -472,6 +532,7 @@ function Labware3D({
   };
   return (
     <group>
+      <group position={[0, p.elevation, 0]}>
       <mesh position={[p.x, p.height / 2, p.z]} onClick={select}>
         <boxGeometry args={[p.w, p.height, p.d]} />
         <meshPhysicalMaterial
@@ -485,20 +546,31 @@ function Labware3D({
         />
       </mesh>
       {/* the base, opaque */}
-      <mesh position={[p.x, base / 2, p.z]}>
+      <mesh position={[p.x, base / 2, p.z]} castShadow receiveShadow>
         <boxGeometry args={[p.w, base, p.d]} />
         <meshStandardMaterial color={tokens.border} roughness={0.8} />
       </mesh>
+      <group position={[p.x, 0, p.z]}>
+        <Outline
+          width={p.w}
+          height={p.height}
+          depth={p.d}
+          y={p.height / 2}
+          colour={tokens.borderStrong}
+          opacity={0.8}
+        />
+      </group>
       {n > 0 && (
-        // the well: a thin clear tube, drawn after the columns so the liquid shows through it
+        // the well: a thin clear tube, drawn after the columns so the liquid shows through it;
+        // in a tip rack, the hole in the top plate
         <instancedMesh
           ref={wells}
-          args={[geometry, undefined, n]}
+          args={[tiprack ? hole : geometry, undefined, n]}
           frustumCulled={false}
           renderOrder={2}
         >
           <meshPhysicalMaterial
-            color={tokens.dark ? "#9aa3b0" : "#ffffff"}
+            color={tokens.dark ? tokens.muted : tokens.bg}
             side={THREE.DoubleSide}
             roughness={0.15}
             transparent
@@ -552,13 +624,19 @@ function Labware3D({
           ref={tips}
           args={[cone, undefined, n]}
           frustumCulled={false}
+          castShadow
         >
-          <meshStandardMaterial roughness={0.5} />
+          <meshStandardMaterial roughness={0.35} side={THREE.DoubleSide} />
         </instancedMesh>
       )}
+      </group>
       {/* the name, at the deck's one label height (above the tallest labware), on the front edge */}
       <group
-        position={[p.x, Math.max(p.height + 0.05, labelY), p.z + p.d / 2 - 5]}
+        position={[
+          p.x,
+          Math.max(p.elevation + p.height + LABEL_MARGIN_MM, labelY),
+          p.z + p.d / 2 - 5,
+        ]}
       >
         <Label
           text={`${p.lw.row.slot} · ${labwareTitle(p.lw)}`}
@@ -594,16 +672,188 @@ function RoomLight({ intensity }: { intensity: number }) {
   return null;
 }
 
+/* The lights over the deck. A fill from the sky and the floor, so no side is black; a key light
+   from the front left, high, aimed at the deck's middle, that casts the shadows (its camera
+   just covers the deck and the gantry); and a rim light from behind in the link's blue, so the
+   gantry and the labware have an edge against the dark stage. The intensities are per theme,
+   tuned by screenshot. */
+function Lights({
+  width: W,
+  depth: H,
+  tokens,
+}: {
+  width: number;
+  depth: number;
+  tokens: SceneTokens;
+}) {
+  const target = useMemo(() => new THREE.Object3D(), []);
+  const span = Math.max(W, H) * 0.8;
+  return (
+    <>
+      <RoomLight intensity={tokens.dark ? 0.42 : 0.36} />
+      <hemisphereLight
+        args={[tokens.text, tokens.stageLo, tokens.dark ? 0.22 : 0.3]}
+      />
+      <primitive object={target} position={[W / 2, 0, -H / 2]} />
+      <directionalLight
+        target={target}
+        position={[W / 2 - 220, 520, -H / 2 + 300]}
+        intensity={tokens.dark ? 1.25 : 0.95}
+        castShadow
+        shadow-mapSize={[2048, 2048]}
+        shadow-bias={-0.0005}
+        shadow-normalBias={0.4}
+      >
+        <orthographicCamera
+          attach="shadow-camera"
+          args={[-span, span, span, -span, 50, 1600]}
+        />
+      </directionalLight>
+      <directionalLight
+        target={target}
+        position={[W / 2 + 120, 220, -H - 420]}
+        intensity={tokens.dark ? 0.9 : 0.25}
+        color={tokens.link}
+      />
+    </>
+  );
+}
+
+/* The floor the deck stands on: a grid of 10 mm squares and 100 mm sections in the border
+   colours, fading with distance from the eye into the stage, and a plane under it that takes
+   only the shadows (of the deck and the gantry's posts). */
+function Floor({
+  width: W,
+  depth: H,
+  reach,
+  tokens,
+}: {
+  width: number;
+  depth: number;
+  reach: number; // the camera's distance from the deck's middle in the home view
+  tokens: SceneTokens;
+}) {
+  const y = -3.05;
+  return (
+    <>
+      <mesh
+        position={[W / 2, y - 0.02, -H / 2]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        receiveShadow
+      >
+        <planeGeometry args={[W * 4, H * 4]} />
+        <shadowMaterial transparent opacity={tokens.dark ? 0.3 : 0.12} />
+      </mesh>
+      {/* a plane of its own size, not drei's "infinite" one: that one is scaled by the fade
+          distance, and at that size the lines near the deck break up */}
+      <Grid
+        position={[W / 2, y, -H / 2]}
+        args={[reach * 6, reach * 6]}
+        cellSize={10}
+        cellThickness={0.5}
+        cellColor={tokens.border}
+        sectionSize={100}
+        sectionThickness={1}
+        sectionColor={tokens.borderStrong}
+        fadeDistance={reach * 2.2}
+        fadeStrength={2}
+        fadeFrom={1}
+      />
+    </>
+  );
+}
+
+/* The edges of a box, as thin lines: a slot's plate and a labware's footprint drawn crisp
+   against the dark. The box is centred on (0, y, 0). */
+function Outline({
+  width,
+  height,
+  depth,
+  y,
+  colour,
+  opacity = 1,
+}: {
+  width: number;
+  height: number;
+  depth: number;
+  y: number;
+  colour: string;
+  opacity?: number;
+}) {
+  const geometry = useMemo(() => {
+    const box = new THREE.BoxGeometry(width, height, depth);
+    const edges = new THREE.EdgesGeometry(box);
+    box.dispose();
+    return edges;
+  }, [width, height, depth]);
+  useEffect(() => () => geometry.dispose(), [geometry]);
+  return (
+    <lineSegments position={[0, y, 0]} geometry={geometry}>
+      <lineBasicMaterial
+        color={colour}
+        transparent={opacity < 1}
+        opacity={opacity}
+      />
+    </lineSegments>
+  );
+}
+
+/* A module under its labware: a box of brushed metal as tall as it holds the labware, the
+   thermocycler's as wide as its definition (over slots 7, 8, 10 and 11), with the module's
+   name on its front face. The export's numbers are the module definition's (export.py,
+   `_on_module`); the shape inside the box (a block, a magnet, a lid) is not drawn. */
+function ModuleBody({
+  body,
+  tokens,
+}: {
+  body: NonNullable<LabwarePlacement["lw"]["row"]["module_body"]>;
+  tokens: SceneTokens;
+}) {
+  const x = body.x + body.w / 2;
+  const z = -(body.y + body.h / 2);
+  return (
+    <group position={[x, 0, z]}>
+      <mesh position={[0, body.height / 2, 0]} castShadow receiveShadow>
+        <boxGeometry args={[body.w, body.height, body.h]} />
+        <meshStandardMaterial
+          color={tokens.borderStrong}
+          roughness={0.45}
+          metalness={tokens.dark ? 0.45 : 0.2}
+        />
+      </mesh>
+      <Outline
+        width={body.w}
+        height={body.height}
+        depth={body.h}
+        y={body.height / 2}
+        colour={tokens.faint}
+        opacity={0.7}
+      />
+      <group position={[0, body.height * 0.55, body.h / 2 + 0.2]}>
+        <Label
+          text={body.name}
+          colour={tokens.text}
+          width={Math.min(body.w - 12, body.name.length * 4.2)}
+          y={0}
+          z={0}
+          upright
+        />
+      </group>
+    </group>
+  );
+}
+
 /* A well's outline as geometry: the profile turned about its axis, 20 sides for a round
    well, 4 for a box (turned so a side is a wall: the box's half-side is the profile's radius
    times root two), with a floor from the axis out when the outline does not start at a point.
    The lathe's y runs 0..1, the depth; the instance matrix scales it to the well. */
-const PROFILE_MAX = 32; // the shader's uniform holds this many points
+const PROFILE_MAX = PROFILE_POINTS + 1; // the shader's uniform holds this many points
 function lathePoints(profile: Profile, round: boolean): THREE.Vector2[] {
   const k = round ? 1 : Math.SQRT2;
   const points = profile.map(([r, y]) => new THREE.Vector2(r * k, y));
   if (points[0].x > 0) points.unshift(new THREE.Vector2(0, 0));
-  return points.slice(-PROFILE_MAX);
+  // scene.fitProfile keeps an outline to PROFILE_POINTS, one under this, for the floor point
+  return points.slice(0, PROFILE_MAX);
 }
 function latheOf(profile: Profile, round: boolean): THREE.BufferGeometry {
   const lathe = new THREE.LatheGeometry(
@@ -687,6 +937,24 @@ function surfaceShader(shader: THREE.WebGLProgramParametersWithUniforms): void {
       "#include <opaque_fragment>",
       "float rim = pow(1.0 - abs(dot(normalize(vViewPosition), normalize(vNormal))), 2.0);\n outgoingLight += vec3(0.12) * rim;\n#include <opaque_fragment>",
     );
+}
+
+/* A pipette tip, turned on a lathe: the narrow point at the bottom, the long cone of the body,
+   a shoulder and the wider collar the nozzle presses into, open at the top. Radii as fractions
+   of the rack hole's, heights of the hole's depth (the tip's length in the definition): the
+   shape all OT-2 tips share, drawn, not any one tip measured. */
+const TIP_PROFILE: [number, number][] = [
+  [0.1, 0],
+  [0.44, 0.74],
+  [0.56, 0.78],
+  [0.82, 0.83],
+  [0.88, 1],
+];
+function tipGeometry(): THREE.BufferGeometry {
+  return new THREE.LatheGeometry(
+    TIP_PROFILE.map(([r, y]) => new THREE.Vector2(r, y)),
+    16,
+  );
 }
 
 /* The fixed trash: an open bin the height of a tall labware, in slot 12, with the tips the
@@ -783,7 +1051,7 @@ function TrashBin({
           [-p.w / 2 + t / 2, 0, t, p.d],
           [p.w / 2 - t / 2, 0, t, p.d],
         ].map(([x, z, w, d], i) => (
-          <mesh key={i} position={[x, h / 2, z]}>
+          <mesh key={i} position={[x, h / 2, z]} castShadow>
             <boxGeometry args={[w, h, d]} />
             <meshStandardMaterial
               color={tokens.surface2}
@@ -856,7 +1124,7 @@ function Rings({
         if (w.index >= 0)
           map.set(w.index, {
             x: w.x,
-            y: p.height + 0.4,
+            y: p.elevation + p.height + 0.4,
             z: w.z,
             r: Math.max(w.rx, w.rz) + 0.5,
           });
@@ -973,6 +1241,8 @@ function Pipette({
   const shells = useRef<(THREE.Mesh | null)[]>([]);
   const contents = useRef<(THREE.Mesh | null)[]>([]);
   const colour = useMemo(() => new THREE.Color(), []);
+  const tipShape = useMemo(() => tipGeometry(), []); // the tip on the nozzle: a rack's tip's shape
+  useEffect(() => () => tipShape.dispose(), [tipShape]);
   const gantry = timeline.travelHeight + TIP_LENGTH_MM + PIPETTE_LENGTH_MM + 30; // where the beam rides
   const bodyBottom = TIP_LENGTH_MM; // local y, above the tip's point (rig y = the point)
   const bodyTop = bodyBottom + PIPETTE_LENGTH_MM;
@@ -1049,7 +1319,7 @@ function Pipette({
       if (!on) continue;
       const x = frame.ox[k];
       const z = -frame.oy[k];
-      shell.position.set(x, TIP_LENGTH_MM / 2, z);
+      shell.position.set(x, 0, z); // the lathe's point is its origin
       const frac = Math.max(
         0,
         Math.min(1, frame.held[k] / timeline.pipetteMax),
@@ -1065,14 +1335,22 @@ function Pipette({
       {/* the frame: a rail along each side of the deck, under the beam's ends, on two posts */}
       {[-RAIL_X_MM, width + RAIL_X_MM].map((x) => (
         <group key={x}>
-          <mesh position={[x, gantry - BEAM_MM / 2 - RAIL_MM / 2, -depth / 2]}>
+          <mesh
+            position={[x, gantry - BEAM_MM / 2 - RAIL_MM / 2, -depth / 2]}
+            castShadow
+          >
             <boxGeometry args={[RAIL_MM, RAIL_MM, depth + 24]} />
-            <meshStandardMaterial color={tokens.border} roughness={0.7} />
+            <meshStandardMaterial
+              color={tokens.borderStrong}
+              roughness={0.35}
+              metalness={0.5}
+            />
           </mesh>
           {[10, -depth - 10].map((z) => (
             <mesh
               key={z}
               position={[x, (gantry - BEAM_MM / 2 - RAIL_MM) / 2, z]}
+              castShadow={z <= 0}
             >
               <boxGeometry
                 args={[RAIL_MM, gantry - BEAM_MM / 2 - RAIL_MM, RAIL_MM]}
@@ -1080,8 +1358,9 @@ function Pipette({
               {/* the front posts stand between the camera and the front slots: see-through, so they
                   never hide the pipette at work there; the back ones solid */}
               <meshStandardMaterial
-                color={tokens.border}
-                roughness={0.7}
+                color={tokens.borderStrong}
+                roughness={0.35}
+                metalness={0.5}
                 transparent={z > 0}
                 opacity={z > 0 ? 0.28 : 1}
                 depthWrite={z <= 0}
@@ -1091,13 +1370,17 @@ function Pipette({
         </group>
       ))}
       <group ref={beam} position={[0, 0, 0]}>
-        <mesh position={[width / 2, gantry, 0]}>
+        <mesh position={[width / 2, gantry, 0]} castShadow>
           <boxGeometry args={[width + 2 * RAIL_X_MM, BEAM_MM, 14]} />
-          <meshStandardMaterial color={tokens.border} roughness={0.6} />
+          <meshStandardMaterial
+            color={tokens.borderStrong}
+            roughness={0.35}
+            metalness={0.5}
+          />
         </mesh>
         {/* a shoe at each end, riding on its rail */}
         {[-RAIL_X_MM, width + RAIL_X_MM].map((x) => (
-          <mesh key={x} position={[x, gantry, 0]}>
+          <mesh key={x} position={[x, gantry, 0]} castShadow>
             <boxGeometry args={[RAIL_MM + 6, BEAM_MM + 6, 24]} />
             <meshStandardMaterial color={tokens.muted} roughness={0.5} />
           </mesh>
@@ -1110,7 +1393,7 @@ function Pipette({
         <group ref={body}>
           {/* the one carriage block, under the beam, spanning both mounts; placed per frame */}
           {/* no pipette loaded (a protocol that runs only a module): no carriage to draw */}
-          <mesh ref={block} visible={mounts.length > 0}>
+          <mesh ref={block} visible={mounts.length > 0} castShadow>
             <boxGeometry
               args={[(mounts.length > 1 ? MOUNT_GAP_MM : 0) + 22, BLOCK_MM, 18]}
             />
@@ -1122,6 +1405,7 @@ function Pipette({
               <mesh
                 ref={(r) => void (rods.current[m] = r)}
                 position={[0, bodyTop + HEAD_MM + 10, rowMid(p.channels)]}
+                castShadow
               >
                 <cylinderGeometry args={[1.6, 1.6, 1, 10]} />
                 <meshStandardMaterial color={tokens.faint} roughness={0.6} />
@@ -1139,10 +1423,11 @@ function Pipette({
           <group key={k}>
             <mesh
               ref={(m) => void (shells.current[k] = m)}
-              rotation={[Math.PI, 0, 0]}
+              geometry={tipShape}
+              scale={[TIP_SHELL_MM, TIP_LENGTH_MM, TIP_SHELL_MM]}
               visible={false}
+              castShadow
             >
-              <coneGeometry args={[2.2, TIP_LENGTH_MM, 12, 1, true]} />
               <meshStandardMaterial
                 color={tokens.text}
                 roughness={0.4}
@@ -1166,6 +1451,9 @@ function Pipette({
   );
 }
 
+// the tip on the nozzle: its collar's radius over 0.88 (TIP_PROFILE), wide enough that the
+// liquid cone inside it (2 mm at the top, from the point) stays inside the wall at every height
+const TIP_SHELL_MM = 3.5;
 const HEAD_MM = 12; // the mount's head block: shorter and narrower than the pipette under it
 const BEAM_MM = 8; // the cross-beam's height
 const IDLE_GAP_MM = 4; // the idle mount's head under the carriage block
@@ -1201,11 +1489,11 @@ function PipetteBody({
   const mid = ((n - 1) * NOZZLE_PITCH_MM) / 2;
   return (
     <group>
-      <mesh position={[0, bodyTop + HEAD_MM / 2, mid]}>
+      <mesh position={[0, bodyTop + HEAD_MM / 2, mid]} castShadow>
         <boxGeometry args={[9, HEAD_MM, 7]} />
         <meshStandardMaterial color={head} roughness={0.6} />
       </mesh>
-      <mesh position={[0, bodyTop - shoulder / 2, mid]}>
+      <mesh position={[0, bodyTop - shoulder / 2, mid]} castShadow>
         <cylinderGeometry args={[7, 5.5, shoulder, 18]} />
         <meshStandardMaterial color={colour} roughness={0.45} />
       </mesh>
@@ -1215,6 +1503,7 @@ function PipetteBody({
           y + nozzle + (PIPETTE_LENGTH_MM - shoulder - nozzle) / 2,
           mid,
         ]}
+        castShadow
       >
         <cylinderGeometry
           args={[5.5, 4.5, PIPETTE_LENGTH_MM - shoulder - nozzle, 18]}
@@ -1223,7 +1512,7 @@ function PipetteBody({
       </mesh>
       {n > 1 && (
         // the housing the nozzles hang from, the width of the row: the multichannel's block
-        <mesh position={[0, y + nozzle + 5, mid]}>
+        <mesh position={[0, y + nozzle + 5, mid]} castShadow>
           <boxGeometry args={[14, 10, (n - 1) * NOZZLE_PITCH_MM + 14]} />
           <meshStandardMaterial color={colour} roughness={0.5} />
         </mesh>
@@ -1246,6 +1535,7 @@ function Label({
   y,
   z,
   bold,
+  upright,
 }: {
   text: string;
   colour: string;
@@ -1253,6 +1543,7 @@ function Label({
   y: number;
   z: number;
   bold?: boolean;
+  upright?: boolean; // on a front face, facing the front of the deck, instead of lying flat
 }) {
   const texture = useMemo(
     () => makeLabel(text, colour, bold),
@@ -1263,7 +1554,7 @@ function Label({
   const aspect = texture.image.width / texture.image.height;
   const w = Math.max(4, width);
   return (
-    <mesh position={[0, y, z]} rotation={[-Math.PI / 2, 0, 0]}>
+    <mesh position={[0, y, z]} rotation={[upright ? 0 : -Math.PI / 2, 0, 0]}>
       <planeGeometry args={[w, w / aspect]} />
       <meshBasicMaterial map={texture} transparent depthWrite={false} />
     </mesh>

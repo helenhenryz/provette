@@ -17,7 +17,11 @@
   display: block;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: radial-gradient(
+    ellipse 80% 80% at 50% 40%,
+    var(--stage-hi),
+    var(--stage-lo)
+  );
 }
 .slotBox {
   fill: var(--surface-2);
