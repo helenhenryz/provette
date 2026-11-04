@@ -286,7 +286,9 @@ when there is one, the pages `/`, `/examples`, `/rules`, `/check`, `/methods` an
 episode's deep link, a 404 for an unknown API path, and a `POST /api/checks` of
 the example protocol with its plate map that must come back with findings (that
 is the Opentrons simulator running in the deployment), then that check's record
-and replay page. Exit 0 means every line said `ok`.
+and replay page, and then it deletes that check with the judge password (from
+`PROVETTE_JUDGE_PASSWORD` or `~/.config/provette/judge.env`) and expects a 404, so a
+deploy leaves the history as it found it. Exit 0 means every line said `ok`.
 
 ### The fallback: a Hetzner CX23 (or any VM)
 

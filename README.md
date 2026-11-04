@@ -73,9 +73,37 @@ positions free ([`eval/checks/`](eval/checks/README.md)). Opentrons' own analysi
 agrees with the ledger on 788 of 788 public protocols, and on 16 of 16 written for API 2.14 or
 later, where it is a fully independent reading ([`eval/ledger/`](eval/ledger/README.md)).
 
+## NVIDIA Nemotron and Nebius
+
+* **NVIDIA Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b`) writes every protocol
+  and proposes every plate map in the product, through **Nebius Token Factory**'s
+  OpenAI-compatible API, with tool calling and reasoning on (D-08). **Nemotron 3 Nano 30B**
+  (`nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B`) ran the same evaluation, best of three, to measure how
+  far the smaller open model gets with the checks in its loop. Nothing is trained: the model is
+  prompted, given its tools, and judged only by the checks (D-01).
+* **How the loop is fitted to Nemotron**: a reasoning turn cut at its budget is closed and
+  continued on Token Factory's `/v1/completions`; the reasoning is sent back inside the tool loop;
+  NVIDIA's sampling settings for each model; best of k with the checker as the judge. Each
+  practice with its source is in [`docs/harness-practices.md`](docs/harness-practices.md).
+* **Where Token Factory sped the work up**: one key and one endpoint served both model sizes, so
+  the same harness ran Super and Nano and the whole evaluation without a GPU of our own; the
+  prices come from Token Factory's own model list ([`eval/prices.json`](eval/prices.json)), so
+  every cost on the pages is computed from the tokens a run used, and the live demo stops at a
+  daily spend cap ([`deploy/README.md`](deploy/README.md), "The daily cap").
+* **Token Factory Sandboxes**: every check of a draft can run in its own disposable sandbox
+  (`--runner sandbox`, [`provette/sandbox`](provette/sandbox/README.md)); the measurements are in
+  D-35, and the evaluation's sandbox run is in [`eval/agent/README.md`](eval/agent/README.md).
+  The demo runs its checks on its own machine, so it does not depend on a beta service (D-37).
+* **Not used**: Nebius AI Cloud GPU instances. The model runs on Token Factory; the web app is
+  one small machine on Fly.io (D-36).
+
 ## Try it
 
+You need [uv](https://docs.astral.sh/uv/) (it fetches Python 3.10 itself) and, for the pages,
+Node 22. Every command runs from the repository's root.
+
 ```
+git clone https://github.com/helenhenryz/provette && cd provette
 uv sync                                   # Python 3.10, opentrons 8.8.2
 uv run provette check   protocol.py                              # the biology
 uv run provette verify  protocol.py --platemap map.json          # the plate map, accounting, prep sheet

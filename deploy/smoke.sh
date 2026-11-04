@@ -8,7 +8,10 @@
 #                                                     the first visitor of each reads the cache
 #
 # Needs curl and python3. The check POSTs the example protocol with its plate map and expects
-# findings back: that is the Opentrons simulator running in the deployment.
+# findings back: that is the Opentrons simulator running in the deployment. It then deletes that
+# check, so a deploy leaves nothing in the history: the judge password comes from
+# PROVETTE_JUDGE_PASSWORD or ~/.config/provette/judge.env (never printed); without one the check
+# stays and the test says so.
 set -eu
 URL=${1:?usage: deploy/smoke.sh <url> [--no-check] [--warm]}
 URL=${URL%/}
@@ -86,6 +89,28 @@ if [ "$CHECK" = 1 ]; then
     ID=$(python3 -c "import json; print(json.load(open('$TMP/body'))['id'])")
     expect "/api/checks/$ID" 200 application/json
     expect "/api/checks/$ID/replay.html" 200 text/html
+    # take the check out of the history again, behind the judge password
+    KEY=${PROVETTE_JUDGE_PASSWORD:-}
+    JUDGE_ENV=${PROVETTE_CONFIG_DIR:-$HOME/.config/provette}/judge.env
+    if [ -z "$KEY" ] && [ -f "$JUDGE_ENV" ]; then
+      KEY=$(sed -n 's/^PROVETTE_JUDGE_PASSWORD=//p' "$JUDGE_ENV" | tr -d "\"'" | tail -1)
+    fi
+    if [ -n "$KEY" ]; then
+      printf 'X-Judge-Password: %s\n' "$KEY" >"$TMP/key"
+      code=$(curl -sS -o /dev/null -w '%{http_code}' -X DELETE -H "@$TMP/key" "$URL/api/checks/$ID" || echo 000)
+      rm -f "$TMP/key"
+      if [ "$code" = 200 ]; then
+        printf 'ok   %-60s %s\n' "DELETE /api/checks/$ID (the history is as it was)" "$code"
+        expect "/api/checks/$ID" 404
+      elif [ "$code" = 503 ]; then
+        echo "     the deployment has no judge password set: check $ID stays in its history"
+      else
+        printf 'FAIL %-60s got %s\n' "DELETE /api/checks/$ID" "$code"
+        failed=1
+      fi
+    else
+      echo "     no judge password here: check $ID stays in the deployment's history"
+    fi
   else
     printf 'FAIL %-60s got %s in %ss\n' "POST /api/checks" "$code" "$secs"
     failed=1
